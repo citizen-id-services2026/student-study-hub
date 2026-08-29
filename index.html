@@ -7,9 +7,14 @@
 <title>Student Study Hub | CBSE RBSE NCERT</title>
 
 <style>
-*{box-sizing:border-box}
 
-html{scroll-behavior:smooth}
+*{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
 
 body{
     margin:0;
@@ -31,20 +36,20 @@ header h1{
 }
 
 header p{
-    margin:9px 0 0;
+    margin:10px 0 0;
     font-size:17px;
 }
 
 nav{
-    position:sticky;
-    top:0;
-    z-index:1000;
     background:white;
     padding:10px;
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
     gap:5px;
+    position:sticky;
+    top:0;
+    z-index:1000;
     box-shadow:0 2px 10px #0002;
 }
 
@@ -61,7 +66,7 @@ nav a:hover{
 }
 
 .container{
-    max-width:1150px;
+    max-width:1100px;
     margin:auto;
     padding:18px;
 }
@@ -87,71 +92,62 @@ nav a:hover{
     margin-bottom:20px;
 }
 
-.selection{
-    background:#eef7ff;
-    border:1px solid #cfe4f5;
-    padding:15px;
-    border-radius:10px;
-    margin-bottom:15px;
-}
-
-.selection b{
-    color:#145b91;
-}
-
 .grid{
     display:grid;
     grid-template-columns:repeat(4,1fr);
     gap:12px;
 }
 
-.grid-3{
+.medium-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+}
+
+.medium{
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    border:2px solid #d7e7f5;
+    background:#f8fbff;
+}
+
+.medium h3{
+    font-size:24px;
+    color:#145b91;
+}
+
+.class-card{
+    background:#f8fbff;
+    border:1px solid #d8e7f3;
+    padding:18px;
+    border-radius:12px;
+    text-align:center;
+}
+
+.class-card h3{
+    color:#145b91;
+}
+
+.subject-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:12px;
 }
 
-.grid-2{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:12px;
-}
-
-.option-card{
-    background:#f8fbff;
-    border:1px solid #d8e7f3;
-    padding:20px;
-    border-radius:12px;
-    text-align:center;
-}
-
-.option-card:hover{
-    box-shadow:0 5px 15px #0002;
-    transform:translateY(-2px);
-}
-
-.option-card h3{
-    color:#145b91;
-}
-
-.subject-card{
-    background:#eef7ff;
-    border:1px solid #cfe4f5;
+.subject{
     padding:18px;
     border-radius:12px;
-}
-
-.subject-card h3{
-    color:#145b91;
-    margin-top:0;
+    background:#eef7ff;
+    border:1px solid #cfe4f5;
 }
 
 .chapter{
-    background:#fff;
-    border:1px solid #dce5ed;
+    background:#f8fbff;
+    border:1px solid #d8e7f3;
     padding:16px;
-    border-radius:10px;
-    margin-bottom:12px;
+    border-radius:12px;
+    margin-bottom:10px;
 }
 
 .chapter h3{
@@ -159,19 +155,30 @@ nav a:hover{
     color:#145b91;
 }
 
-.pdf-card{
-    background:#f8fafc;
-    border:1px solid #dbe3ea;
+.note{
+    border-left:5px solid #0878cf;
+    background:#f8fbff;
     padding:15px;
-    border-radius:10px;
-    margin-bottom:12px;
+    margin-bottom:10px;
+    border-radius:8px;
+    line-height:1.7;
 }
 
-.pdf-card h3{
-    margin-top:0;
+.notes-content{
+    line-height:1.8;
+    font-size:17px;
 }
 
-button,.btn{
+.notes-content h3{
+    color:#145b91;
+}
+
+.notes-content h4{
+    color:#0878cf;
+}
+
+button,
+.btn{
     display:inline-block;
     border:0;
     background:#0878cf;
@@ -184,15 +191,21 @@ button,.btn{
     margin:4px;
 }
 
-button:hover,.btn:hover{
-    opacity:.9;
+.green{
+    background:#159447;
 }
 
-.green{background:#159447}
-.orange{background:#e67e22}
-.red{background:#dc3545}
-.dark{background:#34495e}
-.purple{background:#7048e8}
+.red{
+    background:#dc3545;
+}
+
+.orange{
+    background:#e67e22;
+}
+
+.dark{
+    background:#34495e;
+}
 
 .back{
     background:#34495e;
@@ -202,7 +215,35 @@ button:hover,.btn:hover{
     display:none;
 }
 
-input,select{
+.price{
+    font-size:28px;
+    font-weight:bold;
+    color:#159447;
+}
+
+.premium{
+    background:linear-gradient(135deg,#fff7d6,#fff);
+    border:2px solid #e5b300;
+}
+
+.selection{
+    background:#eef7ff;
+    padding:15px;
+    border-radius:10px;
+    line-height:1.8;
+}
+
+.search-box{
+    width:100%;
+    padding:14px;
+    border:1px solid #ccd5df;
+    border-radius:9px;
+    font-size:16px;
+    margin-bottom:15px;
+}
+
+input,
+select{
     width:100%;
     padding:13px;
     margin:6px 0 12px;
@@ -211,58 +252,30 @@ input,select{
     font-size:16px;
 }
 
-.search{
-    display:flex;
-    gap:8px;
-}
-
-.search input{
-    margin:0;
-}
-
-.search button{
-    white-space:nowrap;
-}
-
-.message{
-    background:#eef7ff;
-    padding:14px;
-    border-radius:8px;
-    margin-top:10px;
-}
-
-.premium{
-    background:linear-gradient(135deg,#fff7d6,#fff);
-    border:2px solid #e5b300;
-}
-
-.price{
-    font-size:28px;
-    font-weight:bold;
-    color:#159447;
-}
-
-.quiz-question{
-    background:#f8fafc;
-    padding:18px;
-    border-radius:12px;
-    margin-bottom:15px;
-    border:1px solid #e1e7ee;
-}
-
-.quiz-question label{
-    display:block;
-    padding:9px;
-    margin:5px 0;
-    background:white;
-    border-radius:7px;
-    cursor:pointer;
-}
-
 .result{
     font-size:20px;
     font-weight:bold;
     margin-top:15px;
+}
+
+.tool-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+}
+
+.tool{
+    background:white;
+    border:1px solid #ddd;
+    padding:18px;
+    border-radius:12px;
+}
+
+.message{
+    padding:15px;
+    background:#fff7d6;
+    border-radius:8px;
+    margin-top:10px;
 }
 
 footer{
@@ -292,14 +305,14 @@ footer{
         padding:16px;
     }
 
-    .grid,
-    .grid-3,
-    .grid-2{
+    .medium-grid,
+    .subject-grid,
+    .tool-grid{
         grid-template-columns:1fr;
     }
 
-    .search{
-        flex-direction:column;
+    .grid{
+        grid-template-columns:repeat(2,1fr);
     }
 
     nav a{
@@ -321,7 +334,9 @@ footer{
     body{
         background:white;
     }
+
 }
+
 </style>
 </head>
 
@@ -331,9 +346,9 @@ footer{
 
 <h1>📚 Student Study Hub</h1>
 
-<p>CBSE • RBSE • NCERT</p>
-
-<p>Hindi Medium + English Medium | Class 1–12</p>
+<p>
+CBSE • RBSE • NCERT | Hindi Medium & English Medium
+</p>
 
 </header>
 
@@ -341,8 +356,10 @@ footer{
 <nav>
 
 <a href="#home">🏠 Home</a>
-<a href="#study">📚 Study</a>
-<a href="#pdf">📄 PDF</a>
+<a href="#board">🏫 Board</a>
+<a href="#medium">📚 Medium</a>
+<a href="#classes">🎓 Classes</a>
+<a href="#notes">📝 Notes</a>
 <a href="#quiz">✅ MCQ</a>
 <a href="#tools">🧮 Tools</a>
 <a href="#premium">💳 Premium</a>
@@ -358,115 +375,90 @@ footer{
 
 <b>📢 महत्वपूर्ण सूचना</b>
 
-<br><br>
+<br>
 
 यह एक निजी Education Website है।
-
-<br>
-
-CBSE, RBSE और NCERT की official जानकारी के लिए
-संबंधित official website से जानकारी verify करें।
-
-<br>
-
-यहाँ केवल अपनी original या legally usable study material
-अपलोड करें।
+CBSE/RBSE/NCERT की official सामग्री को उनकी official websites से सत्यापित करें।
 
 </div>
 
 
-<!-- STUDY SYSTEM -->
+<!-- BOARD -->
 
-<section class="card" id="study">
+<section class="card" id="board">
 
-<h2>📚 Study Material</h2>
+<h2>🏫 अपना Board चुनें</h2>
 
-<div class="selection">
+<div class="medium-grid">
 
-<b>आपका चयन:</b>
-
-<span id="currentSelection">
-अभी कुछ नहीं चुना गया
-</span>
-
-</div>
-
-
-<!-- STEP 1 -->
-
-<div id="stepBoard">
-
-<h3>1️⃣ Board चुनें</h3>
-
-<div class="grid-3">
-
-<div class="option-card">
+<div class="medium">
 
 <h3>📘 CBSE</h3>
 
-<p>CBSE Students</p>
+<p>
+CBSE students के लिए study material
+</p>
 
-<button onclick="chooseBoard('CBSE')">
-CBSE
+<button onclick="selectBoard('CBSE')">
+CBSE चुनें
 </button>
 
 </div>
 
 
-<div class="option-card">
+<div class="medium">
 
-<h3>📗 RBSE</h3>
+<h3>📕 RBSE</h3>
 
-<p>Rajasthan Board</p>
+<p>
+Rajasthan Board students के लिए study material
+</p>
 
-<button onclick="chooseBoard('RBSE')">
-RBSE
-</button>
-
-</div>
-
-
-<div class="option-card">
-
-<h3>📚 NCERT</h3>
-
-<p>NCERT Based</p>
-
-<button onclick="chooseBoard('NCERT')">
-NCERT
+<button onclick="selectBoard('RBSE')">
+RBSE चुनें
 </button>
 
 </div>
 
 </div>
 
-</div>
+<p id="boardMessage"></p>
+
+</section>
 
 
-<!-- STEP 2 -->
+<!-- MEDIUM -->
 
-<div id="stepMedium" class="hidden">
+<section class="card" id="medium">
 
-<h3>2️⃣ Medium चुनें</h3>
+<h2>📚 Medium चुनें</h2>
 
-<div class="grid-2">
+<div class="medium-grid">
 
-<div class="option-card">
+<div class="medium">
 
 <h3>🇮🇳 Hindi Medium</h3>
 
-<button onclick="chooseMedium('Hindi')">
+<p>
+हिंदी माध्यम के विद्यार्थियों के लिए
+</p>
+
+<button onclick="selectMedium('Hindi Medium')">
 Hindi Medium
 </button>
 
 </div>
 
 
-<div class="option-card">
+<div class="medium">
 
 <h3>🇬🇧 English Medium</h3>
 
-<button onclick="chooseMedium('English')">
+<p>
+English medium के विद्यार्थियों के लिए
+</p>
+
+<button onclick="selectMedium('English Medium')">
 English Medium
 </button>
 
@@ -474,147 +466,180 @@ English Medium
 
 </div>
 
-<br>
+<p id="mediumMessage"></p>
 
-<button class="back" onclick="backToBoard()">
-⬅️ Back
-</button>
-
-</div>
+</section>
 
 
-<!-- STEP 3 -->
+<!-- CLASSES -->
 
-<div id="stepClass" class="hidden">
+<section class="card" id="classes">
 
-<h3>3️⃣ Class चुनें</h3>
+<h2>🎓 Class 1–12</h2>
+
+<p>
+Board और Medium चुनने के बाद अपनी Class चुनें।
+</p>
 
 <div class="grid">
 
-<button onclick="chooseClass(1)">Class 1</button>
-<button onclick="chooseClass(2)">Class 2</button>
-<button onclick="chooseClass(3)">Class 3</button>
-<button onclick="chooseClass(4)">Class 4</button>
+<script>
 
-<button onclick="chooseClass(5)">Class 5</button>
-<button onclick="chooseClass(6)">Class 6</button>
-<button onclick="chooseClass(7)">Class 7</button>
-<button onclick="chooseClass(8)">Class 8</button>
+for(let i=1;i<=12;i++){
 
-<button onclick="chooseClass(9)">Class 9</button>
-<button onclick="chooseClass(10)">Class 10</button>
-<button onclick="chooseClass(11)">Class 11</button>
-<button onclick="chooseClass(12)">Class 12</button>
+    document.write(`
 
-</div>
+        <div class="class-card">
 
-<br>
+            <h3>Class ${i}</h3>
 
-<button class="back" onclick="backToMedium()">
-⬅️ Back
-</button>
+            <p>
+            ${i<=5 ? "Primary" :
+              i<=8 ? "Middle School" :
+              i<=10 ? "Secondary" :
+              "Senior Secondary"}
+            </p>
 
-</div>
+            <button onclick="openClass(${i})">
+            Open Class ${i}
+            </button>
 
+        </div>
 
-<!-- STEP 4 -->
+    `);
 
-<div id="stepSubjects" class="hidden">
+}
 
-<h3>4️⃣ Subject चुनें</h3>
-
-<div id="subjectContainer" class="grid-3"></div>
-
-<br>
-
-<button class="back" onclick="backToClass()">
-⬅️ Back
-</button>
-
-</div>
-
-
-<!-- STEP 5 -->
-
-<div id="stepChapters" class="hidden">
-
-<h3 id="chapterHeading">
-5️⃣ Chapters
-</h3>
-
-<div id="chapterContainer"></div>
-
-<br>
-
-<button class="back" onclick="backToSubjects()">
-⬅️ Back
-</button>
-
-</div>
-
-
-</section>
-
-
-<!-- PDF LIBRARY -->
-
-<section class="card" id="pdf">
-
-<h2>📄 PDF Library</h2>
-
-<p>
-अपनी original Notes PDF यहाँ जोड़ें।
-</p>
-
-<div id="pdfContainer"></div>
-
-<div class="notice">
-
-<b>PDF लगाने का तरीका:</b>
-
-<br><br>
-
-अपने hosting में HTML file के साथ
-<b>pdf</b> नाम का folder बनाएं।
-
-<br><br>
-
-उदाहरण:
-
-<pre>
-index.html
-pdf/
-  class10-maths-chapter1.pdf
-  class10-maths-chapter2.pdf
-  class10-science-chapter1.pdf
-</pre>
-
-फिर नीचे JavaScript में PDF का सही filename डालें।
+</script>
 
 </div>
 
 </section>
 
 
-<!-- SEARCH -->
+<!-- SUBJECTS -->
 
-<section class="card">
+<section class="card hidden" id="subjectSection">
 
-<h2>🔍 Search</h2>
+<h2 id="classTitle">
+📚 Subjects
+</h2>
 
-<div class="search">
+<div class="selection" id="selectionInfo"></div>
+
+<br>
 
 <input
-id="searchInput"
-placeholder="Class, Subject या Chapter search करें">
+class="search-box"
+id="subjectSearch"
+placeholder="🔎 Subject खोजें..."
+oninput="filterSubjects()">
 
-<button onclick="searchContent()">
-🔍 Search
+<div
+class="subject-grid"
+id="subjectList">
+</div>
+
+</section>
+
+
+<!-- CHAPTERS -->
+
+<section class="card hidden" id="chapterSection">
+
+<h2 id="chapterTitle">
+📖 Chapters
+</h2>
+
+<div class="selection" id="chapterInfo"></div>
+
+<br>
+
+<input
+class="search-box"
+id="chapterSearch"
+placeholder="🔎 Chapter खोजें..."
+oninput="filterChapters()">
+
+<div id="chapterList"></div>
+
+<button
+class="back"
+onclick="backToSubjects()">
+
+⬅️ Subjects पर वापस
+
 </button>
+
+</section>
+
+
+<!-- NOTES VIEWER -->
+
+<section class="card hidden" id="notesViewer">
+
+<h2>📝 Study Notes</h2>
+
+<div class="selection" id="notesInfo"></div>
+
+<hr>
+
+<div
+class="notes-content"
+id="notesContent">
+</div>
+
+<div id="pdfButtons"></div>
+
+<br>
+
+<button
+class="green"
+onclick="window.print()">
+
+🖨️ Print Notes
+
+</button>
+
+<button
+class="back"
+onclick="closeNotes()">
+
+⬅️ Back
+
+</button>
+
+</section>
+
+
+<!-- GENERAL NOTES -->
+
+<section class="card" id="notes">
+
+<h2>📝 Study Notes</h2>
+
+<div class="note">
+
+<b>📚 अपनी Original Notes यहाँ जोड़ें</b>
+
+<br>
+
+आप अपनी बनाई हुई original chapter-wise notes
+इस website में जोड़ सकते हैं।
 
 </div>
 
-<div id="searchResult"></div>
+<div class="note">
+
+<b>📄 PDF</b>
+
+<br>
+
+अपनी PDF को website के
+<code>pdf</code> folder में upload करें और
+नीचे दिए PDF_DATA में उसका path जोड़ें।
+
+</div>
 
 </section>
 
@@ -692,11 +717,18 @@ H2O
 </div>
 
 
-<button class="green" onclick="checkQuiz()">
-✅ Submit
+<button
+class="green"
+onclick="checkQuiz()">
+
+✅ Submit Answers
+
 </button>
 
-<div id="quizResult" class="result"></div>
+<div
+class="result"
+id="quizResult">
+</div>
 
 </section>
 
@@ -707,12 +739,12 @@ H2O
 
 <h2>🧮 Student Tools</h2>
 
-<div class="grid-3">
+<div class="tool-grid">
 
 
-<div class="option-card">
+<div class="tool">
 
-<h3>📊 Percentage</h3>
+<h3>📊 Percentage Calculator</h3>
 
 <input
 type="number"
@@ -724,7 +756,7 @@ type="number"
 id="total"
 placeholder="Total Marks">
 
-<button onclick="percentage()">
+<button onclick="calculatePercentage()">
 Calculate
 </button>
 
@@ -733,7 +765,7 @@ Calculate
 </div>
 
 
-<div class="option-card">
+<div class="tool">
 
 <h3>🎂 Age Calculator</h3>
 
@@ -741,8 +773,8 @@ Calculate
 type="date"
 id="birthDate">
 
-<button onclick="ageCalculator()">
-Calculate
+<button onclick="calculateAge()">
+Calculate Age
 </button>
 
 <p id="ageResult"></p>
@@ -750,9 +782,9 @@ Calculate
 </div>
 
 
-<div class="option-card">
+<div class="tool">
 
-<h3>➕ Calculator</h3>
+<h3>➕ Simple Calculator</h3>
 
 <input
 type="number"
@@ -785,48 +817,52 @@ Add
 <h2>💳 Premium Study Material</h2>
 
 <p>
-आप अपनी original Premium Notes और Question Bank बेच सकते हैं।
+आप अपनी original premium notes और question banks
+यहाँ बेच सकते हैं।
 </p>
 
 
-<div class="grid-2">
-
-<div>
-
 <h3>📘 Premium Notes</h3>
 
-<div class="price">₹49</div>
+<div class="price">
+₹49
+</div>
 
-<p>Original Chapter-wise Notes</p>
+<p>
+Chapter-wise Original PDF Notes
+</p>
 
-<button class="green" onclick="buyPremium(49)">
-💳 Buy ₹49
+<button
+class="green"
+onclick="buyPremium(49)">
+
+💳 Buy Now ₹49
+
 </button>
 
+
+<h3>📚 Complete Question Bank</h3>
+
+<div class="price">
+₹99
 </div>
 
+<p>
+Original Questions + MCQ + Practice Sets
+</p>
 
-<div>
+<button
+class="green"
+onclick="buyPremium(99)">
 
-<h3>📚 Question Bank</h3>
+💳 Buy Now ₹99
 
-<div class="price">₹99</div>
-
-<p>Questions + MCQ + Practice Sets</p>
-
-<button class="green" onclick="buyPremium(99)">
-💳 Buy ₹99
 </button>
-
-</div>
-
-</div>
-
 
 <p class="small">
 
-⚠️ यह UPI payment खोलता है। वास्तविक payment verification
-के लिए secure payment gateway/backend आवश्यक होगा।
+Payment gateway लगाने के बाद वास्तविक
+payment verification system जोड़ा जा सकता है।
 
 </p>
 
@@ -840,7 +876,7 @@ Add
 <h2>✉️ Contact</h2>
 
 <p>
-Study Material या Website सहायता के लिए संपर्क करें।
+Study Notes या website के लिए संपर्क करें।
 </p>
 
 <a
@@ -863,7 +899,7 @@ rel="noopener">
 
 © 2026 Student Study Hub
 
-<br><br>
+<br>
 
 CBSE • RBSE • NCERT
 
@@ -878,61 +914,59 @@ Hindi Medium + English Medium
 </footer>
 
 
+
 <script>
 
-/*
-====================================================
-SELECTED OPTIONS
-====================================================
-*/
+/* =====================================================
+   GLOBAL SETTINGS
+===================================================== */
 
 let selectedBoard = "";
 let selectedMedium = "";
 let selectedClass = "";
 let selectedSubject = "";
+let selectedChapter = "";
 
 
-/*
-====================================================
-SUBJECT LIST
-====================================================
-*/
+/* =====================================================
+   SUBJECT DATABASE
+===================================================== */
 
-const subjects = {
+const SUBJECTS = {
 
     1:[
         "Hindi",
         "English",
         "Mathematics",
-        "EVS"
+        "Environmental Studies"
     ],
 
     2:[
         "Hindi",
         "English",
         "Mathematics",
-        "EVS"
+        "Environmental Studies"
     ],
 
     3:[
         "Hindi",
         "English",
         "Mathematics",
-        "EVS"
+        "Environmental Studies"
     ],
 
     4:[
         "Hindi",
         "English",
         "Mathematics",
-        "EVS"
+        "Environmental Studies"
     ],
 
     5:[
         "Hindi",
         "English",
         "Mathematics",
-        "EVS"
+        "Environmental Studies"
     ],
 
     6:[
@@ -967,7 +1001,8 @@ const subjects = {
         "English",
         "Mathematics",
         "Science",
-        "Social Science"
+        "Social Science",
+        "Information Technology"
     ],
 
     10:[
@@ -975,514 +1010,566 @@ const subjects = {
         "English",
         "Mathematics",
         "Science",
-        "Social Science"
+        "Social Science",
+        "Information Technology"
     ],
 
     11:[
         "English",
+        "Hindi",
         "Physics",
         "Chemistry",
-        "Mathematics",
         "Biology",
+        "Mathematics",
         "Accountancy",
         "Business Studies",
         "Economics",
         "History",
         "Political Science",
-        "Geography"
+        "Geography",
+        "Computer Science"
     ],
 
     12:[
         "English",
+        "Hindi",
         "Physics",
         "Chemistry",
-        "Mathematics",
         "Biology",
+        "Mathematics",
         "Accountancy",
         "Business Studies",
         "Economics",
         "History",
         "Political Science",
-        "Geography"
+        "Geography",
+        "Computer Science"
     ]
 
 };
 
 
-/*
-====================================================
-CHAPTER DATA
-====================================================
+/* =====================================================
+   CHAPTER DATABASE
+   =====================================================
 
-यहाँ अपने वास्तविक/original chapter names डालें।
-====================================================
+   यहाँ अपनी original chapter names डाल सकते हैं।
 */
 
-const chapters = {
+const CHAPTERS = {
 
     "Mathematics":[
-
         "Chapter 1",
         "Chapter 2",
         "Chapter 3",
         "Chapter 4",
         "Chapter 5"
-
     ],
 
     "Science":[
-
         "Chapter 1",
         "Chapter 2",
         "Chapter 3",
         "Chapter 4",
         "Chapter 5"
-
-    ],
-
-    "Hindi":[
-
-        "Chapter 1",
-        "Chapter 2",
-        "Chapter 3",
-        "Chapter 4",
-        "Chapter 5"
-
     ],
 
     "English":[
-
         "Chapter 1",
         "Chapter 2",
         "Chapter 3",
         "Chapter 4",
         "Chapter 5"
+    ],
 
+    "Hindi":[
+        "Chapter 1",
+        "Chapter 2",
+        "Chapter 3",
+        "Chapter 4",
+        "Chapter 5"
     ],
 
     "Social Science":[
-
         "Chapter 1",
         "Chapter 2",
         "Chapter 3",
         "Chapter 4",
         "Chapter 5"
+    ],
 
+    "Environmental Studies":[
+        "Chapter 1",
+        "Chapter 2",
+        "Chapter 3",
+        "Chapter 4",
+        "Chapter 5"
     ],
 
     "Sanskrit":[
-
         "Chapter 1",
         "Chapter 2",
         "Chapter 3",
         "Chapter 4",
         "Chapter 5"
-
-    ],
-
-    "EVS":[
-
-        "Chapter 1",
-        "Chapter 2",
-        "Chapter 3",
-        "Chapter 4",
-        "Chapter 5"
-
     ],
 
     "Physics":[
-
         "Chapter 1",
         "Chapter 2",
         "Chapter 3",
         "Chapter 4",
         "Chapter 5"
-
     ],
 
     "Chemistry":[
-
         "Chapter 1",
         "Chapter 2",
         "Chapter 3",
         "Chapter 4",
         "Chapter 5"
-
     ],
 
     "Biology":[
-
         "Chapter 1",
         "Chapter 2",
         "Chapter 3",
         "Chapter 4",
         "Chapter 5"
+    ],
 
+    "Information Technology":[
+        "Chapter 1",
+        "Chapter 2",
+        "Chapter 3",
+        "Chapter 4",
+        "Chapter 5"
     ],
 
     "Accountancy":[
-
         "Chapter 1",
         "Chapter 2",
         "Chapter 3",
         "Chapter 4",
         "Chapter 5"
-
     ],
 
     "Business Studies":[
-
         "Chapter 1",
         "Chapter 2",
         "Chapter 3",
         "Chapter 4",
         "Chapter 5"
-
     ],
 
     "Economics":[
-
         "Chapter 1",
         "Chapter 2",
         "Chapter 3",
         "Chapter 4",
         "Chapter 5"
-
     ],
 
     "History":[
-
         "Chapter 1",
         "Chapter 2",
         "Chapter 3",
         "Chapter 4",
         "Chapter 5"
-
     ],
 
     "Political Science":[
-
         "Chapter 1",
         "Chapter 2",
         "Chapter 3",
         "Chapter 4",
         "Chapter 5"
-
     ],
 
     "Geography":[
-
         "Chapter 1",
         "Chapter 2",
         "Chapter 3",
         "Chapter 4",
         "Chapter 5"
+    ],
 
+    "Computer Science":[
+        "Chapter 1",
+        "Chapter 2",
+        "Chapter 3",
+        "Chapter 4",
+        "Chapter 5"
     ]
 
 };
 
 
-/*
-====================================================
-PDF DATA
-====================================================
+/* =====================================================
+   PDF DATABASE
+   =====================================================
 
-PDF path का example:
+   IMPORTANT:
 
-pdf/class10-maths-chapter1.pdf
+   PDF तभी खुलेगी जब file वास्तव में
+   आपकी website में मौजूद होगी।
 
-आप अपनी files के exact नाम यहाँ डालें।
-====================================================
-*/
+   Example:
+
+   index.html
+   pdf/
+       class9-maths-chapter1.pdf
+
+   तब file:
+
+   pdf/class9-maths-chapter1.pdf
+
+===================================================== */
 
 const PDF_DATA = [
 
+    /*
+    Example:
+
     {
-        class:10,
+        board:"CBSE",
+        medium:"Hindi Medium",
+        class:9,
         subject:"Mathematics",
         chapter:"Chapter 1",
-        title:"Class 10 Mathematics Chapter 1",
-        file:"pdf/class10-maths-chapter1.pdf",
+        file:"pdf/class9-maths-chapter1.pdf",
         premium:false
-    },
-
-    {
-        class:10,
-        subject:"Mathematics",
-        chapter:"Chapter 2",
-        title:"Class 10 Mathematics Chapter 2",
-        file:"pdf/class10-maths-chapter2.pdf",
-        premium:false
-    },
-
-    {
-        class:10,
-        subject:"Science",
-        chapter:"Chapter 1",
-        title:"Class 10 Science Chapter 1",
-        file:"pdf/class10-science-chapter1.pdf",
-        premium:false
-    },
-
-    {
-        class:10,
-        subject:"Science",
-        chapter:"Chapter 2",
-        title:"Class 10 Science Chapter 2",
-        file:"pdf/class10-science-chapter2.pdf",
-        premium:false
-    },
-
-    {
-        class:10,
-        subject:"English",
-        chapter:"Chapter 1",
-        title:"Class 10 English Chapter 1",
-        file:"pdf/class10-english-chapter1.pdf",
-        premium:false
-    },
-
-    {
-        class:10,
-        subject:"Social Science",
-        chapter:"Chapter 1",
-        title:"Class 10 Social Science Chapter 1",
-        file:"pdf/class10-social-science-chapter1.pdf",
-        premium:false
-    },
-
-    {
-        class:12,
-        subject:"Physics",
-        chapter:"Chapter 1",
-        title:"Class 12 Physics Chapter 1 Premium",
-        file:"pdf/class12-physics-chapter1.pdf",
-        premium:true
     }
+
+    */
 
 ];
 
 
-/*
-====================================================
-SELECTION DISPLAY
-====================================================
-*/
+/* =====================================================
+   BOARD
+===================================================== */
 
-function updateSelection(){
-
-    let text =
-        "Board: " +
-        (selectedBoard || "-") +
-        " | Medium: " +
-        (selectedMedium || "-") +
-        " | Class: " +
-        (selectedClass || "-") +
-        " | Subject: " +
-        (selectedSubject || "-");
-
-    document.getElementById(
-        "currentSelection"
-    ).innerText = text;
-
-}
-
-
-/*
-====================================================
-BOARD
-====================================================
-*/
-
-function chooseBoard(board){
+function selectBoard(board){
 
     selectedBoard = board;
 
-    selectedMedium = "";
-    selectedClass = "";
-    selectedSubject = "";
-
-    updateSelection();
+    document.getElementById(
+        "boardMessage"
+    ).innerHTML =
+        "✅ आपने <b>" +
+        board +
+        "</b> चुना है। अब Medium चुनें।";
 
     document.getElementById(
-        "stepBoard"
-    ).classList.add("hidden");
-
-    document.getElementById(
-        "stepMedium"
-    ).classList.remove("hidden");
+        "medium"
+    ).scrollIntoView({
+        behavior:"smooth"
+    });
 
 }
 
 
-/*
-====================================================
-MEDIUM
-====================================================
-*/
+/* =====================================================
+   MEDIUM
+===================================================== */
 
-function chooseMedium(medium){
+function selectMedium(medium){
 
     selectedMedium = medium;
 
-    updateSelection();
+    document.getElementById(
+        "mediumMessage"
+    ).innerHTML =
+        "✅ आपने <b>" +
+        medium +
+        "</b> चुना है। अब Class चुनें।";
 
     document.getElementById(
-        "stepMedium"
-    ).classList.add("hidden");
-
-    document.getElementById(
-        "stepClass"
-    ).classList.remove("hidden");
+        "classes"
+    ).scrollIntoView({
+        behavior:"smooth"
+    });
 
 }
 
 
-/*
-====================================================
-CLASS
-====================================================
-*/
+/* =====================================================
+   CLASS
+===================================================== */
 
-function chooseClass(classNumber){
+function openClass(classNumber){
+
+    if(!selectedBoard){
+
+        alert("पहले CBSE या RBSE चुनें।");
+
+        document
+            .getElementById("board")
+            .scrollIntoView({
+                behavior:"smooth"
+            });
+
+        return;
+
+    }
+
+
+    if(!selectedMedium){
+
+        alert("पहले Hindi Medium या English Medium चुनें।");
+
+        document
+            .getElementById("medium")
+            .scrollIntoView({
+                behavior:"smooth"
+            });
+
+        return;
+
+    }
+
 
     selectedClass = classNumber;
 
-    selectedSubject = "";
-
-    updateSelection();
-
-    showSubjects();
 
     document.getElementById(
-        "stepClass"
+        "classTitle"
+    ).innerText =
+        "📚 Class " +
+        classNumber +
+        " - Subjects";
+
+
+    document.getElementById(
+        "selectionInfo"
+    ).innerHTML =
+
+        "<b>Board:</b> " +
+        selectedBoard +
+
+        "<br>" +
+
+        "<b>Medium:</b> " +
+        selectedMedium +
+
+        "<br>" +
+
+        "<b>Class:</b> " +
+        classNumber;
+
+
+    renderSubjects();
+
+
+    document.getElementById(
+        "subjectSection"
+    ).classList.remove("hidden");
+
+
+    document.getElementById(
+        "chapterSection"
     ).classList.add("hidden");
 
+
     document.getElementById(
-        "stepSubjects"
-    ).classList.remove("hidden");
+        "notesViewer"
+    ).classList.add("hidden");
+
+
+    document.getElementById(
+        "subjectSection"
+    ).scrollIntoView({
+        behavior:"smooth"
+    });
 
 }
 
 
-/*
-====================================================
-SUBJECTS
-====================================================
-*/
+/* =====================================================
+   SUBJECTS
+===================================================== */
 
-function showSubjects(){
-
-    const container =
-        document.getElementById(
-            "subjectContainer"
-        );
-
-    container.innerHTML = "";
+function renderSubjects(){
 
     const list =
-        subjects[selectedClass] || [];
+        document.getElementById(
+            "subjectList"
+        );
 
-    list.forEach(function(subject){
+    list.innerHTML = "";
+
+
+    const subjects =
+        SUBJECTS[selectedClass] || [];
+
+
+    subjects.forEach(function(subject){
 
         const div =
             document.createElement("div");
 
         div.className =
-            "subject-card";
+            "subject";
+
 
         div.innerHTML = `
 
             <h3>📚 ${subject}</h3>
 
             <p>
-            Class ${selectedClass} ${subject}
+            Class ${selectedClass}
+            ${selectedMedium}
             </p>
 
             <button
-            onclick="chooseSubject('${subject.replace(/'/g,"\\'")}')">
+            onclick="openSubject('${escapeQuotes(subject)}')">
 
-            Open Subject
+            📖 Open Subject
 
             </button>
 
         `;
 
-        container.appendChild(div);
+
+        list.appendChild(div);
 
     });
 
 }
 
 
-/*
-====================================================
-SUBJECT
-====================================================
-*/
+/* =====================================================
+   SUBJECT SEARCH
+===================================================== */
 
-function chooseSubject(subject){
+function filterSubjects(){
 
-    selectedSubject = subject;
+    const value =
+        document.getElementById(
+            "subjectSearch"
+        ).value.toLowerCase();
 
-    updateSelection();
 
-    showChapters();
+    document
+        .querySelectorAll(
+            "#subjectList .subject"
+        )
+        .forEach(function(item){
 
-    document.getElementById(
-        "stepSubjects"
-    ).classList.add("hidden");
+            item.style.display =
+                item.innerText
+                    .toLowerCase()
+                    .includes(value)
+                    ? ""
+                    : "none";
 
-    document.getElementById(
-        "stepChapters"
-    ).classList.remove("hidden");
+        });
 
 }
 
 
-/*
-====================================================
-CHAPTERS
-====================================================
-*/
+/* =====================================================
+   OPEN SUBJECT
+===================================================== */
 
-function showChapters(){
+function openSubject(subject){
 
-    const container =
-        document.getElementById(
-            "chapterContainer"
-        );
-
-    const heading =
-        document.getElementById(
-            "chapterHeading"
-        );
-
-    heading.innerText =
-        "5️⃣ " +
-        selectedSubject +
-        " - Chapter-wise Material";
+    selectedSubject = subject;
 
 
-    container.innerHTML = "";
+    document.getElementById(
+        "chapterTitle"
+    ).innerText =
+        "📖 " +
+        subject +
+        " - Chapters";
+
+
+    document.getElementById(
+        "chapterInfo"
+    ).innerHTML =
+
+        "<b>Board:</b> " +
+        selectedBoard +
+
+        "<br>" +
+
+        "<b>Medium:</b> " +
+        selectedMedium +
+
+        "<br>" +
+
+        "<b>Class:</b> " +
+        selectedClass +
+
+        "<br>" +
+
+        "<b>Subject:</b> " +
+        selectedSubject;
+
+
+    document.getElementById(
+        "chapterSearch"
+    ).value = "";
+
+
+    renderChapters();
+
+
+    document.getElementById(
+        "chapterSection"
+    ).classList.remove("hidden");
+
+
+    document.getElementById(
+        "chapterSection"
+    ).scrollIntoView({
+        behavior:"smooth"
+    });
+
+}
+
+
+/* =====================================================
+   CHAPTERS
+===================================================== */
+
+function renderChapters(){
 
     const list =
-        chapters[selectedSubject] || [];
+        document.getElementById(
+            "chapterList"
+        );
+
+    list.innerHTML = "";
 
 
-    list.forEach(function(chapter,index){
+    const chapters =
+        CHAPTERS[selectedSubject] || [];
+
+
+    if(chapters.length === 0){
+
+        list.innerHTML = `
+
+            <div class="message">
+
+                इस Subject के Chapters अभी जोड़े नहीं गए हैं।
+
+            </div>
+
+        `;
+
+        return;
+
+    }
+
+
+    chapters.forEach(function(chapter){
 
         const pdf =
-            PDF_DATA.find(function(item){
-
-                return (
-                    item.class === Number(selectedClass) &&
-                    item.subject === selectedSubject &&
-                    item.chapter === chapter
-                );
-
-            });
+            findPDF(chapter);
 
 
         const div =
@@ -1492,69 +1579,6 @@ function showChapters(){
             "chapter";
 
 
-        let pdfHTML = "";
-
-
-        if(pdf){
-
-            if(pdf.premium){
-
-                pdfHTML = `
-
-                    <p>
-                    🔒 यह Premium PDF है।
-                    </p>
-
-                    <button
-                    class="orange"
-                    onclick="buyPremium(49)">
-
-                    💳 Buy Premium ₹49
-
-                    </button>
-
-                `;
-
-            }else{
-
-                pdfHTML = `
-
-                    <a
-                    class="btn"
-                    href="${pdf.file}"
-                    target="_blank"
-                    rel="noopener">
-
-                    📖 Open PDF
-
-                    </a>
-
-                    <a
-                    class="btn green"
-                    href="${pdf.file}"
-                    download>
-
-                    ⬇️ Download PDF
-
-                    </a>
-
-                `;
-
-            }
-
-        }else{
-
-            pdfHTML = `
-
-                <p class="small">
-                📄 इस Chapter की PDF अभी upload नहीं की गई है।
-                </p>
-
-            `;
-
-        }
-
-
         div.innerHTML = `
 
             <h3>
@@ -1562,342 +1586,535 @@ function showChapters(){
             </h3>
 
             <p>
-            ${selectedBoard} |
-            ${selectedMedium} |
-            Class ${selectedClass} |
-            ${selectedSubject}
+            ${selectedSubject} -
+            Class ${selectedClass}
             </p>
 
             <button
-            onclick="readNotes('${chapter.replace(/'/g,"\\'")}')">
+            onclick="readNotes('${escapeQuotes(chapter)}')">
 
             📝 Read Notes
 
             </button>
 
-            ${pdfHTML}
+            ${
+                pdf && !pdf.premium
+                ?
+                `
+                <a
+                class="btn green"
+                href="${pdf.file}"
+                target="_blank"
+                rel="noopener">
+
+                📄 Open PDF
+
+                </a>
+
+                <a
+                class="btn dark"
+                href="${pdf.file}"
+                download>
+
+                ⬇️ Download PDF
+
+                </a>
+                `
+                :
+                ""
+            }
+
+            ${
+                pdf && pdf.premium
+                ?
+                `
+                <button
+                class="orange"
+                onclick="buyPremium(49)">
+
+                🔒 Premium PDF ₹49
+
+                </button>
+                `
+                :
+                ""
+            }
 
         `;
 
 
-        container.appendChild(div);
+        list.appendChild(div);
 
     });
 
 }
 
 
-/*
-====================================================
-READ NOTES
-====================================================
-*/
+/* =====================================================
+   CHAPTER SEARCH
+===================================================== */
+
+function filterChapters(){
+
+    const value =
+        document.getElementById(
+            "chapterSearch"
+        ).value.toLowerCase();
+
+
+    document
+        .querySelectorAll(
+            "#chapterList .chapter"
+        )
+        .forEach(function(item){
+
+            item.style.display =
+                item.innerText
+                    .toLowerCase()
+                    .includes(value)
+                    ? ""
+                    : "none";
+
+        });
+
+}
+
+
+/* =====================================================
+   READ NOTES
+===================================================== */
 
 function readNotes(chapter){
 
-    alert(
+    selectedChapter = chapter;
 
-        "📝 Notes\n\n" +
-
-        "Board: " + selectedBoard + "\n" +
-
-        "Medium: " + selectedMedium + "\n" +
-
-        "Class: " + selectedClass + "\n" +
-
-        "Subject: " + selectedSubject + "\n" +
-
-        "Chapter: " + chapter + "\n\n" +
-
-        "यहाँ आपकी original chapter-wise notes सामग्री दिखाई जाएगी।"
-
-    );
-
-}
-
-
-/*
-====================================================
-BACK BUTTONS
-====================================================
-*/
-
-function backToBoard(){
 
     document.getElementById(
-        "stepMedium"
-    ).classList.add("hidden");
+        "notesInfo"
+    ).innerHTML =
+
+        "<b>Board:</b> " +
+        selectedBoard +
+
+        "<br>" +
+
+        "<b>Medium:</b> " +
+        selectedMedium +
+
+        "<br>" +
+
+        "<b>Class:</b> " +
+        selectedClass +
+
+        "<br>" +
+
+        "<b>Subject:</b> " +
+        selectedSubject +
+
+        "<br>" +
+
+        "<b>Chapter:</b> " +
+        selectedChapter;
+
 
     document.getElementById(
-        "stepBoard"
-    ).classList.remove("hidden");
-
-}
-
-
-function backToMedium(){
-
-    document.getElementById(
-        "stepClass"
-    ).classList.add("hidden");
-
-    document.getElementById(
-        "stepMedium"
-    ).classList.remove("hidden");
-
-}
-
-
-function backToClass(){
-
-    document.getElementById(
-        "stepSubjects"
-    ).classList.add("hidden");
-
-    document.getElementById(
-        "stepClass"
-    ).classList.remove("hidden");
-
-}
-
-
-function backToSubjects(){
-
-    document.getElementById(
-        "stepChapters"
-    ).classList.add("hidden");
-
-    document.getElementById(
-        "stepSubjects"
-    ).classList.remove("hidden");
-
-}
-
-
-/*
-====================================================
-PDF LIBRARY
-====================================================
-*/
-
-function loadPDFLibrary(){
-
-    const container =
-        document.getElementById(
-            "pdfContainer"
+        "notesContent"
+    ).innerHTML =
+        getNotes(
+            selectedSubject,
+            chapter
         );
 
-    container.innerHTML = "";
+
+    renderPDFButtons();
 
 
-    if(PDF_DATA.length === 0){
+    document.getElementById(
+        "notesViewer"
+    ).classList.remove("hidden");
 
-        container.innerHTML =
-            "<p>अभी कोई PDF उपलब्ध नहीं है।</p>";
+
+    document.getElementById(
+        "notesViewer"
+    ).scrollIntoView({
+        behavior:"smooth"
+    });
+
+}
+
+
+/* =====================================================
+   ORIGINAL NOTES
+===================================================== */
+
+function getNotes(subject,chapter){
+
+    const notes = {
+
+        "Mathematics":{
+
+            "Chapter 1":`
+
+                <h3>📐 ${subject} - ${chapter}</h3>
+
+                <p>
+                यहाँ आपकी original Mathematics notes
+                दिखाई जाएंगी।
+                </p>
+
+                <h4>📚 Important Points</h4>
+
+                <ul>
+
+                    <li>
+                    Chapter की मुख्य definitions पढ़ें।
+                    </li>
+
+                    <li>
+                    Important formulas याद करें।
+                    </li>
+
+                    <li>
+                    Examples को step-by-step हल करें।
+                    </li>
+
+                    <li>
+                    Exercise questions का अभ्यास करें।
+                    </li>
+
+                </ul>
+
+                <h4>✏️ Practice</h4>
+
+                <p>
+                अपनी original practice questions यहाँ जोड़ें।
+                </p>
+
+            `
+
+        },
+
+
+        "Science":{
+
+            "Chapter 1":`
+
+                <h3>🔬 Science - ${chapter}</h3>
+
+                <p>
+                यहाँ आपकी original Science notes
+                दिखाई जाएंगी।
+                </p>
+
+                <h4>📚 Important Points</h4>
+
+                <ul>
+
+                    <li>
+                    Important definitions
+                    </li>
+
+                    <li>
+                    Important concepts
+                    </li>
+
+                    <li>
+                    Diagrams
+                    </li>
+
+                    <li>
+                    Exam questions
+                    </li>
+
+                </ul>
+
+            `
+
+        },
+
+
+        "English":{
+
+            "Chapter 1":`
+
+                <h3>📖 English - ${chapter}</h3>
+
+                <p>
+                यहाँ आपकी original English notes
+                दिखाई जाएंगी।
+                </p>
+
+                <h4>Important Topics</h4>
+
+                <ul>
+
+                    <li>
+                    Vocabulary
+                    </li>
+
+                    <li>
+                    Grammar
+                    </li>
+
+                    <li>
+                    Question Answers
+                    </li>
+
+                    <li>
+                    Writing Practice
+                    </li>
+
+                </ul>
+
+            `
+
+        },
+
+
+        "Hindi":{
+
+            "Chapter 1":`
+
+                <h3>📕 Hindi - ${chapter}</h3>
+
+                <p>
+                यहाँ आपकी original Hindi notes
+                दिखाई जाएंगी।
+                </p>
+
+                <h4>महत्वपूर्ण बिंदु</h4>
+
+                <ul>
+
+                    <li>
+                    पाठ का सारांश
+                    </li>
+
+                    <li>
+                    महत्वपूर्ण प्रश्न
+                    </li>
+
+                    <li>
+                    शब्दार्थ
+                    </li>
+
+                    <li>
+                    प्रश्न-उत्तर
+                    </li>
+
+                </ul>
+
+            `
+
+        }
+
+    };
+
+
+    if(
+        notes[subject] &&
+        notes[subject][chapter]
+    ){
+
+        return notes[subject][chapter];
+
+    }
+
+
+    return `
+
+        <h3>
+        📝 ${subject} - ${chapter}
+        </h3>
+
+        <div class="message">
+
+        इस Chapter के original notes अभी upload नहीं किए गए हैं।
+
+        <br><br>
+
+        इस जगह आपकी बनाई हुई notes सामग्री दिखाई जाएगी।
+
+        </div>
+
+    `;
+
+}
+
+
+/* =====================================================
+   PDF FIND
+===================================================== */
+
+function findPDF(chapter){
+
+    return PDF_DATA.find(function(item){
+
+        return (
+
+            item.board === selectedBoard &&
+
+            item.medium === selectedMedium &&
+
+            item.class === Number(selectedClass) &&
+
+            item.subject === selectedSubject &&
+
+            item.chapter === chapter
+
+        );
+
+    });
+
+}
+
+
+/* =====================================================
+   PDF BUTTONS
+===================================================== */
+
+function renderPDFButtons(){
+
+    const area =
+        document.getElementById(
+            "pdfButtons"
+        );
+
+
+    const pdf =
+        findPDF(selectedChapter);
+
+
+    if(!pdf){
+
+        area.innerHTML = `
+
+            <div class="message">
+
+                📄 इस Chapter की PDF अभी उपलब्ध नहीं है।
+
+                <br><br>
+
+                अपनी PDF upload करके
+                <b>PDF_DATA</b> में उसका path जोड़ें।
+
+            </div>
+
+        `;
 
         return;
 
     }
 
 
-    PDF_DATA.forEach(function(pdf){
+    if(pdf.premium){
 
-        const div =
-            document.createElement("div");
+        area.innerHTML = `
 
-        div.className =
-            "pdf-card";
+            <div class="notice">
 
+                🔒 यह Premium PDF है।
 
-        if(pdf.premium){
-
-            div.innerHTML = `
-
-                <h3>🔒 ${pdf.title}</h3>
-
-                <p>
-                Class ${pdf.class} |
-                ${pdf.subject} |
-                ${pdf.chapter}
-                </p>
+                <br><br>
 
                 <button
                 class="orange"
                 onclick="buyPremium(49)">
 
-                💳 Premium ₹49
+                💳 Premium PDF खरीदें ₹49
 
                 </button>
 
-            `;
+            </div>
 
-        }else{
-
-            div.innerHTML = `
-
-                <h3>📄 ${pdf.title}</h3>
-
-                <p>
-                Class ${pdf.class} |
-                ${pdf.subject} |
-                ${pdf.chapter}
-                </p>
-
-                <a
-                class="btn"
-                href="${pdf.file}"
-                target="_blank"
-                rel="noopener">
-
-                📖 Open PDF
-
-                </a>
-
-                <a
-                class="btn green"
-                href="${pdf.file}"
-                download>
-
-                ⬇️ Download
-
-                </a>
-
-            `;
-
-        }
-
-
-        container.appendChild(div);
-
-    });
-
-}
-
-
-/*
-====================================================
-SEARCH
-====================================================
-*/
-
-function searchContent(){
-
-    const input =
-        document.getElementById(
-            "searchInput"
-        ).value
-        .trim()
-        .toLowerCase();
-
-
-    const result =
-        document.getElementById(
-            "searchResult"
-        );
-
-
-    if(!input){
-
-        result.innerHTML =
-            '<div class="message">' +
-            "कृपया कुछ search करें।" +
-            "</div>";
+        `;
 
         return;
 
     }
 
 
-    let matches = [];
+    area.innerHTML = `
 
+        <div style="margin-top:20px">
 
-    for(let c=1;c<=12;c++){
+            <a
+            class="btn"
+            href="${pdf.file}"
+            target="_blank"
+            rel="noopener">
 
-        if(
-            ("class " + c).includes(input) ||
-            String(c) === input
-        ){
+            📖 Open PDF
 
-            matches.push(
-                "Class " + c
-            );
+            </a>
 
-        }
+            <a
+            class="btn green"
+            href="${pdf.file}"
+            download>
 
-    }
+            ⬇️ Download PDF
 
+            </a>
 
-    Object.keys(subjects).forEach(function(c){
+        </div>
 
-        subjects[c].forEach(function(subject){
-
-            if(
-                subject.toLowerCase()
-                .includes(input)
-            ){
-
-                matches.push(
-                    "Class " + c +
-                    " - " +
-                    subject
-                );
-
-            }
-
-        });
-
-    });
-
-
-    PDF_DATA.forEach(function(pdf){
-
-        const text =
-            (
-                pdf.title +
-                " " +
-                pdf.subject +
-                " " +
-                pdf.chapter
-            ).toLowerCase();
-
-
-        if(text.includes(input)){
-
-            matches.push(
-                "PDF: " +
-                pdf.title
-            );
-
-        }
-
-    });
-
-
-    if(matches.length){
-
-        result.innerHTML =
-            '<div class="message">' +
-            "<b>🔎 Results:</b><br><br>" +
-            matches.slice(0,30).join("<br>") +
-            "</div>";
-
-    }else{
-
-        result.innerHTML =
-            '<div class="message">' +
-            "❌ कोई result नहीं मिला।" +
-            "</div>";
-
-    }
+    `;
 
 }
 
 
-/*
-====================================================
-QUIZ
-====================================================
-*/
+/* =====================================================
+   BACK
+===================================================== */
+
+function backToSubjects(){
+
+    document
+        .getElementById(
+            "chapterSection"
+        )
+        .classList.add("hidden");
+
+    document
+        .getElementById(
+            "notesViewer"
+        )
+        .classList.add("hidden");
+
+    document
+        .getElementById(
+            "subjectSection"
+        )
+        .scrollIntoView({
+            behavior:"smooth"
+        });
+
+}
+
+
+function closeNotes(){
+
+    document
+        .getElementById(
+            "notesViewer"
+        )
+        .classList.add("hidden");
+
+    document
+        .getElementById(
+            "chapterSection"
+        )
+        .scrollIntoView({
+            behavior:"smooth"
+        });
+
+}
+
+
+/* =====================================================
+   QUIZ
+===================================================== */
 
 function checkQuiz(){
 
@@ -1924,9 +2141,11 @@ function checkQuiz(){
         score++;
     }
 
+
     if(q2 && q2.value === "New Delhi"){
         score++;
     }
+
 
     if(q3 && q3.value === "H2O"){
         score++;
@@ -1943,13 +2162,11 @@ function checkQuiz(){
 }
 
 
-/*
-====================================================
-PERCENTAGE
-====================================================
-*/
+/* =====================================================
+   PERCENTAGE
+===================================================== */
 
-function percentage(){
+function calculatePercentage(){
 
     const obtained =
         parseFloat(
@@ -1957,6 +2174,7 @@ function percentage(){
                 "obtained"
             ).value
         );
+
 
     const total =
         parseFloat(
@@ -1982,24 +2200,25 @@ function percentage(){
     }
 
 
+    const percentage =
+        (obtained / total) * 100;
+
+
     document.getElementById(
         "percentageResult"
     ).innerText =
         "📊 Percentage: " +
-        ((obtained / total) * 100)
-        .toFixed(2) +
+        percentage.toFixed(2) +
         "%";
 
 }
 
 
-/*
-====================================================
-AGE
-====================================================
-*/
+/* =====================================================
+   AGE
+===================================================== */
 
-function ageCalculator(){
+function calculateAge(){
 
     const birth =
         document.getElementById(
@@ -2053,18 +2272,16 @@ function ageCalculator(){
     document.getElementById(
         "ageResult"
     ).innerText =
-        "🎂 उम्र: " +
+        "🎂 आपकी उम्र: " +
         age +
         " वर्ष";
 
 }
 
 
-/*
-====================================================
-ADD NUMBERS
-====================================================
-*/
+/* =====================================================
+   CALCULATOR
+===================================================== */
 
 function addNumbers(){
 
@@ -2074,6 +2291,7 @@ function addNumbers(){
                 "num1"
             ).value
         );
+
 
     const b =
         parseFloat(
@@ -2107,11 +2325,9 @@ function addNumbers(){
 }
 
 
-/*
-====================================================
-PREMIUM PAYMENT
-====================================================
-*/
+/* =====================================================
+   PREMIUM PAYMENT
+===================================================== */
 
 function buyPremium(amount){
 
@@ -2146,13 +2362,18 @@ function buyPremium(amount){
 }
 
 
-/*
-====================================================
-START
-====================================================
-*/
+/* =====================================================
+   ESCAPE
+===================================================== */
 
-loadPDFLibrary();
+function escapeQuotes(text){
+
+    return text
+        .replace(/\\/g,"\\\\")
+        .replace(/'/g,"\\'")
+        .replace(/"/g,'\\"');
+
+}
 
 </script>
 
