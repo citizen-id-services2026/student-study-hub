@@ -7,9 +7,14 @@
 <title>Student Study Hub - Hindi & English Medium</title>
 
 <style>
-*{box-sizing:border-box}
 
-html{scroll-behavior:smooth}
+*{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
 
 body{
     margin:0;
@@ -207,10 +212,21 @@ button,.btn{
     margin:4px;
 }
 
-.green{background:#159447}
-.red{background:#dc3545}
-.orange{background:#e67e22}
-.dark{background:#34495e}
+.green{
+    background:#159447;
+}
+
+.red{
+    background:#dc3545;
+}
+
+.orange{
+    background:#e67e22;
+}
+
+.dark{
+    background:#34495e;
+}
 
 .premium{
     background:linear-gradient(135deg,#fff7d6,#fff);
@@ -227,6 +243,13 @@ button,.btn{
     display:none;
 }
 
+.loading{
+    padding:20px;
+    background:#eef7ff;
+    border-radius:10px;
+    margin-top:15px;
+}
+
 footer{
     background:#172033;
     color:white;
@@ -238,6 +261,16 @@ footer{
 .small{
     font-size:13px;
     color:#555;
+}
+
+.selected{
+    border:3px solid #0878cf;
+    background:#eef7ff;
+}
+
+.note-title{
+    color:#145b91;
+    margin-top:0;
 }
 
 @media(max-width:700px){
@@ -272,7 +305,9 @@ footer{
 
 @media print{
 
-    nav,footer,button{
+    nav,
+    footer,
+    button{
         display:none!important;
     }
 
@@ -280,6 +315,7 @@ footer{
         background:white;
     }
 }
+
 </style>
 </head>
 
@@ -290,10 +326,11 @@ footer{
 <h1>📚 Student Study Hub</h1>
 
 <p>
-Hindi Medium & English Medium Students के लिए Study Website
+Hindi Medium & English Medium Students के लिए Complete Study Website
 </p>
 
 </header>
+
 
 <nav>
 
@@ -309,7 +346,9 @@ Hindi Medium & English Medium Students के लिए Study Website
 
 </nav>
 
+
 <div class="container">
+
 
 <div class="notice">
 
@@ -321,6 +360,7 @@ Hindi Medium & English Medium Students के लिए Study Website
 </div>
 
 
+
 <!-- MEDIUM -->
 
 <section class="card" id="medium">
@@ -329,7 +369,8 @@ Hindi Medium & English Medium Students के लिए Study Website
 
 <div class="medium-grid">
 
-<div class="medium">
+
+<div class="medium" id="hindiMedium">
 
 <h3>🇮🇳 Hindi Medium</h3>
 
@@ -345,7 +386,7 @@ Hindi Medium चुनें
 </div>
 
 
-<div class="medium">
+<div class="medium" id="englishMedium">
 
 <h3>🇬🇧 English Medium</h3>
 
@@ -360,11 +401,13 @@ English Medium चुनें
 
 </div>
 
+
 </div>
 
 <p id="mediumMessage"></p>
 
 </section>
+
 
 
 <!-- CLASSES -->
@@ -374,10 +417,11 @@ English Medium चुनें
 <h2>🎓 Classes 1–12</h2>
 
 <p>
-पहले अपना Medium चुनें, फिर अपनी Class चुनें।
+पहले Medium चुनें और फिर अपनी Class खोलें।
 </p>
 
 <div class="grid">
+
 
 <div class="class-card">
 <h3>Class 1</h3>
@@ -385,11 +429,13 @@ English Medium चुनें
 <button onclick="openClass(1)">Open</button>
 </div>
 
+
 <div class="class-card">
 <h3>Class 2</h3>
 <p>Basic Learning</p>
 <button onclick="openClass(2)">Open</button>
 </div>
+
 
 <div class="class-card">
 <h3>Class 3</h3>
@@ -397,11 +443,13 @@ English Medium चुनें
 <button onclick="openClass(3)">Open</button>
 </div>
 
+
 <div class="class-card">
 <h3>Class 4</h3>
 <p>Primary Study</p>
 <button onclick="openClass(4)">Open</button>
 </div>
+
 
 <div class="class-card">
 <h3>Class 5</h3>
@@ -409,11 +457,13 @@ English Medium चुनें
 <button onclick="openClass(5)">Open</button>
 </div>
 
+
 <div class="class-card">
 <h3>Class 6</h3>
 <p>Middle School</p>
 <button onclick="openClass(6)">Open</button>
 </div>
+
 
 <div class="class-card">
 <h3>Class 7</h3>
@@ -421,11 +471,13 @@ English Medium चुनें
 <button onclick="openClass(7)">Open</button>
 </div>
 
+
 <div class="class-card">
 <h3>Class 8</h3>
 <p>Middle School</p>
 <button onclick="openClass(8)">Open</button>
 </div>
+
 
 <div class="class-card">
 <h3>Class 9</h3>
@@ -433,11 +485,13 @@ English Medium चुनें
 <button onclick="openClass(9)">Open</button>
 </div>
 
+
 <div class="class-card">
 <h3>Class 10</h3>
 <p>Board Preparation</p>
 <button onclick="openClass(10)">Open</button>
 </div>
+
 
 <div class="class-card">
 <h3>Class 11</h3>
@@ -445,76 +499,34 @@ English Medium चुनें
 <button onclick="openClass(11)">Open</button>
 </div>
 
+
 <div class="class-card">
 <h3>Class 12</h3>
 <p>Board Preparation</p>
 <button onclick="openClass(12)">Open</button>
 </div>
 
+
 </div>
 
 </section>
+
 
 
 <!-- CLASS RESULT -->
 
 <section class="card hidden" id="classResult">
 
-<h2 id="classTitle"></h2>
+<h2 id="classTitle">
+📚 Class
+</h2>
 
-<div class="subject-grid">
+<p id="classDescription"></p>
 
-<div class="subject">
-<h3>🧮 Mathematics</h3>
-<p>Chapter-wise Notes और Practice Questions</p>
-<button onclick="showMessage('Mathematics')">
-Open Notes
-</button>
-</div>
-
-<div class="subject">
-<h3>🔬 Science</h3>
-<p>Important Topics और Questions</p>
-<button onclick="showMessage('Science')">
-Open Notes
-</button>
-</div>
-
-<div class="subject">
-<h3>📖 English</h3>
-<p>Grammar, Literature और Questions</p>
-<button onclick="showMessage('English')">
-Open Notes
-</button>
-</div>
-
-<div class="subject">
-<h3>🌍 Social Science</h3>
-<p>History, Geography और Civics</p>
-<button onclick="showMessage('Social Science')">
-Open Notes
-</button>
-</div>
-
-<div class="subject">
-<h3>💻 Computer</h3>
-<p>Computer और Technology Notes</p>
-<button onclick="showMessage('Computer')">
-Open Notes
-</button>
-</div>
-
-<div class="subject">
-<h3>❓ MCQ</h3>
-<p>Chapter-wise Objective Questions</p>
-<button onclick="document.getElementById('quiz').scrollIntoView()">
-Start Quiz
-</button>
-</div>
-
-</div>
+<div class="subject-grid" id="subjectContainer"></div>
 
 </section>
+
 
 
 <!-- NOTES -->
@@ -523,37 +535,21 @@ Start Quiz
 
 <h2>📝 Study Notes</h2>
 
+<div id="notesContent">
+
 <div class="note">
 
-<b>🧮 Mathematics</b><br>
+<h3 class="note-title">
+📚 Notes कैसे पढ़ें?
+</h3>
 
-Percentage, Profit & Loss, Average, Ratio,
-Algebra और Geometry जैसे Topics का अभ्यास करें।
+<p>
+ऊपर Medium और Class चुनने के बाद किसी भी Subject का
+<b>Open Notes</b> बटन दबाएँ। उसी Class और Medium के
+Notes यहाँ दिखाई देंगे।
+</p>
 
 </div>
-
-<div class="note">
-
-<b>🔬 Science</b><br>
-
-Important Definitions, Formulas, Diagrams और
-Exam Questions का अभ्यास करें।
-
-</div>
-
-<div class="note">
-
-<b>📖 English</b><br>
-
-Grammar, Tenses, Vocabulary, Writing और Literature पढ़ें।
-
-</div>
-
-<div class="note">
-
-<b>🌍 Social Science</b><br>
-
-History, Geography, Civics और Economics के महत्वपूर्ण Topics पढ़ें।
 
 </div>
 
@@ -564,11 +560,17 @@ History, Geography, Civics और Economics के महत्वपूर्�
 </section>
 
 
+
 <!-- QUIZ -->
 
 <section class="card" id="quiz">
 
 <h2>✅ MCQ Quiz</h2>
+
+<p>
+नीचे दिए गए प्रश्नों के सही उत्तर चुनें।
+</p>
+
 
 <div class="quiz-question">
 
@@ -635,6 +637,7 @@ H2O
 
 </div>
 
+
 <button class="green" onclick="checkQuiz()">
 ✅ Submit Answers
 </button>
@@ -644,13 +647,16 @@ H2O
 </section>
 
 
-<!-- MOCK -->
+
+<!-- MOCK TEST -->
 
 <section class="card" id="mock">
 
 <h2>🧪 Mock Test</h2>
 
-<p>अपना Subject चुनकर Mock Test शुरू करें।</p>
+<p>
+अपना Subject चुनकर Mock Test शुरू करें।
+</p>
 
 <select id="mockSubject">
 
@@ -668,6 +674,7 @@ H2O
 <p id="mockMessage"></p>
 
 </section>
+
 
 
 <!-- TOOLS -->
@@ -702,6 +709,7 @@ Calculate
 </div>
 
 
+
 <div class="tool">
 
 <h3>🎂 Age Calculator</h3>
@@ -715,6 +723,7 @@ Calculate Age
 <p id="ageResult"></p>
 
 </div>
+
 
 
 <div class="tool">
@@ -739,9 +748,11 @@ Add
 
 </div>
 
+
 </div>
 
 </section>
+
 
 
 <!-- PREMIUM -->
@@ -751,39 +762,51 @@ Add
 <h2>💳 Premium Study Material</h2>
 
 <p>
-अधिक अभ्यास के लिए Premium Notes और Question Banks उपलब्ध कराए जा सकते हैं।
+Premium Notes और Question Banks बेचकर आप अपनी वेबसाइट से कमाई कर सकते हैं।
 </p>
+
 
 <h3>📘 Premium Notes</h3>
 
-<div class="price">₹49</div>
+<div class="price">
+₹49
+</div>
 
 <p>
 Chapter-wise PDF Notes
 </p>
 
-<button class="green" onclick="buyPremium(49)">
+<button class="green" onclick="buyPremium(49,'Premium Notes')">
 💳 Buy Now ₹49
 </button>
 
 
+
 <h3>📚 Complete Question Bank</h3>
 
-<div class="price">₹99</div>
+<div class="price">
+₹99
+</div>
 
 <p>
 Important Questions + MCQ + Practice Set
 </p>
 
-<button class="green" onclick="buyPremium(99)">
+<button class="green" onclick="buyPremium(99,'Complete Question Bank')">
 💳 Buy Now ₹99
 </button>
 
+
 <p class="small">
-Payment gateway लगाने के बाद यहाँ वास्तविक online payment लिया जा सकता है।
+
+Payment अभी UPI app के माध्यम से होगा।
+Automatic payment verification के लिए Razorpay/Backend integration
+की आवश्यकता होगी।
+
 </p>
 
 </section>
+
 
 
 <!-- UPDATES -->
@@ -792,15 +815,23 @@ Payment gateway लगाने के बाद यहाँ वास्तव
 
 <h2>📢 Latest Updates</h2>
 
-<div class="note">
-🎓 Scholarship और Exam की जानकारी संबंधित Official Website से verify करें।
-</div>
 
 <div class="note">
-📝 Board Exam और Admit Card की जानकारी Official Board Website से देखें।
+
+🎓 Scholarship और Exam की जानकारी संबंधित Official Website से verify करें।
+
 </div>
+
+
+<div class="note">
+
+📝 Board Exam और Admit Card की जानकारी Official Board Website से देखें।
+
+</div>
+
 
 </section>
+
 
 
 <!-- CONTACT -->
@@ -813,6 +844,7 @@ Payment gateway लगाने के बाद यहाँ वास्तव
 Study Notes, Website या Education Services के लिए संपर्क करें।
 </p>
 
+
 <a
 class="btn green"
 href="https://wa.me/918890922880"
@@ -822,13 +854,16 @@ target="_blank">
 
 </a>
 
+
 <p>
 WhatsApp: 8890922880
 </p>
 
 </section>
 
+
 </div>
+
 
 
 <footer>
@@ -846,57 +881,117 @@ Hindi Medium + English Medium Education Website
 </footer>
 
 
+
 <script>
 
-/* MEDIUM */
+
+/* =====================================
+   GLOBAL SETTINGS
+===================================== */
 
 let selectedMedium = "";
+
+let selectedClass = 0;
+
+
+
+/* =====================================
+   MEDIUM SELECT
+===================================== */
 
 function selectMedium(medium){
 
     selectedMedium = medium;
 
-    document.getElementById(
-        "mediumMessage"
-    ).innerText =
-        "✅ आपने " +
+    document.getElementById("mediumMessage").innerHTML =
+        "✅ आपने <b>" +
         medium +
-        " चुना है। अब अपनी Class चुनें।";
+        "</b> चुना है। अब अपनी Class चुनें।";
 
-    document.getElementById(
-        "classes"
-    ).scrollIntoView({
-        behavior:"smooth"
-    });
+    document.getElementById("hindiMedium")
+        .classList.remove("selected");
+
+    document.getElementById("englishMedium")
+        .classList.remove("selected");
+
+
+    if(medium === "Hindi Medium"){
+
+        document.getElementById("hindiMedium")
+            .classList.add("selected");
+
+    }else{
+
+        document.getElementById("englishMedium")
+            .classList.add("selected");
+
+    }
+
+
+    document.getElementById("classes")
+        .scrollIntoView({
+            behavior:"smooth"
+        });
 
 }
 
 
-/* CLASS */
+
+/* =====================================
+   CLASS OPEN
+===================================== */
 
 function openClass(classNumber){
 
-    const result =
-        document.getElementById(
-            "classResult"
+    selectedClass = classNumber;
+
+
+    if(selectedMedium === ""){
+
+        alert(
+            "कृपया पहले Hindi Medium या English Medium चुनें।"
         );
+
+        document.getElementById("medium")
+            .scrollIntoView({
+                behavior:"smooth"
+            });
+
+        return;
+
+    }
+
+
+    const result =
+        document.getElementById("classResult");
+
 
     const title =
-        document.getElementById(
-            "classTitle"
-        );
+        document.getElementById("classTitle");
 
-    const mediumText =
-        selectedMedium ||
-        "Hindi / English Medium";
+
+    const description =
+        document.getElementById("classDescription");
+
 
     title.innerText =
         "📚 " +
-        mediumText +
+        selectedMedium +
         " - Class " +
         classNumber;
 
+
+    description.innerText =
+        "नीचे Class " +
+        classNumber +
+        " के सभी Subjects उपलब्ध हैं।";
+
+
+    createSubjects(classNumber);
+
+
     result.classList.remove("hidden");
+
 
     result.scrollIntoView({
         behavior:"smooth"
@@ -905,33 +1000,447 @@ function openClass(classNumber){
 }
 
 
-/* SUBJECT */
 
-function showMessage(subject){
+/* =====================================
+   CREATE SUBJECTS
+===================================== */
 
-    alert(
-        subject +
-        " के Notes यहाँ जोड़े जा सकते हैं।"
-    );
+function createSubjects(classNumber){
+
+    const container =
+        document.getElementById(
+            "subjectContainer"
+        );
+
+
+    let subjects = [];
+
+
+    if(classNumber <= 5){
+
+        subjects = [
+            "📖 Hindi",
+            "🇬🇧 English",
+            "🧮 Mathematics",
+            "🔬 EVS",
+            "💻 Computer",
+            "❓ MCQ"
+        ];
+
+    }else if(classNumber <= 10){
+
+        subjects = [
+            "📖 Hindi",
+            "🇬🇧 English",
+            "🧮 Mathematics",
+            "🔬 Science",
+            "🌍 Social Science",
+            "💻 Computer",
+            "❓ MCQ"
+        ];
+
+    }else{
+
+        subjects = [
+            "🧮 Mathematics",
+            "🔬 Science",
+            "📖 English",
+            "💼 Commerce",
+            "🎨 Arts",
+            "💻 Computer",
+            "❓ MCQ"
+        ];
+
+    }
+
+
+    container.innerHTML = "";
+
+
+    subjects.forEach(function(subject){
+
+        const div =
+            document.createElement("div");
+
+
+        div.className = "subject";
+
+
+        const cleanSubject =
+            subject.replace(
+                /[^\p{L}\p{N}\s]/gu,
+                ""
+            ).trim();
+
+
+        div.innerHTML =
+
+            "<h3>" +
+            subject +
+            "</h3>" +
+
+            "<p>" +
+            "Class " +
+            classNumber +
+            " के " +
+            cleanSubject +
+            " Study Material" +
+            "</p>" +
+
+            (
+                cleanSubject === "MCQ"
+                ?
+
+                '<button class="green" onclick="document.getElementById(\'quiz\').scrollIntoView({behavior:\'smooth\'})">' +
+                '✅ Start Quiz' +
+                '</button>'
+
+                :
+
+                '<button onclick="openNotes(\'' +
+                cleanSubject +
+                '\')">' +
+                '📝 Open Notes' +
+                '</button>'
+            );
+
+
+        container.appendChild(div);
+
+    });
 
 }
 
 
-/* QUIZ */
+
+/* =====================================
+   NOTES
+===================================== */
+
+function openNotes(subject){
+
+    if(selectedClass === 0){
+
+        alert(
+            "पहले अपनी Class चुनें।"
+        );
+
+        return;
+
+    }
+
+
+    const notes =
+        document.getElementById(
+            "notesContent"
+        );
+
+
+    let languageText = "";
+
+
+    if(selectedMedium === "Hindi Medium"){
+
+        languageText =
+            "यह Notes Hindi Medium विद्यार्थियों के लिए है।";
+
+    }else{
+
+        languageText =
+            "These notes are for English Medium students.";
+
+    }
+
+
+    let content = "";
+
+
+    if(subject === "Mathematics"){
+
+        content =
+
+        "<h3>🧮 Mathematics Notes</h3>" +
+
+        "<p>" +
+        languageText +
+        "</p>" +
+
+        "<p><b>Class:</b> " +
+        selectedClass +
+        "</p>" +
+
+        "<ul>" +
+        "<li>Number System</li>" +
+        "<li>Percentage</li>" +
+        "<li>Ratio and Proportion</li>" +
+        "<li>Average</li>" +
+        "<li>Algebra</li>" +
+        "<li>Geometry</li>" +
+        "<li>Practice Questions</li>" +
+        "</ul>";
+
+    }
+
+
+    else if(subject === "Science"){
+
+        content =
+
+        "<h3>🔬 Science Notes</h3>" +
+
+        "<p>" +
+        languageText +
+        "</p>" +
+
+        "<p><b>Class:</b> " +
+        selectedClass +
+        "</p>" +
+
+        "<ul>" +
+        "<li>Important Definitions</li>" +
+        "<li>Important Formulas</li>" +
+        "<li>Diagrams</li>" +
+        "<li>Important Questions</li>" +
+        "<li>Chapter-wise Revision</li>" +
+        "</ul>";
+
+    }
+
+
+    else if(subject === "Hindi"){
+
+        content =
+
+        "<h3>📖 Hindi Notes</h3>" +
+
+        "<p>" +
+        languageText +
+        "</p>" +
+
+        "<p><b>Class:</b> " +
+        selectedClass +
+        "</p>" +
+
+        "<ul>" +
+        "<li>व्याकरण</li>" +
+        "<li>पाठ के महत्वपूर्ण प्रश्न</li>" +
+        "<li>निबंध लेखन</li>" +
+        "<li>पत्र लेखन</li>" +
+        "<li>शब्द ज्ञान</li>" +
+        "</ul>";
+
+    }
+
+
+    else if(subject === "English"){
+
+        content =
+
+        "<h3>🇬🇧 English Notes</h3>" +
+
+        "<p>" +
+        languageText +
+        "</p>" +
+
+        "<p><b>Class:</b> " +
+        selectedClass +
+        "</p>" +
+
+        "<ul>" +
+        "<li>Grammar</li>" +
+        "<li>Tenses</li>" +
+        "<li>Vocabulary</li>" +
+        "<li>Writing Skills</li>" +
+        "<li>Literature</li>" +
+        "<li>Important Questions</li>" +
+        "</ul>";
+
+    }
+
+
+    else if(subject === "Social Science"){
+
+        content =
+
+        "<h3>🌍 Social Science Notes</h3>" +
+
+        "<p>" +
+        languageText +
+        "</p>" +
+
+        "<p><b>Class:</b> " +
+        selectedClass +
+        "</p>" +
+
+        "<ul>" +
+        "<li>History</li>" +
+        "<li>Geography</li>" +
+        "<li>Civics</li>" +
+        "<li>Economics</li>" +
+        "<li>Important Questions</li>" +
+        "</ul>";
+
+    }
+
+
+    else if(subject === "EVS"){
+
+        content =
+
+        "<h3>🌱 EVS Notes</h3>" +
+
+        "<p>" +
+        languageText +
+        "</p>" +
+
+        "<p><b>Class:</b> " +
+        selectedClass +
+        "</p>" +
+
+        "<ul>" +
+        "<li>Environment</li>" +
+        "<li>Plants</li>" +
+        "<li>Animals</li>" +
+        "<li>Water</li>" +
+        "<li>Health and Hygiene</li>" +
+        "</ul>";
+
+    }
+
+
+    else if(subject === "Computer"){
+
+        content =
+
+        "<h3>💻 Computer Notes</h3>" +
+
+        "<p>" +
+        languageText +
+        "</p>" +
+
+        "<p><b>Class:</b> " +
+        selectedClass +
+        "</p>" +
+
+        "<ul>" +
+        "<li>Computer Basics</li>" +
+        "<li>Internet</li>" +
+        "<li>MS Office</li>" +
+        "<li>Programming Basics</li>" +
+        "<li>Technology</li>" +
+        "</ul>";
+
+    }
+
+
+    else if(subject === "Commerce"){
+
+        content =
+
+        "<h3>💼 Commerce Notes</h3>" +
+
+        "<p>" +
+        languageText +
+        "</p>" +
+
+        "<p><b>Class:</b> " +
+        selectedClass +
+        "</p>" +
+
+        "<ul>" +
+        "<li>Accountancy</li>" +
+        "<li>Business Studies</li>" +
+        "<li>Economics</li>" +
+        "<li>Important Questions</li>" +
+        "</ul>";
+
+    }
+
+
+    else if(subject === "Arts"){
+
+        content =
+
+        "<h3>🎨 Arts Notes</h3>" +
+
+        "<p>" +
+        languageText +
+        "</p>" +
+
+        "<p><b>Class:</b> " +
+        selectedClass +
+        "</p>" +
+
+        "<ul>" +
+        "<li>History</li>" +
+        "<li>Political Science</li>" +
+        "<li>Geography</li>" +
+        "<li>Sociology</li>" +
+        "</ul>";
+
+    }
+
+
+    else{
+
+        content =
+
+        "<h3>📝 " +
+        subject +
+        " Notes</h3>" +
+
+        "<p>" +
+        languageText +
+        "</p>" +
+
+        "<p><b>Class:</b> " +
+        selectedClass +
+        "</p>" +
+
+        "<p>" +
+        subject +
+        " के Chapter-wise Notes और Important Questions यहाँ जोड़े जा सकते हैं।" +
+        "</p>";
+
+    }
+
+
+    notes.innerHTML =
+
+        '<div class="note">' +
+        content +
+        "</div>";
+
+
+    document.getElementById("notes")
+        .scrollIntoView({
+            behavior:"smooth"
+        });
+
+}
+
+
+
+/* =====================================
+   QUIZ
+===================================== */
 
 function checkQuiz(){
 
     let score = 0;
+
 
     const q1 =
         document.querySelector(
             'input[name="q1"]:checked'
         );
 
+
     const q2 =
         document.querySelector(
             'input[name="q2"]:checked'
         );
+
 
     const q3 =
         document.querySelector(
@@ -943,9 +1452,11 @@ function checkQuiz(){
         score++;
     }
 
+
     if(q2 && q2.value === "New Delhi"){
         score++;
     }
+
 
     if(q3 && q3.value === "H2O"){
         score++;
@@ -955,6 +1466,7 @@ function checkQuiz(){
     document.getElementById(
         "quizResult"
     ).innerText =
+
         "🎯 आपका Score: " +
         score +
         " / 3";
@@ -962,7 +1474,10 @@ function checkQuiz(){
 }
 
 
-/* MOCK */
+
+/* =====================================
+   MOCK TEST
+===================================== */
 
 function startMock(){
 
@@ -971,17 +1486,24 @@ function startMock(){
             "mockSubject"
         ).value;
 
+
     document.getElementById(
         "mockMessage"
-    ).innerText =
-        "🚀 " +
+    ).innerHTML =
+
+        "🚀 <b>" +
         subject +
-        " Mock Test शुरू हो गया।";
+        " Mock Test</b> शुरू हो गया।<br>" +
+
+        "जल्द ही यहाँ Chapter-wise और Class-wise Mock Tests जोड़े जा सकते हैं।";
 
 }
 
 
-/* PERCENTAGE */
+
+/* =====================================
+   PERCENTAGE
+===================================== */
 
 function calculatePercentage(){
 
@@ -991,6 +1513,7 @@ function calculatePercentage(){
                 "obtained"
             ).value
         );
+
 
     const total =
         parseFloat(
@@ -1023,6 +1546,7 @@ function calculatePercentage(){
     document.getElementById(
         "percentageResult"
     ).innerText =
+
         "📊 Percentage: " +
         percentage.toFixed(2) +
         "%";
@@ -1030,7 +1554,10 @@ function calculatePercentage(){
 }
 
 
-/* AGE */
+
+/* =====================================
+   AGE
+===================================== */
 
 function calculateAge(){
 
@@ -1038,6 +1565,7 @@ function calculateAge(){
         document.getElementById(
             "birthDate"
         ).value;
+
 
     if(!birth){
 
@@ -1054,16 +1582,20 @@ function calculateAge(){
     const birthDate =
         new Date(birth);
 
+
     const today =
         new Date();
+
 
     let age =
         today.getFullYear() -
         birthDate.getFullYear();
 
+
     const month =
         today.getMonth() -
         birthDate.getMonth();
+
 
     if(
         month < 0 ||
@@ -1078,9 +1610,11 @@ function calculateAge(){
 
     }
 
+
     document.getElementById(
         "ageResult"
     ).innerText =
+
         "🎂 आपकी उम्र: " +
         age +
         " वर्ष";
@@ -1088,7 +1622,10 @@ function calculateAge(){
 }
 
 
-/* CALCULATOR */
+
+/* =====================================
+   SIMPLE CALCULATOR
+===================================== */
 
 function addNumbers(){
 
@@ -1099,12 +1636,14 @@ function addNumbers(){
             ).value
         );
 
+
     const b =
         parseFloat(
             document.getElementById(
                 "num2"
             ).value
         );
+
 
     if(
         isNaN(a) ||
@@ -1120,41 +1659,81 @@ function addNumbers(){
 
     }
 
+
     document.getElementById(
         "calcResult"
     ).innerText =
+
         "उत्तर: " +
         (a + b);
 
 }
 
 
-/* PREMIUM */
 
-function buyPremium(amount){
+/* =====================================
+   PAYMENT / UPI
+===================================== */
+
+function buyPremium(amount, productName){
 
     const upi =
         "subhasharyan001@ybl";
 
+
     const url =
         "upi://pay?" +
+
         "pa=" +
         encodeURIComponent(upi) +
+
         "&pn=" +
         encodeURIComponent(
             "Student Study Hub"
         ) +
+
         "&am=" +
         encodeURIComponent(amount) +
+
         "&cu=INR" +
+
         "&tn=" +
         encodeURIComponent(
-            "Premium Study Material"
+            productName
         );
 
-    window.location.href = url;
+
+    const confirmPayment =
+        confirm(
+
+            "आप ₹" +
+            amount +
+            " का " +
+            productName +
+            " खरीदना चाहते हैं?\n\n" +
+
+            "Payment आपके UPI app में खुलेगा।"
+
+        );
+
+
+    if(confirmPayment){
+
+        window.location.href = url;
+
+    }
 
 }
+
+
+
+/* =====================================
+   PAGE START
+===================================== */
+
+console.log(
+    "Student Study Hub Loaded Successfully"
+);
 
 </script>
 
