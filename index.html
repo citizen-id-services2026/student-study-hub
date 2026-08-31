@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="hi">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,14 @@
 <title>Student Study Hub | CBSE RBSE NCERT</title>
 
 <style>
-*{box-sizing:border-box}
 
-html{scroll-behavior:smooth}
+*{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
 
 body{
     margin:0;
@@ -22,7 +28,7 @@ header{
     background:linear-gradient(135deg,#075eaa,#1684d8);
     color:white;
     text-align:center;
-    padding:38px 15px;
+    padding:40px 15px;
 }
 
 header h1{
@@ -31,8 +37,8 @@ header h1{
 }
 
 header p{
+    margin-top:10px;
     font-size:17px;
-    line-height:1.7;
 }
 
 nav{
@@ -56,7 +62,9 @@ nav a{
     border-radius:8px;
 }
 
-nav a:hover{background:#e8f3fb}
+nav a:hover{
+    background:#e8f3fb;
+}
 
 .container{
     max-width:1150px;
@@ -103,26 +111,40 @@ nav a:hover{background:#e8f3fb}
     gap:12px;
 }
 
-.option-card,
+.option-card{
+    background:#f8fbff;
+    border:2px solid #d7e7f5;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+}
+
+.option-card h3{
+    color:#145b91;
+    font-size:23px;
+}
+
+.class-card,
 .subject,
 .chapter,
-.tool,
-.data-card{
+.tool{
     background:#f8fbff;
     border:1px solid #d8e7f3;
     padding:18px;
     border-radius:12px;
 }
 
-.option-card{
+.class-card{
     text-align:center;
 }
 
-.option-card h3,
 .subject h3,
-.chapter h3,
-.data-card h3{
+.chapter h3{
     color:#145b91;
+}
+
+.chapter{
+    margin-bottom:10px;
 }
 
 .selection{
@@ -143,7 +165,8 @@ select{
     font-size:16px;
 }
 
-button,.btn{
+button,
+.btn{
     display:inline-block;
     border:0;
     background:#0878cf;
@@ -156,23 +179,31 @@ button,.btn{
     margin:4px;
 }
 
-button:hover,.btn:hover{
+button:hover,
+.btn:hover{
     opacity:.9;
 }
 
-.green{background:#159447}
-.orange{background:#e67e22}
-.red{background:#dc3545}
-.dark{background:#34495e}
-.purple{background:#7b3fc6}
+.green{background:#159447;}
+.orange{background:#e67e22;}
+.red{background:#dc3545;}
+.dark{background:#34495e;}
+.purple{background:#7b3fc6;}
 
-.hidden{display:none}
+.hidden{
+    display:none;
+}
 
 .message{
     background:#fff7d6;
     padding:15px;
     border-radius:8px;
     margin-top:12px;
+}
+
+.premium{
+    background:linear-gradient(135deg,#fff7d6,#fff);
+    border:2px solid #e5b300;
 }
 
 .price{
@@ -191,7 +222,7 @@ button:hover,.btn:hover{
 
 .learning-card{
     color:white;
-    padding:24px 12px;
+    padding:25px 15px;
     border-radius:16px;
     text-align:center;
     cursor:pointer;
@@ -200,7 +231,7 @@ button:hover,.btn:hover{
 }
 
 .learning-card:hover{
-    transform:translateY(-4px);
+    transform:translateY(-3px);
 }
 
 .learning-card .icon{
@@ -211,16 +242,39 @@ button:hover,.btn:hover{
     margin:10px 0 5px;
 }
 
-.english{background:#0878cf}
-.gk{background:#159447}
-.reasoning{background:#7b3fc6}
-.computer{background:#e67e22}
-.cyber{background:#34495e}
+.english{
+    background:#0878cf;
+}
+
+.gk{
+    background:#159447;
+}
+
+.reasoning{
+    background:#7b3fc6;
+}
+
+.computer{
+    background:#e67e22;
+}
+
+.cyber{
+    background:#dc3545;
+}
 
 /* DATA */
 
 .data-card{
+    background:#f8fbff;
+    border:1px solid #d8e7f3;
+    padding:16px;
     margin-bottom:12px;
+    border-radius:12px;
+}
+
+.data-card h3{
+    color:#145b91;
+    margin-top:0;
 }
 
 .hindi{
@@ -231,7 +285,7 @@ button:hover,.btn:hover{
 .english-text{
     color:#0878cf;
     font-size:18px;
-    margin-top:6px;
+    margin-top:5px;
 }
 
 .topic-grid{
@@ -248,26 +302,70 @@ button:hover,.btn:hover{
     text-align:center;
 }
 
+/* TEST */
+
+.test-box{
+    background:#f8fbff;
+    border:2px solid #d8e7f3;
+    padding:22px;
+    border-radius:15px;
+}
+
+.test-question{
+    font-size:20px;
+    font-weight:bold;
+    margin-bottom:18px;
+}
+
 .test-option{
     display:block;
     background:white;
     border:1px solid #ddd;
-    padding:10px;
-    margin:7px 0;
+    padding:14px;
+    margin:9px 0;
     border-radius:8px;
+    cursor:pointer;
 }
 
 .test-option:hover{
-    background:#f1f8ff;
+    background:#eef7ff;
+}
+
+.test-option input{
+    width:auto;
+    margin-right:8px;
+}
+
+.test-progress{
+    background:#e9eef3;
+    border-radius:20px;
+    overflow:hidden;
+    height:12px;
+    margin:15px 0;
+}
+
+.test-progress-bar{
+    height:100%;
+    background:#0878cf;
+    width:0%;
+    transition:.3s;
+}
+
+.test-buttons{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    margin-top:20px;
 }
 
 .test-result{
     background:#e9f8ef;
-    padding:18px;
+    padding:20px;
     border-radius:10px;
     margin-top:15px;
     font-size:20px;
     font-weight:bold;
+    text-align:center;
 }
 
 .notes-content{
@@ -283,15 +381,12 @@ footer{
     margin-top:20px;
 }
 
-@media(max-width:850px){
+@media(max-width:900px){
 
     .learning-grid{
         grid-template-columns:repeat(3,1fr);
     }
 
-    .grid{
-        grid-template-columns:repeat(3,1fr);
-    }
 }
 
 @media(max-width:700px){
@@ -326,6 +421,14 @@ footer{
         font-size:13px;
         padding:8px;
     }
+
+    .test-buttons{
+        flex-direction:column;
+    }
+
+    .test-buttons button{
+        width:100%;
+    }
 }
 
 @media print{
@@ -341,6 +444,7 @@ footer{
         background:white;
     }
 }
+
 </style>
 </head>
 
@@ -354,11 +458,10 @@ footer{
 CBSE • RBSE • NCERT
 <br>
 Hindi Medium + English Medium
-<br>
-📖 Learn • Practice • Test
 </p>
 
 </header>
+
 
 <nav>
 
@@ -374,7 +477,9 @@ Hindi Medium + English Medium
 
 </nav>
 
+
 <div class="container">
+
 
 <div class="notice">
 
@@ -411,6 +516,7 @@ CBSE चुनें
 </button>
 
 </div>
+
 
 <div class="option-card">
 
@@ -451,6 +557,7 @@ Hindi Medium
 
 </div>
 
+
 <div class="option-card">
 
 <h3>🇬🇧 English Medium</h3>
@@ -477,7 +584,7 @@ English Medium
 <h2>🎓 Class 1–12</h2>
 
 <p>
-Board और Medium चुनने के बाद Class चुनें।
+पहले Board और Medium चुनें। फिर Class चुनें।
 </p>
 
 <div class="grid" id="classList"></div>
@@ -556,14 +663,15 @@ oninput="searchChapters()">
 
 <section class="card" id="learning">
 
-<h2>📖 Learning Zone</h2>
+<h2>📖 English & General Learning</h2>
 
 <p>
-किसी भी विषय पर क्लिक करें। फिर Topic चुनें,
-Data पढ़ें और Test देकर अपना Score देखें।
+किसी भी विषय पर क्लिक करें। उसके Topics और Questions खुलेंगे।
 </p>
 
+
 <div class="learning-grid">
+
 
 <div class="learning-card english"
 onclick="openLearning('english')">
@@ -596,7 +704,7 @@ onclick="openLearning('reasoning')">
 
 <h3>Reasoning</h3>
 
-<p>Practice + Test</p>
+<p>Practice Test</p>
 
 </div>
 
@@ -620,9 +728,10 @@ onclick="openLearning('cyber')">
 
 <h3>Cyber Security</h3>
 
-<p>Safety + Test</p>
+<p>Security + Test</p>
 
 </div>
+
 
 </div>
 
@@ -636,7 +745,8 @@ onclick="openLearning('cyber')">
 <h2 id="learningTitle"></h2>
 
 <div id="learningDescription"
-class="selection"></div>
+class="selection">
+</div>
 
 <div id="topicArea"></div>
 
@@ -653,7 +763,7 @@ class="selection"></div>
 </section>
 
 
-<!-- GENERAL NOTES -->
+<!-- NOTES -->
 
 <section class="card" id="notes">
 
@@ -661,23 +771,23 @@ class="selection"></div>
 
 <div class="message">
 
-<b>📚 Original Notes</b>
+<b>अपनी Original Notes यहाँ जोड़ें</b>
 
 <br><br>
 
-Class, Subject और Chapter के अनुसार
-अपनी original notes यहाँ जोड़ सकते हैं।
+आप प्रत्येक Class, Subject और Chapter के लिए
+अपनी original notes जोड़ सकते हैं।
 
 </div>
 
 <div class="message">
 
-<b>📄 PDF</b>
+<b>📄 PDF Upload</b>
 
 <br><br>
 
-अपनी PDF को website के pdf folder में रखकर
-JavaScript में उसका path जोड़ सकते हैं।
+PDF को website के <b>pdf</b> folder में रखें
+और JavaScript में उसका path डालें।
 
 </div>
 
@@ -691,6 +801,7 @@ JavaScript में उसका path जोड़ सकते हैं।
 <h2>🧮 Student Tools</h2>
 
 <div class="three-grid">
+
 
 <div class="tool">
 
@@ -748,6 +859,7 @@ Add
 
 </div>
 
+
 </div>
 
 </section>
@@ -755,18 +867,21 @@ Add
 
 <!-- PREMIUM -->
 
-<section class="card" id="premium">
+<section class="card premium" id="premium">
 
 <h2>💳 Premium Study Material</h2>
 
 <p>
-आप अपनी original notes,
+आप अपनी original premium notes,
 question banks और practice PDFs बेच सकते हैं।
 </p>
+
 
 <h3>📘 Premium Notes</h3>
 
 <div class="price">₹49</div>
+
+<p>Original Chapter-wise Notes</p>
 
 <button class="green"
 onclick="buyPremium(49)">
@@ -777,6 +892,8 @@ onclick="buyPremium(49)">
 <h3>📚 Complete Question Bank</h3>
 
 <div class="price">₹99</div>
+
+<p>Original Questions + MCQ + Practice Sets</p>
 
 <button class="green"
 onclick="buyPremium(99)">
@@ -793,7 +910,7 @@ onclick="buyPremium(99)">
 <h2>✉️ Contact</h2>
 
 <p>
-Study Notes और Website के लिए संपर्क करें।
+Study Notes और website के लिए संपर्क करें।
 </p>
 
 <a
@@ -825,12 +942,13 @@ Hindi Medium + English Medium
 
 <br><br>
 
-Learn • Practice • Test
+यह एक निजी Education Website है।
 
 </footer>
 
 
 <script>
+
 
 /* =====================================================
 GLOBAL
@@ -845,6 +963,10 @@ let selectedChapter="";
 let currentLearning="";
 let currentTopic="";
 
+let testData=[];
+let testIndex=0;
+let testAnswers=[];
+
 
 /* =====================================================
 CLASS
@@ -856,7 +978,7 @@ for(let i=1;i<=12;i++){
 
 classList.innerHTML+=`
 
-<div class="class-card option-card">
+<div class="class-card">
 
 <h3>Class ${i}</h3>
 
@@ -890,9 +1012,13 @@ SUBJECTS
 const SUBJECTS={
 
 1:["Hindi","English","Mathematics","Environmental Studies"],
+
 2:["Hindi","English","Mathematics","Environmental Studies"],
+
 3:["Hindi","English","Mathematics","Environmental Studies"],
+
 4:["Hindi","English","Mathematics","Environmental Studies"],
+
 5:["Hindi","English","Mathematics","Environmental Studies"],
 
 6:["Hindi","English","Mathematics","Science","Social Science","Sanskrit"],
@@ -948,12 +1074,314 @@ CHAPTERS[classNo][subject]=[
 
 
 /* =====================================================
+BOARD
+===================================================== */
+
+function chooseBoard(board){
+
+selectedBoard=board;
+
+document.getElementById("boardMessage").innerHTML=
+"✅ आपने <b>"+board+"</b> चुना है।";
+
+}
+
+
+/* =====================================================
+MEDIUM
+===================================================== */
+
+function chooseMedium(medium){
+
+selectedMedium=medium;
+
+document.getElementById("mediumMessage").innerHTML=
+"✅ आपने <b>"+medium+"</b> चुना है। अब Class चुनें।";
+
+document.getElementById("classes")
+.scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+
+/* =====================================================
+CLASS
+===================================================== */
+
+function openClass(classNo){
+
+if(!selectedBoard){
+
+alert("पहले CBSE या RBSE चुनें।");
+
+document.getElementById("board")
+.scrollIntoView({
+behavior:"smooth"
+});
+
+return;
+
+}
+
+
+if(!selectedMedium){
+
+alert("पहले Hindi Medium या English Medium चुनें।");
+
+document.getElementById("medium")
+.scrollIntoView({
+behavior:"smooth"
+});
+
+return;
+
+}
+
+selectedClass=classNo;
+
+document.getElementById("subjectHeading").innerText=
+"📚 Class "+classNo+" Subjects";
+
+document.getElementById("subjectInfo").innerHTML=
+"<b>Board:</b> "+selectedBoard+
+"<br><b>Medium:</b> "+selectedMedium+
+"<br><b>Class:</b> "+classNo;
+
+renderSubjects();
+
+document.getElementById("subjectSection")
+.classList.remove("hidden");
+
+document.getElementById("chapterSection")
+.classList.add("hidden");
+
+document.getElementById("notesViewer")
+.classList.add("hidden");
+
+document.getElementById("subjectSection")
+.scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+
+/* =====================================================
+SUBJECT
+===================================================== */
+
+function renderSubjects(){
+
+const list=document.getElementById("subjectList");
+
+list.innerHTML="";
+
+const subjects=SUBJECTS[selectedClass]||[];
+
+subjects.forEach(subject=>{
+
+const div=document.createElement("div");
+
+div.className="subject";
+
+div.innerHTML=`
+
+<h3>📚 ${subject}</h3>
+
+<p>Class ${selectedClass}</p>
+
+<button onclick="openSubject('${safe(subject)}')">
+📖 Open Subject
+</button>
+
+`;
+
+list.appendChild(div);
+
+});
+
+}
+
+
+function searchSubjects(){
+
+const text=document.getElementById("subjectSearch")
+.value.toLowerCase();
+
+document.querySelectorAll("#subjectList .subject")
+.forEach(item=>{
+
+item.style.display=
+item.innerText.toLowerCase().includes(text)
+?""
+:"none";
+
+});
+
+}
+
+
+function openSubject(subject){
+
+selectedSubject=subject;
+
+document.getElementById("chapterHeading").innerText=
+"📖 "+subject+" Chapters";
+
+document.getElementById("chapterInfo").innerHTML=
+"<b>Board:</b> "+selectedBoard+
+"<br><b>Medium:</b> "+selectedMedium+
+"<br><b>Class:</b> "+selectedClass+
+"<br><b>Subject:</b> "+subject;
+
+document.getElementById("chapterSearch").value="";
+
+renderChapters();
+
+document.getElementById("chapterSection")
+.classList.remove("hidden");
+
+document.getElementById("chapterSection")
+.scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+
+function renderChapters(){
+
+const list=document.getElementById("chapterList");
+
+list.innerHTML="";
+
+const chapters=
+CHAPTERS[selectedClass] &&
+CHAPTERS[selectedClass][selectedSubject]
+?
+CHAPTERS[selectedClass][selectedSubject]
+:
+[];
+
+chapters.forEach(chapter=>{
+
+const div=document.createElement("div");
+
+div.className="chapter";
+
+div.innerHTML=`
+
+<h3>📖 ${chapter}</h3>
+
+<p>
+${selectedSubject} - Class ${selectedClass}
+</p>
+
+<button onclick="readNotes('${safe(chapter)}')">
+📝 Read Notes
+</button>
+
+`;
+
+list.appendChild(div);
+
+});
+
+}
+
+
+function searchChapters(){
+
+const text=document.getElementById("chapterSearch")
+.value.toLowerCase();
+
+document.querySelectorAll("#chapterList .chapter")
+.forEach(item=>{
+
+item.style.display=
+item.innerText.toLowerCase().includes(text)
+?""
+:"none";
+
+});
+
+}
+
+
+function readNotes(chapter){
+
+selectedChapter=chapter;
+
+document.getElementById("notesInfo").innerHTML=
+"<b>Board:</b> "+selectedBoard+
+"<br><b>Medium:</b> "+selectedMedium+
+"<br><b>Class:</b> "+selectedClass+
+"<br><b>Subject:</b> "+selectedSubject+
+"<br><b>Chapter:</b> "+chapter;
+
+document.getElementById("notesContent").innerHTML=`
+
+<h3>📚 ${selectedSubject} - ${chapter}</h3>
+
+<p>
+यह आपका Original Notes Viewer है।
+</p>
+
+<h4>📝 Notes यहाँ जोड़ें</h4>
+
+<p>
+अपनी original chapter-wise notes यहाँ जोड़ सकते हैं।
+</p>
+
+`;
+
+document.getElementById("notesViewer")
+.classList.remove("hidden");
+
+document.getElementById("notesViewer")
+.scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+
+function backSubjects(){
+
+document.getElementById("chapterSection")
+.classList.add("hidden");
+
+document.getElementById("notesViewer")
+.classList.add("hidden");
+
+document.getElementById("subjectSection")
+.scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+
+function closeNotes(){
+
+document.getElementById("notesViewer")
+.classList.add("hidden");
+
+document.getElementById("chapterSection")
+.scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+
+/* =====================================================
 DAILY USE ENGLISH
 ===================================================== */
 
 const DAILY_SENTENCES=[
-
-/* HOME */
 
 {
 topic:"Home & Family",
@@ -985,7 +1413,11 @@ hi:"लाइट बंद कर दो।",
 en:"Turn off the light."
 },
 
-/* SCHOOL */
+{
+topic:"School",
+hi:"तुम स्कूल कब जाते हो?",
+en:"When do you go to school?"
+},
 
 {
 topic:"School",
@@ -1007,17 +1439,9 @@ en:"I did not understand."
 
 {
 topic:"School",
-hi:"फिर से समझाइए।",
+hi:"कृपया फिर से समझाइए।",
 en:"Please explain again."
 },
-
-{
-topic:"School",
-hi:"अपना होमवर्क करो।",
-en:"Do your homework."
-},
-
-/* CONVERSATION */
 
 {
 topic:"Conversation",
@@ -1039,17 +1463,9 @@ en:"What is your name?"
 
 {
 topic:"Conversation",
-hi:"मेरा नाम आर्यन है।",
-en:"My name is Aryan."
-},
-
-{
-topic:"Conversation",
 hi:"आप कहाँ रहते हैं?",
 en:"Where do you live?"
 },
-
-/* MARKET */
 
 {
 topic:"Market",
@@ -1070,14 +1486,6 @@ en:"Is this cheap?"
 },
 
 {
-topic:"Market",
-hi:"मुझे यह खरीदना है।",
-en:"I want to buy this."
-},
-
-/* TRAVEL */
-
-{
 topic:"Travel",
 hi:"बस कब आएगी?",
 en:"When will the bus arrive?"
@@ -1090,14 +1498,6 @@ en:"I have to go to the station."
 },
 
 {
-topic:"Travel",
-hi:"टिकट कितने का है?",
-en:"How much is the ticket?"
-},
-
-/* FOOD */
-
-{
 topic:"Food",
 hi:"मुझे भूख लगी है।",
 en:"I am hungry."
@@ -1108,14 +1508,6 @@ topic:"Food",
 hi:"मुझे पानी चाहिए।",
 en:"I need water."
 },
-
-{
-topic:"Food",
-hi:"खाना बहुत अच्छा है।",
-en:"The food is very good."
-},
-
-/* DAILY ROUTINE */
 
 {
 topic:"Daily Routine",
@@ -1135,8 +1527,6 @@ hi:"मैं रात को जल्दी सोता हूँ।",
 en:"I go to bed early at night."
 },
 
-/* FEELINGS */
-
 {
 topic:"Feelings",
 hi:"मैं बहुत खुश हूँ।",
@@ -1145,17 +1535,9 @@ en:"I am very happy."
 
 {
 topic:"Feelings",
-hi:"मैं थका हुआ हूँ।",
-en:"I am tired."
-},
-
-{
-topic:"Feelings",
 hi:"मुझे गुस्सा आ रहा है।",
 en:"I am getting angry."
 },
-
-/* QUESTIONS */
 
 {
 topic:"Questions",
@@ -1168,14 +1550,6 @@ topic:"Questions",
 hi:"तुम कब आओगे?",
 en:"When will you come?"
 },
-
-{
-topic:"Questions",
-hi:"यह क्या है?",
-en:"What is this?"
-},
-
-/* POLITE */
 
 {
 topic:"Polite English",
@@ -1195,8 +1569,6 @@ hi:"कोई बात नहीं।",
 en:"No problem."
 },
 
-/* MOBILE */
-
 {
 topic:"Mobile & Internet",
 hi:"मुझे अपना फोन दो।",
@@ -1209,8 +1581,6 @@ hi:"इंटरनेट काम नहीं कर रहा है।",
 en:"The internet is not working."
 },
 
-/* FRIENDS */
-
 {
 topic:"Friends",
 hi:"चलो साथ चलते हैं।",
@@ -1222,8 +1592,6 @@ topic:"Friends",
 hi:"मुझसे बात करो।",
 en:"Talk to me."
 },
-
-/* WORK */
 
 {
 topic:"Work",
@@ -1259,14 +1627,6 @@ topic:"India",
 q:"भारत का राष्ट्रीय पशु कौन सा है?",
 en:"What is the national animal of India?",
 options:["Lion","Tiger","Elephant","Deer"],
-answer:1
-},
-
-{
-topic:"India",
-q:"भारत का राष्ट्रीय पक्षी कौन सा है?",
-en:"What is the national bird of India?",
-options:["Sparrow","Peacock","Crow","Parrot"],
 answer:1
 },
 
@@ -1315,13 +1675,6 @@ topic:"Number Series",
 q:"5, 10, 15, 20, ?",
 options:["22","24","25","30"],
 answer:2
-},
-
-{
-topic:"Number Series",
-q:"10, 20, 30, 40, ?",
-options:["45","50","55","60"],
-answer:1
 },
 
 {
@@ -1426,10 +1779,9 @@ const CYBER_DATA=[
 {
 topic:"Cyber Basics",
 q:"Cyber Security का मुख्य उद्देश्य क्या है?",
-en:"What is the main purpose of Cyber Security?",
 options:[
 "Computer को सजाना",
-"Data और Systems को सुरक्षित रखना",
+"Data और systems को सुरक्षित रखना",
 "Game खेलना",
 "Internet की speed बढ़ाना"
 ],
@@ -1437,14 +1789,13 @@ answer:1
 },
 
 {
-topic:"Passwords",
-q:"Strong Password कैसा होना चाहिए?",
-en:"What should a strong password be like?",
+topic:"Password Security",
+q:"मजबूत Password में क्या होना चाहिए?",
 options:[
-"123456",
-"अपना नाम",
-"Letters + Numbers + Symbols",
-"केवल मोबाइल नंबर"
+"केवल नाम",
+"केवल जन्म तारीख",
+"Letters, Numbers और Symbols",
+"केवल 123456"
 ],
 answer:2
 },
@@ -1452,51 +1803,35 @@ answer:2
 {
 topic:"Phishing",
 q:"Phishing क्या है?",
-en:"What is phishing?",
 options:[
-"Online धोखाधड़ी का प्रयास",
-"Computer की सफाई",
-"Photo editing",
-"Game"
+"एक Computer Game",
+"Fake message/link से जानकारी चुराने की कोशिश",
+"एक Printer",
+"एक Operating System"
+],
+answer:1
+},
+
+{
+topic:"OTP Security",
+q:"OTP किसके साथ share करना चाहिए?",
+options:[
+"किसी के साथ नहीं",
+"हर दोस्त के साथ",
+"Social Media पर",
+"Unknown caller के साथ"
 ],
 answer:0
 },
 
 {
-topic:"OTP Safety",
-q:"OTP किसके साथ share करना चाहिए?",
-en:"With whom should you share your OTP?",
+topic:"Safe Internet",
+q:"Unknown Link मिलने पर क्या करना चाहिए?",
 options:[
-"दोस्त",
-"अजनबी",
-"किसी के साथ नहीं",
-"Social Media पर"
-],
-answer:2
-},
-
-{
-topic:"Online Safety",
-q:"Unknown Link पर क्या करना चाहिए?",
-en:"What should you do with an unknown link?",
-options:[
-"तुरंत खोलना",
-"सबको भेजना",
-"बिना जांचे download करना",
-"सावधानी रखना और verify करना"
-],
-answer:3
-},
-
-{
-topic:"Privacy",
-q:"Personal information को कहाँ सुरक्षित रखना चाहिए?",
-en:"Where should personal information be kept safe?",
-options:[
-"Public Website",
-"Unknown Person",
-"Secure Account",
-"Open Social Media Post"
+"तुरंत click करें",
+"सबको भेजें",
+"बिना verify किए click न करें",
+"Password भेज दें"
 ],
 answer:2
 }
@@ -1505,290 +1840,7 @@ answer:2
 
 
 /* =====================================================
-BOARD
-===================================================== */
-
-function chooseBoard(board){
-
-selectedBoard=board;
-
-document.getElementById("boardMessage").innerHTML=
-"✅ आपने <b>"+board+"</b> चुना है।";
-
-}
-
-
-/* =====================================================
-MEDIUM
-===================================================== */
-
-function chooseMedium(medium){
-
-selectedMedium=medium;
-
-document.getElementById("mediumMessage").innerHTML=
-"✅ आपने <b>"+medium+"</b> चुना है। अब Class चुनें।";
-
-document.getElementById("classes")
-.scrollIntoView({behavior:"smooth"});
-
-}
-
-
-/* =====================================================
-CLASS
-===================================================== */
-
-function openClass(classNo){
-
-if(!selectedBoard){
-
-alert("पहले CBSE या RBSE चुनें।");
-
-document.getElementById("board")
-.scrollIntoView({behavior:"smooth"});
-
-return;
-}
-
-if(!selectedMedium){
-
-alert("पहले Hindi Medium या English Medium चुनें।");
-
-document.getElementById("medium")
-.scrollIntoView({behavior:"smooth"});
-
-return;
-}
-
-selectedClass=classNo;
-
-document.getElementById("subjectHeading").innerText=
-"📚 Class "+classNo+" Subjects";
-
-document.getElementById("subjectInfo").innerHTML=
-"<b>Board:</b> "+selectedBoard+
-"<br><b>Medium:</b> "+selectedMedium+
-"<br><b>Class:</b> "+classNo;
-
-renderSubjects();
-
-document.getElementById("subjectSection")
-.classList.remove("hidden");
-
-document.getElementById("chapterSection")
-.classList.add("hidden");
-
-document.getElementById("notesViewer")
-.classList.add("hidden");
-
-document.getElementById("subjectSection")
-.scrollIntoView({behavior:"smooth"});
-
-}
-
-
-/* =====================================================
-SUBJECT
-===================================================== */
-
-function renderSubjects(){
-
-const list=document.getElementById("subjectList");
-
-list.innerHTML="";
-
-const subjects=SUBJECTS[selectedClass]||[];
-
-subjects.forEach(subject=>{
-
-const div=document.createElement("div");
-
-div.className="subject";
-
-div.innerHTML=`
-
-<h3>📚 ${subject}</h3>
-
-<p>Class ${selectedClass}</p>
-
-<button onclick="openSubject('${safe(subject)}')">
-📖 Open Subject
-</button>
-
-`;
-
-list.appendChild(div);
-
-});
-
-}
-
-
-function searchSubjects(){
-
-const text=document.getElementById("subjectSearch")
-.value.toLowerCase();
-
-document.querySelectorAll("#subjectList .subject")
-.forEach(item=>{
-
-item.style.display=
-item.innerText.toLowerCase().includes(text)
-?""
-:"none";
-
-});
-
-}
-
-
-function openSubject(subject){
-
-selectedSubject=subject;
-
-document.getElementById("chapterHeading").innerText=
-"📖 "+subject+" Chapters";
-
-document.getElementById("chapterInfo").innerHTML=
-"<b>Board:</b> "+selectedBoard+
-"<br><b>Medium:</b> "+selectedMedium+
-"<br><b>Class:</b> "+selectedClass+
-"<br><b>Subject:</b> "+subject;
-
-document.getElementById("chapterSearch").value="";
-
-renderChapters();
-
-document.getElementById("chapterSection")
-.classList.remove("hidden");
-
-document.getElementById("chapterSection")
-.scrollIntoView({behavior:"smooth"});
-
-}
-
-
-function renderChapters(){
-
-const list=document.getElementById("chapterList");
-
-list.innerHTML="";
-
-const chapters=
-CHAPTERS[selectedClass] &&
-CHAPTERS[selectedClass][selectedSubject]
-?
-CHAPTERS[selectedClass][selectedSubject]
-:
-[];
-
-chapters.forEach(chapter=>{
-
-const div=document.createElement("div");
-
-div.className="chapter";
-
-div.innerHTML=`
-
-<h3>📖 ${chapter}</h3>
-
-<p>
-${selectedSubject} - Class ${selectedClass}
-</p>
-
-<button onclick="readNotes('${safe(chapter)}')">
-📝 Read Notes
-</button>
-
-`;
-
-list.appendChild(div);
-
-});
-
-}
-
-
-function searchChapters(){
-
-const text=document.getElementById("chapterSearch")
-.value.toLowerCase();
-
-document.querySelectorAll("#chapterList .chapter")
-.forEach(item=>{
-
-item.style.display=
-item.innerText.toLowerCase().includes(text)
-?""
-:"none";
-
-});
-
-}
-
-
-function readNotes(chapter){
-
-selectedChapter=chapter;
-
-document.getElementById("notesInfo").innerHTML=
-"<b>Board:</b> "+selectedBoard+
-"<br><b>Medium:</b> "+selectedMedium+
-"<br><b>Class:</b> "+selectedClass+
-"<br><b>Subject:</b> "+selectedSubject+
-"<br><b>Chapter:</b> "+chapter;
-
-document.getElementById("notesContent").innerHTML=`
-
-<h3>📚 ${selectedSubject} - ${chapter}</h3>
-
-<p>
-यह आपका Original Notes Viewer है।
-</p>
-
-<p>
-अपनी original chapter-wise notes यहाँ जोड़ सकते हैं।
-</p>
-
-`;
-
-document.getElementById("notesViewer")
-.classList.remove("hidden");
-
-document.getElementById("notesViewer")
-.scrollIntoView({behavior:"smooth"});
-
-}
-
-
-function backSubjects(){
-
-document.getElementById("chapterSection")
-.classList.add("hidden");
-
-document.getElementById("notesViewer")
-.classList.add("hidden");
-
-document.getElementById("subjectSection")
-.scrollIntoView({behavior:"smooth"});
-
-}
-
-
-function closeNotes(){
-
-document.getElementById("notesViewer")
-.classList.add("hidden");
-
-document.getElementById("chapterSection")
-.scrollIntoView({behavior:"smooth"});
-
-}
-
-
-/* =====================================================
-LEARNING OPEN
+OPEN LEARNING
 ===================================================== */
 
 function openLearning(type){
@@ -1801,19 +1853,21 @@ document.getElementById("learningView")
 document.getElementById("dataArea").innerHTML="";
 document.getElementById("testArea").innerHTML="";
 
+
 if(type==="english"){
 
 document.getElementById("learningTitle").innerText=
 "🗣️ Daily Use English Sentences";
 
 document.getElementById("learningDescription").innerHTML=
-"<b>1000 Daily Use Sentences</b><br>Hindi + English | Topic-wise | Test";
+"<b>1000 Daily Use Sentences</b><br>Hindi + English | Topic-wise | Practice + Test";
 
 renderEnglishTopics();
 
 }
 
-else if(type==="gk"){
+
+if(type==="gk"){
 
 document.getElementById("learningTitle").innerText=
 "🌍 Current GK";
@@ -1825,7 +1879,8 @@ renderQuestionTopics(GK_DATA);
 
 }
 
-else if(type==="reasoning"){
+
+if(type==="reasoning"){
 
 document.getElementById("learningTitle").innerText=
 "🧠 Reasoning";
@@ -1837,7 +1892,8 @@ renderQuestionTopics(REASONING_DATA);
 
 }
 
-else if(type==="computer"){
+
+if(type==="computer"){
 
 document.getElementById("learningTitle").innerText=
 "💻 Computer";
@@ -1849,20 +1905,24 @@ renderQuestionTopics(COMPUTER_DATA);
 
 }
 
-else if(type==="cyber"){
+
+if(type==="cyber"){
 
 document.getElementById("learningTitle").innerText=
 "🔐 Cyber Security";
 
 document.getElementById("learningDescription").innerHTML=
-"<b>Cyber Security Awareness</b><br>Password | Phishing | OTP | Privacy | Online Safety";
+"<b>Cyber Security Basics</b><br>Password | Phishing | OTP | Safe Internet";
 
 renderQuestionTopics(CYBER_DATA);
 
 }
 
+
 document.getElementById("learningView")
-.scrollIntoView({behavior:"smooth"});
+.scrollIntoView({
+behavior:"smooth"
+});
 
 }
 
@@ -1873,23 +1933,16 @@ ENGLISH TOPICS
 
 function renderEnglishTopics(){
 
-const topics=[
-"Home & Family",
-"School",
-"Conversation",
-"Market",
-"Travel",
-"Food",
-"Daily Routine",
-"Feelings",
-"Questions",
-"Polite English",
-"Mobile & Internet",
-"Friends",
-"Work"
-];
+const topics=[...new Set(
+DAILY_SENTENCES.map(x=>x.topic)
+)];
 
-let html="<h3>📚 Topics</h3><div class='topic-grid'>";
+let html=`
+
+<h3>📚 Topics</h3>
+
+<div class="topic-grid">
+`;
 
 topics.forEach(topic=>{
 
@@ -1915,9 +1968,10 @@ Open
 
 });
 
-html+="</div>";
+html+=`</div>`;
 
-document.getElementById("topicArea").innerHTML=html;
+document.getElementById("topicArea")
+.innerHTML=html;
 
 }
 
@@ -1932,12 +1986,14 @@ const data=DAILY_SENTENCES.filter(
 x=>x.topic===topic
 );
 
+currentTopic=topic;
+
 let html=`
 
 <h3>🗣️ ${topic}</h3>
 
-<p>
-Total Sentences: <b>${data.length}</b>
+<p>Total Sentences:
+<b>${data.length}</b>
 </p>
 `;
 
@@ -1974,9 +2030,11 @@ onclick="englishTest('${safe(topic)}')">
 
 `;
 
-document.getElementById("dataArea").innerHTML=html;
+document.getElementById("dataArea")
+.innerHTML=html;
 
-document.getElementById("testArea").innerHTML="";
+document.getElementById("testArea")
+.innerHTML="";
 
 }
 
@@ -1987,9 +2045,16 @@ QUESTION TOPICS
 
 function renderQuestionTopics(data){
 
-const topics=[...new Set(data.map(x=>x.topic))];
+const topics=[...new Set(
+data.map(x=>x.topic)
+)];
 
-let html="<h3>📚 Topics</h3><div class='topic-grid'>";
+let html=`
+
+<h3>📚 Topics</h3>
+
+<div class="topic-grid">
+`;
 
 topics.forEach(topic=>{
 
@@ -2014,9 +2079,10 @@ Open
 
 });
 
-html+="</div>";
+html+=`</div>`;
 
-document.getElementById("topicArea").innerHTML=html;
+document.getElementById("topicArea")
+.innerHTML=html;
 
 }
 
@@ -2027,11 +2093,14 @@ SHOW QUESTIONS
 
 function showQuestions(topic){
 
-let data=getCurrentData();
+let data=getCurrentQuestionData();
 
 data=data.filter(x=>x.topic===topic);
 
-let html=`<h3>📚 ${topic}</h3>`;
+let html=`
+
+<h3>📚 ${topic}</h3>
+`;
 
 data.forEach((item,index)=>{
 
@@ -2044,12 +2113,14 @@ Q${index+1}. ${item.q}
 </h3>
 
 <p>
-${item.en||""}
+${item.en || ""}
 </p>
 
 <ol type="A">
 
-${item.options.map(x=>`<li>${x}</li>`).join("")}
+${item.options.map(
+x=>`<li>${x}</li>`
+).join("")}
 
 </ol>
 
@@ -2070,18 +2141,20 @@ onclick="startTest('${safe(topic)}')">
 
 `;
 
-document.getElementById("dataArea").innerHTML=html;
+document.getElementById("dataArea")
+.innerHTML=html;
 
-document.getElementById("testArea").innerHTML="";
+document.getElementById("testArea")
+.innerHTML="";
 
 }
 
 
 /* =====================================================
-CURRENT DATA
+GET DATA
 ===================================================== */
 
-function getCurrentData(){
+function getCurrentQuestionData(){
 
 if(currentLearning==="gk")
 return GK_DATA;
@@ -2110,114 +2183,238 @@ const data=DAILY_SENTENCES.filter(
 x=>x.topic===topic
 );
 
-let html=`<h3>✅ English Test – ${topic}</h3>`;
+if(data.length===0)return;
 
-data.forEach((item,index)=>{
+testData=data;
+testIndex=0;
+testAnswers=new Array(data.length).fill(null);
 
-html+=`
-
-<div class="data-card">
-
-<b>Q${index+1}. ${item.hi}</b>
-
-<label class="test-option">
-
-<input
-type="radio"
-name="eng${index}"
-value="correct">
-
-${item.en}
-
-</label>
-
-<label class="test-option">
-
-<input
-type="radio"
-name="eng${index}"
-value="wrong">
-
-I am doing something.
-
-</label>
-
-<label class="test-option">
-
-<input
-type="radio"
-name="eng${index}"
-value="wrong">
-
-What is your name?
-
-</label>
-
-</div>
-
-`;
-
-});
-
-html+=`
-
-<button class="green"
-onclick="checkEnglishTest('${safe(topic)}')">
-
-Submit Test
-
-</button>
-
-<div id="englishResult"></div>
-
-`;
-
-document.getElementById("testArea").innerHTML=html;
-
-document.getElementById("testArea")
-.scrollIntoView({behavior:"smooth"});
+renderEnglishTest();
 
 }
 
 
 /* =====================================================
-CHECK ENGLISH
+RENDER ENGLISH TEST
 ===================================================== */
 
-function checkEnglishTest(topic){
+function renderEnglishTest(){
 
-const data=DAILY_SENTENCES.filter(
-x=>x.topic===topic
-);
+const item=testData[testIndex];
+
+const progress=
+((testIndex+1)/testData.length)*100;
+
+let html=`
+
+<div class="test-box">
+
+<h3>
+🗣️ English Test
+</h3>
+
+<p>
+Question ${testIndex+1}
+of ${testData.length}
+</p>
+
+<div class="test-progress">
+
+<div class="test-progress-bar"
+style="width:${progress}%">
+</div>
+
+</div>
+
+<div class="test-question">
+
+🇮🇳 ${item.hi}
+
+</div>
+
+
+<label class="test-option">
+
+<input
+type="radio"
+name="englishAnswer"
+value="0"
+${testAnswers[testIndex]===0?"checked":""}
+onchange="saveEnglishAnswer(0)">
+
+${item.en}
+
+</label>
+
+
+<label class="test-option">
+
+<input
+type="radio"
+name="englishAnswer"
+value="1"
+${testAnswers[testIndex]===1?"checked":""}
+onchange="saveEnglishAnswer(1)">
+
+I am doing something.
+
+</label>
+
+
+<label class="test-option">
+
+<input
+type="radio"
+name="englishAnswer"
+value="2"
+${testAnswers[testIndex]===2?"checked":""}
+onchange="saveEnglishAnswer(2)">
+
+What is your name?
+
+</label>
+
+
+<div class="test-buttons">
+
+<button
+class="dark"
+onclick="previousEnglishQuestion()"
+${testIndex===0?"disabled":""}>
+
+⬅️ Previous
+
+</button>
+
+
+${
+testIndex<testData.length-1
+
+?
+
+`<button
+class="green"
+onclick="nextEnglishQuestion()">
+
+➡️ Next
+
+</button>`
+
+:
+
+`<button
+class="orange"
+onclick="submitEnglishTest()">
+
+🏁 Submit Test
+
+</button>`
+
+}
+
+</div>
+
+</div>
+
+`;
+
+document.getElementById("testArea")
+.innerHTML=html;
+
+document.getElementById("testArea")
+.scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+
+function saveEnglishAnswer(value){
+
+testAnswers[testIndex]=value;
+
+}
+
+
+function nextEnglishQuestion(){
+
+if(testAnswers[testIndex]===null){
+
+alert("पहले एक answer चुनें।");
+
+return;
+
+}
+
+testIndex++;
+
+renderEnglishTest();
+
+}
+
+
+function previousEnglishQuestion(){
+
+if(testIndex>0){
+
+testIndex--;
+
+renderEnglishTest();
+
+}
+
+}
+
+
+function submitEnglishTest(){
+
+if(testAnswers[testIndex]===null){
+
+alert("पहले answer चुनें।");
+
+return;
+
+}
 
 let score=0;
 
-data.forEach((x,i)=>{
+testData.forEach((item,index)=>{
 
-const selected=document.querySelector(
-'input[name="eng'+i+'"]:checked'
-);
-
-if(selected && selected.value==="correct")
+if(testAnswers[index]===0){
 score++;
+}
 
 });
 
-document.getElementById("englishResult").innerHTML=`
+document.getElementById("testArea")
+.innerHTML+=`
 
 <div class="test-result">
 
-🎯 आपका Score: ${score} / ${data.length}
+🎯 आपका Score:
+${score} / ${testData.length}
 
 <br><br>
 
 ${
-score===data.length
-?"🏆 बहुत बढ़िया!"
-:score>=data.length/2
-?"👍 अच्छा प्रयास!"
-:"📚 फिर से Practice करें।"
+score===testData.length
+?"🏆 Excellent! बहुत बढ़िया!"
+
+:score>=testData.length/2
+?"👍 Good Job! अच्छा प्रयास!"
+
+:"📚 More Practice Needed. फिर से अभ्यास करें।"
 }
+
+<br><br>
+
+<button
+class="green"
+onclick="renderEnglishTest()">
+
+🔄 Test फिर से देखें
+
+</button>
 
 </div>
 
@@ -2232,23 +2429,79 @@ GENERAL TEST
 
 function startTest(topic){
 
-let data=getCurrentData();
+let data=getCurrentQuestionData();
 
 data=data.filter(x=>x.topic===topic);
 
-let html=`<h3>✅ Test – ${topic}</h3>`;
+if(data.length===0)return;
 
-data.forEach((item,index)=>{
+testData=data;
+testIndex=0;
+testAnswers=new Array(data.length).fill(null);
 
-html+=`
+renderGeneralTest();
 
-<div class="data-card">
+}
+
+
+/* =====================================================
+RENDER GENERAL TEST
+===================================================== */
+
+function renderGeneralTest(){
+
+const item=testData[testIndex];
+
+const progress=
+((testIndex+1)/testData.length)*100;
+
+let html=`
+
+<div class="test-box">
 
 <h3>
-Q${index+1}. ${item.q}
+✅ ${currentLearning==="gk"
+?"GK Test"
+:currentLearning==="reasoning"
+?"Reasoning Test"
+:currentLearning==="computer"
+?"Computer Test"
+:"Cyber Security Test"}
 </h3>
 
-<p>${item.en||""}</p>
+<p>
+
+Question
+<b>${testIndex+1}</b>
+of
+<b>${testData.length}</b>
+
+</p>
+
+
+<div class="test-progress">
+
+<div class="test-progress-bar"
+style="width:${progress}%">
+</div>
+
+</div>
+
+
+<div class="test-question">
+
+Q${testIndex+1}. ${item.q}
+
+<br>
+
+<span style="font-size:16px;color:#0878cf">
+
+${item.en || ""}
+
+</span>
+
+</div>
+
 
 ${item.options.map((option,j)=>`
 
@@ -2256,88 +2509,200 @@ ${item.options.map((option,j)=>`
 
 <input
 type="radio"
-name="test${index}"
-value="${j}">
+name="generalAnswer"
+value="${j}"
+${testAnswers[testIndex]===j?"checked":""}
+onchange="saveGeneralAnswer(${j})">
 
-${String.fromCharCode(65+j)}. ${option}
+${String.fromCharCode(65+j)}.
+${option}
 
 </label>
 
 `).join("")}
 
+
+<div class="test-buttons">
+
+
+<button
+class="dark"
+onclick="previousGeneralQuestion()"
+${testIndex===0?"disabled":""}>
+
+⬅️ Previous
+
+</button>
+
+
+${
+testIndex<testData.length-1
+
+?
+
+`<button
+class="green"
+onclick="nextGeneralQuestion()">
+
+➡️ Next
+
+</button>`
+
+:
+
+`<button
+class="orange"
+onclick="submitGeneralTest()">
+
+🏁 Submit Test
+
+</button>`
+
+}
+
+</div>
+
+
 </div>
 
 `;
 
-});
-
-html+=`
-
-<button class="green"
-onclick="checkGeneralTest('${safe(topic)}')">
-
-✅ Submit Test
-
-</button>
-
-<div id="generalResult"></div>
-
-`;
-
-document.getElementById("testArea").innerHTML=html;
+document.getElementById("testArea")
+.innerHTML=html;
 
 document.getElementById("testArea")
-.scrollIntoView({behavior:"smooth"});
+.scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+
+function saveGeneralAnswer(value){
+
+testAnswers[testIndex]=value;
+
+}
+
+
+function nextGeneralQuestion(){
+
+if(testAnswers[testIndex]===null){
+
+alert("पहले एक answer चुनें।");
+
+return;
+
+}
+
+testIndex++;
+
+renderGeneralTest();
+
+}
+
+
+function previousGeneralQuestion(){
+
+if(testIndex>0){
+
+testIndex--;
+
+renderGeneralTest();
+
+}
 
 }
 
 
 /* =====================================================
-CHECK GENERAL TEST
+SUBMIT GENERAL TEST
 ===================================================== */
 
-function checkGeneralTest(topic){
+function submitGeneralTest(){
 
-let data=getCurrentData();
+if(testAnswers[testIndex]===null){
 
-data=data.filter(x=>x.topic===topic);
+alert("पहले answer चुनें।");
+
+return;
+
+}
 
 let score=0;
 
-data.forEach((item,index)=>{
+testData.forEach((item,index)=>{
 
-const selected=document.querySelector(
-'input[name="test'+index+'"]:checked'
-);
+if(testAnswers[index]===item.answer){
 
-if(
-selected &&
-Number(selected.value)===item.answer
-){
 score++;
+
 }
 
 });
 
-document.getElementById("generalResult").innerHTML=`
+
+const percentageScore=
+((score/testData.length)*100).toFixed(0);
+
+
+document.getElementById("testArea")
+.innerHTML+=`
 
 <div class="test-result">
 
-🎯 आपका Score: ${score} / ${data.length}
+🎯 आपका Score:
+${score} / ${testData.length}
+
+<br>
+
+📊 Percentage:
+${percentageScore}%
 
 <br><br>
 
 ${
-score===data.length
-?"🏆 Excellent!"
-:score>=data.length/2
-?"👍 Good Job!"
-:"📚 More Practice Needed"
+score===testData.length
+?"🏆 Excellent! बहुत बढ़िया!"
+
+:score>=testData.length/2
+?"👍 Good Job! अच्छा प्रयास!"
+
+:"📚 More Practice Needed. फिर से Practice करें।"
 }
+
+<br><br>
+
+<button
+class="green"
+onclick="restartCurrentTest()">
+
+🔄 Test फिर से दें
+
+</button>
 
 </div>
 
 `;
+
+}
+
+
+function restartCurrentTest(){
+
+testIndex=0;
+
+testAnswers=new Array(testData.length).fill(null);
+
+if(currentLearning==="english"){
+
+renderEnglishTest();
+
+}else{
+
+renderGeneralTest();
+
+}
 
 }
 
@@ -2352,7 +2717,9 @@ document.getElementById("learningView")
 .classList.add("hidden");
 
 document.getElementById("learning")
-.scrollIntoView({behavior:"smooth"});
+.scrollIntoView({
+behavior:"smooth"
+});
 
 }
 
@@ -2371,10 +2738,15 @@ const total=parseFloat(
 document.getElementById("total").value
 );
 
-if(isNaN(obtained)||isNaN(total)||total<=0){
+if(
+isNaN(obtained) ||
+isNaN(total) ||
+total<=0
+){
 
 document.getElementById("percentageResult")
-.innerText="कृपया सही अंक डालें।";
+.innerText=
+"कृपया सही अंक डालें।";
 
 return;
 
@@ -2390,12 +2762,14 @@ document.getElementById("percentageResult")
 
 function ageCalculator(){
 
-const value=document.getElementById("birth").value;
+const value=
+document.getElementById("birth").value;
 
 if(!value){
 
 document.getElementById("ageResult")
-.innerText="पहले जन्म तारीख चुनें।";
+.innerText=
+"पहले जन्म तारीख चुनें।";
 
 return;
 
@@ -2417,7 +2791,9 @@ month<0 ||
 (month===0 &&
 today.getDate()<birth.getDate())
 ){
+
 age--;
+
 }
 
 document.getElementById("ageResult")
@@ -2440,7 +2816,8 @@ document.getElementById("number2").value
 if(isNaN(a)||isNaN(b)){
 
 document.getElementById("calculatorResult")
-.innerText="दोनों संख्या डालें।";
+.innerText=
+"दोनों संख्या डालें।";
 
 return;
 
