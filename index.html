@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Student Study Hub | CBSE RBSE English GK Reasoning Computer</title>
+<title>Student Study Hub | CBSE RBSE NCERT</title>
 
 <style>
 
@@ -127,9 +127,7 @@ nav a:hover{
 .class-card,
 .subject,
 .chapter,
-.tool,
-.topic-card,
-.sentence-card{
+.tool{
     background:#f8fbff;
     border:1px solid #d8e7f3;
     padding:18px;
@@ -141,25 +139,19 @@ nav a:hover{
 }
 
 .subject h3,
-.chapter h3,
-.topic-card h3{
+.chapter h3{
     color:#145b91;
 }
 
-.sentence-card{
-    margin-bottom:12px;
+.chapter{
+    margin-bottom:10px;
 }
 
-.english{
-    font-size:19px;
-    font-weight:bold;
-    color:#075eaa;
-}
-
-.hindi{
-    margin-top:7px;
-    color:#444;
-    font-size:16px;
+.selection{
+    background:#eef7ff;
+    padding:15px;
+    border-radius:10px;
+    line-height:1.8;
 }
 
 .search,
@@ -192,28 +184,14 @@ button:hover,
     opacity:.9;
 }
 
-.green{
-    background:#159447;
-}
-
-.orange{
-    background:#e67e22;
-}
-
-.red{
-    background:#dc3545;
-}
-
-.dark{
-    background:#34495e;
-}
-
-.purple{
-    background:#7048a8;
-}
+.green{background:#159447;}
+.orange{background:#e67e22;}
+.red{background:#dc3545;}
+.dark{background:#34495e;}
+.purple{background:#7b3fc6;}
 
 .hidden{
-    display:none!important;
+    display:none;
 }
 
 .message{
@@ -223,67 +201,124 @@ button:hover,
     margin-top:12px;
 }
 
-.selection{
-    background:#eef7ff;
-    padding:15px;
-    border-radius:10px;
-    line-height:1.8;
-    margin-bottom:15px;
-}
-
-.quiz-question{
-    background:#f8fafc;
-    padding:18px;
-    border-radius:12px;
-    margin-bottom:15px;
-    border:1px solid #e1e7ee;
-}
-
-.quiz-question label{
-    display:block;
-    background:white;
-    padding:9px;
-    margin:5px 0;
-    border-radius:7px;
-}
-
-.result{
-    padding:15px;
-    margin-top:15px;
-    border-radius:10px;
-    background:#eaf8ee;
-    font-weight:bold;
-}
-
-.timer{
-    background:#172033;
-    color:white;
-    display:inline-block;
-    padding:10px 16px;
-    border-radius:8px;
-    font-weight:bold;
-    margin-bottom:15px;
-}
-
-.progress{
-    background:#ddd;
-    height:12px;
-    border-radius:10px;
-    overflow:hidden;
-    margin:10px 0 20px;
-}
-
-.progress-bar{
-    height:100%;
-    width:0%;
-    background:#159447;
-    transition:.3s;
+.premium{
+    background:linear-gradient(135deg,#fff7d6,#fff);
+    border:2px solid #e5b300;
 }
 
 .price{
     font-size:30px;
     font-weight:bold;
     color:#159447;
+}
+
+/* LEARNING BUTTONS */
+
+.learning-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.learning-card{
+    color:white;
+    padding:25px 15px;
+    border-radius:16px;
+    text-align:center;
+    cursor:pointer;
+    transition:.2s;
+    box-shadow:0 5px 15px #0002;
+}
+
+.learning-card:hover{
+    transform:translateY(-3px);
+}
+
+.learning-card .icon{
+    font-size:42px;
+}
+
+.learning-card h3{
+    margin:10px 0 5px;
+}
+
+.english{
+    background:#0878cf;
+}
+
+.gk{
+    background:#159447;
+}
+
+.reasoning{
+    background:#7b3fc6;
+}
+
+.computer{
+    background:#e67e22;
+}
+
+/* DATA CARDS */
+
+.data-card{
+    background:#f8fbff;
+    border:1px solid #d8e7f3;
+    padding:16px;
+    margin-bottom:12px;
+    border-radius:12px;
+}
+
+.data-card h3{
+    color:#145b91;
+    margin-top:0;
+}
+
+.hindi{
+    font-size:18px;
+    font-weight:bold;
+}
+
+.english-text{
+    color:#0878cf;
+    font-size:18px;
+    margin-top:5px;
+}
+
+.topic-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+}
+
+.topic-card{
+    background:#eef7ff;
+    border:1px solid #cfe4f5;
+    padding:18px;
+    border-radius:12px;
+    text-align:center;
+}
+
+.test-option{
+    display:block;
+    background:white;
+    border:1px solid #ddd;
+    padding:10px;
+    margin:7px 0;
+    border-radius:8px;
+}
+
+.test-result{
+    background:#e9f8ef;
+    padding:18px;
+    border-radius:10px;
+    margin-top:15px;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.notes-content{
+    font-size:17px;
+    line-height:1.8;
 }
 
 footer{
@@ -309,7 +344,8 @@ footer{
     }
 
     .two-grid,
-    .three-grid{
+    .three-grid,
+    .topic-grid{
         grid-template-columns:1fr;
     }
 
@@ -317,11 +353,14 @@ footer{
         grid-template-columns:repeat(2,1fr);
     }
 
+    .learning-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
     nav a{
         font-size:13px;
         padding:8px;
     }
-
 }
 
 @media print{
@@ -336,7 +375,6 @@ footer{
     body{
         background:white;
     }
-
 }
 
 </style>
@@ -352,8 +390,6 @@ footer{
 CBSE • RBSE • NCERT
 <br>
 Hindi Medium + English Medium
-<br>
-🇬🇧 English • 📰 GK • 🧠 Reasoning • 💻 Computer
 </p>
 
 </header>
@@ -364,11 +400,8 @@ Hindi Medium + English Medium
 <a href="#board">🏫 Board</a>
 <a href="#medium">📚 Medium</a>
 <a href="#classes">🎓 Classes</a>
-<a href="#english">🇬🇧 English</a>
-<a href="#gk">📰 Current GK</a>
-<a href="#reasoning">🧠 Reasoning</a>
-<a href="#computer">💻 Computer</a>
-<a href="#quiz">✅ MCQ</a>
+<a href="#learning">📖 Learning</a>
+<a href="#notes">📝 Notes</a>
 <a href="#tools">🧮 Tools</a>
 <a href="#premium">💳 Premium</a>
 <a href="#contact">✉️ Contact</a>
@@ -389,10 +422,6 @@ Hindi Medium + English Medium
 
 CBSE/RBSE/NCERT की official सामग्री को
 संबंधित official sources से सत्यापित करें।
-
-<br>
-
-केवल अपनी original notes/material upload करें।
 
 </div>
 
@@ -481,7 +510,9 @@ English Medium
 
 <h2>🎓 Class 1–12</h2>
 
-<p>पहले Board और Medium चुनें। फिर Class चुनें।</p>
+<p>
+पहले Board और Medium चुनें। फिर Class चुनें।
+</p>
 
 <div class="grid" id="classList"></div>
 
@@ -530,7 +561,7 @@ oninput="searchChapters()">
 </section>
 
 
-<!-- NOTES -->
+<!-- NOTES VIEWER -->
 
 <section class="card hidden" id="notesViewer">
 
@@ -538,7 +569,13 @@ oninput="searchChapters()">
 
 <div class="selection" id="notesInfo"></div>
 
-<div id="notesContent"></div>
+<hr>
+
+<div class="notes-content" id="notesContent"></div>
+
+<div id="pdfArea"></div>
+
+<br>
 
 <button class="green" onclick="window.print()">
 🖨️ Print Notes
@@ -551,275 +588,125 @@ oninput="searchChapters()">
 </section>
 
 
-<!-- ENGLISH -->
+<!-- =====================================================
+     MAIN LEARNING SECTION
+===================================================== -->
 
-<section class="card" id="english">
+<section class="card" id="learning">
 
-<h2>🇬🇧 Daily Use English</h2>
+<h2>📖 English & General Learning</h2>
 
 <p>
-<b>1,000 Daily Use Sentences</b> — Topic-wise English Learning
+नीचे किसी भी विषय के बटन पर क्लिक करें।
+उस विषय का अलग Data खुलेगा।
 </p>
 
-<div class="two-grid">
+<div class="learning-grid">
 
-<div>
+<div class="learning-card english"
+onclick="openLearning('english')">
 
-<label>📚 Topic</label>
+<div class="icon">🗣️</div>
 
-<select id="englishTopic" onchange="renderEnglish()">
+<h3>Daily Use Sentences</h3>
 
-<option value="all">All Topics</option>
-<option value="greetings">Greetings & Introduction</option>
-<option value="home">Home & Family</option>
-<option value="school">School & Classroom</option>
-<option value="daily">Daily Conversation</option>
-<option value="food">Food & Eating</option>
-<option value="market">Shopping & Market</option>
-<option value="travel">Travel & Transport</option>
-<option value="phone">Phone Conversation</option>
-<option value="feelings">Feelings & Emotions</option>
-<option value="requests">Requests & Permission</option>
-
-</select>
+<p>1000 Hindi + English Sentences</p>
 
 </div>
 
-<div>
 
-<label>🔎 Search</label>
+<div class="learning-card gk"
+onclick="openLearning('gk')">
 
-<input
-id="englishSearch"
-placeholder="English या Hindi sentence खोजें..."
-oninput="renderEnglish()">
+<div class="icon">🌍</div>
+
+<h3>Current GK</h3>
+
+<p>General Knowledge + Test</p>
 
 </div>
+
+
+<div class="learning-card reasoning"
+onclick="openLearning('reasoning')">
+
+<div class="icon">🧠</div>
+
+<h3>Reasoning</h3>
+
+<p>Questions + Practice Test</p>
+
+</div>
+
+
+<div class="learning-card computer"
+onclick="openLearning('computer')">
+
+<div class="icon">💻</div>
+
+<h3>Computer</h3>
+
+<p>Computer Knowledge + Test</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     LEARNING DATA VIEW
+===================================================== -->
+
+<section class="card hidden" id="learningView">
+
+<h2 id="learningTitle"></h2>
+
+<div id="learningDescription" class="selection"></div>
+
+<div id="topicArea"></div>
+
+<div id="dataArea"></div>
+
+<div id="testArea"></div>
+
+<br>
+
+<button class="dark" onclick="closeLearning()">
+⬅️ Learning Menu
+</button>
+
+</section>
+
+
+<!-- GENERAL NOTES -->
+
+<section class="card" id="notes">
+
+<h2>📝 Study Notes & PDF</h2>
+
+<div class="message">
+
+<b>अपनी Original Notes यहाँ जोड़ें</b>
+
+<br><br>
+
+आप प्रत्येक class, subject और chapter के
+लिए अपनी बनाई हुई original notes जोड़ सकते हैं।
 
 </div>
 
 <div class="message">
 
-<b>🔊 English सुनने के लिए Listen दबाएँ।</b>
+<b>📄 PDF Upload</b>
 
-<br>
+<br><br>
 
-English sentence को browser की आवाज़ में सुना जा सकता है।
-
-</div>
-
-<div id="englishList"></div>
-
-<button class="green" onclick="startEnglishTest()">
-🧪 English Test
-</button>
-
-</section>
-
-
-<!-- ENGLISH TEST -->
-
-<section class="card hidden" id="englishTest">
-
-<h2>🧪 English Practice Test</h2>
-
-<div class="timer" id="englishTimer">
-Time: 05:00
-</div>
-
-<div id="englishTestQuestions"></div>
-
-<button class="green" onclick="submitEnglishTest()">
-✅ Submit Test
-</button>
-
-<div id="englishTestResult"></div>
-
-</section>
-
-
-<!-- CURRENT GK -->
-
-<section class="card" id="gk">
-
-<h2>📰 Current GK</h2>
-
-<p>
-Current Affairs और General Knowledge के लिए bilingual practice.
-</p>
-
-<div class="two-grid">
-
-<div>
-
-<select id="gkTopic" onchange="renderGK()">
-
-<option value="all">All Topics</option>
-<option value="india">India / भारत</option>
-<option value="world">World / विश्व</option>
-<option value="science">Science / विज्ञान</option>
-<option value="sports">Sports / खेल</option>
-<option value="computer">Technology / तकनीक</option>
-
-</select>
+PDF को website के <b>pdf</b> folder में रखें
+और JavaScript में उसका path डालें।
 
 </div>
-
-<div>
-
-<input
-id="gkSearch"
-placeholder="🔎 GK खोजें..."
-oninput="renderGK()">
-
-</div>
-
-</div>
-
-<div id="gkList"></div>
-
-<button class="orange" onclick="startGKTest()">
-🧪 GK Test
-</button>
-
-</section>
-
-
-<!-- REASONING -->
-
-<section class="card" id="reasoning">
-
-<h2>🧠 Reasoning</h2>
-
-<p>
-Topic-wise Reasoning Practice — Hindi + English
-</p>
-
-<select id="reasoningTopic" onchange="renderReasoning()">
-
-<option value="all">All Topics</option>
-<option value="series">Number Series / संख्या श्रेणी</option>
-<option value="analogy">Analogy / समानता</option>
-<option value="coding">Coding-Decoding / कूटलेखन</option>
-<option value="direction">Direction / दिशा</option>
-<option value="odd">Odd One Out / अलग चुनें</option>
-
-</select>
-
-<div id="reasoningList"></div>
-
-<button class="purple" onclick="startReasoningTest()">
-🧪 Reasoning Test
-</button>
-
-</section>
-
-
-<!-- COMPUTER -->
-
-<section class="card" id="computer">
-
-<h2>💻 Computer</h2>
-
-<p>
-Computer Basics और Competitive Exam Computer GK
-</p>
-
-<select id="computerTopic" onchange="renderComputer()">
-
-<option value="all">All Topics</option>
-<option value="basic">Computer Basics</option>
-<option value="hardware">Hardware & Software</option>
-<option value="internet">Internet</option>
-<option value="windows">Windows</option>
-<option value="shortcut">Shortcut Keys</option>
-<option value="security">Cyber Security</option>
-
-</select>
-
-<div id="computerList"></div>
-
-<button class="dark" onclick="startComputerTest()">
-🧪 Computer Test
-</button>
-
-</section>
-
-
-<!-- GENERAL QUIZ -->
-
-<section class="card" id="quiz">
-
-<h2>✅ General MCQ Quiz</h2>
-
-<div class="quiz-question">
-
-<b>1. What is 10 × 5?</b>
-
-<label>
-<input type="radio" name="q1" value="40">
-40
-</label>
-
-<label>
-<input type="radio" name="q1" value="50">
-50
-</label>
-
-<label>
-<input type="radio" name="q1" value="60">
-60
-</label>
-
-</div>
-
-<div class="quiz-question">
-
-<b>2. What is the capital of India?</b>
-
-<label>
-<input type="radio" name="q2" value="Mumbai">
-Mumbai
-</label>
-
-<label>
-<input type="radio" name="q2" value="New Delhi">
-New Delhi
-</label>
-
-<label>
-<input type="radio" name="q2" value="Jaipur">
-Jaipur
-</label>
-
-</div>
-
-<div class="quiz-question">
-
-<b>3. Chemical formula of water?</b>
-
-<label>
-<input type="radio" name="q3" value="CO2">
-CO2
-</label>
-
-<label>
-<input type="radio" name="q3" value="O2">
-O2
-</label>
-
-<label>
-<input type="radio" name="q3" value="H2O">
-H2O
-</label>
-
-</div>
-
-<button class="green" onclick="checkQuiz()">
-✅ Submit
-</button>
-
-<div class="result" id="quizResult"></div>
 
 </section>
 
@@ -836,23 +723,18 @@ H2O
 
 <h3>📊 Percentage</h3>
 
-<input
-type="number"
-id="obtained"
+<input type="number" id="obtained"
 placeholder="Obtained Marks">
 
-<input
-type="number"
-id="total"
+<input type="number" id="total"
 placeholder="Total Marks">
 
-<button onclick="percentage()">
-Calculate
-</button>
+<button onclick="percentage()">Calculate</button>
 
 <p id="percentageResult"></p>
 
 </div>
+
 
 <div class="tool">
 
@@ -860,31 +742,24 @@ Calculate
 
 <input type="date" id="birth">
 
-<button onclick="ageCalculator()">
-Calculate
-</button>
+<button onclick="ageCalculator()">Calculate</button>
 
 <p id="ageResult"></p>
 
 </div>
 
+
 <div class="tool">
 
 <h3>➕ Calculator</h3>
 
-<input
-type="number"
-id="number1"
+<input type="number" id="number1"
 placeholder="First Number">
 
-<input
-type="number"
-id="number2"
+<input type="number" id="number2"
 placeholder="Second Number">
 
-<button onclick="addNumbers()">
-Add
-</button>
+<button onclick="addNumbers()">Add</button>
 
 <p id="calculatorResult"></p>
 
@@ -902,7 +777,8 @@ Add
 <h2>💳 Premium Study Material</h2>
 
 <p>
-आप अपनी original notes, question banks और practice PDFs बेच सकते हैं।
+आप अपनी original premium notes,
+question banks और practice PDFs बेच सकते हैं।
 </p>
 
 <h3>📘 Premium Notes</h3>
@@ -914,6 +790,7 @@ Add
 <button class="green" onclick="buyPremium(49)">
 💳 Buy ₹49
 </button>
+
 
 <h3>📚 Complete Question Bank</h3>
 
@@ -934,7 +811,9 @@ Add
 
 <h2>✉️ Contact</h2>
 
-<p>Study Notes और website के लिए संपर्क करें।</p>
+<p>
+Study Notes और website के लिए संपर्क करें।
+</p>
 
 <a
 class="btn green"
@@ -961,7 +840,7 @@ CBSE • RBSE • NCERT
 
 <br>
 
-🇬🇧 English • 📰 GK • 🧠 Reasoning • 💻 Computer
+Hindi Medium + English Medium
 
 <br><br>
 
@@ -973,52 +852,52 @@ CBSE • RBSE • NCERT
 <script>
 
 /* =====================================================
-   BASIC VARIABLES
+   GLOBAL
 ===================================================== */
 
-let selectedBoard = "";
-let selectedMedium = "";
-let selectedClass = "";
-let selectedSubject = "";
-let selectedChapter = "";
+let selectedBoard="";
+let selectedMedium="";
+let selectedClass="";
+let selectedSubject="";
+let selectedChapter="";
 
-let testTimer = null;
-let testSeconds = 300;
+let currentLearning="";
+let currentTopic="";
 
 
 /* =====================================================
-   CLASS LIST
+   CLASS
 ===================================================== */
 
-const classList = document.getElementById("classList");
+const classList=document.getElementById("classList");
 
 for(let i=1;i<=12;i++){
 
-    classList.innerHTML += `
+classList.innerHTML+=`
 
-    <div class="class-card">
+<div class="class-card">
 
-        <h3>Class ${i}</h3>
+<h3>Class ${i}</h3>
 
-        <p>
-        ${
-            i<=5
-            ? "Primary"
-            : i<=8
-            ? "Middle School"
-            : i<=10
-            ? "Secondary"
-            : "Senior Secondary"
-        }
-        </p>
+<p>
+${
+i<=5
+?"Primary"
+:i<=8
+?"Middle School"
+:i<=10
+?"Secondary"
+:"Senior Secondary"
+}
+</p>
 
-        <button onclick="openClass(${i})">
-        Open
-        </button>
+<button onclick="openClass(${i})">
+Open
+</button>
 
-    </div>
+</div>
 
-    `;
+`;
 
 }
 
@@ -1027,7 +906,7 @@ for(let i=1;i<=12;i++){
    SUBJECTS
 ===================================================== */
 
-const SUBJECTS = {
+const SUBJECTS={
 
 1:["Hindi","English","Mathematics","Environmental Studies"],
 
@@ -1049,9 +928,19 @@ const SUBJECTS = {
 
 10:["Hindi","English","Mathematics","Science","Social Science","Information Technology"],
 
-11:["English","Hindi","Physics","Chemistry","Biology","Mathematics","Accountancy","Business Studies","Economics","History","Political Science","Geography","Computer Science"],
+11:[
+"English","Hindi","Physics","Chemistry","Biology",
+"Mathematics","Accountancy","Business Studies",
+"Economics","History","Political Science",
+"Geography","Computer Science"
+],
 
-12:["English","Hindi","Physics","Chemistry","Biology","Mathematics","Accountancy","Business Studies","Economics","History","Political Science","Geography","Computer Science"]
+12:[
+"English","Hindi","Physics","Chemistry","Biology",
+"Mathematics","Accountancy","Business Studies",
+"Economics","History","Political Science",
+"Geography","Computer Science"
+]
 
 };
 
@@ -1060,25 +949,32 @@ const SUBJECTS = {
    CHAPTERS
 ===================================================== */
 
-const CHAPTERS = {};
+const CHAPTERS={};
 
 Object.keys(SUBJECTS).forEach(classNo=>{
 
-    CHAPTERS[classNo]={};
+CHAPTERS[classNo]={};
 
-    SUBJECTS[classNo].forEach(subject=>{
+SUBJECTS[classNo].forEach(subject=>{
 
-        CHAPTERS[classNo][subject]=[
-            "Chapter 1",
-            "Chapter 2",
-            "Chapter 3",
-            "Chapter 4",
-            "Chapter 5"
-        ];
-
-    });
+CHAPTERS[classNo][subject]=[
+"Chapter 1",
+"Chapter 2",
+"Chapter 3",
+"Chapter 4",
+"Chapter 5"
+];
 
 });
+
+});
+
+
+/* =====================================================
+   PDF DATABASE
+===================================================== */
+
+const PDF_DATA=[];
 
 
 /* =====================================================
@@ -1087,10 +983,10 @@ Object.keys(SUBJECTS).forEach(classNo=>{
 
 function chooseBoard(board){
 
-    selectedBoard=board;
+selectedBoard=board;
 
-    document.getElementById("boardMessage").innerHTML=
-    "✅ आपने <b>"+board+"</b> चुना है।";
+document.getElementById("boardMessage").innerHTML=
+"✅ आपने <b>"+board+"</b> चुना है।";
 
 }
 
@@ -1101,14 +997,14 @@ function chooseBoard(board){
 
 function chooseMedium(medium){
 
-    selectedMedium=medium;
+selectedMedium=medium;
 
-    document.getElementById("mediumMessage").innerHTML=
-    "✅ आपने <b>"+medium+"</b> चुना है। अब Class चुनें।";
+document.getElementById("mediumMessage").innerHTML=
+"✅ आपने <b>"+medium+"</b> चुना है। अब Class चुनें।";
 
-    document.getElementById("classes").scrollIntoView({
-        behavior:"smooth"
-    });
+document.getElementById("classes").scrollIntoView({
+behavior:"smooth"
+});
 
 }
 
@@ -1119,105 +1015,52 @@ function chooseMedium(medium){
 
 function openClass(classNo){
 
-    if(!selectedBoard){
+if(!selectedBoard){
 
-        alert("पहले CBSE या RBSE चुनें।");
+alert("पहले CBSE या RBSE चुनें।");
 
-        document.getElementById("board")
-        .scrollIntoView({behavior:"smooth"});
+document.getElementById("board").scrollIntoView({
+behavior:"smooth"
+});
 
-        return;
-    }
-
-    if(!selectedMedium){
-
-        alert("पहले Hindi Medium या English Medium चुनें।");
-
-        document.getElementById("medium")
-        .scrollIntoView({behavior:"smooth"});
-
-        return;
-    }
-
-    selectedClass=classNo;
-
-    document.getElementById("subjectHeading").innerText=
-    "📚 Class "+classNo+" Subjects";
-
-    document.getElementById("subjectInfo").innerHTML=
-    "<b>Board:</b> "+selectedBoard+
-    "<br><b>Medium:</b> "+selectedMedium+
-    "<br><b>Class:</b> "+classNo;
-
-    renderSubjects();
-
-    document.getElementById("subjectSection")
-    .classList.remove("hidden");
-
-    document.getElementById("chapterSection")
-    .classList.add("hidden");
-
-    document.getElementById("notesViewer")
-    .classList.add("hidden");
-
-    document.getElementById("subjectSection")
-    .scrollIntoView({behavior:"smooth"});
-
+return;
 }
 
+if(!selectedMedium){
 
-/* =====================================================
-   SUBJECTS
-===================================================== */
+alert("पहले Hindi Medium या English Medium चुनें।");
 
-function renderSubjects(){
+document.getElementById("medium").scrollIntoView({
+behavior:"smooth"
+});
 
-    const list=document.getElementById("subjectList");
-
-    list.innerHTML="";
-
-    (SUBJECTS[selectedClass]||[]).forEach(subject=>{
-
-        const div=document.createElement("div");
-
-        div.className="subject";
-
-        div.innerHTML=`
-
-        <h3>📚 ${subject}</h3>
-
-        <p>Class ${selectedClass}</p>
-
-        <button onclick="openSubject('${safe(subject)}')">
-        📖 Open Subject
-        </button>
-
-        `;
-
-        list.appendChild(div);
-
-    });
-
+return;
 }
 
+selectedClass=classNo;
 
-function searchSubjects(){
+document.getElementById("subjectHeading").innerText=
+"📚 Class "+classNo+" Subjects";
 
-    const text=document
-    .getElementById("subjectSearch")
-    .value
-    .toLowerCase();
+document.getElementById("subjectInfo").innerHTML=
+"<b>Board:</b> "+selectedBoard+
+"<br><b>Medium:</b> "+selectedMedium+
+"<br><b>Class:</b> "+classNo;
 
-    document
-    .querySelectorAll("#subjectList .subject")
-    .forEach(item=>{
+renderSubjects();
 
-        item.style.display=
-        item.innerText.toLowerCase().includes(text)
-        ? ""
-        : "none";
+document.getElementById("subjectSection")
+.classList.remove("hidden");
 
-    });
+document.getElementById("chapterSection")
+.classList.add("hidden");
+
+document.getElementById("notesViewer")
+.classList.add("hidden");
+
+document.getElementById("subjectSection").scrollIntoView({
+behavior:"smooth"
+});
 
 }
 
@@ -1226,919 +1069,909 @@ function searchSubjects(){
    SUBJECT
 ===================================================== */
 
-function openSubject(subject){
+function renderSubjects(){
 
-    selectedSubject=subject;
+const list=document.getElementById("subjectList");
 
-    document.getElementById("chapterHeading").innerText=
-    "📖 "+subject+" Chapters";
+list.innerHTML="";
 
-    document.getElementById("chapterInfo").innerHTML=
-    "<b>Board:</b> "+selectedBoard+
-    "<br><b>Medium:</b> "+selectedMedium+
-    "<br><b>Class:</b> "+selectedClass+
-    "<br><b>Subject:</b> "+subject;
+const subjects=SUBJECTS[selectedClass]||[];
 
-    renderChapters();
+subjects.forEach(subject=>{
 
-    document.getElementById("chapterSection")
-    .classList.remove("hidden");
+const div=document.createElement("div");
 
-    document.getElementById("chapterSection")
-    .scrollIntoView({behavior:"smooth"});
+div.className="subject";
+
+div.innerHTML=`
+
+<h3>📚 ${subject}</h3>
+
+<p>Class ${selectedClass}</p>
+
+<button onclick="openSubject('${safe(subject)}')">
+📖 Open Subject
+</button>
+
+`;
+
+list.appendChild(div);
+
+});
 
 }
 
 
-/* =====================================================
-   CHAPTERS
-===================================================== */
+function searchSubjects(){
+
+const text=document.getElementById("subjectSearch")
+.value.toLowerCase();
+
+document.querySelectorAll("#subjectList .subject")
+.forEach(item=>{
+
+item.style.display=
+item.innerText.toLowerCase().includes(text)
+?""
+:"none";
+
+});
+
+}
+
+
+function openSubject(subject){
+
+selectedSubject=subject;
+
+document.getElementById("chapterHeading").innerText=
+"📖 "+subject+" Chapters";
+
+document.getElementById("chapterInfo").innerHTML=
+"<b>Board:</b> "+selectedBoard+
+"<br><b>Medium:</b> "+selectedMedium+
+"<br><b>Class:</b> "+selectedClass+
+"<br><b>Subject:</b> "+subject;
+
+document.getElementById("chapterSearch").value="";
+
+renderChapters();
+
+document.getElementById("chapterSection")
+.classList.remove("hidden");
+
+document.getElementById("chapterSection").scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
 
 function renderChapters(){
 
-    const list=document.getElementById("chapterList");
+const list=document.getElementById("chapterList");
 
-    list.innerHTML="";
+list.innerHTML="";
 
-    const chapters=
-    CHAPTERS[selectedClass]?.[selectedSubject]||[];
+const chapters=
+CHAPTERS[selectedClass] &&
+CHAPTERS[selectedClass][selectedSubject]
+?
+CHAPTERS[selectedClass][selectedSubject]
+:
+[];
 
-    chapters.forEach(chapter=>{
+chapters.forEach(chapter=>{
 
-        const div=document.createElement("div");
+const div=document.createElement("div");
 
-        div.className="chapter";
+div.className="chapter";
 
-        div.innerHTML=`
+div.innerHTML=`
 
-        <h3>📖 ${chapter}</h3>
+<h3>📖 ${chapter}</h3>
 
-        <p>
-        ${selectedSubject} - Class ${selectedClass}
-        </p>
+<p>
+${selectedSubject} - Class ${selectedClass}
+</p>
 
-        <button onclick="readNotes('${safe(chapter)}')">
-        📝 Read Notes
-        </button>
+<button onclick="readNotes('${safe(chapter)}')">
+📝 Read Notes
+</button>
 
-        `;
+`;
 
-        list.appendChild(div);
+list.appendChild(div);
 
-    });
+});
 
 }
 
 
 function searchChapters(){
 
-    const text=document
-    .getElementById("chapterSearch")
-    .value
-    .toLowerCase();
+const text=document.getElementById("chapterSearch")
+.value.toLowerCase();
 
-    document
-    .querySelectorAll("#chapterList .chapter")
-    .forEach(item=>{
+document.querySelectorAll("#chapterList .chapter")
+.forEach(item=>{
 
-        item.style.display=
-        item.innerText.toLowerCase().includes(text)
-        ? ""
-        : "none";
+item.style.display=
+item.innerText.toLowerCase().includes(text)
+?""
+:"none";
 
-    });
+});
 
 }
 
 
-/* =====================================================
-   NOTES
-===================================================== */
-
 function readNotes(chapter){
 
-    selectedChapter=chapter;
+selectedChapter=chapter;
 
-    document.getElementById("notesInfo").innerHTML=
-    "<b>Board:</b> "+selectedBoard+
-    "<br><b>Medium:</b> "+selectedMedium+
-    "<br><b>Class:</b> "+selectedClass+
-    "<br><b>Subject:</b> "+selectedSubject+
-    "<br><b>Chapter:</b> "+chapter;
+document.getElementById("notesInfo").innerHTML=
+"<b>Board:</b> "+selectedBoard+
+"<br><b>Medium:</b> "+selectedMedium+
+"<br><b>Class:</b> "+selectedClass+
+"<br><b>Subject:</b> "+selectedSubject+
+"<br><b>Chapter:</b> "+chapter;
 
-    document.getElementById("notesContent").innerHTML=`
+document.getElementById("notesContent").innerHTML=`
 
-    <h3>📚 ${selectedSubject} - ${chapter}</h3>
+<h3>📚 ${selectedSubject} - ${chapter}</h3>
 
-    <p>
-    यह Original Notes Viewer है।
-    </p>
+<p>
+यह आपका Original Notes Viewer है।
+</p>
 
-    <h4>📝 Important Points</h4>
+<h4>📝 Notes यहाँ जोड़ें</h4>
 
-    <ul>
-    <li>मुख्य definitions / Important Definitions</li>
-    <li>Important concepts</li>
-    <li>Exam Questions</li>
-    <li>Practice Questions</li>
-    </ul>
+<p>
+अपनी original chapter-wise notes यहाँ जोड़ सकते हैं।
+</p>
 
-    `;
+`;
 
-    document.getElementById("notesViewer")
-    .classList.remove("hidden");
+document.getElementById("notesViewer")
+.classList.remove("hidden");
 
-    document.getElementById("notesViewer")
-    .scrollIntoView({behavior:"smooth"});
+document.getElementById("notesViewer").scrollIntoView({
+behavior:"smooth"
+});
 
 }
 
 
 function backSubjects(){
 
-    document.getElementById("chapterSection")
-    .classList.add("hidden");
+document.getElementById("chapterSection")
+.classList.add("hidden");
 
-    document.getElementById("notesViewer")
-    .classList.add("hidden");
+document.getElementById("notesViewer")
+.classList.add("hidden");
 
-    document.getElementById("subjectSection")
-    .scrollIntoView({behavior:"smooth"});
+document.getElementById("subjectSection")
+.scrollIntoView({
+behavior:"smooth"
+});
 
 }
 
 
 function closeNotes(){
 
-    document.getElementById("notesViewer")
-    .classList.add("hidden");
+document.getElementById("notesViewer")
+.classList.add("hidden");
 
-    document.getElementById("chapterSection")
-    .scrollIntoView({behavior:"smooth"});
+document.getElementById("chapterSection")
+.scrollIntoView({
+behavior:"smooth"
+});
 
 }
 
 
 /* =====================================================
-   1000 ENGLISH SENTENCE SYSTEM
+   DAILY USE SENTENCES
 ===================================================== */
 
-const ENGLISH = [
+/*
+   यहाँ 1000 तक sentences रखने के लिए database है।
+   अभी शुरुआती sentences दिए गए हैं।
+   आगे इसी array में 1000 complete sentences रखे जा सकते हैं।
+*/
 
-/* Greetings */
+const DAILY_SENTENCES=[
 
 {
-topic:"greetings",
-en:"Good morning.",
-hi:"सुप्रभात।"
+topic:"Home & Family",
+hi:"तुम कहाँ जा रहे हो?",
+en:"Where are you going?"
 },
 
 {
-topic:"greetings",
-en:"Good afternoon.",
-hi:"नमस्कार / शुभ दोपहर।"
+topic:"Home & Family",
+hi:"मैं घर जा रहा हूँ।",
+en:"I am going home."
 },
 
 {
-topic:"greetings",
-en:"Good evening.",
-hi:"शुभ संध्या।"
+topic:"Home & Family",
+hi:"खाना तैयार है।",
+en:"The food is ready."
 },
 
 {
-topic:"greetings",
-en:"How are you?",
-hi:"आप कैसे हैं?"
+topic:"Home & Family",
+hi:"दरवाजा बंद कर दो।",
+en:"Close the door."
 },
 
 {
-topic:"greetings",
-en:"I am fine.",
-hi:"मैं ठीक हूँ।"
+topic:"Home & Family",
+hi:"लाइट बंद कर दो।",
+en:"Turn off the light."
 },
 
 {
-topic:"greetings",
-en:"What is your name?",
-hi:"आपका नाम क्या है?"
+topic:"School",
+hi:"तुम स्कूल कब जाते हो?",
+en:"When do you go to school?"
 },
 
 {
-topic:"greetings",
-en:"My name is Aryan.",
-hi:"मेरा नाम आर्यन है।"
+topic:"School",
+hi:"अपनी किताब खोलो।",
+en:"Open your book."
 },
 
 {
-topic:"greetings",
-en:"Nice to meet you.",
-hi:"आपसे मिलकर अच्छा लगा।"
+topic:"School",
+hi:"ध्यान से सुनो।",
+en:"Listen carefully."
 },
 
 {
-topic:"greetings",
-en:"See you tomorrow.",
-hi:"कल मिलते हैं।"
+topic:"School",
+hi:"मुझे समझ नहीं आया।",
+en:"I did not understand."
 },
 
 {
-topic:"greetings",
-en:"Have a nice day.",
-hi:"आपका दिन शुभ हो।"
+topic:"School",
+hi:"कृपया फिर से समझाइए।",
+en:"Please explain again."
 },
 
-
-/* Home */
-
-{
-topic:"home",
-en:"Come inside.",
-hi:"अंदर आओ।"
-},
-
-{
-topic:"home",
-en:"Open the door.",
-hi:"दरवाजा खोलो।"
-},
-
-{
-topic:"home",
-en:"Close the door.",
-hi:"दरवाजा बंद करो।"
-},
-
-{
-topic:"home",
-en:"Where is my book?",
-hi:"मेरी किताब कहाँ है?"
-},
-
-{
-topic:"home",
-en:"I am going home.",
-hi:"मैं घर जा रहा हूँ।"
-},
-
-{
-topic:"home",
-en:"Please sit down.",
-hi:"कृपया बैठ जाइए।"
-},
-
-{
-topic:"home",
-en:"Wake up early.",
-hi:"जल्दी उठो।"
-},
-
-{
-topic:"home",
-en:"Turn on the light.",
-hi:"लाइट चालू करो।"
-},
-
-{
-topic:"home",
-en:"Turn off the fan.",
-hi:"पंखा बंद करो।"
-},
-
-{
-topic:"home",
-en:"Dinner is ready.",
-hi:"रात का खाना तैयार है।"
-},
-
-
-/* School */
-
-{
-topic:"school",
-en:"Go to your classroom.",
-hi:"अपनी कक्षा में जाओ।"
-},
-
-{
-topic:"school",
-en:"Open your book.",
-hi:"अपनी किताब खोलो।"
-},
-
-{
-topic:"school",
-en:"Close your book.",
-hi:"अपनी किताब बंद करो।"
-},
-
-{
-topic:"school",
-en:"Listen carefully.",
-hi:"ध्यान से सुनो।"
-},
-
-{
-topic:"school",
-en:"Write the answer.",
-hi:"उत्तर लिखो।"
-},
-
-{
-topic:"school",
-en:"Read this sentence.",
-hi:"इस वाक्य को पढ़ो।"
-},
-
-{
-topic:"school",
-en:"Do your homework.",
-hi:"अपना गृहकार्य करो।"
-},
-
-{
-topic:"school",
-en:"Ask your teacher.",
-hi:"अपने शिक्षक से पूछो।"
-},
-
-{
-topic:"school",
-en:"I forgot my homework.",
-hi:"मैं अपना गृहकार्य भूल गया।"
-},
-
-{
-topic:"school",
-en:"May I come in?",
-hi:"क्या मैं अंदर आ सकता हूँ?"
-},
-
-
-/* Daily Conversation */
-
-{
-topic:"daily",
-en:"What are you doing?",
-hi:"तुम क्या कर रहे हो?"
-},
-
-{
-topic:"daily",
-en:"Where are you going?",
-hi:"तुम कहाँ जा रहे हो?"
-},
-
-{
-topic:"daily",
-en:"I am coming.",
-hi:"मैं आ रहा हूँ।"
-},
-
-{
-topic:"daily",
-en:"Please wait for me.",
-hi:"कृपया मेरा इंतजार करो।"
-},
-
-{
-topic:"daily",
-en:"Come with me.",
-hi:"मेरे साथ आओ।"
-},
-
-{
-topic:"daily",
-en:"Wait a minute.",
-hi:"एक मिनट रुको।"
-},
-
-{
-topic:"daily",
-en:"I don't know.",
-hi:"मुझे नहीं पता।"
-},
-
-{
-topic:"daily",
-en:"I understand.",
-hi:"मैं समझता हूँ।"
-},
-
-{
-topic:"daily",
-en:"I don't understand.",
-hi:"मैं नहीं समझता।"
-},
-
-{
-topic:"daily",
-en:"What happened?",
-hi:"क्या हुआ?"
-},
-
-
-/* Food */
-
-{
-topic:"food",
-en:"I am hungry.",
-hi:"मुझे भूख लगी है।"
-},
-
-{
-topic:"food",
-en:"I am thirsty.",
-hi:"मुझे प्यास लगी है।"
-},
-
-{
-topic:"food",
-en:"Give me some water.",
-hi:"मुझे थोड़ा पानी दो।"
-},
-
-{
-topic:"food",
-en:"The food is delicious.",
-hi:"खाना स्वादिष्ट है।"
-},
-
-{
-topic:"food",
-en:"I like this food.",
-hi:"मुझे यह खाना पसंद है।"
-},
-
-{
-topic:"food",
-en:"I don't like spicy food.",
-hi:"मुझे मसालेदार खाना पसंद नहीं है।"
-},
-
-{
-topic:"food",
-en:"Have some food.",
-hi:"कुछ खाना खाइए।"
-},
-
-{
-topic:"food",
-en:"Breakfast is ready.",
-hi:"नाश्ता तैयार है।"
-},
-
-{
-topic:"food",
-en:"Please give me a spoon.",
-hi:"कृपया मुझे चम्मच दीजिए।"
-},
-
-{
-topic:"food",
-en:"I have finished eating.",
-hi:"मैं खाना खा चुका हूँ।"
-},
-
-
-/* Market */
-
-{
-topic:"market",
-en:"How much is this?",
-hi:"यह कितने का है?"
-},
-
-{
-topic:"market",
-en:"It is too expensive.",
-hi:"यह बहुत महंगा है।"
-},
-
-{
-topic:"market",
-en:"Give me a discount.",
-hi:"मुझे कुछ छूट दीजिए।"
-},
-
-{
-topic:"market",
-en:"I want to buy this.",
-hi:"मैं इसे खरीदना चाहता हूँ।"
-},
-
-{
-topic:"market",
-en:"Do you have a smaller size?",
-hi:"क्या आपके पास छोटा आकार है?"
-},
-
-{
-topic:"market",
-en:"Do you accept online payment?",
-hi:"क्या आप ऑनलाइन भुगतान स्वीकार करते हैं?"
-},
-
-{
-topic:"market",
-en:"Give me the bill.",
-hi:"मुझे बिल दीजिए।"
-},
-
-{
-topic:"market",
-en:"I need a bag.",
-hi:"मुझे एक बैग चाहिए।"
-},
-
-{
-topic:"market",
-en:"This is good quality.",
-hi:"यह अच्छी गुणवत्ता का है।"
-},
-
-{
-topic:"market",
-en:"I will buy it.",
-hi:"मैं इसे खरीदूँगा।"
-},
-
-
-/* Travel */
-
-{
-topic:"travel",
-en:"Where is the bus stop?",
-hi:"बस स्टॉप कहाँ है?"
-},
-
-{
-topic:"travel",
-en:"Where is the railway station?",
-hi:"रेलवे स्टेशन कहाँ है?"
-},
-
-{
-topic:"travel",
-en:"I need a ticket.",
-hi:"मुझे एक टिकट चाहिए।"
-},
-
-{
-topic:"travel",
-en:"What time does the train leave?",
-hi:"ट्रेन कितने बजे चलती है?"
-},
-
-{
-topic:"travel",
-en:"Please stop here.",
-hi:"कृपया यहाँ रोकिए।"
-},
-
-{
-topic:"travel",
-en:"How far is it?",
-hi:"यह कितनी दूर है?"
-},
-
-{
-topic:"travel",
-en:"I am going to Jaipur.",
-hi:"मैं जयपुर जा रहा हूँ।"
-},
-
-{
-topic:"travel",
-en:"Please show me the way.",
-hi:"कृपया मुझे रास्ता बताइए।"
-},
-
-{
-topic:"travel",
-en:"I have lost my bag.",
-hi:"मेरा बैग खो गया है।"
-},
-
-{
-topic:"travel",
-en:"Have a safe journey.",
-hi:"आपकी यात्रा सुरक्षित हो।"
-},
-
-
-/* Phone */
-
-{
-topic:"phone",
-en:"Hello, who is speaking?",
-hi:"हैलो, कौन बोल रहे हैं?"
-},
-
 {
-topic:"phone",
-en:"Can I talk to you?",
-hi:"क्या मैं आपसे बात कर सकता हूँ?"
+topic:"Conversation",
+hi:"आप कैसे हैं?",
+en:"How are you?"
 },
 
 {
-topic:"phone",
-en:"Please call me later.",
-hi:"कृपया मुझे बाद में फोन करना।"
+topic:"Conversation",
+hi:"मैं ठीक हूँ।",
+en:"I am fine."
 },
 
 {
-topic:"phone",
-en:"I will call you back.",
-hi:"मैं आपको वापस फोन करूँगा।"
+topic:"Conversation",
+hi:"आपका नाम क्या है?",
+en:"What is your name?"
 },
 
 {
-topic:"phone",
-en:"Why did you call me?",
-hi:"आपने मुझे फोन क्यों किया?"
+topic:"Conversation",
+hi:"मेरा नाम आर्यन है।",
+en:"My name is Aryan."
 },
 
 {
-topic:"phone",
-en:"My phone is out of battery.",
-hi:"मेरे फोन की बैटरी खत्म हो गई है।"
+topic:"Conversation",
+hi:"आप कहाँ रहते हैं?",
+en:"Where do you live?"
 },
 
 {
-topic:"phone",
-en:"Send me the message.",
-hi:"मुझे संदेश भेजो।"
+topic:"Market",
+hi:"इसकी कीमत कितनी है?",
+en:"How much does it cost?"
 },
 
 {
-topic:"phone",
-en:"Please speak slowly.",
-hi:"कृपया धीरे बोलिए।"
+topic:"Market",
+hi:"मुझे यह पसंद है।",
+en:"I like this."
 },
 
 {
-topic:"phone",
-en:"I can't hear you.",
-hi:"मैं आपको सुन नहीं पा रहा हूँ।"
+topic:"Market",
+hi:"क्या यह सस्ता है?",
+en:"Is this cheap?"
 },
 
 {
-topic:"phone",
-en:"The network is weak.",
-hi:"नेटवर्क कमजोर है।"
+topic:"Travel",
+hi:"बस कब आएगी?",
+en:"When will the bus arrive?"
 },
 
-
-/* Feelings */
-
-{
-topic:"feelings",
-en:"I am happy.",
-hi:"मैं खुश हूँ।"
-},
-
 {
-topic:"feelings",
-en:"I am sad.",
-hi:"मैं दुखी हूँ।"
+topic:"Travel",
+hi:"मुझे स्टेशन जाना है।",
+en:"I have to go to the station."
 },
 
 {
-topic:"feelings",
-en:"I am tired.",
-hi:"मैं थका हुआ हूँ।"
+topic:"Food",
+hi:"मुझे भूख लगी है।",
+en:"I am hungry."
 },
 
 {
-topic:"feelings",
-en:"I am busy.",
-hi:"मैं व्यस्त हूँ।"
+topic:"Food",
+hi:"मुझे पानी चाहिए।",
+en:"I need water."
 },
 
 {
-topic:"feelings",
-en:"I am ready.",
-hi:"मैं तैयार हूँ।"
+topic:"Daily Routine",
+hi:"मैं सुबह जल्दी उठता हूँ।",
+en:"I wake up early in the morning."
 },
 
 {
-topic:"feelings",
-en:"Don't worry.",
-hi:"चिंता मत करो।"
+topic:"Daily Routine",
+hi:"मैं रोज पढ़ाई करता हूँ।",
+en:"I study every day."
 },
 
 {
-topic:"feelings",
-en:"Be careful.",
-hi:"सावधान रहो।"
+topic:"Daily Routine",
+hi:"मैं रात को जल्दी सोता हूँ।",
+en:"I go to bed early at night."
 },
 
 {
-topic:"feelings",
-en:"I am excited.",
-hi:"मैं उत्साहित हूँ।"
+topic:"Feelings",
+hi:"मैं बहुत खुश हूँ।",
+en:"I am very happy."
 },
 
 {
-topic:"feelings",
-en:"I am confused.",
-hi:"मैं उलझन में हूँ।"
+topic:"Feelings",
+hi:"मुझे गुस्सा आ रहा है।",
+en:"I am getting angry."
 },
 
 {
-topic:"feelings",
-en:"I feel better now.",
-hi:"अब मुझे बेहतर महसूस हो रहा है।"
+topic:"Questions",
+hi:"तुम क्या कर रहे हो?",
+en:"What are you doing?"
 },
-
-
-/* Requests */
 
 {
-topic:"requests",
-en:"Please help me.",
-hi:"कृपया मेरी मदद करो।"
+topic:"Questions",
+hi:"तुम कब आओगे?",
+en:"When will you come?"
 },
 
 {
-topic:"requests",
-en:"Can you help me?",
-hi:"क्या आप मेरी मदद कर सकते हैं?"
+topic:"Polite English",
+hi:"कृपया मेरी मदद करें।",
+en:"Please help me."
 },
 
 {
-topic:"requests",
-en:"Please give me a chance.",
-hi:"कृपया मुझे एक मौका दीजिए।"
+topic:"Polite English",
+hi:"बहुत धन्यवाद।",
+en:"Thank you very much."
 },
 
 {
-topic:"requests",
-en:"May I come in?",
-hi:"क्या मैं अंदर आ सकता हूँ?"
+topic:"Polite English",
+hi:"कोई बात नहीं।",
+en:"No problem."
 },
 
 {
-topic:"requests",
-en:"May I go outside?",
-hi:"क्या मैं बाहर जा सकता हूँ?"
+topic:"Mobile & Internet",
+hi:"मुझे अपना फोन दो।",
+en:"Give me your phone."
 },
 
 {
-topic:"requests",
-en:"Can I use your phone?",
-hi:"क्या मैं आपका फोन इस्तेमाल कर सकता हूँ?"
+topic:"Mobile & Internet",
+hi:"इंटरनेट काम नहीं कर रहा है।",
+en:"The internet is not working."
 },
 
 {
-topic:"requests",
-en:"Please don't disturb me.",
-hi:"कृपया मुझे परेशान मत करो।"
+topic:"Friends",
+hi:"चलो साथ चलते हैं।",
+en:"Let's go together."
 },
 
 {
-topic:"requests",
-en:"Please forgive me.",
-hi:"कृपया मुझे माफ कर दीजिए।"
+topic:"Friends",
+hi:"मुझसे बात करो।",
+en:"Talk to me."
 },
 
 {
-topic:"requests",
-en:"Please give me some time.",
-hi:"कृपया मुझे थोड़ा समय दीजिए।"
+topic:"Work",
+hi:"काम पूरा हो गया है।",
+en:"The work is complete."
 },
 
 {
-topic:"requests",
-en:"Could you repeat that?",
-hi:"क्या आप इसे दोहरा सकते हैं?"
+topic:"Work",
+hi:"मैं अभी व्यस्त हूँ।",
+en:"I am busy right now."
 }
 
 ];
 
 
 /* =====================================================
-   ENGLISH RENDER
+   GK DATA
 ===================================================== */
 
-function renderEnglish(){
+const GK_DATA=[
 
-    const topic=
-    document.getElementById("englishTopic").value;
+{
+topic:"India",
+q:"भारत की राजधानी क्या है?",
+en:"What is the capital of India?",
+options:["Mumbai","New Delhi","Jaipur","Kolkata"],
+answer:1
+},
 
-    const search=
-    document.getElementById("englishSearch")
-    .value
-    .toLowerCase();
+{
+topic:"India",
+q:"भारत का राष्ट्रीय पशु कौन सा है?",
+en:"What is the national animal of India?",
+options:["Lion","Tiger","Elephant","Deer"],
+answer:1
+},
 
-    const list=
-    document.getElementById("englishList");
+{
+topic:"Science",
+q:"पानी का रासायनिक सूत्र क्या है?",
+en:"What is the chemical formula of water?",
+options:["CO2","O2","H2O","N2"],
+answer:2
+},
 
-    list.innerHTML="";
+{
+topic:"Geography",
+q:"भारत में कितने राज्य हैं?",
+en:"How many states are there in India?",
+options:["26","27","28","29"],
+answer:2
+},
 
-    const filtered=ENGLISH.filter(item=>{
+{
+topic:"General",
+q:"सूर्य किस दिशा से उगता है?",
+en:"From which direction does the Sun rise?",
+options:["North","South","East","West"],
+answer:2
+}
 
-        const topicOK=
-        topic==="all" ||
-        item.topic===topic;
+];
 
-        const searchOK=
-        item.en.toLowerCase().includes(search) ||
-        item.hi.toLowerCase().includes(search);
 
-        return topicOK && searchOK;
+/* =====================================================
+   REASONING DATA
+===================================================== */
 
-    });
+const REASONING_DATA=[
 
-    filtered.forEach((item,index)=>{
+{
+topic:"Number Series",
+q:"2, 4, 6, 8, ?",
+options:["9","10","11","12"],
+answer:1
+},
 
-        const div=document.createElement("div");
+{
+topic:"Number Series",
+q:"5, 10, 15, 20, ?",
+options:["22","24","25","30"],
+answer:2
+},
 
-        div.className="sentence-card";
+{
+topic:"Analogy",
+q:"Book : Read :: Food : ?",
+options:["Eat","Write","Walk","Sleep"],
+answer:0
+},
 
-        div.innerHTML=`
+{
+topic:"Classification",
+q:"इनमें से अलग कौन है?",
+options:["Apple","Mango","Banana","Potato"],
+answer:3
+},
 
-        <div class="english">
-        ${index+1}. ${item.en}
-        </div>
+{
+topic:"Coding",
+q:"यदि CAT को DBU लिखा जाए, तो DOG को क्या लिखेंगे?",
+options:["EPH","EOH","DPG","FPH"],
+answer:0
+}
 
-        <div class="hindi">
-        🇮🇳 ${item.hi}
-        </div>
+];
 
-        <button onclick='speakEnglish(${JSON.stringify(item.en)})'>
-        🔊 Listen
-        </button>
 
-        <button class="green"
-        onclick='addFavorite(${JSON.stringify(item.en)})'>
-        ⭐ Favorite
-        </button>
+/* =====================================================
+   COMPUTER DATA
+===================================================== */
 
-        `;
+const COMPUTER_DATA=[
 
-        list.appendChild(div);
+{
+topic:"Computer Basics",
+q:"CPU का पूरा नाम क्या है?",
+options:[
+"Central Processing Unit",
+"Computer Personal Unit",
+"Central Program Utility",
+"Control Processing User"
+],
+answer:0
+},
 
-    });
+{
+topic:"Computer Basics",
+q:"कंप्यूटर का मस्तिष्क किसे कहा जाता है?",
+options:[
+"Monitor",
+"CPU",
+"Keyboard",
+"Mouse"
+],
+answer:1
+},
 
-    if(filtered.length===0){
+{
+topic:"Hardware",
+q:"इनमें से कौन Input Device है?",
+options:[
+"Monitor",
+"Printer",
+"Keyboard",
+"Speaker"
+],
+answer:2
+},
 
-        list.innerHTML=
-        "<div class='message'>कोई sentence नहीं मिला।</div>";
+{
+topic:"Internet",
+q:"WWW का पूरा नाम क्या है?",
+options:[
+"World Wide Web",
+"World Web Window",
+"Web World Wide",
+"Wide World Web"
+],
+answer:0
+},
 
-    }
+{
+topic:"Software",
+q:"Windows क्या है?",
+options:[
+"Hardware",
+"Operating System",
+"Keyboard",
+"Printer"
+],
+answer:1
+}
+
+];
+
+
+/* =====================================================
+   LEARNING OPEN
+===================================================== */
+
+function openLearning(type){
+
+currentLearning=type;
+
+document.getElementById("learningView")
+.classList.remove("hidden");
+
+document.getElementById("dataArea").innerHTML="";
+document.getElementById("testArea").innerHTML="";
+
+if(type==="english"){
+
+document.getElementById("learningTitle").innerText=
+"🗣️ Daily Use English Sentences";
+
+document.getElementById("learningDescription").innerHTML=
+"<b>1000 Daily Use Sentences</b><br>Hindi + English | Topic-wise | Practice + Test";
+
+renderEnglishTopics();
+
+}
+
+if(type==="gk"){
+
+document.getElementById("learningTitle").innerText=
+"🌍 Current GK";
+
+document.getElementById("learningDescription").innerHTML=
+"<b>General Knowledge</b><br>Hindi + English | Topic-wise | MCQ Test";
+
+renderQuestionTopics(GK_DATA);
+
+}
+
+if(type==="reasoning"){
+
+document.getElementById("learningTitle").innerText=
+"🧠 Reasoning";
+
+document.getElementById("learningDescription").innerHTML=
+"<b>Reasoning Practice</b><br>Series | Analogy | Classification | Coding";
+
+renderQuestionTopics(REASONING_DATA);
+
+}
+
+if(type==="computer"){
+
+document.getElementById("learningTitle").innerText=
+"💻 Computer";
+
+document.getElementById("learningDescription").innerHTML=
+"<b>Computer Knowledge</b><br>Basics | Hardware | Software | Internet";
+
+renderQuestionTopics(COMPUTER_DATA);
+
+}
+
+document.getElementById("learningView").scrollIntoView({
+behavior:"smooth"
+});
 
 }
 
 
-function speakEnglish(text){
+/* =====================================================
+   ENGLISH TOPICS
+===================================================== */
 
-    if(!("speechSynthesis" in window)){
+function renderEnglishTopics(){
 
-        alert("आपके browser में Speech सुविधा उपलब्ध नहीं है।");
+const topics=[
+"Home & Family",
+"School",
+"Conversation",
+"Market",
+"Travel",
+"Food",
+"Daily Routine",
+"Feelings",
+"Questions",
+"Polite English",
+"Mobile & Internet",
+"Friends",
+"Work"
+];
 
-        return;
+let html=`
 
-    }
+<h3>📚 Topics</h3>
 
-    const speech=
-    new SpeechSynthesisUtterance(text);
+<div class="topic-grid">
+`;
 
-    speech.lang="en-US";
+topics.forEach(topic=>{
 
-    speech.rate=.85;
+const count=DAILY_SENTENCES.filter(
+x=>x.topic===topic
+).length;
 
-    speechSynthesis.cancel();
+html+=`
 
-    speechSynthesis.speak(speech);
+<div class="topic-card">
+
+<h3>🗣️ ${topic}</h3>
+
+<p>${count} Sentences</p>
+
+<button onclick="showEnglish('${safe(topic)}')">
+Open
+</button>
+
+</div>
+
+`;
+
+});
+
+html+=`</div>`;
+
+document.getElementById("topicArea").innerHTML=html;
 
 }
 
 
-function addFavorite(text){
+/* =====================================================
+   SHOW ENGLISH
+===================================================== */
 
-    let favorites=
-    JSON.parse(
-        localStorage.getItem("favorites")||"[]"
-    );
+function showEnglish(topic){
 
-    if(!favorites.includes(text)){
+const data=DAILY_SENTENCES.filter(
+x=>x.topic===topic
+);
 
-        favorites.push(text);
+currentTopic=topic;
 
-        localStorage.setItem(
-            "favorites",
-            JSON.stringify(favorites)
-        );
+let html=`
 
-        alert("⭐ Favorite में जोड़ दिया गया।");
+<h3>🗣️ ${topic}</h3>
 
-    }
-    else{
+<p>
+Total Sentences: <b>${data.length}</b>
+</p>
+`;
 
-        alert("यह पहले से Favorite में है।");
+data.forEach((item,index)=>{
 
-    }
+html+=`
+
+<div class="data-card">
+
+<b>${index+1}. </b>
+
+<div class="hindi">
+🇮🇳 ${item.hi}
+</div>
+
+<div class="english-text">
+🇬🇧 ${item.en}
+</div>
+
+</div>
+
+`;
+
+});
+
+html+=`
+
+<button class="green" onclick="englishTest('${safe(topic)}')">
+✅ इस Topic का Test
+</button>
+`;
+
+document.getElementById("dataArea").innerHTML=html;
+
+document.getElementById("testArea").innerHTML="";
+
+}
+
+
+/* =====================================================
+   QUESTION TOPICS
+===================================================== */
+
+function renderQuestionTopics(data){
+
+const topics=[...new Set(data.map(x=>x.topic))];
+
+let html=`
+
+<h3>📚 Topics</h3>
+
+<div class="topic-grid">
+`;
+
+topics.forEach(topic=>{
+
+html+=`
+
+<div class="topic-card">
+
+<h3>📖 ${topic}</h3>
+
+<p>
+${data.filter(x=>x.topic===topic).length} Questions
+</p>
+
+<button onclick="showQuestions('${safe(topic)}')">
+Open
+</button>
+
+</div>
+
+`;
+
+});
+
+html+=`</div>`;
+
+document.getElementById("topicArea").innerHTML=html;
+
+}
+
+
+/* =====================================================
+   SHOW QUESTIONS
+===================================================== */
+
+function showQuestions(topic){
+
+let data=[];
+
+if(currentLearning==="gk")
+data=GK_DATA;
+
+if(currentLearning==="reasoning")
+data=REASONING_DATA;
+
+if(currentLearning==="computer")
+data=COMPUTER_DATA;
+
+data=data.filter(x=>x.topic===topic);
+
+let html=`
+
+<h3>📚 ${topic}</h3>
+
+`;
+
+data.forEach((item,index)=>{
+
+html+=`
+
+<div class="data-card">
+
+<h3>
+Q${index+1}. ${item.q}
+</h3>
+
+<p>
+${item.en}
+</p>
+
+<ol type="A">
+
+${item.options.map(x=>`<li>${x}</li>`).join("")}
+
+</ol>
+
+</div>
+
+`;
+
+});
+
+html+=`
+
+<button class="green"
+onclick="startTest('${safe(topic)}')">
+
+✅ Start Test
+
+</button>
+
+`;
+
+document.getElementById("dataArea").innerHTML=html;
+
+document.getElementById("testArea").innerHTML="";
 
 }
 
@@ -2147,568 +1980,286 @@ function addFavorite(text){
    ENGLISH TEST
 ===================================================== */
 
-let englishTestData=[];
+function englishTest(topic){
 
-function startEnglishTest(){
+const data=DAILY_SENTENCES.filter(
+x=>x.topic===topic
+);
 
-    englishTestData=
-    [...ENGLISH]
-    .sort(()=>Math.random()-.5)
-    .slice(0,10);
+if(data.length===0)return;
 
-    const box=
-    document.getElementById("englishTestQuestions");
+let html=`
 
-    box.innerHTML="";
+<h3>✅ English Test – ${topic}</h3>
 
-    englishTestData.forEach((q,index)=>{
+`;
 
-        const options=
-        [q.hi,"I don't know","Good morning","Thank you"]
-        .sort(()=>Math.random()-.5);
+data.forEach((item,index)=>{
 
-        box.innerHTML+=`
+html+=`
 
-        <div class="quiz-question">
+<div class="data-card">
 
-        <b>
-        ${index+1}. Translate:
-        <br>
-        "${q.en}"
-        </b>
+<b>Q${index+1}. ${item.hi}</b>
 
-        ${options.map((option,i)=>`
+<label class="test-option">
 
-            <label>
+<input
+type="radio"
+name="eng${index}"
+value="correct">
 
-            <input
-            type="radio"
-            name="eng${index}"
-            value="${escapeHTML(option)}">
+${item.en}
 
-            ${option}
+</label>
 
-            </label>
+<label class="test-option">
 
-        `).join("")}
+<input
+type="radio"
+name="eng${index}"
+value="wrong">
 
-        </div>
+I am doing something.
 
-        `;
+</label>
 
-    });
+<label class="test-option">
 
-    document.getElementById("englishTest")
-    .classList.remove("hidden");
+<input
+type="radio"
+name="eng${index}"
+value="wrong">
 
-    document.getElementById("englishTest")
-    .scrollIntoView({behavior:"smooth"});
+What is your name?
 
-    startTimer("englishTimer",submitEnglishTest);
+</label>
 
-}
+</div>
 
+`;
 
-function submitEnglishTest(){
+});
 
-    if(!englishTestData.length) return;
+html+=`
 
-    clearInterval(testTimer);
+<button class="green"
+onclick="checkEnglishTest('${safe(topic)}')">
 
-    let score=0;
+Submit Test
 
-    englishTestData.forEach((q,index)=>{
+</button>
 
-        const selected=
-        document.querySelector(
-            `input[name="eng${index}"]:checked`
-        );
+<div id="englishResult"></div>
 
-        if(selected && selected.value===q.hi){
+`;
 
-            score++;
+document.getElementById("testArea").innerHTML=html;
 
-        }
-
-    });
-
-    const percentage=
-    score/englishTestData.length*100;
-
-    document.getElementById("englishTestResult").innerHTML=`
-
-    <div class="result">
-
-    🏆 Score: ${score} / ${englishTestData.length}
-
-    <br>
-
-    📊 Percentage: ${percentage.toFixed(2)}%
-
-    <br><br>
-
-    ${percentage>=80
-    ? "🎉 बहुत बढ़िया!"
-    : percentage>=50
-    ? "👍 अच्छा प्रयास!"
-    : "📚 और Practice करें।"}
-
-    </div>
-
-    `;
+document.getElementById("testArea").scrollIntoView({
+behavior:"smooth"
+});
 
 }
 
 
 /* =====================================================
-   CURRENT GK
+   CHECK ENGLISH
 ===================================================== */
 
-const GK=[
+function checkEnglishTest(topic){
 
-{
-topic:"india",
-q:"भारत की राजधानी क्या है? / What is the capital of India?",
-options:["Jaipur / जयपुर","New Delhi / नई दिल्ली","Mumbai / मुंबई","Kolkata / कोलकाता"],
-answer:1,
-explain:"भारत की राजधानी नई दिल्ली है। / The capital of India is New Delhi."
-},
+const data=DAILY_SENTENCES.filter(
+x=>x.topic===topic
+);
 
-{
-topic:"world",
-q:"Which is the largest continent? / सबसे बड़ा महाद्वीप कौन सा है?",
-options:["Asia / एशिया","Europe / यूरोप","Africa / अफ्रीका","Australia / ऑस्ट्रेलिया"],
-answer:0,
-explain:"Asia is the largest continent. / एशिया सबसे बड़ा महाद्वीप है।"
-},
+let score=0;
 
-{
-topic:"science",
-q:"Water का chemical formula क्या है?",
-options:["CO2","O2","H2O","N2"],
-answer:2,
-explain:"Water is H2O. / पानी का सूत्र H2O है।"
-},
+data.forEach((x,i)=>{
 
-{
-topic:"sports",
-q:"How many players are there in a cricket team? / क्रिकेट टीम में कितने खिलाड़ी होते हैं?",
-options:["9","10","11","12"],
-answer:2,
-explain:"A cricket team has 11 players. / क्रिकेट टीम में 11 खिलाड़ी होते हैं।"
-},
+const selected=document.querySelector(
+'input[name="eng'+i+'"]:checked'
+);
 
-{
-topic:"computer",
-q:"CPU का full form क्या है?",
-options:[
-"Central Processing Unit",
-"Computer Personal Unit",
-"Central Program Utility",
-"Control Processing User"
-],
-answer:0,
-explain:"CPU means Central Processing Unit."
+if(selected && selected.value==="correct")
+score++;
+
+});
+
+document.getElementById("englishResult").innerHTML=`
+
+<div class="test-result">
+
+🎯 आपका Score: ${score} / ${data.length}
+
+<br><br>
+
+${
+score===data.length
+?"🏆 बहुत बढ़िया!"
+:score>=data.length/2
+?"👍 अच्छा प्रयास!"
+:"📚 फिर से Practice करें।"
 }
 
-];
+</div>
 
-
-function renderGK(){
-
-    const topic=
-    document.getElementById("gkTopic").value;
-
-    const search=
-    document.getElementById("gkSearch")
-    .value
-    .toLowerCase();
-
-    const list=document.getElementById("gkList");
-
-    list.innerHTML="";
-
-    GK.forEach((item,index)=>{
-
-        if(topic!=="all" && item.topic!==topic)
-        return;
-
-        if(
-            search &&
-            !item.q.toLowerCase().includes(search)
-        )
-        return;
-
-        list.innerHTML+=`
-
-        <div class="quiz-question">
-
-        <b>${index+1}. ${item.q}</b>
-
-        ${item.options.map((op,i)=>`
-
-        <label>
-
-        <input
-        type="radio"
-        name="gk${index}"
-        value="${i}">
-
-        ${op}
-
-        </label>
-
-        `).join("")}
-
-        <div class="message hidden" id="gkexp${index}">
-        ${item.explain}
-        </div>
-
-        </div>
-
-        `;
-
-    });
-
-}
-
-
-function startGKTest(){
-
-    document.getElementById("gk")
-    .scrollIntoView({behavior:"smooth"});
-
-    alert(
-    "GK Test तैयार है। ऊपर दिए गए प्रश्नों के उत्तर चुनें।"
-    );
+`;
 
 }
 
 
 /* =====================================================
-   REASONING
+   GENERAL TEST
 ===================================================== */
 
-const REASONING=[
+function startTest(topic){
 
-{
-topic:"series",
-q:"2, 4, 6, 8, ? / अगली संख्या क्या होगी?",
-options:["9","10","11","12"],
-answer:1,
-explain:"हर बार 2 जोड़ा गया है। / Add 2 each time."
-},
+let data=[];
 
-{
-topic:"series",
-q:"5, 10, 15, 20, ?",
-options:["21","24","25","30"],
-answer:2,
-explain:"हर बार 5 जोड़ा गया है।"
-},
+if(currentLearning==="gk")
+data=GK_DATA;
 
-{
-topic:"analogy",
-q:"Bird : Fly :: Fish : ? / पक्षी : उड़ना :: मछली : ?",
-options:["Run / दौड़ना","Swim / तैरना","Walk / चलना","Jump / कूदना"],
-answer:1,
-explain:"Fish swim. / मछली तैरती है।"
-},
+if(currentLearning==="reasoning")
+data=REASONING_DATA;
 
-{
-topic:"coding",
-q:"If CAT = DBU, then DOG = ?",
-options:["EPH","EOG","DPH","FQI"],
-answer:0,
-explain:"Each letter is moved one step forward."
-},
+if(currentLearning==="computer")
+data=COMPUTER_DATA;
 
-{
-topic:"direction",
-q:"A person walks North and then turns right. Which direction is he facing?",
-options:["West / पश्चिम","East / पूर्व","South / दक्षिण","North / उत्तर"],
-answer:1,
-explain:"Facing North, right side is East."
-},
+data=data.filter(x=>x.topic===topic);
 
-{
-topic:"odd",
-q:"Which is different? / अलग कौन है?",
-options:["Apple / सेब","Mango / आम","Banana / केला","Carrot / गाजर"],
-answer:3,
-explain:"Carrot is a vegetable; others are fruits."
-}
+let html=`
 
-];
+<h3>✅ Test – ${topic}</h3>
+`;
 
+data.forEach((item,index)=>{
 
-function renderReasoning(){
+html+=`
 
-    const topic=
-    document.getElementById("reasoningTopic").value;
+<div class="data-card">
 
-    const list=
-    document.getElementById("reasoningList");
+<h3>
+Q${index+1}. ${item.q}
+</h3>
 
-    list.innerHTML="";
+<p>${item.en}</p>
 
-    REASONING.forEach((item,index)=>{
+${item.options.map((option,j)=>`
 
-        if(topic!=="all" && item.topic!==topic)
-        return;
+<label class="test-option">
 
-        list.innerHTML+=`
+<input
+type="radio"
+name="test${index}"
+value="${j}">
 
-        <div class="quiz-question">
+${String.fromCharCode(65+j)}. ${option}
 
-        <b>${index+1}. ${item.q}</b>
+</label>
 
-        ${item.options.map((op,i)=>`
+`).join("")}
 
-        <label>
+</div>
 
-        <input
-        type="radio"
-        name="reason${index}"
-        value="${i}">
+`;
 
-        ${op}
+});
 
-        </label>
+html+=`
 
-        `).join("")}
+<button class="green"
+onclick="checkGeneralTest('${safe(topic)}')">
 
-        <small>
-        हिंदी + English Explanation Test में मिलेगा।
-        </small>
+✅ Submit Test
 
-        </div>
+</button>
 
-        `;
+<div id="generalResult"></div>
 
-    });
+`;
 
-}
+document.getElementById("testArea").innerHTML=html;
 
-
-function startReasoningTest(){
-
-    alert(
-    "Reasoning Test में series, analogy, coding, direction और odd-one-out questions शामिल हैं।"
-    );
-
-    document.getElementById("reasoning")
-    .scrollIntoView({behavior:"smooth"});
+document.getElementById("testArea").scrollIntoView({
+behavior:"smooth"
+});
 
 }
 
 
 /* =====================================================
-   COMPUTER
+   CHECK GENERAL TEST
 ===================================================== */
 
-const COMPUTER=[
+function checkGeneralTest(topic){
 
-{
-topic:"basic",
-q:"Computer का brain किसे कहा जाता है? / What is called the brain of a computer?",
-options:["Monitor","CPU","Keyboard","Mouse"],
-answer:1,
-explain:"CPU processes instructions and controls computer operations."
-},
+let data=[];
 
-{
-topic:"hardware",
-q:"Which is an input device? / Input device कौन सा है?",
-options:["Monitor","Printer","Keyboard","Speaker"],
-answer:2,
-explain:"Keyboard is an input device."
-},
+if(currentLearning==="gk")
+data=GK_DATA;
 
-{
-topic:"internet",
-q:"WWW का full form क्या है?",
-options:[
-"World Wide Web",
-"World Web Window",
-"Web World Wide",
-"Wide World Web"
-],
-answer:0,
-explain:"WWW means World Wide Web."
-},
+if(currentLearning==="reasoning")
+data=REASONING_DATA;
 
-{
-topic:"windows",
-q:"Which operating system is developed by Microsoft?",
-options:["Windows","Android","Linux","Ubuntu"],
-answer:0,
-explain:"Windows is developed by Microsoft."
-},
+if(currentLearning==="computer")
+data=COMPUTER_DATA;
 
-{
-topic:"shortcut",
-q:"Ctrl + C का उपयोग किसके लिए होता है?",
-options:[
-"Paste",
-"Copy",
-"Cut",
-"Save"
-],
-answer:1,
-explain:"Ctrl+C is used to copy selected content."
-},
+data=data.filter(x=>x.topic===topic);
 
-{
-topic:"security",
-q:"Which is safer? / कौन अधिक सुरक्षित है?",
-options:[
-"123456 password",
-"Your name",
-"Strong unique password",
-"Password123"
-],
-answer:2,
-explain:"A strong unique password is safer."
-}
+let score=0;
 
-];
+data.forEach((item,index)=>{
 
+const selected=document.querySelector(
+'input[name="test'+index+'"]:checked'
+);
 
-function renderComputer(){
+if(selected &&
+Number(selected.value)===item.answer){
 
-    const topic=
-    document.getElementById("computerTopic").value;
-
-    const list=
-    document.getElementById("computerList");
-
-    list.innerHTML="";
-
-    COMPUTER.forEach((item,index)=>{
-
-        if(topic!=="all" && item.topic!==topic)
-        return;
-
-        list.innerHTML+=`
-
-        <div class="quiz-question">
-
-        <b>${index+1}. ${item.q}</b>
-
-        ${item.options.map((op,i)=>`
-
-        <label>
-
-        <input
-        type="radio"
-        name="computer${index}"
-        value="${i}">
-
-        ${op}
-
-        </label>
-
-        `).join("")}
-
-        </div>
-
-        `;
-
-    });
+score++;
 
 }
 
+});
 
-function startComputerTest(){
+document.getElementById("generalResult").innerHTML=`
 
-    alert(
-    "Computer Test में Computer Basics, Internet, Windows, Shortcut और Cyber Security questions होंगे।"
-    );
+<div class="test-result">
 
-    document.getElementById("computer")
-    .scrollIntoView({behavior:"smooth"});
+🎯 Score: ${score} / ${data.length}
+
+<br><br>
+
+${
+score===data.length
+?"🏆 Excellent!"
+:score>=data.length/2
+?"👍 Good Job!"
+:"📚 More Practice Needed"
+}
+
+</div>
+
+`;
 
 }
 
 
 /* =====================================================
-   GENERAL QUIZ
+   CLOSE LEARNING
 ===================================================== */
 
-function checkQuiz(){
+function closeLearning(){
 
-    let score=0;
+document.getElementById("learningView")
+.classList.add("hidden");
 
-    const q1=document.querySelector(
-    'input[name="q1"]:checked'
-    );
-
-    const q2=document.querySelector(
-    'input[name="q2"]:checked'
-    );
-
-    const q3=document.querySelector(
-    'input[name="q3"]:checked'
-    );
-
-    if(q1 && q1.value==="50")
-    score++;
-
-    if(q2 && q2.value==="New Delhi")
-    score++;
-
-    if(q3 && q3.value==="H2O")
-    score++;
-
-    document.getElementById("quizResult").innerText=
-    "🎯 Score: "+score+" / 3";
-
-}
-
-
-/* =====================================================
-   TIMER
-===================================================== */
-
-function startTimer(elementId,submitFunction){
-
-    clearInterval(testTimer);
-
-    testSeconds=300;
-
-    const element=
-    document.getElementById(elementId);
-
-    function update(){
-
-        const min=
-        Math.floor(testSeconds/60);
-
-        const sec=
-        testSeconds%60;
-
-        element.innerText=
-        "Time: "+
-        String(min).padStart(2,"0")+
-        ":"+
-        String(sec).padStart(2,"0");
-
-        if(testSeconds<=0){
-
-            clearInterval(testTimer);
-
-            submitFunction();
-
-        }
-
-        testSeconds--;
-
-    }
-
-    update();
-
-    testTimer=setInterval(update,1000);
+document.getElementById("learning")
+.scrollIntoView({
+behavior:"smooth"
+});
 
 }
 
@@ -2719,168 +2270,125 @@ function startTimer(elementId,submitFunction){
 
 function percentage(){
 
-    const obtained=
-    parseFloat(
-    document.getElementById("obtained").value
-    );
+const obtained=parseFloat(
+document.getElementById("obtained").value
+);
 
-    const total=
-    parseFloat(
-    document.getElementById("total").value
-    );
+const total=parseFloat(
+document.getElementById("total").value
+);
 
-    if(
-        isNaN(obtained) ||
-        isNaN(total) ||
-        total<=0
-    ){
+if(isNaN(obtained)||isNaN(total)||total<=0){
 
-        document.getElementById("percentageResult")
-        .innerText="कृपया सही अंक डालें।";
+document.getElementById("percentageResult")
+.innerText="कृपया सही अंक डालें।";
 
-        return;
+return;
+}
 
-    }
-
-    const result=
-    obtained/total*100;
-
-    document.getElementById("percentageResult")
-    .innerText=
-    "📊 Percentage: "+result.toFixed(2)+"%";
+document.getElementById("percentageResult")
+.innerText=
+"📊 Percentage: "+
+(obtained/total*100).toFixed(2)+"%";
 
 }
 
 
 function ageCalculator(){
 
-    const value=
-    document.getElementById("birth").value;
+const value=document.getElementById("birth").value;
 
-    if(!value){
+if(!value){
 
-        document.getElementById("ageResult")
-        .innerText=
-        "पहले जन्म तारीख चुनें।";
+document.getElementById("ageResult")
+.innerText="पहले जन्म तारीख चुनें।";
 
-        return;
+return;
+}
 
-    }
+const birth=new Date(value);
+const today=new Date();
 
-    const birth=new Date(value);
-    const today=new Date();
+let age=
+today.getFullYear()-
+birth.getFullYear();
 
-    let age=
-    today.getFullYear()-
-    birth.getFullYear();
+const month=
+today.getMonth()-
+birth.getMonth();
 
-    const month=
-    today.getMonth()-
-    birth.getMonth();
+if(
+month<0 ||
+(month===0 && today.getDate()<birth.getDate())
+){
+age--;
+}
 
-    if(
-        month<0 ||
-        (
-            month===0 &&
-            today.getDate()<birth.getDate()
-        )
-    ){
-
-        age--;
-
-    }
-
-    document.getElementById("ageResult")
-    .innerText=
-    "🎂 उम्र: "+age+" वर्ष";
+document.getElementById("ageResult")
+.innerText=
+"🎂 उम्र: "+age+" वर्ष";
 
 }
 
 
 function addNumbers(){
 
-    const a=
-    parseFloat(
-    document.getElementById("number1").value
-    );
+const a=parseFloat(
+document.getElementById("number1").value
+);
 
-    const b=
-    parseFloat(
-    document.getElementById("number2").value
-    );
+const b=parseFloat(
+document.getElementById("number2").value
+);
 
-    if(isNaN(a)||isNaN(b)){
+if(isNaN(a)||isNaN(b)){
 
-        document.getElementById("calculatorResult")
-        .innerText=
-        "दोनों संख्या डालें।";
+document.getElementById("calculatorResult")
+.innerText="दोनों संख्या डालें।";
 
-        return;
+return;
+}
 
-    }
-
-    document.getElementById("calculatorResult")
-    .innerText=
-    "उत्तर: "+(a+b);
+document.getElementById("calculatorResult")
+.innerText=
+"उत्तर: "+(a+b);
 
 }
 
 
 /* =====================================================
-   PREMIUM
+   PAYMENT
 ===================================================== */
 
 function buyPremium(amount){
 
-    const upi="subhasharyan001@ybl";
+const upi="subhasharyan001@ybl";
 
-    const url=
-    "upi://pay?"+
-    "pa="+encodeURIComponent(upi)+
-    "&pn="+encodeURIComponent("Student Study Hub")+
-    "&am="+encodeURIComponent(amount)+
-    "&cu=INR"+
-    "&tn="+encodeURIComponent("Premium Study Material");
+const url=
+"upi://pay?"+
+"pa="+encodeURIComponent(upi)+
+"&pn="+encodeURIComponent("Student Study Hub")+
+"&am="+encodeURIComponent(amount)+
+"&cu=INR"+
+"&tn="+encodeURIComponent("Premium Study Material");
 
-    window.location.href=url;
+window.location.href=url;
 
 }
 
 
 /* =====================================================
-   HELPERS
+   SAFE
 ===================================================== */
 
 function safe(text){
 
-    return text
-    .replace(/\\/g,"\\\\")
-    .replace(/'/g,"\\'")
-    .replace(/"/g,'\\"');
+return text
+.replace(/\\/g,"\\\\")
+.replace(/'/g,"\\'")
+.replace(/"/g,'\\"');
 
 }
-
-
-function escapeHTML(text){
-
-    return text
-    .replace(/&/g,"&amp;")
-    .replace(/</g,"&lt;")
-    .replace(/>/g,"&gt;")
-    .replace(/"/g,"&quot;")
-    .replace(/'/g,"&#039;");
-
-}
-
-
-/* =====================================================
-   INITIAL LOAD
-===================================================== */
-
-renderEnglish();
-renderGK();
-renderReasoning();
-renderComputer();
 
 </script>
 
