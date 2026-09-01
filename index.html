@@ -3,8 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>English Master Pro | Student Learning Portal</title>
+<title>English Master Pro</title>
 
 <style>
 *{
@@ -19,13 +18,9 @@ html{
 
 body{
     font-family:Arial,"Noto Sans Devanagari",sans-serif;
-    background:#f3f6fb;
+    background:#f1f5f9;
     color:#172033;
-}
-
-body.dark{
-    background:#0f172a;
-    color:#e5e7eb;
+    line-height:1.6;
 }
 
 button,input,textarea,select{
@@ -42,26 +37,25 @@ button{
 
 /* LOGIN */
 
-#loginPage{
+.login-page{
     min-height:100vh;
     display:flex;
     align-items:center;
     justify-content:center;
     padding:20px;
-    background:
-    linear-gradient(135deg,#2563eb,#7c3aed,#db2777);
+    background:linear-gradient(135deg,#2563eb,#7c3aed,#db2777);
 }
 
 .login-box{
     width:100%;
     max-width:430px;
-    background:white;
-    border-radius:25px;
-    padding:30px;
+    background:#fff;
+    padding:28px;
+    border-radius:24px;
     box-shadow:0 20px 60px #0005;
 }
 
-.login-logo{
+.login-icon{
     text-align:center;
     font-size:55px;
 }
@@ -69,7 +63,6 @@ button{
 .login-box h1{
     text-align:center;
     color:#2563eb;
-    margin:8px 0;
 }
 
 .login-box p{
@@ -79,13 +72,13 @@ button{
 }
 
 .form-group{
-    margin-bottom:15px;
+    margin-bottom:14px;
 }
 
 .form-group label{
     display:block;
     font-weight:bold;
-    margin-bottom:6px;
+    margin-bottom:5px;
 }
 
 .form-group input,
@@ -97,32 +90,31 @@ button{
     font-size:16px;
 }
 
-.main-btn{
+.login-btn{
     width:100%;
-    padding:14px;
+    padding:13px;
     border:0;
-    border-radius:11px;
-    color:white;
+    border-radius:10px;
     background:#2563eb;
+    color:white;
     font-weight:bold;
     font-size:16px;
-    margin-top:5px;
 }
 
-.secondary-btn{
+.switch-btn{
     width:100%;
+    margin-top:10px;
     padding:12px;
     border:0;
-    border-radius:11px;
+    border-radius:10px;
     background:#eef2ff;
     color:#3730a3;
     font-weight:bold;
-    margin-top:10px;
 }
 
-.login-message{
-    margin-top:15px;
+#loginMessage{
     text-align:center;
+    margin-top:15px;
     font-weight:bold;
 }
 
@@ -134,7 +126,7 @@ header{
     padding:18px 4%;
 }
 
-.header-row{
+.header-inner{
     max-width:1400px;
     margin:auto;
     display:flex;
@@ -151,58 +143,48 @@ header{
     font-size:13px;
 }
 
-.header-actions{
+.header-buttons{
     display:flex;
     gap:7px;
-    flex-wrap:wrap;
 }
 
-.header-actions button{
+.header-buttons button{
     border:0;
-    border-radius:20px;
     padding:9px 13px;
+    border-radius:20px;
     font-weight:bold;
 }
 
 /* NAV */
 
 nav{
-    background:white;
-    box-shadow:0 3px 15px #0002;
     position:sticky;
     top:0;
     z-index:1000;
+    background:white;
+    box-shadow:0 3px 15px #0002;
 }
 
-.dark nav{
-    background:#1e293b;
-}
-
-.nav-scroll{
+.nav-inner{
+    max-width:1400px;
+    margin:auto;
+    padding:8px;
     display:flex;
     gap:7px;
     overflow-x:auto;
-    padding:9px;
-    max-width:1400px;
-    margin:auto;
 }
 
-.nav-scroll button{
-    border:0;
+.nav-inner button{
     white-space:nowrap;
-    padding:10px 13px;
+    border:0;
+    padding:10px 14px;
     border-radius:20px;
     background:#eef2ff;
     color:#3730a3;
     font-weight:bold;
 }
 
-.dark .nav-scroll button{
-    background:#334155;
-    color:white;
-}
-
-/* MAIN */
+/* CONTAINER */
 
 .container{
     width:94%;
@@ -211,20 +193,11 @@ nav{
 }
 
 .hero{
-    margin:22px 0;
     background:white;
+    margin:22px 0;
     padding:28px;
     border-radius:22px;
-    box-shadow:0 4px 20px #0001;
-}
-
-.dark .hero,
-.dark .card,
-.dark .practice,
-.dark .stat,
-.dark .lesson{
-    background:#1e293b;
-    color:#e5e7eb;
+    box-shadow:0 4px 18px #0001;
 }
 
 .hero h2{
@@ -232,57 +205,18 @@ nav{
 }
 
 .hero p{
-    margin-top:8px;
     color:#64748b;
 }
 
 .welcome{
-    color:#2563eb;
+    color:#2563eb!important;
     font-weight:bold;
 }
 
-/* GRID */
-
-.grid{
-    display:grid;
-    grid-template-columns:
-    repeat(auto-fit,minmax(220px,1fr));
-    gap:16px;
-}
-
-.card{
-    background:white;
-    padding:20px;
-    border-radius:17px;
-    box-shadow:0 4px 15px #0001;
-}
-
-.card:hover{
-    transform:translateY(-2px);
-}
-
-.card h3{
-    margin:8px 0;
-}
-
-.icon{
-    font-size:38px;
-}
-
-.card button{
-    margin-top:12px;
-    border:0;
-    padding:10px 15px;
-    border-radius:9px;
-    background:#2563eb;
-    color:white;
-    font-weight:bold;
-}
-
-/* SECTIONS */
+/* SECTION */
 
 .section{
-    margin:38px 0;
+    margin:40px 0;
     scroll-margin-top:75px;
 }
 
@@ -298,12 +232,49 @@ nav{
     color:#64748b;
 }
 
+/* CARDS */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:16px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:17px;
+    box-shadow:0 4px 15px #0001;
+    transition:.2s;
+}
+
+.card:hover{
+    transform:translateY(-3px);
+}
+
+.card h3{
+    margin:7px 0;
+}
+
+.card button{
+    margin-top:12px;
+    padding:10px 15px;
+    border:0;
+    border-radius:9px;
+    background:#2563eb;
+    color:white;
+    font-weight:bold;
+}
+
+.icon{
+    font-size:38px;
+}
+
 /* STATS */
 
 .stats{
     display:grid;
-    grid-template-columns:
-    repeat(auto-fit,minmax(150px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
     gap:14px;
     margin:22px 0;
 }
@@ -331,14 +302,13 @@ nav{
 }
 
 .word{
-    font-size:35px;
+    font-size:34px;
     color:#2563eb;
     font-weight:bold;
 }
 
 .meaning{
     font-size:20px;
-    margin:5px 0;
 }
 
 .example{
@@ -349,43 +319,37 @@ nav{
     margin:15px 0;
 }
 
-.dark .example{
-    background:#0f172a;
-}
-
-/* BUTTONS */
-
 .btn{
     border:0;
     padding:11px 17px;
     border-radius:10px;
-    color:white;
     background:#2563eb;
+    color:white;
     font-weight:bold;
     margin:4px;
 }
 
 .green{
-    background:#16a34a;
+    background:#16a34a!important;
 }
 
 .red{
-    background:#dc2626;
+    background:#dc2626!important;
 }
 
 .orange{
-    background:#ea580c;
+    background:#ea580c!important;
 }
 
 .purple{
-    background:#7c3aed;
+    background:#7c3aed!important;
 }
 
 .gray{
-    background:#475569;
+    background:#475569!important;
 }
 
-/* OPTIONS */
+/* QUIZ */
 
 .options{
     display:grid;
@@ -403,12 +367,6 @@ nav{
     font-size:16px;
 }
 
-.dark .option{
-    background:#0f172a;
-    color:white;
-    border-color:#475569;
-}
-
 .correct{
     background:#dcfce7!important;
     border-color:#16a34a!important;
@@ -421,21 +379,6 @@ nav{
 
 /* PROGRESS */
 
-.progress{
-    height:17px;
-    width:100%;
-    background:#e2e8f0;
-    border-radius:20px;
-    overflow:hidden;
-}
-
-.progress-bar{
-    height:100%;
-    width:0%;
-    background:#2563eb;
-    transition:.5s;
-}
-
 .progress-row{
     margin:18px 0;
 }
@@ -445,63 +388,46 @@ nav{
     justify-content:space-between;
 }
 
+.progress{
+    width:100%;
+    height:17px;
+    background:#e2e8f0;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.progress-bar{
+    height:100%;
+    width:0;
+    background:#2563eb;
+    transition:.5s;
+}
+
 /* TABLE */
+
+.table-wrap{
+    overflow-x:auto;
+}
 
 table{
     width:100%;
     border-collapse:collapse;
-    margin-top:15px;
+    min-width:500px;
 }
 
 th,td{
     border:1px solid #cbd5e1;
     padding:9px;
-}
-
-.dark th,
-.dark td{
-    border-color:#475569;
-}
-
-/* MODAL */
-
-.modal{
-    position:fixed;
-    inset:0;
-    background:#0009;
-    z-index:3000;
-    padding:18px;
-    overflow:auto;
-}
-
-.modal-box{
-    max-width:750px;
-    background:white;
-    margin:25px auto;
-    padding:25px;
-    border-radius:20px;
-}
-
-.dark .modal-box{
-    background:#1e293b;
-    color:white;
-}
-
-.close{
-    float:right;
-    border:0;
-    background:#fee2e2;
-    color:#991b1b;
-    padding:8px 11px;
-    border-radius:8px;
+    text-align:left;
 }
 
 /* ADMIN */
 
 .admin-box{
+    background:white;
+    padding:22px;
     border:2px dashed #2563eb;
-    padding:20px;
-    border-radius:16px;
+    border-radius:18px;
 }
 
 .admin-box input,
@@ -514,19 +440,85 @@ th,td{
     border-radius:9px;
 }
 
+/* MODAL */
+
+.modal{
+    position:fixed;
+    inset:0;
+    z-index:3000;
+    background:#0009;
+    padding:18px;
+    overflow:auto;
+}
+
+.modal-box{
+    max-width:750px;
+    margin:25px auto;
+    background:white;
+    padding:25px;
+    border-radius:20px;
+}
+
+.close-btn{
+    float:right;
+    border:0;
+    background:#fee2e2;
+    color:#991b1b;
+    padding:8px 11px;
+    border-radius:8px;
+}
+
+/* FOOTER */
+
 footer{
     background:#172033;
     color:white;
     text-align:center;
     padding:35px 15px;
-    margin-top:45px;
+    margin-top:50px;
+}
+
+/* DARK */
+
+body.dark{
+    background:#0f172a;
+    color:#e5e7eb;
+}
+
+body.dark nav{
+    background:#1e293b;
+}
+
+body.dark .nav-inner button{
+    background:#334155;
+    color:white;
+}
+
+body.dark .hero,
+body.dark .card,
+body.dark .practice,
+body.dark .stat,
+body.dark .admin-box,
+body.dark .modal-box{
+    background:#1e293b;
+    color:#e5e7eb;
+}
+
+body.dark .example{
+    background:#0f172a;
+}
+
+body.dark .option{
+    background:#0f172a;
+    color:white;
+    border-color:#475569;
 }
 
 /* MOBILE */
 
 @media(max-width:700px){
 
-    .header-row{
+    .header-inner{
         flex-direction:column;
         align-items:flex-start;
     }
@@ -535,8 +527,16 @@ footer{
         font-size:23px;
     }
 
+    .header-buttons{
+        width:100%;
+    }
+
+    .header-buttons button{
+        flex:1;
+    }
+
     .hero{
-        padding:21px;
+        padding:20px;
     }
 
     .hero h2{
@@ -547,10 +547,6 @@ footer{
         font-size:23px;
     }
 
-    .word{
-        font-size:29px;
-    }
-
     .grid{
         grid-template-columns:1fr;
     }
@@ -559,12 +555,8 @@ footer{
         grid-template-columns:1fr 1fr;
     }
 
-    .header-actions{
-        width:100%;
-    }
-
-    .header-actions button{
-        flex:1;
+    .word{
+        font-size:29px;
     }
 }
 </style>
@@ -573,51 +565,62 @@ footer{
 <body>
 
 
-<!-- ================================
-LOGIN / REGISTRATION
-================================ -->
+<!-- ==================================================
+LOGIN PAGE
+================================================== -->
 
-<div id="loginPage">
+<div id="loginPage" class="login-page">
 
 <div class="login-box">
 
-<div class="login-logo">🚀</div>
+<div class="login-icon">🚀</div>
 
 <h1>English Master Pro</h1>
 
-<p>
-Student Learning Portal
-</p>
+<p>Complete English Learning Portal</p>
+
 
 <div id="loginForm">
 
 <div class="form-group">
+
 <label>👤 Student Name</label>
+
 <input
 id="loginName"
-placeholder="अपना नाम लिखें"
->
+type="text"
+placeholder="अपना नाम लिखें">
+
 </div>
 
+
 <div class="form-group">
+
 <label>🔐 Password</label>
+
 <input
 id="loginPassword"
 type="password"
-placeholder="Password"
->
+placeholder="Password">
+
 </div>
 
-<button
-class="main-btn"
-onclick="loginStudent()">
-🔓 Login
-</button>
 
 <button
-class="secondary-btn"
+class="login-btn"
+onclick="loginStudent()">
+
+🔓 Login
+
+</button>
+
+
+<button
+class="switch-btn"
 onclick="showRegister()">
+
 ➕ New Student Registration
+
 </button>
 
 </div>
@@ -626,19 +629,25 @@ onclick="showRegister()">
 <div id="registerForm" class="hidden">
 
 <div class="form-group">
+
 <label>👤 Student Name</label>
+
 <input
 id="regName"
-placeholder="पूरा नाम"
->
+type="text"
+placeholder="पूरा नाम">
+
 </div>
 
+
 <div class="form-group">
-<label>🏫 Class</label>
+
+<label>🎓 Class</label>
 
 <select id="regClass">
 
 <option value="">Class चुनें</option>
+
 <option>1</option>
 <option>2</option>
 <option>3</option>
@@ -656,63 +665,67 @@ placeholder="पूरा नाम"
 
 </div>
 
+
 <div class="form-group">
+
 <label>🔐 Password</label>
 
 <input
 id="regPassword"
 type="password"
-placeholder="कम से कम 4 अक्षर"
->
+placeholder="Password">
 
 </div>
 
+
 <button
-class="main-btn"
+class="login-btn"
 onclick="registerStudent()">
+
 ✅ Register
+
 </button>
+
 
 <button
-class="secondary-btn"
+class="switch-btn"
 onclick="showLogin()">
+
 ⬅️ Back to Login
+
 </button>
 
 </div>
 
-<div
-id="loginMessage"
-class="login-message">
-</div>
+
+<div id="loginMessage"></div>
 
 </div>
 
 </div>
 
 
-<!-- ================================
+<!-- ==================================================
 MAIN APP
-================================ -->
+================================================== -->
 
 <div id="app" class="hidden">
 
 
 <header>
 
-<div class="header-row">
+<div class="header-inner">
 
 <div class="logo">
 
 <h1>🚀 English Master Pro</h1>
 
-<p>
-Learn • Practice • Speak • Improve
-</p>
+<p>Learn • Practice • Speak • Improve</p>
 
 </div>
 
-<div class="header-actions">
+
+<div class="header-buttons">
 
 <button onclick="toggleDark()">
 🌙
@@ -733,65 +746,39 @@ Learn • Practice • Speak • Improve
 </header>
 
 
+<!-- NAVIGATION -->
+
 <nav>
 
-<div class="nav-scroll">
+<div class="nav-inner">
 
-<button onclick="go('dashboard')">
-🏠 Home
-</button>
+<button onclick="goTo('dashboard')">🏠 Home</button>
 
-<button onclick="go('classes')">
-🎓 Classes
-</button>
+<button onclick="goTo('classes')">🎓 Classes</button>
 
-<button onclick="go('vocabulary')">
-📚 Vocabulary
-</button>
+<button onclick="goTo('vocabulary')">📚 Vocabulary</button>
 
-<button onclick="go('sentences')">
-🗣️ Sentences
-</button>
+<button onclick="goTo('sentences')">🗣️ Sentences</button>
 
-<button onclick="go('grammar')">
-🧠 Grammar
-</button>
+<button onclick="goTo('grammar')">🧠 Grammar</button>
 
-<button onclick="go('tenses')">
-⏰ Tenses
-</button>
+<button onclick="goTo('tenses')">⏰ Tenses</button>
 
-<button onclick="go('translation')">
-🔄 Translation
-</button>
+<button onclick="goTo('translation')">🔄 Translation</button>
 
-<button onclick="go('speaking')">
-🎤 Speaking
-</button>
+<button onclick="goTo('speaking')">🎤 Speaking</button>
 
-<button onclick="go('reading')">
-📖 Reading
-</button>
+<button onclick="goTo('reading')">📖 Reading</button>
 
-<button onclick="go('writing')">
-✍️ Writing
-</button>
+<button onclick="goTo('writing')">✍️ Writing</button>
 
-<button onclick="go('quiz')">
-🎯 Quiz
-</button>
+<button onclick="goTo('quiz')">🎯 Quiz</button>
 
-<button onclick="go('challenge')">
-📅 Challenge
-</button>
+<button onclick="goTo('challenge')">📅 Challenge</button>
 
-<button onclick="go('progress')">
-🏆 Progress
-</button>
+<button onclick="goTo('progress')">🏆 Progress</button>
 
-<button onclick="go('admin')">
-⚙️ Admin
-</button>
+<button onclick="goTo('admin')">⚙️ Admin</button>
 
 </div>
 
@@ -805,87 +792,87 @@ Learn • Practice • Speak • Improve
 
 <section id="dashboard" class="hero">
 
-<p class="welcome" id="welcomeText"></p>
-
-<h2>
-🌟 Welcome to English Master Pro
-</h2>
-
-<p>
-यह आपका personal English learning dashboard है।
-हर दिन थोड़ा अभ्यास करें और अपनी English को मजबूत बनाएं।
+<p
+id="welcomeText"
+class="welcome">
 </p>
 
-<div style="margin-top:18px">
+<h2>🌟 Welcome to English Master Pro</h2>
+
+<p>
+English सीखने के लिए रोज़ Vocabulary,
+Grammar, Speaking और Quiz की practice करें।
+</p>
+
+<br>
 
 <button
 class="btn"
-onclick="go('quiz')">
+onclick="goTo('quiz')">
+
 🎯 Start Quiz
+
 </button>
 
 <button
 class="btn green"
-onclick="go('speaking')">
-🎤 Speaking Practice
+onclick="goTo('speaking')">
+
+🎤 Speaking
+
 </button>
 
 <button
 class="btn purple"
-onclick="go('vocabulary')">
-📚 Learn Words
-</button>
+onclick="goTo('vocabulary')">
 
-</div>
+📚 Vocabulary
+
+</button>
 
 </section>
 
 
 <!-- STATS -->
 
-<section class="stats">
+<div class="stats">
 
 <div class="stat">
 
-<h2 id="statWords">
-0
-</h2>
+<h2 id="statWords">0</h2>
 
 <p>Words Learned</p>
 
 </div>
 
+
 <div class="stat">
 
-<h2 id="statScore">
-0
-</h2>
+<h2 id="statScore">0</h2>
 
 <p>Quiz Points</p>
 
 </div>
 
+
 <div class="stat">
 
-<h2 id="statPractice">
-0
-</h2>
+<h2 id="statPractice">0</h2>
 
 <p>Practice</p>
 
 </div>
 
+
 <div class="stat">
 
-<h2 id="statDays">
-0
-</h2>
+<h2 id="statDays">0</h2>
 
 <p>Challenge Days</p>
 
 </div>
 
-</section>
+</div>
 
 
 <!-- CLASSES -->
@@ -894,60 +881,13 @@ onclick="go('vocabulary')">
 
 <div class="section-title">
 
-<h2>🎓 Class 1–12 English</h2>
+<h2>🎓 Class 1–12</h2>
 
-<p>
-अपनी class के अनुसार learning topics.
-</p>
+<p>अपनी class चुनकर English topics देखें।</p>
 
 </div>
 
-<div class="grid">
-
-<script>
-
-const classTopics={
-1:"Alphabet, Colours, Numbers, Basic Words",
-2:"Nouns, Verbs, Simple Sentences",
-3:"Vocabulary, Paragraph, Grammar",
-4:"Parts of Speech, Articles, Tenses",
-5:"Grammar, Translation, Writing",
-6:"Tenses, Vocabulary, Grammar",
-7:"Comprehension, Translation, Grammar",
-8:"Advanced Grammar, Writing, Speaking",
-9:"Literature, Grammar, Writing",
-10:"Board Grammar, Reading, Writing",
-11:"Advanced English, Comprehension",
-12:"Board English, Advanced Writing"
-};
-
-for(let i=1;i<=12;i++){
-
-document.write(`
-
-<div class="card">
-
-<div class="icon">🎓</div>
-
-<h3>Class ${i}</h3>
-
-<p>
-${classTopics[i]}
-</p>
-
-<button onclick="openClass(${i})">
-Open Class
-</button>
-
-</div>
-
-`);
-
-}
-
-</script>
-
-</div>
+<div id="classGrid" class="grid"></div>
 
 </section>
 
@@ -960,9 +900,7 @@ Open Class
 
 <h2>📚 Vocabulary Builder</h2>
 
-<p>
-Word + Meaning + Example + Pronunciation
-</p>
+<p>Word + Meaning + Example + Pronunciation</p>
 
 </div>
 
@@ -970,21 +908,28 @@ Word + Meaning + Example + Pronunciation
 
 <div id="wordBox"></div>
 
-<br>
-
-<button class="btn"
+<button
+class="btn"
 onclick="nextWord()">
+
 ➡️ Next Word
+
 </button>
 
-<button class="btn green"
+<button
+class="btn green"
 onclick="speakWord()">
+
 🔊 Pronunciation
+
 </button>
 
-<button class="btn purple"
+<button
+class="btn purple"
 onclick="markWord()">
+
 ⭐ Learned
+
 </button>
 
 </div>
@@ -1000,26 +945,26 @@ onclick="markWord()">
 
 <h2>🗣️ Daily Use English</h2>
 
-<p>
-रोज़मर्रा की English बोलने के लिए sentences.
-</p>
-
 </div>
 
 <div class="practice">
 
 <div id="sentenceBox"></div>
 
-<br>
-
-<button class="btn"
+<button
+class="btn"
 onclick="nextSentence()">
+
 ➡️ Next
+
 </button>
 
-<button class="btn green"
+<button
+class="btn green"
 onclick="speakSentence()">
+
 🔊 Listen
+
 </button>
 
 </div>
@@ -1033,20 +978,21 @@ onclick="speakSentence()">
 
 <div class="section-title">
 
-<h2>🧠 Complete Grammar</h2>
+<h2>🧠 Grammar</h2>
 
-<p>
-Grammar topics को step-by-step सीखें।
-</p>
+<p>Important English Grammar Topics</p>
 
 </div>
 
-<div class="grid" id="grammarBox"></div>
+<div
+id="grammarGrid"
+class="grid">
+</div>
 
 </section>
 
 
-<!-- TENSE -->
+<!-- TENSES -->
 
 <section id="tenses" class="section">
 
@@ -1056,63 +1002,7 @@ Grammar topics को step-by-step सीखें।
 
 </div>
 
-<div class="grid">
-
-<div class="lesson">
-<h3>Present Simple</h3>
-<p>I play cricket.</p>
-<p>मैं क्रिकेट खेलता हूँ।</p>
-</div>
-
-<div class="lesson">
-<h3>Present Continuous</h3>
-<p>I am playing cricket.</p>
-<p>मैं क्रिकेट खेल रहा हूँ।</p>
-</div>
-
-<div class="lesson">
-<h3>Present Perfect</h3>
-<p>I have played cricket.</p>
-<p>मैं क्रिकेट खेल चुका हूँ।</p>
-</div>
-
-<div class="lesson">
-<h3>Past Simple</h3>
-<p>I played cricket.</p>
-<p>मैंने क्रिकेट खेला।</p>
-</div>
-
-<div class="lesson">
-<h3>Past Continuous</h3>
-<p>I was playing cricket.</p>
-<p>मैं क्रिकेट खेल रहा था।</p>
-</div>
-
-<div class="lesson">
-<h3>Past Perfect</h3>
-<p>I had played cricket.</p>
-<p>मैं क्रिकेट खेल चुका था।</p>
-</div>
-
-<div class="lesson">
-<h3>Future Simple</h3>
-<p>I will play cricket.</p>
-<p>मैं क्रिकेट खेलूँगा।</p>
-</div>
-
-<div class="lesson">
-<h3>Future Continuous</h3>
-<p>I will be playing cricket.</p>
-<p>मैं क्रिकेट खेल रहा होऊँगा।</p>
-</div>
-
-<div class="lesson">
-<h3>Future Perfect</h3>
-<p>I will have played cricket.</p>
-<p>मैं क्रिकेट खेल चुका होऊँगा।</p>
-</div>
-
-</div>
+<div id="tenseGrid" class="grid"></div>
 
 </section>
 
@@ -1136,15 +1026,16 @@ id="translationOptions"
 class="options">
 </div>
 
-<div
+<p
 id="translationMessage">
-</div>
+</p>
 
-<br>
-
-<button class="btn"
+<button
+class="btn"
 onclick="nextTranslation()">
+
 Next ➡️
+
 </button>
 
 </div>
@@ -1160,95 +1051,9 @@ Next ➡️
 
 <h2>🎤 Speaking Practice</h2>
 
-<p>
-सुनें और फिर खुद बोलने की कोशिश करें।
-</p>
-
 </div>
 
-<div class="grid">
-
-<div class="card">
-
-<h3>👤 Self Introduction</h3>
-
-<p>
-My name is Rahul.<br>
-I am a student.<br>
-I live in India.<br>
-I like learning English.
-</p>
-
-<button
-onclick="speakText(
-'My name is Rahul. I am a student. I live in India. I like learning English.'
-)">
-🔊 Listen
-</button>
-
-</div>
-
-
-<div class="card">
-
-<h3>🏫 School</h3>
-
-<p>
-May I come in?<br>
-Please explain this question.<br>
-I have completed my homework.
-</p>
-
-<button
-onclick="speakText(
-'May I come in? Please explain this question. I have completed my homework.'
-)">
-🔊 Listen
-</button>
-
-</div>
-
-
-<div class="card">
-
-<h3>🏠 Home</h3>
-
-<p>
-I am hungry.<br>
-Please give me some water.<br>
-I am going to school.
-</p>
-
-<button
-onclick="speakText(
-'I am hungry. Please give me some water. I am going to school.'
-)">
-🔊 Listen
-</button>
-
-</div>
-
-
-<div class="card">
-
-<h3>💪 Fluency Rules</h3>
-
-<p>
-Think in English.<br>
-Speak every day.<br>
-Do not fear mistakes.
-</p>
-
-<button
-onclick="speakText(
-'Think in English. Speak every day. Do not fear mistakes.'
-)">
-🔊 Listen
-</button>
-
-</div>
-
-</div>
+<div id="speakingGrid" class="grid"></div>
 
 </section>
 
@@ -1267,7 +1072,7 @@ onclick="speakText(
 
 <h3>Importance of Education</h3>
 
-<p style="margin-top:10px">
+<p id="readingText">
 
 Education is very important in our life.
 It gives us knowledge and confidence.
@@ -1278,11 +1083,12 @@ Education helps us become responsible citizens.
 
 <br>
 
-<button class="btn green"
-onclick="speakText(
-'Education is very important in our life. It gives us knowledge and confidence. It teaches us how to think and solve problems.'
-)">
+<button
+class="btn green"
+onclick="speakReading()">
+
 🔊 Listen
+
 </button>
 
 </div>
@@ -1302,9 +1108,7 @@ onclick="speakText(
 
 <div class="practice">
 
-<select
-id="writingTopic"
-style="width:100%;padding:12px;border-radius:10px">
+<select id="writingTopic">
 
 <option>My School</option>
 <option>My Village</option>
@@ -1320,8 +1124,7 @@ style="width:100%;padding:12px;border-radius:10px">
 <textarea
 id="writingArea"
 rows="9"
-placeholder="यहाँ English paragraph लिखें..."
-style="width:100%;padding:13px;border-radius:10px;border:1px solid #cbd5e1">
+placeholder="English paragraph यहाँ लिखें...">
 </textarea>
 
 <br>
@@ -1329,7 +1132,9 @@ style="width:100%;padding:13px;border-radius:10px;border:1px solid #cbd5e1">
 <button
 class="btn"
 onclick="checkWriting()">
-📊 Check
+
+📊 Check Writing
+
 </button>
 
 <div id="writingResult"></div>
@@ -1347,9 +1152,7 @@ onclick="checkWriting()">
 
 <h2>🎯 English MCQ Quiz</h2>
 
-<p>
-Question का सही answer चुनें।
-</p>
+<p>सही answer चुनें।</p>
 
 </div>
 
@@ -1359,14 +1162,21 @@ Question का सही answer चुनें।
 
 <br>
 
-<button class="btn"
+<button
+id="quizNextBtn"
+class="btn"
 onclick="nextQuiz()">
+
 Next ➡️
+
 </button>
 
-<button class="btn orange"
+<button
+class="btn orange"
 onclick="restartQuiz()">
-Restart
+
+🔄 Restart
+
 </button>
 
 </div>
@@ -1385,8 +1195,8 @@ Restart
 </div>
 
 <div
-class="grid"
-id="challengeBox">
+id="challengeGrid"
+class="grid">
 </div>
 
 </section>
@@ -1407,15 +1217,20 @@ id="challengeBox">
 <div class="progress-row">
 
 <div class="progress-head">
+
 <span>Vocabulary</span>
+
 <b id="vocabPercent">0%</b>
+
 </div>
 
 <div class="progress">
+
 <div
 id="vocabBar"
 class="progress-bar">
 </div>
+
 </div>
 
 </div>
@@ -1424,15 +1239,20 @@ class="progress-bar">
 <div class="progress-row">
 
 <div class="progress-head">
+
 <span>Quiz</span>
+
 <b id="quizPercent">0%</b>
+
 </div>
 
 <div class="progress">
+
 <div
 id="quizBar"
 class="progress-bar">
 </div>
+
 </div>
 
 </div>
@@ -1441,15 +1261,20 @@ class="progress-bar">
 <div class="progress-row">
 
 <div class="progress-head">
+
 <span>Practice</span>
+
 <b id="practicePercent">0%</b>
+
 </div>
 
 <div class="progress">
+
 <div
 id="practiceBar"
 class="progress-bar">
 </div>
+
 </div>
 
 </div>
@@ -1458,15 +1283,20 @@ class="progress-bar">
 <div class="progress-row">
 
 <div class="progress-head">
+
 <span>Challenge</span>
+
 <b id="dayPercent">0%</b>
+
 </div>
 
 <div class="progress">
+
 <div
 id="dayBar"
 class="progress-bar">
 </div>
+
 </div>
 
 </div>
@@ -1482,17 +1312,15 @@ class="progress-bar">
 
 <div class="section-title">
 
-<h2>⚙️ Admin / Data Center</h2>
+<h2>⚙️ Admin / Local Database</h2>
 
-<p>
-Demo local database management.
-</p>
+<p>इस demo में data browser के localStorage में save होगा।</p>
 
 </div>
 
 <div class="admin-box">
 
-<h3>➕ Add Custom Vocabulary</h3>
+<h3>➕ Add Vocabulary</h3>
 
 <input
 id="newWord"
@@ -1509,21 +1337,31 @@ placeholder="Example Sentence">
 <button
 class="btn green"
 onclick="addCustomWord()">
+
 ➕ Add Word
+
 </button>
+
 
 <hr style="margin:25px 0">
 
-<h3>📊 Student Data</h3>
 
-<div id="studentData"></div>
+<h3>👥 Student Database</h3>
+
+<div
+id="studentData"
+class="table-wrap">
+</div>
+
 
 <br>
 
 <button
 class="btn red"
 onclick="clearAllData()">
-🗑️ Clear Local Database
+
+🗑️ Delete All Local Data
+
 </button>
 
 </div>
@@ -1538,13 +1376,7 @@ onclick="clearAllData()">
 
 <h2>🚀 English Master Pro</h2>
 
-<p>
-Learn Every Day • Practice Every Day • Speak English
-</p>
-
-<p style="margin-top:8px">
-Mobile Friendly Learning Website
-</p>
+<p>Learn Every Day • Practice Every Day • Speak English</p>
 
 </footer>
 
@@ -1560,9 +1392,11 @@ class="modal hidden">
 <div class="modal-box">
 
 <button
-class="close"
+class="close-btn"
 onclick="closeModal()">
+
 ✕ Close
+
 </button>
 
 <h2 id="modalTitle"></h2>
@@ -1579,22 +1413,22 @@ style="margin-top:20px">
 
 <script>
 
-/* =================================
-STUDENT DATABASE
-================================= */
+/* ==================================================
+DATABASE
+================================================== */
 
-let students=
+let students =
 JSON.parse(
-localStorage.getItem("students")||"[]"
+localStorage.getItem("englishStudents") || "[]"
 );
 
-let currentStudent=
-localStorage.getItem("currentStudent");
+let currentStudent =
+localStorage.getItem("englishCurrentStudent") || "";
 
 
-/* =================================
+/* ==================================================
 LOGIN
-================================= */
+================================================== */
 
 function showRegister(){
 
@@ -1606,9 +1440,10 @@ function showRegister(){
     .getElementById("registerForm")
     .classList.remove("hidden");
 
-    message("");
+    setMessage("");
 
 }
+
 
 function showLogin(){
 
@@ -1620,11 +1455,12 @@ function showLogin(){
     .getElementById("loginForm")
     .classList.remove("hidden");
 
-    message("");
+    setMessage("");
 
 }
 
-function message(text){
+
+function setMessage(text){
 
     document
     .getElementById("loginMessage")
@@ -1633,62 +1469,60 @@ function message(text){
 }
 
 
-/* =================================
+/* ==================================================
 REGISTER
-================================= */
+================================================== */
 
 function registerStudent(){
 
-    const name=
+    const name =
     document
     .getElementById("regName")
     .value.trim();
 
-    const cls=
+    const cls =
     document
     .getElementById("regClass")
     .value;
 
-    const password=
+    const password =
     document
     .getElementById("regPassword")
     .value;
 
     if(!name || !cls || !password){
 
-        message("❌ सभी जानकारी भरें।");
+        setMessage("❌ सभी जानकारी भरें।");
 
         return;
-
     }
 
-    if(password.length<4){
+    if(password.length < 4){
 
-        message(
+        setMessage(
         "❌ Password कम से कम 4 अक्षर का रखें।"
         );
 
         return;
-
     }
 
-    const exists=
-    students.find(
-        s=>s.name.toLowerCase()===
+    const exists =
+    students.some(
+        s =>
+        s.name.toLowerCase() ===
         name.toLowerCase()
     );
 
     if(exists){
 
-        message(
-        "❌ इस नाम का student पहले से मौजूद है।"
+        setMessage(
+        "❌ यह Student पहले से registered है।"
         );
 
         return;
-
     }
 
-    const student={
+    const student = {
 
         name:name,
         class:cls,
@@ -1706,61 +1540,60 @@ function registerStudent(){
 
     students.push(student);
 
-    localStorage.setItem(
-        "students",
-        JSON.stringify(students)
+    saveDatabase();
+
+    setMessage(
+    "✅ Registration सफल! Login करें।"
     );
 
-    message(
-    "✅ Registration सफल! अब Login करें।"
-    );
+    document
+    .getElementById("regName")
+    .value="";
 
-    setTimeout(
-        showLogin,
-        1000
-    );
+    document
+    .getElementById("regPassword")
+    .value="";
 
 }
 
 
-/* =================================
+/* ==================================================
 LOGIN
-================================= */
+================================================== */
 
 function loginStudent(){
 
-    const name=
+    const name =
     document
     .getElementById("loginName")
     .value.trim();
 
-    const password=
+    const password =
     document
     .getElementById("loginPassword")
     .value;
 
-    const student=
+    const student =
     students.find(
-        s=>
-        s.name.toLowerCase()===
+        s =>
+        s.name.toLowerCase() ===
         name.toLowerCase() &&
-        s.password===password
+        s.password === password
     );
 
     if(!student){
 
-        message(
+        setMessage(
         "❌ Name या Password गलत है।"
         );
 
         return;
-
     }
 
-    currentStudent=student.name;
+    currentStudent = student.name;
 
     localStorage.setItem(
-        "currentStudent",
+        "englishCurrentStudent",
         currentStudent
     );
 
@@ -1769,9 +1602,9 @@ function loginStudent(){
 }
 
 
-/* =================================
+/* ==================================================
 OPEN APP
-================================= */
+================================================== */
 
 function openApp(){
 
@@ -1783,26 +1616,42 @@ function openApp(){
     .getElementById("app")
     .classList.remove("hidden");
 
-    updateDashboard();
-    updateStats();
-    showWord();
-    showSentence();
-    showTranslation();
-    showQuiz();
-    loadChallenge();
-    loadStudentData();
+    renderAll();
 
 }
 
 
-/* =================================
+/* ==================================================
+AUTO LOGIN
+================================================== */
+
+function autoLogin(){
+
+    if(!currentStudent)
+        return;
+
+    const student =
+    students.find(
+        s => s.name === currentStudent
+    );
+
+    if(student){
+
+        openApp();
+
+    }
+
+}
+
+
+/* ==================================================
 LOGOUT
-================================= */
+================================================== */
 
 function logout(){
 
     localStorage.removeItem(
-        "currentStudent"
+        "englishCurrentStudent"
     );
 
     location.reload();
@@ -1810,71 +1659,57 @@ function logout(){
 }
 
 
-/* =================================
-CURRENT STUDENT
-================================= */
+/* ==================================================
+DATABASE SAVE
+================================================== */
 
-function getStudent(){
-
-    return students.find(
-        s=>s.name===currentStudent
-    );
-
-}
-
-
-/* =================================
-SAVE
-================================= */
-
-function saveStudents(){
+function saveDatabase(){
 
     localStorage.setItem(
-        "students",
+        "englishStudents",
         JSON.stringify(students)
     );
 
 }
 
 
-/* =================================
-DASHBOARD
-================================= */
+/* ==================================================
+CURRENT STUDENT
+================================================== */
 
-function updateDashboard(){
+function getStudent(){
 
-    const s=getStudent();
-
-    if(!s)return;
-
-    document
-    .getElementById("welcomeText")
-    .innerText=
-    "👋 Welcome, "+
-    s.name+
-    " | Class "+s.class;
+    return students.find(
+        s => s.name === currentStudent
+    );
 
 }
 
 
-/* =================================
+/* ==================================================
 NAVIGATION
-================================= */
+================================================== */
 
-function go(id){
+function goTo(id){
 
-    document
-    .getElementById(id)
-    .scrollIntoView({
-        behavior:"smooth"
-    });
+    const section =
+    document.getElementById(id);
+
+    if(section){
+
+        section.scrollIntoView({
+            behavior:"smooth",
+            block:"start"
+        });
+
+    }
 
 }
 
 
-/* =================================
-DARK
-================================= */
+/* ==================================================
+DARK MODE
+================================================== */
 
 function toggleDark(){
 
@@ -1883,123 +1718,191 @@ function toggleDark(){
     .classList
     .toggle("dark");
 
+    localStorage.setItem(
+        "englishDark",
+        document.body.classList.contains("dark")
+    );
+
 }
 
 
-/* =================================
-VOICE
-================================= */
+/* ==================================================
+RESTORE DARK
+================================================== */
 
-function speakText(text){
+if(
+    localStorage.getItem("englishDark")==="true"
+){
 
-    if(!("speechSynthesis" in window)){
+    document
+    .body
+    .classList
+    .add("dark");
 
-        alert(
-        "इस browser में voice सुविधा उपलब्ध नहीं है।"
-        );
+}
 
-        return;
+
+/* ==================================================
+CLASS DATA
+================================================== */
+
+const classTopics = {
+
+1:"Alphabet, Colours, Numbers, Basic Words",
+
+2:"Nouns, Verbs, Simple Sentences",
+
+3:"Vocabulary, Paragraph, Grammar",
+
+4:"Parts of Speech, Articles, Tenses",
+
+5:"Grammar, Translation, Writing",
+
+6:"Tenses, Vocabulary, Grammar",
+
+7:"Comprehension, Translation, Grammar",
+
+8:"Advanced Grammar, Writing, Speaking",
+
+9:"Literature, Grammar, Writing",
+
+10:"Board Grammar, Reading, Writing",
+
+11:"Advanced English, Comprehension",
+
+12:"Board English, Advanced Writing"
+
+};
+
+
+function renderClasses(){
+
+    const grid =
+    document.getElementById("classGrid");
+
+    grid.innerHTML="";
+
+    for(let i=1;i<=12;i++){
+
+        grid.innerHTML += `
+
+        <div class="card">
+
+            <div class="icon">🎓</div>
+
+            <h3>Class ${i}</h3>
+
+            <p>${classTopics[i]}</p>
+
+            <button
+            onclick="openClass(${i})">
+
+            📖 Open Class
+
+            </button>
+
+        </div>
+
+        `;
 
     }
 
-    speechSynthesis.cancel();
+}
 
-    const speech=
-    new SpeechSynthesisUtterance(text);
 
-    speech.lang="en-US";
-    speech.rate=.85;
+function openClass(n){
 
-    speechSynthesis.speak(speech);
+    openModal(
+        "🎓 Class "+n+" English",
+        `
+
+        <h3>Class ${n} Topics</h3>
+
+        <p style="margin-top:10px">
+        ${classTopics[n]}
+        </p>
+
+        <br>
+
+        <button
+        class="btn"
+        onclick="closeModal();goTo('quiz')">
+
+        🎯 Start Quiz
+
+        </button>
+
+        `
+    );
 
 }
 
 
-/* =================================
+/* ==================================================
 VOCABULARY
-================================= */
+================================================== */
 
-let vocabulary=[
+let vocabulary = [
 
 ["Beautiful","सुंदर",
-"She has a beautiful dress.",
-"ब्यूटिफुल"],
+"She has a beautiful dress."],
 
 ["Important","महत्वपूर्ण",
-"Education is important.",
-"इम्पॉर्टेन्ट"],
+"Education is important."],
 
 ["Brave","बहादुर",
-"He is a brave boy.",
-"ब्रेव"],
+"He is a brave boy."],
 
 ["Honest","ईमानदार",
-"He is an honest man.",
-"ऑनिस्ट"],
+"He is an honest man."],
 
 ["Improve","सुधारना",
-"I want to improve my English.",
-"इम्प्रूव"],
+"I want to improve my English."],
 
 ["Knowledge","ज्ञान",
-"Knowledge is power.",
-"नॉलेज"],
+"Knowledge is power."],
 
 ["Confidence","आत्मविश्वास",
-"Speak with confidence.",
-"कॉन्फिडेन्स"],
+"Speak with confidence."],
 
 ["Success","सफलता",
-"Hard work brings success.",
-"सक्सेस"],
+"Hard work brings success."],
 
 ["Practice","अभ्यास",
-"Practice makes us better.",
-"प्रैक्टिस"],
+"Practice makes us better."],
 
 ["Opportunity","अवसर",
-"This is a good opportunity.",
-"ऑपरच्यूनिटी"],
+"This is a good opportunity."],
 
 ["Respect","सम्मान",
-"Respect your teachers.",
-"रिस्पेक्ट"],
+"Respect your teachers."],
 
 ["Helpful","मददगार",
-"He is very helpful.",
-"हेल्पफुल"],
+"He is very helpful."],
 
 ["Careful","सावधान",
-"Be careful.",
-"केयरफुल"],
+"Be careful."],
 
 ["Healthy","स्वस्थ",
-"Stay healthy.",
-"हेल्दी"],
+"Stay healthy."],
 
 ["Possible","संभव",
-"Everything is possible.",
-"पॉसिबल"],
+"Everything is possible."],
 
 ["Difficult","कठिन",
-"This question is difficult.",
-"डिफिकल्ट"],
+"This question is difficult."],
 
 ["Easy","आसान",
-"This lesson is easy.",
-"ईज़ी"],
+"This lesson is easy."],
 
 ["Future","भविष्य",
-"Prepare for your future.",
-"फ्यूचर"],
+"Prepare for your future."],
 
 ["Journey","यात्रा",
-"Life is a journey.",
-"जर्नी"],
+"Life is a journey."],
 
 ["Kind","दयालु",
-"She is very kind.",
-"काइंड"]
+"She is very kind."]
 
 ];
 
@@ -2008,12 +1911,12 @@ let wordIndex=0;
 
 function showWord(){
 
-    const w=
+    const w =
     vocabulary[wordIndex];
 
     document
     .getElementById("wordBox")
-    .innerHTML=`
+    .innerHTML = `
 
     <div class="word">
     ${w[0]}
@@ -2022,10 +1925,6 @@ function showWord(){
     <div class="meaning">
     🇮🇳 ${w[1]}
     </div>
-
-    <p>
-    🔊 ${w[3]}
-    </p>
 
     <div class="example">
     <b>Example:</b><br>
@@ -2036,19 +1935,21 @@ function showWord(){
 
 }
 
+
 function nextWord(){
 
     wordIndex++;
 
-    if(
-        wordIndex>=vocabulary.length
-    ){
+    if(wordIndex >= vocabulary.length){
+
         wordIndex=0;
+
     }
 
     showWord();
 
 }
+
 
 function speakWord(){
 
@@ -2058,6 +1959,7 @@ function speakWord(){
 
 }
 
+
 function markWord(){
 
     const s=getStudent();
@@ -2066,7 +1968,7 @@ function markWord(){
 
     s.words++;
 
-    saveStudents();
+    saveDatabase();
 
     updateStats();
 
@@ -2075,9 +1977,9 @@ function markWord(){
 }
 
 
-/* =================================
+/* ==================================================
 SENTENCES
-================================= */
+================================================== */
 
 const sentences=[
 
@@ -2143,12 +2045,12 @@ let sentenceIndex=0;
 
 function showSentence(){
 
-    const s=
+    const s =
     sentences[sentenceIndex];
 
     document
     .getElementById("sentenceBox")
-    .innerHTML=`
+    .innerHTML = `
 
     <div class="word">
     ${s[0]}
@@ -2162,19 +2064,24 @@ function showSentence(){
 
 }
 
+
 function nextSentence(){
 
     sentenceIndex++;
 
     if(
-        sentenceIndex>=sentences.length
+        sentenceIndex >=
+        sentences.length
     ){
+
         sentenceIndex=0;
+
     }
 
     showSentence();
 
 }
+
 
 function speakSentence(){
 
@@ -2185,11 +2092,11 @@ function speakSentence(){
 }
 
 
-/* =================================
+/* ==================================================
 GRAMMAR
-================================= */
+================================================== */
 
-const grammar=[
+const grammar = [
 
 ["Noun",
 "Person, place, animal या thing का नाम।",
@@ -2233,23 +2140,27 @@ const grammar=[
 
 ["Modals",
 "Ability, permission आदि।",
-"Can, May, Should, Must"]
+"Can, May, Should, Must"],
+
+["Subject-Verb Agreement",
+"Subject के अनुसार verb का प्रयोग।",
+"He goes. They go."]
 
 ];
 
 
-function loadGrammar(){
+function renderGrammar(){
 
-    const box=
+    const grid =
     document.getElementById(
-        "grammarBox"
+        "grammarGrid"
     );
 
-    box.innerHTML="";
+    grid.innerHTML="";
 
     grammar.forEach(g=>{
 
-        box.innerHTML+=`
+        grid.innerHTML += `
 
         <div class="card">
 
@@ -2265,12 +2176,11 @@ function loadGrammar(){
         </div>
 
         <button
-        onclick="openLesson(
-        '${g[0]}',
-        '${g[1]}<br><br>${g[2]}'
-        )">
+        onclick="openGrammar('${escapeHtml(g[0])}',
+        '${escapeHtml(g[1])}',
+        '${escapeHtml(g[2])}')">
 
-        Learn
+        📖 Learn
 
         </button>
 
@@ -2282,63 +2192,188 @@ function loadGrammar(){
 
 }
 
-loadGrammar();
+
+function escapeHtml(text){
+
+    return text
+    .replace(/'/g,"&#39;")
+    .replace(/"/g,"&quot;");
+
+}
 
 
-/* =================================
+function openGrammar(title,meaning,example){
+
+    openModal(
+        "🧠 "+title,
+        `
+
+        <p>${meaning}</p>
+
+        <div class="example">
+
+        <b>Example:</b><br>
+
+        ${example}
+
+        </div>
+
+        <button
+        class="btn green"
+        onclick="addPractice();closeModal()">
+
+        ✅ Mark Practiced
+
+        </button>
+
+        `
+    );
+
+}
+
+
+/* ==================================================
+TENSES
+================================================== */
+
+const tenses=[
+
+["Present Simple",
+"I play cricket.",
+"मैं क्रिकेट खेलता हूँ।"],
+
+["Present Continuous",
+"I am playing cricket.",
+"मैं क्रिकेट खेल रहा हूँ।"],
+
+["Present Perfect",
+"I have played cricket.",
+"मैं क्रिकेट खेल चुका हूँ।"],
+
+["Past Simple",
+"I played cricket.",
+"मैंने क्रिकेट खेला।"],
+
+["Past Continuous",
+"I was playing cricket.",
+"मैं क्रिकेट खेल रहा था।"],
+
+["Past Perfect",
+"I had played cricket.",
+"मैं क्रिकेट खेल चुका था।"],
+
+["Future Simple",
+"I will play cricket.",
+"मैं क्रिकेट खेलूँगा।"],
+
+["Future Continuous",
+"I will be playing cricket.",
+"मैं क्रिकेट खेल रहा होऊँगा।"],
+
+["Future Perfect",
+"I will have played cricket.",
+"मैं क्रिकेट खेल चुका होऊँगा।"],
+
+["Future Perfect Continuous",
+"I will have been playing cricket.",
+"मैं क्रिकेट खेलता आ रहा होऊँगा।"]
+
+];
+
+
+function renderTenses(){
+
+    const grid =
+    document.getElementById(
+        "tenseGrid"
+    );
+
+    grid.innerHTML="";
+
+    tenses.forEach(t=>{
+
+        grid.innerHTML += `
+
+        <div class="card">
+
+        <div class="icon">⏰</div>
+
+        <h3>${t[0]}</h3>
+
+        <p><b>${t[1]}</b></p>
+
+        <p>🇮🇳 ${t[2]}</p>
+
+        <button
+        onclick="speakText('${escapeHtml(t[1])}')">
+
+        🔊 Listen
+
+        </button>
+
+        </div>
+
+        `;
+
+    });
+
+}
+
+
+/* ==================================================
 TRANSLATION
-================================= */
+================================================== */
 
 const translations=[
 
 {
 hi:"मैं स्कूल जाता हूँ।",
-o:[
+options:[
 "I go to school.",
 "I school go.",
 "I going school."
 ],
-a:0
+answer:0
 },
 
 {
 hi:"मुझे पानी चाहिए।",
-o:[
+options:[
 "I water need.",
 "I need water.",
 "I am water."
 ],
-a:1
+answer:1
 },
 
 {
 hi:"वह खाना खाता है।",
-o:[
+options:[
 "He eat food.",
 "He eats food.",
 "He eating food."
 ],
-a:1
+answer:1
 },
 
 {
 hi:"मैं English सीख रहा हूँ।",
-o:[
+options:[
 "I learn English.",
 "I am learning English.",
 "I English learning."
 ],
-a:1
+answer:1
 },
 
 {
 hi:"वे क्रिकेट खेलते हैं।",
-o:[
+options:[
 "They plays cricket.",
 "They play cricket.",
 "They playing cricket."
 ],
-a:1
+answer:1
 }
 
 ];
@@ -2348,7 +2383,7 @@ let translationIndex=0;
 
 function showTranslation(){
 
-    const t=
+    const t =
     translations[translationIndex];
 
     document
@@ -2357,7 +2392,7 @@ function showTranslation(){
     )
     .innerText=t.hi;
 
-    const box=
+    const box =
     document
     .getElementById(
         "translationOptions"
@@ -2365,53 +2400,90 @@ function showTranslation(){
 
     box.innerHTML="";
 
-    t.o.forEach(
-        (x,i)=>{
+    document
+    .getElementById(
+        "translationMessage"
+    )
+    .innerText="";
 
-        const b=
+    t.options.forEach(
+        (option,index)=>{
+
+        const button =
         document.createElement(
             "button"
         );
 
-        b.className="option";
+        button.className="option";
 
-        b.innerText=x;
+        button.innerText=option;
 
-        b.onclick=()=>{
+        button.onclick=function(){
 
-            if(i===t.a){
+            const all =
+            box.querySelectorAll(
+                "button"
+            );
 
-                b.classList.add(
+            all.forEach(
+                b=>b.disabled=true
+            );
+
+            if(index===t.answer){
+
+                button.classList.add(
                     "correct"
                 );
+
+                document
+                .getElementById(
+                    "translationMessage"
+                )
+                .innerText=
+                "✅ Correct Answer!";
 
                 addPractice();
 
             }else{
 
-                b.classList.add(
+                button.classList.add(
                     "wrong"
                 );
+
+                all[t.answer]
+                .classList.add(
+                    "correct"
+                );
+
+                document
+                .getElementById(
+                    "translationMessage"
+                )
+                .innerText=
+                "❌ Wrong Answer!";
 
             }
 
         };
 
-        box.appendChild(b);
+        box.appendChild(button);
 
     });
 
 }
+
 
 function nextTranslation(){
 
     translationIndex++;
 
     if(
-        translationIndex>=
+        translationIndex >=
         translations.length
     ){
+
         translationIndex=0;
+
     }
 
     showTranslation();
@@ -2419,13 +2491,130 @@ function nextTranslation(){
 }
 
 
-/* =================================
+/* ==================================================
+SPEAKING
+================================================== */
+
+const speaking=[
+
+[
+"👤 Self Introduction",
+"My name is Rahul. I am a student. I live in India. I like learning English."
+],
+
+[
+"🏫 School",
+"May I come in? Please explain this question. I have completed my homework."
+],
+
+[
+"🏠 Home",
+"I am hungry. Please give me some water. I am going to school."
+],
+
+[
+"💪 Fluency",
+"Think in English. Speak every day. Do not fear mistakes."
+],
+
+[
+"🛒 Market",
+"How much is this? Please give me one kilogram. Thank you."
+],
+
+[
+"👋 Meeting",
+"Nice to meet you. How are you? I am fine, thank you."
+]
+
+];
+
+
+function renderSpeaking(){
+
+    const grid =
+    document.getElementById(
+        "speakingGrid"
+    );
+
+    grid.innerHTML="";
+
+    speaking.forEach(s=>{
+
+        grid.innerHTML += `
+
+        <div class="card">
+
+        <h3>${s[0]}</h3>
+
+        <p>${s[1]}</p>
+
+        <button
+        class="green"
+        onclick="speakText('${escapeHtml(s[1])}')">
+
+        🔊 Listen
+
+        </button>
+
+        </div>
+
+        `;
+
+    });
+
+}
+
+
+function speakReading(){
+
+    const text =
+    document.getElementById(
+        "readingText"
+    ).innerText;
+
+    speakText(text);
+
+}
+
+
+function speakText(text){
+
+    if(
+        !("speechSynthesis" in window)
+    ){
+
+        alert(
+        "आपके browser में Speech सुविधा उपलब्ध नहीं है।"
+        );
+
+        return;
+
+    }
+
+    speechSynthesis.cancel();
+
+    const speech =
+    new SpeechSynthesisUtterance(text);
+
+    speech.lang="en-US";
+
+    speech.rate=.85;
+
+    speech.pitch=1;
+
+    speechSynthesis.speak(speech);
+
+}
+
+
+/* ==================================================
 WRITING
-================================= */
+================================================== */
 
 function checkWriting(){
 
-    const text=
+    const text =
     document
     .getElementById(
         "writingArea"
@@ -2442,38 +2631,54 @@ function checkWriting(){
 
     }
 
-    const words=
+    const words =
     text
     .split(/\s+/)
     .filter(Boolean);
 
-    const sentencesCount=
+    const sentencesCount =
     text
     .split(/[.!?]+/)
-    .filter(Boolean)
-    .length;
+    .filter(x=>x.trim()).length;
 
     let level;
 
-    if(words.length>=100)
+    if(words.length>=100){
+
         level="🏆 Excellent";
-    else if(words.length>=50)
+
+    }else if(words.length>=50){
+
         level="👏 Very Good";
-    else if(words.length>=25)
+
+    }else if(words.length>=25){
+
         level="👍 Good";
-    else
+
+    }else{
+
         level="📚 Keep Practicing";
+
+    }
 
     document
     .getElementById(
         "writingResult"
     )
-    .innerHTML=`
+    .innerHTML = `
 
-    <br>
-    📝 Words: <b>${words.length}</b><br>
-    📌 Sentences: <b>${sentencesCount}</b><br>
-    🎯 Level: <b>${level}</b>
+    <div class="example">
+
+    📝 Words:
+    <b>${words.length}</b><br>
+
+    📌 Sentences:
+    <b>${sentencesCount}</b><br>
+
+    🎯 Level:
+    <b>${level}</b>
+
+    </div>
 
     `;
 
@@ -2482,125 +2687,111 @@ function checkWriting(){
 }
 
 
-/* =================================
-PRACTICE
-================================= */
-
-function addPractice(){
-
-    const s=getStudent();
-
-    if(!s)return;
-
-    s.practice++;
-
-    saveStudents();
-
-    updateStats();
-
-}
-
-
-/* =================================
+/* ==================================================
 QUIZ
-================================= */
+================================================== */
 
 const quiz=[
 
 {
-q:"Opposite of Big?",
-o:["Small","Fast","Good","Long"],
-a:0
+question:"Opposite of Big?",
+options:[
+"Small",
+"Fast",
+"Good",
+"Long"
+],
+answer:0
 },
 
 {
-q:"Correct sentence?",
-o:[
+question:"Correct sentence?",
+options:[
 "He go to school.",
 "He goes to school.",
 "He going school."
 ],
-a:1
+answer:1
 },
 
 {
-q:"Plural of Child?",
-o:[
+question:"Plural of Child?",
+options:[
 "Childs",
 "Children",
 "Childes"
 ],
-a:1
+answer:1
 },
 
 {
-q:"Correct article: ___ apple.",
-o:[
+question:"Correct article: ___ apple.",
+options:[
 "A",
 "An",
 "The"
 ],
-a:1
+answer:1
 },
 
 {
-q:"Past form of Go?",
-o:[
+question:"Past form of Go?",
+options:[
 "Goed",
 "Went",
 "Goes"
 ],
-a:1
+answer:1
 },
 
 {
-q:"Which is a Verb?",
-o:[
+question:"Which is a Verb?",
+options:[
 "Beautiful",
 "Run",
 "Red"
 ],
-a:1
+answer:1
 },
 
 {
-q:"Meaning of Honest?",
-o:[
+question:"Meaning of Honest?",
+options:[
 "ईमानदार",
 "बहादुर",
 "तेज"
 ],
-a:0
+answer:0
 },
 
 {
-q:"Which is a Pronoun?",
-o:[
+question:"Which is a Pronoun?",
+options:[
 "Ram",
 "He",
 "Book"
 ],
-a:1
+answer:1
 },
 
 {
-q:"Opposite of Hot?",
-o:[
+question:"Opposite of Hot?",
+options:[
 "Warm",
 "Cold",
 "High"
 ],
-a:1
+answer:1
 },
 
 {
-q:"Correct sentence?",
-o:[
+question:"Correct sentence?",
+options:[
 "She are happy.",
 "She is happy.",
 "She am happy."
 ],
-a:1
+answer:1
 }
 
 ];
@@ -2612,53 +2803,72 @@ let quizAnswered=false;
 
 function showQuiz(){
 
-    const q=quiz[quizIndex];
+    const q =
+    quiz[quizIndex];
 
-    let html=`
+    const box =
+    document.getElementById(
+        "quizBox"
+    );
+
+    box.innerHTML = `
 
     <p>
-    Question ${quizIndex+1}
+    Question
+    <b>${quizIndex+1}</b>
     / ${quiz.length}
     </p>
 
-    <h3 style="margin:12px 0">
-    ${q.q}
+    <h3 style="margin-top:10px">
+    ${q.question}
     </h3>
 
-    <div class="options">
+    <div
+    id="quizOptions"
+    class="options">
+    </div>
+
+    <p
+    id="quizMessage"
+    style="margin-top:10px">
+    </p>
+
     `;
 
-    q.o.forEach(
-        (x,i)=>{
+    const optionsBox =
+    document.getElementById(
+        "quizOptions"
+    );
 
-        html+=`
+    q.options.forEach(
+        (option,index)=>{
 
-        <button
-        class="option"
-        onclick="answerQuiz(this,${i})">
+        const button =
+        document.createElement(
+            "button"
+        );
 
-        ${String.fromCharCode(65+i)}.
-        ${x}
+        button.className="option";
 
-        </button>
+        button.innerText =
+        String.fromCharCode(65+index)
+        +". "
+        +option;
 
-        `;
+        button.onclick=function(){
+
+            answerQuiz(
+                button,
+                index
+            );
+
+        };
+
+        optionsBox.appendChild(
+            button
+        );
 
     });
-
-    html+=`
-
-    </div>
-
-    <div
-    id="quizMessage">
-    </div>
-
-    `;
-
-    document
-    .getElementById("quizBox")
-    .innerHTML=html;
 
     quizAnswered=false;
 
@@ -2672,21 +2882,36 @@ function answerQuiz(button,index){
 
     quizAnswered=true;
 
-    const q=quiz[quizIndex];
+    const q =
+    quiz[quizIndex];
 
-    const buttons=
+    const buttons =
     document
+    .getElementById(
+        "quizOptions"
+    )
     .querySelectorAll(
-        "#quizBox .option"
+        "button"
     );
 
-    if(index===q.a){
+    buttons.forEach(
+        b=>b.disabled=true
+    );
+
+    if(index===q.answer){
 
         button.classList.add(
             "correct"
         );
 
         quizScore++;
+
+        document
+        .getElementById(
+            "quizMessage"
+        )
+        .innerText=
+        "✅ Correct Answer!";
 
         addPractice();
 
@@ -2696,10 +2921,17 @@ function answerQuiz(button,index){
             "wrong"
         );
 
-        buttons[q.a]
+        buttons[q.answer]
         .classList.add(
             "correct"
         );
+
+        document
+        .getElementById(
+            "quizMessage"
+        )
+        .innerText=
+        "❌ Wrong Answer!";
 
     }
 
@@ -2719,7 +2951,7 @@ function nextQuiz(){
     }
 
     if(
-        quizIndex<
+        quizIndex <
         quiz.length-1
     ){
 
@@ -2729,13 +2961,14 @@ function nextQuiz(){
 
     }else{
 
-        const s=getStudent();
+        const s =
+        getStudent();
 
         if(s){
 
-            s.score+=quizScore;
+            s.score += quizScore;
 
-            saveStudents();
+            saveDatabase();
 
         }
 
@@ -2748,6 +2981,7 @@ function nextQuiz(){
         );
 
         quizIndex=0;
+
         quizScore=0;
 
         showQuiz();
@@ -2762,84 +2996,116 @@ function nextQuiz(){
 function restartQuiz(){
 
     quizIndex=0;
+
     quizScore=0;
+
+    quizAnswered=false;
 
     showQuiz();
 
 }
 
 
-/* =================================
-30 DAY CHALLENGE
-================================= */
+/* ==================================================
+CHALLENGE
+================================================== */
 
 const challenges=[
 
-"10 नए words सीखें।",
-"10 sentences बोलें।",
-"English paragraph पढ़ें।",
-"5 sentences लिखें।",
+"10 नए English words सीखें।",
+
+"10 English sentences बोलें।",
+
+"एक English paragraph पढ़ें।",
+
+"5 English sentences लिखें।",
+
 "Present Tense revise करें।",
+
 "Past Tense revise करें।",
+
 "Future Tense revise करें।",
+
 "10 Opposite Words सीखें।",
-"5 sentences translate करें।",
+
+"5 Hindi sentences translate करें।",
+
 "1 minute English बोलें।",
+
 "10 Verbs सीखें।",
+
 "10 मिनट English पढ़ें।",
+
 "Articles practice करें।",
+
 "Prepositions practice करें।",
+
 "School पर paragraph लिखें।",
+
 "10 Adjectives सीखें।",
+
 "Friend से English में बात करें।",
+
 "10 English questions बनाएं।",
+
 "5 गलत sentences सुधारें।",
+
 "10 Synonyms सीखें।",
-"एक छोटी story पढ़ें।",
-"Daily Routine लिखें।",
-"Family के बारे में English में बोलें।",
+
+"एक छोटी English story पढ़ें।",
+
+"Daily Routine English में लिखें।",
+
+"Family के बारे में English बोलें।",
+
 "Pronunciation practice करें।",
+
 "20 words revise करें।",
+
 "Grammar quiz दें।",
+
 "Translation practice करें।",
+
 "2 minutes English बोलें।",
+
 "पूरी revision करें।",
+
 "Final English Test दें।"
 
 ];
 
 
-function loadChallenge(){
+function renderChallenge(){
 
-    const box=
+    const grid =
     document.getElementById(
-        "challengeBox"
+        "challengeGrid"
     );
 
     const s=getStudent();
 
     if(!s)return;
 
-    box.innerHTML="";
+    grid.innerHTML="";
 
     challenges.forEach(
-        (task,i)=>{
+        (task,index)=>{
 
-        const done=
-        s.days.includes(i);
+        const done =
+        s.days.includes(index);
 
-        box.innerHTML+=`
+        grid.innerHTML += `
 
         <div class="card">
 
-        <h3>Day ${i+1}</h3>
+        <h3>Day ${index+1}</h3>
 
         <p>${task}</p>
 
         <button
         class="${done?'green':''}"
-        ${done?'disabled':''}
-        onclick="completeDay(${i})">
+        onclick="completeDay(${index})"
+        ${done?'disabled':''}>
 
         ${done?
         "✔ Completed":
@@ -2856,30 +3122,51 @@ function loadChallenge(){
 }
 
 
-function completeDay(i){
+function completeDay(index){
 
     const s=getStudent();
 
     if(!s)return;
 
-    if(!s.days.includes(i)){
+    if(
+        !s.days.includes(index)
+    ){
 
-        s.days.push(i);
+        s.days.push(index);
 
-        saveStudents();
+        saveDatabase();
+
+        updateStats();
+
+        renderChallenge();
 
     }
 
-    loadChallenge();
+}
+
+
+/* ==================================================
+PRACTICE
+================================================== */
+
+function addPractice(){
+
+    const s=getStudent();
+
+    if(!s)return;
+
+    s.practice++;
+
+    saveDatabase();
 
     updateStats();
 
 }
 
 
-/* =================================
-PROGRESS
-================================= */
+/* ==================================================
+STATS + PROGRESS
+================================================== */
 
 function updateStats(){
 
@@ -2904,27 +3191,29 @@ function updateStats(){
     .innerText=s.days.length;
 
 
-    const vocab=
+    const vocab =
     Math.min(
         100,
-        s.words
+        s.words * 5
     );
 
-    const quizProgress=
+    const quizProgress =
     Math.min(
         100,
-        s.score
+        s.score * 10
     );
 
-    const practice=
+    const practice =
     Math.min(
         100,
-        s.practice*5
+        s.practice * 5
     );
 
-    const days=
+    const days =
     Math.round(
-        s.days.length/30*100
+        s.days.length /
+        30 *
+        100
     );
 
 
@@ -2963,39 +3252,53 @@ function setProgress(
 
     document
     .getElementById(textId)
-    .innerText=value+"%";
+    .innerText =
+    value+"%";
 
     document
     .getElementById(barId)
-    .style.width=value+"%";
+    .style.width =
+    value+"%";
 
 }
 
 
-/* =================================
+/* ==================================================
 PROFILE
-================================= */
+================================================== */
 
 function showProfile(){
 
     const s=getStudent();
 
-    openLesson(
+    if(!s)return;
+
+    openModal(
         "👤 Student Profile",
         `
 
-        <b>Name:</b> ${s.name}<br><br>
+        <h3>${s.name}</h3>
 
-        <b>Class:</b> ${s.class}<br><br>
+        <p>
+        🎓 Class: ${s.class}
+        </p>
 
-        <b>Words:</b> ${s.words}<br><br>
+        <p>
+        📚 Words Learned: ${s.words}
+        </p>
 
-        <b>Quiz Points:</b> ${s.score}<br><br>
+        <p>
+        🎯 Quiz Points: ${s.score}
+        </p>
 
-        <b>Practice:</b> ${s.practice}<br><br>
+        <p>
+        📝 Practice: ${s.practice}
+        </p>
 
-        <b>Challenge:</b>
+        <p>
+        📅 Challenge:
         ${s.days.length}/30
+        </p>
 
         `
     );
@@ -3003,81 +3306,71 @@ function showProfile(){
 }
 
 
-/* =================================
-CLASS
-================================= */
-
-function openClass(n){
-
-    openLesson(
-        "🎓 Class "+n,
-        `
-        <h3>Class ${n} English Topics</h3>
-        <br>
-        ${classTopics[n]}
-        <br><br>
-
-        <button
-        class="btn"
-        onclick="closeModal();go('quiz')">
-
-        🎯 Start Quiz
-
-        </button>
-        `
-    );
-
-}
-
-
-/* =================================
+/* ==================================================
 MODAL
-================================= */
+================================================== */
 
-function openLesson(title,body){
+function openModal(title,body){
 
     document
-    .getElementById("modalTitle")
+    .getElementById(
+        "modalTitle"
+    )
     .innerHTML=title;
 
     document
-    .getElementById("modalBody")
+    .getElementById(
+        "modalBody"
+    )
     .innerHTML=body;
 
     document
-    .getElementById("modal")
-    .classList.remove("hidden");
+    .getElementById(
+        "modal"
+    )
+    .classList
+    .remove("hidden");
 
 }
+
 
 function closeModal(){
 
     document
-    .getElementById("modal")
-    .classList.add("hidden");
+    .getElementById(
+        "modal"
+    )
+    .classList
+    .add("hidden");
 
 }
 
 
-/* =================================
-ADMIN CUSTOM WORD
-================================= */
+/* ==================================================
+CUSTOM VOCABULARY
+================================================== */
 
 function addCustomWord(){
 
-    const word=
+    const word =
     document
-    .getElementById("newWord")
+    .getElementById(
+        "newWord"
+    )
     .value.trim();
 
-    const meaning=
+    const meaning =
     document
-    .getElementById("newMeaning")
+    .getElementById(
+        "newMeaning"
+    )
     .value.trim();
 
-    const example=
+    const example =
     document
-    .getElementById("newExample")
+    .getElementById(
+        "newExample"
+    )
     .value.trim();
 
     if(
@@ -3098,37 +3391,42 @@ function addCustomWord(){
         [
             word,
             meaning,
-            example,
-            word
+            example
         ]
     );
 
     document
-    .getElementById("newWord")
+    .getElementById(
+        "newWord"
+    )
     .value="";
 
     document
-    .getElementById("newMeaning")
+    .getElementById(
+        "newMeaning"
+    )
     .value="";
 
     document
-    .getElementById("newExample")
+    .getElementById(
+        "newExample"
+    )
     .value="";
 
     alert(
-    "✅ New vocabulary added!"
+    "✅ Vocabulary successfully added!"
     );
 
 }
 
 
-/* =================================
-ADMIN STUDENT DATA
-================================= */
+/* ==================================================
+ADMIN DATABASE TABLE
+================================================== */
 
 function loadStudentData(){
 
-    const box=
+    const box =
     document
     .getElementById(
         "studentData"
@@ -3137,7 +3435,7 @@ function loadStudentData(){
     if(!students.length){
 
         box.innerHTML=
-        "कोई student नहीं है।";
+        "<p>कोई student registered नहीं है।</p>";
 
         return;
 
@@ -3148,11 +3446,14 @@ function loadStudentData(){
     <table>
 
     <tr>
+
     <th>Name</th>
     <th>Class</th>
     <th>Words</th>
     <th>Score</th>
+    <th>Practice</th>
     <th>Days</th>
+
     </tr>
 
     `;
@@ -3171,6 +3472,8 @@ function loadStudentData(){
 
         <td>${s.score}</td>
 
+        <td>${s.practice}</td>
+
         <td>${s.days.length}</td>
 
         </tr>
@@ -3186,29 +3489,30 @@ function loadStudentData(){
 }
 
 
-/* =================================
-CLEAR DATABASE
-================================= */
+/* ==================================================
+DELETE DATABASE
+================================================== */
 
 function clearAllData(){
 
-    const yes=
+    const yes =
     confirm(
-    "क्या आप सभी local student data delete करना चाहते हैं?"
+    "क्या आप सभी student data delete करना चाहते हैं?"
     );
 
-    if(!yes)return;
+    if(!yes)
+        return;
 
     localStorage.removeItem(
-        "students"
+        "englishStudents"
     );
 
     localStorage.removeItem(
-        "currentStudent"
+        "englishCurrentStudent"
     );
 
     alert(
-    "✅ Local database साफ हो गया।"
+    "✅ Local database delete हो गया।"
     );
 
     location.reload();
@@ -3216,34 +3520,67 @@ function clearAllData(){
 }
 
 
-/* =================================
-AUTO LOGIN
-================================= */
+/* ==================================================
+WELCOME
+================================================== */
 
-if(currentStudent){
+function updateWelcome(){
 
-    const exists=
-    students.some(
-        s=>s.name===currentStudent
-    );
+    const s=getStudent();
 
-    if(exists){
+    if(!s)return;
 
-        openApp();
-
-    }
+    document
+    .getElementById(
+        "welcomeText"
+    )
+    .innerText =
+    "👋 Welcome, "+
+    s.name+
+    " | Class "+
+    s.class;
 
 }
 
 
-/* =================================
-INIT
-================================= */
+/* ==================================================
+RENDER ALL
+================================================== */
 
-showWord();
-showSentence();
-showTranslation();
-showQuiz();
+function renderAll(){
+
+    updateWelcome();
+
+    updateStats();
+
+    renderClasses();
+
+    renderGrammar();
+
+    renderTenses();
+
+    renderSpeaking();
+
+    showWord();
+
+    showSentence();
+
+    showTranslation();
+
+    showQuiz();
+
+    renderChallenge();
+
+    loadStudentData();
+
+}
+
+
+/* ==================================================
+START
+================================================== */
+
+autoLogin();
 
 </script>
 
