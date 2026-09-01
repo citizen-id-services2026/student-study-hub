@@ -1,24 +1,34 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Class 1 English Learning Course</title>
+<title>Class 1 English | Hindi + English Learning</title>
 
 <style>
+
 *{
     box-sizing:border-box;
     margin:0;
     padding:0;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
-    font-family:Arial, "Noto Sans Devanagari", sans-serif;
+    font-family:Arial,"Noto Sans Devanagari",sans-serif;
     background:#f4f7fb;
-    color:#222;
+    color:#1f2937;
     line-height:1.6;
 }
+
+/* =========================
+   HEADER
+========================= */
 
 header{
     background:linear-gradient(135deg,#2563eb,#7c3aed);
@@ -29,28 +39,34 @@ header{
 
 header h1{
     font-size:30px;
-    margin-bottom:6px;
+    margin-bottom:5px;
 }
 
 header p{
     font-size:16px;
 }
 
+/* =========================
+   CONTAINER
+========================= */
+
 .container{
     width:94%;
-    max-width:950px;
+    max-width:1000px;
     margin:20px auto;
 }
 
-/* COURSE INTRO */
+/* =========================
+   COURSE CARD
+========================= */
 
 .course-card{
     background:white;
-    padding:22px;
+    padding:25px;
     border-radius:18px;
-    box-shadow:0 5px 18px rgba(0,0,0,.08);
-    margin-bottom:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
     text-align:center;
+    margin-bottom:20px;
 }
 
 .course-card h2{
@@ -58,34 +74,40 @@ header p{
     margin-bottom:8px;
 }
 
+.course-card p{
+    margin-bottom:8px;
+}
+
 .start-btn{
-    border:none;
     background:#16a34a;
     color:white;
+    border:0;
     padding:14px 25px;
     border-radius:10px;
     font-size:17px;
     font-weight:bold;
     cursor:pointer;
-    margin-top:12px;
+    margin-top:10px;
 }
 
 .start-btn:hover{
     background:#15803d;
 }
 
-/* PROGRESS */
+/* =========================
+   PROGRESS
+========================= */
 
 .progress-box{
     background:white;
-    padding:15px;
-    border-radius:12px;
-    margin-bottom:18px;
-    box-shadow:0 3px 12px rgba(0,0,0,.06);
+    padding:16px;
+    border-radius:14px;
+    margin-bottom:20px;
+    box-shadow:0 3px 12px rgba(0,0,0,.07);
 }
 
 .progress-bar{
-    height:14px;
+    height:15px;
     background:#e5e7eb;
     border-radius:20px;
     overflow:hidden;
@@ -93,47 +115,79 @@ header p{
 }
 
 .progress-fill{
-    height:100%;
     width:0%;
+    height:100%;
     background:#2563eb;
-    transition:.3s;
+    transition:.4s;
 }
 
-/* TOPIC LIST */
+/* =========================
+   TOPIC LIST
+========================= */
 
-#topicList{
+#topicSection{
     display:none;
 }
 
 .topic-grid{
     display:grid;
     grid-template-columns:repeat(2,1fr);
-    gap:12px;
+    gap:14px;
 }
 
-.topic-btn{
-    border:none;
+.topic-card{
     background:white;
-    padding:16px;
+    border-radius:16px;
+    padding:15px;
+    box-shadow:0 4px 14px rgba(0,0,0,.08);
+    cursor:pointer;
+    transition:.2s;
+}
+
+.topic-card:hover{
+    transform:translateY(-2px);
+}
+
+.topic-image{
+    width:100%;
+    height:130px;
+    background:#eff6ff;
     border-radius:12px;
-    box-shadow:0 3px 12px rgba(0,0,0,.07);
-    text-align:left;
-    font-size:16px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:58px;
+    margin-bottom:12px;
+}
+
+.topic-card h3{
+    color:#2563eb;
+    font-size:17px;
+}
+
+.topic-card p{
+    font-size:14px;
+    color:#64748b;
+    margin-top:3px;
+}
+
+.learn-btn{
+    width:100%;
+    margin-top:10px;
+    border:0;
+    background:#2563eb;
+    color:white;
+    padding:11px;
+    border-radius:9px;
     font-weight:bold;
     cursor:pointer;
 }
 
-.topic-btn:hover{
-    background:#eff6ff;
-}
+/* =========================
+   LESSON
+========================= */
 
-.topic-number{
-    color:#2563eb;
-}
-
-/* LESSON */
-
-#lessonArea{
+#lessonSection{
     display:none;
 }
 
@@ -144,55 +198,91 @@ header p{
     box-shadow:0 5px 20px rgba(0,0,0,.08);
 }
 
+.lesson-header{
+    text-align:center;
+    margin-bottom:18px;
+}
+
+.lesson-image{
+    width:170px;
+    height:140px;
+    margin:0 auto 15px;
+    border-radius:18px;
+    background:#eff6ff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:75px;
+}
+
 .lesson-title{
     color:#2563eb;
-    margin-bottom:10px;
+    font-size:26px;
 }
 
 .lesson-subtitle{
     color:#7c3aed;
-    margin:18px 0 8px;
+    margin:20px 0 8px;
+}
+
+.explanation{
+    background:#fff7ed;
+    padding:15px;
+    border-left:5px solid #f97316;
+    border-radius:9px;
+    margin:10px 0;
+}
+
+.english-box{
+    background:#eff6ff;
+    padding:15px;
+    border-left:5px solid #2563eb;
+    border-radius:9px;
+    margin:10px 0;
 }
 
 .example{
-    background:#eff6ff;
-    border-left:5px solid #2563eb;
-    padding:13px;
-    margin:10px 0;
-    border-radius:8px;
-}
-
-.hindi{
-    background:#fff7ed;
-    border-left:5px solid #f97316;
-    padding:13px;
-    margin:10px 0;
-    border-radius:8px;
-}
-
-.practice{
     background:#f0fdf4;
-    padding:16px;
-    margin-top:18px;
-    border-radius:12px;
+    padding:15px;
+    border-left:5px solid #16a34a;
+    border-radius:9px;
+    margin:10px 0;
 }
 
-.question{
-    background:#fafafa;
+.speak-box{
+    background:#f5f3ff;
     padding:15px;
-    margin-top:12px;
+    border-left:5px solid #7c3aed;
+    border-radius:9px;
+    margin:10px 0;
+}
+
+.practice-box{
+    background:#fefce8;
+    padding:16px;
     border-radius:10px;
-    border:1px solid #e5e7eb;
+    margin-top:18px;
+}
+
+.quiz-box{
+    background:#ecfdf5;
+    padding:16px;
+    border-radius:12px;
+    margin-top:18px;
+}
+
+.quiz-question{
+    margin-bottom:12px;
+    font-weight:bold;
 }
 
 .option{
-    display:block;
     width:100%;
-    padding:11px;
-    margin:7px 0;
+    padding:12px;
+    margin:6px 0;
     border:1px solid #d1d5db;
     background:white;
-    border-radius:8px;
+    border-radius:9px;
     text-align:left;
     cursor:pointer;
     font-size:15px;
@@ -212,37 +302,76 @@ header p{
     border-color:#dc2626;
 }
 
-.result{
-    font-weight:bold;
+.quiz-result{
     margin-top:10px;
+    font-weight:bold;
 }
 
-.score{
-    font-size:18px;
-    color:#16a34a;
+.speak-btn{
+    background:#7c3aed;
+    color:white;
+    border:0;
+    padding:10px 15px;
+    border-radius:8px;
+    cursor:pointer;
+    margin-top:8px;
+}
+
+/* =========================
+   COUNTING
+========================= */
+
+.counting-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:8px;
     margin-top:15px;
 }
 
-/* NAVIGATION */
+.number-card{
+    background:#eff6ff;
+    padding:10px 5px;
+    text-align:center;
+    border-radius:8px;
+}
+
+.number-card b{
+    display:block;
+    color:#2563eb;
+}
+
+.number-card span{
+    display:block;
+    font-size:13px;
+}
+
+.number-card small{
+    display:block;
+    color:#64748b;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
 
 .navigation{
     display:flex;
     gap:10px;
-    margin-top:20px;
+    margin-top:22px;
 }
 
 .navigation button{
     flex:1;
-    border:none;
     padding:13px;
+    border:0;
     border-radius:10px;
     color:white;
-    font-size:15px;
     font-weight:bold;
     cursor:pointer;
+    font-size:15px;
 }
 
-.prev{
+.previous{
     background:#64748b;
 }
 
@@ -250,32 +379,49 @@ header p{
     background:#2563eb;
 }
 
-.topic-back{
+.all-topics{
+    width:100%;
+    margin-top:10px;
+    padding:13px;
+    border:0;
+    border-radius:10px;
     background:#111827;
     color:white;
-    border:none;
-    padding:13px 20px;
-    border-radius:10px;
     cursor:pointer;
-    margin-top:15px;
-    width:100%;
     font-size:15px;
 }
 
-/* FOOTER */
+/* =========================
+   COMPLETE MESSAGE
+========================= */
 
-footer{
+.complete{
     text-align:center;
-    padding:25px 10px;
-    margin-top:30px;
-    background:#111827;
-    color:white;
-    font-size:14px;
+    background:#dcfce7;
+    color:#166534;
+    padding:18px;
+    border-radius:12px;
+    margin-top:18px;
+    font-weight:bold;
 }
 
-/* MOBILE */
+/* =========================
+   FOOTER
+========================= */
 
-@media(max-width:600px){
+footer{
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:25px 10px;
+    margin-top:35px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:650px){
 
     header h1{
         font-size:24px;
@@ -289,8 +435,20 @@ footer{
         grid-template-columns:1fr;
     }
 
+    .topic-image{
+        height:150px;
+    }
+
     .lesson{
         padding:17px;
+    }
+
+    .lesson-title{
+        font-size:23px;
+    }
+
+    .counting-grid{
+        grid-template-columns:repeat(3,1fr);
     }
 
     .navigation{
@@ -301,171 +459,227 @@ footer{
         width:100%;
     }
 }
+
 </style>
+
 </head>
 
 <body>
 
+<!-- =========================
+     HEADER
+========================= -->
+
 <header>
-    <h1>📚 Class 1 English Course</h1>
-    <p>Zero से English सीखें — पढ़ें, बोलें, लिखें और Practice करें</p>
+
+<h1>📚 Class 1 English Course</h1>
+
+<p>
+🇮🇳 हिंदी + 🇬🇧 English | Zero से English सीखें
+</p>
+
 </header>
+
 
 <div class="container">
 
-    <!-- INTRO -->
+<!-- =========================
+     COURSE INTRO
+========================= -->
 
-    <div class="course-card">
+<div class="course-card">
 
-        <h2>🎓 Class 1 English</h2>
+<h2>🎓 Class 1 English Learning</h2>
 
-        <p>
-            इस course में बच्चे English को बिल्कुल basic level से सीखेंगे।
-        </p>
+<p>
+बच्चों के लिए आसान Hindi + English lessons
+</p>
 
-        <button class="start-btn" onclick="showTopics()">
-            🚀 Start Class 1 Course
-        </button>
+<p>
+📖 Learn → 🗣️ Speak → ✍️ Practice → ❓ Quiz
+</p>
 
-    </div>
+<button class="start-btn" onclick="showTopics()">
+🚀 Start Course
+</button>
 
-
-    <!-- PROGRESS -->
-
-    <div class="progress-box">
-
-        <b>📊 Course Progress</b>
-
-        <div id="progressText">
-            0 / 30 Lessons Completed
-        </div>
-
-        <div class="progress-bar">
-            <div class="progress-fill" id="progressFill"></div>
-        </div>
-
-    </div>
+</div>
 
 
-    <!-- TOPIC LIST -->
+<!-- =========================
+     PROGRESS
+========================= -->
 
-    <div id="topicList">
+<div class="progress-box">
 
-        <div class="topic-grid" id="topicButtons"></div>
+<b>📊 आपकी Progress</b>
 
-    </div>
+<div id="progressText">
+0 / 30 Lessons Completed
+</div>
+
+<div class="progress-bar">
+
+<div class="progress-fill" id="progressFill"></div>
+
+</div>
+
+</div>
 
 
-    <!-- LESSON AREA -->
+<!-- =========================
+     TOPICS
+========================= -->
 
-    <div id="lessonArea">
+<section id="topicSection">
 
-        <div class="lesson">
+<h2 style="margin-bottom:15px;color:#2563eb;">
+📚 Class 1 के 30 Topics
+</h2>
 
-            <h2 class="lesson-title" id="lessonTitle"></h2>
+<div class="topic-grid" id="topicGrid"></div>
 
-            <div id="lessonContent"></div>
+</section>
 
-            <div class="score" id="lessonScore"></div>
 
-            <div class="navigation">
+<!-- =========================
+     LESSON
+========================= -->
 
-                <button class="prev" onclick="previousLesson()">
-                    ⬅️ Previous
-                </button>
+<section id="lessonSection">
 
-                <button class="next" onclick="nextLesson()">
-                    Next Lesson ➡️
-                </button>
+<div class="lesson">
 
-            </div>
+<div class="lesson-header">
 
-            <button class="topic-back" onclick="showTopics()">
-                📚 सभी 30 Topics देखें
-            </button>
+<div class="lesson-image" id="lessonImage">
+📚
+</div>
 
-        </div>
+<h2 class="lesson-title" id="lessonTitle"></h2>
 
-    </div>
+</div>
+
+<div id="lessonContent"></div>
+
+<div id="quizArea"></div>
+
+<div id="completeMessage"></div>
+
+<div class="navigation">
+
+<button class="previous" onclick="previousLesson()">
+⬅️ Previous
+</button>
+
+<button class="next" onclick="nextLesson()">
+Next Lesson ➡️
+</button>
+
+</div>
+
+<button class="all-topics" onclick="showTopics()">
+📚 सभी 30 Topics
+</button>
+
+</div>
+
+</section>
 
 </div>
 
 
 <footer>
-    © 2026 Class 1 English Learning Course
+
+<p>📚 Class 1 English Learning Course</p>
+<p>Hindi + English | Learn Every Day ⭐</p>
+
 </footer>
 
 
 <script>
 
-/* =========================================
-   30 CLASS 1 ENGLISH LESSONS
-========================================= */
+/* =====================================================
+   LESSON DATA
+===================================================== */
 
 const lessons = [
 
+/* 1 */
+
 {
 title:"Noun — संज्ञा",
+image:"👦📚🏫🐶",
+description:"Person, Place, Animal या Thing का नाम",
 content:`
-<h3 class="lesson-subtitle">📖 Noun क्या है?</h3>
 
-<p>
-किसी व्यक्ति, स्थान, वस्तु या जानवर के नाम को
-<b>Noun</b> कहते हैं।
-</p>
+<div class="explanation">
+
+<b>📖 हिंदी में समझें:</b><br>
+
+किसी व्यक्ति, स्थान, जानवर या वस्तु के नाम को
+<b>Noun (संज्ञा)</b> कहते हैं।
+
+</div>
+
+<div class="english-box">
+
+<b>🇬🇧 English:</b><br>
+
+A noun is the name of a person, place, animal or thing.
+
+</div>
 
 <div class="example">
-<b>Examples:</b><br>
-Boy = लड़का<br>
-Girl = लड़की<br>
-School = विद्यालय<br>
-Book = किताब<br>
-Dog = कुत्ता
+
+<b>Examples / उदाहरण:</b><br><br>
+
+👦 Boy = लड़का<br>
+👧 Girl = लड़की<br>
+🏫 School = विद्यालय<br>
+🐶 Dog = कुत्ता<br>
+📖 Book = किताब
+
 </div>
 
-<h3 class="lesson-subtitle">🗣️ बोलकर सीखें</h3>
+<div class="speak-box">
 
-<p>
-Boy, Girl, School, Book, Dog
-</p>
+<b>🗣️ Speak / बोलो:</b><br><br>
 
-<div class="practice">
-<b>✍️ Practice:</b><br><br>
-इनमें Noun कौन है?<br><br>
+This is a book.<br>
+यह एक किताब है।
+
+</div>
+
+<div class="practice-box">
+
+<b>✍️ Practice / अभ्यास:</b><br><br>
+
+इनमें Noun कौन है?<br>
 Boy / Run / Quickly
-</div>
 
-<div class="question">
-<b>❓ Quiz:</b><br>
-Which is a Noun?<br><br>
-
-<button class="option" onclick="check(this,false)">
-Run
-</button>
-
-<button class="option" onclick="check(this,true)">
-Boy
-</button>
-
-<button class="option" onclick="check(this,false)">
-Quickly
-</button>
-
-<div class="result"></div>
 </div>
 `
 },
 
+/* 2 */
+
 {
 title:"Pronoun — सर्वनाम",
+image:"👦👧🧒",
+description:"Noun की जगह आने वाले शब्द",
 content:`
-<h3 class="lesson-subtitle">📖 Pronoun क्या है?</h3>
 
-<p>
+<div class="explanation">
+
+<b>📖 हिंदी में:</b><br>
+
 Noun की जगह प्रयोग होने वाले शब्द को Pronoun कहते हैं।
-</p>
+
+</div>
 
 <div class="example">
+
 I = मैं<br>
 You = तुम / आप<br>
 He = वह लड़का<br>
@@ -473,376 +687,392 @@ She = वह लड़की<br>
 It = यह / वह वस्तु<br>
 We = हम<br>
 They = वे
+
 </div>
 
-<div class="example">
+<div class="english-box">
+
 Ram is a boy.<br>
 <b>He</b> is a boy.
+
+<br><br>
+
+राम एक लड़का है।<br>
+<b>वह</b> एक लड़का है।
+
 </div>
 
-<div class="question">
-<b>❓ Quiz:</b><br>
-Ram is a boy. ___ is a boy.
+<div class="speak-box">
 
-<button class="option" onclick="check(this,true)">He</button>
-<button class="option" onclick="check(this,false)">She</button>
-<button class="option" onclick="check(this,false)">They</button>
+<b>🗣️ Speak:</b><br>
+He is a boy.<br>
+She is a girl.
 
-<div class="result"></div>
 </div>
 `
 },
 
+/* 3 */
+
 {
 title:"Verb — क्रिया",
+image:"🏃🍎📖✍️",
+description:"काम बताने वाले शब्द",
 content:`
-<h3 class="lesson-subtitle">📖 Verb क्या है?</h3>
 
-<p>
-काम को बताने वाले शब्द को Verb कहते हैं।
-</p>
+<div class="explanation">
+
+<b>📖 हिंदी में:</b><br>
+
+किसी काम को बताने वाले शब्द को Verb कहते हैं।
+
+</div>
 
 <div class="example">
+
 Run = दौड़ना<br>
 Eat = खाना<br>
 Read = पढ़ना<br>
 Write = लिखना<br>
 Play = खेलना<br>
 Sleep = सोना
+
 </div>
 
-<div class="practice">
-<b>🗣️ बोलें:</b><br>
-I run.<br>
-I eat.<br>
-I read.<br>
-I play.
-</div>
+<div class="speak-box">
 
-<div class="question">
-<b>❓ Quiz:</b><br>
-Which is a Verb?
+<b>🗣️ Speak:</b><br><br>
 
-<button class="option" onclick="check(this,false)">Book</button>
-<button class="option" onclick="check(this,true)">Run</button>
-<button class="option" onclick="check(this,false)">Boy</button>
+I run. = मैं दौड़ता हूँ।<br>
+I read. = मैं पढ़ता हूँ।<br>
+I play. = मैं खेलता हूँ।
 
-<div class="result"></div>
 </div>
 `
 },
+
+/* 4 */
 
 {
 title:"Adjective — विशेषण",
+image:"🍎🏠🐱⭐",
+description:"Noun की विशेषता बताने वाले शब्द",
 content:`
-<h3 class="lesson-subtitle">📖 Adjective क्या है?</h3>
 
-<p>
-Noun की विशेषता बताने वाले शब्द को Adjective कहते हैं।
-</p>
+<div class="explanation">
 
-<div class="example">
-Good boy<br>
-Big house<br>
-Red apple<br>
-Small cat
+Noun की विशेषता बताने वाले शब्द को
+<b>Adjective</b> कहते हैं।
+
 </div>
 
-<p>
-Good, Big, Red और Small विशेषता बता रहे हैं।
-</p>
+<div class="example">
 
-<div class="question">
-<b>❓ Quiz:</b><br>
-Red apple में Adjective कौन-सा है?
+Good boy = अच्छा लड़का<br>
+Big house = बड़ा घर<br>
+Red apple = लाल सेब<br>
+Small cat = छोटी बिल्ली
 
-<button class="option" onclick="check(this,true)">Red</button>
-<button class="option" onclick="check(this,false)">Apple</button>
+</div>
 
-<div class="result"></div>
+<div class="english-box">
+
+Good, Big, Red और Small
+विशेषता बता रहे हैं।
+
 </div>
 `
 },
+
+/* 5 */
 
 {
 title:"Articles — A, An, The",
+image:"🔤📖",
+description:"A, An और The का प्रयोग",
 content:`
-<h3 class="lesson-subtitle">📖 Articles</h3>
 
-<p>
-English में A, An और The को Articles कहते हैं।
-</p>
+<div class="explanation">
+
+<b>Articles:</b><br>
+A, An और The को Articles कहते हैं।
+
+</div>
 
 <div class="example">
-A boy<br>
-A book<br>
-An apple<br>
-An orange<br>
-The sun
+
+A boy = एक लड़का<br>
+A book = एक किताब<br>
+An apple = एक सेब<br>
+An orange = एक संतरा<br>
+The sun = सूर्य
+
 </div>
 
-<div class="practice">
-<b>Rule:</b><br>
+<div class="practice-box">
+
+<b>याद रखें:</b><br><br>
+
 A boy<br>
 An apple
-</div>
 
-<div class="question">
-<b>❓ Quiz:</b><br>
-___ apple
-
-<button class="option" onclick="check(this,false)">A</button>
-<button class="option" onclick="check(this,true)">An</button>
-<button class="option" onclick="check(this,false)">The</button>
-
-<div class="result"></div>
 </div>
 `
 },
 
-{
-title:"Singular / Plural",
-content:`
-<h3 class="lesson-subtitle">📖 Singular और Plural</h3>
+/* 6 */
 
-<p>
-एक व्यक्ति या वस्तु = Singular<br>
-एक से अधिक = Plural
-</p>
+{
+title:"Singular / Plural — एकवचन / बहुवचन",
+image:"🍎🍎📚",
+description:"एक और एक से अधिक",
+content:`
+
+<div class="explanation">
+
+एक व्यक्ति या वस्तु = <b>Singular</b><br>
+एक से अधिक = <b>Plural</b>
+
+</div>
 
 <div class="example">
+
 One book → Two books<br>
 One boy → Two boys<br>
 One cat → Two cats<br>
 One apple → Two apples
-</div>
 
-<div class="question">
-<b>❓ Quiz:</b><br>
-One book → Two ?
-
-<button class="option" onclick="check(this,true)">books</button>
-<button class="option" onclick="check(this,false)">book</button>
-
-<div class="result"></div>
 </div>
 `
 },
 
+/* 7 */
+
 {
 title:"Gender — लिंग",
+image:"👦👧👨👩",
+description:"Male और Female words",
 content:`
-<h3 class="lesson-subtitle">📖 Gender</h3>
+
+<div class="explanation">
+
+<b>Gender</b> से Male और Female का पता चलता है।
+
+</div>
 
 <div class="example">
+
 Boy → Girl<br>
 Man → Woman<br>
 King → Queen<br>
 Father → Mother<br>
 Brother → Sister
-</div>
 
-<div class="question">
-<b>❓ Quiz:</b><br>
-Boy का feminine क्या है?
-
-<button class="option" onclick="check(this,true)">Girl</button>
-<button class="option" onclick="check(this,false)">Man</button>
-<button class="option" onclick="check(this,false)">Father</button>
-
-<div class="result"></div>
 </div>
 `
 },
 
-{
-title:"This / That",
-content:`
-<h3 class="lesson-subtitle">📖 This / That</h3>
+/* 8 */
 
-<div class="hindi">
-This = यह<br>
-That = वह
-</div>
+{
+title:"This / That — यह / वह",
+image:"👉📖🌳",
+description:"पास और दूर की वस्तु",
+content:`
 
 <div class="example">
+
+<b>This</b> = यह<br>
+<b>That</b> = वह
+
+<br><br>
+
 This is a book.<br>
-That is a tree.
-</div>
+यह एक किताब है।
 
-<p>
-पास की एक वस्तु → This<br>
-दूर की एक वस्तु → That
-</p>
+<br><br>
 
-<div class="question">
-<b>❓ Quiz:</b><br>
-पास की वस्तु के लिए क्या प्रयोग करेंगे?
+That is a tree.<br>
+वह एक पेड़ है।
 
-<button class="option" onclick="check(this,true)">This</button>
-<button class="option" onclick="check(this,false)">That</button>
-
-<div class="result"></div>
 </div>
 `
 },
+
+/* 9 */
 
 {
-title:"These / Those",
+title:"These / Those — ये / वे",
+image:"📚🌳🌳",
+description:"कई पास या दूर की वस्तुएँ",
 content:`
-<h3 class="lesson-subtitle">📖 These / Those</h3>
-
-<div class="hindi">
-These = ये<br>
-Those = वे
-</div>
 
 <div class="example">
+
+<b>These</b> = ये<br>
+<b>Those</b> = वे
+
+<br><br>
+
 These are books.<br>
-Those are trees.
-</div>
+ये किताबें हैं।
 
-<p>
-पास की एक से अधिक वस्तुएँ → These<br>
-दूर की एक से अधिक वस्तुएँ → Those
-</p>
+<br><br>
 
-<div class="question">
-<b>❓ Quiz:</b><br>
-दूर की कई वस्तुओं के लिए?
+Those are trees.<br>
+वे पेड़ हैं।
 
-<button class="option" onclick="check(this,false)">These</button>
-<button class="option" onclick="check(this,true)">Those</button>
-
-<div class="result"></div>
 </div>
 `
 },
+
+/* 10 */
 
 {
 title:"Is / Am / Are",
+image:"🧒👦👧",
+description:"Basic helping verbs",
 content:`
-<h3 class="lesson-subtitle">📖 Is / Am / Are</h3>
+
+<div class="explanation">
+
+<b>I → am</b><br>
+<b>He / She / It → is</b><br>
+<b>You / We / They → are</b>
+
+</div>
 
 <div class="example">
-I <b>am</b> a boy.<br>
-He <b>is</b> a boy.<br>
-She <b>is</b> a girl.<br>
-They <b>are</b> students.
-</div>
 
-<div class="practice">
-I → am<br>
-He / She / It → is<br>
-You / We / They → are
-</div>
+I am a boy.<br>
+मैं एक लड़का हूँ।
 
-<div class="question">
-<b>❓ Quiz:</b><br>
-I ___ a student.
+<br><br>
 
-<button class="option" onclick="check(this,false)">is</button>
-<button class="option" onclick="check(this,true)">am</button>
-<button class="option" onclick="check(this,false)">are</button>
+She is a girl.<br>
+वह एक लड़की है।
 
-<div class="result"></div>
+<br><br>
+
+They are students.<br>
+वे विद्यार्थी हैं।
+
 </div>
 `
 },
 
+/* 11 */
+
 {
-title:"Opposite Words",
+title:"Opposite Words — विलोम शब्द",
+image:"⬆️⬇️☀️🌙",
+description:"उल्टे अर्थ वाले शब्द",
 content:`
-<h3 class="lesson-subtitle">📖 Opposite Words</h3>
 
 <div class="example">
+
 Big ↔ Small<br>
+बड़ा ↔ छोटा
+
+<br><br>
+
 Hot ↔ Cold<br>
+गरम ↔ ठंडा
+
+<br><br>
+
 Good ↔ Bad<br>
+अच्छा ↔ बुरा
+
+<br><br>
+
 Day ↔ Night<br>
+दिन ↔ रात
+
+<br><br>
+
 Up ↔ Down<br>
-Happy ↔ Sad
-</div>
+ऊपर ↔ नीचे
 
-<div class="question">
-<b>❓ Quiz:</b><br>
-Big का opposite क्या है?
+<br><br>
 
-<button class="option" onclick="check(this,true)">Small</button>
-<button class="option" onclick="check(this,false)">Tall</button>
-<button class="option" onclick="check(this,false)">Good</button>
+Happy ↔ Sad<br>
+खुश ↔ उदास
 
-<div class="result"></div>
 </div>
 `
 },
 
+/* 12 */
+
 {
-title:"One — Many",
+title:"One / Many — एक / अनेक",
+image:"🍎🍎🍎",
+description:"One और Many की पहचान",
 content:`
-<h3 class="lesson-subtitle">📖 One — Many</h3>
 
 <div class="example">
-One boy → Many boys<br>
-One book → Many books<br>
-One apple → Many apples<br>
-One cat → Many cats
-</div>
 
-<div class="question">
-<b>❓ Quiz:</b><br>
-One apple → Many ?
+One apple = एक सेब<br>
+Many apples = बहुत से सेब
 
-<button class="option" onclick="check(this,true)">apples</button>
-<button class="option" onclick="check(this,false)">apple</button>
+<br><br>
 
-<div class="result"></div>
+One boy = एक लड़का<br>
+Many boys = बहुत से लड़के
+
+<br><br>
+
+One book = एक किताब<br>
+Many books = बहुत सी किताबें
+
 </div>
 `
 },
 
+/* 13 */
+
 {
-title:"Basic Vocabulary",
+title:"Basic Vocabulary — सामान्य शब्द",
+image:"📖✏️🎒🏠",
+description:"रोजमर्रा के English words",
 content:`
-<h3 class="lesson-subtitle">📖 Basic English Words</h3>
 
 <div class="example">
+
 Book = किताब<br>
-Pen = कलम<br>
+Pen = पेन<br>
 Bag = बैग<br>
 Table = मेज<br>
 Chair = कुर्सी<br>
 School = विद्यालय<br>
 Water = पानी<br>
-Food = भोजन
+Food = भोजन<br>
+House = घर
+
 </div>
 
-<div class="practice">
-<b>🗣️ Speaking:</b><br>
+<div class="speak-box">
+
+<b>🗣️ Speak:</b><br><br>
+
 This is a book.<br>
-This is a pen.<br>
-This is a bag.
-</div>
+यह एक किताब है।
 
-<div class="question">
-<b>❓ Quiz:</b><br>
-Book का अर्थ क्या है?
-
-<button class="option" onclick="check(this,true)">किताब</button>
-<button class="option" onclick="check(this,false)">कलम</button>
-<button class="option" onclick="check(this,false)">कुर्सी</button>
-
-<div class="result"></div>
 </div>
 `
 },
 
+/* 14 */
+
 {
-title:"Action Words",
+title:"Action Words — कार्य वाले शब्द",
+image:"🏃🧍🍎📖",
+description:"काम करने वाले शब्द",
 content:`
-<h3 class="lesson-subtitle">📖 Action Words</h3>
 
 <div class="example">
+
 Run = दौड़ना<br>
 Walk = चलना<br>
 Jump = कूदना<br>
@@ -851,314 +1081,266 @@ Drink = पीना<br>
 Read = पढ़ना<br>
 Write = लिखना<br>
 Play = खेलना
+
 </div>
 
-<div class="practice">
-<b>🗣️ बोलें:</b><br>
+<div class="speak-box">
+
 I can run.<br>
-I can jump.<br>
-I can read.
-</div>
+मैं दौड़ सकता हूँ।
 
-<div class="question">
-<b>❓ Quiz:</b><br>
-Jump का अर्थ?
+<br><br>
 
-<button class="option" onclick="check(this,false)">खाना</button>
-<button class="option" onclick="check(this,true)">कूदना</button>
-<button class="option" onclick="check(this,false)">पीना</button>
+I can read.<br>
+मैं पढ़ सकता हूँ।
 
-<div class="result"></div>
 </div>
 `
 },
 
+/* 15 */
+
 {
-title:"Family Members",
+title:"Family Members — परिवार",
+image:"👨‍👩‍👧‍👦",
+description:"परिवार के सदस्यों के नाम",
 content:`
-<h3 class="lesson-subtitle">📖 Family Members</h3>
 
 <div class="example">
+
 Father = पिता<br>
 Mother = माता<br>
 Brother = भाई<br>
 Sister = बहन<br>
 Grandfather = दादा / नाना<br>
 Grandmother = दादी / नानी
+
 </div>
 
-<div class="practice">
-<b>🗣️ बोलें:</b><br>
+<div class="speak-box">
+
 This is my father.<br>
+यह मेरे पिता हैं।
+
+<br><br>
+
 This is my mother.<br>
-This is my brother.
-</div>
+यह मेरी माता हैं।
 
-<div class="question">
-<b>❓ Quiz:</b><br>
-Mother का अर्थ?
-
-<button class="option" onclick="check(this,true)">माता</button>
-<button class="option" onclick="check(this,false)">भाई</button>
-<button class="option" onclick="check(this,false)">बहन</button>
-
-<div class="result"></div>
 </div>
 `
 },
 
+/* 16 */
+
 {
-title:"Body Parts",
+title:"Body Parts — शरीर के अंग",
+image:"🧒👁️👂👃",
+description:"शरीर के अंगों के नाम",
 content:`
-<h3 class="lesson-subtitle">📖 Body Parts</h3>
 
 <div class="example">
+
 Head = सिर<br>
 Eye = आँख<br>
 Ear = कान<br>
 Nose = नाक<br>
 Mouth = मुँह<br>
 Hand = हाथ<br>
-Leg = पैर
-</div>
+Leg = पैर<br>
+Foot = पैर का पंजा
 
-<div class="question">
-<b>❓ Quiz:</b><br>
-Eye का अर्थ?
-
-<button class="option" onclick="check(this,true)">आँख</button>
-<button class="option" onclick="check(this,false)">कान</button>
-<button class="option" onclick="check(this,false)">नाक</button>
-
-<div class="result"></div>
 </div>
 `
 },
 
+/* 17 */
+
 {
-title:"Colours",
+title:"Colours — रंग",
+image:"🌈🔴🔵🟢",
+description:"English में colours सीखें",
 content:`
-<h3 class="lesson-subtitle">📖 Colours</h3>
 
 <div class="example">
-Red = लाल<br>
-Blue = नीला<br>
-Green = हरा<br>
-Yellow = पीला<br>
-Black = काला<br>
-White = सफेद<br>
-Pink = गुलाबी
-</div>
 
-<div class="question">
-<b>❓ Quiz:</b><br>
-Grass is usually ___.
+Red = लाल 🔴<br>
+Blue = नीला 🔵<br>
+Green = हरा 🟢<br>
+Yellow = पीला 🟡<br>
+Black = काला ⚫<br>
+White = सफेद ⚪<br>
+Pink = गुलाबी 🩷<br>
+Orange = नारंगी 🟠
 
-<button class="option" onclick="check(this,true)">Green</button>
-<button class="option" onclick="check(this,false)">Blue</button>
-<button class="option" onclick="check(this,false)">Red</button>
-
-<div class="result"></div>
 </div>
 `
 },
 
+/* 18 */
+
 {
-title:"Shapes",
+title:"Shapes — आकृतियाँ",
+image:"⭕🔺⬛▭",
+description:"Basic shapes",
 content:`
-<h3 class="lesson-subtitle">📖 Shapes</h3>
 
 <div class="example">
-Circle = वृत्त<br>
-Square = वर्ग<br>
-Triangle = त्रिभुज<br>
-Rectangle = आयत
+
+Circle = वृत्त ⭕<br>
+Square = वर्ग ⬛<br>
+Triangle = त्रिभुज 🔺<br>
+Rectangle = आयत ▭
+
 </div>
 
-<div class="question">
-<b>❓ Quiz:</b><br>
-Which shape has three sides?
+<div class="speak-box">
 
-<button class="option" onclick="check(this,false)">Circle</button>
-<button class="option" onclick="check(this,true)">Triangle</button>
-<button class="option" onclick="check(this,false)">Square</button>
+This is a circle.<br>
+यह एक वृत्त है।
 
-<div class="result"></div>
 </div>
 `
 },
 
-{
-title:"Numbers",
-content:`
-<h3 class="lesson-subtitle">📖 Numbers 1–20</h3>
+/* 19 COUNTING */
 
-<div class="example">
-1 One<br>
-2 Two<br>
-3 Three<br>
-4 Four<br>
-5 Five<br>
-6 Six<br>
-7 Seven<br>
-8 Eight<br>
-9 Nine<br>
-10 Ten<br>
-11 Eleven<br>
-12 Twelve<br>
-13 Thirteen<br>
-14 Fourteen<br>
-15 Fifteen<br>
-16 Sixteen<br>
-17 Seventeen<br>
-18 Eighteen<br>
-19 Nineteen<br>
-20 Twenty
+{
+title:"Numbers 1–100 — Counting",
+image:"🔢💯",
+description:"1 से 100 तक पूरी Counting",
+counting:true,
+content:`
+
+<div class="explanation">
+
+<b>🔢 Counting / गिनती</b><br><br>
+
+बच्चे 1 से 100 तक Numbers को
+English और Hindi दोनों में सीखें।
+
 </div>
 
-<div class="question">
-<b>❓ Quiz:</b><br>
-5 को English में क्या कहते हैं?
+<div id="countingArea"></div>
 
-<button class="option" onclick="check(this,true)">Five</button>
-<button class="option" onclick="check(this,false)">Four</button>
-<button class="option" onclick="check(this,false)">Six</button>
+`
+},
 
-<div class="result"></div>
+/* 20 */
+
+{
+title:"Days of the Week — सप्ताह के दिन",
+image:"📅☀️",
+description:"Monday से Sunday तक",
+content:`
+
+<div class="example">
+
+1. Monday = सोमवार<br>
+2. Tuesday = मंगलवार<br>
+3. Wednesday = बुधवार<br>
+4. Thursday = गुरुवार<br>
+5. Friday = शुक्रवार<br>
+6. Saturday = शनिवार<br>
+7. Sunday = रविवार
+
 </div>
 `
 },
 
+/* 21 */
+
 {
-title:"Days of the Week",
+title:"Months of the Year — वर्ष के महीने",
+image:"🗓️📆",
+description:"12 Months सीखें",
 content:`
-<h3 class="lesson-subtitle">📖 Days</h3>
 
 <div class="example">
-Monday<br>
-Tuesday<br>
-Wednesday<br>
-Thursday<br>
-Friday<br>
-Saturday<br>
-Sunday
-</div>
 
-<div class="question">
-<b>❓ Quiz:</b><br>
-Sunday के बाद कौन-सा दिन आता है?
+January = जनवरी<br>
+February = फरवरी<br>
+March = मार्च<br>
+April = अप्रैल<br>
+May = मई<br>
+June = जून<br>
+July = जुलाई<br>
+August = अगस्त<br>
+September = सितंबर<br>
+October = अक्टूबर<br>
+November = नवंबर<br>
+December = दिसंबर
 
-<button class="option" onclick="check(this,true)">Monday</button>
-<button class="option" onclick="check(this,false)">Tuesday</button>
-<button class="option" onclick="check(this,false)">Saturday</button>
-
-<div class="result"></div>
 </div>
 `
 },
 
+/* 22 */
+
 {
-title:"Months of the Year",
+title:"Animals — जानवर",
+image:"🐶🐱🦁🐘",
+description:"Common animals के नाम",
 content:`
-<h3 class="lesson-subtitle">📖 Months</h3>
 
 <div class="example">
-January<br>
-February<br>
-March<br>
-April<br>
-May<br>
-June<br>
-July<br>
-August<br>
-September<br>
-October<br>
-November<br>
-December
-</div>
 
-<div class="question">
-<b>❓ Quiz:</b><br>
-January के बाद कौन-सा month आता है?
+Dog = कुत्ता 🐶<br>
+Cat = बिल्ली 🐱<br>
+Cow = गाय 🐄<br>
+Horse = घोड़ा 🐎<br>
+Lion = शेर 🦁<br>
+Tiger = बाघ 🐯<br>
+Elephant = हाथी 🐘<br>
+Monkey = बंदर 🐒
 
-<button class="option" onclick="check(this,true)">February</button>
-<button class="option" onclick="check(this,false)">March</button>
-<button class="option" onclick="check(this,false)">December</button>
-
-<div class="result"></div>
 </div>
 `
 },
 
-{
-title:"Animals",
-content:`
-<h3 class="lesson-subtitle">📖 Animals</h3>
-
-<div class="example">
-Dog = कुत्ता<br>
-Cat = बिल्ली<br>
-Cow = गाय<br>
-Horse = घोड़ा<br>
-Lion = शेर<br>
-Tiger = बाघ<br>
-Elephant = हाथी
-</div>
-
-<div class="question">
-<b>❓ Quiz:</b><br>
-Which animal says "Meow"?
-
-<button class="option" onclick="check(this,true)">Cat</button>
-<button class="option" onclick="check(this,false)">Cow</button>
-<button class="option" onclick="check(this,false)">Lion</button>
-
-<div class="result"></div>
-</div>
-`
-},
+/* 23 */
 
 {
-title:"Fruits & Vegetables",
+title:"Fruits & Vegetables — फल और सब्जियाँ",
+image:"🍎🍌🥕🍅",
+description:"Fruits और Vegetables सीखें",
 content:`
-<h3 class="lesson-subtitle">📖 Fruits</h3>
+
+<h3 class="lesson-subtitle">🍎 Fruits / फल</h3>
 
 <div class="example">
+
 Apple = सेब<br>
 Mango = आम<br>
 Banana = केला<br>
 Orange = संतरा<br>
 Grapes = अंगूर
+
 </div>
 
-<h3 class="lesson-subtitle">🥕 Vegetables</h3>
+<h3 class="lesson-subtitle">🥕 Vegetables / सब्जियाँ</h3>
 
 <div class="example">
+
 Potato = आलू<br>
 Tomato = टमाटर<br>
 Carrot = गाजर<br>
 Onion = प्याज
-</div>
 
-<div class="question">
-<b>❓ Quiz:</b><br>
-Mango क्या है?
-
-<button class="option" onclick="check(this,true)">Fruit</button>
-<button class="option" onclick="check(this,false)">Animal</button>
-<button class="option" onclick="check(this,false)">Colour</button>
-
-<div class="result"></div>
 </div>
 `
 },
 
+/* 24 */
+
 {
-title:"Classroom Objects",
+title:"Classroom Objects — कक्षा की वस्तुएँ",
+image:"🏫📚✏️🎒",
+description:"Classroom में उपयोग होने वाली चीजें",
 content:`
-<h3 class="lesson-subtitle">📖 Classroom Objects</h3>
 
 <div class="example">
+
 Book = किताब<br>
 Pen = पेन<br>
 Pencil = पेंसिल<br>
@@ -1167,262 +1349,238 @@ Bag = बैग<br>
 Chair = कुर्सी<br>
 Table = मेज<br>
 Board = बोर्ड
+
 </div>
 
-<div class="practice">
-<b>🗣️ बोलें:</b><br>
+<div class="speak-box">
+
 This is my book.<br>
-This is my pen.<br>
-This is my bag.
-</div>
+यह मेरी किताब है।
 
-<div class="question">
-<b>❓ Quiz:</b><br>
-We write with a ___.
-
-<button class="option" onclick="check(this,true)">Pencil</button>
-<button class="option" onclick="check(this,false)">Chair</button>
-<button class="option" onclick="check(this,false)">Bag</button>
-
-<div class="result"></div>
 </div>
 `
 },
 
+/* 25 */
+
 {
-title:"Simple Sentences",
+title:"Simple Sentences — सरल वाक्य",
+image:"📝💬",
+description:"छोटे English sentences",
 content:`
-<h3 class="lesson-subtitle">📖 Simple Sentences</h3>
 
 <div class="example">
+
 I am a boy.<br>
+मैं एक लड़का हूँ।
+
+<br><br>
+
 I am a girl.<br>
+मैं एक लड़की हूँ।
+
+<br><br>
+
 This is a book.<br>
-She is a girl.<br>
-He is a boy.<br>
+यह एक किताब है।
+
+<br><br>
+
 I have a pen.<br>
-I like mangoes.
-</div>
+मेरे पास एक पेन है।
 
-<div class="practice">
-<b>✍️ Practice:</b><br><br>
-अपने बारे में 3 sentences लिखें।
-</div>
-
-<div class="question">
-<b>❓ Quiz:</b><br>
-सही sentence कौन-सा है?
-
-<button class="option" onclick="check(this,true)">I am a boy.</button>
-<button class="option" onclick="check(this,false)">I boy am.</button>
-<button class="option" onclick="check(this,false)">Boy am I a.</button>
-
-<div class="result"></div>
-</div>
-`
-},
-
-{
-title:"Question & Answer",
-content:`
-<h3 class="lesson-subtitle">📖 Questions</h3>
-
-<div class="example">
-Q: What is your name?<br>
-A: My name is Rahul.
 <br><br>
-Q: How are you?<br>
-A: I am fine.
+
+I like mangoes.<br>
+मुझे आम पसंद हैं।
+
+</div>
+`
+},
+
+/* 26 */
+
+{
+title:"Question & Answer — प्रश्न और उत्तर",
+image:"❓💬🧒",
+description:"Basic questions और answers",
+content:`
+
+<div class="example">
+
+<b>Q: What is your name?</b><br>
+आपका नाम क्या है?
+
+<br>
+<b>A: My name is Rahul.</b><br>
+मेरा नाम राहुल है।
+
 <br><br>
-Q: Where do you live?<br>
-A: I live in India.
-</div>
 
-<div class="practice">
-<b>🗣️ Practice:</b><br>
-What is your name?<br>
-How are you?
-</div>
+<b>Q: How are you?</b><br>
+आप कैसे हैं?
 
-<div class="question">
-<b>❓ Quiz:</b><br>
-"What is your name?" का answer क्या होगा?
+<br>
+<b>A: I am fine.</b><br>
+मैं ठीक हूँ।
 
-<button class="option" onclick="check(this,true)">
-My name is Rahul.
-</button>
+<br><br>
 
-<button class="option" onclick="check(this,false)">
-I am fine.
-</button>
+<b>Q: Where do you live?</b><br>
+आप कहाँ रहते हैं?
 
-<button class="option" onclick="check(this,false)">
-Good morning.
-</button>
+<br>
+<b>A: I live in India.</b><br>
+मैं भारत में रहता हूँ।
 
-<div class="result"></div>
 </div>
 `
 },
 
-{
-title:"Picture Description",
-content:`
-<h3 class="lesson-subtitle">📖 Picture Description</h3>
+/* 27 */
 
-<p>
-किसी picture को देखकर उसके बारे में छोटे English sentences बोलना सीखें।
-</p>
+{
+title:"Picture Description — चित्र वर्णन",
+image:"🖼️👧🌳☀️",
+description:"Picture देखकर English बोलना",
+content:`
+
+<div class="explanation">
+
+Picture देखकर उसके बारे में छोटे English sentences बोलना सीखें।
+
+</div>
 
 <div class="example">
-This is a boy.<br>
-He is playing.<br>
-He has a ball.<br>
-He is happy.
-</div>
 
-<div class="practice">
-<b>✍️ Practice:</b><br>
-किसी picture को देखकर 3 English sentences बोलें।
-</div>
+This is a girl.<br>
+यह एक लड़की है।
 
-<div class="question">
-<b>❓ Quiz:</b><br>
-Picture में एक girl है। सही sentence?
+<br><br>
 
-<button class="option" onclick="check(this,true)">
-This is a girl.
-</button>
+She is playing.<br>
+वह खेल रही है।
 
-<button class="option" onclick="check(this,false)">
-This are a girl.
-</button>
+<br><br>
 
-<div class="result"></div>
+She has a ball.<br>
+उसके पास एक गेंद है।
+
+<br><br>
+
+She is happy.<br>
+वह खुश है।
+
 </div>
 `
 },
 
+/* 28 */
+
 {
-title:"Reading Practice",
+title:"Reading Practice — पढ़ने का अभ्यास",
+image:"📖👦",
+description:"छोटे English paragraph पढ़ें",
 content:`
-<h3 class="lesson-subtitle">📖 Read Aloud</h3>
 
 <div class="example">
+
+<b>My Cat</b>
+
+<br><br>
+
 This is a cat.<br>
 The cat is small.<br>
 The cat can run.<br>
 The cat is happy.
+
 </div>
 
-<h3 class="lesson-subtitle">🗣️ Reading Practice</h3>
+<div class="speak-box">
 
-<p>
-ऊपर दिए गए sentences को धीरे-धीरे और साफ आवाज में पढ़ें।
-</p>
+🗣️ इस paragraph को धीरे-धीरे
+और साफ आवाज में 3 बार पढ़ें।
 
-<div class="practice">
-<b>Task:</b><br>
-इस paragraph को 3 बार पढ़ें।
-</div>
-
-<div class="question">
-<b>❓ Quiz:</b><br>
-The cat is ___.
-
-<button class="option" onclick="check(this,true)">small</button>
-<button class="option" onclick="check(this,false)">big</button>
-<button class="option" onclick="check(this,false)">blue</button>
-
-<div class="result"></div>
 </div>
 `
 },
 
-{
-title:"Writing Practice",
-content:`
-<h3 class="lesson-subtitle">✍️ Writing Practice</h3>
+/* 29 */
 
-<div class="practice">
-<b>Practice 1:</b><br>
+{
+title:"Writing Practice — लिखने का अभ्यास",
+image:"✍️📖",
+description:"English लिखने का अभ्यास",
+content:`
+
+<div class="practice-box">
+
+<b>✍️ Practice 1</b><br>
 A a, B b, C c, D d, E e लिखें।
+
 <br><br>
 
-<b>Practice 2:</b><br>
+<b>✍️ Practice 2</b><br>
 10 English words लिखें।
+
 <br><br>
 
-<b>Practice 3:</b><br>
-5 छोटे English sentences लिखें।
+<b>✍️ Practice 3</b><br>
+अपने बारे में 5 छोटे English sentences लिखें।
+
 </div>
 
 <div class="example">
-Example:<br>
-1. I am a boy.<br>
-2. I have a pen.<br>
-3. This is a book.<br>
-4. I like mango.<br>
-5. I go to school.
-</div>
 
-<div class="question">
-<b>❓ Quiz:</b><br>
-"I am a student." में पहला शब्द क्या है?
+<b>Example:</b><br><br>
 
-<button class="option" onclick="check(this,true)">I</button>
-<button class="option" onclick="check(this,false)">am</button>
-<button class="option" onclick="check(this,false)">student</button>
+My name is Rahul.<br>
+I am a boy.<br>
+I am a student.<br>
+I like mangoes.<br>
+I live in India.
 
-<div class="result"></div>
 </div>
 `
 },
 
+/* 30 */
+
 {
-title:"Basic Conversation",
+title:"Basic Conversation — बातचीत",
+image:"🧒🧒💬",
+description:"दो बच्चों की basic English conversation",
 content:`
-<h3 class="lesson-subtitle">🗣️ Basic Conversation</h3>
 
 <div class="example">
-A: Hello!<br>
-B: Hello!
+
+<b>👦 A:</b> Hello!<br>
+<b>👧 B:</b> Hello!
+
 <br><br>
 
-A: What is your name?<br>
-B: My name is Rahul.
+<b>👦 A:</b> What is your name?<br>
+<b>👧 B:</b> My name is Rahul.
+
 <br><br>
 
-A: How are you?<br>
-B: I am fine.
+<b>👦 A:</b> How are you?<br>
+<b>👧 B:</b> I am fine.
+
 <br><br>
 
-A: Thank you.<br>
-B: Welcome.
+<b>👦 A:</b> Thank you.<br>
+<b>👧 B:</b> Welcome.
+
 </div>
 
-<div class="practice">
-<b>🎤 Speaking Practice:</b><br><br>
-दो बच्चे A और B बनकर इस conversation को बोलें।
-</div>
+<div class="speak-box">
 
-<div class="question">
-<b>❓ Quiz:</b><br>
-"How are you?" का सही answer?
+<b>🗣️ Speaking Practice:</b><br><br>
 
-<button class="option" onclick="check(this,true)">
-I am fine.
-</button>
+दो बच्चे A और B बनकर
+इस conversation को बोलें।
 
-<button class="option" onclick="check(this,false)">
-My name is Rahul.
-</button>
-
-<button class="option" onclick="check(this,false)">
-Good night.
-</button>
-
-<div class="result"></div>
 </div>
 `
 }
@@ -1430,97 +1588,610 @@ Good night.
 ];
 
 
-/* =========================================
+/* =====================================================
+   HINDI COUNTING DATA
+===================================================== */
+
+const hindiNumbers = [
+
+"शून्य",
+"एक","दो","तीन","चार","पाँच","छह","सात","आठ","नौ","दस",
+"ग्यारह","बारह","तेरह","चौदह","पंद्रह","सोलह","सत्रह","अठारह","उन्नीस","बीस",
+"इक्कीस","बाईस","तेईस","चौबीस","पच्चीस","छब्बीस","सत्ताईस","अट्ठाईस","उनतीस","तीस",
+"इकतीस","बत्तीस","तैंतीस","चौंतीस","पैंतीस","छत्तीस","सैंतीस","अड़तीस","उनतालीस","चालीस",
+"इकतालीस","बयालीस","तैंतालीस","चवालीस","पैंतालीस","छियालीस","सैंतालीस","अड़तालीस","उनचास","पचास",
+"इक्यावन","बावन","तिरेपन","चौवन","पचपन","छप्पन","सत्तावन","अट्ठावन","उनसठ","साठ",
+"इकसठ","बासठ","तिरसठ","चौंसठ","पैंसठ","छियासठ","सड़सठ","अड़सठ","उनहत्तर","सत्तर",
+"इकहत्तर","बहत्तर","तिहत्तर","चौहत्तर","पचहत्तर","छिहत्तर","सतहत्तर","अठहत्तर","उन्नासी","अस्सी",
+"इक्यासी","बयासी","तिरासी","चौरासी","पचासी","छियासी","सतासी","अट्ठासी","नवासी","नब्बे",
+"इक्यानवे","बानवे","तिरानवे","चौरानवे","पंचानवे","छियानवे","सत्तानवे","अट्ठानवे","निन्यानवे","एक सौ"
+];
+
+
+/* =====================================================
+   ENGLISH NUMBERS
+===================================================== */
+
+const englishNumbers = [
+
+"Zero",
+"One","Two","Three","Four","Five","Six","Seven","Eight","Nine","Ten",
+"Eleven","Twelve","Thirteen","Fourteen","Fifteen","Sixteen","Seventeen","Eighteen","Nineteen","Twenty",
+"Twenty-one","Twenty-two","Twenty-three","Twenty-four","Twenty-five","Twenty-six","Twenty-seven","Twenty-eight","Twenty-nine","Thirty",
+"Thirty-one","Thirty-two","Thirty-three","Thirty-four","Thirty-five","Thirty-six","Thirty-seven","Thirty-eight","Thirty-nine","Forty",
+"Forty-one","Forty-two","Forty-three","Forty-four","Forty-five","Forty-six","Forty-seven","Forty-eight","Forty-nine","Fifty",
+"Fifty-one","Fifty-two","Fifty-three","Fifty-four","Fifty-five","Fifty-six","Fifty-seven","Fifty-eight","Fifty-nine","Sixty",
+"Sixty-one","Sixty-two","Sixty-three","Sixty-four","Sixty-five","Sixty-six","Sixty-seven","Sixty-eight","Sixty-nine","Seventy",
+"Seventy-one","Seventy-two","Seventy-three","Seventy-four","Seventy-five","Seventy-six","Seventy-seven","Seventy-eight","Seventy-nine","Eighty",
+"Eighty-one","Eighty-two","Eighty-three","Eighty-four","Eighty-five","Eighty-six","Eighty-seven","Eighty-eight","Eighty-nine","Ninety",
+"Ninety-one","Ninety-two","Ninety-three","Ninety-four","Ninety-five","Ninety-six","Ninety-seven","Ninety-eight","Ninety-nine","One hundred"
+];
+
+
+/* =====================================================
    VARIABLES
-========================================= */
+===================================================== */
 
 let currentLesson = 0;
 
 let completed = new Array(30).fill(false);
 
+let quizScore = 0;
 
-/* =========================================
-   CREATE TOPIC BUTTONS
-========================================= */
+
+/* =====================================================
+   TOPIC IMAGES
+===================================================== */
+
+const topicImages = [
+
+"👦📚🏫🐶",
+"👦👧🧒",
+"🏃🍎📖✍️",
+"🍎🏠🐱⭐",
+"🔤📖",
+"🍎🍎📚",
+"👦👧👨👩",
+"👉📖🌳",
+"📚🌳🌳",
+"🧒👦👧",
+"⬆️⬇️☀️🌙",
+"🍎🍎🍎",
+"📖✏️🎒🏠",
+"🏃🧍🍎📖",
+"👨‍👩‍👧‍👦",
+"🧒👁️👂👃",
+"🌈🔴🔵🟢",
+"⭕🔺⬛▭",
+"🔢💯",
+"📅☀️",
+"🗓️📆",
+"🐶🐱🦁🐘",
+"🍎🍌🥕🍅",
+"🏫📚✏️🎒",
+"📝💬",
+"❓💬🧒",
+"🖼️👧🌳☀️",
+"📖👦",
+"✍️📖",
+"🧒🧒💬"
+
+];
+
+
+/* =====================================================
+   CREATE TOPICS
+===================================================== */
 
 function createTopics(){
 
-    const box = document.getElementById("topicButtons");
+    const grid = document.getElementById("topicGrid");
 
-    box.innerHTML = "";
+    grid.innerHTML="";
 
     lessons.forEach((lesson,index)=>{
 
-        const button = document.createElement("button");
+        const card = document.createElement("div");
 
-        button.className = "topic-btn";
+        card.className="topic-card";
 
-        button.innerHTML =
-        `<span class="topic-number">${index+1}.</span>
-        ${lesson.title}`;
+        card.innerHTML=`
 
-        button.onclick = function(){
+            <div class="topic-image">
+                ${topicImages[index]}
+            </div>
+
+            <h3>
+                ${index+1}. ${lesson.title}
+            </h3>
+
+            <p>
+                ${lesson.description}
+            </p>
+
+            <button class="learn-btn">
+                📖 Learn Lesson
+            </button>
+
+        `;
+
+        card.onclick=function(){
 
             openLesson(index);
 
         };
 
-        box.appendChild(button);
+        grid.appendChild(card);
 
     });
 
 }
 
 
-/* =========================================
+/* =====================================================
    SHOW TOPICS
-========================================= */
+===================================================== */
 
 function showTopics(){
 
-    document.getElementById("topicList").style.display="block";
+    document.getElementById("topicSection").style.display="block";
 
-    document.getElementById("lessonArea").style.display="none";
+    document.getElementById("lessonSection").style.display="none";
 
     window.scrollTo({
-        top:document.getElementById("topicList").offsetTop-10,
+
+        top:document.getElementById("topicSection").offsetTop-10,
+
         behavior:"smooth"
+
     });
 
 }
 
 
-/* =========================================
+/* =====================================================
    OPEN LESSON
-========================================= */
+===================================================== */
 
 function openLesson(index){
 
     currentLesson=index;
 
-    document.getElementById("topicList").style.display="none";
+    quizScore=0;
 
-    document.getElementById("lessonArea").style.display="block";
+    document.getElementById("topicSection").style.display="none";
 
-    document.getElementById("lessonTitle").innerHTML =
-    "Lesson " + (index+1) + ": " + lessons[index].title;
+    document.getElementById("lessonSection").style.display="block";
 
-    document.getElementById("lessonContent").innerHTML =
-    lessons[index].content;
+    const lesson=lessons[index];
 
-    document.getElementById("lessonScore").innerHTML="";
+    document.getElementById("lessonImage").innerHTML=
+    lesson.image;
+
+    document.getElementById("lessonTitle").innerHTML=
+    "Lesson "+(index+1)+" — "+lesson.title;
+
+    document.getElementById("lessonContent").innerHTML=
+    lesson.content;
+
+    document.getElementById("quizArea").innerHTML="";
+
+    document.getElementById("completeMessage").innerHTML="";
+
+    if(lesson.counting){
+
+        createCounting();
+
+    }
+
+    createQuiz(index);
 
     window.scrollTo({
-        top:document.getElementById("lessonArea").offsetTop-10,
+
+        top:document.getElementById("lessonSection").offsetTop-10,
+
         behavior:"smooth"
+
     });
 
 }
 
 
-/* =========================================
+/* =====================================================
+   COUNTING 1-100
+===================================================== */
+
+function createCounting(){
+
+    const area=document.getElementById("countingArea");
+
+    if(!area) return;
+
+    area.innerHTML="";
+
+    const grid=document.createElement("div");
+
+    grid.className="counting-grid";
+
+    for(let i=1;i<=100;i++){
+
+        const card=document.createElement("div");
+
+        card.className="number-card";
+
+        card.innerHTML=`
+
+            <b>${i}</b>
+
+            <span>${englishNumbers[i]}</span>
+
+            <small>${hindiNumbers[i]}</small>
+
+            <button
+            onclick="speakNumber(${i})"
+            style="
+            border:0;
+            background:#7c3aed;
+            color:white;
+            border-radius:6px;
+            padding:4px 7px;
+            margin-top:5px;
+            cursor:pointer;
+            ">
+            🔊
+            </button>
+
+        `;
+
+        grid.appendChild(card);
+
+    }
+
+    area.appendChild(grid);
+
+}
+
+
+/* =====================================================
+   SPEAK NUMBER
+===================================================== */
+
+function speakNumber(number){
+
+    if(!("speechSynthesis" in window)){
+
+        alert("आपके browser में voice सुविधा उपलब्ध नहीं है।");
+
+        return;
+
+    }
+
+    const text=englishNumbers[number];
+
+    const speech=new SpeechSynthesisUtterance(text);
+
+    speech.lang="en-US";
+
+    speech.rate=.75;
+
+    speechSynthesis.cancel();
+
+    speechSynthesis.speak(speech);
+
+}
+
+
+/* =====================================================
+   QUIZ DATABASE
+===================================================== */
+
+const quizzes = {
+
+0:{
+q:"Which is a Noun? / इनमें Noun कौन है?",
+options:["Run","Boy","Quickly"],
+answer:1
+},
+
+1:{
+q:"Ram is a boy. ___ is a boy.",
+options:["He","She","They"],
+answer:0
+},
+
+2:{
+q:"Which is a Verb?",
+options:["Book","Run","Boy"],
+answer:1
+},
+
+3:{
+q:"Red apple में Adjective कौन-सा है?",
+options:["Red","Apple","The"],
+answer:0
+},
+
+4:{
+q:"___ apple",
+options:["A","An","The"],
+answer:1
+},
+
+5:{
+q:"One book → Two ___",
+options:["book","books","bookes"],
+answer:1
+},
+
+6:{
+q:"Boy का feminine क्या है?",
+options:["Girl","Man","Father"],
+answer:0
+},
+
+7:{
+q:"पास की एक वस्तु के लिए?",
+options:["This","That"],
+answer:0
+},
+
+8:{
+q:"दूर की कई वस्तुओं के लिए?",
+options:["These","Those"],
+answer:1
+},
+
+9:{
+q:"I ___ a student.",
+options:["is","am","are"],
+answer:1
+},
+
+10:{
+q:"Big का opposite क्या है?",
+options:["Small","Good","Tall"],
+answer:0
+},
+
+11:{
+q:"One apple → Many ___",
+options:["apple","apples"],
+answer:1
+},
+
+12:{
+q:"Book का Hindi meaning क्या है?",
+options:["किताब","पेन","कुर्सी"],
+answer:0
+},
+
+13:{
+q:"Jump का अर्थ क्या है?",
+options:["खाना","कूदना","पीना"],
+answer:1
+},
+
+14:{
+q:"Mother का अर्थ क्या है?",
+options:["माता","भाई","बहन"],
+answer:0
+},
+
+15:{
+q:"Eye का अर्थ क्या है?",
+options:["आँख","कान","नाक"],
+answer:0
+},
+
+16:{
+q:"Grass is usually ___",
+options:["Red","Blue","Green"],
+answer:2
+},
+
+17:{
+q:"Which shape has three sides?",
+options:["Circle","Triangle","Square"],
+answer:1
+},
+
+18:{
+q:"5 को English में क्या कहते हैं?",
+options:["Four","Five","Six"],
+answer:1
+},
+
+19:{
+q:"Sunday के बाद कौन-सा दिन आता है?",
+options:["Monday","Tuesday","Saturday"],
+answer:0
+},
+
+20:{
+q:"January के बाद कौन-सा month आता है?",
+options:["March","February","December"],
+answer:1
+},
+
+21:{
+q:"Which animal says Meow?",
+options:["Cat","Cow","Lion"],
+answer:0
+},
+
+22:{
+q:"Mango क्या है?",
+options:["Fruit","Animal","Colour"],
+answer:0
+},
+
+23:{
+q:"We write with a ___",
+options:["Pencil","Chair","Bag"],
+answer:0
+},
+
+24:{
+q:"सही sentence कौन-सा है?",
+options:[
+"I am a boy.",
+"I boy am.",
+"Boy am I a."
+],
+answer:0
+},
+
+25:{
+q:"What is your name? का सही answer?",
+options:[
+"My name is Rahul.",
+"I am fine.",
+"Good night."
+],
+answer:0
+},
+
+26:{
+q:"एक girl के लिए सही sentence?",
+options:[
+"This is a girl.",
+"This are a girl.",
+"This is boy."
+],
+answer:0
+},
+
+27:{
+q:"The cat is ___",
+options:["small","big","blue"],
+answer:0
+},
+
+28:{
+q:"सही sentence चुनें।",
+options:[
+"I am a student.",
+"I student am.",
+"Student I am a."
+],
+answer:0
+},
+
+29:{
+q:"How are you? का सही answer?",
+options:[
+"My name is Rahul.",
+"I am fine.",
+"Thank you."
+],
+answer:1
+}
+
+};
+
+
+/* =====================================================
+   CREATE QUIZ
+===================================================== */
+
+function createQuiz(index){
+
+    const quiz=quizzes[index];
+
+    if(!quiz) return;
+
+    const area=document.getElementById("quizArea");
+
+    area.innerHTML=`
+
+        <div class="quiz-box">
+
+            <div class="quiz-question">
+                ❓ ${quiz.q}
+            </div>
+
+            <div id="optionsArea"></div>
+
+            <div class="quiz-result"
+            id="quizResult"></div>
+
+        </div>
+
+    `;
+
+    const optionsArea=document.getElementById("optionsArea");
+
+    quiz.options.forEach((option,i)=>{
+
+        const button=document.createElement("button");
+
+        button.className="option";
+
+        button.innerHTML=option;
+
+        button.onclick=function(){
+
+            checkAnswer(button,i,index);
+
+        };
+
+        optionsArea.appendChild(button);
+
+    });
+
+}
+
+
+/* =====================================================
+   CHECK ANSWER
+===================================================== */
+
+function checkAnswer(button,selected,index){
+
+    const quiz=quizzes[index];
+
+    const buttons=document.querySelectorAll(".option");
+
+    buttons.forEach(btn=>{
+
+        btn.disabled=true;
+
+    });
+
+    const result=document.getElementById("quizResult");
+
+    if(selected===quiz.answer){
+
+        button.classList.add("correct");
+
+        result.innerHTML=
+        "✅ सही उत्तर! Very Good! / बहुत बढ़िया!";
+
+        result.style.color="#15803d";
+
+        completed[index]=true;
+
+        updateProgress();
+
+    }else{
+
+        button.classList.add("wrong");
+
+        buttons[quiz.answer].classList.add("correct");
+
+        result.innerHTML=
+        "❌ गलत उत्तर। सही उत्तर ऊपर हरे रंग में है।";
+
+        result.style.color="#dc2626";
+
+    }
+
+}
+
+
+/* =====================================================
    NEXT LESSON
-========================================= */
+===================================================== */
 
 function nextLesson(){
 
@@ -1528,27 +2199,38 @@ function nextLesson(){
 
     updateProgress();
 
-    if(currentLesson < lessons.length-1){
+    if(currentLesson<lessons.length-1){
 
         openLesson(currentLesson+1);
 
     }else{
 
-        document.getElementById("lessonScore").innerHTML =
-        "🎉 बहुत बढ़िया! आपने Class 1 के सभी 30 Lessons पूरे कर लिए हैं।";
+        document.getElementById("completeMessage").innerHTML=`
+
+            <div class="complete">
+
+                🎉 Congratulations! 🎉<br><br>
+
+                आपने Class 1 English के सभी 30 Lessons पूरे कर लिए हैं।<br>
+
+                आपने English सीखने की शानदार शुरुआत की है! ⭐
+
+            </div>
+
+        `;
 
     }
 
 }
 
 
-/* =========================================
+/* =====================================================
    PREVIOUS LESSON
-========================================= */
+===================================================== */
 
 function previousLesson(){
 
-    if(currentLesson > 0){
+    if(currentLesson>0){
 
         openLesson(currentLesson-1);
 
@@ -1561,65 +2243,28 @@ function previousLesson(){
 }
 
 
-/* =========================================
-   QUIZ CHECK
-========================================= */
-
-function check(button,isCorrect){
-
-    const parent=button.parentElement;
-
-    const result=parent.querySelector(".result");
-
-    const options=parent.querySelectorAll(".option");
-
-    options.forEach(function(btn){
-
-        btn.disabled=true;
-
-    });
-
-    if(isCorrect){
-
-        button.classList.add("correct");
-
-        result.innerHTML="✅ सही उत्तर! बहुत बढ़िया!";
-
-        result.style.color="#16a34a";
-
-    }else{
-
-        button.classList.add("wrong");
-
-        result.innerHTML="❌ गलत उत्तर। फिर से Lesson पढ़ें।";
-
-        result.style.color="#dc2626";
-
-    }
-
-}
-
-
-/* =========================================
+/* =====================================================
    PROGRESS
-========================================= */
+===================================================== */
 
 function updateProgress(){
 
-    let count=completed.filter(Boolean).length;
+    const count=completed.filter(Boolean).length;
 
-    document.getElementById("progressText").innerHTML =
-    count + " / 30 Lessons Completed";
+    document.getElementById("progressText").innerHTML=
 
-    document.getElementById("progressFill").style.width =
-    ((count/30)*100) + "%";
+    count+" / 30 Lessons Completed";
+
+    document.getElementById("progressFill").style.width=
+
+    ((count/30)*100)+"%";
 
 }
 
 
-/* =========================================
-   START
-========================================= */
+/* =====================================================
+   INITIALIZE
+===================================================== */
 
 createTopics();
 
