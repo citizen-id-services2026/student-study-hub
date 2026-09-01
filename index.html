@@ -4,12 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Class 1 English Master Course</title>
+<title>🌈 My English World - Class 1</title>
 
 <style>
 
+/* =====================================================
+   BASIC
+===================================================== */
+
 *{
     box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
 
 html{
@@ -17,451 +23,1058 @@ html{
 }
 
 body{
-    margin:0;
-    font-family:Arial,"Noto Sans Devanagari",sans-serif;
-    background:linear-gradient(135deg,#fff7ed,#eff6ff,#f0fdf4);
+    font-family:
+    Arial,
+    "Noto Sans Devanagari",
+    sans-serif;
+
+    background:
+    linear-gradient(
+        135deg,
+        #fff7ad,
+        #ffd6e7,
+        #d8f3ff,
+        #d9ffd8
+    );
+
     color:#172033;
+    min-height:100vh;
 }
 
-/* HEADER */
+/* =====================================================
+   HEADER
+===================================================== */
 
 header{
-    background:linear-gradient(135deg,#7c3aed,#2563eb,#06b6d4);
+    background:
+    linear-gradient(
+        135deg,
+        #ff4d6d,
+        #ff8c42,
+        #ffd23f,
+        #38d9a9,
+        #339af0,
+        #845ef7
+    );
+
+    background-size:400% 400%;
+
+    animation:
+    gradientMove 10s ease infinite;
+
     color:white;
     text-align:center;
-    padding:25px 12px;
-    box-shadow:0 5px 20px #0003;
+    padding:28px 12px;
+
+    border-bottom-left-radius:35px;
+    border-bottom-right-radius:35px;
+
+    box-shadow:
+    0 8px 25px #0003;
+}
+
+@keyframes gradientMove{
+
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+
 }
 
 header h1{
-    margin:0;
-    font-size:30px;
+    font-size:34px;
+    text-shadow:
+    3px 3px 0 #0003;
 }
 
 header p{
-    margin:10px 0 0;
-    font-size:17px;
-}
-
-/* SOUND */
-
-.sound-box{
-    text-align:center;
-    padding:15px;
-}
-
-.sound-btn{
-    border:0;
-    border-radius:30px;
-    padding:13px 25px;
-    background:#111827;
-    color:white;
-    font-size:16px;
-    cursor:pointer;
-}
-
-/* HERO */
-
-.hero{
-    max-width:1100px;
-    margin:20px auto;
-    padding:15px;
-}
-
-.hero-card{
-    background:white;
-    border-radius:25px;
-    padding:25px;
-    text-align:center;
-    box-shadow:0 8px 25px #0002;
-}
-
-.hero-icon{
-    font-size:70px;
-}
-
-.hero h2{
-    color:#7c3aed;
-}
-
-.hero p{
+    margin-top:8px;
     font-size:18px;
-    line-height:1.7;
 }
 
-/* PROGRESS */
+/* =====================================================
+   TOP BUTTONS
+===================================================== */
 
-.progress-area{
-    max-width:900px;
-    margin:auto;
-    padding:10px 15px;
-}
+.topButtons{
 
-.progress-text{
-    text-align:center;
-    font-weight:bold;
-    margin-bottom:8px;
-}
+    display:flex;
+    justify-content:center;
+    align-items:center;
 
-.progress{
-    height:20px;
-    background:#e5e7eb;
-    border-radius:20px;
-    overflow:hidden;
-}
+    flex-wrap:wrap;
 
-.progress-bar{
-    height:100%;
-    width:0%;
-    background:linear-gradient(90deg,#22c55e,#06b6d4);
-    transition:.4s;
-}
+    gap:10px;
 
-/* CONTAINER */
-
-.container{
-    max-width:1100px;
-    margin:auto;
     padding:15px;
 }
 
-.title{
-    text-align:center;
-    color:#1d4ed8;
-}
+.topBtn{
 
-/* LESSON GRID */
-
-.lesson-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:15px;
-    margin-top:20px;
-}
-
-.lesson-btn{
     border:0;
-    background:white;
-    border-radius:20px;
-    padding:18px 10px;
-    min-height:145px;
+
+    padding:13px 20px;
+
+    border-radius:30px;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:bold;
+
     cursor:pointer;
-    box-shadow:0 5px 16px #0002;
+
+    box-shadow:
+    0 5px 0 #0003;
+
     transition:.2s;
 }
 
-.lesson-btn:hover{
-    transform:translateY(-5px);
+.topBtn:hover{
+    transform:translateY(-3px);
 }
 
-.lesson-btn.completed{
-    border:4px solid #22c55e;
+.topBtn:active{
+    transform:translateY(2px);
+    box-shadow:0 2px 0 #0003;
 }
 
-.lesson-icon{
-    font-size:45px;
+.soundBtn{
+    background:#111827;
 }
 
-.lesson-number{
-    color:#7c3aed;
-    font-weight:bold;
-    margin-top:5px;
+.resetBtn{
+    background:#ef4444;
 }
 
-.lesson-name{
-    font-size:17px;
-    font-weight:bold;
-    margin-top:5px;
+/* =====================================================
+   MAIN
+===================================================== */
+
+.container{
+
+    width:94%;
+    max-width:1150px;
+
+    margin:auto;
 }
 
-.lesson-hi{
-    color:#64748b;
-    font-size:14px;
-    margin-top:5px;
-}
+/* =====================================================
+   WELCOME
+===================================================== */
 
-/* COURSE AREA */
+.welcome{
 
-#courseArea{
-    display:none;
-    margin-top:25px;
-}
-
-.course-card{
     background:white;
-    border-radius:25px;
+
+    border-radius:30px;
+
     padding:25px;
-    box-shadow:0 8px 30px #0002;
-}
 
-.lesson-heading{
     text-align:center;
+
+    box-shadow:
+    0 8px 25px #0002;
+
+    margin-bottom:22px;
+
+    border:5px solid #fff;
 }
 
-.big-icon{
-    font-size:80px;
+.welcomeEmoji{
+
+    font-size:70px;
+
+    animation:
+    bounce 2s infinite;
 }
 
-.lesson-heading h2{
+@keyframes bounce{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+
+}
+
+.welcome h2{
+
     color:#7c3aed;
-    margin:5px;
+
+    font-size:28px;
+
+    margin:8px 0;
 }
 
-.lesson-heading p{
-    color:#64748b;
-}
+.welcome p{
 
-/* LESSON CONTENT */
+    font-size:17px;
 
-.lesson-content{
-    font-size:18px;
     line-height:1.8;
-    background:#f8fafc;
+}
+
+/* =====================================================
+   PROGRESS
+===================================================== */
+
+.progressBox{
+
+    background:white;
+
     padding:18px;
-    border-radius:18px;
+
+    border-radius:22px;
+
+    box-shadow:
+    0 6px 20px #0002;
+
+    margin-bottom:25px;
+}
+
+.progressTitle{
+
+    text-align:center;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    margin-bottom:10px;
+}
+
+.progress{
+
+    height:25px;
+
+    background:#e5e7eb;
+
+    border-radius:30px;
+
+    overflow:hidden;
+}
+
+.progressBar{
+
+    height:100%;
+
+    width:0%;
+
+    border-radius:30px;
+
+    background:
+    linear-gradient(
+        90deg,
+        #ff4d6d,
+        #ffd43b,
+        #20c997,
+        #339af0,
+        #845ef7
+    );
+
+    transition:.5s;
+}
+
+/* =====================================================
+   LESSON TITLE
+===================================================== */
+
+.sectionTitle{
+
+    text-align:center;
+
+    color:#6d28d9;
+
+    font-size:27px;
+
+    margin:25px 0 15px;
+
+    text-shadow:
+    2px 2px #fff;
+}
+
+/* =====================================================
+   LESSON GRID
+===================================================== */
+
+.lessonGrid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:17px;
+
+    margin-bottom:30px;
+}
+
+/* =====================================================
+   LESSON CARD
+===================================================== */
+
+.lessonCard{
+
+    position:relative;
+
+    border:0;
+
+    min-height:190px;
+
+    border-radius:28px;
+
+    padding:18px 10px;
+
+    cursor:pointer;
+
+    color:#172033;
+
+    background:white;
+
+    box-shadow:
+    0 8px 18px #0002;
+
+    transition:
+    transform .25s,
+    box-shadow .25s;
+
+    overflow:hidden;
+}
+
+.lessonCard::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:90px;
+    height:90px;
+
+    border-radius:50%;
+
+    right:-25px;
+    top:-25px;
+
+    background:#ffffff66;
+}
+
+.lessonCard:hover{
+
+    transform:
+    translateY(-8px)
+    rotate(-1deg);
+
+    box-shadow:
+    0 14px 25px #0003;
+}
+
+.lessonCard:active{
+
+    transform:
+    scale(.96);
+}
+
+.lessonCard:nth-child(1){border:5px solid #ff6b6b}
+.lessonCard:nth-child(2){border:5px solid #ffa94d}
+.lessonCard:nth-child(3){border:5px solid #ffd43b}
+.lessonCard:nth-child(4){border:5px solid #69db7c}
+.lessonCard:nth-child(5){border:5px solid #38d9a9}
+.lessonCard:nth-child(6){border:5px solid #22b8cf}
+.lessonCard:nth-child(7){border:5px solid #339af0}
+.lessonCard:nth-child(8){border:5px solid #748ffc}
+.lessonCard:nth-child(9){border:5px solid #9775fa}
+.lessonCard:nth-child(10){border:5px solid #da77f2}
+.lessonCard:nth-child(11){border:5px solid #f06595}
+.lessonCard:nth-child(12){border:5px solid #ff8787}
+.lessonCard:nth-child(13){border:5px solid #ffa94d}
+.lessonCard:nth-child(14){border:5px solid #82c91e}
+.lessonCard:nth-child(15){border:5px solid #20c997}
+.lessonCard:nth-child(16){border:5px solid #15aabf}
+.lessonCard:nth-child(17){border:5px solid #339af0}
+.lessonCard:nth-child(18){border:5px solid #5c7cfa}
+.lessonCard:nth-child(19){border:5px solid #845ef7}
+.lessonCard:nth-child(20){border:5px solid #be4bdb}
+.lessonCard:nth-child(21){border:5px solid #e64980}
+.lessonCard:nth-child(22){border:5px solid #f03e3e}
+.lessonCard:nth-child(23){border:5px solid #fd7e14}
+.lessonCard:nth-child(24){border:5px solid #fab005}
+.lessonCard:nth-child(25){border:5px solid #40c057}
+.lessonCard:nth-child(26){border:5px solid #12b886}
+.lessonCard:nth-child(27){border:5px solid #1098ad}
+.lessonCard:nth-child(28){border:5px solid #228be6}
+.lessonCard:nth-child(29){border:5px solid #6741d9}
+.lessonCard:nth-child(30){border:5px solid #ae3ec9}
+
+.lessonIcon{
+
+    font-size:55px;
+
+    margin-bottom:8px;
+}
+
+.lessonNumber{
+
+    font-size:14px;
+
+    font-weight:bold;
+
+    color:#64748b;
+
+    margin-bottom:4px;
+}
+
+.lessonName{
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    color:#4c1d95;
+}
+
+.lessonHindi{
+
+    margin-top:5px;
+
+    font-size:14px;
+
+    color:#475569;
+}
+
+.completed{
+
+    margin-top:8px;
+
+    color:#16a34a;
+
+    font-weight:bold;
+}
+
+/* =====================================================
+   COURSE AREA
+===================================================== */
+
+#course{
+
+    display:none;
+
+    margin:30px 0;
+}
+
+.courseCard{
+
+    background:white;
+
+    border-radius:32px;
+
+    padding:25px;
+
+    box-shadow:
+    0 10px 30px #0002;
+
+    border:5px solid white;
+}
+
+/* =====================================================
+   LESSON HEADER
+===================================================== */
+
+.lessonHeader{
+
+    text-align:center;
+
+    padding:10px;
+}
+
+.lessonBigIcon{
+
+    font-size:80px;
+
+    animation:
+    bounce 2s infinite;
+}
+
+.lessonHeader h2{
+
+    color:#7c3aed;
+
+    font-size:28px;
+
+    margin:7px;
+}
+
+.lessonHeader p{
+
+    color:#475569;
+
+    font-size:17px;
+}
+
+/* =====================================================
+   VISUAL BOX
+===================================================== */
+
+.visualBox{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:18px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #fff3bf,
+        #ffd8e8,
+        #d0ebff
+    );
+
+    border-radius:25px;
+
+    padding:20px;
+
     margin:20px 0;
 }
 
-.example{
-    background:#eff6ff;
-    border-left:6px solid #2563eb;
-    border-radius:12px;
-    padding:13px;
-    margin:10px 0;
-}
+.visualItem{
 
-/* QUESTION */
+    background:white;
 
-.question-card{
-    background:linear-gradient(135deg,#fff7ed,#fefce8);
-    border-radius:22px;
-    padding:22px;
-    border:3px solid #f59e0b;
-}
+    border-radius:20px;
 
-.question-number{
+    padding:15px;
+
     text-align:center;
-    color:#7c3aed;
-    font-size:19px;
+
+    min-width:100px;
+
+    box-shadow:
+    0 5px 15px #0002;
+
+    font-size:17px;
+
     font-weight:bold;
+}
+
+.visualItem span{
+
+    display:block;
+
+    font-size:45px;
+
+    margin-bottom:5px;
+}
+
+/* =====================================================
+   TEACHING
+===================================================== */
+
+.teachBox{
+
+    background:#f8fafc;
+
+    border-radius:22px;
+
+    padding:20px;
+
+    margin-bottom:20px;
+
+    border-left:8px solid #845ef7;
+
+    font-size:18px;
+
+    line-height:1.8;
+}
+
+.exampleBox{
+
+    background:#fff4e6;
+
+    border:3px dashed #ff922b;
+
+    border-radius:18px;
+
+    padding:15px;
+
+    margin-top:15px;
+}
+
+.exampleBox strong{
+
+    color:#e8590c;
+}
+
+/* =====================================================
+   QUIZ
+===================================================== */
+
+.quizBox{
+
+    background:
+    linear-gradient(
+        135deg,
+        #e7f5ff,
+        #f3d9fa,
+        #fff3bf
+    );
+
+    border-radius:28px;
+
+    padding:22px;
+
+    border:4px solid #74c0fc;
+}
+
+.questionCounter{
+
+    text-align:center;
+
+    font-weight:bold;
+
+    color:#7c3aed;
+
+    font-size:18px;
+
     margin-bottom:15px;
 }
 
 .question{
-    font-size:20px;
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:20px;
+
+    font-size:21px;
+
     font-weight:bold;
+
     line-height:1.7;
-    margin-bottom:20px;
+
+    text-align:center;
+
+    box-shadow:
+    0 5px 15px #0002;
+
+    margin-bottom:18px;
 }
 
-/* OPTIONS */
+/* =====================================================
+   OPTIONS
+===================================================== */
+
+.options{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:12px;
+}
 
 .option{
-    width:100%;
-    display:block;
-    padding:15px;
-    margin:10px 0;
-    border-radius:15px;
-    border:2px solid #cbd5e1;
+
+    border:4px solid #dbe4ff;
+
     background:white;
+
+    border-radius:20px;
+
+    padding:16px;
+
     font-size:17px;
-    text-align:left;
+
+    font-weight:bold;
+
     cursor:pointer;
+
     transition:.2s;
+
+    min-height:65px;
 }
 
 .option:hover{
-    background:#eff6ff;
-    transform:translateX(3px);
+
+    transform:
+    scale(1.03);
+
+    background:#f3f0ff;
+
+    border-color:#845ef7;
+}
+
+.option:active{
+
+    transform:
+    scale(.97);
 }
 
 .option.correct{
-    background:#bbf7d0 !important;
-    border-color:#16a34a;
+
+    background:#b2f2bb;
+
+    border-color:#2f9e44;
+
+    animation:
+    correctPop .4s;
 }
 
 .option.wrong{
-    background:#fecaca !important;
-    border-color:#dc2626;
+
+    background:#ffc9c9;
+
+    border-color:#e03131;
+
+    animation:
+    shake .4s;
 }
 
-.option:disabled{
-    cursor:not-allowed;
+@keyframes correctPop{
+
+    0%{transform:scale(.9)}
+    50%{transform:scale(1.08)}
+    100%{transform:scale(1)}
 }
 
-/* RESULT */
+@keyframes shake{
+
+    0%,100%{transform:translateX(0)}
+    25%{transform:translateX(-8px)}
+    75%{transform:translateX(8px)}
+}
+
+/* =====================================================
+   RESULT
+===================================================== */
 
 .result{
+
+    min-height:70px;
+
     text-align:center;
-    min-height:50px;
-    margin-top:15px;
+
+    padding:15px;
+
     font-size:20px;
+
     font-weight:bold;
 }
 
-.correct-text{
+.correctText{
+
     color:#15803d;
 }
 
-.wrong-text{
+.wrongText{
+
     color:#dc2626;
 }
 
-/* NAV */
+/* =====================================================
+   NAVIGATION
+===================================================== */
 
-.nav-buttons{
+.navigation{
+
     display:flex;
+
     justify-content:center;
-    gap:10px;
+
     flex-wrap:wrap;
-    margin-top:20px;
+
+    gap:10px;
+
+    margin-top:10px;
 }
 
-.nav-btn{
+.navBtn{
+
     border:0;
-    border-radius:30px;
-    padding:14px 23px;
+
+    border-radius:25px;
+
+    padding:14px 22px;
+
     color:white;
+
     font-size:16px;
+
+    font-weight:bold;
+
     cursor:pointer;
+
+    box-shadow:
+    0 5px 0 #0003;
+
+    transition:.2s;
 }
 
-.prev-btn{
+.navBtn:hover{
+
+    transform:
+    translateY(-3px);
+}
+
+.navBtn:active{
+
+    transform:
+    translateY(2px);
+
+    box-shadow:
+    0 2px 0 #0003;
+}
+
+.prevBtn{
     background:#64748b;
 }
 
-.next-btn{
+.nextBtn{
     background:#2563eb;
 }
 
-.lesson-next-btn{
+.nextLessonBtn{
     background:#16a34a;
 }
 
-.back-btn{
-    background:#7c3aed;
+.homeBtn{
+    background:#9333ea;
 }
 
-/* SCORE */
+/* =====================================================
+   SCORE
+===================================================== */
 
-.score{
-    text-align:center;
-    background:#f0fdf4;
-    border:2px solid #22c55e;
+.scoreBox{
+
+    margin-top:18px;
+
+    background:#fff;
+
+    border-radius:20px;
+
     padding:15px;
-    border-radius:18px;
-    margin-top:20px;
-    font-size:18px;
-}
 
-/* COUNTING */
-
-.counting{
-    display:grid;
-    grid-template-columns:repeat(5,1fr);
-    gap:7px;
-}
-
-.number{
-    background:#ecfeff;
-    border:2px solid #67e8f9;
-    border-radius:10px;
-    padding:9px;
     text-align:center;
+
+    font-size:19px;
+
+    font-weight:bold;
+
+    border:4px solid #ffd43b;
+}
+
+/* =====================================================
+   CELEBRATION
+===================================================== */
+
+.celebrate{
+
+    position:fixed;
+
+    inset:0;
+
+    background:#0008;
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:9999;
+
+    padding:20px;
+}
+
+.celebrateBox{
+
+    background:white;
+
+    border-radius:35px;
+
+    padding:35px;
+
+    text-align:center;
+
+    max-width:450px;
+
+    animation:
+    pop .4s;
+}
+
+@keyframes pop{
+
+    from{
+        transform:scale(.5);
+        opacity:0;
+    }
+
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+
+}
+
+.celebrateEmoji{
+
+    font-size:80px;
+}
+
+.celebrateBox h2{
+
+    color:#7c3aed;
+
+    margin:10px;
+}
+
+.closeCelebrate{
+
+    margin-top:15px;
+
+    border:0;
+
+    background:#7c3aed;
+
+    color:white;
+
+    padding:12px 25px;
+
+    border-radius:25px;
+
+    font-size:16px;
+
     font-weight:bold;
 }
 
-/* WORD GRID */
-
-.words{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:10px;
-}
-
-.word{
-    background:#fef3c7;
-    padding:12px 6px;
-    border-radius:12px;
-    text-align:center;
-    font-weight:bold;
-}
-
-/* FOOTER */
+/* =====================================================
+   FOOTER
+===================================================== */
 
 footer{
+
     margin-top:40px;
+
     background:#172033;
+
     color:white;
+
     text-align:center;
-    padding:25px;
+
+    padding:30px 15px;
+
+    line-height:1.8;
+
+    border-top-left-radius:35px;
+
+    border-top-right-radius:35px;
 }
 
-/* MOBILE */
+/* =====================================================
+   MOBILE
+===================================================== */
 
-@media(max-width:800px){
+@media(max-width:900px){
 
-    .lesson-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
+    .lessonGrid{
 
-    .words{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .counting{
-        grid-template-columns:repeat(4,1fr);
+        grid-template-columns:
+        repeat(3,1fr);
     }
 
 }
 
-@media(max-width:500px){
+@media(max-width:650px){
 
     header h1{
-        font-size:24px;
+
+        font-size:27px;
     }
 
-    .lesson-grid{
-        grid-template-columns:repeat(2,1fr);
-        gap:9px;
+    header p{
+
+        font-size:15px;
     }
 
-    .lesson-btn{
-        min-height:125px;
-        padding:10px 5px;
+    .lessonGrid{
+
+        grid-template-columns:
+        repeat(2,1fr);
+
+        gap:10px;
     }
 
-    .lesson-icon{
-        font-size:34px;
+    .lessonCard{
+
+        min-height:160px;
+
+        padding:12px 6px;
     }
 
-    .lesson-name{
-        font-size:14px;
+    .lessonIcon{
+
+        font-size:43px;
     }
 
-    .lesson-hi{
-        font-size:11px;
+    .lessonName{
+
+        font-size:15px;
     }
 
-    .course-card{
-        padding:14px;
+    .lessonHindi{
+
+        font-size:12px;
     }
 
-    .big-icon{
-        font-size:60px;
+    .options{
+
+        grid-template-columns:1fr;
     }
 
     .question{
+
         font-size:18px;
     }
 
-    .option{
-        font-size:16px;
+    .courseCard{
+
         padding:13px;
     }
 
-    .counting{
-        grid-template-columns:repeat(4,1fr);
+}
+
+@media(max-width:380px){
+
+    .lessonGrid{
+
+        grid-template-columns:
+        1fr 1fr;
+    }
+
+    .lessonIcon{
+
+        font-size:38px;
+    }
+
+    .lessonName{
+
+        font-size:13px;
+    }
+
+    .navBtn{
+
+        width:100%;
     }
 
 }
@@ -469,195 +1082,276 @@ footer{
 </style>
 </head>
 
+
 <body>
 
 <header>
 
-<h1>🌈 Class 1 English Master Course</h1>
+<h1>🌈 My English World 🌈</h1>
 
 <p>
-🇬🇧 Learn English + 🇮🇳 हिंदी में समझें
+🎓 Class 1 English Fun Learning
+<br>
+🇬🇧 English सीखें • 🇮🇳 हिंदी में समझें • 🎮 खेल-खेल में पढ़ें
 </p>
 
 </header>
 
 
-<div class="sound-box">
+<div class="topButtons">
 
 <button
-class="sound-btn"
+class="topBtn soundBtn"
 id="soundButton"
-onclick="toggleSound()"
->
-🔊 Sound ON / आवाज चालू
+onclick="toggleSound()">
+
+🔊 Sound ON
+
 </button>
 
-</div>
+<button
+class="topBtn resetBtn"
+onclick="resetProgress()">
 
+🔄 Reset Progress
 
-<section class="hero">
-
-<div class="hero-card">
-
-<div class="hero-icon">
-🎓📚🌈
-</div>
-
-<h2>
-Welcome Little Learner!
-</h2>
-
-<p>
-🇬🇧 Learn English step by step with fun.
-<br>
-🇮🇳 खेल-खेल में English सीखें।
-</p>
-
-<p>
-🎯 30 Lessons &nbsp; | &nbsp;
-📝 1500 Questions
-</p>
-
-</div>
-
-</section>
-
-
-<div class="progress-area">
-
-<div class="progress-text" id="courseProgress">
-Course Progress / कोर्स प्रगति: 0%
-</div>
-
-<div class="progress">
-
-<div
-class="progress-bar"
-id="progressBar"
-></div>
-
-</div>
+</button>
 
 </div>
 
 
 <div class="container">
 
-<h2 class="title">
-📚 Class 1 Lessons / कक्षा 1 के पाठ
+
+<!-- WELCOME -->
+
+<div class="welcome">
+
+<div class="welcomeEmoji">
+🧒📚🌈😊
+</div>
+
+<h2>
+Welcome Little Learner! 🎉
+</h2>
+
+<p>
+
+🇬🇧 Welcome to Class 1 English.<br>
+
+🇮🇳 यहाँ बच्चे English को हिंदी की मदद से सीखेंगे।<br>
+
+👏 सही answer पर तालियाँ और मजेदार sound मिलेगा।
+
+</p>
+
+</div>
+
+
+<!-- PROGRESS -->
+
+<div class="progressBox">
+
+<div
+class="progressTitle"
+id="progressText">
+
+📊 Course Progress:
+0 / 30 Lessons
+
+</div>
+
+<div class="progress">
+
+<div
+class="progressBar"
+id="progressBar">
+
+</div>
+
+</div>
+
+</div>
+
+
+<h2 class="sectionTitle">
+📚 Choose Your Lesson
+<br>
+<span style="font-size:16px">
+अपना पाठ चुनें
+</span>
 </h2>
 
 
+<!-- LESSONS -->
+
 <div
-class="lesson-grid"
-id="lessonGrid"
->
+class="lessonGrid"
+id="lessonGrid">
 </div>
 
 
-<div id="courseArea">
+<!-- COURSE -->
 
-<div class="course-card">
+<div id="course">
 
-<div class="lesson-heading">
+<div class="courseCard">
 
-<div
-class="big-icon"
-id="lessonIcon"
->
-</div>
 
-<h2 id="lessonTitle"></h2>
-
-<p id="lessonHindi"></p>
-
-</div>
-
+<div class="lessonHeader">
 
 <div
-class="lesson-content"
-id="lessonContent"
->
+class="lessonBigIcon"
+id="lessonIcon">
+</div>
+
+<h2 id="lessonTitle">
+</h2>
+
+<p id="lessonHindi">
+</p>
+
 </div>
 
 
-<div class="question-card">
+<div
+class="visualBox"
+id="visualBox">
+</div>
+
 
 <div
-class="question-number"
-id="questionNumber"
->
-Question 1 / 50
+class="teachBox"
+id="teachBox">
+</div>
+
+
+<div class="quizBox">
+
+
+<div
+class="questionCounter"
+id="questionCounter">
 </div>
 
 
 <div
 class="question"
-id="questionText"
->
+id="question">
 </div>
 
 
 <div
-id="optionsArea"
->
+class="options"
+id="options">
 </div>
 
 
 <div
 class="result"
-id="result"
->
+id="result">
 </div>
 
 
-<div class="nav-buttons">
+<div class="navigation">
 
 <button
-class="nav-btn prev-btn"
-onclick="previousQuestion()"
-id="prevQuestion"
->
-⬅ Previous / पिछला
+class="navBtn prevBtn"
+id="prevBtn"
+onclick="previousQuestion()">
+
+⬅️ Previous
+<br>
+पिछला प्रश्न
+
 </button>
 
-<button
-class="nav-btn next-btn"
-onclick="nextQuestion()"
-id="nextQuestion"
->
-Next Question / अगला प्रश्न ➡
-</button>
 
 <button
-class="nav-btn lesson-next-btn"
+class="navBtn nextBtn"
+id="nextBtn"
+onclick="nextQuestion()">
+
+Next Question ➡️
+<br>
+अगला प्रश्न
+
+</button>
+
+
+<button
+class="navBtn nextLessonBtn"
+id="nextLessonBtn"
 onclick="nextLesson()"
-id="nextLesson"
-style="display:none"
->
-📚 Next Lesson / अगला पाठ ➡
+style="display:none">
+
+📚 Next Lesson
+<br>
+अगला पाठ
+
 </button>
+
 
 <button
-class="nav-btn back-btn"
-onclick="closeLesson()"
->
-🏠 Lessons / पाठ
-</button>
+class="navBtn homeBtn"
+onclick="closeCourse()">
 
-</div>
+🏠 Lessons
+<br>
+पाठ सूची
+
+</button>
 
 </div>
 
 
 <div
-class="score"
-id="scoreBox"
->
-Score / अंक: 0 / 50
+class="scoreBox"
+id="scoreBox">
+
+🎯 Score: 0 / 50
+
+</div>
+
+
 </div>
 
 </div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- CELEBRATION -->
+
+<div
+class="celebrate"
+id="celebrate">
+
+<div class="celebrateBox">
+
+<div class="celebrateEmoji">
+🏆🎉👏🌟
+</div>
+
+<h2>
+Excellent!
+</h2>
+
+<p id="celebrateText">
+Lesson Complete!
+</p>
+
+<button
+class="closeCelebrate"
+onclick="closeCelebrate()">
+
+😊 Continue
+
+</button>
 
 </div>
 
@@ -666,1655 +1360,1691 @@ Score / अंक: 0 / 50
 
 <footer>
 
-🌟 Learn • Practice • Play • Grow 🌟
+🌟 My English World 🌟
 
-<br><br>
+<br>
 
-🇮🇳 हिंदी से समझो | 🇬🇧 English बोलो | 🎯 रोज Practice करो
+🇬🇧 Learn English • Practice English • Speak English
+
+<br>
+
+🇮🇳 English सीखो और आगे बढ़ो 🚀
 
 </footer>
+
 
 
 <script>
 
 /* =====================================================
-   30 LESSONS
+   LESSON DATA
 ===================================================== */
 
-const lessons = [
+const lessons=[
 
-{
-icon:"🔤",
-title:"Alphabet A-Z",
-hi:"अंग्रेजी वर्णमाला",
-content:`
-🇬🇧 English has 26 letters.
-<br>
-🇮🇳 English में 26 अक्षर होते हैं।
+["🔤","Alphabet A-Z","अंग्रेजी वर्णमाला",
+"English alphabet में 26 letters होते हैं।",
+["🍎","Apple","सेब"],["⚽","Ball","गेंद"],["🐱","Cat","बिल्ली"]],
 
-<div class="example">
-A – Apple 🍎 – सेब<br>
-B – Ball ⚽ – गेंद<br>
-C – Cat 🐱 – बिल्ली<br>
-D – Dog 🐶 – कुत्ता
-</div>
-`
-},
+["🔠","Capital Letters","बड़े अक्षर",
+"Capital letters बड़े अक्षर होते हैं।",
+["🅰️","A","बड़ा A"],["🅱️","B","बड़ा B"],["©️","C","बड़ा C"]],
 
-{
-icon:"🔠",
-title:"Capital Letters",
-hi:"बड़े अक्षर",
-content:`
-🇬🇧 Capital letters are big letters.
-<br>
-🇮🇳 Capital letters बड़े अक्षर होते हैं।
+["🔡","Small Letters","छोटे अक्षर",
+"Small letters छोटे अक्षर होते हैं।",
+["🔤","a","छोटा a"],["🔤","b","छोटा b"],["🔤","c","छोटा c"]],
 
-<div class="example">
-A B C D E F G H I J
-</div>
-`
-},
+["🅰️","Vowels","स्वर",
+"मुख्य vowels हैं A, E, I, O, U.",
+["🅰️","A","ए"],["🅴","E","ई"],["🅸","I","आइ"]],
 
-{
-icon:"🔡",
-title:"Small Letters",
-hi:"छोटे अक्षर",
-content:`
-🇬🇧 Small letters are little letters.
-<br>
-🇮🇳 Small letters छोटे अक्षर होते हैं।
+["🔤","Consonants","व्यंजन",
+"Vowels के अलावा बाकी letters consonants कहलाते हैं।",
+["🅱️","B","बी"],["©️","C","सी"],["🅳","D","डी"]],
 
-<div class="example">
-a b c d e f g h i j
-</div>
-`
-},
+["🔢","Counting 1-100","गिनती 1 से 100",
+"English में 1 से 100 तक counting सीखें।",
+["1️⃣","One","एक"],["2️⃣","Two","दो"],["3️⃣","Three","तीन"]],
 
-{
-icon:"🅰️",
-title:"Vowels",
-hi:"स्वर",
-content:`
-🇬🇧 There are five vowels.
-<br>
-🇮🇳 पाँच vowels होते हैं।
+["🔢","Number Names","संख्या के नाम",
+"Numbers को English words में बोलना सीखें।",
+["1️⃣","One","एक"],["🔟","Ten","दस"],["💯","One Hundred","एक सौ"]],
 
-<div class="words">
-<div class="word">A – ए</div>
-<div class="word">E – ई</div>
-<div class="word">I – आइ</div>
-<div class="word">O – ओ</div>
-<div class="word">U – यू</div>
-</div>
-`
-},
+["🎨","Colours","रंग",
+"Common colours के English names सीखें।",
+["🔴","Red","लाल"],["🔵","Blue","नीला"],["🟢","Green","हरा"]],
 
-{
-icon:"🔤",
-title:"Consonants",
-hi:"व्यंजन",
-content:`
-🇬🇧 Letters other than vowels are consonants.
-<br>
-🇮🇳 Vowels के अलावा बाकी letters consonants हैं।
-`
-},
+["🔺","Shapes","आकार",
+"Basic shapes के English names सीखें।",
+["⭕","Circle","वृत्त"],["⬜","Square","वर्ग"],["🔺","Triangle","त्रिभुज"]],
 
-{
-icon:"🔢",
-title:"Counting 1-100",
-hi:"गिनती 1 से 100",
-content:`
-🇬🇧 Learn numbers from 1 to 100.
-<br>
-🇮🇳 1 से 100 तक गिनती सीखें।
+["🐶","Animals","जानवर",
+"Animals के English names सीखें।",
+["🐶","Dog","कुत्ता"],["🐱","Cat","बिल्ली"],["🐄","Cow","गाय"]],
 
-<div class="counting" id="countingBox"></div>
-`
-},
+["🐦","Birds","पक्षी",
+"Birds के English names सीखें।",
+["🦜","Parrot","तोता"],["🦚","Peacock","मोर"],["🦅","Eagle","चील"]],
 
-{
-icon:"🔢",
-title:"Number Names",
-hi:"संख्या के नाम",
-content:`
-🇬🇧 Learn number names.
-<br>
-🇮🇳 संख्याओं के English names सीखें।
+["🍎","Fruits","फल",
+"Fruits के English names सीखें।",
+["🍎","Apple","सेब"],["🍌","Banana","केला"],["🥭","Mango","आम"]],
 
-<div class="example">
-1 – One – एक<br>
-2 – Two – दो<br>
-3 – Three – तीन<br>
-4 – Four – चार<br>
-5 – Five – पाँच<br>
-10 – Ten – दस
-</div>
-`
-},
+["🥕","Vegetables","सब्जियाँ",
+"Vegetables के English names सीखें।",
+["🥕","Carrot","गाजर"],["🥔","Potato","आलू"],["🍅","Tomato","टमाटर"]],
 
-{
-icon:"🎨",
-title:"Colours",
-hi:"रंग",
-content:`
-<div class="words">
-<div class="word">🔴 Red – लाल</div>
-<div class="word">🔵 Blue – नीला</div>
-<div class="word">🟢 Green – हरा</div>
-<div class="word">🟡 Yellow – पीला</div>
-<div class="word">🟠 Orange – नारंगी</div>
-<div class="word">🟣 Purple – बैंगनी</div>
-<div class="word">⚫ Black – काला</div>
-<div class="word">⚪ White – सफेद</div>
-</div>
-`
-},
+["🧒","Body Parts","शरीर के अंग",
+"Body parts के English names सीखें।",
+["👁️","Eye","आँख"],["👂","Ear","कान"],["👃","Nose","नाक"]],
 
-{
-icon:"🔺",
-title:"Shapes",
-hi:"आकार",
-content:`
-<div class="words">
-<div class="word">⭕ Circle – वृत्त</div>
-<div class="word">⬜ Square – वर्ग</div>
-<div class="word">🔺 Triangle – त्रिभुज</div>
-<div class="word">▭ Rectangle – आयत</div>
-</div>
-`
-},
+["👨‍👩‍👧","Family","परिवार",
+"Family members के English names सीखें।",
+["👨","Father","पिता"],["👩","Mother","माता"],["👦","Brother","भाई"]],
 
-{
-icon:"🐶",
-title:"Animals",
-hi:"जानवर",
-content:`
-<div class="words">
-<div class="word">🐶 Dog – कुत्ता</div>
-<div class="word">🐱 Cat – बिल्ली</div>
-<div class="word">🐄 Cow – गाय</div>
-<div class="word">🐘 Elephant – हाथी</div>
-<div class="word">🦁 Lion – शेर</div>
-<div class="word">🐯 Tiger – बाघ</div>
-<div class="word">🐒 Monkey – बंदर</div>
-<div class="word">🐟 Fish – मछली</div>
-</div>
-`
-},
+["🎒","School Things","स्कूल की वस्तुएँ",
+"School में उपयोग होने वाली चीजों के नाम सीखें।",
+["📖","Book","किताब"],["✏️","Pencil","पेंसिल"],["🎒","Bag","बैग"]],
 
-{
-icon:"🐦",
-title:"Birds",
-hi:"पक्षी",
-content:`
-<div class="words">
-<div class="word">🐦 Bird – पक्षी</div>
-<div class="word">🦜 Parrot – तोता</div>
-<div class="word">🦚 Peacock – मोर</div>
-<div class="word">🦅 Eagle – चील</div>
-<div class="word">🐦 Sparrow – गौरैया</div>
-</div>
-`
-},
+["🏫","Classroom English","कक्षा की English",
+"Classroom में बोले जाने वाले simple sentences सीखें।",
+["🪑","Sit down","बैठ जाओ"],["🙋","Stand up","खड़े हो जाओ"],["📖","Open book","किताब खोलो"]],
 
-{
-icon:"🍎",
-title:"Fruits",
-hi:"फल",
-content:`
-<div class="words">
-<div class="word">🍎 Apple – सेब</div>
-<div class="word">🍌 Banana – केला</div>
-<div class="word">🥭 Mango – आम</div>
-<div class="word">🍊 Orange – संतरा</div>
-<div class="word">🍇 Grapes – अंगूर</div>
-<div class="word">🍉 Watermelon – तरबूज</div>
-</div>
-`
-},
+["👋","Greetings","अभिवादन",
+"दूसरों का अभिवादन करना सीखें।",
+["🌞","Good Morning","सुप्रभात"],["🙏","Thank You","धन्यवाद"],["👋","Hello","नमस्ते"]],
 
-{
-icon:"🥕",
-title:"Vegetables",
-hi:"सब्जियाँ",
-content:`
-<div class="words">
-<div class="word">🥕 Carrot – गाजर</div>
-<div class="word">🥔 Potato – आलू</div>
-<div class="word">🍅 Tomato – टमाटर</div>
-<div class="word">🧅 Onion – प्याज</div>
-<div class="word">🌽 Corn – मक्का</div>
-</div>
-`
-},
+["🙋","Self Introduction","अपना परिचय",
+"अपना छोटा परिचय English में देना सीखें।",
+["👦","My name is...","मेरा नाम ... है"],["🏫","I am a student.","मैं विद्यार्थी हूँ।"],["😊","I am happy.","मैं खुश हूँ।"]],
 
-{
-icon:"🧒",
-title:"Body Parts",
-hi:"शरीर के अंग",
-content:`
-<div class="words">
-<div class="word">👁️ Eye – आँख</div>
-<div class="word">👂 Ear – कान</div>
-<div class="word">👃 Nose – नाक</div>
-<div class="word">👄 Mouth – मुँह</div>
-<div class="word">✋ Hand – हाथ</div>
-<div class="word">🦶 Foot – पैर</div>
-</div>
-`
-},
+["👦","Pronouns","सर्वनाम",
+"I, You, He, She आदि pronouns सीखें।",
+["👦","He","वह लड़का"],["👧","She","वह लड़की"],["🙋","I","मैं"]],
 
-{
-icon:"👨‍👩‍👧",
-title:"Family Members",
-hi:"परिवार के सदस्य",
-content:`
-<div class="words">
-<div class="word">Father – पिता</div>
-<div class="word">Mother – माता</div>
-<div class="word">Brother – भाई</div>
-<div class="word">Sister – बहन</div>
-<div class="word">Grandfather – दादा</div>
-<div class="word">Grandmother – दादी</div>
-</div>
-`
-},
+["🅰️","A / An","A और An",
+"A और An का सही प्रयोग सीखें।",
+["🍎","An apple","एक सेब"],["🥚","An egg","एक अंडा"],["👦","A boy","एक लड़का"]],
 
-{
-icon:"🎒",
-title:"School Things",
-hi:"स्कूल की वस्तुएँ",
-content:`
-<div class="words">
-<div class="word">📚 Book – किताब</div>
-<div class="word">✏️ Pencil – पेंसिल</div>
-<div class="word">🖊️ Pen – कलम</div>
-<div class="word">📒 Notebook – कॉपी</div>
-<div class="word">🎒 Bag – बैग</div>
-<div class="word">📏 Ruler – पैमाना</div>
-</div>
-`
-},
+["👉","This / That","यह / वह",
+"This और That का प्रयोग सीखें।",
+["📖","This is a book.","यह किताब है।"],["🌳","That is a tree.","वह पेड़ है।"],["✏️","This is a pencil.","यह पेंसिल है।"]],
 
-{
-icon:"🏫",
-title:"Classroom Words",
-hi:"कक्षा के शब्द",
-content:`
-<div class="example">
-Sit down. – बैठ जाओ।<br>
-Stand up. – खड़े हो जाओ।<br>
-Open your book. – अपनी किताब खोलो।<br>
-Close your book. – अपनी किताब बंद करो।
-</div>
-`
-},
+["👈","These / Those","ये / वे",
+"These और Those का प्रयोग सीखें।",
+["📚","These are books.","ये किताबें हैं।"],["🌳","Those are trees.","वे पेड़ हैं।"],["✏️","These are pencils.","ये पेंसिलें हैं।"]],
 
-{
-icon:"👋",
-title:"Greetings",
-hi:"अभिवादन",
-content:`
-<div class="example">
-Good morning. – सुप्रभात।<br>
-Good afternoon. – शुभ दोपहर।<br>
-Good evening. – शुभ संध्या।<br>
-Good night. – शुभ रात्रि।<br>
-Thank you. – धन्यवाद।
-</div>
-`
-},
+["📝","Is / Am / Are","Is Am Are",
+"Basic sentences में Is, Am और Are सीखें।",
+["🙋","I am","मैं हूँ"],["👦","He is","वह है"],["👥","They are","वे हैं"]],
 
-{
-icon:"🙋",
-title:"Self Introduction",
-hi:"अपना परिचय",
-content:`
-<div class="example">
-My name is Rahul. – मेरा नाम राहुल है।<br>
-I am a student. – मैं एक विद्यार्थी हूँ।<br>
-I am seven years old. – मैं सात साल का हूँ।<br>
-I live in India. – मैं भारत में रहता हूँ।
-</div>
-`
-},
+["🏃","Action Words","क्रिया वाले शब्द",
+"Action words यानी काम बताने वाले words सीखें।",
+["🏃","Run","दौड़ना"],["🍎","Eat","खाना"],["📖","Read","पढ़ना"]],
 
-{
-icon:"👦",
-title:"Pronouns",
-hi:"सर्वनाम",
-content:`
-<div class="words">
-<div class="word">I – मैं</div>
-<div class="word">You – तुम/आप</div>
-<div class="word">He – वह लड़का</div>
-<div class="word">She – वह लड़की</div>
-<div class="word">It – यह/वह</div>
-<div class="word">We – हम</div>
-<div class="word">They – वे</div>
-</div>
-`
-},
+["↔️","Opposite Words","विलोम शब्द",
+"Opposite यानी उल्टे अर्थ वाले words सीखें।",
+["🐘","Big - Small","बड़ा - छोटा"],["🔥","Hot - Cold","गर्म - ठंडा"],["☀️🌙","Day - Night","दिन - रात"]],
 
-{
-icon:"🅰️",
-title:"A / An",
-hi:"A और An",
-content:`
-🇬🇧 A is used before many consonant sounds.
-<br>
-🇮🇳 A कई consonant sounds से पहले आता है।
+["👥","Singular / Plural","एकवचन / बहुवचन",
+"One और many के words सीखें।",
+["📖","Book - Books","किताब - किताबें"],["🐱","Cat - Cats","बिल्ली - बिल्लियाँ"],["⚽","Ball - Balls","गेंद - गेंदें"]],
 
-<div class="example">
-A boy – एक लड़का<br>
-A cat – एक बिल्ली<br>
-A ball – एक गेंद
-</div>
+["📝","Simple Sentences","सरल वाक्य",
+"छोटे English sentences पढ़ना और बोलना सीखें।",
+["👦","I am a boy.","मैं लड़का हूँ।"],["📖","This is my book.","यह मेरी किताब है।"],["🥭","I like mango.","मुझे आम पसंद है।"]],
 
-<div class="example">
-An apple – एक सेब<br>
-An egg – एक अंडा<br>
-An orange – एक संतरा
-</div>
-`
-},
+["❓","Question Words","प्रश्न वाले शब्द",
+"What, Who, Where, How आदि सीखें।",
+["❓","What","क्या"],["👤","Who","कौन"],["📍","Where","कहाँ"]],
 
-{
-icon:"👉",
-title:"This / That",
-hi:"यह / वह",
-content:`
-<div class="example">
-This is a book. – यह एक किताब है।<br>
-That is a tree. – वह एक पेड़ है।
-</div>
-`
-},
+["📅","Days of Week","सप्ताह के दिन",
+"Seven days के English names सीखें।",
+["1️⃣","Monday","सोमवार"],["2️⃣","Tuesday","मंगलवार"],["☀️","Sunday","रविवार"]],
 
-{
-icon:"👈",
-title:"These / Those",
-hi:"ये / वे",
-content:`
-<div class="example">
-These are books. – ये किताबें हैं।<br>
-Those are trees. – वे पेड़ हैं।
-</div>
-`
-},
-
-{
-icon:"📝",
-title:"Is / Am / Are",
-hi:"Is, Am, Are",
-content:`
-<div class="example">
-I am happy. – मैं खुश हूँ।<br>
-He is a boy. – वह लड़का है।<br>
-She is a girl. – वह लड़की है।<br>
-They are students. – वे विद्यार्थी हैं।
-</div>
-`
-},
-
-{
-icon:"🏃",
-title:"Action Words",
-hi:"क्रिया वाले शब्द",
-content:`
-<div class="words">
-<div class="word">Run – दौड़ना</div>
-<div class="word">Walk – चलना</div>
-<div class="word">Eat – खाना</div>
-<div class="word">Drink – पीना</div>
-<div class="word">Read – पढ़ना</div>
-<div class="word">Write – लिखना</div>
-<div class="word">Play – खेलना</div>
-<div class="word">Sleep – सोना</div>
-</div>
-`
-},
-
-{
-icon:"↔️",
-title:"Opposite Words",
-hi:"विलोम शब्द",
-content:`
-<div class="words">
-<div class="word">Big ↔ Small<br>बड़ा ↔ छोटा</div>
-<div class="word">Hot ↔ Cold<br>गर्म ↔ ठंडा</div>
-<div class="word">Day ↔ Night<br>दिन ↔ रात</div>
-<div class="word">Up ↔ Down<br>ऊपर ↔ नीचे</div>
-<div class="word">Good ↔ Bad<br>अच्छा ↔ बुरा</div>
-<div class="word">Fast ↔ Slow<br>तेज ↔ धीमा</div>
-</div>
-`
-},
-
-{
-icon:"👥",
-title:"Singular / Plural",
-hi:"एकवचन / बहुवचन",
-content:`
-<div class="example">
-One book → Two books<br>
-एक किताब → दो किताबें
-</div>
-
-<div class="example">
-One cat → Two cats<br>
-एक बिल्ली → दो बिल्लियाँ
-</div>
-`
-},
-
-{
-icon:"📝",
-title:"Simple Sentences",
-hi:"सरल वाक्य",
-content:`
-<div class="example">
-I am a boy. – मैं लड़का हूँ।<br>
-This is my book. – यह मेरी किताब है।<br>
-I like mango. – मुझे आम पसंद है।<br>
-The sun is hot. – सूरज गर्म है।
-</div>
-`
-},
-
-{
-icon:"❓",
-title:"Question Words",
-hi:"प्रश्न वाले शब्द",
-content:`
-<div class="words">
-<div class="word">What – क्या</div>
-<div class="word">Who – कौन</div>
-<div class="word">Where – कहाँ</div>
-<div class="word">When – कब</div>
-<div class="word">Why – क्यों</div>
-<div class="word">How – कैसे</div>
-</div>
-`
-},
-
-{
-icon:"📅",
-title:"Days of Week",
-hi:"सप्ताह के दिन",
-content:`
-<div class="words">
-<div class="word">Monday – सोमवार</div>
-<div class="word">Tuesday – मंगलवार</div>
-<div class="word">Wednesday – बुधवार</div>
-<div class="word">Thursday – गुरुवार</div>
-<div class="word">Friday – शुक्रवार</div>
-<div class="word">Saturday – शनिवार</div>
-<div class="word">Sunday – रविवार</div>
-</div>
-`
-},
-
-{
-icon:"🗓️",
-title:"Months",
-hi:"महीनों के नाम",
-content:`
-<div class="words">
-<div class="word">January – जनवरी</div>
-<div class="word">February – फरवरी</div>
-<div class="word">March – मार्च</div>
-<div class="word">April – अप्रैल</div>
-<div class="word">May – मई</div>
-<div class="word">June – जून</div>
-<div class="word">July – जुलाई</div>
-<div class="word">August – अगस्त</div>
-<div class="word">September – सितंबर</div>
-<div class="word">October – अक्टूबर</div>
-<div class="word">November – नवंबर</div>
-<div class="word">December – दिसंबर</div>
-</div>
-`
-},
-
-{
-icon:"🌟",
-title:"Good Habits",
-hi:"अच्छी आदतें",
-content:`
-<div class="example">
-Brush your teeth. – अपने दाँत साफ करो।<br>
-Wash your hands. – अपने हाथ धोओ।<br>
-Keep your room clean. – अपना कमरा साफ रखो।<br>
-Respect your elders. – बड़ों का सम्मान करो।
-</div>
-`
-},
-
-{
-icon:"🗣️",
-title:"Daily English",
-hi:"रोजमर्रा की English",
-content:`
-<div class="example">
-How are you? – आप कैसे हैं?<br>
-I am fine. – मैं ठीक हूँ।<br>
-What are you doing? – तुम क्या कर रहे हो?<br>
-I am reading. – मैं पढ़ रहा हूँ।<br>
-Come with me. – मेरे साथ आओ।
-</div>
-`
-},
-
-{
-icon:"🏆",
-title:"Final Practice",
-hi:"अंतिम अभ्यास",
-content:`
-🇬🇧 Revision of Class 1 English.
-<br>
-🇮🇳 Class 1 English का पूरा revision।
-
-<div class="example">
-Alphabet • Numbers • Colours • Animals • Fruits
-<br>
-Family • Grammar • Sentences • Daily English
-</div>
-`
-}
+["🏆","Final Revision","अंतिम अभ्यास",
+"पूरे Class 1 English course की revision करें।",
+["🔤","Alphabet","वर्णमाला"],["🔢","Numbers","गिनती"],["📚","Grammar","व्याकरण"]]
 
 ];
 
 
 /* =====================================================
-QUESTION DATA
+   STATE
 ===================================================== */
 
-const questionSets = [];
+let currentLesson=0;
+
+let currentQuestion=0;
+
+let score=0;
+
+let answered=false;
+
+let soundEnabled=true;
+
+let completed=
+JSON.parse(
+localStorage.getItem("class1Completed") || "[]"
+);
 
 
-/* LESSON 1 */
+/* =====================================================
+   QUESTION BANK
+===================================================== */
 
-questionSets.push([
-
-["Which letter comes after A?","A के बाद कौन-सा अक्षर आता है?",["B / बी","C / सी","D / डी","E / ई"],0],
-["Which letter comes before B?","B से पहले कौन-सा अक्षर आता है?",["A / ए","C / सी","D / डी","E / ई"],0],
-["Which letter comes after C?","C के बाद कौन-सा अक्षर आता है?",["B / बी","D / डी","E / ई","F / एफ"],1],
-["Which letter comes before D?","D से पहले कौन-सा अक्षर आता है?",["A / ए","B / बी","C / सी","E / ई"],2],
-["Which letter comes after E?","E के बाद कौन-सा अक्षर आता है?",["F / एफ","G / जी","D / डी","H / एच"],0],
-["Which letter comes after F?","F के बाद कौन-सा अक्षर आता है?",["E / ई","G / जी","H / एच","I / आई"],1],
-["Which letter comes before G?","G से पहले कौन-सा अक्षर आता है?",["E / ई","F / एफ","H / एच","I / आई"],1],
-["Which letter comes after H?","H के बाद कौन-सा अक्षर आता है?",["G / जी","I / आई","J / जे","K / के"],1],
-["Which letter comes before I?","I से पहले कौन-सा अक्षर आता है?",["G / जी","H / एच","J / जे","K / के"],1],
-["Which letter comes after J?","J के बाद कौन-सा अक्षर आता है?",["I / आई","K / के","L / एल","M / एम"],1],
-["Which letter comes before K?","K से पहले कौन-सा अक्षर आता है?",["I / आई","J / जे","L / एल","M / एम"],1],
-["Which letter comes after L?","L के बाद कौन-सा अक्षर आता है?",["K / के","M / एम","N / एन","O / ओ"],1],
-["Which letter comes before M?","M से पहले कौन-सा अक्षर आता है?",["K / के","L / एल","N / एन","O / ओ"],1],
-["Which letter comes after N?","N के बाद कौन-सा अक्षर आता है?",["M / एम","O / ओ","P / पी","Q / क्यू"],1],
-["Which letter comes before O?","O से पहले कौन-सा अक्षर आता है?",["M / एम","N / एन","P / पी","Q / क्यू"],1],
-["Which letter comes after P?","P के बाद कौन-सा अक्षर आता है?",["O / ओ","Q / क्यू","R / आर","S / एस"],1],
-["Which letter comes before Q?","Q से पहले कौन-सा अक्षर आता है?",["O / ओ","P / पी","R / आर","S / एस"],1],
-["Which letter comes after R?","R के बाद कौन-सा अक्षर आता है?",["Q / क्यू","S / एस","T / टी","U / यू"],1],
-["Which letter comes before S?","S से पहले कौन-सा अक्षर आता है?",["Q / क्यू","R / आर","T / टी","U / यू"],1],
-["Which letter comes after T?","T के बाद कौन-सा अक्षर आता है?",["S / एस","U / यू","V / वी","W / डब्ल्यू"],1],
-["Which letter comes before U?","U से पहले कौन-सा अक्षर आता है?",["S / एस","T / टी","V / वी","W / डब्ल्यू"],1],
-["Which letter comes after V?","V के बाद कौन-सा अक्षर आता है?",["U / यू","W / डब्ल्यू","X / एक्स","Y / वाई"],1],
-["Which letter comes before W?","W से पहले कौन-सा अक्षर आता है?",["U / यू","V / वी","X / एक्स","Y / वाई"],1],
-["Which letter comes after X?","X के बाद कौन-सा अक्षर आता है?",["W / डब्ल्यू","Y / वाई","Z / जेड","V / वी"],1],
-["Which letter comes before Y?","Y से पहले कौन-सा अक्षर आता है?",["W / डब्ल्यू","X / एक्स","Z / जेड","V / वी"],1],
-["Which letter comes after Y?","Y के बाद कौन-सा अक्षर आता है?",["X / एक्स","Z / जेड","W / डब्ल्यू","V / वी"],1],
-["Which is the first letter?","पहला अक्षर कौन-सा है?",["A / ए","B / बी","C / सी","D / डी"],0],
-["Which is the last letter?","अंतिम अक्षर कौन-सा है?",["X / एक्स","Y / वाई","Z / जेड","W / डब्ल्यू"],2],
-["How many letters are in English alphabet?","English alphabet में कितने अक्षर हैं?",["24","25","26","27"],2],
-["Which letter is a vowel?","इनमें vowel कौन-सा है?",["B / बी","C / सी","A / ए","D / डी"],2],
-["Which letter is a consonant?","इनमें consonant कौन-सा है?",["A / ए","E / ई","M / एम","I / आइ"],2],
-["Which word starts with A?","कौन-सा word A से शुरू होता है?",["Apple / सेब","Ball / गेंद","Cat / बिल्ली","Dog / कुत्ता"],0],
-["Which word starts with B?","कौन-सा word B से शुरू होता है?",["Apple","Ball / गेंद","Cat","Dog"],1],
-["Which word starts with C?","कौन-सा word C से शुरू होता है?",["Dog","Apple","Cat / बिल्ली","Ball"],2],
-["Which word starts with D?","कौन-सा word D से शुरू होता है?",["Dog / कुत्ता","Cat","Ball","Apple"],0],
-["Apple starts with which letter?","Apple किस अक्षर से शुरू होता है?",["A","B","C","D"],0],
-["Ball starts with which letter?","Ball किस अक्षर से शुरू होता है?",["A","B","C","D"],1],
-["Cat starts with which letter?","Cat किस अक्षर से शुरू होता है?",["A","B","C","D"],2],
-["Dog starts with which letter?","Dog किस अक्षर से शुरू होता है?",["A","B","C","D"],3],
-["Which letter comes between A and C?","A और C के बीच कौन-सा अक्षर है?",["A","B","C","D"],1],
-["Which letter comes between D and F?","D और F के बीच कौन-सा अक्षर है?",["C","E","G","H"],1],
-["Which letter comes between H and J?","H और J के बीच कौन-सा अक्षर है?",["G","I","K","L"],1],
-["Which letter comes between M and O?","M और O के बीच कौन-सा अक्षर है?",["L","N","P","Q"],1],
-["Which letter comes between R and T?","R और T के बीच कौन-सा अक्षर है?",["Q","S","U","V"],1],
-["Which letter comes between W and Y?","W और Y के बीच कौन-सा अक्षर है?",["V","X","Z","U"],1],
-["Which pair is correct?","सही जोड़ी कौन-सी है?",["A–Apple","B–Cat","C–Dog","D–Ball"],0],
-["Which pair is correct?","सही जोड़ी कौन-सी है?",["B–Ball","A–Cat","D–Apple","C–Dog"],0],
-["Which pair is correct?","सही जोड़ी कौन-सी है?",["C–Cat","A–Dog","B–Apple","D–Ball"],0],
-["Which pair is correct?","सही जोड़ी कौन-सी है?",["D–Dog","A–Ball","B–Cat","C–Apple"],0]
-
-]);
+const questionBanks=[];
 
 
-/* GENERIC QUESTION MAKER */
+/* =====================================================
+   WORD DATA
+===================================================== */
 
-function makeQuestions(type){
+const words={
+
+colours:[
+["Red","लाल","🔴"],
+["Blue","नीला","🔵"],
+["Green","हरा","🟢"],
+["Yellow","पीला","🟡"],
+["Orange","नारंगी","🟠"],
+["Purple","बैंगनी","🟣"],
+["Pink","गुलाबी","🌸"],
+["Black","काला","⚫"],
+["White","सफेद","⚪"]
+],
+
+animals:[
+["Dog","कुत्ता","🐶"],
+["Cat","बिल्ली","🐱"],
+["Cow","गाय","🐄"],
+["Lion","शेर","🦁"],
+["Tiger","बाघ","🐯"],
+["Elephant","हाथी","🐘"],
+["Horse","घोड़ा","🐴"],
+["Monkey","बंदर","🐒"],
+["Rabbit","खरगोश","🐰"]
+],
+
+fruits:[
+["Apple","सेब","🍎"],
+["Banana","केला","🍌"],
+["Mango","आम","🥭"],
+["Orange","संतरा","🍊"],
+["Grapes","अंगूर","🍇"],
+["Guava","अमरूद","🍐"],
+["Watermelon","तरबूज","🍉"]
+],
+
+body:[
+["Eye","आँख","👁️"],
+["Ear","कान","👂"],
+["Nose","नाक","👃"],
+["Mouth","मुँह","👄"],
+["Hand","हाथ","✋"],
+["Foot","पैर","🦶"],
+["Head","सिर","🙂"]
+],
+
+actions:[
+["Run","दौड़ना","🏃"],
+["Walk","चलना","🚶"],
+["Eat","खाना","🍎"],
+["Drink","पीना","🥤"],
+["Read","पढ़ना","📖"],
+["Write","लिखना","✍️"],
+["Play","खेलना","⚽"],
+["Sleep","सोना","😴"]
+],
+
+days:[
+["Monday","सोमवार"],
+["Tuesday","मंगलवार"],
+["Wednesday","बुधवार"],
+["Thursday","गुरुवार"],
+["Friday","शुक्रवार"],
+["Saturday","शनिवार"],
+["Sunday","रविवार"]
+]
+
+};
+
+
+/* =====================================================
+   CREATE 50 QUESTIONS FOR EVERY LESSON
+===================================================== */
+
+function makeQuestions(index){
 
     let q=[];
 
-    if(type==="capital"){
+    const letters=
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 
-        const letters="ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+    const small=
+    "abcdefghijklmnopqrstuvwxyz".split("");
+
+    /* ---------------------------------------------
+       ALPHABET
+    --------------------------------------------- */
+
+    if(index===0){
 
         for(let i=0;i<50;i++){
 
-            let x=letters[i%26];
+            let n=i%25;
 
-            q.push([
-                `Which is the capital letter "${x}"?`,
-                `"${x}" में बड़ा अक्षर कौन-सा है?`,
-                [x.toUpperCase(),x.toLowerCase(),"B","d"],
-                0
-            ]);
+            q.push({
+
+                en:`Which letter comes after ${letters[n]}?`,
+
+                hi:`${letters[n]} के बाद कौन-सा अक्षर आता है?`,
+
+                options:[
+                    letters[n+1],
+                    letters[(n+2)%26],
+                    letters[n],
+                    letters[(n+3)%26]
+                ],
+
+                answer:0
+
+            });
 
         }
 
     }
 
-    else if(type==="small"){
 
-        const letters="abcdefghijklmnopqrstuvwxyz".split("");
+    /* ---------------------------------------------
+       CAPITAL
+    --------------------------------------------- */
+
+    else if(index===1){
 
         for(let i=0;i<50;i++){
 
             let x=letters[i%26];
 
-            q.push([
-                `Which is the small letter "${x}"?`,
-                `"${x}" में छोटा अक्षर कौन-सा है?`,
-                [x.toLowerCase(),x.toUpperCase(),"A","D"],
-                0
-            ]);
+            q.push({
+
+                en:`Choose the capital letter of ${x.toLowerCase()}.`,
+
+                hi:`${x.toLowerCase()} का बड़ा अक्षर चुनें।`,
+
+                options:[
+                    x,
+                    x.toLowerCase(),
+                    "b",
+                    "c"
+                ],
+
+                answer:0
+
+            });
 
         }
 
     }
 
-    else if(type==="vowel"){
 
-        const vowels=["A","E","I","O","U"];
+    /* ---------------------------------------------
+       SMALL
+    --------------------------------------------- */
+
+    else if(index===2){
+
+        for(let i=0;i<50;i++){
+
+            let x=small[i%26];
+
+            q.push({
+
+                en:`Choose the small letter: ${x.toUpperCase()}`,
+
+                hi:`${x.toUpperCase()} का छोटा अक्षर चुनें।`,
+
+                options:[
+                    x,
+                    x.toUpperCase(),
+                    "a",
+                    "b"
+                ],
+
+                answer:0
+
+            });
+
+        }
+
+    }
+
+
+    /* ---------------------------------------------
+       VOWELS
+    --------------------------------------------- */
+
+    else if(index===3){
+
+        let vowels=["A","E","I","O","U"];
 
         for(let i=0;i<50;i++){
 
             let x=vowels[i%5];
 
-            q.push([
-                `Which one is a vowel?`,
-                `इनमें vowel कौन-सा है?`,
-                [x,"B","C","D"],
-                0
-            ]);
+            q.push({
 
-        }
+                en:"Which one is a vowel?",
 
-    }
+                hi:"इनमें से vowel कौन-सा है?",
 
-    else if(type==="consonant"){
-
-        const letters=["B","C","D","F","G","H","J","K","L","M","N","P","Q","R","S","T","V","W","X","Y","Z"];
-
-        for(let i=0;i<50;i++){
-
-            let x=letters[i%letters.length];
-
-            q.push([
-                `Which one is a consonant?`,
-                `इनमें consonant कौन-सा है?`,
-                [x,"A","E","I"],
-                0
-            ]);
-
-        }
-
-    }
-
-    else{
-
-        for(let i=0;i<50;i++){
-
-            q.push([
-                `Practice Question ${i+1}: Choose the correct answer.`,
-                `अभ्यास प्रश्न ${i+1}: सही उत्तर चुनें।`,
-                [
-                    "Correct / सही",
-                    "Wrong / गलत",
-                    "Maybe / शायद",
-                    "None / कोई नहीं"
+                options:[
+                    x,
+                    "B",
+                    "C",
+                    "D"
                 ],
-                0
-            ]);
+
+                answer:0
+
+            });
 
         }
 
     }
 
-    return q;
 
-}
+    /* ---------------------------------------------
+       CONSONANTS
+    --------------------------------------------- */
 
+    else if(index===4){
 
-/* =====================================================
-SPECIAL QUESTION BANKS
-===================================================== */
-
-
-/* COUNTING */
-
-function countingQuestions(){
-
-    let q=[];
-
-    const names=[
-        "One","Two","Three","Four","Five",
-        "Six","Seven","Eight","Nine","Ten",
-        "Eleven","Twelve","Thirteen","Fourteen","Fifteen",
-        "Sixteen","Seventeen","Eighteen","Nineteen","Twenty"
-    ];
-
-    for(let i=1;i<=50;i++){
-
-        let n=i;
-
-        let next=n+1;
-
-        q.push([
-            `What number comes after ${n}?`,
-            `${n} के बाद कौन-सी संख्या आती है?`,
-            [
-                `${next} / ${next}`,
-                `${n-1} / ${n-1}`,
-                `${n+2} / ${n+2}`,
-                `${n+3} / ${n+3}`
-            ],
-            0
-        ]);
-
-    }
-
-    return q;
-
-}
-
-
-/* COLOURS */
-
-function colourQuestions(){
-
-    const data=[
-        ["Red","लाल","🔴"],
-        ["Blue","नीला","🔵"],
-        ["Green","हरा","🟢"],
-        ["Yellow","पीला","🟡"],
-        ["Orange","नारंगी","🟠"],
-        ["Purple","बैंगनी","🟣"],
-        ["Black","काला","⚫"],
-        ["White","सफेद","⚪"]
-    ];
-
-    let q=[];
-
-    for(let i=0;i<50;i++){
-
-        let d=data[i%data.length];
-
-        q.push([
-            `Which colour is ${d[2]}?`,
-            `${d[2]} कौन-सा रंग है?`,
-            [
-                `${d[0]} / ${d[1]}`,
-                "Green / हरा",
-                "Blue / नीला",
-                "Red / लाल"
-            ],
-            0
-        ]);
-
-    }
-
-    return q;
-
-}
-
-
-/* ANIMALS */
-
-function animalQuestions(){
-
-    const data=[
-        ["Dog","कुत्ता","🐶"],
-        ["Cat","बिल्ली","🐱"],
-        ["Cow","गाय","🐄"],
-        ["Elephant","हाथी","🐘"],
-        ["Lion","शेर","🦁"],
-        ["Tiger","बाघ","🐯"],
-        ["Monkey","बंदर","🐒"],
-        ["Fish","मछली","🐟"]
-    ];
-
-    let q=[];
-
-    for(let i=0;i<50;i++){
-
-        let d=data[i%data.length];
-
-        q.push([
-            `What is ${d[2]} called in English?`,
-            `${d[2]} को English में क्या कहते हैं?`,
-            [
-                `${d[0]} / ${d[1]}`,
-                "Cat / बिल्ली",
-                "Dog / कुत्ता",
-                "Cow / गाय"
-            ],
-            0
-        ]);
-
-    }
-
-    return q;
-
-}
-
-
-/* FRUITS */
-
-function fruitQuestions(){
-
-    const data=[
-        ["Apple","सेब","🍎"],
-        ["Banana","केला","🍌"],
-        ["Mango","आम","🥭"],
-        ["Orange","संतरा","🍊"],
-        ["Grapes","अंगूर","🍇"],
-        ["Watermelon","तरबूज","🍉"]
-    ];
-
-    let q=[];
-
-    for(let i=0;i<50;i++){
-
-        let d=data[i%data.length];
-
-        q.push([
-            `What is ${d[2]} called in English?`,
-            `${d[2]} को English में क्या कहते हैं?`,
-            [
-                `${d[0]} / ${d[1]}`,
-                "Apple / सेब",
-                "Mango / आम",
-                "Banana / केला"
-            ],
-            0
-        ]);
-
-    }
-
-    return q;
-
-}
-
-
-/* DAYS */
-
-function dayQuestions(){
-
-    const days=[
-        ["Monday","सोमवार"],
-        ["Tuesday","मंगलवार"],
-        ["Wednesday","बुधवार"],
-        ["Thursday","गुरुवार"],
-        ["Friday","शुक्रवार"],
-        ["Saturday","शनिवार"],
-        ["Sunday","रविवार"]
-    ];
-
-    let q=[];
-
-    for(let i=0;i<50;i++){
-
-        let d=days[i%7];
-
-        q.push([
-            `Which day is "${d[0]}"?`,
-            `"${d[0]}" कौन-सा दिन है?`,
-            [
-                `${d[0]} / ${d[1]}`,
-                "Monday / सोमवार",
-                "Sunday / रविवार",
-                "Friday / शुक्रवार"
-            ],
-            0
-        ]);
-
-    }
-
-    return q;
-
-}
-
-
-/* MONTHS */
-
-function monthQuestions(){
-
-    const months=[
-        ["January","जनवरी"],
-        ["February","फरवरी"],
-        ["March","मार्च"],
-        ["April","अप्रैल"],
-        ["May","मई"],
-        ["June","जून"],
-        ["July","जुलाई"],
-        ["August","अगस्त"],
-        ["September","सितंबर"],
-        ["October","अक्टूबर"],
-        ["November","नवंबर"],
-        ["December","दिसंबर"]
-    ];
-
-    let q=[];
-
-    for(let i=0;i<50;i++){
-
-        let d=months[i%12];
-
-        q.push([
-            `Which month is "${d[0]}"?`,
-            `"${d[0]}" कौन-सा महीना है?`,
-            [
-                `${d[0]} / ${d[1]}`,
-                "January / जनवरी",
-                "March / मार्च",
-                "December / दिसंबर"
-            ],
-            0
-        ]);
-
-    }
-
-    return q;
-
-}
-
-
-/* ACTION WORDS */
-
-function actionQuestions(){
-
-    const words=[
-        ["Run","दौड़ना"],
-        ["Walk","चलना"],
-        ["Eat","खाना"],
-        ["Drink","पीना"],
-        ["Read","पढ़ना"],
-        ["Write","लिखना"],
-        ["Play","खेलना"],
-        ["Sleep","सोना"]
-    ];
-
-    let q=[];
-
-    for(let i=0;i<50;i++){
-
-        let d=words[i%8];
-
-        q.push([
-            `What does "${d[0]}" mean?`,
-            `"${d[0]}" का अर्थ क्या है?`,
-            [
-                `${d[1]} / ${d[0]}`,
-                "पढ़ना / Read",
-                "खाना / Eat",
-                "चलना / Walk"
-            ],
-            0
-        ]);
-
-    }
-
-    return q;
-
-}
-
-
-/* OPPOSITES */
-
-function oppositeQuestions(){
-
-    const data=[
-        ["Big","Small","बड़ा","छोटा"],
-        ["Hot","Cold","गर्म","ठंडा"],
-        ["Day","Night","दिन","रात"],
-        ["Up","Down","ऊपर","नीचे"],
-        ["Good","Bad","अच्छा","बुरा"],
-        ["Fast","Slow","तेज","धीमा"]
-    ];
-
-    let q=[];
-
-    for(let i=0;i<50;i++){
-
-        let d=data[i%6];
-
-        q.push([
-            `What is the opposite of "${d[0]}"?`,
-            `"${d[0]}" का opposite क्या है?`,
-            [
-                `${d[1]} / ${d[3]}`,
-                `${d[0]} / ${d[2]}`,
-                "Good / अच्छा",
-                "Big / बड़ा"
-            ],
-            0
-        ]);
-
-    }
-
-    return q;
-
-}
-
-
-/* PRONOUNS */
-
-function pronounQuestions(){
-
-    const data=[
-        ["I","मैं"],
-        ["You","तुम/आप"],
-        ["He","वह लड़का"],
-        ["She","वह लड़की"],
-        ["It","यह/वह"],
-        ["We","हम"],
-        ["They","वे"]
-    ];
-
-    let q=[];
-
-    for(let i=0;i<50;i++){
-
-        let d=data[i%7];
-
-        q.push([
-            `What does "${d[0]}" mean?`,
-            `"${d[0]}" का अर्थ क्या है?`,
-            [
-                `${d[1]} / ${d[0]}`,
-                "हम / We",
-                "वे / They",
-                "मैं / I"
-            ],
-            0
-        ]);
-
-    }
-
-    return q;
-
-}
-
-
-/* A AN */
-
-function articleQuestions(){
-
-    let q=[];
-
-    const good=[
-        ["apple","An"],
-        ["egg","An"],
-        ["orange","An"],
-        ["umbrella","An"],
-        ["boy","A"],
-        ["cat","A"],
-        ["dog","A"],
-        ["ball","A"]
-    ];
-
-    for(let i=0;i<50;i++){
-
-        let d=good[i%8];
-
-        q.push([
-            `Which article is correct: "${d[0]}"?`,
-            `"${d[0]}" के साथ कौन-सा article सही है?`,
-            [
-                `${d[1]} / ${d[1]}`,
-                d[1]==="A" ? "An / An" : "A / A",
-                "The / The",
-                "No article / कोई article नहीं"
-            ],
-            0
-        ]);
-
-    }
-
-    return q;
-
-}
-
-
-/* IS AM ARE */
-
-function isAmAreQuestions(){
-
-    const data=[
-        ["I","am"],
-        ["He","is"],
-        ["She","is"],
-        ["It","is"],
-        ["We","are"],
-        ["You","are"],
-        ["They","are"]
-    ];
-
-    let q=[];
-
-    for(let i=0;i<50;i++){
-
-        let d=data[i%7];
-
-        q.push([
-            `Choose the correct word: ${d[0]} ___ happy.`,
-            `सही शब्द चुनें: ${d[0]} ___ happy.`,
-            [
-                `${d[1]} / ${d[1]}`,
-                "is / is",
-                "am / am",
-                "are / are"
-            ],
-            0
-        ]);
-
-    }
-
-    return q;
-
-}
-
-
-/* QUESTION WORDS */
-
-function questionWordQuestions(){
-
-    const data=[
-        ["What","क्या"],
-        ["Who","कौन"],
-        ["Where","कहाँ"],
-        ["When","कब"],
-        ["Why","क्यों"],
-        ["How","कैसे"]
-    ];
-
-    let q=[];
-
-    for(let i=0;i<50;i++){
-
-        let d=data[i%6];
-
-        q.push([
-            `What does "${d[0]}" mean?`,
-            `"${d[0]}" का अर्थ क्या है?`,
-            [
-                `${d[1]} / ${d[0]}`,
-                "कौन / Who",
-                "कहाँ / Where",
-                "क्या / What"
-            ],
-            0
-        ]);
-
-    }
-
-    return q;
-
-}
-
-
-/* =====================================================
-ASSIGN ALL 30 QUESTION SETS
-===================================================== */
-
-questionSets[1]=makeQuestions("capital");
-questionSets[2]=makeQuestions("small");
-questionSets[3]=makeQuestions("vowel");
-questionSets[4]=makeQuestions("consonant");
-questionSets[5]=countingQuestions();
-questionSets[6]=makeQuestions("number");
-questionSets[7]=colourQuestions();
-questionSets[8]=makeQuestions("shape");
-questionSets[9]=animalQuestions();
-questionSets[10]=makeQuestions("bird");
-questionSets[11]=fruitQuestions();
-questionSets[12]=makeQuestions("vegetable");
-questionSets[13]=makeQuestions("body");
-questionSets[14]=makeQuestions("family");
-questionSets[15]=makeQuestions("school");
-questionSets[16]=makeQuestions("classroom");
-questionSets[17]=makeQuestions("greeting");
-questionSets[18]=makeQuestions("introduction");
-questionSets[19]=pronounQuestions();
-questionSets[20]=articleQuestions();
-questionSets[21]=makeQuestions("this");
-questionSets[22]=makeQuestions("these");
-questionSets[23]=isAmAreQuestions();
-questionSets[24]=actionQuestions();
-questionSets[25]=oppositeQuestions();
-questionSets[26]=makeQuestions("plural");
-questionSets[27]=makeQuestions("sentence");
-questionSets[28]=questionWordQuestions();
-questionSets[29]=dayQuestions();
-questionSets[30]=monthQuestions();
-
-
-/* =====================================================
-MAKE SURE EVERY LESSON HAS 50 QUESTIONS
-===================================================== */
-
-for(let i=0;i<30;i++){
-
-    if(!questionSets[i]){
-        questionSets[i]=makeQuestions("general");
-    }
-
-    while(questionSets[i].length<50){
-
-        let n=questionSets[i].length+1;
-
-        questionSets[i].push([
-            `Practice Question ${n}`,
-            `अभ्यास प्रश्न ${n}`,
-            [
-                "Correct / सही",
-                "Wrong / गलत",
-                "Try Again / फिर प्रयास करें",
-                "None / कोई नहीं"
-            ],
-            0
-        ]);
-
-    }
-
-    if(questionSets[i].length>50){
-        questionSets[i]=questionSets[i].slice(0,50);
-    }
-
-}
-
-
-/* =====================================================
-STATE
-===================================================== */
-
-let currentLesson=0;
-let currentQuestion=0;
-let score=0;
-let answered=false;
-
-let completedLessons=
-JSON.parse(
-localStorage.getItem("class1CompletedLessons") || "[]"
-);
-
-
-/* =====================================================
-SOUND SYSTEM
-===================================================== */
-
-let soundEnabled=true;
-
-
-/* BROWSER GENERATED CLAP */
-
-function clapSound(){
-
-    if(!soundEnabled)return;
-
-    try{
-
-        const AudioContext=
-        window.AudioContext ||
-        window.webkitAudioContext;
-
-        if(!AudioContext)return;
-
-        const ctx=new AudioContext();
-
-        for(let c=0;c<7;c++){
-
-            let buffer=
-            ctx.createBuffer(
-                1,
-                ctx.sampleRate*0.12,
-                ctx.sampleRate
-            );
-
-            let data=
-            buffer.getChannelData(0);
-
-            for(let i=0;i<data.length;i++){
-
-                data[i]=
-                (Math.random()*2-1)*
-                (1-i/data.length);
-
-            }
-
-            let source=
-            ctx.createBufferSource();
-
-            let filter=
-            ctx.createBiquadFilter();
-
-            let gain=
-            ctx.createGain();
-
-            source.buffer=buffer;
-
-            filter.type="bandpass";
-            filter.frequency.value=1800;
-
-            let time=
-            ctx.currentTime+
-            c*0.11;
-
-            gain.gain.setValueAtTime(
-                0.7,
-                time
-            );
-
-            gain.gain.exponentialRampToValueAtTime(
-                0.01,
-                time+0.11
-            );
-
-            source.connect(filter);
-            filter.connect(gain);
-            gain.connect(ctx.destination);
-
-            source.start(time);
-            source.stop(time+0.12);
-
-        }
-
-    }catch(e){}
-
-}
-
-
-/* SUCCESS SOUND */
-
-function successSound(){
-
-    if(!soundEnabled)return;
-
-    try{
-
-        const AC=
-        window.AudioContext ||
-        window.webkitAudioContext;
-
-        if(!AC)return;
-
-        const ctx=new AC();
-
-        const notes=[
-            523,
-            659,
-            784,
-            1047
+        let consonants=[
+            "B","C","D","F","G",
+            "H","J","K","L","M"
         ];
 
-        notes.forEach((freq,i)=>{
+        for(let i=0;i<50;i++){
 
-            const osc=
-            ctx.createOscillator();
+            let x=
+            consonants[i%consonants.length];
 
-            const gain=
-            ctx.createGain();
+            q.push({
 
-            let t=
-            ctx.currentTime+
-            i*.12;
+                en:"Which one is a consonant?",
 
-            osc.frequency.value=freq;
+                hi:"इनमें से consonant कौन-सा है?",
 
-            gain.gain.setValueAtTime(
-                .01,t
-            );
+                options:[
+                    x,
+                    "A",
+                    "E",
+                    "I"
+                ],
 
-            gain.gain.exponentialRampToValueAtTime(
-                .25,t+.03
-            );
+                answer:0
 
-            gain.gain.exponentialRampToValueAtTime(
-                .01,t+.35
-            );
+            });
 
-            osc.connect(gain);
-            gain.connect(ctx.destination);
+        }
 
-            osc.start(t);
-            osc.stop(t+.4);
+    }
+
+
+    /* ---------------------------------------------
+       COUNTING
+    --------------------------------------------- */
+
+    else if(index===5){
+
+        for(let i=1;i<=50;i++){
+
+            q.push({
+
+                en:`What number comes after ${i}?`,
+
+                hi:`${i} के बाद कौन-सी संख्या आती है?`,
+
+                options:[
+                    String(i+1),
+                    String(i-1),
+                    String(i+2),
+                    String(i+3)
+                ],
+
+                answer:0
+
+            });
+
+        }
+
+    }
+
+
+    /* ---------------------------------------------
+       NUMBER NAMES
+    --------------------------------------------- */
+
+    else if(index===6){
+
+        const nums=[
+            ["One","एक"],
+            ["Two","दो"],
+            ["Three","तीन"],
+            ["Four","चार"],
+            ["Five","पाँच"],
+            ["Six","छह"],
+            ["Seven","सात"],
+            ["Eight","आठ"],
+            ["Nine","नौ"],
+            ["Ten","दस"]
+        ];
+
+        for(let i=0;i<50;i++){
+
+            let x=nums[i%10];
+
+            q.push({
+
+                en:`What is "${x[0]}" in Hindi?`,
+
+                hi:`"${x[0]}" का हिंदी अर्थ क्या है?`,
+
+                options:[
+                    x[1],
+                    "पाँच",
+                    "दस",
+                    "एक"
+                ],
+
+                answer:0
+
+            });
+
+        }
+
+    }
+
+
+    /* ---------------------------------------------
+       COLOURS
+    --------------------------------------------- */
+
+    else if(index===7){
+
+        for(let i=0;i<50;i++){
+
+            let x=
+            words.colours[i%words.colours.length];
+
+            q.push({
+
+                en:`What colour is ${x[2]}?`,
+
+                hi:`${x[2]} कौन-सा रंग है?`,
+
+                options:[
+                    `${x[0]} / ${x[1]}`,
+                    "Blue / नीला",
+                    "Red / लाल",
+                    "Green / हरा"
+                ],
+
+                answer:0
+
+            });
+
+        }
+
+    }
+
+
+    /* ---------------------------------------------
+       SHAPES
+    --------------------------------------------- */
+
+    else if(index===8){
+
+        const shapes=[
+            ["Circle","वृत्त","⭕"],
+            ["Square","वर्ग","⬜"],
+            ["Triangle","त्रिभुज","🔺"],
+            ["Rectangle","आयत","▭"],
+            ["Star","तारा","⭐"]
+        ];
+
+        for(let i=0;i<50;i++){
+
+            let x=shapes[i%5];
+
+            q.push({
+
+                en:`What is ${x[2]} called in English?`,
+
+                hi:`${x[2]} को English में क्या कहते हैं?`,
+
+                options:[
+                    `${x[0]} / ${x[1]}`,
+                    "Circle / वृत्त",
+                    "Square / वर्ग",
+                    "Star / तारा"
+                ],
+
+                answer:0
+
+            });
+
+        }
+
+    }
+
+
+    /* ---------------------------------------------
+       ANIMALS
+    --------------------------------------------- */
+
+    else if(index===9){
+
+        for(let i=0;i<50;i++){
+
+            let x=
+            words.animals[i%words.animals.length];
+
+            q.push({
+
+                en:`What is ${x[2]} called in English?`,
+
+                hi:`${x[2]} को English में क्या कहते हैं?`,
+
+                options:[
+                    `${x[0]} / ${x[1]}`,
+                    "Cat / बिल्ली",
+                    "Dog / कुत्ता",
+                    "Cow / गाय"
+                ],
+
+                answer:0
+
+            });
+
+        }
+
+    }
+
+
+    /* ---------------------------------------------
+       BIRDS
+    --------------------------------------------- */
+
+    else if(index===10){
+
+        const birds=[
+            ["Parrot","तोता","🦜"],
+            ["Peacock","मोर","🦚"],
+            ["Eagle","चील","🦅"],
+            ["Crow","कौआ","🐦"],
+            ["Sparrow","गौरैया","🐦"]
+        ];
+
+        for(let i=0;i<50;i++){
+
+            let x=birds[i%5];
+
+            q.push({
+
+                en:`What is ${x[2]} called in English?`,
+
+                hi:`${x[2]} को English में क्या कहते हैं?`,
+
+                options:[
+                    `${x[0]} / ${x[1]}`,
+                    "Parrot / तोता",
+                    "Crow / कौआ",
+                    "Eagle / चील"
+                ],
+
+                answer:0
+
+            });
+
+        }
+
+    }
+
+
+    /* ---------------------------------------------
+       FRUITS
+    --------------------------------------------- */
+
+    else if(index===11){
+
+        for(let i=0;i<50;i++){
+
+            let x=
+            words.fruits[i%words.fruits.length];
+
+            q.push({
+
+                en:`What is ${x[2]} called in English?`,
+
+                hi:`${x[2]} को English में क्या कहते हैं?`,
+
+                options:[
+                    `${x[0]} / ${x[1]}`,
+                    "Apple / सेब",
+                    "Mango / आम",
+                    "Banana / केला"
+                ],
+
+                answer:0
+
+            });
+
+        }
+
+    }
+
+
+    /* ---------------------------------------------
+       VEGETABLES
+    --------------------------------------------- */
+
+    else if(index===12){
+
+        const veg=[
+            ["Carrot","गाजर","🥕"],
+            ["Potato","आलू","🥔"],
+            ["Tomato","टमाटर","🍅"],
+            ["Onion","प्याज","🧅"],
+            ["Peas","मटर","🫛"]
+        ];
+
+        for(let i=0;i<50;i++){
+
+            let x=veg[i%5];
+
+            q.push({
+
+                en:`What is ${x[2]} called in English?`,
+
+                hi:`${x[2]} को English में क्या कहते हैं?`,
+
+                options:[
+                    `${x[0]} / ${x[1]}`,
+                    "Potato / आलू",
+                    "Tomato / टमाटर",
+                    "Carrot / गाजर"
+                ],
+
+                answer:0
+
+            });
+
+        }
+
+    }
+
+
+    /* ---------------------------------------------
+       BODY
+    --------------------------------------------- */
+
+    else if(index===13){
+
+        for(let i=0;i<50;i++){
+
+            let x=
+            words.body[i%words.body.length];
+
+            q.push({
+
+                en:`What is ${x[2]} called in English?`,
+
+                hi:`${x[2]} को English में क्या कहते हैं?`,
+
+                options:[
+                    `${x[0]} / ${x[1]}`,
+                    "Eye / आँख",
+                    "Ear / कान",
+                    "Nose / नाक"
+                ],
+
+                answer:0
+
+            });
+
+        }
+
+    }
+
+
+    /* ---------------------------------------------
+       FAMILY
+    --------------------------------------------- */
+
+    else if(index===14){
+
+        const family=[
+            ["Father","पिता"],
+            ["Mother","माता"],
+            ["Brother","भाई"],
+            ["Sister","बहन"],
+            ["Grandfather","दादा/नाना"],
+            ["Grandmother","दादी/नानी"]
+        ];
+
+        for(let i=0;i<50;i++){
+
+            let x=family[i%family.length];
+
+            q.push({
+
+                en:`What does "${x[0]}" mean?`,
+
+                hi:`"${x[0]}" का अर्थ क्या है?`,
+
+                options:[
+                    `${x[1]} / ${x[0]}`,
+                    "पिता / Father",
+                    "माता / Mother",
+                    "भाई / Brother"
+                ],
+
+                answer:0
+
+            });
+
+        }
+
+    }
+
+
+    /* ---------------------------------------------
+       SCHOOL THINGS
+    --------------------------------------------- */
+
+    else if(index===15){
+
+        const school=[
+            ["Book","किताब","📖"],
+            ["Pencil","पेंसिल","✏️"],
+            ["Bag","बैग","🎒"],
+            ["Pen","कलम","🖊️"],
+            ["Eraser","रबर","🧽"],
+            ["Ruler","स्केल","📏"]
+        ];
+
+        for(let i=0;i<50;i++){
+
+            let x=school[i%6];
+
+            q.push({
+
+                en:`What is ${x[2]} called in English?`,
+
+                hi:`${x[2]} को English में क्या कहते हैं?`,
+
+                options:[
+                    `${x[0]} / ${x[1]}`,
+                    "Book / किताब",
+                    "Pencil / पेंसिल",
+                    "Bag / बैग"
+                ],
+
+                answer:0
+
+            });
+
+        }
+
+    }
+
+
+    /* ---------------------------------------------
+       CLASSROOM
+    --------------------------------------------- */
+
+    else if(index===16){
+
+        const classroom=[
+
+            ["Sit down","बैठ जाओ।"],
+
+            ["Stand up","खड़े हो जाओ।"],
+
+            ["Open your book","अपनी किताब खोलो।"],
+
+            ["Close your book","अपनी किताब बंद करो।"],
+
+            ["Listen carefully","ध्यान से सुनो।"],
+
+            ["Write","लिखो।"]
+
+        ];
+
+        for(let i=0;i<50;i++){
+
+            let x=
+            classroom[i%6];
+
+            q.push({
+
+                en:`What does "${x[0]}" mean?`,
+
+                hi:`"${x[0]}" का अर्थ क्या है?`,
+
+                options:[
+                    `${x[1]} / ${x[0]}`,
+                    "बैठ जाओ / Sit down",
+                    "लिखो / Write",
+                    "सुनो / Listen"
+                ],
+
+                answer:0
+
+            });
+
+        }
+
+    }
+
+
+    /* ---------------------------------------------
+       GREETINGS
+    --------------------------------------------- */
+
+    else if(index===17){
+
+        const greet=[
+
+            ["Hello","नमस्ते"],
+
+            ["Good Morning","सुप्रभात"],
+
+            ["Good Evening","शुभ संध्या"],
+
+            ["Thank You","धन्यवाद"],
+
+            ["Goodbye","अलविदा"],
+
+            ["Sorry","माफ कीजिए"]
+
+        ];
+
+        for(let i=0;i<50;i++){
+
+            let x=greet[i%6];
+
+            q.push({
+
+                en:`What does "${x[0]}" mean?`,
+
+                hi:`"${x[0]}" का हिंदी अर्थ क्या है?`,
+
+                options:[
+                    `${x[1]} / ${x[0]}`,
+                    "नमस्ते / Hello",
+                    "धन्यवाद / Thank You",
+                    "अलविदा / Goodbye"
+                ],
+
+                answer:0
+
+            });
+
+        }
+
+    }
+
+
+    /* ---------------------------------------------
+       INTRODUCTION
+    --------------------------------------------- */
+
+    else if(index===18){
+
+        const intro=[
+
+            ["My name is Rahul.","मेरा नाम राहुल है।"],
+
+            ["I am a student.","मैं विद्यार्थी हूँ।"],
+
+            ["I am happy.","मैं खुश हूँ।"],
+
+            ["I am a boy.","मैं लड़का हूँ।"],
+
+            ["I am a girl.","मैं लड़की हूँ।"]
+
+        ];
+
+        for(let i=0;i<50;i++){
+
+            let x=intro[i%5];
+
+            q.push({
+
+                en:`Which sentence means: ${x[1]}`,
+
+                hi:`${x[1]} के लिए सही English sentence चुनें।`,
+
+                options:[
+                    x[0],
+                    "I am happy.",
+                    "I am a student.",
+                    "My name is Rahul."
+                ],
+
+                answer:0
+
+            });
+
+        }
+
+    }
+
+
+    /* ---------------------------------------------
+       PRONOUNS
+    --------------------------------------------- */
+
+    else if(index===19){
+
+        const pro=[
+
+            ["I","मैं"],
+
+            ["You","तुम/आप"],
+
+            ["He","वह लड़का"],
+
+            ["She","वह लड़की"],
+
+            ["We","हम"],
+
+            ["They","वे"]
+
+        ];
+
+        for(let i=0;i<50;i++){
+
+            let x=pro[i%6];
+
+            q.push({
+
+                en:`What does "${x[0]}" mean?`,
+
+                hi:`"${x[0]}" का अर्थ क्या है?`,
+
+                options:[
+                    `${x[1]} / ${x[0]}`,
+                    "मैं / I",
+                    "हम / We",
+                    "वे / They"
+                ],
+
+                answer:0
+
+            });
+
+        }
+
+    }
+
+
+    /* ---------------------------------------------
+       A AN
+    --------------------------------------------- */
+
+    else if(index===20){
+
+        const aa=[
+
+            ["apple","An"],
+
+            ["egg","An"],
+
+            ["orange","An"],
+
+            ["umbrella","An"],
+
+            ["boy","A"],
+
+            ["cat","A"],
+
+            ["dog","A"],
+
+            ["ball","A"]
+
+        ];
+
+        for(let i=0;i<50;i++){
+
+            let x=aa[i%8];
+
+            q.push({
+
+                en:`Choose the correct article: ___ ${x[0]}`,
+
+                hi:`${x[0]} के साथ सही article चुनें।`,
+
+                options:[
+                    x[1],
+                    x[1]==="A"?"An":"A",
+                    "The",
+                    "No article"
+                ],
+
+                answer:0
+
+            });
+
+        }
+
+    }
+
+
+    /* ---------------------------------------------
+       THIS THAT
+    --------------------------------------------- */
+
+    else if(index===21){
+
+        const data=[
+
+            ["This","यह"],
+
+            ["That","वह"]
+
+        ];
+
+        for(let i=0;i<50;i++){
+
+            let x=data[i%2];
+
+            q.push({
+
+                en:`What does "${x[0]}" mean?`,
+
+                hi:`"${x[0]}" का अर्थ क्या है?`,
+
+                options:[
+                    x[1],
+                    x[0]==="This"?"वह":"यह",
+                    "ये",
+                    "वे"
+                ],
+
+                answer:0
+
+            });
+
+        }
+
+    }
+
+
+    /* ---------------------------------------------
+       THESE THOSE
+    --------------------------------------------- */
+
+    else if(index===22){
+
+        const data=[
+
+            ["These","ये"],
+
+            ["Those","वे"]
+
+        ];
+
+        for(let i=0;i<50;i++){
+
+            let x=data[i%2];
+
+            q.push({
+
+                en:`What does "${x[0]}" mean?`,
+
+                hi:`"${x[0]}" का अर्थ क्या है?`,
+
+                options:[
+                    x[1],
+                    x[0]==="These"?"वे":"ये",
+                    "यह",
+                    "वह"
+                ],
+
+                answer:0
+
+            });
+
+        }
+
+    }
+
+
+    /* ---------------------------------------------
+       IS AM ARE
+    --------------------------------------------- */
+
+    else if(index===23){
+
+        const data=[
+
+            ["I","am"],
+
+            ["He","is"],
+
+            ["She","is"],
+
+            ["It","is"],
+
+            ["We","are"],
+
+            ["You","are"],
+
+            ["They","are"]
+
+        ];
+
+        for(let i=0;i<50;i++){
+
+            let x=data[i%7];
+
+            q.push({
+
+                en:`${x[0]} ___ happy.`,
+
+                hi:`${x[0]} ___ happy में सही word चुनें।`,
+
+                options:[
+                    x[1],
+                    "is",
+                    "am",
+                    "are"
+                ],
+
+                answer:0
+
+            });
+
+        }
+
+    }
+
+
+    /* ---------------------------------------------
+       ACTION WORDS
+    --------------------------------------------- */
+
+    else if(index===24){
+
+        for(let i=0;i<50;i++){
+
+            let x=
+            words.actions[i%words.actions.length];
+
+            q.push({
+
+                en:`What does "${x[0]}" mean?`,
+
+                hi:`"${x[0]}" का अर्थ क्या है?`,
+
+                options:[
+                    `${x[1]} / ${x[0]}`,
+                    "पढ़ना / Read",
+                    "खाना / Eat",
+                    "खेलना / Play"
+                ],
+
+                answer:0
+
+            });
+
+        }
+
+    }
+
+
+    /* ---------------------------------------------
+       OPPOSITES
+    --------------------------------------------- */
+
+    else if(index===25){
+
+        const opp=[
+
+            ["Big","Small","बड़ा","छोटा"],
+
+            ["Hot","Cold","गर्म","ठंडा"],
+
+            ["Day","Night","दिन","रात"],
+
+            ["Up","Down","ऊपर","नीचे"],
+
+            ["Good","Bad","अच्छा","बुरा"],
+
+            ["Fast","Slow","तेज","धीमा"]
+
+        ];
+
+        for(let i=0;i<50;i++){
+
+            let x=opp[i%6];
+
+            q.push({
+
+                en:`What is the opposite of "${x[0]}"?`,
+
+                hi:`"${x[0]}" का opposite क्या है?`,
+
+                options:[
+                    `${x[1]} / ${x[3]}`,
+                    `${x[0]} / ${x[2]}`,
+                    "Good / अच्छा",
+                    "Big / बड़ा"
+                ],
+
+                answer:0
+
+            });
+
+        }
+
+    }
+
+
+    /* ---------------------------------------------
+       SINGULAR PLURAL
+    --------------------------------------------- */
+
+    else if(index===26){
+
+        const sp=[
+
+            ["Book","Books","किताब","किताबें"],
+
+            ["Cat","Cats","बिल्ली","बिल्लियाँ"],
+
+            ["Dog","Dogs","कुत्ता","कुत्ते"],
+
+            ["Ball","Balls","गेंद","गेंदें"],
+
+            ["Pen","Pens","कलम","कलमें"]
+
+        ];
+
+        for(let i=0;i<50;i++){
+
+            let x=sp[i%5];
+
+            q.push({
+
+                en:`What is the plural of "${x[0]}"?`,
+
+                hi:`"${x[0]}" का plural क्या है?`,
+
+                options:[
+                    x[1],
+                    x[0],
+                    x[0]+"ing",
+                    x[0]+"ed"
+                ],
+
+                answer:0
+
+            });
+
+        }
+
+    }
+
+
+    /* ---------------------------------------------
+       SIMPLE SENTENCES
+    --------------------------------------------- */
+
+    else if(index===27){
+
+        const sentences=[
+
+            ["I am a boy.","मैं लड़का हूँ।"],
+
+            ["I am a girl.","मैं लड़की हूँ।"],
+
+            ["This is my book.","यह मेरी किताब है।"],
+
+            ["I like mango.","मुझे आम पसंद है।"],
+
+            ["This is a cat.","यह बिल्ली है।"],
+
+            ["I can read.","मैं पढ़ सकता हूँ।"]
+
+        ];
+
+        for(let i=0;i<50;i++){
+
+            let x=sentences[i%6];
+
+            q.push({
+
+                en:`Choose the English sentence for: ${x[1]}`,
+
+                hi:`${x[1]} के लिए सही English sentence चुनें।`,
+
+                options:[
+                    x[0],
+                    "I am happy.",
+                    "This is a book.",
+                    "I can play."
+                ],
+
+                answer:0
+
+            });
+
+        }
+
+    }
+
+
+    /* ---------------------------------------------
+       QUESTION WORDS
+    --------------------------------------------- */
+
+    else if(index===28){
+
+        const qw=[
+
+            ["What","क्या"],
+
+            ["Who","कौन"],
+
+            ["Where","कहाँ"],
+
+            ["When","कब"],
+
+            ["Why","क्यों"],
+
+            ["How","कैसे"]
+
+        ];
+
+        for(let i=0;i<50;i++){
+
+            let x=qw[i%6];
+
+            q.push({
+
+                en:`What does "${x[0]}" mean?`,
+
+                hi:`"${x[0]}" का अर्थ क्या है?`,
+
+                options:[
+                    `${x[1]} / ${x[0]}`,
+                    "कौन / Who",
+                    "कहाँ / Where",
+                    "क्या / What"
+                ],
+
+                answer:0
+
+            });
+
+        }
+
+    }
+
+
+    /* ---------------------------------------------
+       DAYS + FINAL REVISION
+    --------------------------------------------- */
+
+    else if(index===29){
+
+        for(let i=0;i<50;i++){
+
+            let x=
+            words.days[i%7];
+
+            q.push({
+
+                en:`Which day is "${x[0]}"?`,
+
+                hi:`"${x[0]}" कौन-सा दिन है?`,
+
+                options:[
+                    `${x[0]} / ${x[1]}`,
+                    "Monday / सोमवार",
+                    "Sunday / रविवार",
+                    "Friday / शुक्रवार"
+                ],
+
+                answer:0
+
+            });
+
+        }
+
+    }
+
+
+    /* GUARANTEE 50 */
+
+    while(q.length<50){
+
+        q.push({
+
+            en:"Choose the correct answer.",
+
+            hi:"सही उत्तर चुनें।",
+
+            options:[
+                "Correct / सही",
+                "Wrong / गलत",
+                "Try Again / फिर प्रयास",
+                "None / कोई नहीं"
+            ],
+
+            answer:0
 
         });
 
-    }catch(e){}
-
-}
-
-
-/* WRONG SOUND */
-
-function wrongSound(){
-
-    if(!soundEnabled)return;
-
-    try{
-
-        const AC=
-        window.AudioContext ||
-        window.webkitAudioContext;
-
-        if(!AC)return;
-
-        const ctx=new AC();
-
-        const osc=
-        ctx.createOscillator();
-
-        const gain=
-        ctx.createGain();
-
-        osc.frequency.value=180;
-
-        gain.gain.setValueAtTime(
-            .3,
-            ctx.currentTime
-        );
-
-        gain.gain.exponentialRampToValueAtTime(
-            .01,
-            ctx.currentTime+.4
-        );
-
-        osc.connect(gain);
-        gain.connect(ctx.destination);
-
-        osc.start();
-        osc.stop(
-            ctx.currentTime+.4
-        );
-
-    }catch(e){}
-
-}
-
-
-/* SOUND BUTTON */
-
-function toggleSound(){
-
-    soundEnabled=!soundEnabled;
-
-    const btn=
-    document.getElementById(
-        "soundButton"
-    );
-
-    if(soundEnabled){
-
-        btn.innerHTML=
-        "🔊 Sound ON / आवाज चालू";
-
-        clapSound();
-
-    }else{
-
-        btn.innerHTML=
-        "🔇 Sound OFF / आवाज बंद";
-
     }
+
+    return q.slice(0,50);
+
+}
+
+
+/* CREATE BANKS */
+
+for(let i=0;i<30;i++){
+
+    questionBanks[i]=
+    makeQuestions(i);
 
 }
 
 
 /* =====================================================
-CREATE LESSON BUTTONS
+   CREATE LESSON CARDS
 ===================================================== */
 
-function createLessonButtons(){
+function createLessons(){
 
     const grid=
-    document.getElementById(
-        "lessonGrid"
-    );
+    document.getElementById("lessonGrid");
 
     grid.innerHTML="";
 
     lessons.forEach((lesson,index)=>{
 
-        const btn=
+        const card=
         document.createElement("button");
 
-        btn.className=
-        "lesson-btn";
+        card.className="lessonCard";
 
-        if(completedLessons.includes(index)){
-            btn.classList.add("completed");
+        if(completed.includes(index)){
+
+            card.classList.add("completedCard");
+
         }
 
-        btn.innerHTML=`
+        card.innerHTML=`
 
-        <div class="lesson-icon">
-        ${lesson.icon}
-        </div>
+            <div class="lessonIcon">
+                ${lesson[0]}
+            </div>
 
-        <div class="lesson-number">
-        Lesson ${index+1}
-        </div>
+            <div class="lessonNumber">
+                LESSON ${index+1}
+            </div>
 
-        <div class="lesson-name">
-        ${lesson.title}
-        </div>
+            <div class="lessonName">
+                ${lesson[1]}
+            </div>
 
-        <div class="lesson-hi">
-        ${lesson.hi}
-        </div>
+            <div class="lessonHindi">
+                ${lesson[2]}
+            </div>
 
-        ${
-            completedLessons.includes(index)
-            ?
-            "<div>✅ Completed</div>"
-            :
-            ""
-        }
+            ${
+                completed.includes(index)
+                ?
+                `<div class="completed">
+                    ✅ Completed
+                </div>`
+                :
+                `<div style="margin-top:8px">
+                    👉 Start
+                </div>`
+            }
 
         `;
 
-        btn.onclick=()=>{
+        card.onclick=()=>{
+
             openLesson(index);
+
         };
 
-        grid.appendChild(btn);
+        grid.appendChild(card);
 
     });
+
+    updateProgress();
 
 }
 
 
 /* =====================================================
-OPEN LESSON
+   OPEN LESSON
 ===================================================== */
 
 function openLesson(index){
 
     currentLesson=index;
+
     currentQuestion=0;
+
     score=0;
+
     answered=false;
 
-    document.getElementById(
-        "courseArea"
-    ).style.display="block";
+    document.getElementById("course")
+    .style.display="block";
 
-    document.getElementById(
-        "lessonIcon"
-    ).innerHTML=
-    lessons[index].icon;
 
-    document.getElementById(
-        "lessonTitle"
-    ).innerHTML=
-    "Lesson "+(index+1)+": "+
-    lessons[index].title;
+    document.getElementById("lessonIcon")
+    .innerHTML=
+    lessons[index][0];
 
-    document.getElementById(
-        "lessonHindi"
-    ).innerHTML=
-    lessons[index].hi;
 
-    document.getElementById(
-        "lessonContent"
-    ).innerHTML=
-    lessons[index].content;
+    document.getElementById("lessonTitle")
+    .innerHTML=
+    `Lesson ${index+1}: ${lessons[index][1]}`;
 
-    if(index===5){
 
-        const box=
-        document.getElementById(
-            "countingBox"
-        );
+    document.getElementById("lessonHindi")
+    .innerHTML=
+    lessons[index][2];
 
-        if(box){
 
-            box.innerHTML="";
+    const visual=
+    document.getElementById("visualBox");
 
-            for(let i=1;i<=100;i++){
+    visual.innerHTML="";
 
-                box.innerHTML+=`
-                <div class="number">
-                ${i}
-                </div>
-                `;
+    for(let item of lessons[index].slice(4)){
 
-            }
+        visual.innerHTML+=`
 
-        }
+            <div class="visualItem">
+
+                <span>
+                    ${item[0]}
+                </span>
+
+                ${item[1]}
+
+                <br>
+
+                <small>
+                    ${item[2]}
+                </small>
+
+            </div>
+
+        `;
 
     }
 
+
+    document.getElementById("teachBox")
+    .innerHTML=`
+
+        🇬🇧 <strong>Learn:</strong>
+        ${lessons[index][3]}
+
+        <div class="exampleBox">
+
+            <strong>
+                🌟 Examples / उदाहरण:
+            </strong>
+
+            <br><br>
+
+            ${lessons[index][4][0]}
+            ${lessons[index][4][1]}
+            –
+            ${lessons[index][4][2]}
+
+            <br><br>
+
+            ${lessons[index][5][0]}
+            ${lessons[index][5][1]}
+            –
+            ${lessons[index][5][2]}
+
+            <br><br>
+
+            ${lessons[index][6][0]}
+            ${lessons[index][6][1]}
+            –
+            ${lessons[index][6][2]}
+
+        </div>
+
+    `;
+
+
     renderQuestion();
 
-    document.getElementById(
-        "courseArea"
-    ).scrollIntoView({
+
+    document.getElementById("course")
+    .scrollIntoView({
         behavior:"smooth"
     });
 
@@ -2322,78 +3052,96 @@ function openLesson(index){
 
 
 /* =====================================================
-RENDER QUESTION
+   RENDER QUESTION
 ===================================================== */
 
 function renderQuestion(){
 
-    const data=
-    questionSets[currentLesson]
+    const q=
+    questionBanks[currentLesson]
     [currentQuestion];
+
 
     answered=false;
 
-    document.getElementById(
-        "questionNumber"
-    ).innerHTML=
-    `Question ${currentQuestion+1} / 50
-    <br>
-    प्रश्न ${currentQuestion+1} / 50`;
 
-    document.getElementById(
-        "questionText"
-    ).innerHTML=
-    `🇬🇧 ${data[0]}
-    <br>
-    🇮🇳 ${data[1]}`;
+    document.getElementById("questionCounter")
+    .innerHTML=`
+
+        📝 Question ${currentQuestion+1} / 50
+
+        <br>
+
+        🇮🇳 प्रश्न ${currentQuestion+1} / 50
+
+    `;
+
+
+    document.getElementById("question")
+    .innerHTML=`
+
+        🇬🇧 ${q.en}
+
+        <br>
+
+        🇮🇳 ${q.hi}
+
+    `;
+
 
     const options=
-    document.getElementById(
-        "optionsArea"
-    );
+    document.getElementById("options");
 
     options.innerHTML="";
 
-    data[2].forEach((option,index)=>{
 
-        const btn=
+    q.options.forEach((option,index)=>{
+
+        const button=
         document.createElement("button");
 
-        btn.className="option";
+        button.className="option";
 
-        btn.innerHTML=
+        button.innerHTML=
         `${String.fromCharCode(65+index)}. ${option}`;
 
-        btn.onclick=()=>{
-            checkAnswer(btn,index);
+
+        button.onclick=()=>{
+
+            answerQuestion(
+                button,
+                index
+            );
+
         };
 
-        options.appendChild(btn);
+
+        options.appendChild(button);
 
     });
 
-    document.getElementById(
-        "result"
-    ).innerHTML="";
 
-    document.getElementById(
-        "prevQuestion"
-    ).disabled=
+    document.getElementById("result")
+    .innerHTML="";
+
+
+    document.getElementById("prevBtn")
+    .disabled=
     currentQuestion===0;
 
-    document.getElementById(
-        "nextQuestion"
-    ).style.display=
+
+    document.getElementById("nextBtn")
+    .style.display=
     currentQuestion===49
     ?
     "none"
     :
     "inline-block";
 
-    document.getElementById(
-        "nextLesson"
-    ).style.display=
-    "none";
+
+    document.getElementById("nextLessonBtn")
+    .style.display="none";
+
 
     updateScore();
 
@@ -2401,52 +3149,467 @@ function renderQuestion(){
 
 
 /* =====================================================
-CHECK ANSWER
+   AUDIO
 ===================================================== */
 
-function checkAnswer(button,selected){
+let audioContext=null;
+
+
+function getAudio(){
+
+    const AC=
+    window.AudioContext ||
+    window.webkitAudioContext;
+
+    if(!AC){
+
+        return null;
+
+    }
+
+
+    if(!audioContext){
+
+        audioContext=
+        new AC();
+
+    }
+
+
+    if(audioContext.state==="suspended"){
+
+        audioContext.resume();
+
+    }
+
+
+    return audioContext;
+
+}
+
+
+/* =====================================================
+   CLAP
+===================================================== */
+
+function clapSound(){
+
+    if(!soundEnabled)return;
+
+    const ctx=
+    getAudio();
+
+    if(!ctx)return;
+
+
+    for(let i=0;i<8;i++){
+
+        const buffer=
+        ctx.createBuffer(
+            1,
+            ctx.sampleRate*.07,
+            ctx.sampleRate
+        );
+
+
+        const data=
+        buffer.getChannelData(0);
+
+
+        for(let j=0;j<data.length;j++){
+
+            data[j]=
+            (Math.random()*2-1)
+            *
+            (1-j/data.length);
+
+        }
+
+
+        const source=
+        ctx.createBufferSource();
+
+        const gain=
+        ctx.createGain();
+
+
+        source.buffer=buffer;
+
+        gain.gain.value=.35;
+
+
+        source.connect(gain);
+
+        gain.connect(
+            ctx.destination
+        );
+
+
+        source.start(
+            ctx.currentTime+
+            i*.07
+        );
+
+    }
+
+}
+
+
+/* =====================================================
+   LAUGH
+===================================================== */
+
+function laughSound(){
+
+    if(!soundEnabled)return;
+
+    const ctx=
+    getAudio();
+
+    if(!ctx)return;
+
+
+    const notes=[
+        500,
+        650,
+        520,
+        700,
+        550,
+        730
+    ];
+
+
+    notes.forEach((freq,i)=>{
+
+        const osc=
+        ctx.createOscillator();
+
+        const gain=
+        ctx.createGain();
+
+
+        const time=
+        ctx.currentTime+
+        i*.12;
+
+
+        osc.type="sine";
+
+
+        osc.frequency.setValueAtTime(
+            freq,
+            time
+        );
+
+
+        osc.frequency.exponentialRampToValueAtTime(
+            freq*.75,
+            time+.12
+        );
+
+
+        gain.gain.setValueAtTime(
+            .01,
+            time
+        );
+
+
+        gain.gain.exponentialRampToValueAtTime(
+            .18,
+            time+.02
+        );
+
+
+        gain.gain.exponentialRampToValueAtTime(
+            .01,
+            time+.12
+        );
+
+
+        osc.connect(gain);
+
+        gain.connect(
+            ctx.destination
+        );
+
+
+        osc.start(time);
+
+        osc.stop(
+            time+.13
+        );
+
+    });
+
+}
+
+
+/* =====================================================
+   SUCCESS
+===================================================== */
+
+function successSound(){
+
+    if(!soundEnabled)return;
+
+    const ctx=
+    getAudio();
+
+    if(!ctx)return;
+
+
+    const notes=[
+        523,
+        659,
+        784,
+        1047
+    ];
+
+
+    notes.forEach((freq,i)=>{
+
+        const osc=
+        ctx.createOscillator();
+
+        const gain=
+        ctx.createGain();
+
+
+        const t=
+        ctx.currentTime+
+        i*.13;
+
+
+        osc.type="triangle";
+
+        osc.frequency.value=freq;
+
+
+        gain.gain.setValueAtTime(
+            .01,
+            t
+        );
+
+
+        gain.gain.exponentialRampToValueAtTime(
+            .2,
+            t+.03
+        );
+
+
+        gain.gain.exponentialRampToValueAtTime(
+            .01,
+            t+.3
+        );
+
+
+        osc.connect(gain);
+
+        gain.connect(
+            ctx.destination
+        );
+
+
+        osc.start(t);
+
+        osc.stop(t+.32);
+
+    });
+
+}
+
+
+/* =====================================================
+   WRONG SOUND
+===================================================== */
+
+function wrongSound(){
+
+    if(!soundEnabled)return;
+
+    const ctx=
+    getAudio();
+
+    if(!ctx)return;
+
+
+    const osc=
+    ctx.createOscillator();
+
+    const gain=
+    ctx.createGain();
+
+
+    osc.type="sawtooth";
+
+    osc.frequency.value=180;
+
+
+    gain.gain.setValueAtTime(
+        .2,
+        ctx.currentTime
+    );
+
+
+    gain.gain.exponentialRampToValueAtTime(
+        .01,
+        ctx.currentTime+.35
+    );
+
+
+    osc.connect(gain);
+
+    gain.connect(
+        ctx.destination
+    );
+
+
+    osc.start();
+
+    osc.stop(
+        ctx.currentTime+.35
+    );
+
+}
+
+
+/* =====================================================
+   TOGGLE SOUND
+===================================================== */
+
+function toggleSound(){
+
+    soundEnabled=
+    !soundEnabled;
+
+
+    const button=
+    document.getElementById(
+        "soundButton"
+    );
+
+
+    if(soundEnabled){
+
+        button.innerHTML=
+        "🔊 Sound ON";
+
+        const ctx=
+        getAudio();
+
+
+        if(ctx){
+
+            const osc=
+            ctx.createOscillator();
+
+            const gain=
+            ctx.createGain();
+
+
+            osc.frequency.value=700;
+
+            gain.gain.value=.08;
+
+
+            osc.connect(gain);
+
+            gain.connect(
+                ctx.destination
+            );
+
+
+            osc.start();
+
+            osc.stop(
+                ctx.currentTime+.15
+            );
+
+        }
+
+    }else{
+
+        button.innerHTML=
+        "🔇 Sound OFF";
+
+    }
+
+}
+
+
+/* =====================================================
+   ANSWER
+===================================================== */
+
+function answerQuestion(button,index){
 
     if(answered)return;
 
+
     answered=true;
 
-    const data=
-    questionSets[currentLesson]
+
+    const q=
+    questionBanks[currentLesson]
     [currentQuestion];
 
-    const buttons=
-    document.querySelectorAll(
-        ".option"
-    );
 
-    buttons.forEach(
-        b=>b.disabled=true
-    );
+    const all=
+    document.querySelectorAll(".option");
 
-    if(selected===data[3]){
+
+    all.forEach(btn=>{
+
+        btn.disabled=true;
+
+    });
+
+
+    if(index===q.answer){
 
         button.classList.add(
             "correct"
         );
 
+
         score++;
 
-        document.getElementById(
-            "result"
-        ).innerHTML=
-        `
-        <span class="correct-text">
-        👏👏👏 Correct Answer!<br>
-        सही उत्तर! बहुत बढ़िया! 🌟
-        </span>
+
+        document.getElementById("result")
+        .innerHTML=`
+
+            <span class="correctText">
+
+            👏👏👏
+            <br>
+
+            🌟 Correct Answer!
+            <br>
+
+            🇮🇳 सही उत्तर!
+            <br>
+
+            😂 बहुत बढ़िया!
+
+            </span>
+
         `;
+
 
         clapSound();
 
+
+        setTimeout(
+            laughSound,
+            500
+        );
+
+
         setTimeout(
             successSound,
-            450
+            900
         );
+
 
     }else{
 
@@ -2454,31 +3617,44 @@ function checkAnswer(button,selected){
             "wrong"
         );
 
-        buttons[data[3]]
+
+        all[q.answer]
         .classList.add(
             "correct"
         );
 
-        document.getElementById(
-            "result"
-        ).innerHTML=
-        `
-        <span class="wrong-text">
-        ❌ Wrong Answer!<br>
-        गलत उत्तर! 😊<br>
-        💡 सही उत्तर को हरे रंग में दिखाया गया है।
-        </span>
+
+        document.getElementById("result")
+        .innerHTML=`
+
+            <span class="wrongText">
+
+            ❌ Wrong Answer!
+
+            <br>
+
+            🇮🇳 गलत उत्तर।
+
+            <br>
+
+            💡 सही उत्तर हरे रंग में है।
+
+            </span>
+
         `;
+
 
         wrongSound();
 
     }
 
+
     updateScore();
+
 
     if(currentQuestion===49){
 
-        completeCurrentLesson();
+        finishLesson();
 
     }
 
@@ -2486,7 +3662,7 @@ function checkAnswer(button,selected){
 
 
 /* =====================================================
-NEXT QUESTION
+   NEXT QUESTION
 ===================================================== */
 
 function nextQuestion(){
@@ -2494,13 +3670,13 @@ function nextQuestion(){
     if(!answered){
 
         alert(
-        "पहले Answer चुनें।\n"+
-        "Please choose an answer first."
+            "😊 पहले उत्तर चुनें।\n\nPlease choose an answer first."
         );
 
         return;
 
     }
+
 
     if(currentQuestion<49){
 
@@ -2508,9 +3684,8 @@ function nextQuestion(){
 
         renderQuestion();
 
-        document.getElementById(
-            "courseArea"
-        ).scrollIntoView({
+        document.getElementById("course")
+        .scrollIntoView({
             behavior:"smooth"
         });
 
@@ -2520,7 +3695,7 @@ function nextQuestion(){
 
 
 /* =====================================================
-PREVIOUS QUESTION
+   PREVIOUS QUESTION
 ===================================================== */
 
 function previousQuestion(){
@@ -2537,67 +3712,95 @@ function previousQuestion(){
 
 
 /* =====================================================
-COMPLETE LESSON
+   FINISH LESSON
 ===================================================== */
 
-function completeCurrentLesson(){
+function finishLesson(){
 
-    if(!completedLessons.includes(
-        currentLesson
-    )){
+    if(
+        !completed.includes(
+            currentLesson
+        )
+    ){
 
-        completedLessons.push(
+        completed.push(
             currentLesson
         );
 
+
         localStorage.setItem(
-            "class1CompletedLessons",
+            "class1Completed",
             JSON.stringify(
-                completedLessons
+                completed
             )
         );
 
     }
 
-    createLessonButtons();
+
+    createLessons();
+
 
     document.getElementById(
-        "nextQuestion"
+        "nextBtn"
     ).style.display="none";
 
-    document.getElementById(
-        "nextLesson"
-    ).style.display=
-    currentLesson<29
-    ?
-    "inline-block"
-    :
-    "none";
 
-    if(currentLesson===29){
+    if(currentLesson<29){
+
+        document.getElementById(
+            "nextLessonBtn"
+        ).style.display=
+        "inline-block";
+
 
         document.getElementById(
             "result"
-        ).innerHTML=
-        `
-        <span class="correct-text">
-        🏆🎉 Congratulations! 🎉🏆
-        <br>
-        आपने Class 1 English Course पूरा कर लिया!
-        <br>
-        You completed all 30 Lessons!
-        </span>
+        ).innerHTML+=`
+
+            <br>
+
+            🏆🎉 Lesson Complete!
+
+            <br>
+
+            🇮🇳 पाठ पूरा हो गया!
+
         `;
 
-    }
 
-    updateCourseProgress();
+        showCelebrate(
+            `आपने Lesson ${currentLesson+1} पूरा कर लिया!`
+        );
+
+    }else{
+
+        document.getElementById(
+            "result"
+        ).innerHTML+=`
+
+            <br><br>
+
+            🏆🎉 CONGRATULATIONS! 🎉🏆
+
+            <br>
+
+            आपने Class 1 के सभी Lessons पूरे कर लिए!
+
+        `;
+
+
+        showCelebrate(
+            "🎉 आपने Class 1 English Course पूरा कर लिया!"
+        );
+
+    }
 
 }
 
 
 /* =====================================================
-NEXT LESSON
+   NEXT LESSON
 ===================================================== */
 
 function nextLesson(){
@@ -2614,14 +3817,15 @@ function nextLesson(){
 
 
 /* =====================================================
-CLOSE LESSON
+   CLOSE COURSE
 ===================================================== */
 
-function closeLesson(){
+function closeCourse(){
 
     document.getElementById(
-        "courseArea"
+        "course"
     ).style.display="none";
+
 
     document.getElementById(
         "lessonGrid"
@@ -2633,47 +3837,67 @@ function closeLesson(){
 
 
 /* =====================================================
-SCORE
+   SCORE
 ===================================================== */
 
 function updateScore(){
 
     document.getElementById(
         "scoreBox"
-    ).innerHTML=
-    `
-    🎯 Score / अंक:
-    <strong>${score} / 50</strong>
-    <br>
-    Question / प्रश्न:
-    <strong>${currentQuestion+1} / 50</strong>
+    ).innerHTML=`
+
+        🎯 Score / अंक:
+
+        <strong>
+        ${score} / 50
+        </strong>
+
+        <br>
+
+        📝 Question:
+
+        <strong>
+        ${currentQuestion+1} / 50
+        </strong>
+
     `;
 
 }
 
 
 /* =====================================================
-COURSE PROGRESS
+   PROGRESS
 ===================================================== */
 
-function updateCourseProgress(){
+function updateProgress(){
 
-    let completed=
-    completedLessons.length;
+    const done=
+    completed.length;
 
-    let percent=
+
+    const total=30;
+
+
+    const percent=
     Math.round(
-        completed/30*100
+        done/total*100
     );
 
+
     document.getElementById(
-        "courseProgress"
-    ).innerHTML=
-    `
-    Course Progress / कोर्स प्रगति:
-    ${completed} / 30 Lessons
-    (${percent}%)
+        "progressText"
+    ).innerHTML=`
+
+        📊 Course Progress:
+
+        <strong>
+        ${done} / ${total} Lessons
+        </strong>
+
+        — ${percent}%
+
     `;
+
 
     document.getElementById(
         "progressBar"
@@ -2684,12 +3908,71 @@ function updateCourseProgress(){
 
 
 /* =====================================================
-START
+   CELEBRATION
 ===================================================== */
 
-createLessonButtons();
+function showCelebrate(text){
 
-updateCourseProgress();
+    document.getElementById(
+        "celebrateText"
+    ).innerHTML=text;
+
+
+    document.getElementById(
+        "celebrate"
+    ).style.display="flex";
+
+}
+
+
+function closeCelebrate(){
+
+    document.getElementById(
+        "celebrate"
+    ).style.display="none";
+
+}
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+function resetProgress(){
+
+    const yes=
+    confirm(
+        "क्या आप पूरा progress reset करना चाहते हैं?"
+    );
+
+
+    if(yes){
+
+        completed=[];
+
+
+        localStorage.removeItem(
+            "class1Completed"
+        );
+
+
+        createLessons();
+
+
+        alert(
+            "✅ Progress reset हो गया।"
+        );
+
+    }
+
+}
+
+
+/* =====================================================
+   START
+===================================================== */
+
+createLessons();
 
 </script>
 
