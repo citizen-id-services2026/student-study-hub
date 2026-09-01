@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Student Study Hub | NCERT Class 10 Hindi</title>
+<title>Student Study Hub | CBSE RBSE NCERT</title>
 
 <style>
 
@@ -14,12 +14,12 @@
     padding:0;
 }
 
-body{
-    font-family:
-    Arial,
-    "Noto Sans Devanagari",
-    sans-serif;
+html{
+    scroll-behavior:smooth;
+}
 
+body{
+    font-family:Arial,"Noto Sans Devanagari",sans-serif;
     background:#f1f5f9;
     color:#172033;
     line-height:1.7;
@@ -33,7 +33,7 @@ header{
 }
 
 header h1{
-    font-size:35px;
+    font-size:34px;
     margin-bottom:8px;
 }
 
@@ -51,7 +51,6 @@ nav{
     position:sticky;
     top:0;
     z-index:999;
-
     box-shadow:0 2px 10px #0002;
 }
 
@@ -78,7 +77,6 @@ nav a:hover{
     border-radius:16px;
     padding:22px;
     margin-bottom:20px;
-
     box-shadow:0 5px 20px #00000012;
 }
 
@@ -105,7 +103,6 @@ nav a:hover{
     border-radius:14px;
     padding:20px;
     text-align:center;
-
     transition:.2s;
 }
 
@@ -122,22 +119,15 @@ nav a:hover{
 button,
 .btn{
     display:inline-block;
-
     border:0;
     border-radius:8px;
-
     background:#0878cf;
     color:white;
-
     padding:11px 17px;
-
     cursor:pointer;
-
     font-size:15px;
     font-weight:bold;
-
     text-decoration:none;
-
     margin-top:8px;
 }
 
@@ -146,50 +136,29 @@ button:hover,
     opacity:.9;
 }
 
-.green{
-    background:#159447;
-}
-
-.orange{
-    background:#e67e22;
-}
-
-.dark{
-    background:#34495e;
-}
-
-.red{
-    background:#d93434;
-}
-
-.purple{
-    background:#7139b7;
-}
+.green{background:#159447;}
+.orange{background:#e67e22;}
+.dark{background:#34495e;}
+.red{background:#d93434;}
+.purple{background:#7139b7;}
 
 .hidden{
-    display:none;
+    display:none !important;
 }
 
 .selection{
     background:#edf7ff;
     border-left:5px solid #0878cf;
-
     padding:14px;
-
     border-radius:9px;
-
     margin-bottom:15px;
 }
 
 .lesson{
     background:#f8fbff;
-
     border:1px solid #d6e7f4;
-
     border-radius:13px;
-
     padding:18px;
-
     margin-bottom:12px;
 }
 
@@ -199,15 +168,10 @@ button:hover,
 
 .search{
     width:100%;
-
     padding:13px;
-
     border:1px solid #ccd5df;
-
     border-radius:8px;
-
     font-size:16px;
-
     margin-bottom:15px;
 }
 
@@ -217,87 +181,87 @@ button:hover,
 
 .notes-box{
     background:#f8fbff;
-
     border:1px solid #d7e6f2;
-
     border-radius:12px;
-
     padding:20px;
-
     margin:15px 0;
 }
 
 .notes-box h3{
     color:#075eaa;
-
     margin-bottom:10px;
 }
 
 .point{
     background:white;
-
     border-left:4px solid #0878cf;
-
     padding:10px 14px;
-
     margin:8px 0;
-
     border-radius:6px;
 }
 
 .qa{
     background:white;
-
     border:1px solid #ddd;
-
     padding:15px;
-
     margin:10px 0;
-
     border-radius:10px;
 }
 
 .mcq{
     background:#edf7ff;
-
     padding:15px;
-
     border-radius:10px;
-
     margin:10px 0;
+}
+
+.mcq ol{
+    margin:8px 0 8px 25px;
 }
 
 .notice{
     background:#fff8dc;
-
     border-left:5px solid #e2ad00;
-
     padding:15px;
-
     border-radius:8px;
-
     margin-bottom:20px;
+}
+
+.step-title{
+    margin-bottom:10px;
+}
+
+.breadcrumb{
+    font-size:14px;
+    color:#53657a;
+    margin-bottom:15px;
 }
 
 .back-buttons{
     display:flex;
-
     gap:8px;
-
     flex-wrap:wrap;
-
     margin-top:20px;
+}
+
+details{
+    background:white;
+    padding:8px 12px;
+    border-radius:7px;
+    margin-top:10px;
+}
+
+summary{
+    cursor:pointer;
+    font-weight:bold;
+    color:#075eaa;
 }
 
 footer{
     background:#172033;
-
     color:white;
-
     text-align:center;
-
     padding:25px;
-
     margin-top:30px;
 }
 
@@ -334,6 +298,33 @@ footer{
     nav a{
         font-size:13px;
     }
+
+    .btn,
+    button{
+        width:100%;
+        text-align:center;
+    }
+}
+
+@media print{
+
+    nav,
+    header,
+    footer,
+    #study > h2,
+    .back-buttons,
+    .notice{
+        display:none !important;
+    }
+
+    body{
+        background:white;
+    }
+
+    .card{
+        box-shadow:none;
+    }
+
 }
 
 </style>
@@ -343,11 +334,7 @@ footer{
 <body>
 
 
-<!-- =========================
-HEADER
-========================= -->
-
-<header id="home">
+<header>
 
 <h1>📚 Student Study Hub</h1>
 
@@ -362,18 +349,10 @@ Class 1–12 • Subjects • Lessons • Notes
 </header>
 
 
-<!-- =========================
-NAVIGATION
-========================= -->
-
 <nav>
 
 <a href="#home">🏠 Home</a>
-
 <a href="#study">📚 Study</a>
-
-<a href="#notesSection">📝 Notes</a>
-
 <a href="#about">ℹ️ About</a>
 
 </nav>
@@ -382,34 +361,28 @@ NAVIGATION
 <div class="container">
 
 
-<!-- =========================
-NOTICE
-========================= -->
-
 <div class="notice">
 
-<b>📢 विद्यार्थी सूचना</b>
+<b>📢 विद्यार्थियों के लिए Study Portal</b>
 
 <br>
 
-इस वेबसाइट पर विद्यार्थियों के लिए अपने शब्दों में
-तैयार किए गए Original Study Notes दिए जा रहे हैं।
+Board चुनें → Medium चुनें → Class चुनें → Subject चुनें → Lesson चुनें।
+
+<br>
+
+Lesson के अंदर अपने शब्दों में तैयार किए गए
+<strong>Original Study Notes</strong>,
+प्रश्न–उत्तर और MCQ मिलेंगे।
 
 <br><br>
 
-Official textbook का पूरा मूल पाठ यहाँ कॉपी नहीं किया गया है।
-
-<br>
-
-Official NCERT पुस्तक देखने के लिए
-<strong>Official NCERT Book</strong> बटन का प्रयोग करें।
+📚 मूल किताब के लिए संबंधित
+<strong>Official NCERT Book</strong> button दिया गया है।
 
 </div>
 
 
-<!-- =========================
-STUDY SYSTEM
-========================= -->
 
 <section class="card" id="study">
 
@@ -420,9 +393,9 @@ STUDY SYSTEM
 
 <div id="boardStep">
 
-<h3>1️⃣ Board चुनें</h3>
-
-<br>
+<h3 class="step-title">
+1️⃣ Board चुनें
+</h3>
 
 <div class="grid3">
 
@@ -456,7 +429,7 @@ RBSE
 
 <h3>📗 NCERT</h3>
 
-<p>NCERT Books</p>
+<p>NCERT Textbooks</p>
 
 <button onclick="chooseBoard('NCERT')">
 NCERT
@@ -469,23 +442,22 @@ NCERT
 </div>
 
 
+
 <!-- MEDIUM -->
 
 <div id="mediumStep" class="hidden">
 
 <br>
 
-<h3>2️⃣ Medium चुनें</h3>
-
-<br>
+<h3 class="step-title">
+2️⃣ Medium चुनें
+</h3>
 
 <div class="grid3">
 
 <div class="option">
 
 <h3>🇮🇳 हिंदी माध्यम</h3>
-
-<p>Hindi Medium</p>
 
 <button onclick="chooseMedium('Hindi Medium')">
 Hindi Medium
@@ -498,8 +470,6 @@ Hindi Medium
 
 <h3>🇬🇧 English Medium</h3>
 
-<p>English Medium</p>
-
 <button onclick="chooseMedium('English Medium')">
 English Medium
 </button>
@@ -511,96 +481,45 @@ English Medium
 </div>
 
 
+
 <!-- CLASS -->
 
 <div id="classStep" class="hidden">
 
 <br>
 
-<h3>3️⃣ Class चुनें</h3>
-
-<br>
+<h3 class="step-title">
+3️⃣ Class चुनें
+</h3>
 
 <div class="grid">
 
-<div class="option">
-<h3>Class 1</h3>
-<button onclick="chooseClass(1)">Open</button>
-</div>
+<script>
 
-<div class="option">
-<h3>Class 2</h3>
-<button onclick="chooseClass(2)">Open</button>
-</div>
+for(let c=1;c<=12;c++){
 
-<div class="option">
-<h3>Class 3</h3>
-<button onclick="chooseClass(3)">Open</button>
-</div>
-
-<div class="option">
-<h3>Class 4</h3>
-<button onclick="chooseClass(4)">Open</button>
-</div>
-
-<div class="option">
-<h3>Class 5</h3>
-<button onclick="chooseClass(5)">Open</button>
-</div>
-
-<div class="option">
-<h3>Class 6</h3>
-<button onclick="chooseClass(6)">Open</button>
-</div>
-
-<div class="option">
-<h3>Class 7</h3>
-<button onclick="chooseClass(7)">Open</button>
-</div>
-
-<div class="option">
-<h3>Class 8</h3>
-<button onclick="chooseClass(8)">Open</button>
-</div>
-
-<div class="option">
-<h3>Class 9</h3>
-<button onclick="chooseClass(9)">Open</button>
-</div>
+document.write(`
 
 <div class="option">
 
-<h3>Class 10</h3>
+<h3>Class ${c}</h3>
 
-<button onclick="chooseClass(10)">
-Open
+<button onclick="chooseClass(${c})">
+📚 Open
 </button>
 
 </div>
 
-<div class="option">
+`);
 
-<h3>Class 11</h3>
+}
 
-<button onclick="chooseClass(11)">
-Open
-</button>
-
-</div>
-
-<div class="option">
-
-<h3>Class 12</h3>
-
-<button onclick="chooseClass(12)">
-Open
-</button>
+</script>
 
 </div>
 
 </div>
 
-</div>
 
 
 <!-- SUBJECT -->
@@ -609,9 +528,9 @@ Open
 
 <br>
 
-<h3>4️⃣ Subject चुनें</h3>
-
-<br>
+<h3 class="step-title">
+4️⃣ Subject चुनें
+</h3>
 
 <div id="selection"></div>
 
@@ -620,27 +539,29 @@ Open
 </div>
 
 
+
 <!-- LESSON -->
 
 <div id="lessonStep" class="hidden">
 
 <br>
 
-<h3>5️⃣ Lesson / Chapter चुनें</h3>
-
-<br>
+<h3 class="step-title">
+5️⃣ Lesson / Chapter चुनें
+</h3>
 
 <div id="lessonSelection"></div>
 
 <input
 class="search"
 id="lessonSearch"
-placeholder="🔎 Lesson खोजें..."
+placeholder="🔎 Lesson / Chapter खोजें..."
 oninput="searchLessons()">
 
 <div id="lessonList"></div>
 
 </div>
+
 
 
 <!-- NOTES -->
@@ -662,18 +583,15 @@ oninput="searchLessons()">
 
 
 
-<!-- =========================
-ABOUT
-========================= -->
-
 <section class="card" id="about">
 
-<h2>ℹ️ About Student Study Hub</h2>
+<h2>ℹ️ About</h2>
 
 <p>
 
-इस वेबसाइट का उद्देश्य विद्यार्थियों को
-एक जगह पर अध्ययन सामग्री उपलब्ध कराना है।
+Student Study Hub का उद्देश्य विद्यार्थियों को
+एक सरल और व्यवस्थित तरीके से अध्ययन सामग्री तक
+पहुँच उपलब्ध कराना है।
 
 </p>
 
@@ -683,32 +601,6 @@ ABOUT
 
 Board → Medium → Class → Subject → Lesson
 के क्रम से विद्यार्थी अपने पाठ तक पहुँच सकता है।
-
-</p>
-
-<br>
-
-<p>
-
-Lesson में Original Notes, मुख्य बिंदु,
-प्रश्न–उत्तर और अभ्यास प्रश्न दिए जा सकते हैं।
-
-</p>
-
-</section>
-
-
-<!-- =========================
-NOTES SECTION
-========================= -->
-
-<section class="card" id="notesSection">
-
-<h2>📝 Notes System</h2>
-
-<p>
-
-Lesson खोलने पर Notes इसी स्थान पर दिखाई देंगे।
 
 </p>
 
@@ -734,92 +626,39 @@ CBSE • RBSE • NCERT
 
 
 /* =====================================================
-GLOBAL VARIABLES
+VARIABLES
 ===================================================== */
 
-let selectedBoard = "";
-let selectedMedium = "";
-let selectedClass = "";
-let selectedSubject = "";
+let selectedBoard="";
+let selectedMedium="";
+let selectedClass="";
+let selectedSubject="";
 
 
 
 /* =====================================================
-SUBJECT DATABASE
+SUBJECTS
 ===================================================== */
 
-const subjects = {
+const subjects={
 
-1:[
-"हिंदी",
-"English",
-"गणित",
-"पर्यावरण अध्ययन"
-],
+1:["हिंदी","English","गणित","पर्यावरण अध्ययन"],
 
-2:[
-"हिंदी",
-"English",
-"गणित",
-"पर्यावरण अध्ययन"
-],
+2:["हिंदी","English","गणित","पर्यावरण अध्ययन"],
 
-3:[
-"हिंदी",
-"English",
-"गणित",
-"पर्यावरण अध्ययन"
-],
+3:["हिंदी","English","गणित","पर्यावरण अध्ययन"],
 
-4:[
-"हिंदी",
-"English",
-"गणित",
-"पर्यावरण अध्ययन"
-],
+4:["हिंदी","English","गणित","पर्यावरण अध्ययन"],
 
-5:[
-"हिंदी",
-"English",
-"गणित",
-"पर्यावरण अध्ययन"
-],
+5:["हिंदी","English","गणित","पर्यावरण अध्ययन"],
 
-6:[
-"हिंदी",
-"English",
-"गणित",
-"विज्ञान",
-"सामाजिक विज्ञान",
-"संस्कृत"
-],
+6:["हिंदी","English","गणित","विज्ञान","सामाजिक विज्ञान","संस्कृत"],
 
-7:[
-"हिंदी",
-"English",
-"गणित",
-"विज्ञान",
-"सामाजिक विज्ञान",
-"संस्कृत"
-],
+7:["हिंदी","English","गणित","विज्ञान","सामाजिक विज्ञान","संस्कृत"],
 
-8:[
-"हिंदी",
-"English",
-"गणित",
-"विज्ञान",
-"सामाजिक विज्ञान",
-"संस्कृत"
-],
+8:["हिंदी","English","गणित","विज्ञान","सामाजिक विज्ञान","संस्कृत"],
 
-9:[
-"हिंदी",
-"English",
-"गणित",
-"विज्ञान",
-"सामाजिक विज्ञान",
-"संस्कृत"
-],
+9:["हिंदी","English","गणित","विज्ञान","सामाजिक विज्ञान","संस्कृत"],
 
 10:[
 "हिंदी",
@@ -861,216 +700,479 @@ const subjects = {
 
 
 /* =====================================================
-REAL NCERT LINK PROVIDED BY USER
+OFFICIAL NCERT BASE
 ===================================================== */
 
-const OFFICIAL_NCERT_LINK =
-"https://ncert.nic.in/textbook/pdf/jhks101.pdf";
+const NCERT_BASE =
+"https://ncert.nic.in/textbook/pdf/";
 
 
 
-/* =====================================================
-CLASS 10 HINDI DATA
-===================================================== */
+/*
+=========================================================
+CLASS 10 HINDI
+=========================================================
+*/
 
-const class10Hindi = [
+const hindi10=[
 
 {
-
 id:1,
-
 name:"पाठ 1 – सूरदास",
-
 book:"क्षितिज भाग-2",
+pdf:"jhks101.pdf",
 
 summary:
-"इस पाठ में सूरदास के भ्रमरगीत से चुने गए पदों का अध्ययन किया जाता है। पदों में गोपियों की कृष्ण के प्रति गहरी प्रेम-भावना, उनके वियोग की पीड़ा और उद्धव के योग-संदेश के प्रति उनकी प्रतिक्रिया दिखाई देती है। गोपियाँ तर्क, व्यंग्य और प्रेम के माध्यम से अपनी भावनाएँ व्यक्त करती हैं।",
+"इस पाठ में सूरदास के भ्रमरगीत से चुने गए पदों का अध्ययन किया जाता है। इसमें गोपियों के कृष्ण के प्रति गहरे प्रेम, विरह और उद्धव के योग-संदेश के प्रति उनकी प्रतिक्रिया को समझाया गया है।",
 
 points:[
-
-"सूरदास भक्तिकाल के प्रमुख कवियों में माने जाते हैं।",
-
-"उनकी काव्य-भाषा में ब्रजभाषा का सुंदर प्रयोग मिलता है।",
-
-"भ्रमरगीत में गोपियों और उद्धव के संवाद का प्रमुख स्थान है।",
-
-"गोपियाँ कृष्ण के प्रति अपने अनन्य प्रेम को ज्ञान और योग से अधिक महत्वपूर्ण मानती हैं।",
-
-"गोपियों की वाणी में प्रेम, विरह, व्यंग्य और तर्क का सुंदर मेल है।",
-
-"पदों में कृष्ण के मथुरा चले जाने के बाद उत्पन्न विरह की अनुभूति दिखाई देती है।",
-
-"गोपियाँ उद्धव के निर्गुण योग के संदेश को अपनी प्रेम-भावना के संदर्भ में स्वीकार नहीं करतीं।",
-
-"अंतिम पदों में राजा के धर्म और प्रजा के हित की ओर भी संकेत मिलता है।"
-
-],
-
-characters:[
-
-"सूरदास – भक्तिकाल के प्रसिद्ध कृष्णभक्त कवि।",
-
-"गोपियाँ – कृष्ण के प्रति गहरा और अनन्य प्रेम रखने वाली पात्र।",
-
-"उद्धव – कृष्ण के संदेश के साथ गोपियों के पास आने वाले पात्र।",
-
-"कृष्ण – गोपियों की प्रेम-भावना के केंद्र।"
-
+"सूरदास भक्तिकाल के प्रमुख कृष्णभक्त कवि हैं।",
+"उनकी कृष्णभक्ति संबंधी रचनाओं में ब्रजभाषा का प्रभाव मिलता है।",
+"भ्रमरगीत में गोपियों और उद्धव का संवाद महत्वपूर्ण है।",
+"गोपियों का कृष्ण के प्रति प्रेम एकनिष्ठ है।",
+"गोपियों की वाणी में प्रेम, विरह, तर्क और व्यंग्य दिखाई देता है।"
 ],
 
 questions:[
-
-{
-
-q:
+[
 "भ्रमरगीत में गोपियों की मुख्य भावना क्या है?",
-
-a:
-"गोपियों की मुख्य भावना कृष्ण के प्रति अनन्य प्रेम और उनके वियोग की पीड़ा है। वे कृष्ण से दूर होने के कारण अत्यंत व्याकुल हैं।"
-
-},
-
-{
-
-q:
-"गोपियाँ उद्धव के योग-संदेश को सहज रूप से क्यों स्वीकार नहीं करतीं?",
-
-a:
-"गोपियों का मन कृष्ण के प्रेम में पूरी तरह लगा हुआ है। इसलिए उन्हें निर्गुण योग का संदेश उनकी प्रेम-भावना से अलग और व्यावहारिक रूप से अनुपयुक्त लगता है।"
-
-},
-
-{
-
-q:
-"गोपियों की वाणी की प्रमुख विशेषता क्या है?",
-
-a:
-"उनकी वाणी में प्रेम और विरह के साथ तीखा व्यंग्य, तर्क, चतुराई तथा भावनात्मक प्रभाव दिखाई देता है।"
-
-},
-
-{
-
-q:
+"गोपियों की मुख्य भावना कृष्ण के प्रति गहरा प्रेम और उनके वियोग की पीड़ा है।"
+],
+[
+"गोपियाँ उद्धव के योग-संदेश को क्यों स्वीकार नहीं करतीं?",
+"उनका मन कृष्ण के प्रेम में पूरी तरह लगा है, इसलिए योग का संदेश उनके अनुभव से अलग लगता है।"
+],
+[
 "सूरदास की काव्य-भाषा कौन-सी है?",
-
-a:
-"सूरदास की कृष्णभक्ति संबंधी रचनाओं में ब्रजभाषा का सुंदर और प्रभावशाली प्रयोग मिलता है।"
-
-},
-
-{
-
-q:
-"भ्रमरगीत में कृष्ण के प्रति गोपियों का प्रेम कैसा है?",
-
-a:
-"गोपियों का प्रेम गहरा, एकनिष्ठ और समर्पित है। वे कृष्ण को अपने जीवन का केंद्र मानती हैं।"
-
-},
-
-{
-
-q:
-"पाठ में गोपियों के माध्यम से कौन-सा मानवीय पक्ष सामने आता है?",
-
-a:
-"पाठ में प्रेम, लगाव, वियोग, स्मृति और अपने प्रिय के प्रति निष्ठा जैसे मानवीय भाव सामने आते हैं।"
-
-},
-
-{
-
-q:
-"गोपियाँ उद्धव पर व्यंग्य क्यों करती हैं?",
-
-a:
-"उद्धव उनके सामने योग और ज्ञान का संदेश रखते हैं, जबकि गोपियाँ अपने अनुभव और प्रेम को अधिक वास्तविक मानती हैं। इसी अंतर के कारण उनकी बातों में व्यंग्य दिखाई देता है।"
-
-},
-
-{
-
-q:
-"राजधर्म के संबंध में पाठ में क्या संकेत मिलता है?",
-
-a:
-"पाठ में यह विचार सामने आता है कि शासक का प्रमुख कर्तव्य अपनी प्रजा के हित और कल्याण की चिंता करना है।"
-
-}
-
+"सूरदास की कृष्णभक्ति संबंधी रचनाओं में ब्रजभाषा का सुंदर प्रयोग मिलता है।"
+]
 ],
 
 mcq:[
-
-{
-
-q:
-"सूरदास किस भक्ति धारा के प्रमुख कवि हैं?",
-
-options:[
-"कृष्णभक्ति",
-"रामभक्ति",
-"सूफी",
-"वीरगाथा"
+[
+"सूरदास किस भक्ति परंपरा के प्रमुख कवि हैं?",
+["कृष्णभक्ति","रामभक्ति","सूफी","वीरगाथा"],
+0
 ],
-
-answer:0
+[
+"भ्रमरगीत में मुख्य संवाद किनके बीच है?",
+["राम और लक्ष्मण","गोपियाँ और उद्धव","अर्जुन और कृष्ण","भरत और शत्रुघ्न"],
+1
+]
+]
 
 },
 
+
 {
+id:2,
+name:"पाठ 2 – राम-लक्ष्मण-परशुराम संवाद",
+book:"क्षितिज भाग-2",
+pdf:"jhks102.pdf",
 
-q:
-"भ्रमरगीत में मुख्य रूप से किन पात्रों के संवाद का चित्रण है?",
+summary:
+"इस पाठ में राम, लक्ष्मण और परशुराम के संवाद के माध्यम से वीरता, क्रोध, विनम्रता और वाणी-कौशल को प्रस्तुत किया गया है।",
 
-options:[
-"राम और लक्ष्मण",
-"गोपियाँ और उद्धव",
-"अर्जुन और कृष्ण",
-"भरत और शत्रुघ्न"
+points:[
+"राम शांत और विनम्र स्वभाव के हैं।",
+"लक्ष्मण निर्भीक और स्पष्टवादी हैं।",
+"परशुराम के व्यक्तित्व में वीरता और क्रोध दिखाई देता है।",
+"संवाद के माध्यम से पात्रों के स्वभाव स्पष्ट होते हैं।",
+"हास्य और व्यंग्य का प्रभाव भी दिखाई देता है।"
 ],
 
-answer:1
+questions:[
+[
+"राम और लक्ष्मण के स्वभाव में क्या अंतर है?",
+"राम शांत और संयमित हैं जबकि लक्ष्मण निर्भीक और तीखे स्वभाव के हैं।"
+],
+[
+"परशुराम क्यों क्रोधित होते हैं?",
+"शिवधनुष के टूटने की घटना से वे अत्यंत क्रोधित हो जाते हैं।"
+]
+],
+
+mcq:[
+[
+"पाठ में प्रमुख संवाद किन पात्रों के बीच है?",
+["राम-लक्ष्मण-परशुराम","कृष्ण-अर्जुन","भरत-राम","सीता-उर्मिला"],
+0
+]
+]
 
 },
 
+
 {
+id:3,
+name:"पाठ 3 – आत्मकथ्य",
+book:"क्षितिज भाग-2",
+pdf:"jhks103.pdf",
 
-q:
-"सूरदास की काव्य-भाषा का प्रमुख रूप कौन-सा है?",
+summary:
+"इस कविता में कवि अपने निजी जीवन और अनुभवों को आत्मकथात्मक दृष्टि से प्रस्तुत करने के प्रश्न पर विचार करता है।",
 
-options:[
-"अवधी",
-"ब्रजभाषा",
-"खड़ी बोली",
-"राजस्थानी"
+points:[
+"कविता में आत्मकथा लिखने के प्रश्न पर विचार है।",
+"कवि निजी अनुभवों को व्यक्त करता है।",
+"स्मृतियों और जीवन की पीड़ा का भाव मिलता है।",
+"कवि निजी अनुभवों को सार्वजनिक करने में संकोच करता है।"
 ],
 
-answer:1
+questions:[
+[
+"कवि आत्मकथा लिखने में संकोच क्यों करता है?",
+"कवि अपने जीवन के निजी और दुखद अनुभवों को सार्वजनिक करने में सहज नहीं है।"
+]
+],
+
+mcq:[
+[
+"आत्मकथा का संबंध किससे है?",
+["अपने जीवन से","दूसरे के जीवन से","केवल इतिहास से","केवल कल्पना से"],
+0
+]
+]
 
 },
 
+
 {
+id:4,
+name:"पाठ 4 – उत्साह और अट नहीं रही है",
+book:"क्षितिज भाग-2",
+pdf:"jhks104.pdf",
 
-q:
-"गोपियों की सबसे प्रमुख भावना क्या है?",
+summary:
+"इन कविताओं में प्रकृति, ऊर्जा, उत्साह और जीवन के प्रति सकारात्मक दृष्टिकोण दिखाई देता है।",
 
-options:[
-"क्रोध",
-"कृष्ण-प्रेम",
-"भय",
-"ईर्ष्या"
+points:[
+"प्रकृति का प्रभावशाली चित्रण है।",
+"बादल ऊर्जा और परिवर्तन के प्रतीक हैं।",
+"कवि नई चेतना और उत्साह की कामना करता है।",
+"प्रकृति और मानव मन का संबंध दिखाई देता है।"
 ],
 
-answer:1
-
-}
-
+questions:[
+[
+"कविता में बादल किस भावना को व्यक्त करते हैं?",
+"बादल नई ऊर्जा, परिवर्तन और जीवन में उत्साह की भावना को व्यक्त करते हैं।"
+]
 ],
 
-officialLink:OFFICIAL_NCERT_LINK
+mcq:[
+[
+"कविता का प्रमुख भाव क्या है?",
+["निराशा","उत्साह और ऊर्जा","भय","क्रोध"],
+1
+]
+]
+
+},
+
+
+{
+id:5,
+name:"पाठ 5 – यह दंतुरित मुस्कान और फसल",
+book:"क्षितिज भाग-2",
+pdf:"jhks105.pdf",
+
+summary:
+"इन कविताओं में बालक की मासूम मुस्कान और किसान के श्रम से जुड़ी फसल के माध्यम से जीवन और प्रकृति की सुंदरता को व्यक्त किया गया है।",
+
+points:[
+"बालक की मुस्कान में मासूमियत है।",
+"कविता में मानवीय संवेदनाएँ हैं।",
+"फसल प्रकृति और किसान के श्रम का परिणाम है।",
+"किसान के परिश्रम का महत्व सामने आता है।"
+],
+
+questions:[
+[
+"फसल किन तत्वों के मेल से तैयार होती है?",
+"फसल प्रकृति, मिट्टी, पानी, सूर्य और किसान के श्रम के संयुक्त परिणाम से तैयार होती है।"
+]
+],
+
+mcq:[
+[
+"फसल किसका परिणाम है?",
+["केवल मशीन का","प्रकृति और किसान के श्रम का","केवल वर्षा का","केवल मिट्टी का"],
+1
+]
+]
+
+},
+
+
+{
+id:6,
+name:"पाठ 6 – संगतकार",
+book:"क्षितिज भाग-2",
+pdf:"jhks106.pdf",
+
+summary:
+"कविता में संगतकार के महत्व को सामने लाया गया है। वह मुख्य कलाकार की प्रस्तुति को मजबूत बनाता है और सामूहिक सफलता में योगदान देता है।",
+
+points:[
+"संगतकार मुख्य कलाकार की प्रस्तुति में सहयोग देता है।",
+"वह स्वयं पीछे रहकर दूसरे कलाकार को मजबूत करता है।",
+"कविता में सहयोग और सामूहिकता का महत्व है।",
+"सफलता के पीछे अनेक लोगों का योगदान हो सकता है।"
+],
+
+questions:[
+[
+"संगतकार का क्या महत्व है?",
+"वह मुख्य कलाकार की प्रस्तुति को सहारा देता है और उसे प्रभावशाली बनाने में योगदान करता है।"
+]
+],
+
+mcq:[
+[
+"संगतकार किसमें सहयोग करता है?",
+["मुख्य कलाकार की प्रस्तुति में","केवल दर्शकों में","केवल लेखन में","खेल में"],
+0
+]
+]
+
+},
+
+
+{
+id:7,
+name:"पाठ 7 – नेताजी का चश्मा",
+book:"क्षितिज भाग-2",
+pdf:"jhks107.pdf",
+
+summary:
+"कहानी देशभक्ति, सामाजिक संवेदना और आम लोगों की सोच को व्यंग्यात्मक ढंग से सामने लाती है।",
+
+points:[
+"कहानी में देशभक्ति की भावना है।",
+"व्यंग्य के माध्यम से सामाजिक सोच प्रस्तुत की गई है।",
+"सामान्य व्यक्ति की श्रद्धा को महत्व दिया गया है।",
+"देशभक्ति केवल बड़े भाषणों तक सीमित नहीं है।"
+],
+
+questions:[
+[
+"नेताजी की प्रतिमा पर चश्मा लगाने का क्या महत्व है?",
+"यह सामान्य व्यक्ति की श्रद्धा और देशभक्ति की भावना को दर्शाता है।"
+]
+],
+
+mcq:[
+[
+"कहानी का प्रमुख भाव क्या है?",
+["देशभक्ति और व्यंग्य","भय","विज्ञान","रहस्य"],
+0
+]
+]
+
+},
+
+
+{
+id:8,
+name:"पाठ 8 – बालगोबिन भगत",
+book:"क्षितिज भाग-2",
+pdf:"jhks108.pdf",
+
+summary:
+"बालगोबिन भगत सरल, संत, मेहनती और आध्यात्मिक विचारों वाले व्यक्ति के रूप में प्रस्तुत होते हैं।",
+
+points:[
+"वे सरल और संत स्वभाव के हैं।",
+"वे मेहनत और ईमानदारी को महत्व देते हैं।",
+"उनका जीवन भक्ति और लोकजीवन से जुड़ा है।",
+"उनके व्यक्तित्व में मानवीय संवेदना है।"
+],
+
+questions:[
+[
+"बालगोबिन भगत का व्यक्तित्व कैसा था?",
+"वे सरल, संत, मेहनती, ईमानदार और आध्यात्मिक विचारों वाले व्यक्ति थे।"
+]
+],
+
+mcq:[
+[
+"बालगोबिन भगत किस प्रकार के व्यक्ति थे?",
+["अहंकारी","सरल और संत स्वभाव के","क्रूर","आलसी"],
+1
+]
+]
+
+},
+
+
+{
+id:9,
+name:"पाठ 9 – लखनवी अंदाज़",
+book:"क्षितिज भाग-2",
+pdf:"jhks109.pdf",
+
+summary:
+"रचना में लखनऊ की तहज़ीब, व्यवहार और सामाजिक दिखावे को हास्य-व्यंग्य के माध्यम से प्रस्तुत किया गया है।",
+
+points:[
+"लखनवी तहज़ीब का चित्रण है।",
+"हास्य और व्यंग्य का प्रयोग है।",
+"सामाजिक व्यवहार को रोचक ढंग से प्रस्तुत किया गया है।",
+"दिखावे और वास्तविक व्यवहार का अंतर सामने आता है।"
+],
+
+questions:[
+[
+"लखनवी अंदाज़ की प्रमुख विशेषता क्या है?",
+"लखनवी अंदाज़ में शिष्टाचार, नफासत और व्यवहार की विशेष शैली दिखाई देती है।"
+]
+],
+
+mcq:[
+[
+"लखनवी अंदाज़ में किसका प्रयोग प्रमुख है?",
+["हास्य-व्यंग्य","विज्ञान","युद्ध","रहस्य"],
+0
+]
+]
+
+},
+
+
+{
+id:10,
+name:"पाठ 10 – एक कहानी यह भी",
+book:"क्षितिज भाग-2",
+pdf:"jhks110.pdf",
+
+summary:
+"यह आत्मकथात्मक रचना लेखिका के जीवन, परिवार, शिक्षा और साहित्यिक विकास से जुड़े अनुभवों को प्रस्तुत करती है।",
+
+points:[
+"रचना में लेखिका के जीवन के अनुभव हैं।",
+"परिवार और वातावरण का प्रभाव है।",
+"शिक्षा और साहित्यिक विकास का संबंध सामने आता है।",
+"आत्मकथात्मक शैली का प्रयोग है।"
+],
+
+questions:[
+[
+"रचना का स्वरूप कैसा है?",
+"यह आत्मकथात्मक स्वरूप की रचना है जिसमें लेखिका अपने जीवन के अनुभव प्रस्तुत करती हैं।"
+]
+],
+
+mcq:[
+[
+"एक कहानी यह भी किस प्रकार की रचना है?",
+["आत्मकथात्मक","वैज्ञानिक","ऐतिहासिक","नाटक"],
+0
+]
+]
+
+},
+
+
+{
+id:11,
+name:"पाठ 11 – नौबतखाने में इबादत",
+book:"क्षितिज भाग-2",
+pdf:"jhks111.pdf",
+
+summary:
+"यह रचना महान शहनाई कलाकार बिस्मिल्ला खाँ के जीवन, संगीत-साधना और बनारस से उनके संबंध को प्रस्तुत करती है।",
+
+points:[
+"बिस्मिल्ला खाँ महान शहनाई वादक थे।",
+"उन्होंने शहनाई को उच्च प्रतिष्ठा दिलाई।",
+"उनका जीवन संगीत-साधना और अनुशासन से जुड़ा था।",
+"बनारस और गंगा से उनका गहरा संबंध था।"
+],
+
+questions:[
+[
+"बिस्मिल्ला खाँ का मुख्य योगदान क्या था?",
+"उन्होंने शहनाई वादन को राष्ट्रीय और अंतरराष्ट्रीय स्तर पर सम्मान दिलाने में महत्वपूर्ण योगदान दिया।"
+]
+],
+
+mcq:[
+[
+"बिस्मिल्ला खाँ किस वाद्य से जुड़े थे?",
+["तबला","शहनाई","सितार","बांसुरी"],
+1
+]
+]
+
+},
+
+
+{
+id:12,
+name:"पाठ 12 – संस्कृति",
+book:"क्षितिज भाग-2",
+pdf:"jhks112.pdf",
+
+summary:
+"इस पाठ में संस्कृति और सभ्यता के संबंध को समझाया गया है तथा मानवीय मूल्यों और रचनात्मक चेतना के महत्व को सामने रखा गया है।",
+
+points:[
+"संस्कृति मनुष्य की रचनात्मक चेतना से जुड़ी है।",
+"सभ्यता बाहरी जीवन और सुविधाओं से संबंधित हो सकती है।",
+"संस्कृति में मानवीय मूल्यों का महत्व है।",
+"सच्ची संस्कृति मनुष्य को बेहतर बनाने की दिशा में ले जाती है।"
+],
+
+questions:[
+[
+"संस्कृति और सभ्यता में क्या अंतर है?",
+"सभ्यता बाहरी जीवन और सुविधाओं से जुड़ी हो सकती है, जबकि संस्कृति विचार, मूल्य और मानवीय चेतना से जुड़ी होती है।"
+]
+],
+
+mcq:[
+[
+"संस्कृति मुख्य रूप से किससे संबंधित है?",
+["मानवीय मूल्यों और चेतना से","केवल मशीनों से","केवल भवनों से","केवल धन से"],
+0
+]
+]
+
+},
+
+
+{
+id:13,
+name:"पाठ 13 – अन्य अध्याय",
+book:"क्षितिज भाग-2",
+pdf:"jhks113.pdf",
+
+summary:
+"यह chapter slot NCERT की chapter-wise सूची के अनुसार रखा गया है। Official PDF खोलकर विद्यार्थी वर्तमान पुस्तक में chapter की उपलब्ध सामग्री देख सकता है।",
+
+points:[
+"Official NCERT पुस्तक को प्राथमिक स्रोत के रूप में देखें।",
+"Chapter पढ़कर मुख्य शब्द लिखें।",
+"महत्वपूर्ण प्रश्नों का अभ्यास करें।",
+"Revision के लिए छोटे notes बनाएँ।"
+],
+
+questions:[
+[
+"पाठ की तैयारी कैसे करें?",
+"पहले पाठ को ध्यान से पढ़ें, फिर मुख्य विचार, शब्दार्थ और प्रश्न-उत्तर का अभ्यास करें।"
+]
+],
+
+mcq:[
+[
+"अच्छी तैयारी के लिए क्या जरूरी है?",
+["नियमित अभ्यास","पढ़ाई छोड़ना","केवल अनुमान लगाना","बिना समझे लिखना"],
+0
+]
+]
 
 }
 
@@ -1079,85 +1181,270 @@ officialLink:OFFICIAL_NCERT_LINK
 
 
 /* =====================================================
-OTHER SUBJECT STRUCTURE
+SCIENCE
 ===================================================== */
 
-function createGeneralLessons(subject){
+const science10Names=[
 
-let arr=[];
+"रासायनिक अभिक्रियाएँ एवं समीकरण",
 
-for(let i=1;i<=10;i++){
+"अम्ल, क्षारक एवं लवण",
 
-arr.push({
+"धातु एवं अधातु",
 
-id:i,
+"कार्बन एवं उसके यौगिक",
 
-name:"Lesson "+i,
+"तत्वों का आवर्त वर्गीकरण",
+
+"जैव प्रक्रम",
+
+"नियंत्रण एवं समन्वय",
+
+"जीव जनन कैसे करते हैं?",
+
+"आनुवंशिकता",
+
+"प्रकाश – परावर्तन तथा अपवर्तन"
+
+];
+
+
+
+/* =====================================================
+MATHS
+===================================================== */
+
+const maths10Names=[
+
+"वास्तविक संख्याएँ",
+
+"बहुपद",
+
+"दो चरों वाले रैखिक समीकरण युग्म",
+
+"द्विघात समीकरण",
+
+"समांतर श्रेढ़ियाँ",
+
+"त्रिभुज",
+
+"निर्देशांक ज्यामिति",
+
+"त्रिकोणमिति का परिचय",
+
+"त्रिकोणमिति के कुछ अनुप्रयोग",
+
+"वृत्त",
+
+"रचनाएँ",
+
+"वृत्तों से संबंधित क्षेत्रफल",
+
+"पृष्ठीय क्षेत्रफल और आयतन",
+
+"सांख्यिकी",
+
+"प्रायिकता"
+
+];
+
+
+
+/* =====================================================
+SOCIAL SCIENCE
+===================================================== */
+
+const social10={
+
+"इतिहास":[
+
+"यूरोप में राष्ट्रवाद का उदय",
+
+"भारत में राष्ट्रवाद",
+
+"भूमंडलीकृत विश्व का बनना",
+
+"औद्योगीकरण का युग",
+
+"मुद्रण संस्कृति और आधुनिक दुनिया"
+
+],
+
+"भूगोल":[
+
+"संसाधन और विकास",
+
+"वन एवं वन्यजीव संसाधन",
+
+"जल संसाधन",
+
+"कृषि",
+
+"खनिज और ऊर्जा संसाधन",
+
+"विनिर्माण उद्योग",
+
+"राष्ट्रीय अर्थव्यवस्था की जीवन रेखाएँ"
+
+],
+
+"राजनीति विज्ञान":[
+
+"सत्ता की साझेदारी",
+
+"संघवाद",
+
+"लैंगिकता, धर्म और जाति",
+
+"राजनीतिक दल",
+
+"लोकतंत्र के परिणाम",
+
+"लोकतंत्र की चुनौतियाँ"
+],
+
+"अर्थशास्त्र":[
+
+"विकास",
+
+"भारतीय अर्थव्यवस्था के क्षेत्रक",
+
+"मुद्रा और साख",
+
+"वैश्वीकरण और भारतीय अर्थव्यवस्था",
+
+"उपभोक्ता अधिकार"
+]
+
+};
+
+
+
+/* =====================================================
+GENERAL NOTE CREATOR
+===================================================== */
+
+function makeGeneralLesson(name,subject,index){
+
+return {
+
+id:index+1,
+
+name:name,
 
 book:subject,
 
+pdf:"",
+
 summary:
-"यह Original Study Notes section है। इस lesson के लिए chapter-specific notes यहाँ जोड़े जा सकते हैं।",
+`यह ${subject} के "${name}" अध्याय के लिए Original Study Notes का प्रारंभिक भाग है। विद्यार्थी पहले अध्याय की मुख्य अवधारणाओं को समझें और फिर प्रश्नों का अभ्यास करें।`,
 
 points:[
-"Lesson को ध्यान से पढ़ें।",
-"मुख्य अवधारणाएँ लिखें।",
-"महत्वपूर्ण शब्दों का अभ्यास करें।",
-"प्रश्न–उत्तर स्वयं लिखकर अभ्यास करें।",
-"परीक्षा से पहले दोहराव करें।"
+
+"अध्याय को ध्यान से पढ़ें।",
+
+"मुख्य परिभाषाएँ और अवधारणाएँ नोट करें।",
+
+"महत्वपूर्ण उदाहरणों को समझें।",
+
+"अभ्यास प्रश्नों को स्वयं हल करें।",
+
+"परीक्षा से पहले chapter का revision करें."
+
 ],
 
 questions:[
-{
-q:"इस Lesson की तैयारी कैसे करें?",
-a:"पहले विषय की मूल अवधारणा समझें, फिर मुख्य बिंदुओं को लिखें और प्रश्नों का अभ्यास करें।"
-}
+
+[
+"इस अध्याय की तैयारी कैसे करें?",
+
+"पहले मूल अवधारणा समझें, फिर मुख्य बिंदु लिखें और अंत में अभ्यास प्रश्न हल करें।"
+],
+
+[
+"Revision कैसे करें?",
+
+"अध्याय के मुख्य शब्द, परिभाषाएँ, उदाहरण और महत्वपूर्ण प्रश्न दोहराएँ।"
+]
+
 ],
 
 mcq:[
-{
-q:"अच्छी पढ़ाई के लिए क्या जरूरी है?",
-options:[
-"नियमित अभ्यास",
-"पढ़ाई छोड़ देना",
-"केवल अनुमान लगाना",
-"बिना समझे लिखना"
-],
-answer:0
-}
-],
 
-officialLink:""
+[
+"अच्छी पढ़ाई के लिए क्या जरूरी है?",
 
-});
+["नियमित अभ्यास","पढ़ाई छोड़ना","केवल अनुमान लगाना","बिना समझे लिखना"],
 
-}
+0
+]
 
-return arr;
+]
+
+};
 
 }
 
 
 
 /* =====================================================
-LESSON DATABASE
+DATA MAP
 ===================================================== */
 
-const lessons = {
+const dataMap={
 
 10:{
 
-"हिंदी":class10Hindi,
+"हिंदी":hindi10,
 
-"English":createGeneralLessons("English"),
+"विज्ञान":
+science10Names.map((x,i)=>
+makeGeneralLesson(x,"विज्ञान",i)
+),
 
-"गणित":createGeneralLessons("गणित"),
+"गणित":
+maths10Names.map((x,i)=>
+makeGeneralLesson(x,"गणित",i)
+),
 
-"विज्ञान":createGeneralLessons("विज्ञान"),
+"सामाजिक विज्ञान":
+[
+...social10["इतिहास"].map((x,i)=>
+makeGeneralLesson(x,"इतिहास",i)
+),
 
-"सामाजिक विज्ञान":createGeneralLessons("सामाजिक विज्ञान"),
+...social10["भूगोल"].map((x,i)=>
+makeGeneralLesson(x,"भूगोल",i+5)
+),
 
-"संस्कृत":createGeneralLessons("संस्कृत")
+...social10["राजनीति विज्ञान"].map((x,i)=>
+makeGeneralLesson(x,"राजनीति विज्ञान",i+12)
+),
+
+...social10["अर्थशास्त्र"].map((x,i)=>
+makeGeneralLesson(x,"अर्थशास्त्र",i+18)
+)
+],
+
+"English":
+Array.from(
+{length:11},
+(_,i)=>makeGeneralLesson(
+"Chapter "+(i+1),
+"English",
+i
+)
+),
+
+"संस्कृत":
+Array.from(
+{length:12},
+(_,i)=>makeGeneralLesson(
+"Chapter "+(i+1),
+"संस्कृत",
+i
+)
+)
 
 }
 
@@ -1171,17 +1458,13 @@ BOARD
 
 function chooseBoard(board){
 
-selectedBoard = board;
+selectedBoard=board;
 
 document
 .getElementById("mediumStep")
 .classList.remove("hidden");
 
-document
-.getElementById("mediumStep")
-.scrollIntoView({
-behavior:"smooth"
-});
+scrollToId("mediumStep");
 
 }
 
@@ -1193,17 +1476,13 @@ MEDIUM
 
 function chooseMedium(medium){
 
-selectedMedium = medium;
+selectedMedium=medium;
 
 document
 .getElementById("classStep")
 .classList.remove("hidden");
 
-document
-.getElementById("classStep")
-.scrollIntoView({
-behavior:"smooth"
-});
+scrollToId("classStep");
 
 }
 
@@ -1215,33 +1494,36 @@ CLASS
 
 function chooseClass(classNumber){
 
-selectedClass = classNumber;
+selectedClass=classNumber;
 
 document
 .getElementById("subjectStep")
 .classList.remove("hidden");
 
-let list =
+
+let list=
 subjects[classNumber] || [];
 
-let html = "";
+
+let html="";
+
 
 list.forEach(function(subject){
 
-html += `
+html+=`
 
 <div class="lesson">
 
 <h3>📚 ${subject}</h3>
 
 <p>
-Class ${classNumber}
+Class ${classNumber} • ${selectedMedium}
 </p>
 
 <button
-onclick="chooseSubject('${escapeQuotes(subject)}')">
+onclick="chooseSubject(${JSON.stringify(subject)})">
 
-📖 Open Subject
+📖 Subject खोलें
 
 </button>
 
@@ -1251,13 +1533,15 @@ onclick="chooseSubject('${escapeQuotes(subject)}')">
 
 });
 
+
 document
 .getElementById("subjectList")
-.innerHTML = html;
+.innerHTML=html;
+
 
 document
 .getElementById("selection")
-.innerHTML = `
+.innerHTML=`
 
 <div class="selection">
 
@@ -1275,11 +1559,8 @@ document
 
 `;
 
-document
-.getElementById("subjectStep")
-.scrollIntoView({
-behavior:"smooth"
-});
+
+scrollToId("subjectStep");
 
 }
 
@@ -1291,15 +1572,22 @@ SUBJECT
 
 function chooseSubject(subject){
 
-selectedSubject = subject;
+selectedSubject=subject;
+
 
 document
 .getElementById("lessonStep")
 .classList.remove("hidden");
 
+
+document
+.getElementById("lessonSearch")
+.value="";
+
+
 document
 .getElementById("lessonSelection")
-.innerHTML = `
+.innerHTML=`
 
 <div class="selection">
 
@@ -1321,39 +1609,69 @@ document
 
 `;
 
+
 renderLessons();
 
-document
-.getElementById("lessonStep")
-.scrollIntoView({
-behavior:"smooth"
-});
+
+scrollToId("lessonStep");
 
 }
 
 
 
 /* =====================================================
-LESSONS
+RENDER LESSONS
 ===================================================== */
 
 function renderLessons(){
 
-let list =
-lessons[selectedClass] &&
-lessons[selectedClass][selectedSubject];
+let list=
+dataMap[selectedClass] &&
+dataMap[selectedClass][selectedSubject];
+
 
 if(!list){
 
-list = createGeneralLessons(selectedSubject);
+list=Array.from(
+{length:10},
+(_,i)=>
+makeGeneralLesson(
+"Lesson "+(i+1),
+selectedSubject,
+i
+)
+);
 
 }
 
-let html = "";
+
+let html="";
+
 
 list.forEach(function(item){
 
-html += `
+let pdfLink="";
+
+
+/*
+   केवल Class 10 Hindi में
+   verified user-provided book links
+   automatic रूप से लगाए गए हैं।
+*/
+
+if(
+selectedClass==10 &&
+selectedSubject=="हिंदी" &&
+item.pdf
+){
+
+pdfLink=
+NCERT_BASE+item.pdf;
+
+}
+
+
+html+=`
 
 <div class="lesson">
 
@@ -1362,11 +1680,7 @@ html += `
 </h3>
 
 <p>
-${item.book}
-</p>
-
-<p>
-📝 Original Study Notes available
+📝 Original Notes
 </p>
 
 <button
@@ -1376,40 +1690,57 @@ onclick="openLesson(${item.id})">
 
 </button>
 
+${pdfLink ? `
+
+<a
+class="btn green"
+href="${pdfLink}"
+target="_blank"
+rel="noopener">
+
+📚 Official NCERT PDF
+
+</a>
+
+` : ""}
+
 </div>
 
 `;
 
 });
 
+
 document
 .getElementById("lessonList")
-.innerHTML = html;
+.innerHTML=html;
 
 }
 
 
 
 /* =====================================================
-SEARCH LESSON
+SEARCH
 ===================================================== */
 
 function searchLessons(){
 
-let value =
+let value=
 document
 .getElementById("lessonSearch")
 .value
-.toLowerCase();
+.toLowerCase()
+.trim();
+
 
 document
 .querySelectorAll("#lessonList .lesson")
 .forEach(function(item){
 
-let text =
+let text=
 item.innerText.toLowerCase();
 
-item.style.display =
+item.style.display=
 text.includes(value)
 ? ""
 : "none";
@@ -1426,22 +1757,33 @@ OPEN LESSON
 
 function openLesson(id){
 
-let list =
-lessons[selectedClass] &&
-lessons[selectedClass][selectedSubject];
+let list=
+dataMap[selectedClass] &&
+dataMap[selectedClass][selectedSubject];
+
 
 if(!list){
 
-list = createGeneralLessons(selectedSubject);
+list=Array.from(
+{length:10},
+(_,i)=>
+makeGeneralLesson(
+"Lesson "+(i+1),
+selectedSubject,
+i
+)
+);
 
 }
 
-let data =
+
+let data=
 list.find(function(item){
 
-return item.id === id;
+return item.id==id;
 
 });
+
 
 if(!data){
 
@@ -1449,22 +1791,21 @@ return;
 
 }
 
+
 document
 .getElementById("notesStep")
 .classList.remove("hidden");
 
+
 document
 .getElementById("notesTitle")
-.innerText =
+.innerText=
 "📝 "+data.name+" – Original Notes";
 
 
-
-/* HEADER */
-
 document
 .getElementById("notesHeader")
-.innerHTML = `
+.innerHTML=`
 
 <div class="selection">
 
@@ -1491,19 +1832,14 @@ document
 `;
 
 
-
-/* CONTENT */
-
-let html = `
+let html=`
 
 <div class="notes-box">
 
-<h3>📖 पाठ का परिचय</h3>
+<h3>📖 पाठ / Chapter का परिचय</h3>
 
 <p>
-
 ${data.summary}
-
 </p>
 
 </div>
@@ -1515,14 +1851,13 @@ ${data.summary}
 
 `;
 
+
 data.points.forEach(function(point){
 
-html += `
+html+=`
 
 <div class="point">
-
 ✅ ${point}
-
 </div>
 
 `;
@@ -1530,50 +1865,7 @@ html += `
 });
 
 
-html += `
-
-</div>
-
-
-<div class="notes-box">
-
-<h3>👥 प्रमुख पात्र / विषय</h3>
-
-`;
-
-if(data.characters){
-
-data.characters.forEach(function(character){
-
-html += `
-
-<div class="point">
-
-📌 ${character}
-
-</div>
-
-`;
-
-});
-
-}else{
-
-html += `
-
-<p>
-
-इस Lesson में विषय से संबंधित प्रमुख
-अवधारणाओं और उदाहरणों को समझना महत्वपूर्ण है।
-
-</p>
-
-`;
-
-}
-
-
-html += `
+html+=`
 
 </div>
 
@@ -1584,15 +1876,16 @@ html += `
 
 `;
 
+
 data.questions.forEach(function(item,index){
 
-html += `
+html+=`
 
 <div class="qa">
 
 <b>
 प्रश्न ${index+1}:
-${item.q}
+${item[0]}
 </b>
 
 <br><br>
@@ -1601,7 +1894,7 @@ ${item.q}
 उत्तर:
 </strong>
 
-${item.a}
+${item[1]}
 
 </div>
 
@@ -1610,7 +1903,7 @@ ${item.a}
 });
 
 
-html += `
+html+=`
 
 </div>
 
@@ -1621,23 +1914,25 @@ html += `
 
 `;
 
+
 data.mcq.forEach(function(item,index){
 
-html += `
+html+=`
 
 <div class="mcq">
 
 <b>
-${index+1}. ${item.q}
+${index+1}. ${item[0]}
 </b>
 
 <ol type="A">
 
 `;
 
-item.options.forEach(function(option){
 
-html += `
+item[1].forEach(function(option){
+
+html+=`
 
 <li>
 ${option}
@@ -1648,9 +1943,23 @@ ${option}
 });
 
 
-html += `
+html+=`
 
 </ol>
+
+<details>
+
+<summary>
+✅ सही उत्तर देखें
+</summary>
+
+<p>
+
+${item[1][item[2]]}
+
+</p>
+
+</details>
 
 </div>
 
@@ -1659,29 +1968,29 @@ html += `
 });
 
 
-html += `
+html+=`
 
 </div>
 
 
 <div class="notes-box">
 
-<h3>📌 परीक्षा के लिए Revision</h3>
+<h3>📌 Exam Revision</h3>
 
 <div class="point">
-पाठ का सार अपने शब्दों में दोहराएँ।
+पाठ के मुख्य विचार दोहराएँ।
 </div>
 
 <div class="point">
-मुख्य शब्दों और विचारों को याद करें।
+महत्वपूर्ण शब्द और परिभाषाएँ याद करें।
 </div>
 
 <div class="point">
-महत्वपूर्ण प्रश्नों के उत्तर लिखकर अभ्यास करें।
+प्रश्न-उत्तर लिखकर अभ्यास करें।
 </div>
 
 <div class="point">
-MCQ का अभ्यास करें।
+MCQ दोहराएँ।
 </div>
 
 </div>
@@ -1689,12 +1998,19 @@ MCQ का अभ्यास करें।
 `;
 
 
+/* OFFICIAL BOOK */
 
-/* OFFICIAL BUTTON */
+if(
+selectedClass==10 &&
+selectedSubject=="हिंदी" &&
+data.pdf
+){
 
-if(data.officialLink){
+let link=
+NCERT_BASE+data.pdf;
 
-html += `
+
+html+=`
 
 <div class="notes-box">
 
@@ -1704,17 +2020,18 @@ html += `
 
 <p>
 
-यहाँ से official NCERT PDF खोली जा सकती है।
+मूल NCERT पुस्तक देखने के लिए नीचे दिए गए
+official button का प्रयोग करें।
 
 </p>
 
 <a
 class="btn green"
-href="${data.officialLink}"
+href="${link}"
 target="_blank"
 rel="noopener">
 
-📖 Official NCERT Book खोलें
+📖 Official NCERT PDF खोलें
 
 </a>
 
@@ -1725,10 +2042,7 @@ rel="noopener">
 }
 
 
-
-/* BACK */
-
-html += `
+html+=`
 
 <div class="back-buttons">
 
@@ -1753,25 +2067,19 @@ onclick="window.print()">
 `;
 
 
-
 document
 .getElementById("notesContent")
-.innerHTML = html;
+.innerHTML=html;
 
 
-
-document
-.getElementById("notesStep")
-.scrollIntoView({
-behavior:"smooth"
-});
+scrollToId("notesStep");
 
 }
 
 
 
 /* =====================================================
-BACK TO LESSON
+BACK
 ===================================================== */
 
 function backToLessons(){
@@ -1780,30 +2088,32 @@ document
 .getElementById("notesStep")
 .classList.add("hidden");
 
-document
-.getElementById("lessonStep")
-.scrollIntoView({
-behavior:"smooth"
-});
+scrollToId("lessonStep");
 
 }
 
 
 
 /* =====================================================
-ESCAPE
+UTILITY
 ===================================================== */
 
-function escapeQuotes(text){
+function scrollToId(id){
 
-return text
-.replace(/\\/g,"\\\\")
-.replace(/'/g,"\\'");
+setTimeout(function(){
+
+document
+.getElementById(id)
+.scrollIntoView({
+behavior:"smooth",
+block:"start"
+});
+
+},100);
 
 }
 
 </script>
-
 
 </body>
 </html>
