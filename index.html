@@ -1,345 +1,354 @@
 <!DOCTYPE html>
 <html lang="hi">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-<title>Student Study Hub | Free Education</title>
+<title>Student Study Hub | CBSE RBSE NCERT</title>
 
 <style>
+*{box-sizing:border-box}
 
-*{
-box-sizing:border-box;
-}
-
-html{
-scroll-behavior:smooth;
-}
+html{scroll-behavior:smooth}
 
 body{
-margin:0;
-font-family:Arial,"Noto Sans Devanagari",sans-serif;
-background:#f1f5f9;
-color:#172033;
+ margin:0;
+ font-family:Arial,"Noto Sans Devanagari",sans-serif;
+ background:#f1f5f9;
+ color:#172033;
 }
 
 header{
-background:linear-gradient(135deg,#075eaa,#1684d8);
-color:white;
-text-align:center;
-padding:40px 15px;
+ background:linear-gradient(135deg,#075eaa,#1684d8);
+ color:white;
+ text-align:center;
+ padding:38px 15px;
 }
 
 header h1{
-margin:0;
-font-size:35px;
+ margin:0;
+ font-size:35px;
 }
 
 header p{
-font-size:17px;
-line-height:1.7;
+ font-size:17px;
+ line-height:1.7;
 }
 
 nav{
-background:white;
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
-gap:5px;
-padding:10px;
-position:sticky;
-top:0;
-z-index:1000;
-box-shadow:0 2px 10px #0002;
+ background:white;
+ display:flex;
+ justify-content:center;
+ flex-wrap:wrap;
+ gap:5px;
+ padding:10px;
+ position:sticky;
+ top:0;
+ z-index:1000;
+ box-shadow:0 2px 10px #0002;
 }
 
 nav a{
-text-decoration:none;
-color:#14598e;
-font-weight:bold;
-padding:9px 12px;
-border-radius:8px;
+ text-decoration:none;
+ color:#14598e;
+ font-weight:bold;
+ padding:9px 12px;
+ border-radius:8px;
 }
 
-nav a:hover{
-background:#e8f3fb;
-}
+nav a:hover{background:#e8f3fb}
 
 .container{
-max-width:1150px;
-margin:auto;
-padding:18px;
+ max-width:1150px;
+ margin:auto;
+ padding:18px;
 }
 
 .card{
-background:white;
-padding:22px;
-margin-bottom:20px;
-border-radius:16px;
-box-shadow:0 5px 18px #00000012;
+ background:white;
+ padding:22px;
+ margin-bottom:20px;
+ border-radius:16px;
+ box-shadow:0 5px 18px #00000012;
 }
 
 .card h2{
-margin-top:0;
-color:#145b91;
+ margin-top:0;
+ color:#145b91;
 }
 
 .grid{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:12px;
+ display:grid;
+ grid-template-columns:repeat(4,1fr);
+ gap:12px;
 }
 
 .two-grid{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:18px;
+ display:grid;
+ grid-template-columns:repeat(2,1fr);
+ gap:18px;
 }
 
 .three-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:12px;
+ display:grid;
+ grid-template-columns:repeat(3,1fr);
+ gap:12px;
 }
 
 .option-card,
-.book-card,
-.lesson-card,
 .class-card,
-.subject-card{
-background:#f8fbff;
-border:2px solid #d7e7f5;
-padding:20px;
-border-radius:15px;
-text-align:center;
-transition:.2s;
+.subject,
+.lesson-card{
+ background:#f8fbff;
+ border:1px solid #d8e7f3;
+ padding:20px;
+ border-radius:14px;
+ text-align:center;
+ transition:.2s;
 }
 
 .option-card:hover,
-.book-card:hover,
-.lesson-card:hover,
 .class-card:hover,
-.subject-card:hover{
-transform:translateY(-3px);
-box-shadow:0 6px 18px #0002;
+.subject:hover,
+.lesson-card:hover{
+ transform:translateY(-2px);
+ box-shadow:0 5px 15px #0001;
 }
 
 .option-card h3,
-.book-card h3,
-.lesson-card h3,
-.subject-card h3{
-color:#145b91;
+.class-card h3,
+.subject h3,
+.lesson-card h3{
+ color:#145b91;
 }
 
-button,
-.btn{
-display:inline-block;
-border:0;
-background:#0878cf;
-color:white;
-padding:11px 16px;
-border-radius:8px;
-cursor:pointer;
-font-weight:bold;
-text-decoration:none;
-margin:4px;
-}
-
-button:hover,
-.btn:hover{
-opacity:.9;
-}
-
-.green{background:#159447;}
-.orange{background:#e67e22;}
-.red{background:#dc3545;}
-.dark{background:#34495e;}
-.purple{background:#7b3fc6;}
-
-.hidden{
-display:none!important;
+.lesson-card{
+ text-align:left;
+ margin-bottom:10px;
 }
 
 .selection{
-background:#eef7ff;
-padding:15px;
-border-radius:10px;
-line-height:1.8;
-margin-bottom:15px;
+ background:#eef7ff;
+ padding:15px;
+ border-radius:10px;
+ line-height:1.9;
 }
 
-.search,
-input,
-select{
-width:100%;
-padding:13px;
-margin:6px 0 12px;
-border:1px solid #ccd5df;
-border-radius:8px;
-font-size:16px;
+.search,input,select{
+ width:100%;
+ padding:13px;
+ margin:6px 0 12px;
+ border:1px solid #ccd5df;
+ border-radius:8px;
+ font-size:16px;
 }
+
+button,.btn{
+ display:inline-block;
+ border:0;
+ background:#0878cf;
+ color:white;
+ padding:11px 16px;
+ border-radius:8px;
+ cursor:pointer;
+ font-weight:bold;
+ text-decoration:none;
+ margin:4px;
+}
+
+button:hover,.btn:hover{opacity:.9}
+
+.green{background:#159447}
+.orange{background:#e67e22}
+.red{background:#dc3545}
+.dark{background:#34495e}
+.purple{background:#7b3fc6}
+
+.hidden{display:none}
 
 .notice{
-background:#fff7d6;
-border-left:5px solid #e5b300;
-padding:15px;
-border-radius:8px;
-margin-bottom:20px;
-line-height:1.7;
+ background:#fff7d6;
+ border-left:5px solid #e5b300;
+ padding:15px;
+ border-radius:8px;
+ margin-bottom:20px;
 }
 
-.lesson-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:15px;
+.message{
+ background:#fff7d6;
+ padding:15px;
+ border-radius:8px;
+ margin-top:12px;
+}
+
+.notes-content{
+ font-size:17px;
+ line-height:1.9;
 }
 
 .notes-box{
-background:white;
-padding:20px;
-border-radius:12px;
-line-height:1.9;
+ background:#f8fbff;
+ border:1px solid #d8e7f3;
+ padding:20px;
+ border-radius:12px;
+ margin:15px 0;
 }
 
-.notes-box h2,
 .notes-box h3{
-color:#145b91;
+ color:#145b91;
 }
 
-.key-box{
-background:#eef7ff;
-padding:18px;
-border-radius:10px;
-margin:15px 0;
+.point{
+ background:white;
+ border-left:4px solid #0878cf;
+ padding:10px 14px;
+ margin:8px 0;
+ border-radius:6px;
 }
 
-.question-box{
-background:#f7fff8;
-border:1px solid #bde5c8;
-padding:18px;
-border-radius:10px;
-margin-top:15px;
+.qa{
+ background:#fff;
+ border:1px solid #ddd;
+ padding:15px;
+ margin:10px 0;
+ border-radius:10px;
 }
 
 .mcq{
-background:#f8fbff;
-border:1px solid #d8e7f3;
-padding:15px;
-border-radius:10px;
-margin:12px 0;
+ background:#eef7ff;
+ padding:15px;
+ border-radius:10px;
+ margin:10px 0;
+}
+
+.learning-grid{
+ display:grid;
+ grid-template-columns:repeat(5,1fr);
+ gap:15px;
+}
+
+.learning-card{
+ color:white;
+ padding:25px 15px;
+ border-radius:16px;
+ text-align:center;
+ cursor:pointer;
+}
+
+.learning-card .icon{font-size:40px}
+
+.english{background:#0878cf}
+.gk{background:#159447}
+.reasoning{background:#7b3fc6}
+.computer{background:#e67e22}
+.cyber{background:#dc3545}
+
+.topic-grid{
+ display:grid;
+ grid-template-columns:repeat(3,1fr);
+ gap:12px;
+}
+
+.topic-card{
+ background:#eef7ff;
+ border:1px solid #cfe4f5;
+ padding:18px;
+ border-radius:12px;
+ text-align:center;
+}
+
+.data-card{
+ background:#f8fbff;
+ border:1px solid #d8e7f3;
+ padding:16px;
+ margin-bottom:12px;
+ border-radius:12px;
+}
+
+.hindi{
+ font-size:18px;
+ font-weight:bold;
+}
+
+.english-text{
+ color:#0878cf;
+ font-size:18px;
+ margin-top:5px;
 }
 
 .test-box{
-background:#f8fbff;
-border:2px solid #d8e7f3;
-padding:22px;
-border-radius:15px;
-margin-top:20px;
+ background:#f8fbff;
+ border:2px solid #d8e7f3;
+ padding:22px;
+ border-radius:15px;
+}
+
+.test-question{
+ font-size:20px;
+ font-weight:bold;
+ margin-bottom:18px;
 }
 
 .test-option{
-display:block;
-background:white;
-border:1px solid #ddd;
-padding:14px;
-margin:9px 0;
-border-radius:8px;
-cursor:pointer;
-}
-
-.test-option:hover{
-background:#eef7ff;
+ display:block;
+ background:white;
+ border:1px solid #ddd;
+ padding:14px;
+ margin:9px 0;
+ border-radius:8px;
+ cursor:pointer;
 }
 
 .test-option input{
-width:auto;
-margin-right:8px;
+ width:auto;
+ margin-right:8px;
 }
 
-.result{
-background:#e9f8ef;
-padding:20px;
-border-radius:10px;
-font-size:20px;
-font-weight:bold;
-text-align:center;
-margin-top:15px;
+.test-buttons{
+ display:flex;
+ justify-content:space-between;
+ flex-wrap:wrap;
+ margin-top:20px;
+}
+
+.test-result{
+ background:#e9f8ef;
+ padding:20px;
+ border-radius:10px;
+ margin-top:15px;
+ font-size:20px;
+ font-weight:bold;
+ text-align:center;
 }
 
 footer{
-background:#172033;
-color:white;
-text-align:center;
-padding:25px;
-margin-top:20px;
+ background:#172033;
+ color:white;
+ text-align:center;
+ padding:25px;
 }
 
 @media(max-width:900px){
-
-.grid{
-grid-template-columns:repeat(2,1fr);
-}
-
-.lesson-grid{
-grid-template-columns:repeat(2,1fr);
-}
-
+ .learning-grid{grid-template-columns:repeat(3,1fr)}
 }
 
 @media(max-width:700px){
-
-header h1{
-font-size:27px;
+ header h1{font-size:27px}
+ .container{padding:10px}
+ .card{padding:16px}
+ .two-grid,
+ .three-grid,
+ .topic-grid{grid-template-columns:1fr}
+ .grid{grid-template-columns:repeat(2,1fr)}
+ .learning-grid{grid-template-columns:repeat(2,1fr)}
+ nav a{font-size:13px;padding:8px}
+ .test-buttons{flex-direction:column}
+ .test-buttons button{width:100%}
 }
-
-.container{
-padding:10px;
-}
-
-.card{
-padding:16px;
-}
-
-.two-grid,
-.three-grid,
-.lesson-grid{
-grid-template-columns:1fr;
-}
-
-.grid{
-grid-template-columns:repeat(2,1fr);
-}
-
-nav a{
-font-size:13px;
-padding:8px;
-}
-
-}
-
-@media print{
-
-nav,
-footer,
-button,
-.btn{
-display:none!important;
-}
-
-body{
-background:white;
-}
-
-}
-
 </style>
-
 </head>
 
 <body>
-
 
 <header id="home">
 
@@ -350,25 +359,20 @@ CBSE • RBSE • NCERT
 <br>
 Hindi Medium + English Medium
 <br>
-Free Study Material for Students
+Class 1–12 • Subjects • Lessons • Original Notes
 </p>
 
 </header>
 
-
 <nav>
-
 <a href="#home">🏠 Home</a>
-<a href="#board">🏫 Board</a>
-<a href="#classes">🎓 Classes</a>
 <a href="#study">📚 Study</a>
+<a href="#learning">📖 Learning</a>
 <a href="#tools">🧮 Tools</a>
-
+<a href="#contact">✉️ Contact</a>
 </nav>
 
-
 <div class="container">
-
 
 <div class="notice">
 
@@ -380,24 +384,29 @@ Free Study Material for Students
 
 <br>
 
-यहाँ दिए गए Notes और explanations
-विद्यार्थियों की पढ़ाई के लिए मौलिक रूप से तैयार किए जाते हैं।
+यहाँ दिए गए Notes अपने शब्दों में तैयार किए गए
+Original Study Notes हैं। Official textbook के पूरे
+मूल पाठ को कॉपी नहीं किया गया है।
 
 <br><br>
 
-Official textbooks के लिए संबंधित
-official sources को प्राथमिकता दें।
+Official books/syllabus को संबंधित official source से
+verify करें।
 
 </div>
 
 
-<!-- =====================================================
-BOARD
-===================================================== -->
+<!-- =========================
+STUDY SYSTEM
+========================= -->
 
-<section class="card" id="board">
+<section class="card" id="study">
 
-<h2>🏫 Board चुनें</h2>
+<h2>📚 Complete Study System</h2>
+
+<div id="stepBoard">
+
+<h3>1️⃣ Board चुनें</h3>
 
 <div class="three-grid">
 
@@ -413,7 +422,6 @@ CBSE
 
 </div>
 
-
 <div class="option-card">
 
 <h3>📕 RBSE</h3>
@@ -425,7 +433,6 @@ RBSE
 </button>
 
 </div>
-
 
 <div class="option-card">
 
@@ -441,26 +448,18 @@ NCERT
 
 </div>
 
-<p id="boardMsg"></p>
-
-</section>
+</div>
 
 
-<!-- =====================================================
-MEDIUM
-===================================================== -->
+<div id="stepMedium" class="hidden">
 
-<section class="card hidden" id="medium">
-
-<h2>📚 Medium चुनें</h2>
+<h3>2️⃣ Medium चुनें</h3>
 
 <div class="two-grid">
 
 <div class="option-card">
 
-<h3>🇮🇳 हिंदी माध्यम</h3>
-
-<p>Hindi Medium</p>
+<h3>🇮🇳 Hindi Medium</h3>
 
 <button onclick="selectMedium('Hindi Medium')">
 Hindi Medium
@@ -468,12 +467,9 @@ Hindi Medium
 
 </div>
 
-
 <div class="option-card">
 
 <h3>🇬🇧 English Medium</h3>
-
-<p>English Medium</p>
 
 <button onclick="selectMedium('English Medium')">
 English Medium
@@ -483,100 +479,159 @@ English Medium
 
 </div>
 
-<p id="mediumMsg"></p>
-
-</section>
+</div>
 
 
-<!-- =====================================================
-CLASS
-===================================================== -->
+<div id="stepClass" class="hidden">
 
-<section class="card hidden" id="classes">
-
-<h2>🎓 Class 1–12</h2>
+<h3>3️⃣ Class चुनें</h3>
 
 <div class="grid" id="classList"></div>
 
-</section>
+</div>
 
 
-<!-- =====================================================
-SUBJECT / BOOK
-===================================================== -->
+<div id="stepSubject" class="hidden">
 
-<section class="card hidden" id="study">
+<h3>4️⃣ Subject चुनें</h3>
 
-<h2>📚 Subjects / Books</h2>
-
-<div class="selection" id="studyInfo"></div>
+<div class="selection" id="selectionInfo"></div>
 
 <input
-id="bookSearch"
+id="subjectSearch"
 class="search"
-placeholder="🔎 Subject / Book खोजें..."
-oninput="filterBooks()">
+placeholder="🔎 Subject खोजें..."
+oninput="filterSubjects()">
 
-<div class="three-grid" id="bookList"></div>
+<div class="three-grid" id="subjectList"></div>
 
-</section>
+</div>
 
 
-<!-- =====================================================
-LESSONS
-===================================================== -->
+<div id="stepLesson" class="hidden">
 
-<section class="card hidden" id="lessons">
-
-<h2 id="lessonTitle">📖 Lessons</h2>
+<h3>5️⃣ Lesson / Chapter चुनें</h3>
 
 <div class="selection" id="lessonInfo"></div>
 
 <input
 id="lessonSearch"
 class="search"
-placeholder="🔎 Lesson / Chapter खोजें..."
+placeholder="🔎 Lesson खोजें..."
 oninput="filterLessons()">
 
-<div class="lesson-grid" id="lessonList"></div>
+<div id="lessonList"></div>
 
-<br>
-
-<button class="dark" onclick="backBooks()">
-⬅️ Books
+<button class="dark" onclick="backToSubjects()">
+⬅️ Subjects
 </button>
 
-</section>
+</div>
 
 
-<!-- =====================================================
-NOTES
-===================================================== -->
+<div id="stepNotes" class="hidden">
 
-<section class="card hidden" id="notes">
+<h2>📝 Lesson Notes</h2>
 
-<h2>📝 Original Study Notes</h2>
+<div class="selection" id="notesHeader"></div>
 
-<div class="selection" id="notesInfo"></div>
+<div id="notesContent" class="notes-content"></div>
 
-<div id="notesContent"></div>
-
-<br>
+<button class="dark" onclick="backToLessons()">
+⬅️ सभी Lessons
+</button>
 
 <button class="green" onclick="window.print()">
 🖨️ Print Notes
 </button>
 
-<button class="dark" onclick="backLessons()">
-⬅️ Lessons
+</div>
+
+</section>
+
+
+<!-- =========================
+LEARNING
+========================= -->
+
+<section class="card" id="learning">
+
+<h2>📖 Extra Learning</h2>
+
+<div class="learning-grid">
+
+<div class="learning-card english"
+onclick="openLearning('english')">
+
+<div class="icon">🗣️</div>
+<h3>Daily Use English</h3>
+<p>Practice</p>
+
+</div>
+
+<div class="learning-card gk"
+onclick="openLearning('gk')">
+
+<div class="icon">🌍</div>
+<h3>GK</h3>
+<p>Questions</p>
+
+</div>
+
+<div class="learning-card reasoning"
+onclick="openLearning('reasoning')">
+
+<div class="icon">🧠</div>
+<h3>Reasoning</h3>
+<p>Practice</p>
+
+</div>
+
+<div class="learning-card computer"
+onclick="openLearning('computer')">
+
+<div class="icon">💻</div>
+<h3>Computer</h3>
+<p>Basics</p>
+
+</div>
+
+<div class="learning-card cyber"
+onclick="openLearning('cyber')">
+
+<div class="icon">🔐</div>
+<h3>Cyber Security</h3>
+<p>Basics</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="card hidden" id="learningView">
+
+<h2 id="learningTitle"></h2>
+
+<div class="selection" id="learningDescription"></div>
+
+<div id="topicArea"></div>
+
+<div id="dataArea"></div>
+
+<div id="testArea"></div>
+
+<button class="dark" onclick="closeLearning()">
+⬅️ Learning Menu
 </button>
 
 </section>
 
 
-<!-- =====================================================
+<!-- =========================
 TOOLS
-===================================================== -->
+========================= -->
 
 <section class="card" id="tools">
 
@@ -588,14 +643,12 @@ TOOLS
 
 <h3>📊 Percentage</h3>
 
-<input
+<input id="obtained"
 type="number"
-id="obtained"
 placeholder="Obtained Marks">
 
-<input
+<input id="total"
 type="number"
-id="total"
 placeholder="Total Marks">
 
 <button onclick="percentage()">
@@ -609,36 +662,11 @@ Calculate
 
 <div class="option-card">
 
-<h3>➕ Calculator</h3>
-
-<input
-type="number"
-id="num1"
-placeholder="First Number">
-
-<input
-type="number"
-id="num2"
-placeholder="Second Number">
-
-<button onclick="add()">
-Add
-</button>
-
-<p id="calcResult"></p>
-
-</div>
-
-
-<div class="option-card">
-
 <h3>🎂 Age Calculator</h3>
 
-<input
-type="date"
-id="dob">
+<input id="birth" type="date">
 
-<button onclick="age()">
+<button onclick="ageCalculator()">
 Calculate
 </button>
 
@@ -646,10 +674,55 @@ Calculate
 
 </div>
 
+
+<div class="option-card">
+
+<h3>➕ Calculator</h3>
+
+<input id="number1"
+type="number"
+placeholder="First Number">
+
+<input id="number2"
+type="number"
+placeholder="Second Number">
+
+<button onclick="addNumbers()">
+Add
+</button>
+
+<p id="calculatorResult"></p>
+
+</div>
+
 </div>
 
 </section>
 
+
+<!-- =========================
+CONTACT
+========================= -->
+
+<section class="card" id="contact">
+
+<h2>✉️ Contact</h2>
+
+<p>
+Study material और website के लिए संपर्क करें।
+</p>
+
+<a
+class="btn green"
+href="https://wa.me/918890922880"
+target="_blank"
+rel="noopener">
+
+💬 WhatsApp
+
+</a>
+
+</section>
 
 </div>
 
@@ -664,14 +737,12 @@ CBSE • RBSE • NCERT
 
 <br>
 
-Free Education for Students
+Hindi Medium + English Medium
 
 </footer>
 
 
-
 <script>
-
 
 /* =====================================================
 GLOBAL
@@ -680,22 +751,263 @@ GLOBAL
 let board="";
 let medium="";
 let classNo="";
-let selectedBook="";
-let selectedLesson="";
+let subject="";
+let lesson="";
 
 
 /* =====================================================
-CLASSES
+SUBJECT DATABASE
 ===================================================== */
 
-const classList=
-document.getElementById("classList");
+const SUBJECTS={
+
+1:[
+"Hindi",
+"English",
+"Mathematics",
+"Environmental Studies"
+],
+
+2:[
+"Hindi",
+"English",
+"Mathematics",
+"Environmental Studies"
+],
+
+3:[
+"Hindi",
+"English",
+"Mathematics",
+"Environmental Studies"
+],
+
+4:[
+"Hindi",
+"English",
+"Mathematics",
+"Environmental Studies"
+],
+
+5:[
+"Hindi",
+"English",
+"Mathematics",
+"Environmental Studies"
+],
+
+6:[
+"Hindi",
+"English",
+"Mathematics",
+"Science",
+"Social Science",
+"Sanskrit"
+],
+
+7:[
+"Hindi",
+"English",
+"Mathematics",
+"Science",
+"Social Science",
+"Sanskrit"
+],
+
+8:[
+"Hindi",
+"English",
+"Mathematics",
+"Science",
+"Social Science",
+"Sanskrit"
+],
+
+9:[
+"Hindi",
+"English",
+"Mathematics",
+"Science",
+"Social Science",
+"Sanskrit",
+"Information Technology"
+],
+
+10:[
+"Hindi",
+"English",
+"Mathematics",
+"Science",
+"Social Science",
+"Sanskrit",
+"Information Technology"
+],
+
+11:[
+"Hindi",
+"English",
+"Physics",
+"Chemistry",
+"Biology",
+"Mathematics",
+"History",
+"Political Science",
+"Geography",
+"Economics",
+"Sociology",
+"Psychology",
+"Accountancy",
+"Business Studies",
+"Computer Science"
+],
+
+12:[
+"Hindi",
+"English",
+"Physics",
+"Chemistry",
+"Biology",
+"Mathematics",
+"History",
+"Political Science",
+"Geography",
+"Economics",
+"Sociology",
+"Psychology",
+"Accountancy",
+"Business Studies",
+"Computer Science"
+]
+
+};
+
+
+/* =====================================================
+LESSON DATABASE
+=====================================================
+
+यहाँ chapter names और notes data रखे जाते हैं।
+
+जहाँ verified book-specific chapter names उपलब्ध
+नहीं हैं वहाँ generic placeholder नहीं बल्कि
+"Lesson 1..." को editable structure के रूप में रखा गया है।
+
+बाद में official syllabus के अनुसार नाम बदले जा सकते हैं।
+===================================================== */
+
+const BOOK_DATA={};
+
+
+/* =====================================================
+DEFAULT LESSON BUILDER
+===================================================== */
+
+function makeLessons(classNo,subject){
+
+let count=10;
+
+if(classNo<=5) count=10;
+if(classNo>=6 && classNo<=8) count=12;
+if(classNo>=9 && classNo<=10) count=15;
+if(classNo>=11) count=16;
+
+let arr=[];
+
+for(let i=1;i<=count;i++){
+
+arr.push({
+
+id:i,
+
+name:"Lesson "+i,
+
+title:
+
+subject+" – Lesson "+i,
+
+summary:
+
+"यह "+subject+
+" के Lesson "+i+
+" के लिए Original Study Notes का भाग है। " +
+"इस भाग में विद्यार्थी विषय की मूल अवधारणाओं को " +
+"सरल भाषा में समझ सकते हैं।",
+
+points:[
+"अध्याय के मुख्य विचारों को ध्यान से समझें।",
+"महत्वपूर्ण शब्दों और परिभाषाओं को नोट करें।",
+"उदाहरणों को स्वयं हल करके अभ्यास करें।",
+"अध्याय के अंत में दिए गए प्रश्नों का अभ्यास करें।",
+"परीक्षा से पहले मुख्य बिंदुओं का दोहराव करें।"
+],
+
+questions:[
+{
+q:"इस Lesson का मुख्य उद्देश्य क्या है?",
+a:"इस Lesson का उद्देश्य विषय की मुख्य अवधारणाओं को समझना और उनका अभ्यास करना है।"
+},
+{
+q:"इस Lesson की तैयारी कैसे करें?",
+a:"पहले विषय को समझें, फिर मुख्य बिंदु लिखें और अंत में प्रश्नों का अभ्यास करें।"
+},
+{
+q:"परीक्षा में इस Lesson से कैसे प्रश्न पूछे जा सकते हैं?",
+a:"परिभाषा, कारण, अंतर, उदाहरण, लघु उत्तर और वस्तुनिष्ठ प्रश्न पूछे जा सकते हैं।"
+}
+],
+
+mcq:[
+{
+q:"अच्छी पढ़ाई के लिए सबसे जरूरी क्या है?",
+o:["नियमित अभ्यास","केवल याद करना","पढ़ाई छोड़ना","बिना समझे लिखना"],
+a:0
+},
+{
+q:"Notes बनाने का अच्छा तरीका कौन सा है?",
+o:["मुख्य बिंदु लिखना","पूरा पाठ बिना समझे लिखना","कुछ भी न लिखना","केवल चित्र बनाना"],
+a:0
+}
+]
+
+});
+
+}
+
+return arr;
+
+}
+
+
+/* =====================================================
+INITIALIZE ALL CLASSES/SUBJECTS
+===================================================== */
+
+for(let c=1;c<=12;c++){
+
+BOOK_DATA[c]={};
+
+SUBJECTS[c].forEach(sub=>{
+
+BOOK_DATA[c][sub]=makeLessons(c,sub);
+
+});
+
+}
+
+
+/* =====================================================
+CLASS BUTTONS
+===================================================== */
+
+const classList=document.getElementById("classList");
 
 for(let i=1;i<=12;i++){
 
-classList.innerHTML+=`
+let div=document.createElement("div");
 
-<div class="class-card">
+div.className="class-card";
+
+div.innerHTML=`
 
 <h3>🎓 Class ${i}</h3>
 
@@ -711,310 +1023,15 @@ i<=5
 }
 </p>
 
-<button onclick="openClass(${i})">
-Open
+<button onclick="selectClass(${i})">
+Open Class ${i}
 </button>
-
-</div>
 
 `;
 
-}
-
-
-/* =====================================================
-SUBJECTS
-===================================================== */
-
-const SUBJECTS={
-
-1:[
-"हिंदी",
-"English",
-"गणित"
-],
-
-2:[
-"हिंदी",
-"English",
-"गणित"
-],
-
-3:[
-"हिंदी",
-"English",
-"गणित",
-"पर्यावरण अध्ययन"
-],
-
-4:[
-"हिंदी",
-"English",
-"गणित",
-"पर्यावरण अध्ययन"
-],
-
-5:[
-"हिंदी",
-"English",
-"गणित",
-"पर्यावरण अध्ययन"
-],
-
-6:[
-"हिंदी",
-"English",
-"गणित",
-"विज्ञान",
-"सामाजिक विज्ञान",
-"संस्कृत"
-],
-
-7:[
-"हिंदी",
-"English",
-"गणित",
-"विज्ञान",
-"सामाजिक विज्ञान",
-"संस्कृत"
-],
-
-8:[
-"हिंदी",
-"English",
-"गणित",
-"विज्ञान",
-"सामाजिक विज्ञान",
-"संस्कृत"
-],
-
-9:[
-"हिंदी",
-"English",
-"गणित",
-"विज्ञान",
-"सामाजिक विज्ञान",
-"सूचना प्रौद्योगिकी"
-],
-
-10:[
-"हिंदी",
-"English",
-"गणित",
-"विज्ञान",
-"सामाजिक विज्ञान",
-"सूचना प्रौद्योगिकी"
-],
-
-11:[
-"हिंदी",
-"English",
-"भौतिक विज्ञान",
-"रसायन विज्ञान",
-"जीव विज्ञान",
-"गणित",
-"इतिहास",
-"भूगोल",
-"राजनीति विज्ञान",
-"अर्थशास्त्र",
-"लेखाशास्त्र",
-"व्यवसाय अध्ययन",
-"कंप्यूटर विज्ञान"
-],
-
-12:[
-"हिंदी",
-"English",
-"भौतिक विज्ञान",
-"रसायन विज्ञान",
-"जीव विज्ञान",
-"गणित",
-"इतिहास",
-"भूगोल",
-"राजनीति विज्ञान",
-"अर्थशास्त्र",
-"लेखाशास्त्र",
-"व्यवसाय अध्ययन",
-"कंप्यूटर विज्ञान"
-]
-
-};
-
-
-/* =====================================================
-CURRENT CURRICULUM DATA
-=====================================================
-
-यह data structure जानबूझकर अलग रखा गया है ताकि
-official chapter names आसानी से update किए जा सकें।
-
-===================================================== */
-
-const CURRICULUM={};
-
-
-/* =====================================================
-BOOK CREATION
-===================================================== */
-
-for(let c=1;c<=12;c++){
-
-CURRICULUM[c]={};
-
-(SUBJECTS[c]||[]).forEach(subject=>{
-
-CURRICULUM[c][subject]=[];
-
-for(let n=1;n<=10;n++){
-
-CURRICULUM[c][subject].push({
-
-id:n,
-
-title:"Lesson "+n,
-
-notes:{
-
-intro:
-"यह मौलिक अध्ययन नोट्स विद्यार्थियों को विषय की मूल अवधारणा समझने में सहायता करने के लिए तैयार किए गए हैं।",
-
-explanation:
-"इस पाठ को समझने के लिए मुख्य विचार, महत्वपूर्ण शब्द और उदाहरणों को क्रम से पढ़ें। केवल याद करने के बजाय विषय को समझने का प्रयास करें।",
-
-points:[
-"मुख्य अवधारणा को समझें।",
-"महत्वपूर्ण शब्दों को नोट करें।",
-"उदाहरणों को ध्यान से पढ़ें।",
-"अपने शब्दों में उत्तर लिखने का अभ्यास करें।"
-],
-
-summary:
-"इस Lesson का उद्देश्य विद्यार्थी को विषय की मूल जानकारी समझाना और उसे अभ्यास के माध्यम से मजबूत करना है।",
-
-questions:[
-"इस Lesson का मुख्य विचार क्या है?",
-"इस पाठ की महत्वपूर्ण बातें लिखिए।",
-"इस विषय को अपने शब्दों में समझाइए।",
-"एक उपयुक्त उदाहरण दीजिए।",
-"आपने इस Lesson से क्या सीखा?"
-],
-
-mcq:[
-{
-q:"इस Lesson को पढ़ने का सबसे अच्छा तरीका क्या है?",
-options:[
-"बिना समझे याद करना",
-"मुख्य विचार समझना",
-"केवल प्रश्न देखना",
-"पढ़ाई छोड़ देना"
-],
-answer:1
-},
-
-{
-q:"अच्छी तैयारी के लिए क्या करना चाहिए?",
-options:[
-"केवल उत्तर रटना",
-"अभ्यास करना",
-"कुछ नहीं करना",
-"केवल वीडियो देखना"
-],
-answer:1
-}
-
-]
+classList.appendChild(div);
 
 }
-
-});
-
-});
-
-}
-
-
-/* =====================================================
-SPECIAL ORIGINAL NOTE EXAMPLE
-===================================================== */
-
-CURRICULUM[10]["हिंदी"][0]={
-
-id:1,
-
-title:"पाठ 1 — मौलिक अध्ययन नोट्स",
-
-notes:{
-
-intro:
-"यह नोट्स विद्यार्थी को पाठ के मुख्य विचार, भाषा और संदेश को सरल तरीके से समझने में सहायता करते हैं।",
-
-explanation:
-"किसी भी हिंदी पाठ को पढ़ते समय उसके विषय, मुख्य विचार, पात्र या घटनाओं और लेखक के उद्देश्य को समझना महत्वपूर्ण है। पाठ को अपने शब्दों में दोहराने से समझ अधिक मजबूत होती है।",
-
-points:[
-
-"पाठ का मुख्य विचार पहचानें।",
-
-"महत्वपूर्ण घटनाओं या विचारों को क्रम से समझें।",
-
-"कठिन शब्दों के अर्थ लिखें।",
-
-"पाठ से मिलने वाली सीख समझें।",
-
-"लघु और दीर्घ प्रश्नों का अभ्यास करें।"
-
-],
-
-summary:
-"पाठ को केवल याद करने के बजाय उसके विचार और संदेश को समझना परीक्षा तथा सामान्य ज्ञान दोनों के लिए उपयोगी है।",
-
-questions:[
-
-"पाठ का मुख्य विचार लिखिए।",
-
-"पाठ से मिलने वाली सीख समझाइए।",
-
-"महत्वपूर्ण शब्दों के अर्थ लिखिए।",
-
-"पाठ का संक्षिप्त सार अपने शब्दों में लिखिए।",
-
-"लेखक के उद्देश्य को समझाइए।"
-
-],
-
-mcq:[
-
-{
-q:"किसी पाठ को समझने के लिए सबसे पहले क्या करना चाहिए?",
-
-options:[
-"मुख्य विचार समझना",
-"सिर्फ प्रश्न याद करना",
-"केवल कठिन शब्द पढ़ना",
-"कुछ भी नहीं"
-],
-
-answer:0
-},
-
-{
-q:"अच्छी तैयारी के लिए क्या आवश्यक है?",
-
-options:[
-"अभ्यास",
-"केवल रटना",
-"पढ़ाई न करना",
-"केवल अनुमान लगाना"
-],
-
-answer:0
-}
-
-]
-
-}
-
-};
 
 
 /* =====================================================
@@ -1025,18 +1042,11 @@ function selectBoard(value){
 
 board=value;
 
-document.getElementById("boardMsg").innerHTML=
-"✅ आपने <b>"+value+"</b> चुना है।";
-
-document
-.getElementById("medium")
+document.getElementById("stepMedium")
 .classList.remove("hidden");
 
-document
-.getElementById("medium")
-.scrollIntoView({
-behavior:"smooth"
-});
+document.getElementById("stepMedium")
+.scrollIntoView({behavior:"smooth"});
 
 }
 
@@ -1049,18 +1059,11 @@ function selectMedium(value){
 
 medium=value;
 
-document.getElementById("mediumMsg").innerHTML=
-"✅ आपने <b>"+value+"</b> चुना है।";
-
-document
-.getElementById("classes")
+document.getElementById("stepClass")
 .classList.remove("hidden");
 
-document
-.getElementById("classes")
-.scrollIntoView({
-behavior:"smooth"
-});
+document.getElementById("stepClass")
+.scrollIntoView({behavior:"smooth"});
 
 }
 
@@ -1069,103 +1072,75 @@ behavior:"smooth"
 CLASS
 ===================================================== */
 
-function openClass(value){
+function selectClass(value){
 
 classNo=value;
 
-document
-.getElementById("study")
+document.getElementById("stepSubject")
 .classList.remove("hidden");
 
-document
-.getElementById("lessons")
-.classList.add("hidden");
-
-document
-.getElementById("notes")
-.classList.add("hidden");
-
-document
-.getElementById("studyInfo")
-.innerHTML=
+document.getElementById("selectionInfo").innerHTML=
 
 "<b>Board:</b> "+board+
 "<br><b>Medium:</b> "+medium+
 "<br><b>Class:</b> "+classNo;
 
-renderBooks();
+renderSubjects();
 
-document
-.getElementById("study")
-.scrollIntoView({
-behavior:"smooth"
-});
+document.getElementById("stepSubject")
+.scrollIntoView({behavior:"smooth"});
 
 }
 
 
 /* =====================================================
-BOOKS
+SUBJECTS
 ===================================================== */
 
-function renderBooks(){
+function renderSubjects(){
 
-const list=
-document.getElementById("bookList");
+let box=document.getElementById("subjectList");
 
-list.innerHTML="";
+box.innerHTML="";
 
-const books=
-SUBJECTS[classNo]||[];
+SUBJECTS[classNo].forEach(sub=>{
 
-books.forEach(book=>{
+let div=document.createElement("div");
 
-list.innerHTML+=`
+div.className="subject";
 
-<div class="subject-card">
+div.innerHTML=`
 
-<h3>📚 ${book}</h3>
+<h3>📚 ${sub}</h3>
 
 <p>
 Class ${classNo}
 </p>
 
-<button
-onclick="openBook('${safe(book)}')">
-
-📖 Open Book
-
+<button onclick="selectSubject('${safe(sub)}')">
+📖 Open Subject
 </button>
 
-</div>
-
 `;
+
+box.appendChild(div);
 
 });
 
 }
 
 
-/* =====================================================
-BOOK SEARCH
-===================================================== */
+function filterSubjects(){
 
-function filterBooks(){
+let value=
+document.getElementById("subjectSearch")
+.value.toLowerCase();
 
-const value=
-document
-.getElementById("bookSearch")
-.value
-.toLowerCase();
+document.querySelectorAll("#subjectList .subject")
+.forEach(x=>{
 
-document
-.querySelectorAll("#bookList .subject-card")
-.forEach(card=>{
-
-card.style.display=
-card.innerText
-.toLowerCase()
-.includes(value)
+x.style.display=
+x.innerText.toLowerCase().includes(value)
 ?""
 :"none";
 
@@ -1175,42 +1150,27 @@ card.innerText
 
 
 /* =====================================================
-OPEN BOOK
+SUBJECT
 ===================================================== */
 
-function openBook(book){
+function selectSubject(value){
 
-selectedBook=book;
+subject=value;
 
-document
-.getElementById("lessons")
+document.getElementById("stepLesson")
 .classList.remove("hidden");
 
-document
-.getElementById("notes")
-.classList.add("hidden");
-
-document
-.getElementById("lessonTitle")
-.innerText=
-"📖 "+book+" — Lessons";
-
-document
-.getElementById("lessonInfo")
-.innerHTML=
+document.getElementById("lessonInfo").innerHTML=
 
 "<b>Board:</b> "+board+
 "<br><b>Medium:</b> "+medium+
 "<br><b>Class:</b> "+classNo+
-"<br><b>Book:</b> "+book;
+"<br><b>Subject:</b> "+subject;
 
 renderLessons();
 
-document
-.getElementById("lessons")
-.scrollIntoView({
-behavior:"smooth"
-});
+document.getElementById("stepLesson")
+.scrollIntoView({behavior:"smooth"});
 
 }
 
@@ -1221,70 +1181,57 @@ LESSONS
 
 function renderLessons(){
 
-const list=
-document.getElementById("lessonList");
+let box=document.getElementById("lessonList");
 
-list.innerHTML="";
+box.innerHTML="";
 
-const data=
-CURRICULUM[classNo] &&
-CURRICULUM[classNo][selectedBook]
-?
-CURRICULUM[classNo][selectedBook]
-:
-[];
+let lessons=
+BOOK_DATA[classNo][subject] || [];
 
-data.forEach((lesson,index)=>{
+lessons.forEach(item=>{
 
-list.innerHTML+=`
+let div=document.createElement("div");
 
-<div class="lesson-card">
+div.className="lesson-card";
+
+div.innerHTML=`
 
 <h3>
-📖 ${lesson.title}
+📘 ${item.name}
 </h3>
 
 <p>
-${selectedBook}
+${item.title}
 </p>
 
-<button
-class="green"
-onclick="openLesson(${index})">
+<p>
+📝 Original Study Notes
+</p>
 
-📝 Lesson Open
-
+<button onclick="openLesson(${item.id})">
+📖 Open Lesson
 </button>
 
-</div>
-
 `;
+
+box.appendChild(div);
 
 });
 
 }
 
 
-/* =====================================================
-LESSON SEARCH
-===================================================== */
-
 function filterLessons(){
 
-const value=
-document
-.getElementById("lessonSearch")
-.value
-.toLowerCase();
+let value=
+document.getElementById("lessonSearch")
+.value.toLowerCase();
 
-document
-.querySelectorAll("#lessonList .lesson-card")
-.forEach(card=>{
+document.querySelectorAll("#lessonList .lesson-card")
+.forEach(x=>{
 
-card.style.display=
-card.innerText
-.toLowerCase()
-.includes(value)
+x.style.display=
+x.innerText.toLowerCase().includes(value)
 ?""
 :"none";
 
@@ -1297,230 +1244,170 @@ card.innerText
 OPEN LESSON
 ===================================================== */
 
-function openLesson(index){
+function openLesson(id){
 
-const lesson=
-CURRICULUM[classNo]
-[selectedBook][index];
+let data=
+BOOK_DATA[classNo][subject]
+.find(x=>x.id===id);
 
-selectedLesson=lesson.title;
+if(!data)return;
 
-const n=lesson.notes;
+lesson=data.name;
 
-document
-.getElementById("notes")
+document.getElementById("stepNotes")
 .classList.remove("hidden");
 
-document
-.getElementById("notesInfo")
-.innerHTML=
+document.getElementById("notesHeader").innerHTML=
 
 "<b>Board:</b> "+board+
 "<br><b>Medium:</b> "+medium+
 "<br><b>Class:</b> "+classNo+
-"<br><b>Subject/Book:</b> "+selectedBook+
-"<br><b>Lesson:</b> "+lesson.title;
+"<br><b>Subject:</b> "+subject+
+"<br><b>Lesson:</b> "+data.name;
 
 
 let html=`
 
 <div class="notes-box">
 
-<h2>
-📖 ${lesson.title}
-</h2>
+<h2>📖 ${data.title}</h2>
 
-<h3>
-📌 परिचय
-</h3>
+<h3>📝 Original Summary</h3>
 
 <p>
-${n.intro}
+${data.summary}
 </p>
-
-<h3>
-📚 सरल व्याख्या
-</h3>
-
-<p>
-${n.explanation}
-</p>
-
-
-<div class="key-box">
-
-<h3>
-⭐ मुख्य बिंदु
-</h3>
-
-<ul>
-
-${n.points
-.map(x=>`<li>${x}</li>`)
-.join("")}
-
-</ul>
 
 </div>
 
 
-<h3>
-📝 सारांश
-</h3>
+<div class="notes-box">
 
-<p>
-${n.summary}
-</p>
+<h3>⭐ मुख्य बिंदु</h3>
+`;
 
+data.points.forEach(point=>{
 
-<div class="question-box">
+html+=`
 
-<h3>
-✍️ अभ्यास प्रश्न
-</h3>
-
-<ol>
-
-${n.questions
-.map(x=>`<li>${x}</li>`)
-.join("")}
-
-</ol>
-
+<div class="point">
+✅ ${point}
 </div>
-
-
-<h3>
-✅ MCQ Practice
-</h3>
 
 `;
 
-n.mcq.forEach((q,i)=>{
+});
+
+html+=`
+
+</div>
+
+
+<div class="notes-box">
+
+<h3>❓ महत्वपूर्ण प्रश्न–उत्तर</h3>
+`;
+
+data.questions.forEach((q,index)=>{
+
+html+=`
+
+<div class="qa">
+
+<b>Q${index+1}. ${q.q}</b>
+
+<br><br>
+
+<strong>उत्तर:</strong>
+${q.a}
+
+</div>
+
+`;
+
+});
+
+html+=`
+
+</div>
+
+
+<div class="notes-box">
+
+<h3>🧠 MCQ Practice</h3>
+`;
+
+data.mcq.forEach((q,index)=>{
 
 html+=`
 
 <div class="mcq">
 
-<b>
-Q${i+1}. ${q.q}
-</b>
+<b>Q${index+1}. ${q.q}</b>
 
 <ol type="A">
 
-${q.options
-.map(x=>`<li>${x}</li>`)
-.join("")}
+${q.o.map(x=>`
+<li>${x}</li>
+`).join("")}
 
 </ol>
 
-<button
-onclick="showAnswer(${i})">
-
-Show Answer
-
-</button>
-
-<p
-id="answer${i}"
-class="hidden">
-
-<b>
-सही उत्तर:
-${q.options[q.answer]}
-</b>
-
-</p>
-
 </div>
 
 `;
 
 });
-
 
 html+=`
 
-<div class="key-box">
-
-<b>💡 Study Tip</b>
-
-<br><br>
-
-पहले Lesson को समझकर पढ़ें।
-फिर अपने शब्दों में नोट्स लिखें।
-अंत में अभ्यास प्रश्न हल करें।
-
 </div>
+
+<div class="message">
+
+<b>📌 Study Tip:</b>
+
+इस Lesson को पहले समझकर पढ़ें।
+फिर अपने शब्दों में छोटे Notes बनाएं और
+अंत में MCQ तथा प्रश्न–उत्तर का अभ्यास करें।
 
 </div>
 
 `;
 
-document
-.getElementById("notesContent")
-.innerHTML=html;
+document.getElementById("notesContent").innerHTML=html;
 
-document
-.getElementById("notes")
-.scrollIntoView({
-behavior:"smooth"
-});
+document.getElementById("stepNotes")
+.scrollIntoView({behavior:"smooth"});
 
 }
 
 
 /* =====================================================
-SHOW MCQ ANSWER
+BACK
 ===================================================== */
 
-function showAnswer(index){
+function backToSubjects(){
 
-document
-.getElementById("answer"+index)
-.classList.remove("hidden");
+document.getElementById("stepLesson")
+.classList.add("hidden");
+
+document.getElementById("stepNotes")
+.classList.add("hidden");
+
+document.getElementById("stepSubject")
+.scrollIntoView({behavior:"smooth"});
 
 }
 
 
-/* =====================================================
-BACK BOOKS
-===================================================== */
+function backToLessons(){
 
-function backBooks(){
-
-document
-.getElementById("lessons")
+document.getElementById("stepNotes")
 .classList.add("hidden");
 
-document
-.getElementById("notes")
-.classList.add("hidden");
-
-document
-.getElementById("study")
-.scrollIntoView({
-behavior:"smooth"
-});
-
-}
-
-
-/* =====================================================
-BACK LESSONS
-===================================================== */
-
-function backLessons(){
-
-document
-.getElementById("notes")
-.classList.add("hidden");
-
-document
-.getElementById("lessons")
-.scrollIntoView({
-behavior:"smooth"
-});
+document.getElementById("stepLesson")
+.scrollIntoView({behavior:"smooth"});
 
 }
 
@@ -1531,29 +1418,24 @@ TOOLS
 
 function percentage(){
 
-const a=
-parseFloat(
+let a=parseFloat(
 document.getElementById("obtained").value
 );
 
-const b=
-parseFloat(
+let b=parseFloat(
 document.getElementById("total").value
 );
 
 if(isNaN(a)||isNaN(b)||b<=0){
 
-document
-.getElementById("percentageResult")
-.innerText=
-"कृपया सही अंक डालें।";
+document.getElementById("percentageResult")
+.innerText="कृपया सही अंक डालें।";
 
 return;
 
 }
 
-document
-.getElementById("percentageResult")
+document.getElementById("percentageResult")
 .innerText=
 "📊 Percentage: "+
 ((a/b)*100).toFixed(2)+"%";
@@ -1561,80 +1443,172 @@ document
 }
 
 
-function add(){
+function ageCalculator(){
 
-const a=
-parseFloat(
-document.getElementById("num1").value
-);
+let value=
+document.getElementById("birth").value;
 
-const b=
-parseFloat(
-document.getElementById("num2").value
-);
+if(!value){
 
-if(isNaN(a)||isNaN(b)){
-
-document
-.getElementById("calcResult")
-.innerText=
-"दोनों संख्या डालें।";
+document.getElementById("ageResult")
+.innerText="जन्म तारीख चुनें।";
 
 return;
 
 }
 
-document
-.getElementById("calcResult")
+let birth=new Date(value);
+let today=new Date();
+
+let age=
+today.getFullYear()-
+birth.getFullYear();
+
+let m=
+today.getMonth()-
+birth.getMonth();
+
+if(m<0 ||
+(m===0 && today.getDate()<birth.getDate()))
+age--;
+
+document.getElementById("ageResult")
+.innerText=
+"🎂 उम्र: "+age+" वर्ष";
+
+}
+
+
+function addNumbers(){
+
+let a=parseFloat(
+document.getElementById("number1").value
+);
+
+let b=parseFloat(
+document.getElementById("number2").value
+);
+
+if(isNaN(a)||isNaN(b)){
+
+document.getElementById("calculatorResult")
+.innerText="दोनों संख्या डालें।";
+
+return;
+
+}
+
+document.getElementById("calculatorResult")
 .innerText=
 "उत्तर: "+(a+b);
 
 }
 
 
-function age(){
+/* =====================================================
+EXTRA LEARNING
+===================================================== */
 
-const value=
-document.getElementById("dob").value;
+const LEARNING_DATA={
 
-if(!value){
+english:[
+["तुम कैसे हो?","How are you?"],
+["मैं ठीक हूँ।","I am fine."],
+["तुम कहाँ जा रहे हो?","Where are you going?"],
+["मुझे समझ नहीं आया।","I did not understand."],
+["कृपया फिर से समझाइए।","Please explain again."]
+],
 
-document
-.getElementById("ageResult")
-.innerText=
-"जन्म तारीख चुनें।";
+gk:[
+["भारत की राजधानी क्या है?","नई दिल्ली"],
+["भारत का राष्ट्रीय पशु कौन सा है?","बाघ"],
+["पानी का रासायनिक सूत्र क्या है?","H₂O"],
+["सूर्य किस दिशा से उगता है?","पूर्व"]
+],
 
-return;
+reasoning:[
+["2, 4, 6, 8, ?","10"],
+["5, 10, 15, 20, ?","25"],
+["Book : Read :: Food : ?","Eat"]
+],
+
+computer:[
+["CPU का पूरा नाम क्या है?","Central Processing Unit"],
+["WWW का पूरा नाम क्या है?","World Wide Web"],
+["Windows क्या है?","Operating System"]
+],
+
+cyber:[
+["Strong Password में क्या होना चाहिए?","Letters, Numbers और Symbols"],
+["Phishing क्या है?","Fake message/link द्वारा जानकारी चुराने का प्रयास"],
+["OTP किसके साथ share करना चाहिए?","किसी के साथ नहीं"]
+]
+
+};
+
+
+function openLearning(type){
+
+let title={
+english:"🗣️ Daily Use English",
+gk:"🌍 General Knowledge",
+reasoning:"🧠 Reasoning",
+computer:"💻 Computer",
+cyber:"🔐 Cyber Security"
+}[type];
+
+document.getElementById("learningView")
+.classList.remove("hidden");
+
+document.getElementById("learningTitle")
+.innerText=title;
+
+document.getElementById("learningDescription")
+.innerHTML=
+"<b>Practice Material</b><br>सरल भाषा में अभ्यास सामग्री";
+
+let html="";
+
+LEARNING_DATA[type].forEach((x,i)=>{
+
+html+=`
+
+<div class="data-card">
+
+<h3>Q${i+1}. ${x[0]}</h3>
+
+<p class="english-text">
+${x[1]}
+</p>
+
+</div>
+
+`;
+
+});
+
+document.getElementById("topicArea")
+.innerHTML=html;
+
+document.getElementById("dataArea")
+.innerHTML="";
+
+document.getElementById("testArea")
+.innerHTML="";
+
+document.getElementById("learningView")
+.scrollIntoView({behavior:"smooth"});
 
 }
 
-const birth=new Date(value);
-const today=new Date();
 
-let years=
-today.getFullYear()-
-birth.getFullYear();
+function closeLearning(){
 
-const month=
-today.getMonth()-
-birth.getMonth();
+document.getElementById("learningView")
+.classList.add("hidden");
 
-if(
-month<0 ||
-(
-month===0 &&
-today.getDate()<birth.getDate()
-)
-){
-
-years--;
-
-}
-
-document
-.getElementById("ageResult")
-.innerText=
-"🎂 उम्र: "+years+" वर्ष";
+document.getElementById("learning")
+.scrollIntoView({behavior:"smooth"});
 
 }
 
@@ -1645,7 +1619,7 @@ SAFE
 
 function safe(text){
 
-return text
+return String(text)
 .replace(/\\/g,"\\\\")
 .replace(/'/g,"\\'")
 .replace(/"/g,'\\"');
