@@ -2,2219 +2,887 @@
 <html lang="hi">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Computer Study Hub | Basic to Advanced</title>
 
 <style>
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
+*{box-sizing:border-box;margin:0;padding:0}
 body{
-    font-family:Arial,"Noto Sans Devanagari",sans-serif;
-    background:#f4f7fb;
-    color:#182230;
-    line-height:1.6;
+font-family:Arial,"Noto Sans Devanagari",sans-serif;
+background:#f4f7fb;color:#172033;line-height:1.6
 }
-
-/* ================= HEADER ================= */
-
+button{font-family:inherit}
 header{
-    background:linear-gradient(135deg,#071b33,#075eaa,#00a8e8);
-    color:white;
-    text-align:center;
-    padding:42px 15px;
+background:linear-gradient(135deg,#061b35,#0869b8,#00a9df);
+color:#fff;text-align:center;padding:40px 15px
 }
-
-.logo{
-    font-size:65px;
-}
-
-header h1{
-    font-size:38px;
-    margin:5px 0;
-}
-
-header p{
-    font-size:18px;
-}
-
-/* ================= NAV ================= */
+.logo{font-size:65px}
+header h1{font-size:38px}
+header p{font-size:18px}
 
 nav{
-    position:sticky;
-    top:0;
-    z-index:1000;
-    background:white;
-    box-shadow:0 3px 15px #0002;
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:7px;
-    padding:10px;
+position:sticky;top:0;z-index:100;
+display:flex;justify-content:center;flex-wrap:wrap;
+gap:7px;padding:10px;background:#fff;
+box-shadow:0 3px 15px #0002
 }
-
 nav button{
-    border:0;
-    background:white;
-    color:#173b63;
-    padding:10px 15px;
-    border-radius:8px;
-    font-weight:bold;
-    cursor:pointer;
+border:0;background:#fff;padding:10px 15px;
+border-radius:8px;font-weight:bold;color:#17436c;
+cursor:pointer
 }
+nav button:hover{background:#eaf6ff}
 
-nav button:hover{
-    background:#e8f5ff;
-}
-
-/* ================= GENERAL ================= */
-
-.container{
-    width:94%;
-    max-width:1250px;
-    margin:auto;
-}
-
+.container{width:94%;max-width:1250px;margin:auto}
 .section{
-    background:white;
-    margin:25px 0;
-    padding:28px;
-    border-radius:18px;
-    box-shadow:0 5px 25px #0001;
+background:#fff;margin:25px 0;padding:28px;
+border-radius:18px;box-shadow:0 5px 25px #0001
 }
-
-.hidden{
-    display:none!important;
-}
-
-.title{
-    text-align:center;
-    margin-bottom:25px;
-}
-
-.title h2{
-    color:#075eaa;
-    font-size:30px;
-}
-
-.title p{
-    color:#667085;
-}
-
-/* ================= HERO ================= */
+.hidden{display:none!important}
 
 .hero{
-    display:grid;
-    grid-template-columns:1.4fr .8fr;
-    gap:25px;
-    align-items:center;
+display:grid;grid-template-columns:1.4fr .8fr;
+gap:25px;align-items:center
 }
-
-.hero h2{
-    color:#075eaa;
-    font-size:35px;
-}
-
-.hero p{
-    color:#566474;
-    font-size:18px;
-}
-
+.hero h2{font-size:35px;color:#0764a9}
+.hero p{font-size:18px;color:#596879}
 .hero-box{
-    text-align:center;
-    background:#edf8ff;
-    border:1px solid #cde8fb;
-    border-radius:18px;
-    padding:30px;
+text-align:center;background:#eef9ff;
+padding:30px;border-radius:18px
 }
+.hero-icon{font-size:90px}
 
-.hero-icon{
-    font-size:90px;
-}
-
-/* ================= GRID ================= */
+.title{text-align:center;margin-bottom:25px}
+.title h2{font-size:30px;color:#0764a9}
+.title p{color:#687585}
 
 .grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:18px;
+display:grid;grid-template-columns:repeat(4,1fr);gap:18px
 }
-
 .grid3{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:18px;
+display:grid;grid-template-columns:repeat(3,1fr);gap:18px
 }
-
-/* ================= COURSE CARDS ================= */
-
-.course-card{
-    background:white;
-    border:1px solid #dbe5ee;
-    border-radius:17px;
-    padding:24px 18px;
-    text-align:center;
-    transition:.2s;
+.card{
+border:1px solid #d9e3ec;border-radius:17px;
+padding:22px 17px;text-align:center;
+background:#fff;transition:.2s
 }
-
-.course-card:hover{
-    transform:translateY(-5px);
-    box-shadow:0 12px 28px #0002;
+.card:hover{
+transform:translateY(-4px);box-shadow:0 12px 28px #0002
 }
-
-.course-icon{
-    font-size:55px;
-    margin-bottom:8px;
-}
-
-.course-card h3{
-    color:#075eaa;
-    margin-bottom:7px;
-}
-
-.course-card p{
-    color:#667085;
-    min-height:52px;
-}
-
-/* ================= BUTTON ================= */
+.icon{font-size:52px}
+.card h3{color:#0764a9;margin:6px 0}
+.card p{color:#687585;min-height:50px}
 
 .btn{
-    border:0;
-    padding:11px 18px;
-    border-radius:9px;
-    color:white;
-    font-weight:bold;
-    cursor:pointer;
-    margin:4px;
+border:0;padding:11px 18px;border-radius:9px;
+color:white;font-weight:bold;cursor:pointer;margin:4px
 }
-
-.btn:hover{
-    opacity:.9;
-    transform:translateY(-1px);
-}
-
+.btn:hover{opacity:.9}
 .blue{background:#0878cf}
 .green{background:#159447}
-.orange{background:#e67e22}
-.red{background:#d93636}
+.orange{background:#e27b18}
+.red{background:#d63838}
 .purple{background:#7040b8}
-.teal{background:#008c95}
+.teal{background:#008d96}
 .dark{background:#26384d}
 .gray{background:#667085}
 
-/* ================= COURSE PAGE ================= */
-
 .course-head{
-    background:linear-gradient(135deg,#eef8ff,#f8fcff);
-    border:1px solid #d5eaf9;
-    padding:25px;
-    border-radius:15px;
-    margin-bottom:25px;
+background:#eef8ff;border:1px solid #d3e8f7;
+padding:23px;border-radius:14px;margin-bottom:22px
 }
+.course-head h2{color:#0764a9}
 
-.course-head h2{
-    color:#075eaa;
-    margin-bottom:5px;
+.module{
+border:1px solid #dbe4ec;border-radius:14px;
+padding:20px;margin-bottom:18px;background:#fbfdff
 }
-
-.lesson-module{
-    border:1px solid #dce5ed;
-    border-radius:14px;
-    padding:20px;
-    margin-bottom:18px;
-    background:#fbfdff;
-}
-
-.lesson-module h3{
-    color:#075eaa;
-    margin-bottom:15px;
-}
-
+.module h3{color:#0764a9;margin-bottom:14px}
 .lesson-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:10px;
+display:grid;grid-template-columns:repeat(3,1fr);gap:10px
 }
-
-.lesson-btn{
-    border:1px solid #d1dce6;
-    background:white;
-    padding:13px;
-    border-radius:9px;
-    cursor:pointer;
-    text-align:left;
-    font-weight:bold;
-    color:#173b63;
+.lesson{
+background:#fff;border:1px solid #d2dde6;
+padding:13px;border-radius:9px;
+cursor:pointer;text-align:left;font-weight:bold;color:#193e62
 }
-
-.lesson-btn:hover{
-    background:#eaf6ff;
-    border-color:#0878cf;
-}
-
-/* ================= NOTES ================= */
-
-.notes{
-    padding:5px;
-}
-
-.notes h2{
-    color:#075eaa;
-    margin-bottom:18px;
-}
-
-.notes h3{
-    color:#0878cf;
-    margin-top:22px;
-    margin-bottom:8px;
-}
-
-.info-box{
-    background:#f3f8fc;
-    border-left:5px solid #0878cf;
-    padding:14px;
-    margin:10px 0;
-    border-radius:7px;
-}
-
-.example{
-    background:#fff8dc;
-    border-left:5px solid #dfaa00;
-    padding:14px;
-    margin:12px 0;
-    border-radius:7px;
-}
-
-.step{
-    background:#f7fafc;
-    border:1px solid #e0e7ed;
-    padding:12px;
-    border-radius:7px;
-    margin:7px 0;
-}
-
-/* ================= SEARCH ================= */
+.lesson:hover{background:#eaf6ff;border-color:#0878cf}
 
 .search{
-    width:100%;
-    padding:14px;
-    border:1px solid #ccd8e2;
-    border-radius:9px;
-    font-size:16px;
-    margin-bottom:20px;
+width:100%;padding:14px;border:1px solid #ccd8e2;
+border-radius:9px;font-size:16px;margin-bottom:20px
 }
 
-/* ================= PRACTICAL ================= */
-
-.practical-box{
-    background:#f7fbff;
-    border:1px solid #d5e6f3;
-    border-radius:14px;
-    padding:20px;
-    margin-top:20px;
+.notes h2,.notes h3{color:#0764a9}
+.notes h3{margin:22px 0 8px}
+.box{
+padding:15px;border-left:5px solid #0878cf;
+background:#f2f8fc;border-radius:7px;margin:10px 0
 }
-
-/* ================= QUIZ ================= */
+.example{
+padding:15px;border-left:5px solid #dfaa00;
+background:#fff8dc;border-radius:7px;margin:10px 0
+}
+.step{
+padding:12px;background:#f7fafc;
+border:1px solid #e0e7ed;border-radius:7px;margin:7px 0
+}
+.en{
+background:#f8f4ff;border-left:5px solid #7040b8;
+padding:15px;border-radius:7px;margin:10px 0
+}
 
 .quiz-top{
-    display:flex;
-    justify-content:space-between;
-    flex-wrap:wrap;
-    background:#edf7ff;
-    padding:15px;
-    border-radius:10px;
-    margin-bottom:20px;
+display:flex;justify-content:space-between;
+flex-wrap:wrap;background:#edf7ff;
+padding:15px;border-radius:10px;margin-bottom:20px
 }
-
 .question{
-    background:#f8fafc;
-    border:1px solid #dce5ed;
-    border-radius:12px;
-    padding:20px;
-    margin-bottom:15px;
+background:#f8fafc;border:1px solid #dce5ed;
+padding:20px;border-radius:12px;margin-bottom:15px
 }
-
-.question h3{
-    margin-bottom:14px;
-}
-
 .option{
-    display:block;
-    padding:10px;
-    margin:5px 0;
-    border-radius:7px;
-    cursor:pointer;
+display:block;padding:9px;margin:5px 0;
+border-radius:7px;cursor:pointer
 }
-
-.option:hover{
-    background:#eaf5fd;
-}
-
-.option input{
-    margin-right:8px;
-}
+.option:hover{background:#eaf5fd}
+.option input{margin-right:8px}
 
 .result{
-    background:#eaf8ef;
-    border:1px solid #9bd6aa;
-    padding:25px;
-    border-radius:12px;
-    text-align:center;
-    margin-top:20px;
+background:#eaf8ef;border:1px solid #9bd6aa;
+padding:25px;border-radius:12px;text-align:center
 }
-
-.result h2{
-    color:#14823b;
-}
-
-/* ================= PROGRESS ================= */
+.result h2{color:#14823b}
 
 .progress{
-    height:20px;
-    background:#dfe7ee;
-    border-radius:20px;
-    overflow:hidden;
-    margin:15px 0;
+height:20px;background:#dfe7ee;
+border-radius:20px;overflow:hidden;margin:15px 0
 }
-
 .progress-fill{
-    height:100%;
-    width:0%;
-    background:#0878cf;
-    transition:.4s;
+height:100%;width:0;background:#0878cf
 }
-
-/* ================= FOOTER ================= */
 
 footer{
-    background:#101d2d;
-    color:white;
-    text-align:center;
-    padding:32px 15px;
-    margin-top:30px;
+background:#101d2d;color:#fff;text-align:center;
+padding:32px 15px;margin-top:30px
 }
-
-/* ================= MOBILE ================= */
 
 @media(max-width:950px){
-
-    .grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .grid3{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .hero{
-        grid-template-columns:1fr;
-    }
-
-    .lesson-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
+.grid{grid-template-columns:repeat(2,1fr)}
+.grid3{grid-template-columns:repeat(2,1fr)}
+.hero{grid-template-columns:1fr}
+.lesson-grid{grid-template-columns:repeat(2,1fr)}
 }
-
 @media(max-width:600px){
-
-    header h1{
-        font-size:28px;
-    }
-
-    .logo{
-        font-size:50px;
-    }
-
-    .grid,
-    .grid3,
-    .lesson-grid{
-        grid-template-columns:1fr;
-    }
-
-    .section{
-        padding:18px;
-    }
-
-    .hero h2{
-        font-size:27px;
-    }
-
-    .btn{
-        width:100%;
-        margin:5px 0;
-    }
-
-    nav button{
-        font-size:13px;
-        padding:8px;
-    }
+header h1{font-size:28px}
+.grid,.grid3,.lesson-grid{grid-template-columns:1fr}
+.section{padding:18px}
+.hero h2{font-size:27px}
 }
-
 @media print{
-
-    header,
-    nav,
-    footer,
-    .btn{
-        display:none!important;
-    }
-
-    body{
-        background:white;
-    }
-
-    .section{
-        box-shadow:none;
-    }
+header,nav,footer,.btn{display:none!important}
+body{background:#fff}
+.section{box-shadow:none}
 }
 </style>
 </head>
 
 <body>
 
-<!-- ================= HEADER ================= -->
-
 <header>
-
 <div class="logo">💻</div>
-
 <h1>Computer Study Hub</h1>
-
 <p>Basic से Advanced Computer Course</p>
-
 <p>🇮🇳 Hindi Medium | 🇬🇧 English Medium</p>
-
 </header>
 
-
-<!-- ================= NAVIGATION ================= -->
-
 <nav>
-
-<button onclick="showHome()">🏠 Home</button>
-
-<button onclick="showCourses()">📚 All Courses</button>
-
-<button onclick="showPractical()">🖥️ Practical</button>
-
-<button onclick="showQuiz()">🧠 120+ Quiz</button>
-
-<button onclick="showProgress()">📊 Progress</button>
-
+<button onclick="home()">🏠 Home</button>
+<button onclick="coursesPage()">📚 Courses</button>
+<button onclick="practical()">🖥️ Practical</button>
+<button onclick="quizPage()">🧠 120+ Quiz</button>
+<button onclick="progressPage()">📊 Progress</button>
 </nav>
-
 
 <div class="container">
 
-
-<!-- ================= HOME ================= -->
-
-<section id="homeSection" class="section">
-
+<!-- HOME -->
+<section id="home" class="section">
 <div class="hero">
-
 <div>
-
 <h2>🚀 Computer सीखें Zero से Professional तक</h2>
-
 <br>
-
 <p>
-यह Computer Study Hub विद्यार्थियों के लिए बनाया गया है।
-यहाँ Computer को Basic से Advanced level तक
-Hindi और English दोनों formats में सीखा जा सकता है।
+Computer की basic knowledge से लेकर MS Office,
+Internet, Networking, Web Development, Python और AI तक
+एक ही जगह सीखें।
 </p>
-
 <br>
-
-<p>
-📚 Notes • 🖥️ Practical • 🧠 Quiz • 📊 Progress
-</p>
-
+<p>📖 Notes • 🖥️ Practical • 🧠 Quiz • 📊 Progress</p>
 <br>
-
-<button class="btn blue" onclick="showCourses()">
-📚 सभी Courses देखें
-</button>
-
-<button class="btn green" onclick="showQuiz()">
-🧠 Quiz Start करें
-</button>
-
+<button class="btn blue" onclick="coursesPage()">📚 Courses देखें</button>
+<button class="btn green" onclick="quizPage()">🧠 Quiz शुरू करें</button>
 </div>
-
 <div class="hero-box">
-
 <div class="hero-icon">💻</div>
-
 <h3>LEARN • PRACTICE • TEST</h3>
-
 <p>Computer Education एक ही जगह</p>
-
 </div>
-
 </div>
-
 </section>
 
-
-<!-- ================= ALL COURSES ================= -->
-
-<section id="coursesSection" class="section hidden">
-
+<!-- COURSES -->
+<section id="courses" class="section hidden">
 <div class="title">
-
 <h2>💻 Computer Courses</h2>
-
-<p>हर Computer subject का अलग button</p>
-
+<p>हर course का अलग button</p>
 </div>
 
 <div class="grid">
 
+<script>
+const courseCards=[
+["basic","🟢","Basic Computer","Computer की शुरुआत"],
+["windows","🪟","Windows","Windows Basic से Advanced"],
+["keyboard","⌨️","Keyboard & Typing","Typing और Shortcut Keys"],
+["word","📄","MS Word","Document और Formatting"],
+["excel","📊","MS Excel","Formula, Data और Charts"],
+["powerpoint","📽️","MS PowerPoint","Professional Presentation"],
+["internet","🌐","Internet","Browser, Search, Download"],
+["email","📧","Email","Email और Attachments"],
+["network","🔗","Networking","LAN, WAN, IP, DNS"],
+["cyber","🛡️","Cyber Security","Digital Safety"],
+["html","🌐","HTML","Web Page Structure"],
+["css","🎨","CSS","Website Design"],
+["javascript","⚡","JavaScript","Web Functionality"],
+["python","🐍","Python","Programming"],
+["ai","🤖","Artificial Intelligence","AI और Generative AI"]
+];
 
-<!-- BASIC -->
+document.write(courseCards.map((c,i)=>`
+<div class="card">
+<div class="icon">${c[1]}</div>
+<h3>${c[2]}</h3>
+<p>${c[3]}</p>
+<button class="btn ${i%3===0?'blue':i%3===1?'green':'orange'}"
+onclick="openCourse('${c[0]}')">Open Course</button>
+</div>
+`).join(""));
+</script>
 
-<div class="course-card">
-
-<div class="course-icon">🟢</div>
-
-<h3>Basic Computer</h3>
-
-<p>Computer की शुरुआत से सीखें।</p>
-
-<button class="btn green"
-onclick="openSubject('basic')">
-Open Course
-</button>
-
+<div class="card">
+<div class="icon">🧠</div>
+<h3>Computer Mega Quiz</h3>
+<p>120+ Original MCQ Questions</p>
+<button class="btn red" onclick="quizPage()">Start Quiz</button>
 </div>
 
+</div>
+</section>
 
-<!-- WINDOWS -->
-
-<div class="course-card">
-
-<div class="course-icon">🪟</div>
-
-<h3>Windows</h3>
-
-<p>Desktop, Files, Folders और Settings।</p>
-
-<button class="btn blue"
-onclick="openSubject('windows')">
-Open Course
-</button>
-
+<!-- SUBJECT -->
+<section id="subject" class="section hidden">
+<div class="course-head">
+<h2 id="courseTitle"></h2>
+<p id="courseDesc"></p>
+<br>
+<button class="btn gray" onclick="coursesPage()">⬅️ Courses</button>
 </div>
 
+<input id="search" class="search"
+placeholder="🔎 Lesson खोजें..."
+oninput="searchLessons()">
 
-<!-- KEYBOARD -->
+<div id="modules"></div>
+</section>
 
-<div class="course-card">
+<!-- LESSON -->
+<section id="lessonPage" class="section hidden">
+<div class="notes">
+<h2 id="lessonTitle"></h2>
+<div id="lessonContent"></div>
 
-<div class="course-icon">⌨️</div>
-
-<h3>Keyboard & Typing</h3>
-
-<p>Typing और Shortcut Keys सीखें।</p>
-
-<button class="btn purple"
-onclick="openSubject('keyboard')">
-Open Course
-</button>
-
+<br>
+<button class="btn green" onclick="completeLesson()">✅ Lesson Complete</button>
+<button class="btn orange" onclick="window.print()">🖨️ Print</button>
+<button class="btn gray" onclick="backSubject()">⬅️ Back</button>
 </div>
+</section>
 
-
-<!-- WORD -->
-
-<div class="course-card">
-
-<div class="course-icon">📄</div>
-
-<h3>MS Word</h3>
-
-<p>Documents और professional formatting।</p>
-
-<button class="btn blue"
-onclick="openSubject('word')">
-MS Word
-</button>
-
+<!-- PRACTICAL -->
+<section id="practicalPage" class="section hidden">
+<div class="title">
+<h2>🖥️ Practical Lab</h2>
+<p>करके सीखें</p>
 </div>
-
-
-<!-- EXCEL -->
-
-<div class="course-card">
-
-<div class="course-icon">📊</div>
-
-<h3>MS Excel</h3>
-
-<p>Formula, Data और Charts सीखें।</p>
-
-<button class="btn green"
-onclick="openSubject('excel')">
-MS Excel
-</button>
-
+<div class="grid3">
+<div class="card"><div class="icon">🪟</div><h3>Windows</h3><button class="btn blue" onclick="showPractical('windows')">Open</button></div>
+<div class="card"><div class="icon">⌨️</div><h3>Keyboard</h3><button class="btn purple" onclick="showPractical('keyboard')">Open</button></div>
+<div class="card"><div class="icon">📄</div><h3>MS Word</h3><button class="btn blue" onclick="showPractical('word')">Open</button></div>
+<div class="card"><div class="icon">📊</div><h3>Excel</h3><button class="btn green" onclick="showPractical('excel')">Open</button></div>
+<div class="card"><div class="icon">📽️</div><h3>PowerPoint</h3><button class="btn orange" onclick="showPractical('powerpoint')">Open</button></div>
+<div class="card"><div class="icon">🌐</div><h3>Internet</h3><button class="btn teal" onclick="showPractical('internet')">Open</button></div>
 </div>
-
-
-<!-- POWERPOINT -->
-
-<div class="course-card">
-
-<div class="course-icon">📽️</div>
-
-<h3>MS PowerPoint</h3>
-
-<p>Professional Presentation बनाना सीखें।</p>
-
-<button class="btn orange"
-onclick="openSubject('powerpoint')">
-PowerPoint
-</button>
-
-</div>
-
-
-<!-- INTERNET -->
-
-<div class="course-card">
-
-<div class="course-icon">🌐</div>
-
-<h3>Internet</h3>
-
-<p>Browser, Search, Download और Upload।</p>
-
-<button class="btn teal"
-onclick="openSubject('internet')">
-Internet
-</button>
-
-</div>
-
-
-<!-- EMAIL -->
-
-<div class="course-card">
-
-<div class="course-icon">📧</div>
-
-<h3>Email</h3>
-
-<p>Email भेजना और attachment सीखें।</p>
-
-<button class="btn red"
-onclick="openSubject('email')">
-Email
-</button>
-
-</div>
-
-
-<!-- NETWORKING -->
-
-<div class="course-card">
-
-<div class="course-icon">🌐</div>
-
-<h3>Networking</h3>
-
-<p>LAN, WAN, IP, DNS और Router।</p>
-
-<button class="btn dark"
-onclick="openSubject('network')">
-Networking
-</button>
-
-</div>
-
-
-<!-- CYBER -->
-
-<div class="course-card">
-
-<div class="course-icon">🛡️</div>
-
-<h3>Cyber Security</h3>
-
-<p>Online safety और cyber awareness।</p>
-
-<button class="btn red"
-onclick="openSubject('cyber')">
-Cyber Security
-</button>
-
-</div>
-
-
-<!-- HTML -->
-
-<div class="course-card">
-
-<div class="course-icon">🌐</div>
-
-<h3>HTML</h3>
-
-<p>Web page बनाना सीखें।</p>
-
-<button class="btn orange"
-onclick="openSubject('html')">
-HTML
-</button>
-
-</div>
-
-
-<!-- CSS -->
-
-<div class="course-card">
-
-<div class="course-icon">🎨</div>
-
-<h3>CSS</h3>
-
-<p>Website को professional design दें।</p>
-
-<button class="btn purple"
-onclick="openSubject('css')">
-CSS
-</button>
-
-</div>
-
-
-<!-- JAVASCRIPT -->
-
-<div class="course-card">
-
-<div class="course-icon">⚡</div>
-
-<h3>JavaScript</h3>
-
-<p>Website में functionality जोड़ें।</p>
-
-<button class="btn orange"
-onclick="openSubject('javascript')">
-JavaScript
-</button>
-
-</div>
-
-
-<!-- PYTHON -->
-
-<div class="course-card">
-
-<div class="course-icon">🐍</div>
-
-<h3>Python</h3>
-
-<p>Programming zero से सीखें।</p>
-
-<button class="btn green"
-onclick="openSubject('python')">
-Python
-</button>
-
-</div>
-
-
-<!-- AI -->
-
-<div class="course-card">
-
-<div class="course-icon">🤖</div>
-
-<h3>Artificial Intelligence</h3>
-
-<p>AI और Generative AI सीखें।</p>
-
-<button class="btn blue"
-onclick="openSubject('ai')">
-AI Course
-</button>
-
-</div>
-
+<div id="practicalOutput"></div>
+</section>
 
 <!-- QUIZ -->
-
-<div class="course-card">
-
-<div class="course-icon">🧠</div>
-
-<h3>Computer Quiz</h3>
-
-<p>120+ MCQ Question Bank।</p>
-
-<button class="btn red"
-onclick="showQuiz()">
-Start Quiz
-</button>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ================= SUBJECT CONTENT ================= -->
-
-<section id="subjectSection" class="section hidden">
-
-<div class="course-head">
-
-<h2 id="subjectTitle"></h2>
-
-<p id="subjectDescription"></p>
-
-<br>
-
-<button class="btn gray" onclick="showCourses()">
-⬅️ All Courses
-</button>
-
-<button class="btn orange" onclick="showPractical()">
-🖥️ Practical
-</button>
-
-</div>
-
-<input
-type="text"
-id="lessonSearch"
-class="search"
-placeholder="🔎 Lesson खोजें..."
-oninput="filterLessons()">
-
-<div id="subjectLessons"></div>
-
-</section>
-
-
-<!-- ================= LESSON ================= -->
-
-<section id="lessonSection" class="section hidden">
-
-<div class="notes">
-
-<h2 id="lessonTitle"></h2>
-
-<div id="lessonBody"></div>
-
-<br>
-
-<button class="btn green" onclick="markComplete()">
-✅ Lesson Complete
-</button>
-
-<button class="btn blue" onclick="showPractical()">
-🖥️ Practical
-</button>
-
-<button class="btn purple" onclick="showQuiz()">
-🧠 Quiz
-</button>
-
-<button class="btn orange" onclick="window.print()">
-🖨️ Print Notes
-</button>
-
-<button class="btn gray" onclick="backToSubject()">
-⬅️ Back
-</button>
-
-</div>
-
-</section>
-
-
-<!-- ================= PRACTICAL ================= -->
-
-<section id="practicalSection" class="section hidden">
-
+<section id="quizPage" class="section hidden">
 <div class="title">
-
-<h2>🖥️ Computer Practical Lab</h2>
-
-<p>Computer को करके सीखें</p>
-
-</div>
-
-<div class="grid3">
-
-<div class="course-card">
-
-<div class="course-icon">🪟</div>
-
-<h3>Windows Practical</h3>
-
-<button class="btn blue"
-onclick="practicalTopic('windows')">
-Open
-</button>
-
-</div>
-
-<div class="course-card">
-
-<div class="course-icon">⌨️</div>
-
-<h3>Keyboard Practical</h3>
-
-<button class="btn purple"
-onclick="practicalTopic('keyboard')">
-Open
-</button>
-
-</div>
-
-<div class="course-card">
-
-<div class="course-icon">📄</div>
-
-<h3>Word Practical</h3>
-
-<button class="btn blue"
-onclick="practicalTopic('word')">
-Open
-</button>
-
-</div>
-
-<div class="course-card">
-
-<div class="course-icon">📊</div>
-
-<h3>Excel Practical</h3>
-
-<button class="btn green"
-onclick="practicalTopic('excel')">
-Open
-</button>
-
-</div>
-
-<div class="course-card">
-
-<div class="course-icon">📽️</div>
-
-<h3>PowerPoint Practical</h3>
-
-<button class="btn orange"
-onclick="practicalTopic('powerpoint')">
-Open
-</button>
-
-</div>
-
-<div class="course-card">
-
-<div class="course-icon">🌐</div>
-
-<h3>Internet Practical</h3>
-
-<button class="btn teal"
-onclick="practicalTopic('internet')">
-Open
-</button>
-
-</div>
-
-</div>
-
-<div id="practicalOutput"></div>
-
-</section>
-
-
-<!-- ================= QUIZ ================= -->
-
-<section id="quizSection" class="section hidden">
-
-<div class="title">
-
 <h2>🧠 Computer Mega Quiz</h2>
-
-<p><b>120+ Computer MCQ Question Bank</b></p>
-
+<p>120+ Question Bank • हर test में 20 questions</p>
 </div>
 
 <div class="quiz-top">
-
-<b>
-Question:
-<span id="questionNumber">1</span>/20
-</b>
-
-<b>
-Score:
-<span id="liveScore">0</span>
-</b>
-
-</div>
-
-<div class="info-box">
-
-हर test में 20 questions random रूप से आएँगे।
-Question Bank में 120 से अधिक questions हैं।
-
+<b>Question: <span id="qNo">1</span>/20</b>
+<b>Score: <span id="score">0</span></b>
 </div>
 
 <div id="quizArea"></div>
 
-<button class="btn gray"
-onclick="previousQuestion()">
-⬅️ Previous
-</button>
-
-<button class="btn blue"
-onclick="nextQuestion()">
-Next ➡️
-</button>
-
-<button class="btn green"
-onclick="finishQuiz()">
-✅ Submit Quiz
-</button>
+<button class="btn gray" onclick="prevQ()">⬅️ Previous</button>
+<button class="btn blue" onclick="nextQ()">Next ➡️</button>
+<button class="btn green" onclick="submitQuiz()">✅ Submit</button>
 
 <div id="quizResult"></div>
-
 </section>
 
-
-<!-- ================= PROGRESS ================= -->
-
-<section id="progressSection" class="section hidden">
-
+<!-- PROGRESS -->
+<section id="progressPage" class="section hidden">
 <div class="title">
-
-<h2>📊 My Learning Progress</h2>
-
-<p>आपने कितना Computer course पूरा किया</p>
-
+<h2>📊 Learning Progress</h2>
+<p>आपकी पढ़ाई की progress</p>
 </div>
 
-<div class="course-card">
-
-<h3>
-Completed Lessons:
-<span id="completedCount">0</span>
+<div class="card">
+<h3>Completed Lessons:
+<span id="completed">0</span>
 </h3>
-
 <div class="progress">
-
-<div
-id="progressFill"
-class="progress-fill">
+<div id="fill" class="progress-fill"></div>
 </div>
-
+<p id="percent"></p>
 </div>
-
-<p id="progressText"></p>
-
-</div>
-
 </section>
 
-
 </div>
-
-
-<!-- ================= FOOTER ================= -->
 
 <footer>
-
 <h2>💻 Computer Study Hub</h2>
-
-<p>Basic → Advanced → Professional</p>
-
-<p>Hindi Medium 🇮🇳 | English Medium 🇬🇧</p>
-
 <p>Learn • Practice • Test</p>
-
+<p>Hindi Medium 🇮🇳 | English Medium 🇬🇧</p>
 <p>© 2026 Computer Study Hub</p>
-
 </footer>
-
 
 <script>
 
-/* ==========================================================
-COURSE DATA
-========================================================== */
+/* ================= COURSE DATA ================= */
 
-const courses = {
+const courses={
 
 basic:{
 title:"🟢 Basic Computer",
-description:"Computer की शुरुआत से सीखें।",
+desc:"Computer fundamentals",
 modules:[
-{
-title:"Computer Fundamentals",
-lessons:[
-"Computer क्या है?",
-"Computer की विशेषताएँ",
-"Computer के प्रकार",
-"Hardware क्या है?",
-"Software क्या है?",
-"Input Devices",
-"Output Devices",
-"CPU क्या है?",
-"RAM और ROM",
-"Storage Devices"
-]
-},
-{
-title:"Computer Operations",
-lessons:[
-"Computer ON करना",
-"Computer Shutdown",
-"Desktop",
-"Start Menu",
-"Taskbar",
-"Icons",
-"Files",
-"Folders",
-"Copy Paste",
-"Delete और Restore"
-]
-}
-]
-},
+["Computer Fundamentals",[
+"Computer क्या है?","Computer की विशेषताएँ","Computer के प्रकार",
+"Hardware क्या है?","Software क्या है?","Input Devices",
+"Output Devices","CPU क्या है?","RAM और ROM","Storage Devices"
+]],
+["Computer Operation",[
+"Computer ON करना","Computer Shutdown","Desktop","Start Menu",
+"Taskbar","Icons","Files","Folders","Copy Paste","Delete और Restore"
+]]
+]},
 
 windows:{
 title:"🪟 Windows Course",
-description:"Windows को Basic से Advanced तक सीखें।",
+desc:"Windows Basic से Advanced",
 modules:[
-{
-title:"Windows Basics",
-lessons:[
-"Windows क्या है?",
-"Windows Desktop",
-"Start Menu",
-"Taskbar",
-"Desktop Icons",
-"File Explorer",
-"Files",
-"Folders",
-"New Folder",
-"Rename",
-"Copy",
-"Cut",
-"Paste",
-"Delete"
-]
-},
-{
-title:"Windows Advanced",
-lessons:[
-"Windows Settings",
-"User Accounts",
-"Task Manager",
-"Device Manager",
-"Disk Management",
-"Windows Update",
-"System Restore",
-"Troubleshooting"
-]
-}
-]
-},
+["Windows Basics",[
+"Windows क्या है?","Desktop","Start Menu","Taskbar","File Explorer",
+"Files","Folders","New Folder","Rename","Copy","Cut","Paste","Delete"
+]],
+["Windows Advanced",[
+"Windows Settings","User Accounts","Task Manager","Device Manager",
+"Disk Management","Windows Update","System Restore","Troubleshooting"
+]]
+]},
 
 keyboard:{
 title:"⌨️ Keyboard & Typing",
-description:"Keyboard और typing skills सीखें।",
+desc:"Keyboard और typing skills",
 modules:[
-{
-title:"Keyboard",
-lessons:[
-"Keyboard Introduction",
-"Alphabet Keys",
-"Number Keys",
-"Function Keys",
-"Control Keys",
-"Arrow Keys",
-"Enter Key",
-"Spacebar",
-"Backspace",
-"Delete Key",
-"Shift Key",
-"Caps Lock"
-]
-},
-{
-title:"Shortcut Keys",
-lessons:[
-"Ctrl+C",
-"Ctrl+V",
-"Ctrl+X",
-"Ctrl+Z",
-"Ctrl+Y",
-"Ctrl+A",
-"Ctrl+S",
-"Ctrl+P",
-"Ctrl+F",
-"Alt+Tab"
-]
-}
-]
-},
+["Keyboard Basics",[
+"Keyboard Introduction","Alphabet Keys","Number Keys","Function Keys",
+"Control Keys","Arrow Keys","Enter Key","Spacebar","Backspace",
+"Delete Key","Shift Key","Caps Lock"
+]],
+["Shortcut Keys",[
+"Ctrl+C","Ctrl+V","Ctrl+X","Ctrl+Z","Ctrl+Y",
+"Ctrl+A","Ctrl+S","Ctrl+P","Ctrl+F","Alt+Tab"
+]]
+]},
 
 word:{
 title:"📄 MS Word",
-description:"MS Word में professional documents बनाना सीखें।",
+desc:"Professional documents बनाना सीखें",
 modules:[
-{
-title:"MS Word Basics",
-lessons:[
-"MS Word क्या है?",
-"MS Word Open करना",
-"New Document",
-"Word Interface",
-"Typing",
-"Font",
-"Font Size",
-"Bold",
-"Italic",
-"Underline",
-"Text Color",
-"Text Alignment"
-]
-},
-{
-title:"MS Word Advanced",
-lessons:[
-"Paragraph Formatting",
-"Bullets",
-"Numbering",
-"Tables",
-"Images",
-"Shapes",
-"Page Border",
-"Header",
-"Footer",
-"Page Number",
-"Page Setup",
-"Print Preview",
-"Mail Merge"
-]
-}
-]
-},
+["MS Word Basics",[
+"MS Word क्या है?","MS Word Open करना","New Document",
+"Word Interface","Typing","Font","Font Size","Bold","Italic",
+"Underline","Text Color","Text Alignment"
+]],
+["MS Word Advanced",[
+"Paragraph Formatting","Bullets","Numbering","Tables","Images",
+"Shapes","Page Border","Header","Footer","Page Number",
+"Page Setup","Print Preview","Mail Merge"
+]]
+]},
 
 excel:{
 title:"📊 MS Excel",
-description:"Excel में Data, Formula और Charts सीखें।",
+desc:"Data, Formula और Charts",
 modules:[
-{
-title:"Excel Basics",
-lessons:[
-"MS Excel क्या है?",
-"Workbook",
-"Worksheet",
-"Rows",
-"Columns",
-"Cells",
-"Cell Address",
-"Data Entry",
-"Formatting",
-"Save Workbook"
-]
-},
-{
-title:"Excel Formulas",
-lessons:[
-"Formula क्या है?",
-"SUM",
-"AVERAGE",
-"COUNT",
-"MAX",
-"MIN",
-"IF Function",
-"Percentage",
-"Basic Calculations",
-"Cell References"
-]
-},
-{
-title:"Excel Advanced",
-lessons:[
-"Sorting",
-"Filtering",
-"Tables",
-"Charts",
-"Conditional Formatting",
-"Freeze Panes",
-"Print Settings",
-"Excel Practical Project"
-]
-}
-]
-},
+["Excel Basics",[
+"MS Excel क्या है?","Workbook","Worksheet","Rows","Columns",
+"Cells","Cell Address","Data Entry","Formatting","Save Workbook"
+]],
+["Excel Formulas",[
+"Formula क्या है?","SUM","AVERAGE","COUNT","MAX","MIN",
+"IF Function","Percentage","Basic Calculations","Cell References"
+]],
+["Excel Advanced",[
+"Sorting","Filtering","Tables","Charts","Conditional Formatting",
+"Freeze Panes","Print Settings","Excel Practical Project"
+]]
+]},
 
 powerpoint:{
 title:"📽️ MS PowerPoint",
-description:"Professional presentations बनाना सीखें।",
+desc:"Professional presentations",
 modules:[
-{
-title:"PowerPoint Basics",
-lessons:[
-"PowerPoint क्या है?",
-"New Presentation",
-"Slides",
-"Title Slide",
-"Text Box",
-"Design",
-"Themes",
-"Images",
-"Shapes",
-"Tables"
-]
-},
-{
-title:"PowerPoint Advanced",
-lessons:[
-"Transitions",
-"Animations",
-"Audio",
-"Video",
-"Slide Master",
-"Presentation Mode",
-"Slide Show",
-"Speaker Notes",
-"Print Slides",
-"Professional Presentation"
-]
-}
-]
-},
+["PowerPoint Basics",[
+"PowerPoint क्या है?","New Presentation","Slides","Title Slide",
+"Text Box","Design","Themes","Images","Shapes","Tables"
+]],
+["PowerPoint Advanced",[
+"Transitions","Animations","Audio","Video","Slide Master",
+"Presentation Mode","Slide Show","Speaker Notes","Print Slides"
+]]
+]},
 
 internet:{
 title:"🌐 Internet",
-description:"Internet को सुरक्षित और सही तरीके से उपयोग करना सीखें।",
+desc:"Internet skills",
 modules:[
-{
-title:"Internet Basics",
-lessons:[
-"Internet क्या है?",
-"Web Browser",
-"Website",
-"Search Engine",
-"Google Search",
-"URL",
-"HTTP",
-"HTTPS",
-"Download",
-"Upload"
-]
-},
-{
-title:"Online Skills",
-lessons:[
-"Online Forms",
-"Google Drive",
-"Cloud Storage",
-"Online Documents",
-"Online Maps",
-"Video Meeting",
-"Online Learning",
-"Digital Services"
-]
-}
-]
-},
+["Internet Basics",[
+"Internet क्या है?","Web Browser","Website","Search Engine",
+"Google Search","URL","HTTP","HTTPS","Download","Upload"
+]],
+["Online Skills",[
+"Online Forms","Cloud Storage","Online Documents","Online Maps",
+"Video Meeting","Online Learning","Digital Services"
+]]
+]},
 
 email:{
 title:"📧 Email",
-description:"Email की basic से professional skills सीखें।",
+desc:"Email skills",
 modules:[
-{
-title:"Email Basics",
-lessons:[
-"Email क्या है?",
-"Email Address",
-"Gmail",
-"Compose",
-"To",
-"Subject",
-"CC",
-"BCC",
-"Attachment",
-"Send Email"
-]
-},
-{
-title:"Professional Email",
-lessons:[
-"Professional Email",
-"Email Formatting",
-"Reply",
-"Forward",
-"Email Signature",
-"Email Safety",
-"Spam",
-"Phishing Email"
-]
-}
-]
-},
+["Email Basics",[
+"Email क्या है?","Email Address","Gmail","Compose","To","Subject",
+"CC","BCC","Attachment","Send Email"
+]],
+["Professional Email",[
+"Professional Email","Email Formatting","Reply","Forward",
+"Email Signature","Email Safety","Spam","Phishing Email"
+]]
+]},
 
 network:{
-title:"🌐 Networking",
-description:"Computer Networking fundamentals सीखें।",
+title:"🔗 Networking",
+desc:"Computer networking fundamentals",
 modules:[
-{
-title:"Networking Basics",
-lessons:[
-"Network क्या है?",
-"LAN",
-"WAN",
-"MAN",
-"PAN",
-"Router",
-"Switch",
-"Modem",
-"Wi-Fi",
-"Ethernet"
-]
-},
-{
-title:"Network Concepts",
-lessons:[
-"IP Address",
-"MAC Address",
-"DNS",
-"DHCP",
-"Server",
-"Client",
-"Port",
-"Protocol",
-"TCP",
-"UDP"
-]
-}
-]
-},
+["Networking Basics",[
+"Network क्या है?","LAN","WAN","MAN","PAN","Router",
+"Switch","Modem","Wi-Fi","Ethernet"
+]],
+["Network Concepts",[
+"IP Address","MAC Address","DNS","DHCP","Server","Client",
+"Port","Protocol","TCP","UDP"
+]]
+]},
 
 cyber:{
 title:"🛡️ Cyber Security",
-description:"Cyber safety और digital security सीखें।",
+desc:"Digital safety और security",
 modules:[
-{
-title:"Cyber Safety",
-lessons:[
-"Cyber Security क्या है?",
-"Strong Password",
-"Password Manager",
-"2FA",
-"Phishing",
-"Malware",
-"Virus",
-"Ransomware Awareness",
-"Online Scam",
-"Safe Browsing"
-]
-},
-{
-title:"Privacy",
-lessons:[
-"Digital Privacy",
-"Personal Data",
-"Social Media Safety",
-"Public Wi-Fi Safety",
-"Backup",
-"Encryption",
-"Firewall",
+["Cyber Safety",[
+"Cyber Security क्या है?","Strong Password","2FA","Phishing",
+"Malware","Virus","Ransomware Awareness","Online Scam","Safe Browsing"
+]],
+["Privacy",[
+"Digital Privacy","Personal Data","Social Media Safety",
+"Public Wi-Fi Safety","Backup","Encryption","Firewall",
 "Software Updates"
-]
-}
-]
-},
+]]
+]},
 
 html:{
 title:"🌐 HTML",
-description:"HTML से web pages बनाना सीखें।",
+desc:"Web page structure",
 modules:[
-{
-title:"HTML Basics",
-lessons:[
-"HTML क्या है?",
-"HTML Document",
-"HTML Structure",
-"Headings",
-"Paragraph",
-"Links",
-"Images",
-"Lists",
-"Tables",
-"Forms"
-]
-},
-{
-title:"HTML Project",
-lessons:[
-"Navigation Menu",
-"Cards",
-"Buttons",
-"Contact Form",
-"Page Layout",
-"Mini Website"
-]
-}
-]
-},
+["HTML Basics",[
+"HTML क्या है?","HTML Document","HTML Structure","Headings",
+"Paragraph","Links","Images","Lists","Tables","Forms"
+]],
+["HTML Project",[
+"Navigation Menu","Cards","Buttons","Contact Form",
+"Page Layout","Mini Website"
+]]
+]},
 
 css:{
 title:"🎨 CSS",
-description:"Website को attractive और responsive बनाना सीखें।",
+desc:"Website design",
 modules:[
-{
-title:"CSS Basics",
-lessons:[
-"CSS क्या है?",
-"CSS Syntax",
-"Colors",
-"Fonts",
-"Background",
-"Border",
-"Margin",
-"Padding",
-"Width",
-"Height"
-]
-},
-{
-title:"CSS Advanced",
-lessons:[
-"Flexbox",
-"Grid",
-"Responsive Design",
-"Media Query",
-"Card Design",
-"Button Design",
-"Navbar Design",
-"Professional Website"
-]
-}
-]
-},
+["CSS Basics",[
+"CSS क्या है?","CSS Syntax","Colors","Fonts","Background",
+"Border","Margin","Padding","Width","Height"
+]],
+["CSS Advanced",[
+"Flexbox","Grid","Responsive Design","Media Query",
+"Card Design","Button Design","Navbar Design","Professional Website"
+]]
+]},
 
 javascript:{
 title:"⚡ JavaScript",
-description:"Web pages में functionality जोड़ना सीखें।",
+desc:"Web functionality",
 modules:[
-{
-title:"JavaScript Basics",
-lessons:[
-"JavaScript क्या है?",
-"Variables",
-"let",
-"const",
-"Data Types",
-"Operators",
-"If Else",
-"Functions",
-"Arrays",
-"Objects"
-]
-},
-{
-title:"JavaScript Web",
-lessons:[
-"DOM",
-"Events",
-"Button Click",
-"Input",
-"Form",
-"Validation",
-"LocalStorage",
-"Mini Project"
-]
-}
-]
-},
+["JavaScript Basics",[
+"JavaScript क्या है?","Variables","let","const","Data Types",
+"Operators","If Else","Functions","Arrays","Objects"
+]],
+["JavaScript Web",[
+"DOM","Events","Button Click","Input","Form","Validation",
+"LocalStorage","Mini Project"
+]]
+]},
 
 python:{
 title:"🐍 Python",
-description:"Python programming zero से सीखें।",
+desc:"Programming zero से",
 modules:[
-{
-title:"Python Basics",
-lessons:[
-"Python क्या है?",
-"Python Installation",
-"Variables",
-"Data Types",
-"Numbers",
-"Strings",
-"Operators",
-"If Else",
-"For Loop",
-"While Loop"
-]
-},
-{
-title:"Python Advanced",
-lessons:[
-"Functions",
-"Lists",
-"Tuples",
-"Dictionary",
-"Sets",
-"Files",
-"Modules",
-"Error Handling",
-"Python Project"
-]
-}
-]
-},
+["Python Basics",[
+"Python क्या है?","Python Installation","Variables","Data Types",
+"Numbers","Strings","Operators","If Else","For Loop","While Loop"
+]],
+["Python Advanced",[
+"Functions","Lists","Tuples","Dictionary","Sets","Files",
+"Modules","Error Handling","Python Project"
+]]
+]},
 
 ai:{
 title:"🤖 Artificial Intelligence",
-description:"AI और Generative AI की basic understanding सीखें।",
+desc:"AI और Generative AI",
 modules:[
-{
-title:"AI Basics",
-lessons:[
-"Artificial Intelligence क्या है?",
-"Machine Learning",
-"Generative AI",
-"AI Tools",
-"Prompt क्या है?",
-"Good Prompt",
-"AI से Study",
-"AI से Writing",
-"AI Productivity",
-"AI Safety"
-]
-},
-{
-title:"Future Skills",
-lessons:[
-"AI और Education",
-"AI और Jobs",
-"AI Ethics",
-"Privacy",
-"Fact Checking",
-"Responsible AI",
-"Future Computer Skills"
-]
-}
-]
-}
-
+["AI Basics",[
+"Artificial Intelligence क्या है?","Machine Learning",
+"Generative AI","AI Tools","Prompt क्या है?","Good Prompt",
+"AI से Study","AI से Writing","AI Productivity","AI Safety"
+]],
+["Future Skills",[
+"AI और Education","AI और Jobs","AI Ethics","Privacy",
+"Fact Checking","Responsible AI","Future Computer Skills"
+]]
+]}
 };
 
 
-/* ==========================================================
-LESSON NOTES
-========================================================== */
+/* ================= NOTES ================= */
 
 const notes={
 
-"MS Word क्या है?":`
-<h3>📌 MS Word क्या है?</h3>
-<p>
-MS Word एक word processing application है जिसका उपयोग
-documents बनाने, edit करने, format करने और print करने के लिए
-किया जाता है।
-</p>
-<div class="info-box">
-<b>मुख्य उपयोग:</b> Letter, Application, Resume, Report,
-Notes और अन्य documents बनाना।
-</div>
-<h3>🖥️ Practical</h3>
-<div class="step">1. MS Word खोलें।</div>
-<div class="step">2. Blank Document चुनें।</div>
-<div class="step">3. अपना नाम और एक paragraph लिखें।</div>
-<div class="step">4. Heading को Bold करें।</div>
-`,
+"Computer क्या है?":{
+hi:"Computer एक electronic device है जो input data को process करके useful output देता है।",
+en:"A computer is an electronic device that accepts input, processes data and produces useful output.",
+points:["Input → Processing → Output","Computer data को store भी कर सकता है।"],
+practice:["Computer के मुख्य parts पहचानें।","Keyboard से अपना नाम type करें।"]
+},
 
-"Excel में cell क्या है?":`
-<h3>📊 Cell क्या है?</h3>
-<p>
-MS Excel में Row और Column के intersection को Cell कहा जाता है।
-</p>
-<div class="example">
-उदाहरण: A1 में A column और 1 row को दर्शाता है।
-</div>
-<h3>🖥️ Practical</h3>
-<div class="step">1. Excel खोलें।</div>
-<div class="step">2. Cell A1 पर click करें।</div>
-<div class="step">3. अपना नाम type करें।</div>
-<div class="step">4. Enter दबाएँ।</div>
-`,
+"MS Word क्या है?":{
+hi:"MS Word एक word processing application है। इसका उपयोग letters, applications, reports, resumes और अन्य documents बनाने के लिए किया जाता है।",
+en:"MS Word is a word-processing application used to create, edit, format and print documents.",
+points:["Text formatting","Tables और images","Page setup और printing","Professional documents"],
+practice:["MS Word खोलें।","Blank document चुनें।","एक heading और paragraph लिखें।","Heading को Bold करें।","File save करें।"]
+},
 
-"PowerPoint क्या है?":`
-<h3>📽️ PowerPoint क्या है?</h3>
-<p>
-Microsoft PowerPoint presentation बनाने के लिए उपयोग किया जाता है।
-इसमें slides, text, images, charts, audio और video जोड़े जा सकते हैं।
-</p>
-<h3>🖥️ Practical</h3>
-<div class="step">1. PowerPoint खोलें।</div>
-<div class="step">2. Blank Presentation चुनें।</div>
-<div class="step">3. Title लिखें।</div>
-<div class="step">4. New Slide जोड़ें।</div>
-<div class="step">5. Slide Show चलाएँ।</div>
-`,
+"MS Excel क्या है?":{
+hi:"MS Excel spreadsheet application है। इसका उपयोग data entry, calculation, formulas, tables और charts के लिए किया जाता है।",
+en:"MS Excel is a spreadsheet application used for data entry, calculations, formulas, tables and charts.",
+points:["Workbook और Worksheet","Rows, Columns और Cells","Formulas और Functions"],
+practice:["Excel खोलें।","A1 में अपना नाम लिखें।","A2:A6 में पाँच numbers लिखें।","SUM formula लगाएँ।"]
+},
 
-"Computer क्या है?":`
-<h3>💻 Computer क्या है?</h3>
-<p>
-Computer एक electronic device है जो data को input के रूप में
-लेता है, उसे process करता है और output देता है।
-</p>
-<div class="info-box">
-<b>Basic Cycle:</b>
-Input → Processing → Output → Storage
-</div>
-<h3>⭐ उदाहरण</h3>
-<div class="example">
-Keyboard से data देना → CPU द्वारा processing →
-Monitor पर result दिखाई देना।
-</div>
-`,
+"PowerPoint क्या है?":{
+hi:"Microsoft PowerPoint presentation बनाने का software है। इसमें slides, text, images, charts, audio और video जोड़े जा सकते हैं।",
+en:"Microsoft PowerPoint is presentation software used to create slides containing text, images, charts, audio and video.",
+points:["Slides","Themes","Transitions","Animations","Slide Show"],
+practice:["PowerPoint खोलें।","Blank Presentation चुनें।","Title लिखें।","New Slide जोड़ें।","Slide Show चलाएँ।"]
+},
 
-"HTML क्या है?":`
-<h3>🌐 HTML क्या है?</h3>
-<p>
-HTML का पूरा नाम HyperText Markup Language है।
-इसका उपयोग web page की structure बनाने के लिए किया जाता है।
-</p>
-<div class="example">
-HTML = Website का Structure
-</div>
-<h3>⭐ मुख्य Elements</h3>
-<div class="step">&lt;h1&gt; — Heading</div>
-<div class="step">&lt;p&gt; — Paragraph</div>
-<div class="step">&lt;a&gt; — Link</div>
-<div class="step">&lt;img&gt; — Image</div>
-`,
+"HTML क्या है?":{
+hi:"HTML का पूरा नाम HyperText Markup Language है। यह web page की structure बनाने के लिए उपयोग होती है।",
+en:"HTML stands for HyperText Markup Language. It is used to structure content on web pages.",
+points:["Headings","Paragraphs","Links","Images","Lists","Forms"],
+practice:["एक HTML file बनाएँ।","h1 heading लिखें।","p paragraph जोड़ें।","एक link जोड़ें।"]
+},
 
-"Python क्या है?":`
-<h3>🐍 Python क्या है?</h3>
-<p>
-Python एक popular programming language है जिसका उपयोग
-software, automation, data science, web development और AI
-जैसे क्षेत्रों में किया जाता है।
-</p>
-<div class="example">
-Python beginners के लिए comparatively आसान programming languages
-में से एक है।
-</div>
-`,
+"CSS क्या है?":{
+hi:"CSS का पूरा नाम Cascading Style Sheets है। इसका उपयोग web pages को रंग, font, spacing, layout और responsive design देने के लिए किया जाता है।",
+en:"CSS stands for Cascading Style Sheets. It controls the appearance, layout, spacing and responsive design of web pages.",
+points:["Colors","Fonts","Margins","Padding","Flexbox","Grid"],
+practice:["एक HTML page बनाएँ।","CSS file जोड़ें।","Heading का font-size बदलें।","Background बदलें।"]
+},
 
-"Cyber Security क्या है?":`
-<h3>🛡️ Cyber Security</h3>
-<p>
-Cyber Security का उद्देश्य computers, networks, accounts और
-digital information को unauthorized access और attacks से बचाना है।
-</p>
-<div class="info-box">
-Strong Password + 2FA + Updates + Safe Browsing
-digital safety के महत्वपूर्ण हिस्से हैं।
-</div>
-`,
+"Python क्या है?":{
+hi:"Python एक high-level programming language है। इसका उपयोग automation, web development, data analysis और AI जैसे क्षेत्रों में किया जाता है।",
+en:"Python is a high-level programming language used in automation, web development, data analysis and AI.",
+points:["Easy syntax","Variables","Conditions","Loops","Functions"],
+practice:["Python editor खोलें।","एक variable बनाएँ।","print() से उसका value दिखाएँ।"]
+},
 
-"Internet क्या है?":`
-<h3>🌐 Internet क्या है?</h3>
-<p>
-Internet interconnected computer networks का global system है,
-जिसके माध्यम से computers और devices information exchange करते हैं।
-</p>
-<div class="example">
-Browser → Website → Server → Internet → आपका Device
-</div>
-`
+"Cyber Security क्या है?":{
+hi:"Cyber Security computers, networks, accounts और digital information को unauthorized access और attacks से बचाने की प्रक्रिया है।",
+en:"Cyber security protects computers, networks, accounts and digital information from unauthorized access and attacks.",
+points:["Strong passwords","2FA","Software updates","Phishing awareness","Backup"],
+practice:["अपने important accounts में 2FA उपलब्ध हो तो enable करें।","Unknown links पर click न करें।"]
+},
+
+"Internet क्या है?":{
+hi:"Internet दुनिया भर के interconnected computer networks का एक global system है।",
+en:"The Internet is a global system of interconnected computer networks.",
+points:["Websites","Email","Online learning","Cloud services"],
+practice:["Browser खोलें।","किसी educational topic को search करें।","एक reliable website पढ़ें।"]
+}
 
 };
 
 
-/* ==========================================================
-NAVIGATION
-========================================================== */
+/* ================= NAVIGATION ================= */
 
 function hideAll(){
-
-document
-.querySelectorAll(".section")
-.forEach(section=>{
-section.classList.add("hidden");
-});
-
+document.querySelectorAll(".section").forEach(x=>x.classList.add("hidden"));
 }
 
-
-function showHome(){
-
+function home(){
 hideAll();
-
-document
-.getElementById("homeSection")
-.classList.remove("hidden");
-
-window.scrollTo(0,0);
-
+document.getElementById("home").classList.remove("hidden");
+scrollTo(0,0);
 }
 
-
-function showCourses(){
-
+function coursesPage(){
 hideAll();
-
-document
-.getElementById("coursesSection")
-.classList.remove("hidden");
-
-window.scrollTo(0,0);
-
+document.getElementById("courses").classList.remove("hidden");
+scrollTo(0,0);
 }
 
-
-function showPractical(){
-
+function practical(){
 hideAll();
-
-document
-.getElementById("practicalSection")
-.classList.remove("hidden");
-
-window.scrollTo(0,0);
-
+document.getElementById("practicalPage").classList.remove("hidden");
+scrollTo(0,0);
 }
 
-
-function showQuiz(){
-
+function quizPage(){
 hideAll();
-
-document
-.getElementById("quizSection")
-.classList.remove("hidden");
-
+document.getElementById("quizPage").classList.remove("hidden");
 startQuiz();
-
-window.scrollTo(0,0);
-
+scrollTo(0,0);
 }
 
-
-function showProgress(){
-
+function progressPage(){
 hideAll();
-
-document
-.getElementById("progressSection")
-.classList.remove("hidden");
-
+document.getElementById("progressPage").classList.remove("hidden");
 updateProgress();
-
-window.scrollTo(0,0);
-
+scrollTo(0,0);
 }
 
 
-/* ==========================================================
-OPEN SUBJECT
-========================================================== */
+/* ================= SUBJECT ================= */
 
-let currentSubject="";
+let currentCourse="";
 let currentLesson="";
 
-function openSubject(key){
+function openCourse(key){
 
-currentSubject=key;
+currentCourse=key;
+const c=courses[key];
 
-let data=courses[key];
-
-document
-.getElementById("subjectTitle")
-.innerText=data.title;
-
-document
-.getElementById("subjectDescription")
-.innerText=data.description;
+document.getElementById("courseTitle").innerText=c.title;
+document.getElementById("courseDesc").innerText=c.desc;
 
 let html="";
 
-data.modules.forEach((module,mi)=>{
+c.modules.forEach((m,mi)=>{
 
 html+=`
-
-<div class="lesson-module">
-
-<h3>📚 ${module.title}</h3>
-
+<div class="module">
+<h3>📚 ${m[0]}</h3>
 <div class="lesson-grid">
-
 `;
 
-module.lessons.forEach((lesson,li)=>{
+m[1].forEach((lesson,li)=>{
 
 html+=`
-
-<button
-class="lesson-btn"
+<button class="lesson"
 onclick="openLesson('${key}',${mi},${li})">
-
-📖 Lesson ${li+1}<br>
-${lesson}
-
+📖 Lesson ${li+1}<br>${lesson}
 </button>
-
 `;
 
 });
 
-html+=`
-
-</div>
-
-</div>
-
-`;
+html+=`</div></div>`;
 
 });
 
-document
-.getElementById("subjectLessons")
-.innerHTML=html;
-
-document
-.getElementById("lessonSearch")
-.value="";
+document.getElementById("modules").innerHTML=html;
+document.getElementById("search").value="";
 
 hideAll();
-
-document
-.getElementById("subjectSection")
-.classList.remove("hidden");
-
-window.scrollTo(0,0);
-
+document.getElementById("subject").classList.remove("hidden");
+scrollTo(0,0);
 }
 
 
-/* ==========================================================
-SEARCH LESSON
-========================================================== */
+/* ================= SEARCH ================= */
 
-function filterLessons(){
+function searchLessons(){
 
-let value=
-document
-.getElementById("lessonSearch")
-.value
-.toLowerCase();
+let value=document.getElementById("search").value.toLowerCase();
 
-document
-.querySelectorAll(".lesson-module")
-.forEach(module=>{
-
-let text=module.innerText.toLowerCase();
-
-module.style.display=
-text.includes(value)
-?
-""
-:
-"none";
-
+document.querySelectorAll(".module").forEach(m=>{
+m.style.display=m.innerText.toLowerCase().includes(value)?"":"none";
 });
 
 }
 
 
-/* ==========================================================
-OPEN LESSON
-========================================================== */
+/* ================= LESSON ================= */
 
 function openLesson(key,mi,li){
 
-let lesson=
-courses[key]
-.modules[mi]
-.lessons[li];
+currentCourse=key;
+currentLesson=courses[key].modules[mi][1][li];
 
-currentSubject=key;
-currentLesson=lesson;
+document.getElementById("lessonTitle").innerText=
+courses[key].title+" — "+currentLesson;
 
-document
-.getElementById("lessonTitle")
-.innerText=
-courses[key].title+" — "+lesson;
+let n=notes[currentLesson];
 
-let body="";
+if(!n){
 
-if(notes[lesson]){
+n={
+hi:`यह lesson "${currentLesson}" topic की basic understanding के लिए है। इसे पढ़ने के बाद computer पर स्वयं practice करें।`,
+en:`This lesson introduces the topic "${currentLesson}". Read the concept and practice it on a computer.`,
+points:["Concept को समझें","Important terms नोट करें","Computer पर practice करें"],
+practice:[`"${currentLesson}" से संबंधित practical activity करें।`]
+};
 
-body=notes[lesson];
+}
 
-}else{
+let html=`
 
-body=`
+<h3>🇮🇳 Hindi Notes</h3>
+<div class="box">${n.hi}</div>
 
-<h3>📌 Lesson Introduction</h3>
-
-<p>
-<b>${lesson}</b> इस course का एक महत्वपूर्ण topic है।
-इस lesson में आपको इसका basic concept और practical use
-समझाया जाएगा।
-</p>
+<h3>🇬🇧 English Notes</h3>
+<div class="en">${n.en}</div>
 
 <h3>⭐ Important Points</h3>
-
-<div class="info-box">
-✅ Topic की definition समझें।
-</div>
-
-<div class="info-box">
-✅ Important terms को notebook में लिखें।
-</div>
-
-<div class="info-box">
-✅ Computer पर स्वयं practice करें।
-</div>
-
-<h3>🖥️ Practical Task</h3>
-
-<div class="step">
-आज <b>${lesson}</b> से संबंधित एक practical task
-Computer पर करके देखें।
-</div>
-
-<h3>📝 Revision</h3>
-
-<div class="example">
-Lesson पढ़ने के बाद Computer Quiz देकर अपना knowledge check करें।
-</div>
-
 `;
 
-}
+n.points.forEach(x=>{
+html+=`<div class="step">✅ ${x}</div>`;
+});
 
-document
-.getElementById("lessonBody")
-.innerHTML=body;
+html+=`<h3>🖥️ Practical</h3>`;
+
+n.practice.forEach((x,i)=>{
+html+=`<div class="step"><b>Step ${i+1}:</b> ${x}</div>`;
+});
+
+html+=`
+
+<h3>📝 Quick Revision</h3>
+<div class="example">
+Lesson पूरा करने के बाद इस topic से संबंधित Quiz दें और अपनी knowledge check करें।
+</div>
+`;
+
+document.getElementById("lessonContent").innerHTML=html;
 
 hideAll();
+document.getElementById("lessonPage").classList.remove("hidden");
+scrollTo(0,0);
+}
 
-document
-.getElementById("lessonSection")
-.classList.remove("hidden");
-
-window.scrollTo(0,0);
-
+function backSubject(){
+openCourse(currentCourse);
 }
 
 
-function backToSubject(){
-
-openSubject(currentSubject);
-
-}
-
-
-/* ==========================================================
-LESSON COMPLETE
-========================================================== */
+/* ================= PROGRESS ================= */
 
 let completedLessons=
-Number(localStorage.getItem("completedLessons")||0);
+Number(localStorage.getItem("computerCompleted")||0);
 
-
-function markComplete(){
+function completeLesson(){
 
 completedLessons++;
 
-localStorage.setItem(
-"completedLessons",
-completedLessons
-);
+localStorage.setItem("computerCompleted",completedLessons);
 
 alert("✅ Lesson Complete!");
 
 updateProgress();
-
 }
-
 
 function updateProgress(){
 
 let total=0;
 
-Object.values(courses)
-.forEach(course=>{
-
-course.modules.forEach(module=>{
-
-total+=module.lessons.length;
-
+Object.values(courses).forEach(c=>{
+c.modules.forEach(m=>total+=m[1].length);
 });
 
-});
+let p=Math.min(100,Math.round(completedLessons/total*100));
 
-let percentage=
-Math.min(
-100,
-Math.round((completedLessons/total)*100)
-);
-
-document
-.getElementById("completedCount")
-.innerText=completedLessons;
-
-document
-.getElementById("progressFill")
-.style.width=
-percentage+"%";
-
-document
-.getElementById("progressText")
-.innerText=
-`आपकी course progress ${percentage}% है।`;
-
+document.getElementById("completed").innerText=completedLessons;
+document.getElementById("fill").style.width=p+"%";
+document.getElementById("percent").innerText=
+"आपकी learning progress "+p+"% है।";
 }
 
 
-/* ==========================================================
-PRACTICAL
-========================================================== */
+/* ================= PRACTICAL ================= */
 
-const practicalData={
-
+const practicals={
 windows:[
 "Computer ON करें।",
-"Desktop देखें।",
+"Desktop और Taskbar पहचानें।",
 "Start Menu खोलें।",
 "File Explorer खोलें।",
 "New Folder बनाएँ।",
-"Folder का नाम बदलें।",
-"File Copy करें।",
+"Folder Rename करें।",
+"एक file Copy करें।",
 "दूसरे folder में Paste करें।",
-"File Delete करें।",
-"Recycle Bin देखें।"
+"File Delete करें।"
 ],
-
 keyboard:[
 "Notepad खोलें।",
 "A से Z type करें।",
@@ -2222,68 +890,53 @@ keyboard:[
 "Enter key practice करें।",
 "Spacebar practice करें।",
 "Backspace practice करें।",
-"Shift key practice करें।",
-"Caps Lock practice करें।",
-"Ctrl+C practice करें।",
-"Ctrl+V practice करें।"
+"Shift और Caps Lock practice करें।",
+"Ctrl+C और Ctrl+V practice करें।"
 ],
-
 word:[
 "MS Word खोलें।",
 "Blank Document चुनें।",
-"एक paragraph type करें।",
-"Heading को Bold करें।",
-"Font बदलें।",
-"Font Size बदलें।",
-"Text alignment बदलें।",
+"Heading type करें।",
+"Paragraph type करें।",
+"Text Bold करें।",
+"Font और Font Size बदलें।",
 "Table insert करें।",
 "Image insert करें।",
 "Document Save करें।"
 ],
-
 excel:[
-"MS Excel खोलें।",
+"Excel खोलें।",
 "Cells में data डालें।",
-"Rows और Columns देखें।",
+"Numbers enter करें।",
 "SUM formula लगाएँ।",
 "AVERAGE formula लगाएँ।",
-"Table बनाएं।",
-"Data Sort करें।",
+"Data को table में रखें।",
+"Sort करें।",
 "Filter लगाएँ।",
-"Chart बनाएं।",
-"Workbook Save करें।"
+"Chart बनाएँ।"
 ],
-
 powerpoint:[
 "PowerPoint खोलें।",
-"New Presentation चुनें।",
-"Title Slide बनाएं।",
+"Blank Presentation चुनें।",
+"Title Slide बनाएँ।",
 "New Slide जोड़ें।",
-"Text लिखें।",
-"Image लगाएँ।",
-"Design चुनें।",
+"Text और image जोड़ें।",
+"Theme चुनें।",
 "Transition लगाएँ।",
 "Animation लगाएँ।",
 "Slide Show चलाएँ।"
 ],
-
 internet:[
-"Web Browser खोलें।",
+"Browser खोलें।",
 "Search Engine खोलें।",
-"किसी topic को search करें।",
+"Educational topic search करें।",
 "Website खोलें।",
-"File Download करें।",
-"File Upload करें।",
-"Email खोलें।",
-"Attachment भेजने की practice करें।"
+"Download और Upload का अभ्यास करें।",
+"Online form भरने का अभ्यास करें।"
 ]
-
 };
 
-
-function practicalTopic(type){
-
-let steps=practicalData[type];
+function showPractical(type){
 
 let names={
 windows:"Windows",
@@ -2295,48 +948,23 @@ internet:"Internet"
 };
 
 let html=`
-
-<div class="practical-box">
-
-<h2>🖥️ ${names[type]} Practical</h2>
-
-<br>
-
+<div class="module">
+<h2>🖥️ ${names[type]} Practical</h2><br>
 `;
 
-steps.forEach((step,index)=>{
-
-html+=`
-
-<div class="step">
-
-<b>Step ${index+1}:</b>
-${step}
-
-</div>
-
-`;
-
+practicals[type].forEach((x,i)=>{
+html+=`<div class="step"><b>Step ${i+1}:</b> ${x}</div>`;
 });
 
-html+=`
+html+=`</div>`;
 
-</div>
-
-`;
-
-document
-.getElementById("practicalOutput")
-.innerHTML=html;
-
+document.getElementById("practicalOutput").innerHTML=html;
 }
 
 
-/* ==========================================================
-120+ QUIZ
-========================================================== */
+/* ================= 120+ QUESTION BANK ================= */
 
-const questionBank=[
+const bank=[
 
 ["Computer का brain किसे कहा जाता है?",["Monitor","CPU","Keyboard","Mouse"],1],
 ["RAM किस प्रकार की memory है?",["Temporary","Permanent","Optical","External"],0],
@@ -2344,388 +972,242 @@ const questionBank=[
 ["CPU का पूरा नाम क्या है?",["Central Processing Unit","Computer Personal Unit","Central Program Unit","Control Processing User"],0],
 ["Keyboard क्या है?",["Input Device","Output Device","Storage","Software"],0],
 ["Monitor क्या है?",["Input Device","Output Device","Software","Memory"],1],
-["Printer किस प्रकार का device है?",["Input","Output","Processing","Memory"],1],
-["Mouse का मुख्य उपयोग क्या है?",["Point और Select","Print","Scan","Store"],0],
-["1 Byte में कितने bits होते हैं?",["4","8","16","32"],1],
-["Hardware क्या है?",["Physical parts","Programs","Internet","Data only"],0],
+["Printer क्या है?",["Input","Output","Processing","Memory"],1],
+["Mouse का मुख्य उपयोग?",["Point और Select","Print","Scan","Store"],0],
+["1 Byte में कितने bits?",["4","8","16","32"],1],
+["Hardware क्या है?",["Physical parts","Programs","Internet","Data"],0],
 
 ["Software क्या है?",["Programs","Keyboard","Monitor","CPU"],0],
 ["Windows क्या है?",["Operating System","Browser","Printer","Hardware"],0],
-["Linux क्या है?",["Operating System","Printer","Mouse","RAM"],0],
-["File क्या होती है?",["Stored data","Keyboard","Monitor","CPU"],0],
-["Folder का उपयोग किसलिए होता है?",["Files organize करने","Typing करने","Printing करने","Internet बंद करने"],0],
-["Copy की shortcut key क्या है?",["Ctrl+C","Ctrl+V","Ctrl+X","Ctrl+P"],0],
-["Paste की shortcut key क्या है?",["Ctrl+C","Ctrl+V","Ctrl+X","Ctrl+S"],1],
-["Save की shortcut key क्या है?",["Ctrl+S","Ctrl+A","Ctrl+D","Ctrl+F"],0],
-["Select All की shortcut key क्या है?",["Ctrl+A","Ctrl+B","Ctrl+Z","Ctrl+N"],0],
-["Undo की shortcut key क्या है?",["Ctrl+Z","Ctrl+Y","Ctrl+U","Ctrl+I"],0],
+["File क्या है?",["Stored data","Keyboard","Monitor","CPU"],0],
+["Folder का उपयोग?",["Files organize करना","Typing","Printing","Internet"],0],
+["Copy shortcut?",["Ctrl+C","Ctrl+V","Ctrl+X","Ctrl+P"],0],
+["Paste shortcut?",["Ctrl+C","Ctrl+V","Ctrl+X","Ctrl+S"],1],
+["Save shortcut?",["Ctrl+S","Ctrl+A","Ctrl+D","Ctrl+F"],0],
+["Select All shortcut?",["Ctrl+A","Ctrl+B","Ctrl+Z","Ctrl+N"],0],
+["Undo shortcut?",["Ctrl+Z","Ctrl+Y","Ctrl+U","Ctrl+I"],0],
+["Redo shortcut?",["Ctrl+Y","Ctrl+Z","Ctrl+R","Ctrl+P"],0],
 
-["Redo की shortcut key क्या है?",["Ctrl+Y","Ctrl+Z","Ctrl+R","Ctrl+P"],0],
-["Print की shortcut key क्या है?",["Ctrl+P","Ctrl+T","Ctrl+M","Ctrl+L"],0],
-["Find की shortcut key क्या है?",["Ctrl+F","Ctrl+H","Ctrl+G","Ctrl+K"],0],
-["Cut की shortcut key क्या है?",["Ctrl+X","Ctrl+C","Ctrl+V","Ctrl+Q"],0],
-["Bold की shortcut key क्या है?",["Ctrl+B","Ctrl+I","Ctrl+U","Ctrl+E"],0],
-["Italic की shortcut key क्या है?",["Ctrl+I","Ctrl+B","Ctrl+L","Ctrl+T"],0],
-["Underline की shortcut key क्या है?",["Ctrl+U","Ctrl+B","Ctrl+I","Ctrl+R"],0],
-["MS Word का उपयोग किसलिए होता है?",["Documents","Calculations only","Networking","Hardware"],0],
-["Excel में formula किस symbol से शुरू होता है?",["=","#","@","&"],0],
-["SUM function का उपयोग किसलिए होता है?",["जोड़","घटाना","Print","Save"],0],
+["Print shortcut?",["Ctrl+P","Ctrl+T","Ctrl+M","Ctrl+L"],0],
+["Find shortcut?",["Ctrl+F","Ctrl+H","Ctrl+G","Ctrl+K"],0],
+["Cut shortcut?",["Ctrl+X","Ctrl+C","Ctrl+V","Ctrl+Q"],0],
+["Bold shortcut?",["Ctrl+B","Ctrl+I","Ctrl+U","Ctrl+E"],0],
+["Italic shortcut?",["Ctrl+I","Ctrl+B","Ctrl+L","Ctrl+T"],0],
+["Underline shortcut?",["Ctrl+U","Ctrl+B","Ctrl+I","Ctrl+R"],0],
+["MS Word का उपयोग?",["Documents","Calculations only","Networking","Hardware"],0],
+["Excel formula किस symbol से शुरू?",["=","#","@","&"],0],
+["SUM function?",["जोड़","घटाना","Print","Save"],0],
+["AVERAGE का उपयोग?",["औसत","जोड़","Delete","Copy"],0],
 
-["AVERAGE का उपयोग किसलिए होता है?",["औसत","जोड़","Delete","Copy"],0],
-["PowerPoint किसलिए उपयोग होता है?",["Presentation","Database only","Typing only","Antivirus"],0],
-["PowerPoint में page को क्या कहते हैं?",["Slide","Cell","Row","Record"],0],
+["PowerPoint किसलिए?",["Presentation","Database","Typing","Antivirus"],0],
+["PowerPoint में page?",["Slide","Cell","Row","Record"],0],
 ["Internet क्या है?",["Global network","Only software","Printer","Keyboard"],0],
-["Website खोलने के लिए क्या चाहिए?",["Web Browser","Calculator","Paint","Notepad"],0],
-["Google Chrome क्या है?",["Web Browser","Operating System","Printer","Antivirus"],0],
-["URL का पूरा नाम क्या है?",["Uniform Resource Locator","Universal Record Link","User Resource Line","Uniform Router Link"],0],
-["HTTP का पूरा नाम क्या है?",["HyperText Transfer Protocol","High Text Transfer Program","Hyper Tool Transfer Protocol","Hyperlink Text Program"],0],
-["HTTPS में S क्या दर्शाता है?",["Secure","System","Search","Server"],0],
-["Email का उपयोग किसलिए होता है?",["Electronic messages","Only printing","Only gaming","Hardware repair"],0],
+["Website खोलने के लिए?",["Web Browser","Calculator","Paint","Notepad"],0],
+["Chrome क्या है?",["Web Browser","Operating System","Printer","Antivirus"],0],
+["URL का पूरा नाम?",["Uniform Resource Locator","Universal Record Link","User Resource Line","Uniform Router Link"],0],
+["HTTP का पूरा नाम?",["HyperText Transfer Protocol","High Text Transfer Program","Hyper Tool Transfer Protocol","Hyperlink Text Program"],0],
+["HTTPS में S?",["Secure","System","Search","Server"],0],
+["Email का उपयोग?",["Electronic messages","Printing","Gaming","Hardware"],0],
+["Download का अर्थ?",["Internet से device में file लेना","Delete","Print","Shutdown"],0],
 
-["Download का अर्थ क्या है?",["Internet से device में file लेना","File delete करना","File print करना","Computer बंद करना"],0],
-["Upload का अर्थ क्या है?",["Device से server/internet पर file भेजना","File delete करना","File print करना","Computer restart करना"],0],
-["Search Engine का उदाहरण कौन सा है?",["Google","Windows","Word","Excel"],0],
+["Upload का अर्थ?",["Device से server पर file भेजना","Delete","Print","Restart"],0],
+["Search Engine example?",["Google","Windows","Word","Excel"],0],
 ["Gmail क्या है?",["Email service","Operating System","CPU","Printer"],0],
-["Cloud Storage का उदाहरण क्या है?",["Google Drive","Keyboard","Monitor","CPU"],0],
-["Wi-Fi क्या है?",["Wireless networking technology","Printer","RAM","Software only"],0],
-["Bluetooth किसलिए उपयोग होता है?",["Short-range wireless communication","Printing only","Typing only","CPU processing"],0],
-["LAN का पूरा नाम क्या है?",["Local Area Network","Large Area Network","Long Access Network","Local Access Node"],0],
-["WAN का पूरा नाम क्या है?",["Wide Area Network","Wireless Access Network","World Area Node","Web Access Network"],0],
-["Router का मुख्य काम क्या है?",["Networks के बीच data route करना","Document type करना","Image edit करना","Virus बनाना"],0],
+["Cloud Storage example?",["Google Drive","Keyboard","Monitor","CPU"],0],
+["Wi-Fi क्या है?",["Wireless networking","Printer","RAM","Software"],0],
+["Bluetooth?",["Short-range wireless communication","Printing","Typing","CPU"],0],
+["LAN full form?",["Local Area Network","Large Area Network","Long Access Network","Local Access Node"],0],
+["WAN full form?",["Wide Area Network","Wireless Access Network","World Area Node","Web Access Network"],0],
+["Router का काम?",["Network routing","Typing","Printing","Drawing"],0],
+["IP Address किससे?",["Network addressing","Printing","Keyboard","Formatting"],0],
 
-["IP Address किससे संबंधित है?",["Network addressing","Printing only","Keyboard","Word formatting"],0],
-["DNS का मुख्य काम क्या है?",["Domain names को IP addresses से resolve करना","Files print करना","RAM बढ़ाना","Keyboard control"],0],
-["Cyber Security क्या है?",["Digital systems और data की सुरक्षा","Typing","Drawing","Printing"],0],
-["Strong password कैसा होना चाहिए?",["Letters numbers symbols का मिश्रण","केवल 12345","केवल नाम","केवल जन्मदिन"],0],
-["2FA का उद्देश्य क्या है?",["Extra authentication layer","File compression","Printing","Typing"],0],
-["Phishing क्या है?",["धोखे से information चुराने का प्रयास","Computer cleaning","Typing","Printing"],0],
+["DNS का मुख्य काम?",["Domain name को IP से resolve करना","Print","RAM","Keyboard"],0],
+["Cyber Security क्या है?",["Digital systems की सुरक्षा","Typing","Drawing","Printing"],0],
+["Strong password कैसा?",["Letters numbers symbols","12345","नाम","Birthday"],0],
+["2FA का उद्देश्य?",["Extra authentication layer","Compression","Printing","Typing"],0],
+["Phishing क्या है?",["Information चोरी करने का धोखाधड़ी प्रयास","Cleaning","Typing","Printing"],0],
 ["Malware क्या है?",["Malicious software","Monitor","Keyboard","Printer"],0],
-["Virus क्या है?",["Malicious program/code","Hardware","Monitor","Browser"],0],
-["Antivirus का उपयोग किसलिए होता है?",["Malware detection/protection","Typing","Presentation","Internet speed"],0],
-["Backup क्यों जरूरी है?",["Data loss से बचने के लिए","Monitor साफ करने","Keyboard repair","Internet बंद करने"],0],
+["Virus क्या है?",["Malicious program","Hardware","Monitor","Browser"],0],
+["Antivirus का उपयोग?",["Malware protection","Typing","Presentation","Internet speed"],0],
+["Backup क्यों?",["Data loss से बचने के लिए","Monitor","Keyboard","Internet"],0],
+["Firewall का काम?",["Network traffic filter/control","Typing","Scanning","RAM"],0],
 
-["HTML का पूरा नाम क्या है?",["HyperText Markup Language","HighText Machine Language","Hyper Tool Markup Language","Home Text Markup Language"],0],
-["HTML किसलिए उपयोग होता है?",["Web page structure","Spreadsheet calculation","Antivirus","Operating System"],0],
-["HTML heading के लिए कौन सा tag है?",["h1","p","img","table"],0],
-["Paragraph के लिए कौन सा tag है?",["p","h1","br","img"],0],
-["Link बनाने के लिए कौन सा tag है?",["a","p","h1","div"],0],
-["Image के लिए कौन सा tag है?",["img","image","pic","photo"],0],
-["CSS का पूरा नाम क्या है?",["Cascading Style Sheets","Computer Style System","Creative Sheet Syntax","Colorful Style Software"],0],
-["CSS का उपयोग किसलिए होता है?",["Web page styling","Database backup","CPU processing","Email"],0],
-["JavaScript क्या है?",["Programming/Scripting language","Printer","Monitor","Operating System"],0],
+["HTML full form?",["HyperText Markup Language","HighText Machine Language","Hyper Tool Markup Language","Home Text Markup Language"],0],
+["HTML किसलिए?",["Web structure","Spreadsheet","Antivirus","OS"],0],
+["Heading tag?",["h1","p","img","table"],0],
+["Paragraph tag?",["p","h1","br","img"],0],
+["Link tag?",["a","p","h1","div"],0],
+["Image tag?",["img","image","pic","photo"],0],
+["CSS full form?",["Cascading Style Sheets","Computer Style System","Creative Sheet Syntax","Colorful Style Software"],0],
+["CSS का उपयोग?",["Web styling","Database","CPU","Email"],0],
+["JavaScript क्या है?",["Programming/Scripting language","Printer","Monitor","OS"],0],
 ["Python क्या है?",["Programming language","Browser","Printer","Monitor"],0],
 
-["Python file का सामान्य extension क्या है?",[".py",".html",".css",".jpg"],0],
-["Programming में loop का उपयोग किसलिए होता है?",["Repeated execution","Printing only","Deleting files","Opening monitor"],0],
+["Python extension?",[".py",".html",".css",".jpg"],0],
+["Loop का उपयोग?",["Repeated execution","Printing","Deleting","Monitor"],0],
 ["Function क्या है?",["Reusable block of code","Monitor","Keyboard","Folder"],0],
-["Variable क्या रख सकता है?",["Data/value","Only image","Only printer","Only keyboard"],0],
-["AI का पूरा नाम क्या है?",["Artificial Intelligence","Automatic Internet","Advanced Input","Artificial Internet"],0],
-["Generative AI क्या कर सकती है?",["नया content generate करना","केवल print करना","केवल keyboard चलाना","केवल monitor बंद करना"],0],
-["Prompt क्या है?",["AI को दिया गया instruction/input","Printer","RAM","Folder"],0],
-["SSD का पूरा नाम क्या है?",["Solid State Drive","System Storage Disk","Simple State Data","Solid Storage Device"],0],
-["HDD का पूरा नाम क्या है?",["Hard Disk Drive","High Data Device","Hard Digital Data","Home Disk Drive"],0],
+["Variable क्या रख सकता?",["Data/value","Only image","Only printer","Only keyboard"],0],
+["AI full form?",["Artificial Intelligence","Automatic Internet","Advanced Input","Artificial Internet"],0],
+["Generative AI?",["New content generate करना","Print","Keyboard","Monitor"],0],
+["Prompt क्या है?",["AI को दिया instruction","Printer","RAM","Folder"],0],
+["SSD full form?",["Solid State Drive","System Storage Disk","Simple State Data","Solid Storage Device"],0],
+["HDD full form?",["Hard Disk Drive","High Data Device","Hard Digital Data","Home Disk Drive"],0],
 ["Motherboard क्या है?",["Main circuit board","Software","Browser","Folder"],0],
 
-["GPU किससे संबंधित है?",["Graphics processing","Email","Typing","Folder"],0],
-["USB का पूरा नाम क्या है?",["Universal Serial Bus","United System Bus","Universal Storage Board","User Serial Board"],0],
-["Scanner क्या करता है?",["Physical document/image को digital form में convert करता है","Internet बंद करता है","RAM बढ़ाता है","CPU बदलता है"],0],
-["Operating System का काम क्या है?",["Hardware और software resources manage करना","केवल typing","केवल printing","केवल gaming"],0],
-["Task Manager का उपयोग किसलिए हो सकता है?",["Running processes/apps देखना","Document print करना","Photo scan करना","Keyboard बदलना"],0],
-["Recycle Bin में सामान्यतः क्या जाता है?",["Deleted files","New files","RAM","CPU"],0],
-["File extension किसलिए होती है?",["File type पहचानने में मदद","Computer speed बढ़ाने","Internet बंद करने","RAM साफ करने"],0],
-["PDF का पूरा नाम क्या है?",["Portable Document Format","Personal Data File","Print Document Folder","Public Digital Format"],0],
-["Screenshot क्या है?",["Screen की image/capture","Audio recording","Keyboard","Printer"],0],
-["Caps Lock का उपयोग किसलिए होता है?",["Capital letters typing","Delete","Print","Save"],0],
+["GPU किससे?",["Graphics processing","Email","Typing","Folder"],0],
+["USB full form?",["Universal Serial Bus","United System Bus","Universal Storage Board","User Serial Board"],0],
+["Scanner क्या करता?",["Document को digital form में बदलता","Internet बंद","RAM बढ़ाता","CPU बदलता"],0],
+["Operating System का काम?",["Hardware/software resources manage करना","Typing","Printing","Gaming"],0],
+["Task Manager?",["Running processes/apps देखना","Print","Scan","Keyboard"],0],
+["Recycle Bin में?",["Deleted files","New files","RAM","CPU"],0],
+["File extension?",["File type पहचानने में मदद","Speed","Internet","RAM"],0],
+["PDF full form?",["Portable Document Format","Personal Data File","Print Document Folder","Public Digital Format"],0],
+["Screenshot क्या है?",["Screen image/capture","Audio","Keyboard","Printer"],0],
+["Caps Lock?",["Capital letters typing","Delete","Print","Save"],0],
 
-["Enter key का सामान्य उपयोग क्या है?",["Command/line confirm या new line","Copy","Paste","Bold"],0],
-["Backspace क्या करता है?",["Cursor के बाईं ओर character हटाता है","Print","Save","Copy"],0],
-["Spacebar क्या करता है?",["Space insert करता है","File delete","Print","Copy"],0],
-["Esc key का सामान्य उपयोग क्या है?",["Cancel/exit current operation in many contexts","Save","Print","Paste"],0],
-["F1 key सामान्यतः किससे जुड़ी होती है?",["Help","Save","Print","Delete"],0],
-["Alt+Tab का उपयोग किसलिए होता है?",["Open windows/apps के बीच switch","Copy","Paste","Print"],0],
-["Ctrl+Shift+Esc किसे खोल सकता है?",["Task Manager","Browser","Word","Paint"],0],
-["Booting क्या है?",["Computer start होने की प्रक्रिया","File printing","Typing","Scanning"],0],
-["Cloud computing क्या है?",["Internet-based computing resources/services","Only local typing","Keyboard repair","Monitor cleaning"],0],
+["Enter key?",["Command/line confirm या new line","Copy","Paste","Bold"],0],
+["Backspace?",["Cursor के बाईं ओर character हटाता","Print","Save","Copy"],0],
+["Spacebar?",["Space insert करता","Delete","Print","Copy"],0],
+["Esc key?",["Cancel/exit operation in many contexts","Save","Print","Paste"],0],
+["F1 सामान्यतः?",["Help","Save","Print","Delete"],0],
+["Alt+Tab?",["Apps/windows switch","Copy","Paste","Print"],0],
+["Ctrl+Shift+Esc?",["Task Manager","Browser","Word","Paint"],0],
+["Booting क्या है?",["Computer start होने की प्रक्रिया","Printing","Typing","Scanning"],0],
+["Cloud computing?",["Internet-based computing resources","Typing","Keyboard","Monitor"],0],
 ["Database क्या है?",["Organized collection of data","Keyboard","Monitor","Printer"],0],
 
-["SQL किससे संबंधित है?",["Database querying/language","Graphics card","Keyboard","Power supply"],0],
-["Data Entry में क्या किया जाता है?",["Data को system में enter करना","CPU बनाना","Monitor repair","Internet cable बनाना"],0],
-["Resume किसलिए बनाया जाता है?",["Education/skills/work profile बताने","Password बनाने","Virus हटाने","Printer चलाने"],0],
-["Professional email कैसी होनी चाहिए?",["Clear और respectful","केवल emojis","बहुत अस्पष्ट","बिना subject"],0],
-["Online form submit करने से पहले क्या check करना चाहिए?",["Information सही है या नहीं","Monitor का color","Keyboard brand","CPU temperature"],0],
-["Digital privacy का मतलब क्या है?",["Personal information की सुरक्षा","Printer cleaning","Typing speed","Screen brightness"],0],
-["Encryption किसलिए उपयोग होती है?",["Data को सुरक्षित coded form में बदलने","Typing speed बढ़ाने","Monitor साफ करने","Folder बनाने"],0],
-["Firewall का काम क्या है?",["Network traffic को filter/control करना","Document type करना","Photo scan करना","RAM बदलना"],0],
-["Software update क्यों जरूरी हो सकता है?",["Security fixes और improvements","Keyboard का रंग","Monitor size","Printer paper"],0],
-["Computer सीखने का सबसे अच्छा तरीका क्या है?",["Theory + Practical + Practice","केवल देखना","केवल याद करना","केवल game खेलना"],0],
+["SQL किससे?",["Database querying","Graphics","Keyboard","Power"],0],
+["Data Entry?",["Data system में enter करना","CPU बनाना","Monitor repair","Cable"],0],
+["Resume किसलिए?",["Education/skills/work profile","Password","Virus","Printer"],0],
+["Professional email?",["Clear और respectful","Only emojis","Unclear","No subject"],0],
+["Online form submit से पहले?",["Information check करना","Monitor color","Keyboard brand","CPU"],0],
+["Digital privacy?",["Personal information protection","Printer cleaning","Typing speed","Brightness"],0],
+["Encryption?",["Data को coded form में बदलना","Typing speed","Monitor","Folder"],0],
+["Software update क्यों?",["Security fixes/improvements","Keyboard color","Monitor size","Paper"],0],
+["Computer सीखने का अच्छा तरीका?",["Theory + Practical + Practice","केवल देखना","केवल याद","Game"],0],
+["Excel Row और Column का intersection?",["Cell","Slide","Page","Record"],0],
 
-["MS Word में document save करने की shortcut key क्या है?",["Ctrl+S","Ctrl+P","Ctrl+X","Ctrl+H"],0],
-["Excel में Row और Column के intersection को क्या कहते हैं?",["Cell","Slide","Page","Record"],0],
-["PowerPoint में presentation दिखाने के लिए कौन सा mode उपयोग होता है?",["Slide Show","File Explorer","Task Manager","Control Panel"],0],
-["Web page की styling के लिए किस language का उपयोग होता है?",["CSS","HTML","Python","SQL"],0],
-["Web page में functionality के लिए सामान्यतः क्या उपयोग होता है?",["JavaScript","CSS","PDF","Excel"],0],
-["Python में comment के लिए सामान्यतः कौन सा symbol उपयोग होता है?",["#","@","$","&"],0],
-["Computer में permanent storage का उदाहरण क्या है?",["SSD","RAM","Cache","Register"],0],
-["RAM में data सामान्यतः कब रहता है?",["Computer चलने के दौरान","हमेशा","केवल print करते समय","केवल Internet बंद होने पर"],0],
-["Router किस प्रकार के काम से जुड़ा है?",["Network routing","Document formatting","Photo editing","Typing"],0],
-["2FA account security को कैसे बेहतर बनाता है?",["दूसरा verification factor जोड़कर","Password हटाकर","Internet बंद करके","File delete करके"],0]
+["PowerPoint presentation दिखाने का mode?",["Slide Show","File Explorer","Task Manager","Control Panel"],0],
+["Website styling?",["CSS","HTML","Python","SQL"],0],
+["Website functionality?",["JavaScript","CSS","PDF","Excel"],0],
+["Python comment symbol?",["#","@","$","&"],0],
+["Permanent storage?",["SSD","RAM","Cache","Register"],0],
+["RAM में data सामान्यतः?",["Computer चलने के दौरान","हमेशा","Print","Internet बंद"],0],
+["2FA account security कैसे बढ़ाता?",["Second verification factor","Password हटाकर","Internet बंद","File delete"],0],
+["HTML structure के लिए?",["HTML","CSS","Excel","PowerPoint"],0],
+["CSS layout में क्या उपयोग हो सकता?",["Flexbox","CPU","RAM","SMTP"],0],
+["JavaScript में button click handle?",["Event","Folder","Printer","RAM"],0]
 
 ];
 
 
-/* ==========================================================
-QUIZ ENGINE
-========================================================== */
+/* ================= QUIZ ================= */
 
-let quizQuestions=[];
-let quizIndex=0;
-let answers={};
+let quiz=[],qi=0,answers={};
 
-
-function shuffle(array){
-
-return array
-.map(item=>({
-item:item,
-sort:Math.random()
-}))
-.sort((a,b)=>a.sort-b.sort)
-.map(obj=>obj.item);
-
+function shuffle(a){
+return a.map(x=>({x,r:Math.random()}))
+.sort((a,b)=>a.r-b.r).map(x=>x.x);
 }
-
 
 function startQuiz(){
-
-quizQuestions=
-shuffle([...questionBank])
-.slice(0,20);
-
-quizIndex=0;
-
+quiz=shuffle([...bank]).slice(0,20);
+qi=0;
 answers={};
-
-document
-.getElementById("quizResult")
-.innerHTML="";
-
-renderQuestion();
-
+document.getElementById("quizResult").innerHTML="";
+renderQ();
 }
 
+function renderQ(){
 
-function renderQuestion(){
+let q=quiz[qi];
 
-let q=quizQuestions[quizIndex];
+document.getElementById("qNo").innerText=qi+1;
 
-document
-.getElementById("questionNumber")
-.innerText=
-quizIndex+1;
+let html=`<div class="question"><h3>${qi+1}. ${q[0]}</h3>`;
 
-let html=`
-
-<div class="question">
-
-<h3>
-${quizIndex+1}. ${q[0]}
-</h3>
-
-`;
-
-q[1].forEach((option,i)=>{
-
-let checked=
-answers[quizIndex]===i
-?
-"checked"
-:
-"";
-
+q[1].forEach((op,i)=>{
 html+=`
-
 <label class="option">
-
-<input
-type="radio"
-name="answer"
-value="${i}"
-${checked}
-onchange="saveAnswer(${i})">
-
-${String.fromCharCode(65+i)}.
-${option}
-
-</label>
-
-`;
-
+<input type="radio" name="answer"
+${answers[qi]===i?"checked":""}
+onchange="answers[${qi}]=${i};updateScore()">
+${String.fromCharCode(65+i)}. ${op}
+</label>`;
 });
 
-html+=`
+html+=`</div>`;
 
-</div>
+document.getElementById("quizArea").innerHTML=html;
 
-`;
-
-document
-.getElementById("quizArea")
-.innerHTML=html;
-
-updateLiveScore();
-
+updateScore();
 }
 
+function updateScore(){
 
-function saveAnswer(value){
+let s=0;
 
-answers[quizIndex]=value;
+quiz.forEach((q,i)=>{
+if(answers[i]===q[2])s++;
+});
 
-updateLiveScore();
-
+document.getElementById("score").innerText=s;
 }
 
+function nextQ(){
 
-function nextQuestion(){
-
-if(quizIndex<19){
-
-quizIndex++;
-
-renderQuestion();
-
+if(qi<19){
+qi++;
+renderQ();
 }else{
-
-alert("यह आखिरी प्रश्न है। Submit Quiz दबाएँ।");
-
+alert("यह आखिरी question है। Submit दबाएँ।");
 }
 
 }
 
+function prevQ(){
 
-function previousQuestion(){
-
-if(quizIndex>0){
-
-quizIndex--;
-
-renderQuestion();
-
+if(qi>0){
+qi--;
+renderQ();
 }
 
 }
 
+function submitQuiz(){
 
-function calculateScore(){
+let s=0;
 
-let score=0;
-
-quizQuestions.forEach((q,i)=>{
-
-if(answers[i]===q[2]){
-
-score++;
-
-}
-
+quiz.forEach((q,i)=>{
+if(answers[i]===q[2])s++;
 });
 
-return score;
+let p=Math.round(s/20*100);
 
-}
-
-
-function updateLiveScore(){
-
-document
-.getElementById("liveScore")
-.innerText=
-calculateScore();
-
-}
-
-
-function finishQuiz(){
-
-let unanswered=
-quizQuestions.filter(
-(q,i)=>answers[i]===undefined
-).length;
-
-if(unanswered>0){
-
-if(!confirm(
-`आपके ${unanswered} questions unanswered हैं। फिर भी Submit करें?`
-)){
-
-return;
-
-}
-
-}
-
-let score=calculateScore();
-
-let percent=
-Math.round((score/20)*100);
-
-let message=
-percent>=80
-?
-"🏆 Excellent! बहुत बढ़िया!"
-:
-percent>=60
-?
-"👍 Good! आपका प्रदर्शन अच्छा है।"
-:
-percent>=40
-?
-"📚 ठीक है, कुछ topics फिर से पढ़ें।"
-:
-"💪 Basic lessons की दोबारा practice करें।";
-
-document
-.getElementById("quizResult")
-.innerHTML=`
-
+document.getElementById("quizResult").innerHTML=`
 <div class="result">
-
 <h2>🎉 Quiz Result</h2>
-
-<p>
-<strong>Score:</strong>
-${score}/20
-</p>
-
-<p>
-<strong>Percentage:</strong>
-${percent}%
-</p>
-
 <br>
-
-<p>${message}</p>
-
+<p><b>Score:</b> ${s}/20</p>
+<p><b>Percentage:</b> ${p}%</p>
 <br>
-
-<button
-class="btn blue"
-onclick="startQuiz()">
-🔄 Retake Quiz
-</button>
-
+<p>
+${p>=80?"🏆 Excellent!":
+p>=60?"👍 Good!":
+p>=40?"📚 और practice करें।":
+"💪 Basic lessons दोबारा पढ़ें।"}
+</p>
+<br>
+<button class="btn blue" onclick="startQuiz()">🔄 Retake Quiz</button>
 </div>
-
 `;
 
 }
 
 
-/* ==========================================================
-START
-========================================================== */
+/* ================= START ================= */
 
-showHome();
+home();
 
 </script>
 
