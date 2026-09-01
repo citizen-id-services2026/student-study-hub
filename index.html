@@ -2,151 +2,349 @@
 <html lang="hi">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Kids Learning Hub | Class 1 English & Maths</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kids Learning Hub - Class 1</title>
 
 <style>
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
+*{
+    box-sizing:border-box;
+}
+
 body{
- margin:0;
- font-family:Arial,"Noto Sans",sans-serif;
- background:linear-gradient(135deg,#fff3a8,#c9f7ff,#ffd8ed,#d9ffd8);
- color:#222;
+    margin:0;
+    font-family:Arial,"Noto Sans",sans-serif;
+    background:linear-gradient(135deg,#fff4a8,#c8f7ff,#ffd8ed,#d7ffd9);
+    color:#222;
 }
+
 header{
- background:linear-gradient(90deg,#ff416c,#7b61ff,#00b894);
- color:#fff;
- text-align:center;
- padding:25px 10px;
- box-shadow:0 5px 15px #0003;
+    background:linear-gradient(90deg,#ff416c,#7b61ff,#00b894);
+    color:white;
+    text-align:center;
+    padding:25px 12px;
+    box-shadow:0 5px 18px #0003;
 }
-header h1{margin:0;font-size:30px}
-header p{margin:7px 0}
-.container{max-width:1150px;margin:auto;padding:12px}
-.topbar{
- display:flex;justify-content:center;flex-wrap:wrap;gap:10px;
- margin:15px 0;
+
+header h1{
+    margin:0;
+    font-size:30px;
 }
+
+header p{
+    margin:7px 0 0;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:12px;
+}
+
+.top-buttons{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    flex-wrap:wrap;
+    margin:15px 0;
+}
+
 button{
- border:0;border-radius:15px;padding:12px 18px;
- font-size:15px;font-weight:bold;cursor:pointer;
- box-shadow:0 4px 10px #0002;
- transition:.2s;
+    border:0;
+    border-radius:15px;
+    padding:12px 18px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    box-shadow:0 4px 10px #0002;
 }
-button:active{transform:scale(.96)}
-.sound{background:#222;color:#fff}
-.reset{background:#ff9800;color:#fff}
+
+button:active{
+    transform:scale(.97);
+}
+
+.sound{
+    background:#222;
+    color:white;
+}
 
 .home{
- background:#ffffffee;border-radius:25px;padding:20px;
- box-shadow:0 7px 25px #0002;
+    background:#ffffffee;
+    border-radius:25px;
+    padding:18px;
+    box-shadow:0 7px 25px #0002;
 }
-.home h2{text-align:center;color:#6138d7}
 
-.subject{
- width:100%;display:block;text-align:left;color:#fff;
- padding:20px;margin:14px 0;font-size:20px;
+.home-title{
+    text-align:center;
+    color:#6138d7;
 }
-.english{background:linear-gradient(90deg,#ff416c,#845ec2)}
-.math{background:linear-gradient(90deg,#00b894,#0984e3)}
 
-.subject small{display:block;margin-top:5px}
+.subject-btn{
+    width:100%;
+    color:white;
+    text-align:left;
+    padding:20px;
+    margin:12px 0;
+    font-size:20px;
+}
+
+.english-btn{
+    background:linear-gradient(90deg,#ff416c,#845ec2);
+}
+
+.math-btn{
+    background:linear-gradient(90deg,#00b894,#0984e3);
+}
+
+.subject-btn small{
+    display:block;
+    margin-top:7px;
+    font-size:13px;
+}
 
 .section{
- display:none;background:#fff;border-radius:20px;
- padding:18px;margin:10px 0 20px;
- box-shadow:0 5px 18px #0002;
+    display:none;
+    background:white;
+    border-radius:20px;
+    padding:16px;
+    margin:8px 0 18px;
+    box-shadow:0 5px 18px #0002;
 }
-.section.open{display:block}
-.section h2{color:#d63384}
 
-.subbtn{
- width:100%;display:block;text-align:left;color:#fff;
- background:linear-gradient(90deg,#6c5ce7,#a55eea);
- margin:9px 0;padding:16px;font-size:17px;
+.section.open{
+    display:block;
+}
+
+.topic-btn{
+    width:100%;
+    text-align:left;
+    color:white;
+    background:linear-gradient(90deg,#6c5ce7,#a55eea);
+    margin:7px 0;
+    padding:16px;
 }
 
 .grid{
- display:grid;
- grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
- gap:12px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(135px,1fr));
+    gap:12px;
 }
+
 .card{
- background:linear-gradient(145deg,#fff,#f4f0ff);
- border:2px solid #ded7ff;
- border-radius:18px;
- padding:14px;text-align:center;
- min-height:130px;
+    background:linear-gradient(145deg,#fff,#f2efff);
+    border:2px solid #ddd5ff;
+    border-radius:18px;
+    padding:14px;
+    text-align:center;
+    min-height:125px;
 }
-.pic{font-size:42px}
-.en{font-weight:bold;color:#1565c0;font-size:18px;margin-top:5px}
-.hi{color:#555;margin-top:5px}
-.example{
- background:#fff8d6;border-left:6px solid #ffb703;
- border-radius:12px;padding:14px;margin:8px 0;
- line-height:1.8;
+
+.pic{
+    font-size:40px;
 }
-.math-example{
- background:#eefcff;border:2px solid #8bdbea;
- border-radius:15px;padding:15px;margin:10px 0;
- font-size:18px;
+
+.en{
+    color:#1565c0;
+    font-size:18px;
+    font-weight:bold;
+    margin-top:5px;
 }
+
+.hi{
+    color:#555;
+    margin-top:5px;
+}
+
 .number-grid{
- display:grid;
- grid-template-columns:repeat(auto-fit,minmax(90px,1fr));
- gap:8px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(75px,1fr));
+    gap:8px;
 }
-.num{
- background:#fff8dc;border:2px solid #ffd166;
- border-radius:12px;text-align:center;padding:10px;
+
+.number{
+    background:#fff8dc;
+    border:2px solid #ffd166;
+    border-radius:12px;
+    padding:10px;
+    text-align:center;
 }
-.num b{font-size:22px;color:#e65100}
+
+.number b{
+    color:#e65100;
+    font-size:21px;
+}
+
+.example{
+    background:#fff8d6;
+    border-left:6px solid #ffb703;
+    border-radius:12px;
+    padding:13px;
+    margin:8px 0;
+    line-height:1.7;
+}
+
+.table-box{
+    background:#fff8d6;
+    border:3px solid #ffd166;
+    border-radius:18px;
+    padding:15px;
+    margin:15px 0;
+}
+
+.table-title{
+    text-align:center;
+    color:#6c35c9;
+    font-size:22px;
+    font-weight:bold;
+    margin-bottom:12px;
+}
+
+/* IMPORTANT:
+   TABLE NUMBERS TOP TO BOTTOM
+*/
+.table-numbers{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+
+.table-number{
+    background:white;
+    border:2px solid #ffb703;
+    border-radius:12px;
+    padding:12px;
+    text-align:center;
+    font-size:21px;
+    font-weight:bold;
+    color:#1565c0;
+}
+
 .lesson-area{
- display:none;background:#fff;border-radius:20px;
- padding:18px;margin-top:20px;
- box-shadow:0 5px 18px #0002;
+    display:none;
+    background:white;
+    border-radius:20px;
+    padding:18px;
+    margin-top:20px;
+    box-shadow:0 5px 18px #0002;
 }
-.lesson-area.open{display:block}
-.lesson-title{color:#d63384}
+
+.lesson-area.open{
+    display:block;
+}
+
+.lesson-title{
+    color:#d63384;
+}
+
 .explain{
- background:#effcff;border-left:6px solid #00b8d4;
- border-radius:12px;padding:15px;line-height:1.8;
+    background:#effcff;
+    border-left:6px solid #00b8d4;
+    border-radius:12px;
+    padding:15px;
+    line-height:1.8;
 }
+
 .quiz{
- margin-top:20px;background:#f4fbff;
- border:3px solid #75d7e7;border-radius:20px;padding:18px;
+    background:#f4fbff;
+    border:3px solid #75d7e7;
+    border-radius:20px;
+    padding:18px;
+    margin-top:20px;
 }
-.progress{height:14px;background:#ddd;border-radius:20px;overflow:hidden}
+
+.progress{
+    height:14px;
+    background:#ddd;
+    border-radius:20px;
+    overflow:hidden;
+}
+
 .progressbar{
- height:100%;width:0%;
- background:linear-gradient(90deg,#00b894,#6c5ce7);
- transition:.3s;
+    width:0;
+    height:100%;
+    background:linear-gradient(90deg,#00b894,#6c5ce7);
+    transition:.3s;
 }
-.question{font-size:19px;line-height:1.7;margin:15px 0}
+
+.question{
+    font-size:19px;
+    line-height:1.7;
+    margin:15px 0;
+}
+
 .option{
- width:100%;display:block;text-align:left;
- background:#fff;border:2px solid #ddd;
- margin:8px 0;
+    width:100%;
+    text-align:left;
+    background:white;
+    border:2px solid #ddd;
+    margin:8px 0;
 }
-.option.correct{background:#b9f6ca;border-color:#20a34a}
-.option.wrong{background:#ffcdd2;border-color:#e53935}
-.option:disabled{cursor:not-allowed}
-.feedback{min-height:50px;font-size:18px;font-weight:bold}
-.quiznav{
- display:flex;justify-content:center;gap:10px;
- flex-wrap:wrap;margin-top:12px;
+
+.option.correct{
+    background:#b9f6ca;
+    border-color:#20a34a;
 }
-.prev{background:#555;color:#fff}
-.next{background:#00a884;color:#fff}
-.score{text-align:center;font-size:20px;font-weight:bold}
-footer{text-align:center;padding:25px;font-weight:bold}
+
+.option.wrong{
+    background:#ffcdd2;
+    border-color:#e53935;
+}
+
+.feedback{
+    min-height:55px;
+    font-size:18px;
+    font-weight:bold;
+    margin-top:10px;
+}
+
+.quiz-nav{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    flex-wrap:wrap;
+    margin-top:12px;
+}
+
+.prev{
+    background:#555;
+    color:white;
+}
+
+.next{
+    background:#00a884;
+    color:white;
+}
+
+.score{
+    text-align:center;
+    font-size:20px;
+    font-weight:bold;
+}
+
+footer{
+    text-align:center;
+    padding:25px;
+    font-weight:bold;
+}
 
 @media(max-width:600px){
- header h1{font-size:24px}
- .grid{grid-template-columns:repeat(2,1fr)}
- .number-grid{grid-template-columns:repeat(3,1fr)}
- .question{font-size:17px}
+
+    header h1{
+        font-size:24px;
+    }
+
+    .grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .number-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .question{
+        font-size:17px;
+    }
 }
 </style>
 </head>
@@ -154,62 +352,103 @@ footer{text-align:center;padding:25px;font-weight:bold}
 <body>
 
 <header>
+
 <h1>🌈 Kids Learning Hub</h1>
+
 <p>🇬🇧 Class 1 English + 🧮 Class 1 Maths</p>
-<p>सीखो • देखो • खेलो • Practice करो 🎉</p>
+
+<p>सीखो • देखो • बोलो • Practice करो 🎉</p>
+
 </header>
 
 <div class="container">
 
-<div class="topbar">
-<button class="sound" id="soundBtn" onclick="toggleSound()">🔊 Sound ON</button>
-<button class="reset" onclick="resetQuiz()">🔄 Reset Quiz</button>
+<div class="top-buttons">
+
+<button class="sound" id="soundBtn" onclick="toggleSound()">
+🔊 Sound ON
+</button>
+
 </div>
 
 <div class="home">
 
-<h2>📚 Class 1 Complete Learning</h2>
+<h2 class="home-title">
+📚 Class 1 Complete Learning
+</h2>
+
 <p style="text-align:center">
-👇 पहले English या Maths चुनें।<br>
-फिर जिस topic को पढ़ना हो उसके button पर क्लिक करें।
+जिस Topic को पढ़ना है उसके Button पर क्लिक करें।
 </p>
+
 
 <!-- ================= ENGLISH ================= -->
 
-<button class="subject english" onclick="toggle('englishMenu')">
-🇬🇧 ENGLISH — CLASS 1
-<small>Alphabet • Vocabulary • Grammar • Sentences • Reading</small>
+<button class="subject-btn english-btn"
+onclick="toggleSection('englishMenu')">
+
+🇬🇧 ENGLISH
+
+<small>
+Alphabet • Numbers • Vocabulary • Grammar • Sentences • Quiz
+</small>
+
 </button>
+
 
 <div id="englishMenu" class="section">
 
 <h2>🇬🇧 Class 1 English</h2>
 
-<button class="subbtn" onclick="toggle('alphabet')">
+
+<button class="topic-btn"
+onclick="toggleSection('alphabet')">
+
 🔤 Alphabet A–Z
+
 </button>
+
 
 <div id="alphabet" class="section">
+
 <h2>🔤 Alphabet A–Z</h2>
+
 <div id="alphabetGrid" class="grid"></div>
+
 </div>
 
-<button class="subbtn" onclick="toggle('englishNumbers')">
+
+
+<button class="topic-btn"
+onclick="toggleSection('englishNumbers')">
+
 🔢 Numbers 1–100
+
 </button>
+
 
 <div id="englishNumbers" class="section">
+
 <h2>🔢 English Numbers 1–100</h2>
-<div id="englishNumberGrid" class="number-grid"></div>
+
+<div id="englishNumberGrid"
+class="number-grid"></div>
+
 </div>
 
-<button class="subbtn" onclick="toggle('englishVocabulary')">
-🌟 Vocabulary
+
+
+<button class="topic-btn"
+onclick="toggleSection('vocabulary')">
+
+🌟 Vocabulary / शब्दावली
+
 </button>
 
-<div id="englishVocabulary" class="section">
 
-<h2>🌟 Vocabulary / शब्दावली</h2>
+<div id="vocabulary" class="section">
+
+<h2>🌟 Vocabulary</h2>
 
 <h3>🍎 Fruits / फल</h3>
 <div id="fruits" class="grid"></div>
@@ -232,25 +471,13 @@ footer{text-align:center;padding:25px;font-weight:bold}
 <h3>🏫 School Things / स्कूल की चीजें</h3>
 <div id="school" class="grid"></div>
 
-<h3>🏠 Home Things / घर की चीजें</h3>
-<div id="homeThings" class="grid"></div>
-
 <h3>🐦 Birds / पक्षी</h3>
 <div id="birds" class="grid"></div>
 
 <h3>🚗 Transport / वाहन</h3>
 <div id="transport" class="grid"></div>
 
-<h3>👕 Clothes / कपड़े</h3>
-<div id="clothes" class="grid"></div>
-
-<h3>🍽️ Food / भोजन</h3>
-<div id="food" class="grid"></div>
-
-<h3>🌳 Nature / प्रकृति</h3>
-<div id="nature" class="grid"></div>
-
-<h3>📅 Days of Week / सप्ताह के दिन</h3>
+<h3>📅 Days / सप्ताह के दिन</h3>
 <div id="days" class="grid"></div>
 
 <h3>🗓️ Months / महीने</h3>
@@ -258,235 +485,336 @@ footer{text-align:center;padding:25px;font-weight:bold}
 
 </div>
 
-<button class="subbtn" onclick="toggle('englishLessons')">
-📖 English Lessons
+
+
+<button class="topic-btn"
+onclick="toggleSection('englishLessons')">
+
+📖 English Lessons + 50 Questions
+
 </button>
+
 
 <div id="englishLessons" class="section">
+
 <h2>📖 English Lessons</h2>
+
 <div id="englishLessonButtons"></div>
-</div>
 
 </div>
 
+</div>
 
-<!-- ================= MATHS ================= -->
 
-<button class="subject math" onclick="toggle('mathMenu')">
-🧮 MATHS — CLASS 1
-<small>Numbers • Addition • Subtraction • Tables • Shapes • Time • Money</small>
+
+<!-- ================= MATH ================= -->
+
+<button class="subject-btn math-btn"
+onclick="toggleSection('mathMenu')">
+
+🧮 MATHS
+
+<small>
+Counting • Addition • Subtraction • Tables • Shapes • Time • Money • Quiz
+</small>
+
 </button>
+
 
 <div id="mathMenu" class="section">
 
 <h2>🧮 Class 1 Maths</h2>
 
-<button class="subbtn" onclick="toggle('mathCounting')">
+
+<button class="topic-btn"
+onclick="toggleSection('counting')">
+
 🔢 Counting 1–1000
+
 </button>
 
-<div id="mathCounting" class="section">
+
+<div id="counting" class="section">
+
 <h2>🔢 Counting 1–1000</h2>
+
 <div id="countingGrid" class="number-grid"></div>
+
 </div>
 
 
-<button class="subbtn" onclick="toggle('tables')">
-✖️ Tables 1–50
+
+<button class="topic-btn"
+onclick="toggleSection('tables')">
+
+📚 Tables 1–50
+
 </button>
+
 
 <div id="tables" class="section">
-<h2>✖️ Tables 1–50</h2>
+
+<h2>📚 Tables 1–50</h2>
+
+<p>
+पहाड़े अब <b>ऊपर से नीचे</b> दिखाई देंगे।
+<br>
+× और = नहीं दिखाया जाएगा।
+</p>
+
 <div id="tablesContent"></div>
-</div>
-
-
-<button class="subbtn" onclick="toggle('mathTopics')">
-🌟 Maths Topics & Examples
-</button>
-
-<div id="mathTopics" class="section">
-
-<h2>🌟 Maths Topics</h2>
-
-<h3>🔢 Numbers / संख्याएँ</h3>
-<div id="numbersExamples"></div>
-
-<h3>➕ Addition / जोड़</h3>
-<div id="additionExamples"></div>
-
-<h3>➖ Subtraction / घटाव</h3>
-<div id="subtractionExamples"></div>
-
-<h3>✖️ Multiplication / गुणा</h3>
-<div id="multiplicationExamples"></div>
-
-<h3>➗ Division / भाग</h3>
-<div id="divisionExamples"></div>
-
-<h3>🔢 Before, After & Between</h3>
-<div id="beforeExamples"></div>
-
-<h3>⬆️ Ascending & Descending Order</h3>
-<div id="orderExamples"></div>
-
-<h3>⚖️ Greater, Less & Equal</h3>
-<div id="greaterExamples"></div>
-
-<h3>📐 Shapes / आकृतियाँ</h3>
-<div id="shapeExamples" class="grid"></div>
-
-<h3>📏 Measurement / माप</h3>
-<div id="measurementExamples"></div>
-
-<h3>🕐 Time / समय</h3>
-<div id="timeExamples"></div>
-
-<h3>💰 Money / पैसा</h3>
-<div id="moneyExamples"></div>
-
-<h3>🍕 Fractions / भिन्न</h3>
-<div id="fractionExamples"></div>
-
-<h3>🧩 Patterns / पैटर्न</h3>
-<div id="patternExamples"></div>
-
-<h3>📊 Data Handling / आँकड़े</h3>
-<div id="dataExamples"></div>
 
 </div>
 
 
-<button class="subbtn" onclick="toggle('mathLessons')">
-📚 Maths Lessons & 50 Questions
+
+<button class="topic-btn"
+onclick="toggleSection('mathExamples')">
+
+🌟 Maths Examples / गणित उदाहरण
+
 </button>
+
+
+<div id="mathExamples" class="section">
+
+<h2>🌟 Maths Examples</h2>
+
+<div id="mathExampleContent"></div>
+
+</div>
+
+
+
+<button class="topic-btn"
+onclick="toggleSection('mathLessons')">
+
+📚 Maths Lessons + 50 Questions
+
+</button>
+
 
 <div id="mathLessons" class="section">
-<h2>📚 Class 1 Maths Lessons</h2>
+
+<h2>📚 Maths Lessons</h2>
+
 <div id="mathLessonButtons"></div>
-</div>
 
 </div>
 
 </div>
 
-<!-- ================= QUIZ AREA ================= -->
+</div>
+
+
+
+<!-- ================= LESSON AREA ================= -->
 
 <div id="lessonArea" class="lesson-area">
 
-<h2 id="lessonTitle" class="lesson-title"></h2>
+<h2 id="lessonTitle"
+class="lesson-title"></h2>
 
-<div id="lessonExplain" class="explain"></div>
+<div id="lessonExplain"
+class="explain"></div>
 
 <h3>🌟 Examples / उदाहरण</h3>
+
 <div id="lessonExamples"></div>
+
 
 <div class="quiz">
 
 <h2>📝 Practice Quiz</h2>
 
 <div class="progress">
-<div id="progressbar" class="progressbar"></div>
+
+<div id="progressbar"
+class="progressbar"></div>
+
 </div>
 
 <p id="qNumber"></p>
 
-<div id="question" class="question"></div>
+<div id="question"
+class="question"></div>
 
 <div id="options"></div>
 
-<div id="feedback" class="feedback"></div>
+<div id="feedback"
+class="feedback"></div>
 
-<div class="quiznav">
-<button class="prev" onclick="previousQuestion()">⬅️ Previous</button>
-<button class="next" onclick="nextQuestion()">Next Question ➡️</button>
+<div class="quiz-nav">
+
+<button class="prev"
+onclick="previousQuestion()">
+
+⬅️ Previous
+
+</button>
+
+<button class="next"
+onclick="nextQuestion()">
+
+Next Question ➡️
+
+</button>
+
 </div>
 
 <p class="score">
-🏆 Score: <span id="score">0</span>/50
+
+🏆 Score:
+<span id="score">0</span>/50
+
 </p>
 
 </div>
+
 </div>
 
 </div>
+
 
 <footer>
-🌟 Kids Learning Hub 🌟<br>
-🇬🇧 English + 🧮 Maths
+
+🌟 Kids Learning Hub 🌟
+<br>
+Class 1 • English + Maths
+
 </footer>
+
 
 
 <script>
 
 /* =====================================================
-SOUND
-===================================================== */
-
-let soundOn=true;
-let audioCtx=null;
-
-function audio(){
- if(!audioCtx){
-  audioCtx=new(window.AudioContext||window.webkitAudioContext)();
- }
- if(audioCtx.state==="suspended")audioCtx.resume();
- return audioCtx;
-}
-
-function tone(freq,duration,delay=0){
- if(!soundOn)return;
- setTimeout(()=>{
-  try{
-   const a=audio();
-   const o=a.createOscillator();
-   const g=a.createGain();
-   o.type="sine";
-   o.frequency.value=freq;
-   g.gain.setValueAtTime(.001,a.currentTime);
-   g.gain.exponentialRampToValueAtTime(.25,a.currentTime+.02);
-   g.gain.exponentialRampToValueAtTime(.001,a.currentTime+duration);
-   o.connect(g);
-   g.connect(a.destination);
-   o.start();
-   o.stop(a.currentTime+duration+.05);
-  }catch(e){}
- },delay);
-}
-
-function clap(){
- tone(700,.08,0);
- tone(900,.08,100);
- tone(700,.08,200);
- tone(1000,.12,300);
-}
-
-function wrongSound(){
- tone(300,.12,0);
- tone(450,.12,140);
- tone(280,.15,280);
-}
-
-function toggleSound(){
- soundOn=!soundOn;
- document.getElementById("soundBtn").innerHTML=
- soundOn?"🔊 Sound ON":"🔇 Sound OFF";
- if(soundOn)clap();
-}
-
-
-/* =====================================================
 TOGGLE
 ===================================================== */
 
-function toggle(id){
- const el=document.getElementById(id);
- el.classList.toggle("open");
+function toggleSection(id){
 
- if(el.classList.contains("open")){
-  el.scrollIntoView({behavior:"smooth",block:"start"});
- }
+    const el=document.getElementById(id);
+
+    el.classList.toggle("open");
+
 }
+
+
+
+/* =====================================================
+SOUND SYSTEM
+===================================================== */
+
+let soundOn=true;
+
+let audioCtx=null;
+
+
+function getAudio(){
+
+    if(!audioCtx){
+
+        audioCtx=
+        new(
+            window.AudioContext ||
+            window.webkitAudioContext
+        )();
+
+    }
+
+    if(audioCtx.state==="suspended"){
+        audioCtx.resume();
+    }
+
+    return audioCtx;
+}
+
+
+function tone(freq,time,delay){
+
+    if(!soundOn)return;
+
+    setTimeout(()=>{
+
+        try{
+
+            const ctx=getAudio();
+
+            const osc=ctx.createOscillator();
+
+            const gain=ctx.createGain();
+
+            osc.type="sine";
+
+            osc.frequency.value=freq;
+
+            gain.gain.setValueAtTime(
+                0.001,
+                ctx.currentTime
+            );
+
+            gain.gain.exponentialRampToValueAtTime(
+                .25,
+                ctx.currentTime+.02
+            );
+
+            gain.gain.exponentialRampToValueAtTime(
+                .001,
+                ctx.currentTime+time
+            );
+
+            osc.connect(gain);
+
+            gain.connect(ctx.destination);
+
+            osc.start();
+
+            osc.stop(
+                ctx.currentTime+time+.05
+            );
+
+        }catch(e){}
+
+    },delay);
+
+}
+
+
+function clap(){
+
+    tone(650,.08,0);
+    tone(850,.08,100);
+    tone(650,.08,200);
+    tone(1000,.12,300);
+
+}
+
+
+function wrongSound(){
+
+    tone(300,.12,0);
+    tone(220,.12,150);
+
+}
+
+
+function toggleSound(){
+
+    soundOn=!soundOn;
+
+    document.getElementById("soundBtn").innerHTML=
+
+    soundOn
+    ?"🔊 Sound ON"
+    :"🔇 Sound OFF";
+
+    if(soundOn){
+        clap();
+    }
+
+}
+
 
 
 /* =====================================================
@@ -494,6 +822,7 @@ ALPHABET
 ===================================================== */
 
 const alphabet=[
+
 ["A","Apple","सेब","🍎"],
 ["B","Ball","गेंद","⚽"],
 ["C","Cat","बिल्ली","🐱"],
@@ -520,32 +849,55 @@ const alphabet=[
 ["X","Xylophone","वाद्य यंत्र","🎵"],
 ["Y","Yak","याक","🐂"],
 ["Z","Zebra","ज़ेब्रा","🦓"]
+
 ];
 
-function makeCards(data,id){
- let html="";
- data.forEach(x=>{
-  html+=`
-  <div class="card">
-   <div class="pic">${x[2]||x[3]||"🌟"}</div>
-   <div class="en">${x[0]}</div>
-   <div class="hi">${x[1]}</div>
-  </div>`;
- });
- document.getElementById(id).innerHTML=html;
-}
 
-let ahtml="";
-alphabet.forEach(x=>{
- ahtml+=`
- <div class="card">
-  <div class="pic">${x[3]}</div>
-  <div style="font-size:30px;font-weight:bold;color:#e84393">${x[0]}</div>
-  <div class="en">${x[0]} for ${x[1]}</div>
-  <div class="hi">${x[2]}</div>
- </div>`;
+let alphabetHTML="";
+
+
+alphabet.forEach(item=>{
+
+    alphabetHTML+=`
+
+    <div class="card">
+
+        <div class="pic">
+            ${item[3]}
+        </div>
+
+        <div style="
+        font-size:30px;
+        font-weight:bold;
+        color:#e84393">
+
+            ${item[0]}
+
+        </div>
+
+        <div class="en">
+
+            ${item[0]} for ${item[1]}
+
+        </div>
+
+        <div class="hi">
+
+            ${item[2]}
+
+        </div>
+
+    </div>
+
+    `;
+
 });
-document.getElementById("alphabetGrid").innerHTML=ahtml;
+
+
+document.getElementById(
+    "alphabetGrid"
+).innerHTML=alphabetHTML;
+
 
 
 /* =====================================================
@@ -553,32 +905,74 @@ ENGLISH NUMBERS
 ===================================================== */
 
 const ones=[
-"Zero","One","Two","Three","Four","Five","Six","Seven",
-"Eight","Nine","Ten","Eleven","Twelve","Thirteen",
-"Fourteen","Fifteen","Sixteen","Seventeen","Eighteen","Nineteen"
+
+"Zero","One","Two","Three","Four",
+"Five","Six","Seven","Eight","Nine",
+"Ten","Eleven","Twelve","Thirteen",
+"Fourteen","Fifteen","Sixteen",
+"Seventeen","Eighteen","Nineteen"
+
 ];
+
 
 const tens=[
-"","","Twenty","Thirty","Forty","Fifty","Sixty",
-"Seventy","Eighty","Ninety"
+
+"","","Twenty","Thirty","Forty",
+"Fifty","Sixty","Seventy","Eighty","Ninety"
+
 ];
 
+
 function numberName(n){
- if(n<20)return ones[n];
- if(n<100)
- return tens[Math.floor(n/10)] +
- (n%10? "-"+ones[n%10].toLowerCase():"");
- return "One Hundred";
+
+    if(n<20){
+        return ones[n];
+    }
+
+    if(n<100){
+
+        return tens[Math.floor(n/10)]
+        +
+        (
+            n%10
+            ?
+            "-"+ones[n%10].toLowerCase()
+            :""
+        );
+
+    }
+
+    return "One Hundred";
+
 }
 
-let enNums="";
+
+let englishNumberHTML="";
+
+
 for(let i=1;i<=100;i++){
- enNums+=`
- <div class="num">
-  <b>${i}</b><br>${numberName(i)}
- </div>`;
+
+    englishNumberHTML+=`
+
+    <div class="number">
+
+        <b>${i}</b>
+
+        <br>
+
+        ${numberName(i)}
+
+    </div>
+
+    `;
+
 }
-document.getElementById("englishNumberGrid").innerHTML=enNums;
+
+
+document.getElementById(
+    "englishNumberGrid"
+).innerHTML=englishNumberHTML;
+
 
 
 /* =====================================================
@@ -588,486 +982,471 @@ VOCABULARY
 const vocab={
 
 fruits:[
-["Apple","सेब","🍎"],["Mango","आम","🥭"],["Banana","केला","🍌"],
-["Orange","संतरा","🍊"],["Grapes","अंगूर","🍇"],["Guava","अमरूद","🍐"],
-["Papaya","पपीता","🥭"],["Watermelon","तरबूज","🍉"],["Melon","खरबूजा","🍈"],
-["Pomegranate","अनार","🔴"],["Pineapple","अनानास","🍍"],["Coconut","नारियल","🥥"],
-["Lemon","नींबू","🍋"],["Strawberry","स्ट्रॉबेरी","🍓"],["Blueberry","ब्लूबेरी","🫐"],
-["Cherry","चेरी","🍒"],["Peach","आड़ू","🍑"],["Pear","नाशपाती","🍐"],
-["Plum","आलूबुखारा","🫐"],["Kiwi","कीवी","🥝"],["Fig","अंजीर","🟤"],
-["Date","खजूर","🌴"],["Apricot","खुबानी","🍑"],["Lychee","लीची","🔴"],
-["Jackfruit","कटहल","🟢"],["Custard Apple","सीताफल","🟢"],
-["Dragon Fruit","ड्रैगन फ्रूट","🐉"],["Raspberry","रसभरी","🔴"],
-["Blackberry","ब्लैकबेरी","🫐"],["Avocado","एवोकाडो","🥑"]
+
+["Apple","सेब","🍎"],
+["Mango","आम","🥭"],
+["Banana","केला","🍌"],
+["Orange","संतरा","🍊"],
+["Grapes","अंगूर","🍇"],
+["Guava","अमरूद","🍐"],
+["Papaya","पपीता","🥭"],
+["Watermelon","तरबूज","🍉"],
+["Melon","खरबूजा","🍈"],
+["Pomegranate","अनार","🔴"],
+["Pineapple","अनानास","🍍"],
+["Coconut","नारियल","🥥"],
+["Lemon","नींबू","🍋"],
+["Strawberry","स्ट्रॉबेरी","🍓"],
+["Cherry","चेरी","🍒"],
+["Peach","आड़ू","🍑"],
+["Pear","नाशपाती","🍐"],
+["Kiwi","कीवी","🥝"],
+["Fig","अंजीर","🟤"],
+["Date","खजूर","🌴"],
+["Lychee","लीची","🔴"],
+["Jackfruit","कटहल","🟢"]
+
 ],
 
 vegetables:[
-["Potato","आलू","🥔"],["Tomato","टमाटर","🍅"],["Onion","प्याज","🧅"],
-["Carrot","गाजर","🥕"],["Radish","मूली","🥕"],["Cabbage","पत्तागोभी","🥬"],
-["Cauliflower","फूलगोभी","🥦"],["Spinach","पालक","🥬"],["Pea","मटर","🟢"],
-["Brinjal","बैंगन","🍆"],["Ladyfinger","भिंडी","🥒"],["Cucumber","खीरा","🥒"],
-["Pumpkin","कद्दू","🎃"],["Bitter Gourd","करेला","🥒"],["Bottle Gourd","लौकी","🥒"],
-["Capsicum","शिमला मिर्च","🫑"],["Chilli","मिर्च","🌶️"],["Garlic","लहसुन","🧄"],
-["Ginger","अदरक","🫚"],["Corn","मक्का","🌽"],["Beetroot","चुकंदर","🔴"],
-["Turnip","शलजम","🥕"],["Mushroom","मशरूम","🍄"],["Broccoli","ब्रोकोली","🥦"],
-["Beans","सेम","🫘"],["Sweet Potato","शकरकंद","🍠"],["Mint","पुदीना","🌿"],
-["Coriander","धनिया","🌿"],["Drumstick","सहजन","🌿"],["Mustard Greens","सरसों का साग","🥬"]
+
+["Potato","आलू","🥔"],
+["Tomato","टमाटर","🍅"],
+["Onion","प्याज","🧅"],
+["Carrot","गाजर","🥕"],
+["Radish","मूली","🥕"],
+["Cabbage","पत्तागोभी","🥬"],
+["Cauliflower","फूलगोभी","🥦"],
+["Spinach","पालक","🥬"],
+["Pea","मटर","🟢"],
+["Brinjal","बैंगन","🍆"],
+["Ladyfinger","भिंडी","🥒"],
+["Cucumber","खीरा","🥒"],
+["Pumpkin","कद्दू","🎃"],
+["Bitter Gourd","करेला","🥒"],
+["Bottle Gourd","लौकी","🥒"],
+["Capsicum","शिमला मिर्च","🫑"],
+["Chilli","मिर्च","🌶️"],
+["Garlic","लहसुन","🧄"],
+["Ginger","अदरक","🫚"],
+["Corn","मक्का","🌽"]
+
 ],
 
 animals:[
-["Dog","कुत्ता","🐶"],["Cat","बिल्ली","🐱"],["Cow","गाय","🐄"],
-["Buffalo","भैंस","🐃"],["Goat","बकरी","🐐"],["Sheep","भेड़","🐑"],
-["Horse","घोड़ा","🐴"],["Donkey","गधा","🫏"],["Camel","ऊँट","🐪"],
-["Elephant","हाथी","🐘"],["Lion","शेर","🦁"],["Tiger","बाघ","🐯"],
-["Leopard","तेंदुआ","🐆"],["Bear","भालू","🐻"],["Monkey","बंदर","🐒"],
-["Deer","हिरण","🦌"],["Rabbit","खरगोश","🐰"],["Fox","लोमड़ी","🦊"],
-["Wolf","भेड़िया","🐺"],["Giraffe","जिराफ","🦒"],["Zebra","ज़ेब्रा","🦓"],
-["Kangaroo","कंगारू","🦘"],["Panda","पांडा","🐼"],["Crocodile","मगरमच्छ","🐊"],
-["Snake","साँप","🐍"],["Frog","मेंढक","🐸"],["Turtle","कछुआ","🐢"],
-["Fish","मछली","🐟"],["Dolphin","डॉल्फिन","🐬"],["Whale","व्हेल","🐋"],
-["Shark","शार्क","🦈"],["Octopus","ऑक्टोपस","🐙"]
+
+["Dog","कुत्ता","🐶"],
+["Cat","बिल्ली","🐱"],
+["Cow","गाय","🐄"],
+["Buffalo","भैंस","🐃"],
+["Goat","बकरी","🐐"],
+["Sheep","भेड़","🐑"],
+["Horse","घोड़ा","🐴"],
+["Donkey","गधा","🫏"],
+["Camel","ऊँट","🐪"],
+["Elephant","हाथी","🐘"],
+["Lion","शेर","🦁"],
+["Tiger","बाघ","🐯"],
+["Leopard","तेंदुआ","🐆"],
+["Bear","भालू","🐻"],
+["Monkey","बंदर","🐒"],
+["Deer","हिरण","🦌"],
+["Rabbit","खरगोश","🐰"],
+["Fox","लोमड़ी","🦊"],
+["Wolf","भेड़िया","🐺"],
+["Giraffe","जिराफ","🦒"],
+["Zebra","ज़ेब्रा","🦓"],
+["Kangaroo","कंगारू","🦘"],
+["Panda","पांडा","🐼"],
+["Crocodile","मगरमच्छ","🐊"],
+["Snake","साँप","🐍"],
+["Frog","मेंढक","🐸"],
+["Turtle","कछुआ","🐢"],
+["Fish","मछली","🐟"],
+["Dolphin","डॉल्फिन","🐬"],
+["Whale","व्हेल","🐋"],
+["Shark","शार्क","🦈"],
+["Octopus","ऑक्टोपस","🐙"]
+
 ],
 
 family:[
-["Father","पिता","👨"],["Mother","माता","👩"],["Brother","भाई","👦"],
-["Sister","बहन","👧"],["Son","बेटा","👦"],["Daughter","बेटी","👧"],
-["Grandfather","दादा/नाना","👴"],["Grandmother","दादी/नानी","👵"],
-["Uncle","चाचा/मामा","👨"],["Aunt","चाची/मामी","👩"],
-["Cousin","चचेरा/ममेरा भाई-बहन","🧒"],["Parents","माता-पिता","👨‍👩‍👧"],
-["Baby","बच्चा","👶"],["Husband","पति","👨"],["Wife","पत्नी","👩"],
-["Nephew","भतीजा/भांजा","👦"],["Niece","भतीजी/भांजी","👧"],
-["Grandson","पोता/नाती","👦"],["Granddaughter","पोती/नातिन","👧"],
+
+["Father","पिता","👨"],
+["Mother","माता","👩"],
+["Brother","भाई","👦"],
+["Sister","बहन","👧"],
+["Son","बेटा","👦"],
+["Daughter","बेटी","👧"],
+["Grandfather","दादा/नाना","👴"],
+["Grandmother","दादी/नानी","👵"],
+["Uncle","चाचा/मामा","👨"],
+["Aunt","चाची/मामी","👩"],
+["Cousin","भाई/बहन","🧒"],
+["Parents","माता-पिता","👨‍👩‍👧"],
+["Baby","बच्चा","👶"],
+["Nephew","भतीजा/भांजा","👦"],
+["Niece","भतीजी/भांजी","👧"],
+["Grandson","पोता/नाती","👦"],
+["Granddaughter","पोती/नातिन","👧"],
 ["Family","परिवार","👨‍👩‍👧‍👦"]
+
 ],
 
 body:[
-["Head","सिर","🙂"],["Hair","बाल","💇"],["Face","चेहरा","🙂"],
-["Eye","आँख","👁️"],["Ear","कान","👂"],["Nose","नाक","👃"],
-["Mouth","मुँह","👄"],["Lip","होंठ","👄"],["Tooth","दाँत","🦷"],
-["Tongue","जीभ","👅"],["Neck","गर्दन","🧍"],["Shoulder","कंधा","🧍"],
-["Arm","बाँह","💪"],["Elbow","कोहनी","💪"],["Hand","हाथ","✋"],
-["Finger","उंगली","☝️"],["Thumb","अंगूठा","👍"],["Chest","छाती","🧍"],
-["Back","पीठ","🧍"],["Stomach","पेट","🧍"],["Leg","टांग","🦵"],
-["Knee","घुटना","🦵"],["Foot","पैर","🦶"],["Toe","पैर की उंगली","🦶"],
-["Heart","हृदय","❤️"],["Skin","त्वचा","🧍"],["Nail","नाखून","💅"],
-["Bone","हड्डी","🦴"],["Brain","मस्तिष्क","🧠"]
+
+["Head","सिर","🙂"],
+["Hair","बाल","💇"],
+["Face","चेहरा","🙂"],
+["Eye","आँख","👁️"],
+["Ear","कान","👂"],
+["Nose","नाक","👃"],
+["Mouth","मुँह","👄"],
+["Tooth","दाँत","🦷"],
+["Tongue","जीभ","👅"],
+["Neck","गर्दन","🧍"],
+["Shoulder","कंधा","🧍"],
+["Arm","बाँह","💪"],
+["Elbow","कोहनी","💪"],
+["Hand","हाथ","✋"],
+["Finger","उंगली","☝️"],
+["Thumb","अंगूठा","👍"],
+["Leg","टांग","🦵"],
+["Knee","घुटना","🦵"],
+["Foot","पैर","🦶"],
+["Toe","पैर की उंगली","🦶"],
+["Heart","हृदय","❤️"],
+["Brain","मस्तिष्क","🧠"]
+
 ],
 
 colors:[
-["Red","लाल","🔴"],["Blue","नीला","🔵"],["Green","हरा","🟢"],
-["Yellow","पीला","🟡"],["Orange","नारंगी","🟠"],["Pink","गुलाबी","🩷"],
-["Purple","बैंगनी","🟣"],["Black","काला","⚫"],["White","सफेद","⚪"],
-["Brown","भूरा","🟤"],["Grey","धूसर","🩶"],["Golden","सुनहरा","🟡"],
-["Silver","चाँदी जैसा","⚪"],["Sky Blue","आसमानी","🔵"],
-["Dark Blue","गहरा नीला","🔵"],["Light Green","हल्का हरा","🟢"],
-["Dark Green","गहरा हरा","🟢"],["Violet","जामुनी","🟣"],
-["Cream","क्रीम","🟡"],["Maroon","गहरा लाल","🔴"]
+
+["Red","लाल","🔴"],
+["Blue","नीला","🔵"],
+["Green","हरा","🟢"],
+["Yellow","पीला","🟡"],
+["Orange","नारंगी","🟠"],
+["Pink","गुलाबी","🩷"],
+["Purple","बैंगनी","🟣"],
+["Black","काला","⚫"],
+["White","सफेद","⚪"],
+["Brown","भूरा","🟤"],
+["Grey","धूसर","🩶"],
+["Golden","सुनहरा","🟡"],
+["Silver","चाँदी","⚪"],
+["Sky Blue","आसमानी","🔵"]
+
 ],
 
 school:[
-["Book","किताब","📖"],["Notebook","कॉपी","📓"],["Pen","पेन","🖊️"],
-["Pencil","पेंसिल","✏️"],["Eraser","रबर","🧽"],["Sharpener","शार्पनर","🔧"],
-["Ruler","स्केल","📏"],["Bag","बैग","🎒"],["Desk","डेस्क","🪑"],
-["Chair","कुर्सी","🪑"],["Table","मेज","🪵"],["Board","बोर्ड","📋"],
-["Chalk","चॉक","🖍️"],["Duster","डस्टर","🧽"],["School","विद्यालय","🏫"],
-["Classroom","कक्षा","🏫"],["Teacher","शिक्षक","👨‍🏫"],["Student","विद्यार्थी","🧒"],
-["Bell","घंटी","🔔"],["Computer","कंप्यूटर","💻"],["Keyboard","कीबोर्ड","⌨️"],
-["Mouse","माउस","🖱️"],["Globe","ग्लोब","🌍"],["Map","नक्शा","🗺️"],
-["Clock","घड़ी","🕐"],["Paper","कागज","📄"]
-],
 
-homeThings:[
-["House","घर","🏠"],["Room","कमरा","🚪"],["Door","दरवाजा","🚪"],
-["Window","खिड़की","🪟"],["Bed","बिस्तर","🛏️"],["Pillow","तकिया","🛏️"],
-["Blanket","कंबल","🛌"],["Chair","कुर्सी","🪑"],["Table","मेज","🪵"],
-["Sofa","सोफा","🛋️"],["Fan","पंखा","🌀"],["Light","रोशनी","💡"],
-["Clock","घड़ी","🕐"],["Mirror","आईना","🪞"],["Television","टीवी","📺"],
-["Refrigerator","फ्रिज","🧊"],["Kitchen","रसोई","🍳"],["Bathroom","स्नानघर","🚿"],
-["Bucket","बाल्टी","🪣"],["Mug","मग","☕"],["Plate","प्लेट","🍽️"],
-["Glass","गिलास","🥛"],["Spoon","चम्मच","🥄"],["Cup","कप","☕"],
-["Bottle","बोतल","🍼"],["Broom","झाड़ू","🧹"],["Towel","तौलिया","🧻"],
-["Soap","साबुन","🧼"]
+["Book","किताब","📖"],
+["Notebook","कॉपी","📓"],
+["Pen","पेन","🖊️"],
+["Pencil","पेंसिल","✏️"],
+["Eraser","रबर","🧽"],
+["Sharpener","शार्पनर","🔧"],
+["Ruler","स्केल","📏"],
+["Bag","बैग","🎒"],
+["Desk","डेस्क","🪑"],
+["Chair","कुर्सी","🪑"],
+["Table","मेज","🪵"],
+["Board","बोर्ड","📋"],
+["Chalk","चॉक","🖍️"],
+["Teacher","शिक्षक","👨‍🏫"],
+["Student","विद्यार्थी","🧒"],
+["Bell","घंटी","🔔"],
+["Computer","कंप्यूटर","💻"],
+["Keyboard","कीबोर्ड","⌨️"],
+["Mouse","माउस","🖱️"],
+["Globe","ग्लोब","🌍"]
+
 ],
 
 birds:[
-["Parrot","तोता","🦜"],["Crow","कौआ","🐦"],["Sparrow","गौरैया","🐦"],
-["Pigeon","कबूतर","🕊️"],["Peacock","मोर","🦚"],["Hen","मुर्गी","🐔"],
-["Rooster","मुर्गा","🐓"],["Duck","बत्तख","🦆"],["Swan","हंस","🦢"],
-["Eagle","गरुड़","🦅"],["Owl","उल्लू","🦉"],["Kingfisher","रामचिरैया","🐦"],
-["Woodpecker","कठफोड़वा","🐦"],["Flamingo","फ्लेमिंगो","🦩"],
-["Penguin","पेंगुइन","🐧"],["Ostrich","शुतुरमुर्ग","🐦"],
-["Vulture","गिद्ध","🦅"],["Crane","सारस","🐦"]
+
+["Parrot","तोता","🦜"],
+["Crow","कौआ","🐦"],
+["Sparrow","गौरैया","🐦"],
+["Pigeon","कबूतर","🕊️"],
+["Peacock","मोर","🦚"],
+["Hen","मुर्गी","🐔"],
+["Rooster","मुर्गा","🐓"],
+["Duck","बत्तख","🦆"],
+["Swan","हंस","🦢"],
+["Eagle","गरुड़","🦅"],
+["Owl","उल्लू","🦉"],
+["Flamingo","फ्लेमिंगो","🦩"],
+["Penguin","पेंगुइन","🐧"]
+
 ],
 
 transport:[
-["Car","कार","🚗"],["Bus","बस","🚌"],["Train","रेलगाड़ी","🚆"],
-["Bicycle","साइकिल","🚲"],["Motorcycle","मोटरसाइकिल","🏍️"],
-["Scooter","स्कूटर","🛵"],["Truck","ट्रक","🚚"],["Tractor","ट्रैक्टर","🚜"],
-["Auto Rickshaw","ऑटो रिक्शा","🛺"],["Van","वैन","🚐"],["Taxi","टैक्सी","🚕"],
-["Ambulance","एम्बुलेंस","🚑"],["Fire Engine","दमकल","🚒"],
-["Police Car","पुलिस कार","🚓"],["Airplane","हवाई जहाज","✈️"],
-["Helicopter","हेलीकॉप्टर","🚁"],["Boat","नाव","🚤"],["Ship","जहाज","🚢"],
-["Rocket","रॉकेट","🚀"],["Metro","मेट्रो","🚇"]
-],
 
-clothes:[
-["Shirt","कमीज","👕"],["T-Shirt","टी-शर्ट","👕"],["Pant","पैंट","👖"],
-["Shorts","निकर","🩳"],["Skirt","स्कर्ट","👗"],["Dress","पोशाक","👗"],
-["Saree","साड़ी","🥻"],["Kurta","कुर्ता","👕"],["Pajamas","पायजामा","👖"],
-["Jeans","जींस","👖"],["Coat","कोट","🧥"],["Jacket","जैकेट","🧥"],
-["Sweater","स्वेटर","🧶"],["Cap","टोपी","🧢"],["Hat","टोपी","🎩"],
-["Socks","मोजे","🧦"],["Shoes","जूते","👟"],["Slippers","चप्पल","🩴"],
-["Belt","बेल्ट","🧷"],["Tie","टाई","👔"],["Scarf","स्कार्फ","🧣"],
-["Gloves","दस्ताने","🧤"],["Uniform","वर्दी","👔"],["Raincoat","बरसाती","🧥"]
-],
+["Car","कार","🚗"],
+["Bus","बस","🚌"],
+["Train","रेलगाड़ी","🚆"],
+["Bicycle","साइकिल","🚲"],
+["Motorcycle","मोटरसाइकिल","🏍️"],
+["Scooter","स्कूटर","🛵"],
+["Truck","ट्रक","🚚"],
+["Tractor","ट्रैक्टर","🚜"],
+["Auto Rickshaw","ऑटो रिक्शा","🛺"],
+["Van","वैन","🚐"],
+["Taxi","टैक्सी","🚕"],
+["Ambulance","एम्बुलेंस","🚑"],
+["Fire Engine","दमकल","🚒"],
+["Airplane","हवाई जहाज","✈️"],
+["Helicopter","हेलीकॉप्टर","🚁"],
+["Boat","नाव","🚤"],
+["Ship","जहाज","🚢"],
+["Rocket","रॉकेट","🚀"],
+["Metro","मेट्रो","🚇"]
 
-food:[
-["Rice","चावल","🍚"],["Bread","ब्रेड","🍞"],["Milk","दूध","🥛"],
-["Water","पानी","💧"],["Tea","चाय","☕"],["Juice","रस","🧃"],
-["Dal","दाल","🥣"],["Roti","रोटी","🫓"],["Butter","मक्खन","🧈"],
-["Cheese","चीज","🧀"],["Curd","दही","🥣"],["Egg","अंडा","🥚"],
-["Cake","केक","🍰"],["Biscuit","बिस्कुट","🍪"],["Chocolate","चॉकलेट","🍫"],
-["Ice Cream","आइसक्रीम","🍦"],["Soup","सूप","🍲"],["Salad","सलाद","🥗"],
-["Sandwich","सैंडविच","🥪"],["Pizza","पिज्जा","🍕"],["Burger","बर्गर","🍔"],
-["Noodles","नूडल्स","🍜"],["Honey","शहद","🍯"],["Sugar","चीनी","🧂"],
-["Salt","नमक","🧂"]
-],
-
-nature:[
-["Tree","पेड़","🌳"],["Plant","पौधा","🌱"],["Flower","फूल","🌸"],
-["Leaf","पत्ता","🍃"],["Grass","घास","🌿"],["River","नदी","🏞️"],
-["Mountain","पहाड़","⛰️"],["Hill","पहाड़ी","🏔️"],["Lake","झील","🏞️"],
-["Sea","समुद्र","🌊"],["Sun","सूरज","☀️"],["Moon","चाँद","🌙"],
-["Star","तारा","⭐"],["Cloud","बादल","☁️"],["Rain","बारिश","🌧️"],
-["Wind","हवा","💨"],["Rainbow","इंद्रधनुष","🌈"],["Sky","आकाश","🌌"],
-["Earth","पृथ्वी","🌍"],["Garden","बगीचा","🌳"],["Forest","जंगल","🌲"],
-["Stone","पत्थर","🪨"],["Sand","रेत","🏖️"],["Fire","आग","🔥"]
 ],
 
 days:[
-["Monday","सोमवार","📅"],["Tuesday","मंगलवार","📅"],
-["Wednesday","बुधवार","📅"],["Thursday","गुरुवार","📅"],
-["Friday","शुक्रवार","📅"],["Saturday","शनिवार","📅"],
+
+["Monday","सोमवार","📅"],
+["Tuesday","मंगलवार","📅"],
+["Wednesday","बुधवार","📅"],
+["Thursday","गुरुवार","📅"],
+["Friday","शुक्रवार","📅"],
+["Saturday","शनिवार","📅"],
 ["Sunday","रविवार","📅"]
+
 ],
 
 months:[
-["January","जनवरी","🗓️"],["February","फरवरी","🗓️"],
-["March","मार्च","🗓️"],["April","अप्रैल","🗓️"],
-["May","मई","🗓️"],["June","जून","🗓️"],
-["July","जुलाई","🗓️"],["August","अगस्त","🗓️"],
-["September","सितंबर","🗓️"],["October","अक्टूबर","🗓️"],
-["November","नवंबर","🗓️"],["December","दिसंबर","🗓️"]
+
+["January","जनवरी","🗓️"],
+["February","फरवरी","🗓️"],
+["March","मार्च","🗓️"],
+["April","अप्रैल","🗓️"],
+["May","मई","🗓️"],
+["June","जून","🗓️"],
+["July","जुलाई","🗓️"],
+["August","अगस्त","🗓️"],
+["September","सितंबर","🗓️"],
+["October","अक्टूबर","🗓️"],
+["November","नवंबर","🗓️"],
+["December","दिसंबर","🗓️"]
+
 ]
+
 };
 
-Object.keys(vocab).forEach(k=>{
- let html="";
- vocab[k].forEach(x=>{
-  html+=`
-  <div class="card">
-   <div class="pic">${x[2]}</div>
-   <div class="en">${x[0]}</div>
-   <div class="hi">${x[1]}</div>
-  </div>`;
- });
- document.getElementById(k).innerHTML=html;
+
+function createCards(data,id){
+
+    let html="";
+
+    data.forEach(x=>{
+
+        html+=`
+
+        <div class="card">
+
+            <div class="pic">${x[2]}</div>
+
+            <div class="en">${x[0]}</div>
+
+            <div class="hi">${x[1]}</div>
+
+        </div>
+
+        `;
+
+    });
+
+    document.getElementById(id).innerHTML=html;
+
+}
+
+
+Object.keys(vocab).forEach(key=>{
+
+    createCards(
+        vocab[key],
+        key
+    );
+
 });
 
 
+
 /* =====================================================
-MATH COUNTING 1-1000
+COUNTING 1-1000
 ===================================================== */
 
-let countHTML="";
+let countingHTML="";
+
 for(let i=1;i<=1000;i++){
- countHTML+=`
- <div class="num">
-  <b>${i}</b>
- </div>`;
+
+    countingHTML+=`
+
+    <div class="number">
+
+        <b>${i}</b>
+
+    </div>
+
+    `;
+
 }
-document.getElementById("countingGrid").innerHTML=countHTML;
+
+document.getElementById(
+    "countingGrid"
+).innerHTML=countingHTML;
+
 
 
 /* =====================================================
 TABLES 1-50
+TOP TO BOTTOM
 ===================================================== */
 
-let tableHTML="";
+let tablesHTML="";
+
 
 for(let n=1;n<=50;n++){
 
- tableHTML+=`
- <div class="math-example">
- <h3>✖️ Table of ${n} / ${n} का पहाड़ा</h3>`;
+    tablesHTML+=`
 
- for(let i=1;i<=10;i++){
-  tableHTML+=`
-  ${n} × ${i} = <b>${n*i}</b>
-  ${i<10?" &nbsp; | &nbsp; ":""}
-  `;
- }
+    <div class="table-box">
 
- tableHTML+=`</div>`;
+        <div class="table-title">
+
+            ${n} का पहाड़ा
+
+        </div>
+
+        <div class="table-numbers">
+
+    `;
+
+
+    for(let i=1;i<=10;i++){
+
+        tablesHTML+=`
+
+            <div class="table-number">
+
+                ${n*i}
+
+            </div>
+
+        `;
+
+    }
+
+
+    tablesHTML+=`
+
+        </div>
+
+    </div>
+
+    `;
+
 }
 
-document.getElementById("tablesContent").innerHTML=tableHTML;
+
+document.getElementById(
+    "tablesContent"
+).innerHTML=tablesHTML;
+
 
 
 /* =====================================================
 MATH EXAMPLES
 ===================================================== */
 
-const add=[
-"1 + 1 = 2 🍎 + 🍎 = 2",
-"2 + 1 = 3 ⭐ + ⭐ + ⭐",
-"2 + 2 = 4 🍎🍎 + 🍎🍎 = 4",
-"3 + 2 = 5 🐟🐟🐟 + 🐟🐟 = 5",
-"4 + 1 = 5",
-"4 + 2 = 6",
-"5 + 2 = 7",
-"5 + 3 = 8",
-"6 + 2 = 8",
-"6 + 3 = 9",
-"7 + 2 = 9",
-"7 + 3 = 10",
-"8 + 2 = 10",
-"8 + 3 = 11",
-"9 + 1 = 10",
-"9 + 2 = 11",
-"10 + 5 = 15",
-"10 + 10 = 20",
-"12 + 3 = 15",
-"15 + 5 = 20",
-"20 + 5 = 25",
-"20 + 10 = 30",
-"25 + 5 = 30",
-"30 + 10 = 40",
-"40 + 10 = 50"
+const mathExamples=[
+
+"🔢 1, 2, 3, 4, 5 — Counting / गिनती",
+
+"➕ 1 + 1 = 2",
+
+"➕ 2 + 3 = 5",
+
+"➕ 5 + 5 = 10",
+
+"➖ 5 - 2 = 3",
+
+"➖ 10 - 5 = 5",
+
+"✖️ 2 × 3 = 6",
+
+"✖️ 5 × 2 = 10",
+
+"➗ 6 ÷ 2 = 3",
+
+"⚖️ 8 > 5",
+
+"⚖️ 3 < 7",
+
+"⚖️ 5 = 5",
+
+"🔢 Before 10 = 9",
+
+"🔢 After 10 = 11",
+
+"🔢 Between 4 and 6 = 5",
+
+"📐 Circle — वृत्त",
+
+"📐 Square — वर्ग",
+
+"📐 Triangle — त्रिभुज",
+
+"📐 Rectangle — आयत",
+
+"🕐 3 o'clock — तीन बजे",
+
+"💰 ₹5 + ₹5 = ₹10",
+
+"🍕 1/2 — आधा",
+
+"🧩 2,4,6,8,10 — Number Pattern",
+
+"⬆️ 1,2,3,4,5 — Ascending",
+
+"⬇️ 5,4,3,2,1 — Descending"
+
 ];
 
-const sub=[
-"2 - 1 = 1 🍎🍎 − 🍎 = 1",
-"3 - 1 = 2",
-"4 - 2 = 2",
-"5 - 1 = 4",
-"5 - 2 = 3",
-"6 - 2 = 4",
-"7 - 3 = 4",
-"8 - 2 = 6",
-"8 - 3 = 5",
-"9 - 4 = 5",
-"10 - 1 = 9",
-"10 - 2 = 8",
-"10 - 5 = 5",
-"12 - 2 = 10",
-"15 - 5 = 10",
-"20 - 5 = 15",
-"20 - 10 = 10",
-"25 - 5 = 20",
-"30 - 10 = 20",
-"40 - 10 = 30"
-];
 
-const mul=[
-"2 × 1 = 2",
-"2 × 2 = 4",
-"2 × 3 = 6",
-"3 × 2 = 6",
-"3 × 3 = 9",
-"4 × 2 = 8",
-"4 × 3 = 12",
-"5 × 2 = 10",
-"5 × 3 = 15",
-"5 × 5 = 25",
-"10 × 2 = 20",
-"10 × 5 = 50"
-];
+document.getElementById(
+    "mathExampleContent"
+).innerHTML=
 
-const div=[
-"2 ÷ 1 = 2",
-"4 ÷ 2 = 2",
-"6 ÷ 2 = 3",
-"8 ÷ 2 = 4",
-"10 ÷ 2 = 5",
-"10 ÷ 5 = 2",
-"12 ÷ 3 = 4",
-"15 ÷ 3 = 5",
-"20 ÷ 5 = 4",
-"20 ÷ 2 = 10"
-];
+mathExamples.map((x,i)=>`
 
-const before=[
-"Before 5 = 4",
-"Before 10 = 9",
-"Before 20 = 19",
-"After 5 = 6",
-"After 10 = 11",
-"After 20 = 21",
-"Between 4 and 6 = 5",
-"Between 9 and 11 = 10",
-"Between 14 and 16 = 15",
-"Between 29 and 31 = 30"
-];
+<div class="example">
 
-const order=[
-"2, 4, 6, 8 — Ascending",
-"1, 3, 5, 7 — Ascending",
-"10, 20, 30, 40 — Ascending",
-"8, 6, 4, 2 — Descending",
-"20, 15, 10, 5 — Descending",
-"30, 20, 10, 5 — Descending",
-"1, 2, 3, 4 — Ascending",
-"9, 7, 5, 3 — Descending"
-];
+🌟 <b>Example ${i+1}:</b>
 
-const greater=[
-"5 > 3",
-"8 > 4",
-"10 > 6",
-"2 < 7",
-"3 < 9",
-"5 < 10",
-"4 = 4",
-"8 = 8",
-"10 = 10",
-"20 > 15",
-"12 < 20",
-"25 > 20"
-];
+${x}
 
-const measure=[
-"📏 Pencil is short. / पेंसिल छोटी है।",
-"📏 Rope is long. / रस्सी लंबी है।",
-"⚖️ Elephant is heavy. / हाथी भारी है।",
-"⚖️ Feather is light. / पंख हल्का है।",
-"🥛 Bottle has more water. / बोतल में ज्यादा पानी है।",
-"🥛 Cup has less water. / कप में कम पानी है।",
-"📏 10 cm is longer than 5 cm.",
-"⚖️ 5 kg is heavier than 2 kg."
-];
+</div>
 
-const time=[
-"🕐 1 o'clock = एक बजे",
-"🕑 2 o'clock = दो बजे",
-"🕒 3 o'clock = तीन बजे",
-"🕓 4 o'clock = चार बजे",
-"🕔 5 o'clock = पाँच बजे",
-"🌞 Morning = सुबह",
-"☀️ Afternoon = दोपहर",
-"🌆 Evening = शाम",
-"🌙 Night = रात",
-"⏰ Clock tells us time. / घड़ी समय बताती है।"
-];
+`).join("");
 
-const money=[
-"₹1 = One Rupee",
-"₹2 = Two Rupees",
-"₹5 = Five Rupees",
-"₹10 = Ten Rupees",
-"₹20 = Twenty Rupees",
-"₹50 = Fifty Rupees",
-"₹100 = One Hundred Rupees",
-"₹10 + ₹10 = ₹20",
-"₹5 + ₹5 = ₹10",
-"₹20 + ₹10 = ₹30",
-"₹50 + ₹20 = ₹70"
-];
-
-const fractions=[
-"🍎 1/2 = आधा",
-"🍕 1/2 pizza = आधा पिज्जा",
-"🟦 1/4 = एक चौथाई",
-"🍫 2/4 = आधा",
-"4 में से 1 भाग = 1/4",
-"2 बराबर भागों में 1 भाग = 1/2"
-];
-
-const patterns=[
-"🔴 🔵 🔴 🔵 ? = 🔴",
-"⭐ ⭐ ❤️ ⭐ ⭐ ❤️ ? = ⭐",
-"1, 2, 3, 4, ? = 5",
-"2, 4, 6, 8, ? = 10",
-"5, 10, 15, ? = 20",
-"10, 20, 30, ? = 40",
-"🟢 🟡 🟢 🟡 ? = 🟢"
-];
-
-const data=[
-"🍎🍎🍎 = 3 apples",
-"🍌🍌 = 2 bananas",
-"🐶🐶🐶🐶 = 4 dogs",
-"⭐ ⭐ ⭐ ⭐ ⭐ = 5 stars",
-"अगर 3 बच्चे हैं और 2 और आए, तो 5 बच्चे होंगे।",
-"अगर 5 apples में से 2 खा लिए, तो 3 बचेंगे।"
-];
-
-function examples(id,data){
- let html="";
- data.forEach((x,i)=>{
-  html+=`<div class="math-example"><b>Example ${i+1}:</b> ${x}</div>`;
- });
- document.getElementById(id).innerHTML=html;
-}
-
-examples("additionExamples",add);
-examples("subtractionExamples",sub);
-examples("multiplicationExamples",mul);
-examples("divisionExamples",div);
-examples("beforeExamples",before);
-examples("orderExamples",order);
-examples("greaterExamples",greater);
-examples("measurementExamples",measure);
-examples("timeExamples",time);
-examples("moneyExamples",money);
-examples("fractionExamples",fractions);
-examples("patternExamples",patterns);
-examples("dataExamples",data);
-
-examples("numbersExamples",[
-"1 — One — एक",
-"2 — Two — दो",
-"3 — Three — तीन",
-"4 — Four — चार",
-"5 — Five — पाँच",
-"10 — Ten — दस",
-"20 — Twenty — बीस",
-"50 — Fifty — पचास",
-"100 — One Hundred — एक सौ",
-"1000 — One Thousand — एक हजार",
-"0 means nothing. / 0 का अर्थ कुछ नहीं।",
-"10 has one ten and zero ones.",
-"20 has two tens and zero ones."
-]);
-
-
-/* SHAPES */
-
-const shapes=[
-["Circle","वृत्त","⚪"],
-["Square","वर्ग","🟦"],
-["Triangle","त्रिभुज","🔺"],
-["Rectangle","आयत","▭"],
-["Star","तारा","⭐"],
-["Heart","हृदय","❤️"],
-["Oval","अंडाकार","🥚"],
-["Diamond","हीरा","🔷"]
-];
-
-makeCards(shapes,"shapeExamples");
 
 
 /* =====================================================
-ENGLISH LESSONS
+LESSONS
 ===================================================== */
 
 const englishLessons=[
 
 {
 title:"Alphabet",
-hi:"अंग्रेजी वर्णमाला",
+hi:"वर्णमाला",
 icon:"🔤",
-explain:"English alphabet में 26 letters होते हैं। A से Z तक letters पहचानना सीखें।",
+explain:"English alphabet में 26 letters होते हैं। A से Z तक सीखें।",
 examples:[
 "A for Apple — सेब",
 "B for Ball — गेंद",
@@ -1084,9 +1463,9 @@ examples:[
 
 {
 title:"Vowels",
-hi:"Vowels / स्वर",
+hi:"स्वर",
 icon:"🔤",
-explain:"A, E, I, O और U को vowels कहते हैं।",
+explain:"A, E, I, O और U vowels हैं।",
 examples:[
 "A — Apple",
 "E — Egg",
@@ -1101,9 +1480,9 @@ examples:[
 
 {
 title:"Naming Words",
-hi:"नाम बताने वाले शब्द",
+hi:"नाम वाले शब्द",
 icon:"🏠",
-explain:"Person, place, animal और thing के नाम Naming Words होते हैं।",
+explain:"Person, place, animal और thing के नाम naming words होते हैं।",
 examples:[
 "Boy — लड़का",
 "Girl — लड़की",
@@ -1152,10 +1531,10 @@ examples:[
 },
 
 {
-title:"This That These Those",
-hi:"पास और दूर की वस्तुएँ",
+title:"This / That",
+hi:"यह / वह",
 icon:"👉",
-explain:"This/These पास और That/Those दूर की वस्तुओं के लिए प्रयोग होते हैं।",
+explain:"This और These पास की चीजों के लिए तथा That और Those दूर की चीजों के लिए प्रयोग होते हैं।",
 examples:[
 "This is a pen.",
 "That is a tree.",
@@ -1167,8 +1546,8 @@ examples:[
 },
 
 {
-title:"Is Am Are",
-hi:"Is / Am / Are",
+title:"Is / Am / Are",
+hi:"Is Am Are",
 icon:"🙂",
 explain:"I के साथ Am, He/She/It के साथ Is और You/We/They के साथ Are आता है।",
 examples:[
@@ -1205,18 +1584,18 @@ examples:[
 title:"Daily Sentences",
 hi:"रोजमर्रा के वाक्य",
 icon:"💬",
-explain:"रोजमर्रा में बोले जाने वाले आसान English sentences सीखें।",
+explain:"रोज इस्तेमाल होने वाले आसान English sentences सीखें।",
 examples:[
 "Good morning — सुप्रभात",
-"Good afternoon — शुभ दोपहर",
-"Good evening — शुभ संध्या",
 "Good night — शुभ रात्रि",
 "Thank you — धन्यवाद",
 "Sorry — माफ कीजिए",
 "Please — कृपया",
 "How are you? — आप कैसे हैं?",
 "I am fine. — मैं ठीक हूँ।",
-"What is your name? — आपका नाम क्या है?"
+"What is your name? — आपका नाम क्या है?",
+"My name is Rahul.",
+"I like apples."
 ]
 },
 
@@ -1224,7 +1603,7 @@ examples:[
 title:"Question Words",
 hi:"प्रश्नवाचक शब्द",
 icon:"❓",
-explain:"What, Who, Where, When और How से questions बनाए जाते हैं।",
+explain:"What, Who, Where, When और How questions बनाने में मदद करते हैं।",
 examples:[
 "What is this?",
 "Who are you?",
@@ -1240,10 +1619,6 @@ examples:[
 ];
 
 
-/* =====================================================
-MATH LESSONS
-===================================================== */
-
 const mathLessons=[
 
 {
@@ -1252,11 +1627,11 @@ hi:"गिनती",
 icon:"🔢",
 explain:"Numbers की मदद से वस्तुओं को गिनना सीखें।",
 examples:[
-"🍎 = 1 apple",
-"🍎🍎 = 2 apples",
-"⭐ ⭐ ⭐ = 3 stars",
-"🐟🐟🐟🐟 = 4 fish",
-"🍌🍌🍌🍌🍌 = 5 bananas",
+"1 apple 🍎",
+"2 apples 🍎🍎",
+"3 stars ⭐⭐⭐",
+"4 fish 🐟🐟🐟🐟",
+"5 bananas 🍌🍌🍌🍌🍌",
 "1,2,3,4,5",
 "10,11,12,13,14",
 "20,21,22,23",
@@ -1280,8 +1655,7 @@ examples:[
 "7 + 3 = 10",
 "8 + 2 = 10",
 "9 + 1 = 10",
-"10 + 5 = 15",
-"20 + 10 = 30"
+"10 + 5 = 15"
 ]
 },
 
@@ -1289,7 +1663,7 @@ examples:[
 title:"Subtraction",
 hi:"घटाव",
 icon:"➖",
-explain:"किसी संख्या में से कुछ कम करना Subtraction कहलाता है।",
+explain:"किसी संख्या में से कुछ कम करना subtraction कहलाता है।",
 examples:[
 "2 - 1 = 1",
 "3 - 1 = 2",
@@ -1308,7 +1682,7 @@ examples:[
 title:"Multiplication",
 hi:"गुणा",
 icon:"✖️",
-explain:"एक ही संख्या को बार-बार जोड़ना Multiplication की basic समझ है।",
+explain:"एक संख्या को बार-बार जोड़ने की basic समझ multiplication में काम आती है।",
 examples:[
 "2 × 1 = 2",
 "2 × 2 = 4",
@@ -1318,8 +1692,7 @@ examples:[
 "4 × 2 = 8",
 "5 × 2 = 10",
 "5 × 5 = 25",
-"10 × 2 = 20",
-"10 × 5 = 50"
+"10 × 2 = 20"
 ]
 },
 
@@ -1327,7 +1700,7 @@ examples:[
 title:"Division",
 hi:"भाग",
 icon:"➗",
-explain:"किसी वस्तु या संख्या को बराबर भागों में बाँटना Division कहलाता है।",
+explain:"किसी वस्तु या संख्या को बराबर भागों में बाँटना division कहलाता है।",
 examples:[
 "2 ÷ 1 = 2",
 "4 ÷ 2 = 2",
@@ -1344,7 +1717,7 @@ examples:[
 title:"Before After Between",
 hi:"पहले, बाद और बीच",
 icon:"↔️",
-explain:"Number से पहले, बाद और दो numbers के बीच आने वाली संख्या पहचानें।",
+explain:"Numbers के पहले, बाद और बीच की संख्या पहचानें।",
 examples:[
 "Before 5 = 4",
 "Before 10 = 9",
@@ -1360,7 +1733,7 @@ examples:[
 title:"Greater Less Equal",
 hi:"बड़ा, छोटा और बराबर",
 icon:"⚖️",
-explain:"> का अर्थ greater, < का अर्थ less और = का अर्थ equal होता है।",
+explain:"> बड़ा, < छोटा और = बराबर को दर्शाता है।",
 examples:[
 "5 > 3",
 "8 > 4",
@@ -1377,7 +1750,7 @@ examples:[
 title:"Shapes",
 hi:"आकृतियाँ",
 icon:"📐",
-explain:"विभिन्न shapes को पहचानना सीखें।",
+explain:"विभिन्न shapes को पहचानें।",
 examples:[
 "⚪ Circle — वृत्त",
 "🟦 Square — वर्ग",
@@ -1410,7 +1783,7 @@ examples:[
 title:"Money",
 hi:"पैसा",
 icon:"💰",
-explain:"Rupee और coins/notes की basic पहचान सीखें।",
+explain:"Rupee और money की basic पहचान सीखें।",
 examples:[
 "₹1 — One Rupee",
 "₹2 — Two Rupees",
@@ -1419,8 +1792,7 @@ examples:[
 "₹20 — Twenty Rupees",
 "₹50 — Fifty Rupees",
 "₹100 — One Hundred Rupees",
-"₹5 + ₹5 = ₹10",
-"₹10 + ₹10 = ₹20"
+"₹5 + ₹5 = ₹10"
 ]
 },
 
@@ -1428,14 +1800,16 @@ examples:[
 title:"Measurement",
 hi:"माप",
 icon:"📏",
-explain:"Length, weight और capacity की basic समझ सीखें।",
+explain:"Length और weight की basic understanding सीखें।",
 examples:[
-"Pencil is short. — पेंसिल छोटी है।",
-"Rope is long. — रस्सी लंबी है।",
-"Elephant is heavy. — हाथी भारी है।",
-"Feather is light. — पंख हल्का है।",
-"Bucket has more water.",
-"Cup has less water."
+"Pencil is short.",
+"पेंसिल छोटी है।",
+"Rope is long.",
+"रस्सी लंबी है।",
+"Elephant is heavy.",
+"हाथी भारी है।",
+"Feather is light.",
+"पंख हल्का है।"
 ]
 },
 
@@ -1443,12 +1817,12 @@ examples:[
 title:"Fractions",
 hi:"भिन्न",
 icon:"🍕",
-explain:"किसी पूरी वस्तु को बराबर भागों में बाँटने पर fractions समझ आते हैं।",
+explain:"पूरी वस्तु को बराबर भागों में बाँटने से fractions समझ सकते हैं।",
 examples:[
 "1/2 — आधा",
 "1/4 — एक चौथाई",
-"🍕 Half pizza = 1/2",
-"🍎 Half apple = 1/2",
+"Half pizza = 1/2",
+"Half apple = 1/2",
 "4 equal parts में 1 part = 1/4",
 "2 equal parts में 1 part = 1/2"
 ]
@@ -1458,7 +1832,7 @@ examples:[
 title:"Patterns",
 hi:"पैटर्न",
 icon:"🧩",
-explain:"बार-बार दोहराने या क्रम में चलने वाली चीजों को pattern कहते हैं।",
+explain:"क्रम में आने वाली चीजों को pattern कहते हैं।",
 examples:[
 "🔴 🔵 🔴 🔵 ? = 🔴",
 "⭐ ❤️ ⭐ ❤️ ? = ⭐",
@@ -1472,259 +1846,416 @@ examples:[
 ];
 
 
+
 /* =====================================================
 LESSON BUTTONS
 ===================================================== */
 
-function makeLessonButtons(data,id,type){
+function createLessonButtons(data,id,type){
 
- let html="";
+    let html="";
 
- data.forEach((x,i)=>{
-  html+=`
-  <button class="subbtn"
-  onclick="openLesson('${type}',${i})">
-  ${x.icon} ${x.title}
-  <small>${x.hi}</small>
-  </button>`;
- });
+    data.forEach((lesson,index)=>{
 
- document.getElementById(id).innerHTML=html;
+        html+=`
+
+        <button
+        class="topic-btn"
+        onclick="openLesson('${type}',${index})">
+
+        ${lesson.icon}
+        ${lesson.title}
+
+        <small>
+        ${lesson.hi}
+        </small>
+
+        </button>
+
+        `;
+
+    });
+
+    document.getElementById(id).innerHTML=html;
+
 }
 
-makeLessonButtons(
- englishLessons,
- "englishLessonButtons",
- "english"
+
+createLessonButtons(
+    englishLessons,
+    "englishLessonButtons",
+    "english"
 );
 
-makeLessonButtons(
- mathLessons,
- "mathLessonButtons",
- "math"
+
+createLessonButtons(
+    mathLessons,
+    "mathLessonButtons",
+    "math"
 );
+
 
 
 /* =====================================================
 QUIZ
+50 QUESTIONS EVERY LESSON
 ===================================================== */
 
-let quizQuestions=[];
-let current=0;
-let score=0;
-let answered=false;
-let currentType="";
+let questions=[];
+
+let currentQuestion=0;
+
+let quizScore=0;
+
+let alreadyAnswered=false;
 
 
 function buildQuestions(type,index){
 
- const lesson=
- type==="english"
- ?englishLessons[index]
- :mathLessons[index];
+    const lesson=
+    type==="english"
+    ?englishLessons[index]
+    :mathLessons[index];
 
- let base=[];
 
- lesson.examples.forEach(ex=>{
+    let base=[];
 
-  base.push({
-   q:`"${ex}" को पहचानिए। / Identify the correct answer.`,
-   correct:ex,
-   options:[
-    ex,
-    "School / विद्यालय",
-    "Table / मेज",
-    "Water / पानी"
-   ]
-  });
 
-  base.push({
-   q:`Choose the correct answer. / सही उत्तर चुनें।`,
-   correct:ex,
-   options:[
-    ex,
-    "Apple / सेब",
-    "Dog / कुत्ता",
-    "Book / किताब"
-   ]
-  });
+    lesson.examples.forEach(example=>{
 
-  base.push({
-   q:`Which one is correct? / सही विकल्प कौन सा है?`,
-   correct:ex,
-   options:[
-    ex,
-    "Car / कार",
-    "House / घर",
-    "Pen / पेन"
-   ]
-  });
+        base.push({
 
- });
+            question:
+            `Example को पहचानिए / Identify the correct answer:`,
 
- quizQuestions=[];
+            correct:example,
 
- for(let i=0;i<50;i++){
-  quizQuestions.push(
-   base[i%base.length]
-  );
- }
+            options:[
+                example,
+                "Apple / सेब",
+                "Book / किताब",
+                "School / विद्यालय"
+            ]
+
+        });
+
+
+        base.push({
+
+            question:
+            `Which answer is correct? / सही उत्तर चुनें:`,
+
+            correct:example,
+
+            options:[
+                example,
+                "Dog / कुत्ता",
+                "House / घर",
+                "Water / पानी"
+            ]
+
+        });
+
+
+        base.push({
+
+            question:
+            `Choose the correct answer / सही उत्तर चुनिए:`,
+
+            correct:example,
+
+            options:[
+                example,
+                "Car / कार",
+                "Pen / पेन",
+                "Tree / पेड़"
+            ]
+
+        });
+
+    });
+
+
+    questions=[];
+
+
+    for(let i=0;i<50;i++){
+
+        questions.push(
+            base[i%base.length]
+        );
+
+    }
+
 }
+
 
 
 function openLesson(type,index){
 
- currentType=type;
- current=0;
- score=0;
- answered=false;
+    const lesson=
+    type==="english"
+    ?englishLessons[index]
+    :mathLessons[index];
 
- const lesson=
- type==="english"
- ?englishLessons[index]
- :mathLessons[index];
 
- buildQuestions(type,index);
+    currentQuestion=0;
 
- document.getElementById("lessonArea")
- .classList.add("open");
+    quizScore=0;
 
- document.getElementById("lessonTitle").innerHTML=
- lesson.icon+" "+lesson.title+
- "<br><small>"+lesson.hi+"</small>";
+    alreadyAnswered=false;
 
- document.getElementById("lessonExplain").innerHTML=
- `<b>English:</b> ${lesson.explain}
- <br><br>
- <b>हिंदी:</b> इस topic को examples के साथ सीखें।`;
 
- document.getElementById("lessonExamples").innerHTML=
- lesson.examples.map((x,i)=>
- `<div class="example">
- 🌟 <b>Example ${i+1}:</b> ${x}
- </div>`
- ).join("");
+    buildQuestions(type,index);
 
- showQuestion();
 
- document.getElementById("lessonArea")
- .scrollIntoView({
-  behavior:"smooth",
-  block:"start"
- });
+    document.getElementById(
+        "lessonArea"
+    ).classList.add("open");
+
+
+    document.getElementById(
+        "lessonTitle"
+    ).innerHTML=
+
+    lesson.icon+
+    " "+
+    lesson.title+
+    "<br><small>"+
+    lesson.hi+
+    "</small>";
+
+
+    document.getElementById(
+        "lessonExplain"
+    ).innerHTML=
+
+    `<b>English:</b>
+    ${lesson.explain}
+
+    <br><br>
+
+    <b>हिंदी:</b>
+    इस lesson को examples के साथ ध्यान से सीखें।`;
+
+
+    document.getElementById(
+        "lessonExamples"
+    ).innerHTML=
+
+    lesson.examples.map((x,i)=>`
+
+        <div class="example">
+
+        🌟 <b>Example ${i+1}:</b>
+
+        ${x}
+
+        </div>
+
+    `).join("");
+
+
+    showQuestion();
+
+
+    document.getElementById(
+        "lessonArea"
+    ).scrollIntoView({
+
+        behavior:"smooth",
+        block:"start"
+
+    });
+
 }
+
 
 
 function showQuestion(){
 
- const q=quizQuestions[current];
+    const q=questions[currentQuestion];
 
- answered=false;
+    alreadyAnswered=false;
 
- document.getElementById("qNumber").innerHTML=
- `<b>Question ${current+1} / 50</b>`;
 
- document.getElementById("progressbar").style.width=
- ((current+1)/50*100)+"%";
+    document.getElementById(
+        "qNumber"
+    ).innerHTML=
 
- document.getElementById("question").innerHTML=
- q.q;
+    `<b>
+    Question ${currentQuestion+1} / 50
+    </b>`;
 
- document.getElementById("feedback").innerHTML="";
 
- document.getElementById("score").innerHTML=score;
+    document.getElementById(
+        "progressbar"
+    ).style.width=
 
- let opts=[...q.options];
+    ((currentQuestion+1)/50*100)+"%";
 
- opts.sort(()=>Math.random()-.5);
 
- document.getElementById("options").innerHTML=
- opts.map(o=>`
- <button class="option"
- onclick="checkAnswer(this,${JSON.stringify(o)},${JSON.stringify(q.correct)})">
- ${o}
- </button>
- `).join("");
+    document.getElementById(
+        "question"
+    ).innerHTML=
+
+    q.question;
+
+
+    document.getElementById(
+        "feedback"
+    ).innerHTML="";
+
+
+    document.getElementById(
+        "score"
+    ).innerHTML=quizScore;
+
+
+    let options=[...q.options];
+
+
+    options.sort(
+        ()=>Math.random()-.5
+    );
+
+
+    document.getElementById(
+        "options"
+    ).innerHTML=
+
+    options.map(option=>`
+
+        <button
+        class="option"
+        onclick='checkAnswer(
+        this,
+        ${JSON.stringify(option)},
+        ${JSON.stringify(q.correct)}
+        )'>
+
+        ${option}
+
+        </button>
+
+    `).join("");
+
 }
+
 
 
 function checkAnswer(button,answer,correct){
 
- if(answered)return;
+    if(alreadyAnswered)return;
 
- answered=true;
 
- document.querySelectorAll(".option")
- .forEach(x=>x.disabled=true);
+    alreadyAnswered=true;
 
- if(answer===correct){
 
-  button.classList.add("correct");
+    document
+    .querySelectorAll(".option")
+    .forEach(btn=>{
+        btn.disabled=true;
+    });
 
-  score++;
 
-  document.getElementById("feedback").innerHTML=
-  `🎉 सही उत्तर!<br>
-   🌟 Very Good! बहुत बढ़िया! 👏👏👏`;
+    if(answer===correct){
 
-  clap();
+        button.classList.add("correct");
 
- }else{
+        quizScore++;
 
-  button.classList.add("wrong");
 
-  document.getElementById("feedback").innerHTML=
-  `😊 कोई बात नहीं! फिर से कोशिश करें।<br>
-   ✅ Correct Answer: ${correct}`;
+        document.getElementById(
+            "feedback"
+        ).innerHTML=
 
-  wrongSound();
- }
+        `🎉 सही उत्तर!
 
- document.getElementById("score").innerHTML=score;
+        <br>
+
+        🌟 Very Good! बहुत बढ़िया! 👏👏👏`;
+
+
+        clap();
+
+    }
+
+    else{
+
+        button.classList.add("wrong");
+
+
+        document.getElementById(
+            "feedback"
+        ).innerHTML=
+
+        `😊 कोई बात नहीं!
+
+        <br>
+
+        ✅ Correct Answer:
+        ${correct}`;
+
+
+        wrongSound();
+
+    }
+
+
+    document.getElementById(
+        "score"
+    ).innerHTML=quizScore;
+
 }
+
 
 
 function nextQuestion(){
 
- if(current<49){
+    if(currentQuestion<49){
 
-  current++;
-  showQuestion();
+        currentQuestion++;
 
- }else{
+        showQuestion();
 
-  document.getElementById("feedback").innerHTML=
-  `🏆 QUIZ COMPLETE! 🎉
-   <br><br>
-   आपका Score: ${score}/50
-   <br><br>
-   🌟 Excellent!`;
+    }
 
-  clap();
- }
+    else{
+
+        document.getElementById(
+            "feedback"
+        ).innerHTML=
+
+        `🏆 Quiz Complete! 🎉
+
+        <br><br>
+
+        आपका Score:
+        ${quizScore}/50
+
+        <br><br>
+
+        🌟 Excellent!`;
+
+        clap();
+
+    }
+
 }
+
 
 
 function previousQuestion(){
 
- if(current>0){
+    if(currentQuestion>0){
 
-  current--;
-  showQuestion();
+        currentQuestion--;
 
- }
-}
+        showQuestion();
 
+    }
 
-function resetQuiz(){
-
- if(!quizQuestions.length)return;
-
- current=0;
- score=0;
- answered=false;
-
- showQuestion();
 }
 
 </script>
