@@ -184,6 +184,11 @@ button:hover,
     opacity:.9;
 }
 
+button:disabled{
+    opacity:.45;
+    cursor:not-allowed;
+}
+
 .green{background:#159447;}
 .orange{background:#e67e22;}
 .red{background:#dc3545;}
@@ -242,27 +247,11 @@ button:hover,
     margin:10px 0 5px;
 }
 
-.english{
-    background:#0878cf;
-}
-
-.gk{
-    background:#159447;
-}
-
-.reasoning{
-    background:#7b3fc6;
-}
-
-.computer{
-    background:#e67e22;
-}
-
-.cyber{
-    background:#dc3545;
-}
-
-/* DATA */
+.english{background:#0878cf;}
+.gk{background:#159447;}
+.reasoning{background:#7b3fc6;}
+.computer{background:#e67e22;}
+.cyber{background:#dc3545;}
 
 .data-card{
     background:#f8fbff;
@@ -373,6 +362,16 @@ button:hover,
     line-height:1.8;
 }
 
+.chapter-badge{
+    display:inline-block;
+    background:#e8f3fb;
+    color:#145b91;
+    padding:5px 9px;
+    border-radius:20px;
+    font-size:13px;
+    margin:2px;
+}
+
 footer{
     background:#172033;
     color:white;
@@ -462,7 +461,6 @@ Hindi Medium + English Medium
 
 </header>
 
-
 <nav>
 
 <a href="#home">🏠 Home</a>
@@ -477,9 +475,7 @@ Hindi Medium + English Medium
 
 </nav>
 
-
 <div class="container">
-
 
 <div class="notice">
 
@@ -491,11 +487,10 @@ Hindi Medium + English Medium
 
 <br>
 
-CBSE/RBSE/NCERT की official सामग्री को
+CBSE/RBSE/NCERT की official सामग्री और पाठ्यक्रम को
 संबंधित official sources से सत्यापित करें।
 
 </div>
-
 
 <!-- BOARD -->
 
@@ -517,7 +512,6 @@ CBSE चुनें
 
 </div>
 
-
 <div class="option-card">
 
 <h3>📕 RBSE</h3>
@@ -535,7 +529,6 @@ RBSE चुनें
 <p id="boardMessage"></p>
 
 </section>
-
 
 <!-- MEDIUM -->
 
@@ -557,7 +550,6 @@ Hindi Medium
 
 </div>
 
-
 <div class="option-card">
 
 <h3>🇬🇧 English Medium</h3>
@@ -576,7 +568,6 @@ English Medium
 
 </section>
 
-
 <!-- CLASSES -->
 
 <section class="card" id="classes">
@@ -590,7 +581,6 @@ English Medium
 <div class="grid" id="classList"></div>
 
 </section>
-
 
 <!-- SUBJECT -->
 
@@ -609,7 +599,6 @@ oninput="searchSubjects()">
 <div class="three-grid" id="subjectList"></div>
 
 </section>
-
 
 <!-- CHAPTER -->
 
@@ -632,7 +621,6 @@ oninput="searchChapters()">
 </button>
 
 </section>
-
 
 <!-- NOTES -->
 
@@ -658,20 +646,17 @@ oninput="searchChapters()">
 
 </section>
 
-
-<!-- LEARNING MENU -->
+<!-- LEARNING -->
 
 <section class="card" id="learning">
 
 <h2>📖 English & General Learning</h2>
 
 <p>
-किसी भी विषय पर क्लिक करें। उसके Topics और Questions खुलेंगे।
+किसी भी विषय पर क्लिक करें।
 </p>
 
-
 <div class="learning-grid">
-
 
 <div class="learning-card english"
 onclick="openLearning('english')">
@@ -680,10 +665,9 @@ onclick="openLearning('english')">
 
 <h3>Daily Use</h3>
 
-<p>1000 Sentences</p>
+<p>Sentences</p>
 
 </div>
-
 
 <div class="learning-card gk"
 onclick="openLearning('gk')">
@@ -696,7 +680,6 @@ onclick="openLearning('gk')">
 
 </div>
 
-
 <div class="learning-card reasoning"
 onclick="openLearning('reasoning')">
 
@@ -707,7 +690,6 @@ onclick="openLearning('reasoning')">
 <p>Practice Test</p>
 
 </div>
-
 
 <div class="learning-card computer"
 onclick="openLearning('computer')">
@@ -720,7 +702,6 @@ onclick="openLearning('computer')">
 
 </div>
 
-
 <div class="learning-card cyber"
 onclick="openLearning('cyber')">
 
@@ -732,13 +713,9 @@ onclick="openLearning('cyber')">
 
 </div>
 
-
 </div>
 
 </section>
-
-
-<!-- LEARNING VIEW -->
 
 <section class="card hidden" id="learningView">
 
@@ -761,7 +738,6 @@ class="selection">
 </button>
 
 </section>
-
 
 <!-- NOTES -->
 
@@ -788,11 +764,9 @@ class="selection">
 
 PDF को website के <b>pdf</b> folder में रखें
 और JavaScript में उसका path डालें।
-
 </div>
 
 </section>
-
 
 <!-- TOOLS -->
 
@@ -801,7 +775,6 @@ PDF को website के <b>pdf</b> folder में रखें
 <h2>🧮 Student Tools</h2>
 
 <div class="three-grid">
-
 
 <div class="tool">
 
@@ -823,7 +796,6 @@ Calculate
 
 </div>
 
-
 <div class="tool">
 
 <h3>🎂 Age Calculator</h3>
@@ -837,7 +809,6 @@ Calculate
 <p id="ageResult"></p>
 
 </div>
-
 
 <div class="tool">
 
@@ -859,11 +830,9 @@ Add
 
 </div>
 
-
 </div>
 
 </section>
-
 
 <!-- PREMIUM -->
 
@@ -876,7 +845,6 @@ Add
 question banks और practice PDFs बेच सकते हैं।
 </p>
 
-
 <h3>📘 Premium Notes</h3>
 
 <div class="price">₹49</div>
@@ -887,7 +855,6 @@ question banks और practice PDFs बेच सकते हैं।
 onclick="buyPremium(49)">
 💳 Buy ₹49
 </button>
-
 
 <h3>📚 Complete Question Bank</h3>
 
@@ -901,7 +868,6 @@ onclick="buyPremium(99)">
 </button>
 
 </section>
-
 
 <!-- CONTACT -->
 
@@ -927,7 +893,6 @@ rel="noopener">
 
 </div>
 
-
 <footer>
 
 © 2026 Student Study Hub
@@ -946,9 +911,7 @@ Hindi Medium + English Medium
 
 </footer>
 
-
 <script>
-
 
 /* =====================================================
 GLOBAL
@@ -969,7 +932,7 @@ let testAnswers=[];
 
 
 /* =====================================================
-CLASS
+CLASS LIST
 ===================================================== */
 
 const classList=document.getElementById("classList");
@@ -1006,71 +969,1465 @@ Open
 
 
 /* =====================================================
-SUBJECTS
+SUBJECT DATABASE
 ===================================================== */
+
+/*
+   यह database subject structure को अलग रखता है।
+   Chapters नीचे CHAPTER_DATABASE में हैं।
+*/
 
 const SUBJECTS={
 
-1:["Hindi","English","Mathematics","Environmental Studies"],
+1:[
+"Hindi",
+"English",
+"Mathematics",
+"Environmental Studies"
+],
 
-2:["Hindi","English","Mathematics","Environmental Studies"],
+2:[
+"Hindi",
+"English",
+"Mathematics",
+"Environmental Studies"
+],
 
-3:["Hindi","English","Mathematics","Environmental Studies"],
+3:[
+"Hindi",
+"English",
+"Mathematics",
+"Environmental Studies"
+],
 
-4:["Hindi","English","Mathematics","Environmental Studies"],
+4:[
+"Hindi",
+"English",
+"Mathematics",
+"Environmental Studies"
+],
 
-5:["Hindi","English","Mathematics","Environmental Studies"],
+5:[
+"Hindi",
+"English",
+"Mathematics",
+"Environmental Studies"
+],
 
-6:["Hindi","English","Mathematics","Science","Social Science","Sanskrit"],
+6:[
+"Hindi",
+"English",
+"Mathematics",
+"Science",
+"Social Science",
+"Sanskrit"
+],
 
-7:["Hindi","English","Mathematics","Science","Social Science","Sanskrit"],
+7:[
+"Hindi",
+"English",
+"Mathematics",
+"Science",
+"Social Science",
+"Sanskrit"
+],
 
-8:["Hindi","English","Mathematics","Science","Social Science","Sanskrit"],
+8:[
+"Hindi",
+"English",
+"Mathematics",
+"Science",
+"Social Science",
+"Sanskrit"
+],
 
-9:["Hindi","English","Mathematics","Science","Social Science","Information Technology"],
+9:[
+"Hindi",
+"English",
+"Mathematics",
+"Science",
+"Social Science",
+"Sanskrit",
+"Information Technology"
+],
 
-10:["Hindi","English","Mathematics","Science","Social Science","Information Technology"],
+10:[
+"Hindi",
+"English",
+"Mathematics",
+"Science",
+"Social Science",
+"Sanskrit",
+"Information Technology"
+],
 
 11:[
-"English","Hindi","Physics","Chemistry","Biology",
-"Mathematics","Accountancy","Business Studies",
-"Economics","History","Political Science",
-"Geography","Computer Science"
+"English",
+"Hindi",
+"Physics",
+"Chemistry",
+"Biology",
+"Mathematics",
+"Accountancy",
+"Business Studies",
+"Economics",
+"History",
+"Political Science",
+"Geography",
+"Sociology",
+"Psychology",
+"Computer Science",
+"Physical Education"
 ],
 
 12:[
-"English","Hindi","Physics","Chemistry","Biology",
-"Mathematics","Accountancy","Business Studies",
-"Economics","History","Political Science",
-"Geography","Computer Science"
+"English",
+"Hindi",
+"Physics",
+"Chemistry",
+"Biology",
+"Mathematics",
+"Accountancy",
+"Business Studies",
+"Economics",
+"History",
+"Political Science",
+"Geography",
+"Sociology",
+"Psychology",
+"Computer Science",
+"Physical Education"
 ]
 
 };
 
 
 /* =====================================================
-CHAPTERS
+CHAPTER DATABASE
 ===================================================== */
 
-const CHAPTERS={};
+/*
+IMPORTANT:
 
-Object.keys(SUBJECTS).forEach(classNo=>{
+यहाँ textbook के पूरे पाठ/कंटेंट को copy नहीं किया गया है।
+केवल chapter/title names रखे जाते हैं।
 
-CHAPTERS[classNo]={};
+नई NCERT पुस्तकों में chapter structure बदलने पर
+इसी database को update किया जा सकता है।
+*/
 
-SUBJECTS[classNo].forEach(subject=>{
 
-CHAPTERS[classNo][subject]=[
-"Chapter 1",
-"Chapter 2",
-"Chapter 3",
-"Chapter 4",
-"Chapter 5"
-];
+const CHAPTER_DATABASE={
 
-});
+/* ================= CLASS 1 ================= */
 
-});
+1:{
+
+"Hindi":[
+"मीना का परिवार",
+"दादा-दादी",
+"तीन साथी",
+"वाह! क्या बात है",
+"खेल-खेल में",
+"आलू की सड़क",
+"झूला",
+"रानी भी",
+"मेला",
+"मिठाई",
+"तलाब",
+"बादल",
+"कबूतर",
+"बंदर और टोपीवाला",
+"गेंद"
+],
+
+"English":[
+"Hello",
+"Greetings",
+"Family and Friends",
+"Things Around Us",
+"School",
+"Food",
+"Games",
+"Animals",
+"Nature",
+"Stories"
+],
+
+"Mathematics":[
+"Finding the Furry Animals",
+"Tick-Tick-Tick",
+"Chuk-Chuk Goes the Rail",
+"Vegetables",
+"Midnight at the Fair",
+"Rani's Gift",
+"How Many Times?",
+"Fun with Numbers",
+"Utsav"
+],
+
+"Environmental Studies":[
+"मेरी दुनिया",
+"मेरा परिवार",
+"मेरा घर",
+"मेरा विद्यालय",
+"हमारा भोजन",
+"हमारे कपड़े",
+"पानी",
+"जानवर",
+"पौधे",
+"यातायात",
+"हमारा आसपास",
+"त्योहार"
+]
+
+},
+
+
+/* ================= CLASS 2 ================= */
+
+2:{
+
+"Hindi":[
+"ऊँट चला",
+"भालू ने खेली फुटबॉल",
+"मीठी सारंगी",
+"अधिक बलवान कौन?",
+"खट्टे अंगूर",
+"ऐसे भी बच्चे",
+"टिल्लू जी",
+"तीन धनुष",
+"बुलबुल",
+"दिल्ली से चलकर",
+"अनोखा उपहार",
+"तालाब",
+"छोटी सी चिड़िया"
+],
+
+"English":[
+"Family and Friends",
+"Welcome to School",
+"Fun with Food",
+"Animals Around Us",
+"Games",
+"Home",
+"Nature",
+"Stories",
+"Festivals"
+],
+
+"Mathematics":[
+"खेले और सीखें",
+"गिनती और संख्या",
+"जोड़ और घटाव",
+"लंबाई",
+"आकार",
+"माप",
+"समय",
+"पैसे",
+"आँकड़े",
+"गुणा की शुरुआत"
+],
+
+"Environmental Studies":[
+"मेरा परिवार",
+"मेरा घर",
+"मेरी दिनचर्या",
+"भोजन",
+"पानी",
+"हवा",
+"पौधे",
+"जानवर",
+"यात्रा",
+"हमारा विद्यालय"
+]
+
+},
+
+
+/* ================= CLASS 3 ================= */
+
+3:{
+
+"Hindi":[
+"कलम",
+"कक्षा",
+"कबूतर",
+"मन करता है",
+"बहादुर बित्तो",
+"हमसे सब कहते",
+"टिपटिपवा",
+"बंदर और गिलहरी",
+"अक्ल बड़ी या भैंस",
+"क्योंजीमल और कैसे-कैसलिया",
+"मीरा बहन और बाघ",
+"जब मुझे साँप ने काटा",
+"मिर्च का मज़ा",
+"सबसे अच्छा पेड़"
+],
+
+"English":[
+"Good Morning",
+"Bird Talk",
+"How Creatures Move",
+"Sea Song",
+"Little by Little",
+"Trains",
+"Flying-Man",
+"Don't Tell",
+"On the Grasshopper and Cricket"
+],
+
+"Mathematics":[
+"Where to Look From",
+"Fun with Numbers",
+"Give and Take",
+"Long and Short",
+"Shapes and Designs",
+"Rupees and Paise",
+"Time Goes On",
+"Who is Heavier?",
+"How Many Times?",
+"Play with Patterns",
+"Jugs and Mugs",
+"Can We Share?",
+"Smart Charts"
+],
+
+"Environmental Studies":[
+"Family and Friends",
+"Food",
+"Shelter",
+"Water",
+"Travel",
+"Things We Make and Do",
+"Plants",
+"Animals",
+"Work and Play"
+]
+
+},
+
+
+/* ================= CLASS 4 ================= */
+
+4:{
+
+"Hindi":[
+"मन के भोले-भाले बादल",
+"जैसा सवाल वैसा जवाब",
+"किरमिच की गेंद",
+"पापा जब बच्चे थे",
+"दोस्त की पोशाक",
+"नाव बनाओ नाव बनाओ",
+"दान का हिसाब",
+"कौन?",
+"स्वतंत्रता की ओर",
+"थप्प रोटी थप्प दाल",
+"पढ़क्कू की सूझ",
+"सुनीता की पहिया कुर्सी",
+"हुदहुद",
+"मुफ्त ही मुफ्त"
+],
+
+"English":[
+"Wake Up!",
+"Neha's Alarm Clock",
+"Pinocchio",
+"One Little Kitten",
+"Run!",
+"Nasruddin's Aim",
+"Why?",
+"Don't Tell",
+"Flying-Man"
+],
+
+"Mathematics":[
+"Building with Bricks",
+"Long and Short",
+"A Trip to Bhopal",
+"Tick-Tick-Tick",
+"The Way The World Looks",
+"Jugs and Mugs",
+"Halves and Quarters",
+"Play with Patterns",
+"Boxes and Sketches",
+"Tables and Shares",
+"How Big? How Heavy?",
+"Fields and Fences",
+"Smart Charts"
+],
+
+"Environmental Studies":[
+"Going to School",
+"Ear to Ear",
+"A Day with Nandu",
+"Changing Times",
+"Anita and the Honey Bees",
+"Omana's Journey",
+"From the Window",
+"Reaching Grandmother's House",
+"A River's Tale",
+"A Treat for Mosquitoes",
+"Up You Go!",
+"Changing Times",
+"A Busy Month",
+"From Market to Home",
+"A River's Tale"
+]
+
+},
+
+
+/* ================= CLASS 5 ================= */
+
+5:{
+
+"Hindi":[
+"राख की रस्सी",
+"फसलों के त्योहार",
+"खिलौनेवाला",
+"नन्हा फनकार",
+"जहाँ चाह वहाँ राह",
+"चिट्ठी का सफर",
+"डाकिए की कहानी, कँवरसिंह की जुबानी",
+"वे दिन भी क्या दिन थे",
+"एक माँ की बेबसी",
+"एक दिन की बादशाहत",
+"चावल की रोटियाँ",
+"गुरु और चेला",
+"स्वामी की दादी",
+"बाघ आया उस रात",
+"एशिया का चाँद"
+],
+
+"English":[
+"Ice-Cream Man",
+"Wonderful Waste!",
+"Teamwork",
+"Flying Together",
+"My Elder Brother",
+"Rip Van Winkle",
+"Class Discussion",
+"Topsy-turvy Land",
+"Gone Forever!",
+"Malik's Visit to the Zoo"
+],
+
+"Mathematics":[
+"The Fish Tale",
+"Shapes and Angles",
+"How Many Squares?",
+"Parts and Wholes",
+"Does it Look the Same?",
+"Be My Multiple, I'll be Your Factor",
+"Can You See the Pattern?",
+"Mapping Your Way",
+"Boxes and Sketches",
+"10 and 100",
+"Area and Its Boundary",
+"Smart Charts",
+"Ways to Multiply and Divide",
+"How Big? How Heavy?",
+"Can We Have a Pole?"
+],
+
+"Environmental Studies":[
+"Super Senses",
+"A Snake Charmer's Story",
+"From Tasting to Digesting",
+"Mangoes Round the Year",
+"A Snake Charmer's Story",
+"Every Drop Counts",
+"Experiments with Water",
+"A Treat for Mosquitoes",
+"Up You Go!",
+"Walls Tell Stories",
+"Sunita in Space",
+"What If It Finishes?",
+"A Shelter So High!",
+"When the Earth Shook!",
+"Blow Hot, Blow Cold",
+"Who Will Do This Work?",
+"Across the Wall",
+"On the Move Again"
+]
+
+},
+
+
+/* ================= CLASS 6 ================= */
+
+6:{
+
+"Hindi":[
+"वह चिड़िया जो",
+"बचपन",
+"नादान दोस्त",
+"चाँद से थोड़ी-सी गप्पें",
+"अक्षर का महत्व",
+"पार नज़र के",
+"साथी हाथ बढ़ाना",
+"ऐसे-ऐसे",
+"टिकट अलबम",
+"झाँसी की रानी",
+"जो देखकर भी नहीं देखते",
+"संसार पुस्तक है",
+"मैं सबसे छोटी होऊँ",
+"लोकगीत",
+"वन के मार्ग में",
+"साँस-साँस में बाँस"
+],
+
+"English":[
+"Who Did Patrick's Homework?",
+"How the Dog Found Himself a New Master!",
+"Taro's Reward",
+"An Indian-American Woman in Space",
+"A Different Kind of School",
+"Who I Am",
+"Fair Play",
+"A Game of Chance",
+"Desert Animals",
+"The Banyan Tree"
+],
+
+"Mathematics":[
+"Knowing Our Numbers",
+"Whole Numbers",
+"Playing with Numbers",
+"Basic Geometrical Ideas",
+"Understanding Elementary Shapes",
+"Integers",
+"Fractions",
+"Decimals",
+"Data Handling",
+"Mensuration",
+"Algebra",
+"Ratio and Proportion",
+"Symmetry",
+"Practical Geometry"
+],
+
+"Science":[
+"भोजन: यह कहाँ से आता है?",
+"भोजन के घटक",
+"तंतु से वस्त्र तक",
+"वस्तुओं के समूह बनाना",
+"पौधों को जानिए",
+"शरीर में गति",
+"पौधों को जानिए",
+"शरीर में गति",
+"सजीव एवं उनका परिवेश",
+"गति एवं दूरियों का मापन",
+"प्रकाश, छायाएँ एवं परावर्तन",
+"विद्युत तथा परिपथ",
+"चुंबकों के साथ मज़ा",
+"जल",
+"हमारे चारों ओर वायु",
+"कचरा – अंदर बाहर"
+],
+
+"Social Science":[
+"इतिहास: क्या, कहाँ, कैसे और कब?",
+"आखेट-खाद्य संग्रह से भोजन उत्पादन तक",
+"आरंभिक नगर",
+"क्या बताती हैं हमें किताबें और कब्रें?",
+"राज्य, राजा और एक प्राचीन गणराज्य",
+"नए प्रश्न और विचार",
+"नए राजा और राज्य",
+"व्यापारी, तीर्थयात्री और राजा",
+"नए साम्राज्य और राज्य",
+"इमारतें, चित्र तथा किताबें",
+"भूगोल: सौरमंडल में पृथ्वी",
+"ग्लोब: अक्षांश और देशांतर",
+"पृथ्वी की गतियाँ",
+"मानचित्र",
+"भारत: जलवायु, वनस्पति तथा वन्यजीव",
+"सामाजिक एवं राजनीतिक जीवन",
+"विविधता",
+"सरकार",
+"पंचायती राज",
+"ग्रामीण प्रशासन"
+],
+
+"Sanskrit":[
+"शब्दपरिचयः",
+"शब्दपरिचयः",
+"सुरभिः",
+"विद्यालयः",
+"वृक्षाः",
+"समुद्रतटः",
+"बकस्य प्रतिकारः",
+"सूक्तिस्तबकः",
+"क्रीडास्पर्धा",
+"कृषिकाः कर्मवीराः",
+"पुष्पोत्सवः",
+"दशमः त्वम् असि",
+"विमानयानं रचयाम",
+"अहह आः च",
+"मातुलचन्द्र!"
+]
+
+},
+
+
+/* ================= CLASS 7 ================= */
+
+7:{
+
+"Hindi":[
+"हम पंछी उन्मुक्त गगन के",
+"दादी माँ",
+"हिमालय की बेटियाँ",
+"कठपुतली",
+"मिठाईवाला",
+"रक्त और हमारा शरीर",
+"पापा खो गए",
+"शाम–एक किसान",
+"चिड़िया की बच्ची",
+"अपूर्व अनुभव",
+"रहीम के दोहे",
+"कंचा",
+"एक तिनका",
+"खानपान की बदलती तस्वीर",
+"नीलकंठ",
+"भोर और बरखा",
+"वीर कुँवर सिंह"
+],
+
+"English":[
+"Three Questions",
+"A Gift of Chappals",
+"Gopal and the Hilsa Fish",
+"The Ashes That Made Trees Bloom",
+"A Gift of Chappals",
+"Expert Detectives",
+"The Invention of Vita-Wonk",
+"Fire: Friend and Foe",
+"A Bicycle in Good Repair",
+"Garden Snake"
+],
+
+"Mathematics":[
+"Integers",
+"Fractions and Decimals",
+"Data Handling",
+"Simple Equations",
+"Lines and Angles",
+"The Triangle and Its Properties",
+"Congruence of Triangles",
+"Comparing Quantities",
+"Rational Numbers",
+"Practical Geometry",
+"Perimeter and Area",
+"Algebraic Expressions",
+"Exponents and Powers",
+"Symmetry",
+"Visualising Solid Shapes"
+],
+
+"Science":[
+"Nutrition in Plants",
+"Nutrition in Animals",
+"Heat",
+"Acids, Bases and Salts",
+"Physical and Chemical Changes",
+"Respiration in Organisms",
+"Transportation in Animals and Plants",
+"Reproduction in Plants",
+"Motion and Time",
+"Electric Current and Its Effects",
+"Light",
+"Forests: Our Lifeline",
+"Wastewater Story"
+],
+
+"Social Science":[
+"Tracing Changes Through a Thousand Years",
+"New Kings and Kingdoms",
+"The Delhi Sultans",
+"The Mughal Empire",
+"Rulers and Buildings",
+"Towns, Traders and Craftspersons",
+"Tribes, Nomads and Settled Communities",
+"Devotional Paths to the Divine",
+"The Making of Regional Cultures",
+"Environment",
+"Inside Our Earth",
+"Air",
+"Water",
+"Natural Vegetation and Wildlife",
+"Human Environment",
+"On Equality",
+"Role of the Government in Health",
+"How the State Government Works",
+"Growing up as Boys and Girls",
+"Women Change the World"
+],
+
+"Sanskrit":[
+"सुभाषितानि",
+"दुर्बुद्धिः विनश्यति",
+"स्वावलम्बनम्",
+"हास्यबालकविसम्मेलनम्",
+"पण्डिता रमाबाई",
+"सदाचारः",
+"संकल्पः सिद्धिदायकः",
+"त्रिवर्णः ध्वजः",
+"अहमपि विद्यालयं गमिष्यामि",
+"विश्वबन्धुत्वम्"
+]
+
+},
+
+
+/* ================= CLASS 8 ================= */
+
+8:{
+
+"Hindi":[
+"ध्वनि",
+"लाख की चूड़ियाँ",
+"बस की यात्रा",
+"दीवानों की हस्ती",
+"चिट्ठियों की अनूठी दुनिया",
+"भगवान के डाकिए",
+"क्या निराश हुआ जाए",
+"यह सबसे कठिन समय नहीं",
+"कबीर की साखियाँ",
+"कामचोर",
+"जब सिनेमा ने बोलना सीखा",
+"सुदामा चरित",
+"जहाँ पहिया है",
+"अकबरी लोटा",
+"सूर के पद",
+"पानी की कहानी",
+"बाज और साँप"
+],
+
+"English":[
+"The Best Christmas Present in the World",
+"The Tsunami",
+"Glimpses of the Past",
+"Bepin Choudhury's Lapse of Memory",
+"The Summit Within",
+"This is Jody's Fawn",
+"A Visit to Cambridge",
+"A Short Monsoon Diary",
+"The Great Stone Face"
+],
+
+"Mathematics":[
+"Rational Numbers",
+"Linear Equations in One Variable",
+"Understanding Quadrilaterals",
+"Practical Geometry",
+"Data Handling",
+"Squares and Square Roots",
+"Cubes and Cube Roots",
+"Comparing Quantities",
+"Algebraic Expressions and Identities",
+"Visualising Solid Shapes",
+"Mensuration",
+"Exponents and Powers",
+"Direct and Inverse Proportions",
+"Factorisation",
+"Introduction to Graphs",
+"Playing with Numbers"
+],
+
+"Science":[
+"Crop Production and Management",
+"Microorganisms: Friend and Foe",
+"Synthetic Fibres and Plastics",
+"Materials: Metals and Non-Metals",
+"Coal and Petroleum",
+"Combustion and Flame",
+"Conservation of Plants and Animals",
+"Cell — Structure and Functions",
+"Reproduction in Animals",
+"Reaching the Age of Adolescence",
+"Force and Pressure",
+"Friction",
+"Sound",
+"Chemical Effects of Electric Current",
+"Some Natural Phenomena",
+"Light",
+"Stars and the Solar System",
+"Pollution of Air and Water"
+],
+
+"Social Science":[
+"How, When and Where",
+"From Trade to Territory",
+"Ruling the Countryside",
+"Tribals, Dikus and the Vision of a Golden Age",
+"When People Rebel",
+"Weavers, Iron Smelters and Factory Owners",
+"Civilising the 'Native', Educating the Nation",
+"Women, Caste and Reform",
+"The Making of the National Movement",
+"India After Independence",
+"Resources",
+"Land, Soil, Water, Natural Vegetation and Wildlife",
+"Mineral and Power Resources",
+"Agriculture",
+"Industries",
+"Human Resources",
+"The Indian Constitution",
+"Understanding Secularism",
+"Why Do We Need a Parliament?",
+"Understanding Laws",
+"Judiciary",
+"Understanding Our Criminal Justice System",
+"Understanding Marginalisation",
+"Confronting Marginalisation",
+"Public Facilities",
+"Law and Social Justice"
+],
+
+"Sanskrit":[
+"सुभाषितानि",
+"बिलस्य वाणी न कदापि मे श्रुता",
+"डिजीभारतम्",
+"सदैव पुरतो निधेहि चरणम्",
+"कण्टकेनैव कण्टकम्",
+"गृहं शून्यं सुतां विना",
+"भारतजनताऽहम्",
+"संसारसागरस्य नायकाः",
+"सप्तभगिन्यः",
+"नीतिनवनीतम्",
+"सावित्रीबाई फुले",
+"कः रक्षति कः रक्षितः"
+]
+
+},
+
+
+/* ================= CLASS 9 ================= */
+
+9:{
+
+"Hindi":[
+"दो बैलों की कथा",
+"ल्हासा की ओर",
+"उपभोक्तावाद की संस्कृति",
+"साँवले सपनों की याद",
+"नाना साहब की पुत्री देवी मैना को भस्म कर दिया गया",
+"प्रेमचंद के फटे जूते",
+"मेरे बचपन के दिन",
+"एक कुत्ता और एक मैना",
+"साखियाँ एवं सबद",
+"वाख",
+"सवैये",
+"कैदी और कोकिला",
+"ग्राम श्री",
+"चंद्र गहना से लौटती बेर",
+"मेघ आए",
+"बच्चे काम पर जा रहे हैं"
+],
+
+"English":[
+"The Fun They Had",
+"The Sound of Music",
+"The Little Girl",
+"A Truly Beautiful Mind",
+"The Snake and the Mirror",
+"My Childhood",
+"Reach for the Top",
+"A Truly Beautiful Mind",
+"Kathmandu",
+"If I Were You"
+],
+
+"Mathematics":[
+"Number Systems",
+"Polynomials",
+"Coordinate Geometry",
+"Linear Equations in Two Variables",
+"Introduction to Euclid's Geometry",
+"Lines and Angles",
+"Triangles",
+"Quadrilaterals",
+"Areas of Parallelograms and Triangles",
+"Circles",
+"Constructions",
+"Heron's Formula",
+"Surface Areas and Volumes",
+"Statistics",
+"Probability"
+],
+
+"Science":[
+"Matter in Our Surroundings",
+"Is Matter Around Us Pure",
+"Atoms and Molecules",
+"Structure of the Atom",
+"The Fundamental Unit of Life",
+"Tissues",
+"Motion",
+"Force and Laws of Motion",
+"Gravitation",
+"Work and Energy",
+"Sound",
+"Why Do We Fall Ill",
+"Natural Resources",
+"Improvement in Food Resources"
+],
+
+"Social Science":[
+"The French Revolution",
+"Socialism in Europe and the Russian Revolution",
+"Nazism and the Rise of Hitler",
+"Forest Society and Colonialism",
+"Pastoralists in the Modern World",
+"India — Size and Location",
+"Physical Features of India",
+"Drainage",
+"Climate",
+"Natural Vegetation and Wildlife",
+"Population",
+"What is Democracy? Why Democracy?",
+"Constitutional Design",
+"Electoral Politics",
+"Working of Institutions",
+"Democratic Rights",
+"The Story of Village Palampur",
+"People as Resource",
+"Poverty as a Challenge",
+"Food Security in India"
+],
+
+"Sanskrit":[
+"भारतीवसन्तगीतिः",
+"स्वर्णकाकः",
+"गोदोहनम्",
+"सूक्तिमौक्तिकम्",
+"भ्रान्तो बालः",
+"लौहतुला",
+"सिकतासेतुः",
+"जटायोः शौर्यम्",
+"पर्यावरणम्",
+"वाङ्मनःप्राणस्वरूपम्"
+],
+
+"Information Technology":[
+"Introduction to IT-ITeS",
+"Data Entry and Keyboarding Skills",
+"Digital Documentation",
+"Electronic Spreadsheet",
+"Digital Presentation"
+]
+
+},
+
+
+/* ================= CLASS 10 ================= */
+
+10:{
+
+"Hindi":[
+"सूरदास के पद",
+"राम-लक्ष्मण-परशुराम संवाद",
+"आत्मकथ्य",
+"उत्साह और अट नहीं रही",
+"यह दंतुरित मुस्कान और फसल",
+"संगतकार",
+"नेताजी का चश्मा",
+"बालगोबिन भगत",
+"लखनवी अंदाज़",
+"एक कहानी यह भी",
+"नौबतखाने में इबादत",
+"संस्कृति"
+],
+
+"English":[
+"A Letter to God",
+"Nelson Mandela: Long Walk to Freedom",
+"Two Stories about Flying",
+"From the Diary of Anne Frank",
+"Glimpses of India",
+"Mijbil the Otter",
+"Madam Rides the Bus",
+"The Sermon at Benares",
+"The Proposal"
+],
+
+"Mathematics":[
+"Real Numbers",
+"Polynomials",
+"Pair of Linear Equations in Two Variables",
+"Quadratic Equations",
+"Arithmetic Progressions",
+"Triangles",
+"Coordinate Geometry",
+"Introduction to Trigonometry",
+"Some Applications of Trigonometry",
+"Circles",
+"Areas Related to Circles",
+"Surface Areas and Volumes",
+"Statistics",
+"Probability"
+],
+
+"Science":[
+"Chemical Reactions and Equations",
+"Acids, Bases and Salts",
+"Metals and Non-metals",
+"Carbon and Its Compounds",
+"Periodic Classification of Elements",
+"Life Processes",
+"Control and Coordination",
+"How do Organisms Reproduce?",
+"Heredity",
+"Light — Reflection and Refraction",
+"The Human Eye and the Colourful World",
+"Electricity",
+"Magnetic Effects of Electric Current",
+"Sources of Energy",
+"Our Environment",
+"Sustainable Management of Natural Resources"
+],
+
+"Social Science":[
+"The Rise of Nationalism in Europe",
+"Nationalism in India",
+"The Making of a Global World",
+"The Age of Industrialisation",
+"Print Culture and the Modern World",
+"Resources and Development",
+"Forest and Wildlife Resources",
+"Water Resources",
+"Agriculture",
+"Minerals and Energy Resources",
+"Manufacturing Industries",
+"Lifelines of National Economy",
+"Power Sharing",
+"Federalism",
+"Gender, Religion and Caste",
+"Political Parties",
+"Outcomes of Democracy",
+"Development",
+"Sectors of the Indian Economy",
+"Money and Credit",
+"Globalisation and the Indian Economy",
+"Consumer Rights"
+],
+
+"Sanskrit":[
+"शुचिपर्यावरणम्",
+"बुद्धिर्बलवती सदा",
+"व्यायामः सर्वदा पथ्यः",
+"शिशुलालनम्",
+"जननी तुल्यवत्सला",
+"सुभाषितानि",
+"सौहार्दं प्रकृतेः शोभा",
+"विचित्रः साक्षी",
+"सूक्तयः",
+"भूकम्पविभीषिका"
+],
+
+"Information Technology":[
+"Digital Documentation",
+"Electronic Spreadsheet",
+"Database Management System",
+"Web Applications and Security"
+]
+
+},
+
+
+/* ================= CLASS 11 ================= */
+
+11:{
+
+"Physics":[
+"Physical World",
+"Units and Measurements",
+"Motion in a Straight Line",
+"Motion in a Plane",
+"Laws of Motion",
+"Work, Energy and Power",
+"System of Particles and Rotational Motion",
+"Gravitation",
+"Mechanical Properties of Solids",
+"Mechanical Properties of Fluids",
+"Thermal Properties of Matter",
+"Thermodynamics",
+"Kinetic Theory",
+"Oscillations",
+"Waves"
+],
+
+"Chemistry":[
+"Some Basic Concepts of Chemistry",
+"Structure of Atom",
+"Classification of Elements and Periodicity in Properties",
+"Chemical Bonding and Molecular Structure",
+"Thermodynamics",
+"Equilibrium",
+"Redox Reactions",
+"Organic Chemistry — Some Basic Principles and Techniques",
+"Hydrocarbons"
+],
+
+"Biology":[
+"The Living World",
+"Biological Classification",
+"Plant Kingdom",
+"Animal Kingdom",
+"Morphology of Flowering Plants",
+"Anatomy of Flowering Plants",
+"Structural Organisation in Animals",
+"Cell — The Unit of Life",
+"Biomolecules",
+"Cell Cycle and Cell Division",
+"Transport in Plants",
+"Mineral Nutrition",
+"Photosynthesis in Higher Plants",
+"Respiration in Plants",
+"Plant Growth and Development",
+"Digestion and Absorption",
+"Breathing and Exchange of Gases",
+"Body Fluids and Circulation",
+"Excretory Products and Their Elimination",
+"Locomotion and Movement",
+"Neural Control and Coordination",
+"Chemical Coordination and Integration"
+],
+
+"Mathematics":[
+"Sets",
+"Relations and Functions",
+"Trigonometric Functions",
+"Principle of Mathematical Induction",
+"Complex Numbers and Quadratic Equations",
+"Linear Inequalities",
+"Permutations and Combinations",
+"Binomial Theorem",
+"Sequences and Series",
+"Straight Lines",
+"Conic Sections",
+"Introduction to Three Dimensional Geometry",
+"Limits and Derivatives",
+"Statistics",
+"Probability"
+],
+
+"History":[
+"Writing and City Life",
+"An Empire Across Three Continents",
+"Nomadic Empires",
+"The Three Orders",
+"Changing Cultural Traditions",
+"Displacing Indigenous Peoples",
+"Paths to Modernisation"
+],
+
+"Political Science":[
+"Constitution: Why and How?",
+"Rights in the Indian Constitution",
+"Election and Representation",
+"Executive",
+"Legislature",
+"Judiciary",
+"Federalism",
+"Local Governments",
+"Constitution as a Living Document",
+"The Philosophy of the Constitution"
+],
+
+"Geography":[
+"Geography as a Discipline",
+"The Origin and Evolution of the Earth",
+"Interior of the Earth",
+"Distribution of Oceans and Continents",
+"Minerals and Rocks",
+"Geomorphic Processes",
+"Landforms and their Evolution",
+"Composition and Structure of Atmosphere",
+"Solar Radiation, Heat Balance and Temperature",
+"Atmospheric Circulation and Weather Systems",
+"Water in the Atmosphere",
+"World Climate and Climate Change",
+"Water",
+"Movements of Ocean Water",
+"Life on the Earth",
+"Biogeochemical Cycles"
+],
+
+"Economics":[
+"Introduction",
+"Collection of Data",
+"Organisation of Data",
+"Presentation of Data",
+"Measures of Central Tendency",
+"Measures of Dispersion",
+"Correlation",
+"Introduction to Index Numbers",
+"Indian Economy on the Eve of Independence",
+"Indian Economy 1950–1990",
+"Liberalisation, Privatisation and Globalisation",
+"Poverty",
+"Human Capital Formation in India",
+"Rural Development",
+"Employment",
+"Infrastructure",
+"Environment and Sustainable Development"
+],
+
+"English":[
+"The Portrait of a Lady",
+"We're Not Afraid to Die",
+"Discovering Tut",
+"Landscape of the Soul",
+"The Ailing Planet",
+"The Browning Version",
+"Silk Road",
+"A Photograph",
+"The Laburnum Top",
+"The Voice of the Rain",
+"Childhood",
+"Father to Son"
+]
+
+},
+
+
+/* ================= CLASS 12 ================= */
+
+12:{
+
+"Physics":[
+"Electric Charges and Fields",
+"Electrostatic Potential and Capacitance",
+"Current Electricity",
+"Moving Charges and Magnetism",
+"Magnetism and Matter",
+"Electromagnetic Induction",
+"Alternating Current",
+"Electromagnetic Waves",
+"Ray Optics and Optical Instruments",
+"Wave Optics",
+"Dual Nature of Radiation and Matter",
+"Atoms",
+"Nuclei",
+"Semiconductor Electronics"
+],
+
+"Chemistry":[
+"Solutions",
+"Electrochemistry",
+"Chemical Kinetics",
+"d- and f-Block Elements",
+"Coordination Compounds",
+"Haloalkanes and Haloarenes",
+"Alcohols, Phenols and Ethers",
+"Aldehydes, Ketones and Carboxylic Acids",
+"Amines",
+"Biomolecules"
+],
+
+"Biology":[
+"Reproduction in Organisms",
+"Sexual Reproduction in Flowering Plants",
+"Human Reproduction",
+"Reproductive Health",
+"Principles of Inheritance and Variation",
+"Molecular Basis of Inheritance",
+"Evolution",
+"Human Health and Disease",
+"Strategies for Enhancement in Food Production",
+"Microbes in Human Welfare",
+"Biotechnology — Principles and Processes",
+"Biotechnology and its Applications",
+"Organisms and Populations",
+"Ecosystem",
+"Biodiversity and Conservation",
+"Environmental Issues"
+],
+
+"Mathematics":[
+"Relations and Functions",
+"Inverse Trigonometric Functions",
+"Matrices",
+"Determinants",
+"Continuity and Differentiability",
+"Application of Derivatives",
+"Integrals",
+"Application of Integrals",
+"Differential Equations",
+"Vector Algebra",
+"Three Dimensional Geometry",
+"Linear Programming",
+"Probability"
+],
+
+"History":[
+"Bricks, Beads and Bones",
+"Kings, Farmers and Towns",
+"Kinship, Caste and Class",
+"Thinkers, Beliefs and Buildings",
+"Through the Eyes of Travellers",
+"Bhakti-Sufi Traditions",
+"An Imperial Capital: Vijayanagara",
+"Peasants, Zamindars and the State",
+"Kings and Chronicles",
+"Colonialism and the Countryside",
+"Rebels and the Raj",
+"Colonial Cities",
+"Mahात्मा Gandhi and the Nationalist Movement",
+"Understanding Partition",
+"Framing the Constitution"
+],
+
+"Political Science":[
+"The End of Bipolarity",
+"Contemporary Centres of Power",
+"Contemporary South Asia",
+"International Organizations",
+"Security in the Contemporary World",
+"Environment and Natural Resources",
+"Globalisation",
+"Challenges of Nation-Building",
+"Era of One-Party Dominance",
+"Politics of Planned Development",
+"India's External Relations",
+"Challenges to and Restoration of the Congress System",
+"The Crisis of Democratic Order",
+"Regional Aspirations",
+"Recent Developments in Indian Politics"
+],
+
+"Geography":[
+"Human Geography: Nature and Scope",
+"The World Population",
+"Human Development",
+"Primary Activities",
+"Secondary Activities",
+"Tertiary and Quaternary Activities",
+"Transport and Communication",
+"International Trade",
+"Population: Distribution, Density, Growth and Composition",
+"Migration",
+"Human Settlements",
+"Land Resources and Agriculture",
+"Water Resources",
+"Mineral and Energy Resources",
+"Planning and Sustainable Development",
+"Geographical Perspective on Selected Issues"
+],
+
+"Economics":[
+"National Income Accounting",
+"Money and Banking",
+"Determination of Income and Employment",
+"Government Budget and the Economy",
+"Balance of Payments",
+"Indian Economy on the Eve of Independence",
+"Indian Economy 1950–1990",
+"Liberalisation, Privatisation and Globalisation",
+"Poverty",
+"Human Capital Formation",
+"Rural Development",
+"Employment",
+"Infrastructure",
+"Environment and Sustainable Development"
+],
+
+"Accountancy":[
+"Accounting for Partnership Firms",
+"Reconstitution of Partnership",
+"Dissolution of Partnership Firm",
+"Accounting for Share Capital",
+"Issues of Shares",
+"Accounting for Debentures",
+"Financial Statements of a Company",
+"Analysis of Financial Statements",
+"Cash Flow Statement"
+],
+
+"Business Studies":[
+"Nature and Significance of Management",
+"Principles of Management",
+"Business Environment",
+"Planning",
+"Organising",
+"Staffing",
+"Directing",
+"Controlling",
+"Financial Management",
+"Financial Markets",
+"Marketing Management",
+"Consumer Protection"
+],
+
+"English":[
+"The Last Lesson",
+"Lost Spring",
+"Deep Water",
+"The Rattrap",
+"Indigo",
+"Poets and Pancakes",
+"The Interview",
+"Going Places",
+"My Mother at Sixty-Six",
+"An Elementary School Classroom in a Slum",
+"Keeping Quiet",
+"A Thing of Beauty",
+"A Roadside Stand",
+"Aunt Jennifer's Tigers"
+],
+
+"Computer Science":[
+"Computer System",
+"Computational Thinking and Programming",
+"Society, Law and Ethics",
+"Data Handling",
+"Database Concepts",
+"Computer Networks",
+"Data Structures",
+"Introduction to Python",
+"File Handling",
+"Database Connectivity"
+]
+
+}
+
+};
+
+
+/* =====================================================
+BOARD-SPECIFIC CHAPTER FALLBACK
+===================================================== */
+
+/*
+CBSE:
+NCERT आधारित chapters दिखाए जाते हैं।
+
+RBSE:
+जहाँ अलग RBSE textbook data उपलब्ध नहीं है,
+वहाँ subject का NCERT-compatible database दिखता है।
+बाद में RBSE की official textbook/syllabus list
+के अनुसार अलग chapters आसानी से replace किए जा सकते हैं।
+*/
+
+function getChapters(classNo,subject){
+
+const classData=CHAPTER_DATABASE[classNo];
+
+if(!classData)return [];
+
+if(classData[subject]){
+
+return classData[subject];
+
+}
+
+return [];
+
+}
 
 
 /* =====================================================
@@ -1122,9 +2479,7 @@ behavior:"smooth"
 });
 
 return;
-
 }
-
 
 if(!selectedMedium){
 
@@ -1136,7 +2491,6 @@ behavior:"smooth"
 });
 
 return;
-
 }
 
 selectedClass=classNo;
@@ -1148,6 +2502,8 @@ document.getElementById("subjectInfo").innerHTML=
 "<b>Board:</b> "+selectedBoard+
 "<br><b>Medium:</b> "+selectedMedium+
 "<br><b>Class:</b> "+classNo;
+
+document.getElementById("subjectSearch").value="";
 
 renderSubjects();
 
@@ -1182,6 +2538,8 @@ const subjects=SUBJECTS[selectedClass]||[];
 
 subjects.forEach(subject=>{
 
+const chapters=getChapters(selectedClass,subject);
+
 const div=document.createElement("div");
 
 div.className="subject";
@@ -1190,7 +2548,13 @@ div.innerHTML=`
 
 <h3>📚 ${subject}</h3>
 
-<p>Class ${selectedClass}</p>
+<p>
+Class ${selectedClass}
+<br>
+<span class="chapter-badge">
+${chapters.length} Chapters
+</span>
+</p>
 
 <button onclick="openSubject('${safe(subject)}')">
 📖 Open Subject
@@ -1251,6 +2615,10 @@ behavior:"smooth"
 }
 
 
+/* =====================================================
+CHAPTERS
+===================================================== */
+
 function renderChapters(){
 
 const list=document.getElementById("chapterList");
@@ -1258,14 +2626,29 @@ const list=document.getElementById("chapterList");
 list.innerHTML="";
 
 const chapters=
-CHAPTERS[selectedClass] &&
-CHAPTERS[selectedClass][selectedSubject]
-?
-CHAPTERS[selectedClass][selectedSubject]
-:
-[];
+getChapters(selectedClass,selectedSubject);
 
-chapters.forEach(chapter=>{
+if(chapters.length===0){
+
+list.innerHTML=`
+
+<div class="message">
+
+⚠️ इस subject के chapters अभी database में उपलब्ध नहीं हैं।
+
+<br><br>
+
+Official textbook के अनुसार chapter list यहाँ जोड़ी जा सकती है।
+
+</div>
+
+`;
+
+return;
+
+}
+
+chapters.forEach((chapter,index)=>{
 
 const div=document.createElement("div");
 
@@ -1273,10 +2656,12 @@ div.className="chapter";
 
 div.innerHTML=`
 
-<h3>📖 ${chapter}</h3>
+<h3>
+📖 Chapter ${index+1}: ${chapter}
+</h3>
 
 <p>
-${selectedSubject} - Class ${selectedClass}
+${selectedSubject} • Class ${selectedClass}
 </p>
 
 <button onclick="readNotes('${safe(chapter)}')">
@@ -1310,6 +2695,10 @@ item.innerText.toLowerCase().includes(text)
 }
 
 
+/* =====================================================
+NOTES
+===================================================== */
+
 function readNotes(chapter){
 
 selectedChapter=chapter;
@@ -1323,17 +2712,30 @@ document.getElementById("notesInfo").innerHTML=
 
 document.getElementById("notesContent").innerHTML=`
 
-<h3>📚 ${selectedSubject} - ${chapter}</h3>
+<h3>📚 ${selectedSubject}</h3>
+
+<h4>📖 ${chapter}</h4>
 
 <p>
-यह आपका Original Notes Viewer है।
+यह chapter आपकी Study Website के Notes Viewer में खुला है।
 </p>
 
-<h4>📝 Notes यहाँ जोड़ें</h4>
+<div class="message">
 
-<p>
-अपनी original chapter-wise notes यहाँ जोड़ सकते हैं।
-</p>
+<b>📝 Original Notes</b>
+
+<br><br>
+
+इस स्थान पर आप अपने द्वारा तैयार किए गए
+original notes, explanations, examples,
+questions और answers जोड़ सकते हैं।
+
+<br><br>
+
+⚠️ किसी textbook का पूरा copyrighted content
+बिना अनुमति copy करके यहाँ प्रकाशित न करें।
+
+</div>
 
 `;
 
@@ -1378,7 +2780,7 @@ behavior:"smooth"
 
 
 /* =====================================================
-DAILY USE ENGLISH
+DAILY ENGLISH
 ===================================================== */
 
 const DAILY_SENTENCES=[
@@ -1402,24 +2804,6 @@ en:"The food is ready."
 },
 
 {
-topic:"Home & Family",
-hi:"दरवाजा बंद कर दो।",
-en:"Close the door."
-},
-
-{
-topic:"Home & Family",
-hi:"लाइट बंद कर दो।",
-en:"Turn off the light."
-},
-
-{
-topic:"School",
-hi:"तुम स्कूल कब जाते हो?",
-en:"When do you go to school?"
-},
-
-{
 topic:"School",
 hi:"अपनी किताब खोलो।",
 en:"Open your book."
@@ -1429,18 +2813,6 @@ en:"Open your book."
 topic:"School",
 hi:"ध्यान से सुनो।",
 en:"Listen carefully."
-},
-
-{
-topic:"School",
-hi:"मुझे समझ नहीं आया।",
-en:"I did not understand."
-},
-
-{
-topic:"School",
-hi:"कृपया फिर से समझाइए।",
-en:"Please explain again."
 },
 
 {
@@ -1456,45 +2828,9 @@ en:"I am fine."
 },
 
 {
-topic:"Conversation",
-hi:"आपका नाम क्या है?",
-en:"What is your name?"
-},
-
-{
-topic:"Conversation",
-hi:"आप कहाँ रहते हैं?",
-en:"Where do you live?"
-},
-
-{
 topic:"Market",
 hi:"इसकी कीमत कितनी है?",
 en:"How much does it cost?"
-},
-
-{
-topic:"Market",
-hi:"मुझे यह पसंद है।",
-en:"I like this."
-},
-
-{
-topic:"Market",
-hi:"क्या यह सस्ता है?",
-en:"Is this cheap?"
-},
-
-{
-topic:"Travel",
-hi:"बस कब आएगी?",
-en:"When will the bus arrive?"
-},
-
-{
-topic:"Travel",
-hi:"मुझे स्टेशन जाना है।",
-en:"I have to go to the station."
 },
 
 {
@@ -1504,105 +2840,9 @@ en:"I am hungry."
 },
 
 {
-topic:"Food",
-hi:"मुझे पानी चाहिए।",
-en:"I need water."
-},
-
-{
-topic:"Daily Routine",
-hi:"मैं सुबह जल्दी उठता हूँ।",
-en:"I wake up early in the morning."
-},
-
-{
 topic:"Daily Routine",
 hi:"मैं रोज पढ़ाई करता हूँ।",
 en:"I study every day."
-},
-
-{
-topic:"Daily Routine",
-hi:"मैं रात को जल्दी सोता हूँ।",
-en:"I go to bed early at night."
-},
-
-{
-topic:"Feelings",
-hi:"मैं बहुत खुश हूँ।",
-en:"I am very happy."
-},
-
-{
-topic:"Feelings",
-hi:"मुझे गुस्सा आ रहा है।",
-en:"I am getting angry."
-},
-
-{
-topic:"Questions",
-hi:"तुम क्या कर रहे हो?",
-en:"What are you doing?"
-},
-
-{
-topic:"Questions",
-hi:"तुम कब आओगे?",
-en:"When will you come?"
-},
-
-{
-topic:"Polite English",
-hi:"कृपया मेरी मदद करें।",
-en:"Please help me."
-},
-
-{
-topic:"Polite English",
-hi:"बहुत धन्यवाद।",
-en:"Thank you very much."
-},
-
-{
-topic:"Polite English",
-hi:"कोई बात नहीं।",
-en:"No problem."
-},
-
-{
-topic:"Mobile & Internet",
-hi:"मुझे अपना फोन दो।",
-en:"Give me your phone."
-},
-
-{
-topic:"Mobile & Internet",
-hi:"इंटरनेट काम नहीं कर रहा है।",
-en:"The internet is not working."
-},
-
-{
-topic:"Friends",
-hi:"चलो साथ चलते हैं।",
-en:"Let's go together."
-},
-
-{
-topic:"Friends",
-hi:"मुझसे बात करो।",
-en:"Talk to me."
-},
-
-{
-topic:"Work",
-hi:"काम पूरा हो गया है।",
-en:"The work is complete."
-},
-
-{
-topic:"Work",
-hi:"मैं अभी व्यस्त हूँ।",
-en:"I am busy right now."
 }
 
 ];
@@ -1753,25 +2993,13 @@ options:[
 "Wide World Web"
 ],
 answer:0
-},
-
-{
-topic:"Software",
-q:"Windows क्या है?",
-options:[
-"Hardware",
-"Operating System",
-"Keyboard",
-"Printer"
-],
-answer:1
 }
 
 ];
 
 
 /* =====================================================
-CYBER SECURITY
+CYBER
 ===================================================== */
 
 const CYBER_DATA=[
@@ -1822,18 +3050,6 @@ options:[
 "Unknown caller के साथ"
 ],
 answer:0
-},
-
-{
-topic:"Safe Internet",
-q:"Unknown Link मिलने पर क्या करना चाहिए?",
-options:[
-"तुरंत click करें",
-"सबको भेजें",
-"बिना verify किए click न करें",
-"Password भेज दें"
-],
-answer:2
 }
 
 ];
@@ -1853,19 +3069,17 @@ document.getElementById("learningView")
 document.getElementById("dataArea").innerHTML="";
 document.getElementById("testArea").innerHTML="";
 
-
 if(type==="english"){
 
 document.getElementById("learningTitle").innerText=
 "🗣️ Daily Use English Sentences";
 
 document.getElementById("learningDescription").innerHTML=
-"<b>1000 Daily Use Sentences</b><br>Hindi + English | Topic-wise | Practice + Test";
+"<b>Daily Use English</b><br>Hindi + English | Topic-wise | Test";
 
 renderEnglishTopics();
 
 }
-
 
 if(type==="gk"){
 
@@ -1873,12 +3087,11 @@ document.getElementById("learningTitle").innerText=
 "🌍 Current GK";
 
 document.getElementById("learningDescription").innerHTML=
-"<b>General Knowledge</b><br>Hindi + English | Topic-wise | MCQ Test";
+"<b>General Knowledge</b><br>Hindi + English | MCQ Test";
 
 renderQuestionTopics(GK_DATA);
 
 }
-
 
 if(type==="reasoning"){
 
@@ -1886,12 +3099,11 @@ document.getElementById("learningTitle").innerText=
 "🧠 Reasoning";
 
 document.getElementById("learningDescription").innerHTML=
-"<b>Reasoning Practice</b><br>Series | Analogy | Classification | Coding";
+"<b>Reasoning Practice</b><br>Series | Analogy | Classification";
 
 renderQuestionTopics(REASONING_DATA);
 
 }
-
 
 if(type==="computer"){
 
@@ -1905,19 +3117,17 @@ renderQuestionTopics(COMPUTER_DATA);
 
 }
 
-
 if(type==="cyber"){
 
 document.getElementById("learningTitle").innerText=
 "🔐 Cyber Security";
 
 document.getElementById("learningDescription").innerHTML=
-"<b>Cyber Security Basics</b><br>Password | Phishing | OTP | Safe Internet";
+"<b>Cyber Security Basics</b><br>Password | Phishing | OTP";
 
 renderQuestionTopics(CYBER_DATA);
 
 }
-
 
 document.getElementById("learningView")
 .scrollIntoView({
@@ -1933,9 +3143,9 @@ ENGLISH TOPICS
 
 function renderEnglishTopics(){
 
-const topics=[...new Set(
-DAILY_SENTENCES.map(x=>x.topic)
-)];
+const topics=[
+...new Set(DAILY_SENTENCES.map(x=>x.topic))
+];
 
 let html=`
 
@@ -1946,9 +3156,8 @@ let html=`
 
 topics.forEach(topic=>{
 
-const count=DAILY_SENTENCES.filter(
-x=>x.topic===topic
-).length;
+const count=
+DAILY_SENTENCES.filter(x=>x.topic===topic).length;
 
 html+=`
 
@@ -1982,9 +3191,8 @@ SHOW ENGLISH
 
 function showEnglish(topic){
 
-const data=DAILY_SENTENCES.filter(
-x=>x.topic===topic
-);
+const data=
+DAILY_SENTENCES.filter(x=>x.topic===topic);
 
 currentTopic=topic;
 
@@ -1992,7 +3200,8 @@ let html=`
 
 <h3>🗣️ ${topic}</h3>
 
-<p>Total Sentences:
+<p>
+Total Sentences:
 <b>${data.length}</b>
 </p>
 `;
@@ -2045,9 +3254,9 @@ QUESTION TOPICS
 
 function renderQuestionTopics(data){
 
-const topics=[...new Set(
-data.map(x=>x.topic)
-)];
+const topics=[
+...new Set(data.map(x=>x.topic))
+];
 
 let html=`
 
@@ -2151,7 +3360,7 @@ document.getElementById("testArea")
 
 
 /* =====================================================
-GET DATA
+GET CURRENT DATA
 ===================================================== */
 
 function getCurrentQuestionData(){
@@ -2179,24 +3388,20 @@ ENGLISH TEST
 
 function englishTest(topic){
 
-const data=DAILY_SENTENCES.filter(
-x=>x.topic===topic
-);
+const data=
+DAILY_SENTENCES.filter(x=>x.topic===topic);
 
 if(data.length===0)return;
 
 testData=data;
 testIndex=0;
-testAnswers=new Array(data.length).fill(null);
+testAnswers=
+new Array(data.length).fill(null);
 
 renderEnglishTest();
 
 }
 
-
-/* =====================================================
-RENDER ENGLISH TEST
-===================================================== */
 
 function renderEnglishTest(){
 
@@ -2209,9 +3414,7 @@ let html=`
 
 <div class="test-box">
 
-<h3>
-🗣️ English Test
-</h3>
+<h3>🗣️ English Test</h3>
 
 <p>
 Question ${testIndex+1}
@@ -2232,7 +3435,6 @@ style="width:${progress}%">
 
 </div>
 
-
 <label class="test-option">
 
 <input
@@ -2245,7 +3447,6 @@ onchange="saveEnglishAnswer(0)">
 ${item.en}
 
 </label>
-
 
 <label class="test-option">
 
@@ -2260,7 +3461,6 @@ I am doing something.
 
 </label>
 
-
 <label class="test-option">
 
 <input
@@ -2274,7 +3474,6 @@ What is your name?
 
 </label>
 
-
 <div class="test-buttons">
 
 <button
@@ -2285,7 +3484,6 @@ ${testIndex===0?"disabled":""}>
 ⬅️ Previous
 
 </button>
-
 
 ${
 testIndex<testData.length-1
@@ -2309,7 +3507,6 @@ onclick="submitEnglishTest()">
 🏁 Submit Test
 
 </button>`
-
 }
 
 </div>
@@ -2341,7 +3538,6 @@ function nextEnglishQuestion(){
 if(testAnswers[testIndex]===null){
 
 alert("पहले एक answer चुनें।");
-
 return;
 
 }
@@ -2371,7 +3567,6 @@ function submitEnglishTest(){
 if(testAnswers[testIndex]===null){
 
 alert("पहले answer चुनें।");
-
 return;
 
 }
@@ -2399,20 +3594,18 @@ ${score} / ${testData.length}
 ${
 score===testData.length
 ?"🏆 Excellent! बहुत बढ़िया!"
-
 :score>=testData.length/2
 ?"👍 Good Job! अच्छा प्रयास!"
-
-:"📚 More Practice Needed. फिर से अभ्यास करें।"
+:"📚 More Practice Needed."
 }
 
 <br><br>
 
 <button
 class="green"
-onclick="renderEnglishTest()">
+onclick="restartCurrentTest()">
 
-🔄 Test फिर से देखें
+🔄 Test फिर से दें
 
 </button>
 
@@ -2436,17 +3629,16 @@ data=data.filter(x=>x.topic===topic);
 if(data.length===0)return;
 
 testData=data;
+
 testIndex=0;
-testAnswers=new Array(data.length).fill(null);
+
+testAnswers=
+new Array(data.length).fill(null);
 
 renderGeneralTest();
 
 }
 
-
-/* =====================================================
-RENDER GENERAL TEST
-===================================================== */
 
 function renderGeneralTest(){
 
@@ -2455,29 +3647,27 @@ const item=testData[testIndex];
 const progress=
 ((testIndex+1)/testData.length)*100;
 
-let html=`
-
-<div class="test-box">
-
-<h3>
-✅ ${currentLearning==="gk"
+let title=
+currentLearning==="gk"
 ?"GK Test"
 :currentLearning==="reasoning"
 ?"Reasoning Test"
 :currentLearning==="computer"
 ?"Computer Test"
-:"Cyber Security Test"}
-</h3>
+:"Cyber Security Test";
+
+let html=`
+
+<div class="test-box">
+
+<h3>✅ ${title}</h3>
 
 <p>
-
 Question
 <b>${testIndex+1}</b>
 of
 <b>${testData.length}</b>
-
 </p>
-
 
 <div class="test-progress">
 
@@ -2486,7 +3676,6 @@ style="width:${progress}%">
 </div>
 
 </div>
-
 
 <div class="test-question">
 
@@ -2501,7 +3690,6 @@ ${item.en || ""}
 </span>
 
 </div>
-
 
 ${item.options.map((option,j)=>`
 
@@ -2521,9 +3709,7 @@ ${option}
 
 `).join("")}
 
-
 <div class="test-buttons">
-
 
 <button
 class="dark"
@@ -2533,7 +3719,6 @@ ${testIndex===0?"disabled":""}>
 ⬅️ Previous
 
 </button>
-
 
 ${
 testIndex<testData.length-1
@@ -2557,11 +3742,9 @@ onclick="submitGeneralTest()">
 🏁 Submit Test
 
 </button>`
-
 }
 
 </div>
-
 
 </div>
 
@@ -2590,7 +3773,6 @@ function nextGeneralQuestion(){
 if(testAnswers[testIndex]===null){
 
 alert("पहले एक answer चुनें।");
-
 return;
 
 }
@@ -2615,16 +3797,11 @@ renderGeneralTest();
 }
 
 
-/* =====================================================
-SUBMIT GENERAL TEST
-===================================================== */
-
 function submitGeneralTest(){
 
 if(testAnswers[testIndex]===null){
 
 alert("पहले answer चुनें।");
-
 return;
 
 }
@@ -2641,10 +3818,8 @@ score++;
 
 });
 
-
 const percentageScore=
 ((score/testData.length)*100).toFixed(0);
-
 
 document.getElementById("testArea")
 .innerHTML+=`
@@ -2664,11 +3839,9 @@ ${percentageScore}%
 ${
 score===testData.length
 ?"🏆 Excellent! बहुत बढ़िया!"
-
 :score>=testData.length/2
 ?"👍 Good Job! अच्छा प्रयास!"
-
-:"📚 More Practice Needed. फिर से Practice करें।"
+:"📚 More Practice Needed."
 }
 
 <br><br>
@@ -2692,7 +3865,8 @@ function restartCurrentTest(){
 
 testIndex=0;
 
-testAnswers=new Array(testData.length).fill(null);
+testAnswers=
+new Array(testData.length).fill(null);
 
 if(currentLearning==="english"){
 
@@ -2730,11 +3904,13 @@ TOOLS
 
 function percentage(){
 
-const obtained=parseFloat(
+const obtained=
+parseFloat(
 document.getElementById("obtained").value
 );
 
-const total=parseFloat(
+const total=
+parseFloat(
 document.getElementById("total").value
 );
 
@@ -2805,11 +3981,13 @@ document.getElementById("ageResult")
 
 function addNumbers(){
 
-const a=parseFloat(
+const a=
+parseFloat(
 document.getElementById("number1").value
 );
 
-const b=parseFloat(
+const b=
+parseFloat(
 document.getElementById("number2").value
 );
 
@@ -2852,12 +4030,12 @@ window.location.href=url;
 
 
 /* =====================================================
-SAFE
+SAFE TEXT
 ===================================================== */
 
 function safe(text){
 
-return text
+return String(text)
 .replace(/\\/g,"\\\\")
 .replace(/'/g,"\\'")
 .replace(/"/g,'\\"');
