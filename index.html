@@ -4,272 +4,283 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Class 1 Kids Learning Hub</title>
+<title>🌈 Class 1 Kids Learning</title>
 
 <style>
-*{
-    box-sizing:border-box;
-}
+*{box-sizing:border-box}
 
 body{
-    margin:0;
-    font-family:Arial,"Noto Sans Devanagari",sans-serif;
-    background:linear-gradient(135deg,#fff4b8,#d9f7ff,#fbdcff);
-    color:#222;
+ margin:0;
+ font-family:Arial,sans-serif;
+ background:linear-gradient(135deg,#fff3a6,#b8f2ff,#ffd6ec);
+ color:#222;
 }
 
 header{
-    background:linear-gradient(135deg,#ff4b91,#6c5ce7,#00b894);
-    color:white;
-    text-align:center;
-    padding:25px 12px;
-    box-shadow:0 4px 15px #999;
+ background:linear-gradient(135deg,#ff4d8d,#6c5ce7,#00b894);
+ color:white;
+ text-align:center;
+ padding:25px 10px;
 }
 
-header h1{
-    margin:0;
-    font-size:30px;
-}
-
-header p{
-    margin:8px 0 0;
-    font-size:17px;
-}
+header h1{margin:0;font-size:30px}
+header p{font-size:18px}
 
 .container{
-    width:94%;
-    max-width:1100px;
-    margin:20px auto;
+ width:94%;
+ max-width:1100px;
+ margin:20px auto;
 }
 
-.subject-buttons{
-    display:flex;
-    flex-direction:column;
-    gap:15px;
+.home-buttons{
+ display:flex;
+ flex-direction:column;
+ gap:15px;
 }
 
-.subject-btn{
-    width:100%;
-    border:0;
-    border-radius:20px;
-    padding:20px;
-    font-size:23px;
-    font-weight:bold;
-    color:white;
-    cursor:pointer;
-    box-shadow:0 6px 12px #aaa;
-    transition:.2s;
+.home-buttons button{
+ border:0;
+ border-radius:20px;
+ padding:22px;
+ color:white;
+ font-size:24px;
+ font-weight:bold;
+ cursor:pointer;
+ box-shadow:0 5px 12px #999;
 }
 
-.subject-btn:hover{
-    transform:scale(1.02);
-}
-
-.english-btn{
-    background:linear-gradient(135deg,#ff7675,#fd79a8);
-}
-
-.math-btn{
-    background:linear-gradient(135deg,#0984e3,#00cec9);
-}
-
-.hindi-btn{
-    background:linear-gradient(135deg,#e17055,#fdcb6e);
-}
+.btnEnglish{background:linear-gradient(135deg,#ff7675,#e84393)}
+.btnMath{background:linear-gradient(135deg,#0984e3,#00cec9)}
+.btnHindi{background:linear-gradient(135deg,#e17055,#fdcb6e)}
 
 .subject{
-    display:none;
-    margin-top:20px;
-    background:white;
-    border-radius:20px;
-    padding:15px;
-    box-shadow:0 5px 20px #aaa;
+ display:none;
+ margin-top:20px;
+ background:white;
+ border-radius:22px;
+ padding:18px;
+ box-shadow:0 5px 15px #aaa;
 }
 
-.subject.active{
-    display:block;
-}
+.subject.show{display:block}
 
 .subject-title{
-    text-align:center;
-    border-radius:15px;
-    padding:15px;
-    color:white;
-    margin-bottom:15px;
+ color:white;
+ padding:15px;
+ text-align:center;
+ border-radius:16px;
 }
 
-.eng-title{
-    background:linear-gradient(135deg,#ff7675,#e84393);
+.englishTitle{background:#e84393}
+.mathTitle{background:#0984e3}
+.hindiTitle{background:#e17055}
+
+.lesson-menu{
+ display:flex;
+ flex-direction:column;
+ gap:10px;
+ margin-top:15px;
 }
 
-.math-title{
-    background:linear-gradient(135deg,#0984e3,#00cec9);
+.lesson-menu button{
+ border:0;
+ background:#f1f2f6;
+ padding:16px;
+ border-radius:14px;
+ text-align:left;
+ font-size:18px;
+ font-weight:bold;
+ cursor:pointer;
+ box-shadow:0 3px 7px #ccc;
 }
 
-.hindi-title{
-    background:linear-gradient(135deg,#e17055,#f39c12);
-}
-
-.lesson-list{
-    display:flex;
-    flex-direction:column;
-    gap:10px;
-}
-
-.lesson-btn{
-    width:100%;
-    text-align:left;
-    border:0;
-    border-radius:15px;
-    padding:16px;
-    font-size:18px;
-    font-weight:bold;
-    cursor:pointer;
-    background:#f1f2f6;
-    box-shadow:0 3px 7px #ccc;
-}
-
-.lesson-btn:hover{
-    background:#ffeaa7;
+.lesson-menu button:hover{
+ background:#ffeaa7;
+ transform:scale(1.01);
 }
 
 .lesson{
-    display:none;
-    margin-top:12px;
-    border-radius:18px;
-    padding:18px;
-    background:linear-gradient(135deg,#fff,#f1f2f6);
-    border:3px solid #ffeaa7;
+ display:none;
+ margin-top:18px;
+ padding:15px;
+ border-radius:18px;
+ background:#fafaff;
+ border:3px solid #ffeaa7;
 }
 
-.lesson.active{
-    display:block;
-}
+.lesson.show{display:block}
 
 .lesson h2{
-    text-align:center;
-    color:#6c5ce7;
+ text-align:center;
+ color:#6c5ce7;
 }
 
 .picture{
-    text-align:center;
-    font-size:65px;
-    margin:10px;
+ text-align:center;
+ font-size:70px;
+ margin:15px;
 }
 
-.card-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:10px;
-    margin-top:15px;
+.grid{
+ display:grid;
+ grid-template-columns:repeat(3,1fr);
+ gap:12px;
 }
 
-.item{
-    background:white;
-    border-radius:14px;
-    padding:13px;
-    text-align:center;
-    box-shadow:0 3px 8px #ccc;
-    font-size:17px;
+.card{
+ background:white;
+ padding:14px;
+ text-align:center;
+ border-radius:15px;
+ box-shadow:0 3px 8px #ccc;
+ font-size:18px;
 }
 
-.item .pic{
-    font-size:42px;
+.card span{
+ display:block;
+ font-size:45px;
+ margin-bottom:7px;
 }
 
 .example{
-    background:#fff3cd;
-    border-left:6px solid #f39c12;
-    padding:12px;
-    border-radius:10px;
-    margin:10px 0;
+ background:#fff3cd;
+ padding:15px;
+ margin:10px 0;
+ border-radius:13px;
+ border-left:6px solid #f39c12;
+ font-size:18px;
+ line-height:1.6;
 }
 
-.info{
-    background:#e8f8ff;
-    padding:12px;
-    border-radius:12px;
-    margin:10px 0;
+.number-grid{
+ display:grid;
+ grid-template-columns:repeat(5,1fr);
+ gap:7px;
 }
 
-.question{
-    background:#f8eaff;
-    border-radius:14px;
-    padding:13px;
-    margin:10px 0;
-}
-
-.answer{
-    display:none;
-    background:#dff9e8;
-    border-radius:10px;
-    padding:10px;
-    margin-top:8px;
-}
-
-.answer-btn{
-    border:0;
-    background:#00b894;
-    color:white;
-    padding:9px 14px;
-    border-radius:10px;
-    cursor:pointer;
-    font-weight:bold;
-}
-
-.back-btn{
-    width:100%;
-    border:0;
-    padding:13px;
-    margin-top:15px;
-    border-radius:12px;
-    background:#636e72;
-    color:white;
-    font-size:17px;
-    cursor:pointer;
+.number{
+ background:white;
+ padding:10px 5px;
+ text-align:center;
+ border-radius:10px;
+ box-shadow:0 2px 5px #ccc;
+ font-weight:bold;
 }
 
 table{
-    width:100%;
-    border-collapse:collapse;
-    margin:10px 0;
+ width:100%;
+ border-collapse:collapse;
+ margin-top:12px;
 }
 
-th,td{
-    border:2px solid #74b9ff;
-    padding:10px;
-    text-align:center;
+td,th{
+ border:2px solid #74b9ff;
+ padding:10px;
+ text-align:center;
 }
 
 th{
-    background:#74b9ff;
-    color:white;
+ background:#74b9ff;
+ color:white;
+}
+
+.question{
+ background:#eee7ff;
+ margin:12px 0;
+ padding:16px;
+ border-radius:15px;
+}
+
+.answer{
+ display:none;
+ background:#d7f9e3;
+ margin-top:10px;
+ padding:12px;
+ border-radius:10px;
+}
+
+.answer.show{display:block}
+
+.answerBtn,
+.nextBtn,
+.backBtn{
+ border:0;
+ border-radius:12px;
+ padding:13px 18px;
+ color:white;
+ font-size:17px;
+ cursor:pointer;
+}
+
+.answerBtn{background:#00b894}
+.nextBtn{background:#6c5ce7;width:100%;margin-top:12px}
+.backBtn{background:#636e72;width:100%;margin-top:15px}
+
+.quizBox{
+ background:white;
+ padding:18px;
+ border-radius:18px;
+ box-shadow:0 3px 10px #ccc;
+}
+
+.quizQuestion{
+ font-size:21px;
+ font-weight:bold;
+ background:#fff3a6;
+ padding:18px;
+ border-radius:15px;
+ margin-bottom:15px;
+}
+
+.option{
+ display:block;
+ width:100%;
+ margin:9px 0;
+ padding:14px;
+ border:0;
+ border-radius:12px;
+ background:#dfe6e9;
+ font-size:17px;
+ cursor:pointer;
+ text-align:left;
+}
+
+.option:hover{background:#81ecec}
+
+.result{
+ padding:15px;
+ margin-top:12px;
+ border-radius:12px;
+ font-size:18px;
+ font-weight:bold;
+}
+
+.correct{background:#c8f7dc}
+.wrong{background:#ffd0d0}
+
+.progress{
+ text-align:center;
+ font-weight:bold;
+ margin-bottom:12px;
 }
 
 footer{
-    margin-top:25px;
-    text-align:center;
-    background:#2d3436;
-    color:white;
-    padding:20px;
+ margin-top:25px;
+ background:#2d3436;
+ color:white;
+ text-align:center;
+ padding:22px;
 }
 
-@media(max-width:600px){
-    header h1{
-        font-size:24px;
-    }
+@media(max-width:700px){
+ .grid{grid-template-columns:repeat(2,1fr)}
+ .number-grid{grid-template-columns:repeat(4,1fr)}
+}
 
-    .subject-btn{
-        font-size:20px;
-    }
-
-    .card-grid{
-        grid-template-columns:1fr;
-    }
-
-    .lesson-btn{
-        font-size:17px;
-    }
+@media(max-width:450px){
+ .grid{grid-template-columns:1fr}
+ .number-grid{grid-template-columns:repeat(4,1fr)}
+ header h1{font-size:24px}
 }
 </style>
 </head>
@@ -277,25 +288,24 @@ footer{
 <body>
 
 <header>
-<h1>🌈 Class 1 Kids Learning Hub 📚</h1>
-<p>हिंदी • English • Maths | सीखो और खेलो 🎈</p>
+<h1>🌈 Class 1 Kids Learning 🌈</h1>
+<p>📘 English • 🔢 Maths • 📕 Hindi</p>
+<p>सीखो • खेलो • मुस्कुराओ ⭐</p>
 </header>
 
 <div class="container">
 
-<!-- ================= SUBJECT BUTTONS ================= -->
+<div class="home-buttons">
 
-<div class="subject-buttons">
-
-<button class="subject-btn english-btn" onclick="openSubject('english')">
+<button class="btnEnglish" onclick="openSubject('english')">
 📘 English / अंग्रेज़ी
 </button>
 
-<button class="subject-btn math-btn" onclick="openSubject('math')">
+<button class="btnMath" onclick="openSubject('math')">
 🔢 Maths / गणित
 </button>
 
-<button class="subject-btn hindi-btn" onclick="openSubject('hindi')">
+<button class="btnHindi" onclick="openSubject('hindi')">
 📕 Hindi / हिंदी
 </button>
 
@@ -306,156 +316,136 @@ footer{
 
 <div id="english" class="subject">
 
-<div class="subject-title eng-title">
-<h2>📘 Class 1 English / कक्षा 1 अंग्रेज़ी</h2>
-<p>Basic से सीखना शुरू करें</p>
+<div class="subject-title englishTitle">
+<h2>📘 English / अंग्रेज़ी</h2>
 </div>
 
-<div class="lesson-list">
+<div class="lesson-menu">
 
-<button class="lesson-btn" onclick="openLesson('engAlphabet')">
-🔤 1. Alphabet / वर्णमाला
+<button onclick="openLesson('engAlphabet')">
+🔤 Alphabet / वर्णमाला
 </button>
 
-<button class="lesson-btn" onclick="openLesson('engWords')">
-🧩 2. Simple Words / सरल शब्द
+<button onclick="openLesson('engWords')">
+🧩 Words / शब्द
 </button>
 
-<button class="lesson-btn" onclick="openLesson('engVowels')">
-🅰️ 3. Vowels / स्वर
+<button onclick="openLesson('engVowels')">
+🅰️ Vowels / स्वर
 </button>
 
-<button class="lesson-btn" onclick="openLesson('engNumbers')">
-🔢 4. Numbers 1–100 / गिनती
+<button onclick="openLesson('engNumbers')">
+🔢 Numbers 1–200
 </button>
 
-<button class="lesson-btn" onclick="openLesson('engColors')">
-🎨 5. Colours / रंग
+<button onclick="openLesson('engColours')">
+🎨 Colours / रंग
 </button>
 
-<button class="lesson-btn" onclick="openLesson('engFruits')">
-🍎 6. Fruits / फल
+<button onclick="openLesson('engFruits')">
+🍎 Fruits / फल
 </button>
 
-<button class="lesson-btn" onclick="openLesson('engAnimals')">
-🐘 7. Animals / जानवर
+<button onclick="openLesson('engAnimals')">
+🐘 Animals / जानवर
 </button>
 
-<button class="lesson-btn" onclick="openLesson('engBirds')">
-🐦 8. Birds / पक्षी
+<button onclick="openLesson('engBirds')">
+🐦 Birds / पक्षी
 </button>
 
-<button class="lesson-btn" onclick="openLesson('engFamily')">
-👨‍👩‍👧 9. Family / परिवार
+<button onclick="openLesson('engFamily')">
+👨‍👩‍👧 Family / परिवार
 </button>
 
-<button class="lesson-btn" onclick="openLesson('engBody')">
-👁️ 10. Body Parts / शरीर के अंग
+<button onclick="openLesson('engBody')">
+👀 Body Parts / शरीर के अंग
 </button>
 
-<button class="lesson-btn" onclick="openLesson('engDays')">
-📅 11. Days of Week / सप्ताह के दिन
+<button onclick="openLesson('engDays')">
+📅 Days / सप्ताह
 </button>
 
-<button class="lesson-btn" onclick="openLesson('engMonths')">
-🗓️ 12. Months / महीने
+<button onclick="openLesson('engMonths')">
+🗓️ Months / महीने
 </button>
 
-<button class="lesson-btn" onclick="openLesson('engSentences')">
-💬 13. Simple Sentences / सरल वाक्य
+<button onclick="openLesson('engSentences')">
+💬 Sentences / वाक्य
 </button>
 
-<button class="lesson-btn" onclick="openLesson('engQuestions')">
-❓ 14. Practice Questions / अभ्यास प्रश्न
+<button onclick="openLesson('engQuiz')">
+❓ English Quiz – 50 Questions
 </button>
 
 </div>
 
-
-<!-- Alphabet -->
 
 <div id="engAlphabet" class="lesson">
 
-<h2>🔤 Alphabet / अंग्रेज़ी वर्णमाला</h2>
+<h2>🔤 Alphabet A–Z</h2>
 
-<div class="picture">🔤📚</div>
+<div class="grid">
 
-<div class="info">
-<b>English:</b> There are 26 letters in the English alphabet.<br>
-<b>हिंदी:</b> English alphabet में 26 अक्षर होते हैं।
-</div>
-
-<div class="card-grid">
-
-<div class="item">A<br>🍎 Apple</div>
-<div class="item">B<br>⚽ Ball</div>
-<div class="item">C<br>🐱 Cat</div>
-<div class="item">D<br>🐶 Dog</div>
-<div class="item">E<br>🐘 Elephant</div>
-<div class="item">F<br>🐟 Fish</div>
-<div class="item">G<br>🍇 Grapes</div>
-<div class="item">H<br>🏠 House</div>
-<div class="item">I<br>🍦 Ice Cream</div>
-<div class="item">J<br>🧃 Juice</div>
-<div class="item">K<br>🪁 Kite</div>
-<div class="item">L<br>🦁 Lion</div>
-<div class="item">M<br>🐒 Monkey</div>
-<div class="item">N<br>🪺 Nest</div>
-<div class="item">O<br>🍊 Orange</div>
-<div class="item">P<br>🦜 Parrot</div>
-<div class="item">Q<br>👑 Queen</div>
-<div class="item">R<br>🐇 Rabbit</div>
-<div class="item">S<br>☀️ Sun</div>
-<div class="item">T<br>🌳 Tree</div>
-<div class="item">U<br>☂️ Umbrella</div>
-<div class="item">V<br>🚐 Van</div>
-<div class="item">W<br>⌚ Watch</div>
-<div class="item">X<br>🎼 Xylophone</div>
-<div class="item">Y<br>🪀 Yo-yo</div>
-<div class="item">Z<br>🦓 Zebra</div>
+<div class="card"><span>🍎</span>A – Apple<br>सेब</div>
+<div class="card"><span>⚽</span>B – Ball<br>गेंद</div>
+<div class="card"><span>🐱</span>C – Cat<br>बिल्ली</div>
+<div class="card"><span>🐶</span>D – Dog<br>कुत्ता</div>
+<div class="card"><span>🐘</span>E – Elephant<br>हाथी</div>
+<div class="card"><span>🐟</span>F – Fish<br>मछली</div>
+<div class="card"><span>🍇</span>G – Grapes<br>अंगूर</div>
+<div class="card"><span>🏠</span>H – House<br>घर</div>
+<div class="card"><span>🍦</span>I – Ice Cream<br>आइसक्रीम</div>
+<div class="card"><span>🧃</span>J – Juice<br>जूस</div>
+<div class="card"><span>🪁</span>K – Kite<br>पतंग</div>
+<div class="card"><span>🦁</span>L – Lion<br>शेर</div>
+<div class="card"><span>🐒</span>M – Monkey<br>बंदर</div>
+<div class="card"><span>🪺</span>N – Nest<br>घोंसला</div>
+<div class="card"><span>🍊</span>O – Orange<br>संतरा</div>
+<div class="card"><span>🦜</span>P – Parrot<br>तोता</div>
+<div class="card"><span>👑</span>Q – Queen<br>रानी</div>
+<div class="card"><span>🐇</span>R – Rabbit<br>खरगोश</div>
+<div class="card"><span>☀️</span>S – Sun<br>सूरज</div>
+<div class="card"><span>🌳</span>T – Tree<br>पेड़</div>
+<div class="card"><span>☂️</span>U – Umbrella<br>छाता</div>
+<div class="card"><span>🚐</span>V – Van<br>वैन</div>
+<div class="card"><span>⌚</span>W – Watch<br>घड़ी</div>
+<div class="card"><span>🎵</span>X – Xylophone</div>
+<div class="card"><span>🪀</span>Y – Yo-Yo</div>
+<div class="card"><span>🦓</span>Z – Zebra<br>ज़ेब्रा</div>
 
 </div>
-
 </div>
 
-
-<!-- Simple Words -->
 
 <div id="engWords" class="lesson">
 
 <h2>🧩 Simple Words / सरल शब्द</h2>
 
-<div class="picture">📖✏️</div>
+<div class="grid">
 
-<div class="card-grid">
-
-<div class="item">🐱 Cat<br>बिल्ली</div>
-<div class="item">🐶 Dog<br>कुत्ता</div>
-<div class="item">☀️ Sun<br>सूरज</div>
-<div class="item">🌙 Moon<br>चाँद</div>
-<div class="item">🏠 House<br>घर</div>
-<div class="item">📚 Book<br>किताब</div>
-<div class="item">✏️ Pen<br>कलम</div>
-<div class="item">🌳 Tree<br>पेड़</div>
-<div class="item">💧 Water<br>पानी</div>
-<div class="item">🥛 Milk<br>दूध</div>
-<div class="item">🍎 Apple<br>सेब</div>
-<div class="item">⚽ Ball<br>गेंद</div>
-<div class="item">🪁 Kite<br>पतंग</div>
-<div class="item">🚗 Car<br>कार</div>
-<div class="item">🚌 Bus<br>बस</div>
-<div class="item">👦 Boy<br>लड़का</div>
-<div class="item">👧 Girl<br>लड़की</div>
-<div class="item">👨 Man<br>आदमी</div>
-<div class="item">👩 Woman<br>महिला</div>
-<div class="item">👶 Baby<br>बच्चा</div>
+<div class="card"><span>🐱</span>Cat – बिल्ली</div>
+<div class="card"><span>🐶</span>Dog – कुत्ता</div>
+<div class="card"><span>🐘</span>Elephant – हाथी</div>
+<div class="card"><span>🦁</span>Lion – शेर</div>
+<div class="card"><span>🌞</span>Sun – सूरज</div>
+<div class="card"><span>🌙</span>Moon – चाँद</div>
+<div class="card"><span>🏠</span>House – घर</div>
+<div class="card"><span>📖</span>Book – किताब</div>
+<div class="card"><span>✏️</span>Pencil – पेंसिल</div>
+<div class="card"><span>🌳</span>Tree – पेड़</div>
+<div class="card"><span>💧</span>Water – पानी</div>
+<div class="card"><span>🥛</span>Milk – दूध</div>
+<div class="card"><span>⚽</span>Ball – गेंद</div>
+<div class="card"><span>🚗</span>Car – कार</div>
+<div class="card"><span>🪑</span>Chair – कुर्सी</div>
+<div class="card"><span>🚪</span>Door – दरवाजा</div>
+<div class="card"><span>🛏️</span>Bed – बिस्तर</div>
+<div class="card"><span>🖊️</span>Pen – कलम</div>
 
 </div>
-
 </div>
 
-
-<!-- Vowels -->
 
 <div id="engVowels" class="lesson">
 
@@ -463,492 +453,334 @@ footer{
 
 <div class="picture">A E I O U</div>
 
-<div class="info">
-English में पाँच मुख्य vowels होते हैं:
-<br><br>
-<b>A, E, I, O, U</b>
-</div>
-
-<div class="card-grid">
-
-<div class="item">A<br>🍎 Apple</div>
-<div class="item">E<br>🐘 Elephant</div>
-<div class="item">I<br>🍦 Ice</div>
-<div class="item">O<br>🍊 Orange</div>
-<div class="item">U<br>☂️ Umbrella</div>
-
-</div>
-
 <div class="example">
-<b>Example:</b><br>
-A for Apple – A से Apple<br>
-E for Elephant – E से Elephant<br>
-I for Ice – I से Ice<br>
-O for Orange – O से Orange<br>
-U for Umbrella – U से Umbrella
+English में 5 vowels होते हैं — <b>A, E, I, O, U</b>
 </div>
 
+<div class="grid">
+
+<div class="card"><span>🍎</span>A – Apple</div>
+<div class="card"><span>🐘</span>E – Elephant</div>
+<div class="card"><span>🍦</span>I – Ice Cream</div>
+<div class="card"><span>🍊</span>O – Orange</div>
+<div class="card"><span>☂️</span>U – Umbrella</div>
+
+</div>
 </div>
 
-
-<!-- Numbers English -->
 
 <div id="engNumbers" class="lesson">
 
-<h2>🔢 Numbers 1–100 / गिनती</h2>
+<h2>🔢 Numbers 1–200</h2>
 
-<div class="picture">🔢💯</div>
+<div class="picture">1️⃣ 2️⃣ 3️⃣ ... 💯 ... 2️⃣0️⃣0️⃣</div>
 
-<table>
-<tr>
-<th>Number</th>
-<th>English</th>
-<th>हिंदी</th>
-</tr>
-
-<script>
-const englishNumbers=[
-["1","One","एक"],["2","Two","दो"],["3","Three","तीन"],
-["4","Four","चार"],["5","Five","पाँच"],["6","Six","छह"],
-["7","Seven","सात"],["8","Eight","आठ"],["9","Nine","नौ"],
-["10","Ten","दस"],["11","Eleven","ग्यारह"],["12","Twelve","बारह"],
-["13","Thirteen","तेरह"],["14","Fourteen","चौदह"],["15","Fifteen","पंद्रह"],
-["16","Sixteen","सोलह"],["17","Seventeen","सत्रह"],["18","Eighteen","अठारह"],
-["19","Nineteen","उन्नीस"],["20","Twenty","बीस"],["21","Twenty-One","इक्कीस"],
-["22","Twenty-Two","बाईस"],["23","Twenty-Three","तेईस"],["24","Twenty-Four","चौबीस"],
-["25","Twenty-Five","पच्चीस"],["26","Twenty-Six","छब्बीस"],["27","Twenty-Seven","सत्ताईस"],
-["28","Twenty-Eight","अट्ठाईस"],["29","Twenty-Nine","उनतीस"],["30","Thirty","तीस"],
-["31","Thirty-One","इकतीस"],["32","Thirty-Two","बत्तीस"],["33","Thirty-Three","तैंतीस"],
-["34","Thirty-Four","चौंतीस"],["35","Thirty-Five","पैंतीस"],["36","Thirty-Six","छत्तीस"],
-["37","Thirty-Seven","सैंतीस"],["38","Thirty-Eight","अड़तीस"],["39","Thirty-Nine","उनतालीस"],
-["40","Forty","चालीस"],["41","Forty-One","इकतालीस"],["42","Forty-Two","बयालीस"],
-["43","Forty-Three","तैंतालीस"],["44","Forty-Four","चवालीस"],["45","Forty-Five","पैंतालीस"],
-["46","Forty-Six","छियालीस"],["47","Forty-Seven","सैंतालीस"],["48","Forty-Eight","अड़तालीस"],
-["49","Forty-Nine","उनचास"],["50","Fifty","पचास"],["51","Fifty-One","इक्यावन"],
-["52","Fifty-Two","बावन"],["53","Fifty-Three","तिरपन"],["54","Fifty-Four","चौवन"],
-["55","Fifty-Five","पचपन"],["56","Fifty-Six","छप्पन"],["57","Fifty-Seven","सत्तावन"],
-["58","Fifty-Eight","अट्ठावन"],["59","Fifty-Nine","उनसठ"],["60","Sixty","साठ"],
-["61","Sixty-One","इकसठ"],["62","Sixty-Two","बासठ"],["63","Sixty-Three","तिरसठ"],
-["64","Sixty-Four","चौंसठ"],["65","Sixty-Five","पैंसठ"],["66","Sixty-Six","छियासठ"],
-["67","Sixty-Seven","सड़सठ"],["68","Sixty-Eight","अड़सठ"],["69","Sixty-Nine","उनहत्तर"],
-["70","Seventy","सत्तर"],["71","Seventy-One","इकहत्तर"],["72","Seventy-Two","बहत्तर"],
-["73","Seventy-Three","तिहत्तर"],["74","Seventy-Four","चौहत्तर"],["75","Seventy-Five","पचहत्तर"],
-["76","Seventy-Six","छिहत्तर"],["77","Seventy-Seven","सतहत्तर"],["78","Seventy-Eight","अठहत्तर"],
-["79","Seventy-Nine","उन्यासी"],["80","Eighty","अस्सी"],["81","Eighty-One","इक्यासी"],
-["82","Eighty-Two","बयासी"],["83","Eighty-Three","तिरासी"],["84","Eighty-Four","चौरासी"],
-["85","Eighty-Five","पचासी"],["86","Eighty-Six","छियासी"],["87","Eighty-Seven","सत्तासी"],
-["88","Eighty-Eight","अट्ठासी"],["89","Eighty-Nine","नवासी"],["90","Ninety","नब्बे"],
-["91","Ninety-One","इक्यानवे"],["92","Ninety-Two","बानवे"],["93","Ninety-Three","तिरानवे"],
-["94","Ninety-Four","चौरानवे"],["95","Ninety-Five","पंचानवे"],["96","Ninety-Six","छियानवे"],
-["97","Ninety-Seven","सत्तानवे"],["98","Ninety-Eight","अट्ठानवे"],["99","Ninety-Nine","निन्यानवे"],
-["100","One Hundred","एक सौ"]
-];
-
-englishNumbers.forEach(n=>{
-document.write(`<tr><td>${n[0]}</td><td>${n[1]}</td><td>${n[2]}</td></tr>`);
-});
-</script>
-
-</table>
+<div id="engNumberList" class="number-grid"></div>
 
 </div>
 
 
-<!-- Colours -->
-
-<div id="engColors" class="lesson">
+<div id="engColours" class="lesson">
 
 <h2>🎨 Colours / रंग</h2>
 
-<div class="picture">🌈🎨</div>
+<div class="grid">
 
-<div class="card-grid">
-
-<div class="item">🔴 Red<br>लाल</div>
-<div class="item">🔵 Blue<br>नीला</div>
-<div class="item">🟢 Green<br>हरा</div>
-<div class="item">🟡 Yellow<br>पीला</div>
-<div class="item">🟠 Orange<br>नारंगी</div>
-<div class="item">🟣 Purple<br>बैंगनी</div>
-<div class="item">⚫ Black<br>काला</div>
-<div class="item">⚪ White<br>सफेद</div>
-<div class="item">🩷 Pink<br>गुलाबी</div>
-<div class="item">🟤 Brown<br>भूरा</div>
-<div class="item">🩶 Grey<br>धूसर</div>
+<div class="card"><span>🔴</span>Red – लाल</div>
+<div class="card"><span>🔵</span>Blue – नीला</div>
+<div class="card"><span>🟢</span>Green – हरा</div>
+<div class="card"><span>🟡</span>Yellow – पीला</div>
+<div class="card"><span>🟠</span>Orange – नारंगी</div>
+<div class="card"><span>🟣</span>Purple – बैंगनी</div>
+<div class="card"><span>⚫</span>Black – काला</div>
+<div class="card"><span>⚪</span>White – सफेद</div>
+<div class="card"><span>🩷</span>Pink – गुलाबी</div>
+<div class="card"><span>🟤</span>Brown – भूरा</div>
+<div class="card"><span>🩶</span>Gray – धूसर</div>
+<div class="card"><span>🩵</span>Sky Blue – आसमानी</div>
+<div class="card"><span>💚</span>Lime – हल्का हरा</div>
+<div class="card"><span>🟨</span>Golden – सुनहरा</div>
+<div class="card"><span>🌈</span>Rainbow – इंद्रधनुषी</div>
 
 </div>
-
 </div>
 
-
-<!-- Fruits -->
 
 <div id="engFruits" class="lesson">
 
 <h2>🍎 Fruits / फल</h2>
 
-<div class="picture">🍎🍌🍊🍇</div>
+<div class="grid">
 
-<div class="card-grid">
-
-<div class="item">🍎 Apple<br>सेब</div>
-<div class="item">🍌 Banana<br>केला</div>
-<div class="item">🍊 Orange<br>संतरा</div>
-<div class="item">🍇 Grapes<br>अंगूर</div>
-<div class="item">🥭 Mango<br>आम</div>
-<div class="item">🍉 Watermelon<br>तरबूज</div>
-<div class="item">🍍 Pineapple<br>अनानास</div>
-<div class="item">🍓 Strawberry<br>स्ट्रॉबेरी</div>
-<div class="item">🍐 Pear<br>नाशपाती</div>
-<div class="item">🍋 Lemon<br>नींबू</div>
-<div class="item">🍒 Cherry<br>चेरी</div>
-<div class="item">🥥 Coconut<br>नारियल</div>
-<div class="item">🍑 Peach<br>आड़ू</div>
-<div class="item">🍈 Melon<br>खरबूजा</div>
-<div class="item">🥝 Kiwi<br>कीवी</div>
-<div class="item">🍏 Green Apple<br>हरा सेब</div>
-
-</div>
+<div class="card"><span>🍎</span>Apple – सेब</div>
+<div class="card"><span>🍌</span>Banana – केला</div>
+<div class="card"><span>🥭</span>Mango – आम</div>
+<div class="card"><span>🍊</span>Orange – संतरा</div>
+<div class="card"><span>🍇</span>Grapes – अंगूर</div>
+<div class="card"><span>🍉</span>Watermelon – तरबूज</div>
+<div class="card"><span>🍍</span>Pineapple – अनानास</div>
+<div class="card"><span>🥥</span>Coconut – नारियल</div>
+<div class="card"><span>🍋</span>Lemon – नींबू</div>
+<div class="card"><span>🍐</span>Pear – नाशपाती</div>
+<div class="card"><span>🍓</span>Strawberry – स्ट्रॉबेरी</div>
+<div class="card"><span>🥝</span>Kiwi – कीवी</div>
+<div class="card"><span>🍑</span>Peach – आड़ू</div>
+<div class="card"><span>🍒</span>Cherry – चेरी</div>
+<div class="card"><span>🍈</span>Melon – खरबूजा</div>
+<div class="card"><span>🥭</span>Papaya – पपीता</div>
+<div class="card"><span>🍏</span>Green Apple – हरा सेब</div>
+<div class="card"><span>🫐</span>Blueberry – ब्लूबेरी</div>
 
 </div>
+</div>
 
-
-<!-- Animals -->
 
 <div id="engAnimals" class="lesson">
 
 <h2>🐘 Animals / जानवर</h2>
 
-<div class="picture">🐘🦁🐯🐒</div>
+<div class="grid">
 
-<div class="card-grid">
-
-<div class="item">🐶 Dog<br>कुत्ता</div>
-<div class="item">🐱 Cat<br>बिल्ली</div>
-<div class="item">🦁 Lion<br>शेर</div>
-<div class="item">🐯 Tiger<br>बाघ</div>
-<div class="item">🐘 Elephant<br>हाथी</div>
-<div class="item">🐒 Monkey<br>बंदर</div>
-<div class="item">🐄 Cow<br>गाय</div>
-<div class="item">🐃 Buffalo<br>भैंस</div>
-<div class="item">🐐 Goat<br>बकरी</div>
-<div class="item">🐑 Sheep<br>भेड़</div>
-<div class="item">🐎 Horse<br>घोड़ा</div>
-<div class="item">🐪 Camel<br>ऊँट</div>
-<div class="item">🐇 Rabbit<br>खरगोश</div>
-<div class="item">🐻 Bear<br>भालू</div>
-<div class="item">🦌 Deer<br>हिरण</div>
-<div class="item">🐘 Elephant<br>हाथी</div>
+<div class="card"><span>🐶</span>Dog – कुत्ता</div>
+<div class="card"><span>🐱</span>Cat – बिल्ली</div>
+<div class="card"><span>🦁</span>Lion – शेर</div>
+<div class="card"><span>🐯</span>Tiger – बाघ</div>
+<div class="card"><span>🐘</span>Elephant – हाथी</div>
+<div class="card"><span>🐒</span>Monkey – बंदर</div>
+<div class="card"><span>🐄</span>Cow – गाय</div>
+<div class="card"><span>🐐</span>Goat – बकरी</div>
+<div class="card"><span>🐎</span>Horse – घोड़ा</div>
+<div class="card"><span>🐪</span>Camel – ऊँट</div>
+<div class="card"><span>🐇</span>Rabbit – खरगोश</div>
+<div class="card"><span>🐻</span>Bear – भालू</div>
+<div class="card"><span>🐘</span>Giraffe – जिराफ</div>
+<div class="card"><span>🦒</span>Giraffe – जिराफ</div>
+<div class="card"><span>🦌</span>Deer – हिरण</div>
+<div class="card"><span>🐘</span>Hippopotamus – दरियाई घोड़ा</div>
+<div class="card"><span>🦊</span>Fox – लोमड़ी</div>
+<div class="card"><span>🐺</span>Wolf – भेड़िया</div>
+<div class="card"><span>🐷</span>Pig – सूअर</div>
+<div class="card"><span>🐑</span>Sheep – भेड़</div>
 
 </div>
-
 </div>
 
-
-<!-- Birds -->
 
 <div id="engBirds" class="lesson">
 
 <h2>🐦 Birds / पक्षी</h2>
 
-<div class="card-grid">
+<div class="grid">
 
-<div class="item">🐦 Bird<br>पक्षी</div>
-<div class="item">🦜 Parrot<br>तोता</div>
-<div class="item">🦚 Peacock<br>मोर</div>
-<div class="item">🐦 Sparrow<br>गौरैया</div>
-<div class="item">🦆 Duck<br>बतख</div>
-<div class="item">🐔 Hen<br>मुर्गी</div>
-<div class="item">🐓 Rooster<br>मुर्गा</div>
-<div class="item">🦉 Owl<br>उल्लू</div>
-<div class="item">🦅 Eagle<br>गरुड़</div>
-<div class="item">🕊️ Pigeon<br>कबूतर</div>
+<div class="card"><span>🦜</span>Parrot – तोता</div>
+<div class="card"><span>🦚</span>Peacock – मोर</div>
+<div class="card"><span>🐦</span>Sparrow – गौरैया</div>
+<div class="card"><span>🕊️</span>Pigeon – कबूतर</div>
+<div class="card"><span>🦉</span>Owl – उल्लू</div>
+<div class="card"><span>🦅</span>Eagle – चील</div>
+<div class="card"><span>🦆</span>Duck – बतख</div>
+<div class="card"><span>🐔</span>Hen – मुर्गी</div>
+<div class="card"><span>🐓</span>Rooster – मुर्गा</div>
+<div class="card"><span>🦢</span>Swan – हंस</div>
+<div class="card"><span>🦩</span>Flamingo – फ्लेमिंगो</div>
+<div class="card"><span>🐧</span>Penguin – पेंगुइन</div>
 
 </div>
-
 </div>
 
-
-<!-- Family -->
 
 <div id="engFamily" class="lesson">
 
 <h2>👨‍👩‍👧 Family / परिवार</h2>
 
-<div class="picture">👨‍👩‍👧‍👦❤️</div>
+<div class="grid">
 
-<div class="card-grid">
-
-<div class="item">👨 Father<br>पिता</div>
-<div class="item">👩 Mother<br>माता</div>
-<div class="item">👦 Brother<br>भाई</div>
-<div class="item">👧 Sister<br>बहन</div>
-<div class="item">👴 Grandfather<br>दादा/नाना</div>
-<div class="item">👵 Grandmother<br>दादी/नानी</div>
-<div class="item">👶 Baby<br>बच्चा</div>
-<div class="item">👨 Uncle<br>चाचा/मामा</div>
-<div class="item">👩 Aunt<br>चाची/मामी</div>
-<div class="item">👨‍👩‍👧 Family<br>परिवार</div>
+<div class="card"><span>👨</span>Father – पिता</div>
+<div class="card"><span>👩</span>Mother – माता</div>
+<div class="card"><span>👦</span>Brother – भाई</div>
+<div class="card"><span>👧</span>Sister – बहन</div>
+<div class="card"><span>👴</span>Grandfather – दादा/नाना</div>
+<div class="card"><span>👵</span>Grandmother – दादी/नानी</div>
+<div class="card"><span>👶</span>Baby – बच्चा</div>
+<div class="card"><span>👨</span>Uncle – चाचा/मामा</div>
+<div class="card"><span>👩</span>Aunt – चाची/मामी</div>
+<div class="card"><span>👦</span>Cousin – चचेरा/ममेरा भाई</div>
 
 </div>
-
 </div>
 
-
-<!-- Body -->
 
 <div id="engBody" class="lesson">
 
-<h2>👁️ Body Parts / शरीर के अंग</h2>
+<h2>👀 Body Parts / शरीर के अंग</h2>
 
-<div class="picture">🧒👁️👂👃👄</div>
+<div class="grid">
 
-<div class="card-grid">
-
-<div class="item">👁️ Eye<br>आँख</div>
-<div class="item">👂 Ear<br>कान</div>
-<div class="item">👃 Nose<br>नाक</div>
-<div class="item">👄 Mouth<br>मुँह</div>
-<div class="item">🦷 Teeth<br>दाँत</div>
-<div class="item">👅 Tongue<br>जीभ</div>
-<div class="item">💪 Hand<br>हाथ</div>
-<div class="item">🦵 Leg<br>पैर</div>
-<div class="item">🦶 Foot<br>पाँव</div>
-<div class="item">🧠 Head<br>सिर</div>
-<div class="item">💇 Hair<br>बाल</div>
-<div class="item">❤️ Heart<br>हृदय</div>
+<div class="card"><span>👁️</span>Eye – आँख</div>
+<div class="card"><span>👂</span>Ear – कान</div>
+<div class="card"><span>👃</span>Nose – नाक</div>
+<div class="card"><span>👄</span>Mouth – मुँह</div>
+<div class="card"><span>🦷</span>Teeth – दाँत</div>
+<div class="card"><span>👅</span>Tongue – जीभ</div>
+<div class="card"><span>✋</span>Hand – हाथ</div>
+<div class="card"><span>🦶</span>Foot – पैर</div>
+<div class="card"><span>💪</span>Arm – बाँह</div>
+<div class="card"><span>🦵</span>Leg – टाँग</div>
+<div class="card"><span>💇</span>Hair – बाल</div>
+<div class="card"><span>👤</span>Head – सिर</div>
 
 </div>
-
 </div>
 
-
-<!-- Days -->
 
 <div id="engDays" class="lesson">
 
-<h2>📅 Days of Week / सप्ताह के दिन</h2>
+<h2>📅 Days / सप्ताह के दिन</h2>
 
-<div class="picture">📅☀️</div>
+<div class="grid">
 
-<div class="card-grid">
-
-<div class="item">1️⃣ Monday<br>सोमवार</div>
-<div class="item">2️⃣ Tuesday<br>मंगलवार</div>
-<div class="item">3️⃣ Wednesday<br>बुधवार</div>
-<div class="item">4️⃣ Thursday<br>गुरुवार</div>
-<div class="item">5️⃣ Friday<br>शुक्रवार</div>
-<div class="item">6️⃣ Saturday<br>शनिवार</div>
-<div class="item">7️⃣ Sunday<br>रविवार</div>
+<div class="card">Monday – सोमवार</div>
+<div class="card">Tuesday – मंगलवार</div>
+<div class="card">Wednesday – बुधवार</div>
+<div class="card">Thursday – गुरुवार</div>
+<div class="card">Friday – शुक्रवार</div>
+<div class="card">Saturday – शनिवार</div>
+<div class="card">Sunday – रविवार</div>
 
 </div>
-
 </div>
 
-
-<!-- Months -->
 
 <div id="engMonths" class="lesson">
 
 <h2>🗓️ Months / महीने</h2>
 
-<div class="card-grid">
+<div class="grid">
 
-<div class="item">January<br>जनवरी</div>
-<div class="item">February<br>फरवरी</div>
-<div class="item">March<br>मार्च</div>
-<div class="item">April<br>अप्रैल</div>
-<div class="item">May<br>मई</div>
-<div class="item">June<br>जून</div>
-<div class="item">July<br>जुलाई</div>
-<div class="item">August<br>अगस्त</div>
-<div class="item">September<br>सितंबर</div>
-<div class="item">October<br>अक्टूबर</div>
-<div class="item">November<br>नवंबर</div>
-<div class="item">December<br>दिसंबर</div>
-
-</div>
+<div class="card">January – जनवरी</div>
+<div class="card">February – फरवरी</div>
+<div class="card">March – मार्च</div>
+<div class="card">April – अप्रैल</div>
+<div class="card">May – मई</div>
+<div class="card">June – जून</div>
+<div class="card">July – जुलाई</div>
+<div class="card">August – अगस्त</div>
+<div class="card">September – सितंबर</div>
+<div class="card">October – अक्टूबर</div>
+<div class="card">November – नवंबर</div>
+<div class="card">December – दिसंबर</div>
 
 </div>
+</div>
 
-
-<!-- Sentences -->
 
 <div id="engSentences" class="lesson">
 
 <h2>💬 Simple Sentences / सरल वाक्य</h2>
 
-<div class="example">
-<b>1.</b> I am a boy. — मैं एक लड़का हूँ।<br><br>
-<b>2.</b> I am a girl. — मैं एक लड़की हूँ।<br><br>
-<b>3.</b> This is a book. — यह एक किताब है।<br><br>
-<b>4.</b> This is a pen. — यह एक कलम है।<br><br>
-<b>5.</b> I have a ball. — मेरे पास एक गेंद है।<br><br>
-<b>6.</b> I like mango. — मुझे आम पसंद है।<br><br>
-<b>7.</b> This is my mother. — यह मेरी माँ हैं।<br><br>
-<b>8.</b> This is my father. — यह मेरे पिता हैं।<br><br>
-<b>9.</b> The sun is hot. — सूरज गर्म है।<br><br>
-<b>10.</b> The sky is blue. — आकाश नीला है।
+<div class="example">I am a boy. — मैं एक लड़का हूँ।</div>
+<div class="example">I am a girl. — मैं एक लड़की हूँ।</div>
+<div class="example">This is a book. — यह एक किताब है।</div>
+<div class="example">This is my house. — यह मेरा घर है।</div>
+<div class="example">I like mango. — मुझे आम पसंद है।</div>
+<div class="example">The sun is hot. — सूरज गर्म है।</div>
+<div class="example">I go to school. — मैं स्कूल जाता हूँ।</div>
+<div class="example">This is my mother. — यह मेरी माँ हैं।</div>
+<div class="example">I have a ball. — मेरे पास एक गेंद है।</div>
+<div class="example">The dog is black. — कुत्ता काला है।</div>
+
+</div>
+
+
+<div id="engQuiz" class="lesson">
+
+<h2>❓ English Quiz</h2>
+
+<div id="engQuizBox" class="quizBox"></div>
+
 </div>
 
 </div>
 
 
-<!-- English Questions -->
-
-<div id="engQuestions" class="lesson">
-
-<h2>❓ English Practice / अभ्यास</h2>
-
-<div id="englishQuestionArea"></div>
-
-</div>
-
-</div>
-
-
-<!-- ================= MATHS ================= -->
+<!-- ================= MATH ================= -->
 
 <div id="math" class="subject">
 
-<div class="subject-title math-title">
-<h2>🔢 Class 1 Maths / कक्षा 1 गणित</h2>
-<p>गिनती से गणित सीखें</p>
+<div class="subject-title mathTitle">
+<h2>🔢 Maths / गणित</h2>
 </div>
 
-<div class="lesson-list">
+<div class="lesson-menu">
 
-<button class="lesson-btn" onclick="openLesson('mathCounting')">
-🔢 1. Counting 1–100 / गिनती
-</button>
-
-<button class="lesson-btn" onclick="openLesson('mathBeforeAfter')">
-⬅️➡️ 2. Before, After & Between
-</button>
-
-<button class="lesson-btn" onclick="openLesson('mathAddition')">
-➕ 3. Addition / जोड़
-</button>
-
-<button class="lesson-btn" onclick="openLesson('mathSubtraction')">
-➖ 4. Subtraction / घटाव
-</button>
-
-<button class="lesson-btn" onclick="openLesson('mathShapes')">
-🔺 5. Shapes / आकृतियाँ
-</button>
-
-<button class="lesson-btn" onclick="openLesson('mathComparison')">
-⚖️ 6. Greater, Smaller, Equal
-</button>
-
-<button class="lesson-btn" onclick="openLesson('mathPlace')">
-🏠 7. Ones & Tens / इकाई-दहाई
-</button>
-
-<button class="lesson-btn" onclick="openLesson('mathTime')">
-⏰ 8. Time / समय
-</button>
-
-<button class="lesson-btn" onclick="openLesson('mathMoney')">
-💰 9. Money / पैसे
-</button>
-
-<button class="lesson-btn" onclick="openLesson('mathTables')">
-✖️ 10. Tables 1–50
-</button>
-
-<button class="lesson-btn" onclick="openLesson('mathQuestions')">
-❓ 11. Maths Practice Questions
-</button>
+<button onclick="openLesson('mathCounting')">🔢 Counting 1–200</button>
+<button onclick="openLesson('mathBefore')">⬅️ Before / After / Between</button>
+<button onclick="openLesson('mathAddition')">➕ Addition / जोड़</button>
+<button onclick="openLesson('mathSubtraction')">➖ Subtraction / घटाव</button>
+<button onclick="openLesson('mathShapes')">🔺 Shapes / आकृतियाँ</button>
+<button onclick="openLesson('mathCompare')">⚖️ Greater / Smaller / Equal</button>
+<button onclick="openLesson('mathPlace')">🏠 Ones & Tens / इकाई-दहाई</button>
+<button onclick="openLesson('mathTime')">⏰ Time / समय</button>
+<button onclick="openLesson('mathMoney')">💰 Money / पैसे</button>
+<button onclick="openLesson('mathTables')">✖️ Tables 1–50</button>
+<button onclick="openLesson('mathQuiz')">❓ Maths Quiz – 50 Questions</button>
 
 </div>
 
-
-<!-- Counting -->
 
 <div id="mathCounting" class="lesson">
 
-<h2>🔢 Counting 1–100 / गिनती</h2>
+<h2>🔢 Counting 1–200</h2>
 
-<div class="picture">1️⃣2️⃣3️⃣🔟💯</div>
+<div class="picture">1️⃣ 2️⃣ 3️⃣ 🔢 💯 2️⃣0️⃣0️⃣</div>
 
-<div class="card-grid">
-
-<script>
-for(let i=1;i<=100;i++){
-document.write(`<div class="item">${i}</div>`);
-}
-</script>
-
-</div>
+<div id="mathNumberList" class="number-grid"></div>
 
 </div>
 
 
-<!-- Before After -->
+<div id="mathBefore" class="lesson">
 
-<div id="mathBeforeAfter" class="lesson">
+<h2>⬅️ Before • After • Between</h2>
 
-<h2>⬅️ Before, After & Between</h2>
-
-<div class="picture">🔢⬅️➡️</div>
-
-<div class="example">
-<b>Before / पहले:</b><br>
-5 से पहले = 4<br>
-10 से पहले = 9<br>
-20 से पहले = 19
-</div>
-
-<div class="example">
-<b>After / बाद:</b><br>
-5 के बाद = 6<br>
-10 के बाद = 11<br>
-20 के बाद = 21
-</div>
-
-<div class="example">
-<b>Between / बीच:</b><br>
-4 और 6 के बीच = 5<br>
-9 और 11 के बीच = 10<br>
-19 और 21 के बीच = 20
-</div>
+<div class="example">5 से पहले / Before 5 = <b>4</b></div>
+<div class="example">5 के बाद / After 5 = <b>6</b></div>
+<div class="example">4 और 6 के बीच / Between 4 and 6 = <b>5</b></div>
+<div class="example">10 से पहले = <b>9</b></div>
+<div class="example">10 के बाद = <b>11</b></div>
+<div class="example">9 और 11 के बीच = <b>10</b></div>
+<div class="example">20 से पहले = <b>19</b></div>
+<div class="example">20 के बाद = <b>21</b></div>
+<div class="example">29 और 31 के बीच = <b>30</b></div>
+<div class="example">49 और 51 के बीच = <b>50</b></div>
 
 </div>
 
-
-<!-- Addition -->
 
 <div id="mathAddition" class="lesson">
 
 <h2>➕ Addition / जोड़</h2>
 
-<div class="picture">🍎🍎 + 🍎 = 3</div>
+<div class="picture">🍎🍎 + 🍎 = 🍎🍎🍎</div>
 
-<div class="example">
-2 + 3 = 5
-<br>
-🍎🍎 + 🍎🍎🍎 = 🍎🍎🍎🍎🍎
-</div>
-
-<div class="example">
-1 + 1 = 2<br>
-2 + 2 = 4<br>
-3 + 2 = 5<br>
-4 + 3 = 7<br>
-5 + 5 = 10<br>
-6 + 2 = 8<br>
-7 + 1 = 8<br>
-8 + 2 = 10<br>
-9 + 1 = 10<br>
-10 + 5 = 15
-</div>
+<div class="example">1 + 1 = <b>2</b></div>
+<div class="example">2 + 2 = <b>4</b></div>
+<div class="example">3 + 2 = <b>5</b></div>
+<div class="example">4 + 3 = <b>7</b></div>
+<div class="example">5 + 5 = <b>10</b></div>
+<div class="example">6 + 3 = <b>9</b></div>
+<div class="example">7 + 2 = <b>9</b></div>
+<div class="example">8 + 4 = <b>12</b></div>
+<div class="example">9 + 5 = <b>14</b></div>
+<div class="example">10 + 10 = <b>20</b></div>
+<div class="example">12 + 5 = <b>17</b></div>
+<div class="example">15 + 5 = <b>20</b></div>
+<div class="example">20 + 10 = <b>30</b></div>
+<div class="example">25 + 5 = <b>30</b></div>
+<div class="example">30 + 20 = <b>50</b></div>
 
 </div>
 
-
-<!-- Subtraction -->
 
 <div id="mathSubtraction" class="lesson">
 
@@ -956,176 +788,161 @@ document.write(`<div class="item">${i}</div>`);
 
 <div class="picture">🍎🍎🍎 − 🍎 = 🍎🍎</div>
 
-<div class="example">
-5 − 2 = 3
-<br><br>
-🍎🍎🍎🍎🍎 में से 2 🍎 निकालें = 3 🍎
-</div>
-
-<div class="example">
-5 − 1 = 4<br>
-6 − 2 = 4<br>
-7 − 3 = 4<br>
-8 − 4 = 4<br>
-9 − 5 = 4<br>
-10 − 2 = 8<br>
-10 − 5 = 5<br>
-15 − 5 = 10
-</div>
+<div class="example">5 − 1 = <b>4</b></div>
+<div class="example">6 − 2 = <b>4</b></div>
+<div class="example">7 − 3 = <b>4</b></div>
+<div class="example">8 − 4 = <b>4</b></div>
+<div class="example">10 − 5 = <b>5</b></div>
+<div class="example">10 − 2 = <b>8</b></div>
+<div class="example">12 − 4 = <b>8</b></div>
+<div class="example">15 − 5 = <b>10</b></div>
+<div class="example">20 − 10 = <b>10</b></div>
+<div class="example">25 − 5 = <b>20</b></div>
+<div class="example">30 − 10 = <b>20</b></div>
+<div class="example">40 − 20 = <b>20</b></div>
 
 </div>
 
-
-<!-- Shapes -->
 
 <div id="mathShapes" class="lesson">
 
 <h2>🔺 Shapes / आकृतियाँ</h2>
 
-<div class="picture">🔺🔵🟦⭐</div>
+<div class="grid">
 
-<div class="card-grid">
+<div class="card"><span>🔵</span>Circle – वृत्त</div>
+<div class="card"><span>🟦</span>Square – वर्ग</div>
+<div class="card"><span>🔺</span>Triangle – त्रिभुज</div>
+<div class="card"><span>▭</span>Rectangle – आयत</div>
+<div class="card"><span>⭐</span>Star – तारा</div>
+<div class="card"><span>❤️</span>Heart – दिल</div>
+<div class="card"><span>⬭</span>Oval – अंडाकार</div>
+<div class="card"><span>♦️</span>Diamond – हीरा</div>
 
-<div class="item">🔵<br>Circle<br>वृत्त</div>
-<div class="item">🟦<br>Square<br>वर्ग</div>
-<div class="item">🔺<br>Triangle<br>त्रिभुज</div>
-<div class="item">▭<br>Rectangle<br>आयत</div>
-<div class="item">⭐<br>Star<br>तारा</div>
-<div class="item">❤️<br>Heart<br>दिल</div>
-
-</div>
-
-</div>
-
-
-<!-- Comparison -->
-
-<div id="mathComparison" class="lesson">
-
-<h2>⚖️ Greater, Smaller & Equal</h2>
-
-<div class="picture">⚖️🔢</div>
-
-<div class="example">
-<b>Greater / बड़ा:</b><br>
-8 &gt; 5<br>
-10 &gt; 3
 </div>
 
 <div class="example">
-<b>Smaller / छोटा:</b><br>
-3 &lt; 8<br>
-2 &lt; 7
+🔵 Circle के कोई कोने नहीं होते।
+<br>
+🔺 Triangle के 3 sides होते हैं।
+<br>
+🟦 Square की 4 बराबर sides होती हैं।
+<br>
+▭ Rectangle की 4 sides होती हैं।
 </div>
 
-<div class="example">
-<b>Equal / बराबर:</b><br>
-5 = 5<br>
-10 = 10
-</div>
-
 </div>
 
 
-<!-- Place Value -->
+<div id="mathCompare" class="lesson">
+
+<h2>⚖️ Greater • Smaller • Equal</h2>
+
+<div class="example">8 &gt; 5 → 8 बड़ा है / 8 is greater.</div>
+<div class="example">3 &lt; 7 → 3 छोटा है / 3 is smaller.</div>
+<div class="example">5 = 5 → दोनों बराबर हैं / Equal.</div>
+<div class="example">10 &gt; 6</div>
+<div class="example">4 &lt; 9</div>
+<div class="example">7 = 7</div>
+<div class="example">15 &gt; 10</div>
+<div class="example">12 &lt; 20</div>
+<div class="example">25 = 25</div>
+
+</div>
+
 
 <div id="mathPlace" class="lesson">
 
-<h2>🏠 Ones & Tens / इकाई और दहाई</h2>
+<h2>🏠 Ones & Tens / इकाई-दहाई</h2>
 
 <div class="picture">🔢🏠</div>
 
 <div class="example">
-<b>25</b><br>
-2 = Tens / दहाई<br>
-5 = Ones / इकाई
+25 में 2 = Tens / दहाई<br>
+25 में 5 = Ones / इकाई
 </div>
 
 <div class="example">
-<b>47</b><br>
-4 = Tens / दहाई<br>
-7 = Ones / इकाई
+47 में 4 = Tens / दहाई<br>
+47 में 7 = Ones / इकाई
 </div>
 
 <div class="example">
-<b>63</b><br>
-6 = Tens / दहाई<br>
-3 = Ones / इकाई
+63 में 6 = Tens / दहाई<br>
+63 में 3 = Ones / इकाई
+</div>
+
+<div class="example">
+89 में 8 = Tens / दहाई<br>
+89 में 9 = Ones / इकाई
 </div>
 
 </div>
 
-
-<!-- Time -->
 
 <div id="mathTime" class="lesson">
 
 <h2>⏰ Time / समय</h2>
 
-<div class="picture">⏰</div>
+<div class="picture">⏰🕐🕑🕒</div>
 
-<div class="example">
-1 day = 24 hours<br>
-1 week = 7 days<br>
-1 hour = 60 minutes<br>
-1 minute = 60 seconds
-</div>
-
-<div class="card-grid">
-
-<div class="item">🌅 Morning<br>सुबह</div>
-<div class="item">☀️ Afternoon<br>दोपहर</div>
-<div class="item">🌆 Evening<br>शाम</div>
-<div class="item">🌙 Night<br>रात</div>
+<div class="example">1 दिन = 24 घंटे / hours</div>
+<div class="example">1 घंटा = 60 मिनट / minutes</div>
+<div class="example">1 सप्ताह = 7 दिन / days</div>
+<div class="example">1 साल = 12 महीने / months</div>
+<div class="example">60 minutes = 1 hour</div>
+<div class="example">24 hours = 1 day</div>
 
 </div>
 
-</div>
-
-
-<!-- Money -->
 
 <div id="mathMoney" class="lesson">
 
 <h2>💰 Money / पैसे</h2>
 
-<div class="picture">🪙💰💵</div>
+<div class="grid">
+
+<div class="card"><span>🪙</span>₹1</div>
+<div class="card"><span>🪙</span>₹2</div>
+<div class="card"><span>🪙</span>₹5</div>
+<div class="card"><span>💵</span>₹10</div>
+<div class="card"><span>💵</span>₹20</div>
+<div class="card"><span>💵</span>₹50</div>
+<div class="card"><span>💵</span>₹100</div>
+<div class="card"><span>💵</span>₹200</div>
+<div class="card"><span>💵</span>₹500</div>
+
+</div>
 
 <div class="example">
-₹1 = One Rupee<br>
-₹2 = Two Rupees<br>
-₹5 = Five Rupees<br>
-₹10 = Ten Rupees<br>
-₹20 = Twenty Rupees<br>
-₹50 = Fifty Rupees<br>
-₹100 = One Hundred Rupees
+₹5 + ₹5 = ₹10
+</div>
+
+<div class="example">
+₹10 + ₹20 = ₹30
+</div>
+
+<div class="example">
+₹50 + ₹50 = ₹100
 </div>
 
 </div>
 
-
-<!-- Tables -->
 
 <div id="mathTables" class="lesson">
 
 <h2>✖️ Tables 1–50</h2>
 
-<div class="info">
-यहाँ tables सरल रूप में दिखाई जाएँगी।
-</div>
-
-<div id="tablesArea"></div>
+<div id="tablesContainer"></div>
 
 </div>
 
 
-<!-- Math Questions -->
+<div id="mathQuiz" class="lesson">
 
-<div id="mathQuestions" class="lesson">
+<h2>❓ Maths Quiz</h2>
 
-<h2>❓ Maths Practice Questions</h2>
-
-<div id="mathQuestionArea"></div>
+<div id="mathQuizBox" class="quizBox"></div>
 
 </div>
 
@@ -1136,470 +953,348 @@ document.write(`<div class="item">${i}</div>`);
 
 <div id="hindi" class="subject">
 
-<div class="subject-title hindi-title">
-<h2>📕 Class 1 Hindi / कक्षा 1 हिंदी</h2>
-<p>चित्र देखकर हिंदी सीखें</p>
+<div class="subject-title hindiTitle">
+<h2>📕 Hindi / हिंदी</h2>
 </div>
 
-<div class="lesson-list">
+<div class="lesson-menu">
 
-<button class="lesson-btn" onclick="openLesson('hindiSwar')">
-🔤 1. स्वर / अ से अः
-</button>
-
-<button class="lesson-btn" onclick="openLesson('hindiVyanjan')">
-🔤 2. व्यंजन / क से ज्ञ
-</button>
-
-<button class="lesson-btn" onclick="openLesson('hindiMatra')">
-📖 3. मात्राएँ
-</button>
-
-<button class="lesson-btn" onclick="openLesson('hindiWords')">
-🧩 4. सरल शब्द
-</button>
-
-<button class="lesson-btn" onclick="openLesson('hindiSentences')">
-💬 5. सरल वाक्य
-</button>
-
-<button class="lesson-btn" onclick="openLesson('hindiNumbers')">
-🔢 6. हिंदी गिनती
-</button>
-
-<button class="lesson-btn" onclick="openLesson('hindiColors')">
-🎨 7. रंग
-</button>
-
-<button class="lesson-btn" onclick="openLesson('hindiFruits')">
-🍎 8. फल
-</button>
-
-<button class="lesson-btn" onclick="openLesson('hindiVegetables')">
-🥕 9. सब्जियाँ
-</button>
-
-<button class="lesson-btn" onclick="openLesson('hindiAnimals')">
-🐘 10. पशु
-</button>
-
-<button class="lesson-btn" onclick="openLesson('hindiBirds')">
-🐦 11. पक्षी
-</button>
-
-<button class="lesson-btn" onclick="openLesson('hindiFamily')">
-👨‍👩‍👧 12. परिवार
-</button>
-
-<button class="lesson-btn" onclick="openLesson('hindiDays')">
-📅 13. सप्ताह के दिन
-</button>
-
-<button class="lesson-btn" onclick="openLesson('hindiMonths')">
-🗓️ 14. महीने
-</button>
-
-<button class="lesson-btn" onclick="openLesson('hindiQuestions')">
-❓ 15. हिंदी अभ्यास प्रश्न
-</button>
+<button onclick="openLesson('hindiSwar')">🔤 स्वर</button>
+<button onclick="openLesson('hindiVyanjan')">🔤 व्यंजन</button>
+<button onclick="openLesson('hindiMatra')">📖 मात्राएँ</button>
+<button onclick="openLesson('hindiWords')">🧩 सरल शब्द</button>
+<button onclick="openLesson('hindiSentences')">💬 सरल वाक्य</button>
+<button onclick="openLesson('hindiNumbers')">🔢 हिंदी गिनती 1–100</button>
+<button onclick="openLesson('hindiColours')">🎨 रंग</button>
+<button onclick="openLesson('hindiFruits')">🍎 फल</button>
+<button onclick="openLesson('hindiVegetables')">🥕 सब्जियाँ</button>
+<button onclick="openLesson('hindiAnimals')">🐘 पशु</button>
+<button onclick="openLesson('hindiBirds')">🐦 पक्षी</button>
+<button onclick="openLesson('hindiFamily')">👨‍👩‍👧 परिवार</button>
+<button onclick="openLesson('hindiDays')">📅 सप्ताह के दिन</button>
+<button onclick="openLesson('hindiMonths')">🗓️ महीने</button>
+<button onclick="openLesson('hindiQuiz')">❓ हिंदी Quiz – 50 Questions</button>
 
 </div>
 
-
-<!-- Swar -->
 
 <div id="hindiSwar" class="lesson">
 
 <h2>🔤 हिंदी स्वर</h2>
 
-<div class="picture">अ आ इ ई उ ऊ ए ऐ ओ औ अं अः</div>
+<div class="grid">
 
-<div class="card-grid">
-
-<div class="item">🦆 अ — अनार</div>
-<div class="item">🥭 आ — आम</div>
-<div class="item">🍎 इ — इमली</div>
-<div class="item">🪀 ई — ईख</div>
-<div class="item">🦉 उ — उल्लू</div>
-<div class="item">🐫 ऊ — ऊन</div>
-<div class="item">👦 ए — एक</div>
-<div class="item">✈️ ऐ — ऐनक</div>
-<div class="item">🍊 ओ — ओखली</div>
-<div class="item">🐄 औ — औरत</div>
-<div class="item">🌙 अं — अंगूर</div>
-<div class="item">📚 अः — विसर्ग</div>
+<div class="card"><span>🍎</span>अ – अनार</div>
+<div class="card"><span>🥭</span>आ – आम</div>
+<div class="card"><span>🍋</span>इ – इमली</div>
+<div class="card"><span>🌾</span>ई – ईख</div>
+<div class="card"><span>🦉</span>उ – उल्लू</div>
+<div class="card"><span>🧶</span>ऊ – ऊन</div>
+<div class="card"><span>1️⃣</span>ए – एक</div>
+<div class="card"><span>👓</span>ऐ – ऐनक</div>
+<div class="card"><span>🍊</span>ओ – ओखली</div>
+<div class="card"><span>👩</span>औ – औरत</div>
+<div class="card"><span>🍇</span>अं – अंगूर</div>
 
 </div>
-
 </div>
 
-
-<!-- Vyanjan -->
 
 <div id="hindiVyanjan" class="lesson">
 
-<h2>🔤 हिंदी व्यंजन</h2>
+<h2>🔤 व्यंजन</h2>
 
-<div class="picture">क ख ग घ ङ</div>
+<div class="grid">
 
-<div class="card-grid">
-
-<div class="item">क — 🪁 कबूतर</div>
-<div class="item">ख — 🐰 खरगोश</div>
-<div class="item">ग — 🏠 घर</div>
-<div class="item">घ — 🏠 घर</div>
-<div class="item">च — 🐦 चिड़िया</div>
-<div class="item">छ — ☂️ छाता</div>
-<div class="item">ज — 🚢 जहाज</div>
-<div class="item">झ — 🌊 झरना</div>
-<div class="item">ट — 🪑 टेबल</div>
-<div class="item">ठ — 🏠 ठेला</div>
-<div class="item">ड — 🥁 डमरू</div>
-<div class="item">ढ — 🥁 ढोल</div>
-<div class="item">त — 🦜 तोता</div>
-<div class="item">थ — 🥛 थाली</div>
-<div class="item">द — 🦷 दाँत</div>
-<div class="item">ध — 🌾 धन</div>
-<div class="item">न — 👃 नाक</div>
-<div class="item">प — 🪁 पतंग</div>
-<div class="item">फ — 🌸 फूल</div>
-<div class="item">ब — 🦆 बतख</div>
-<div class="item">भ — 🐻 भालू</div>
-<div class="item">म — 🐟 मछली</div>
-<div class="item">य — 🚗 यात्रा</div>
-<div class="item">र — 🦋 रंग</div>
-<div class="item">ल — 🍋 नींबू</div>
-<div class="item">व — 🚽 वाहन</div>
-<div class="item">श — 🦁 शेर</div>
-<div class="item">ष — 📚 षट्कोण</div>
-<div class="item">स — 🐍 साँप</div>
-<div class="item">ह — 🐘 हाथी</div>
+<div class="card"><span>🪁</span>क – कबूतर</div>
+<div class="card"><span>🐇</span>ख – खरगोश</div>
+<div class="card"><span>🌼</span>ग – गमला</div>
+<div class="card"><span>🏠</span>घ – घर</div>
+<div class="card"><span>🐦</span>च – चिड़िया</div>
+<div class="card"><span>☂️</span>छ – छाता</div>
+<div class="card"><span>🚢</span>ज – जहाज</div>
+<div class="card"><span>🌊</span>झ – झरना</div>
+<div class="card"><span>🍅</span>ट – टमाटर</div>
+<div class="card"><span>🥁</span>ठ – ठेला</div>
+<div class="card"><span>🥁</span>ड – डमरू</div>
+<div class="card"><span>🥁</span>ढ – ढोल</div>
+<div class="card"><span>🦜</span>त – तोता</div>
+<div class="card"><span>🍽️</span>थ – थाली</div>
+<div class="card"><span>🦷</span>द – दाँत</div>
+<div class="card"><span>🌾</span>ध – धन</div>
+<div class="card"><span>👃</span>न – नाक</div>
+<div class="card"><span>🪁</span>प – पतंग</div>
+<div class="card"><span>🌸</span>फ – फूल</div>
+<div class="card"><span>🦆</span>ब – बतख</div>
+<div class="card"><span>🐻</span>भ – भालू</div>
+<div class="card"><span>🐟</span>म – मछली</div>
+<div class="card"><span>🧘</span>य – योग</div>
+<div class="card"><span>🌈</span>र – रंग</div>
+<div class="card"><span>🍋</span>ल – नींबू</div>
+<div class="card"><span>🚗</span>व – वाहन</div>
+<div class="card"><span>🦁</span>श – शेर</div>
+<div class="card"><span>🐍</span>स – साँप</div>
+<div class="card"><span>🐘</span>ह – हाथी</div>
 
 </div>
-
 </div>
 
-
-<!-- Matra -->
 
 <div id="hindiMatra" class="lesson">
 
 <h2>📖 मात्राएँ</h2>
 
-<div class="picture">म + ा = मा</div>
+<div class="picture">क + ा = का</div>
 
-<div class="card-grid">
-
-<div class="item">अ<br>कमल</div>
-<div class="item">आ<br>माला</div>
-<div class="item">इ<br>किरण</div>
-<div class="item">ई<br>सीता</div>
-<div class="item">उ<br>कुत्ता</div>
-<div class="item">ऊ<br>फूल</div>
-<div class="item">ए<br>सेब</div>
-<div class="item">ऐ<br>मैना</div>
-<div class="item">ओ<br>मोर</div>
-<div class="item">औ<br>औरत</div>
-<div class="item">अं<br>अंगूर</div>
+<div class="example">क + ा = <b>का</b> — आ की मात्रा</div>
+<div class="example">क + ि = <b>कि</b> — इ की मात्रा</div>
+<div class="example">क + ी = <b>की</b> — ई की मात्रा</div>
+<div class="example">क + ु = <b>कु</b> — उ की मात्रा</div>
+<div class="example">क + ू = <b>कू</b> — ऊ की मात्रा</div>
+<div class="example">क + े = <b>के</b> — ए की मात्रा</div>
+<div class="example">क + ै = <b>कै</b> — ऐ की मात्रा</div>
+<div class="example">क + ो = <b>को</b> — ओ की मात्रा</div>
+<div class="example">क + ौ = <b>कौ</b> — औ की मात्रा</div>
 
 </div>
 
-</div>
-
-
-<!-- Hindi Words -->
 
 <div id="hindiWords" class="lesson">
 
 <h2>🧩 सरल शब्द</h2>
 
-<div class="picture">📖✏️</div>
+<div class="grid">
 
-<div class="card-grid">
-
-<div class="item">🌸 फूल</div>
-<div class="item">🏠 घर</div>
-<div class="item">👦 बालक</div>
-<div class="item">👧 लड़की</div>
-<div class="item">🐱 बिल्ली</div>
-<div class="item">🐶 कुत्ता</div>
-<div class="item">🌳 पेड़</div>
-<div class="item">💧 पानी</div>
-<div class="item">🍎 सेब</div>
-<div class="item">🥭 आम</div>
-<div class="item">⚽ गेंद</div>
-<div class="item">📚 किताब</div>
-<div class="item">✏️ कलम</div>
-<div class="item">🪁 पतंग</div>
-<div class="item">☀️ सूरज</div>
-<div class="item">🌙 चाँद</div>
+<div class="card"><span>🌸</span>फूल</div>
+<div class="card"><span>🏠</span>घर</div>
+<div class="card"><span>👦</span>बालक</div>
+<div class="card"><span>👧</span>लड़की</div>
+<div class="card"><span>🐱</span>बिल्ली</div>
+<div class="card"><span>🐶</span>कुत्ता</div>
+<div class="card"><span>🌳</span>पेड़</div>
+<div class="card"><span>💧</span>पानी</div>
+<div class="card"><span>🍎</span>सेब</div>
+<div class="card"><span>🥭</span>आम</div>
+<div class="card"><span>⚽</span>गेंद</div>
+<div class="card"><span>📚</span>किताब</div>
+<div class="card"><span>✏️</span>कलम</div>
+<div class="card"><span>🚗</span>कार</div>
+<div class="card"><span>🪑</span>कुर्सी</div>
+<div class="card"><span>🚪</span>दरवाजा</div>
 
 </div>
-
 </div>
 
-
-<!-- Hindi Sentences -->
 
 <div id="hindiSentences" class="lesson">
 
 <h2>💬 सरल वाक्य</h2>
 
-<div class="example">
-1. राम स्कूल जाता है।<br><br>
-2. सीता खाना खाती है।<br><br>
-3. यह मेरी किताब है।<br><br>
-4. यह मेरा घर है।<br><br>
-5. गाय घास खाती है।<br><br>
-6. सूरज चमकता है।<br><br>
-7. मोर नाचता है।<br><br>
-8. मुझे आम पसंद है।<br><br>
-9. मैं स्कूल जाता हूँ।<br><br>
-10. मेरा नाम राहुल है।
-</div>
+<div class="example">राम स्कूल जाता है।</div>
+<div class="example">सीता खाना खाती है।</div>
+<div class="example">यह मेरी किताब है।</div>
+<div class="example">यह मेरा घर है।</div>
+<div class="example">गाय घास खाती है।</div>
+<div class="example">मोर नाचता है।</div>
+<div class="example">बच्चे खेलते हैं।</div>
+<div class="example">सूरज चमकता है।</div>
+<div class="example">आम मीठा है।</div>
+<div class="example">पेड़ हरा है।</div>
 
 </div>
 
-
-<!-- Hindi Numbers -->
 
 <div id="hindiNumbers" class="lesson">
 
-<h2>🔢 हिंदी गिनती</h2>
+<h2>🔢 हिंदी गिनती 1–100</h2>
 
-<div class="card-grid">
-
-<div class="item">1 — एक</div>
-<div class="item">2 — दो</div>
-<div class="item">3 — तीन</div>
-<div class="item">4 — चार</div>
-<div class="item">5 — पाँच</div>
-<div class="item">6 — छह</div>
-<div class="item">7 — सात</div>
-<div class="item">8 — आठ</div>
-<div class="item">9 — नौ</div>
-<div class="item">10 — दस</div>
-<div class="item">11 — ग्यारह</div>
-<div class="item">12 — बारह</div>
-<div class="item">13 — तेरह</div>
-<div class="item">14 — चौदह</div>
-<div class="item">15 — पंद्रह</div>
-<div class="item">16 — सोलह</div>
-<div class="item">17 — सत्रह</div>
-<div class="item">18 — अठारह</div>
-<div class="item">19 — उन्नीस</div>
-<div class="item">20 — बीस</div>
-
-</div>
-
-<div class="info">
-Class 1 में पहले 1 से 20 तक गिनती अच्छी तरह सीखें, फिर आगे की गिनती का अभ्यास करें।
-</div>
+<div id="hindiNumberList" class="number-grid"></div>
 
 </div>
 
 
-<!-- Hindi Colors -->
-
-<div id="hindiColors" class="lesson">
+<div id="hindiColours" class="lesson">
 
 <h2>🎨 रंग</h2>
 
-<div class="card-grid">
+<div class="grid">
 
-<div class="item">🔴 लाल</div>
-<div class="item">🔵 नीला</div>
-<div class="item">🟢 हरा</div>
-<div class="item">🟡 पीला</div>
-<div class="item">🟠 नारंगी</div>
-<div class="item">🟣 बैंगनी</div>
-<div class="item">⚫ काला</div>
-<div class="item">⚪ सफेद</div>
-<div class="item">🩷 गुलाबी</div>
-<div class="item">🟤 भूरा</div>
-
-</div>
+<div class="card"><span>🔴</span>लाल</div>
+<div class="card"><span>🔵</span>नीला</div>
+<div class="card"><span>🟢</span>हरा</div>
+<div class="card"><span>🟡</span>पीला</div>
+<div class="card"><span>🟠</span>नारंगी</div>
+<div class="card"><span>🟣</span>बैंगनी</div>
+<div class="card"><span>⚫</span>काला</div>
+<div class="card"><span>⚪</span>सफेद</div>
+<div class="card"><span>🩷</span>गुलाबी</div>
+<div class="card"><span>🟤</span>भूरा</div>
 
 </div>
+</div>
 
-
-<!-- Hindi Fruits -->
 
 <div id="hindiFruits" class="lesson">
 
 <h2>🍎 फल</h2>
 
-<div class="card-grid">
+<div class="grid">
 
-<div class="item">🍎 सेब</div>
-<div class="item">🍌 केला</div>
-<div class="item">🥭 आम</div>
-<div class="item">🍊 संतरा</div>
-<div class="item">🍇 अंगूर</div>
-<div class="item">🍉 तरबूज</div>
-<div class="item">🍍 अनानास</div>
-<div class="item">🥥 नारियल</div>
-<div class="item">🍋 नींबू</div>
-<div class="item">🍐 नाशपाती</div>
-<div class="item">🍓 स्ट्रॉबेरी</div>
-<div class="item">🥝 कीवी</div>
+<div class="card"><span>🍎</span>सेब</div>
+<div class="card"><span>🍌</span>केला</div>
+<div class="card"><span>🥭</span>आम</div>
+<div class="card"><span>🍊</span>संतरा</div>
+<div class="card"><span>🍇</span>अंगूर</div>
+<div class="card"><span>🍉</span>तरबूज</div>
+<div class="card"><span>🍍</span>अनानास</div>
+<div class="card"><span>🥥</span>नारियल</div>
+<div class="card"><span>🍋</span>नींबू</div>
+<div class="card"><span>🍐</span>नाशपाती</div>
+<div class="card"><span>🍓</span>स्ट्रॉबेरी</div>
+<div class="card"><span>🥝</span>कीवी</div>
+<div class="card"><span>🍑</span>आड़ू</div>
+<div class="card"><span>🍒</span>चेरी</div>
 
 </div>
-
 </div>
 
-
-<!-- Vegetables -->
 
 <div id="hindiVegetables" class="lesson">
 
 <h2>🥕 सब्जियाँ</h2>
 
-<div class="card-grid">
+<div class="grid">
 
-<div class="item">🥔 आलू</div>
-<div class="item">🍅 टमाटर</div>
-<div class="item">🥕 गाजर</div>
-<div class="item">🥒 खीरा</div>
-<div class="item">🌽 मक्का</div>
-<div class="item">🧅 प्याज</div>
-<div class="item">🫛 मटर</div>
-<div class="item">🥬 पालक</div>
-<div class="item">🍆 बैंगन</div>
-<div class="item">🌶️ मिर्च</div>
+<div class="card"><span>🥔</span>आलू</div>
+<div class="card"><span>🍅</span>टमाटर</div>
+<div class="card"><span>🥕</span>गाजर</div>
+<div class="card"><span>🥒</span>खीरा</div>
+<div class="card"><span>🌽</span>मक्का</div>
+<div class="card"><span>🧅</span>प्याज</div>
+<div class="card"><span>🫛</span>मटर</div>
+<div class="card"><span>🥬</span>पालक</div>
+<div class="card"><span>🍆</span>बैंगन</div>
+<div class="card"><span>🌶️</span>मिर्च</div>
+<div class="card"><span>🥦</span>ब्रोकोली</div>
+<div class="card"><span>🥒</span>लौकी</div>
 
 </div>
-
 </div>
 
-
-<!-- Animals Hindi -->
 
 <div id="hindiAnimals" class="lesson">
 
 <h2>🐘 पशु</h2>
 
-<div class="card-grid">
+<div class="grid">
 
-<div class="item">🐘 हाथी</div>
-<div class="item">🦁 शेर</div>
-<div class="item">🐯 बाघ</div>
-<div class="item">🐒 बंदर</div>
-<div class="item">🐄 गाय</div>
-<div class="item">🐐 बकरी</div>
-<div class="item">🐎 घोड़ा</div>
-<div class="item">🐪 ऊँट</div>
-<div class="item">🐶 कुत्ता</div>
-<div class="item">🐱 बिल्ली</div>
-<div class="item">🐇 खरगोश</div>
-<div class="item">🐻 भालू</div>
+<div class="card"><span>🐘</span>हाथी</div>
+<div class="card"><span>🦁</span>शेर</div>
+<div class="card"><span>🐯</span>बाघ</div>
+<div class="card"><span>🐒</span>बंदर</div>
+<div class="card"><span>🐄</span>गाय</div>
+<div class="card"><span>🐐</span>बकरी</div>
+<div class="card"><span>🐎</span>घोड़ा</div>
+<div class="card"><span>🐪</span>ऊँट</div>
+<div class="card"><span>🐶</span>कुत्ता</div>
+<div class="card"><span>🐱</span>बिल्ली</div>
+<div class="card"><span>🐇</span>खरगोश</div>
+<div class="card"><span>🦊</span>लोमड़ी</div>
+<div class="card"><span>🐻</span>भालू</div>
+<div class="card"><span>🐺</span>भेड़िया</div>
 
 </div>
-
 </div>
 
-
-<!-- Birds Hindi -->
 
 <div id="hindiBirds" class="lesson">
 
 <h2>🐦 पक्षी</h2>
 
-<div class="card-grid">
+<div class="grid">
 
-<div class="item">🦜 तोता</div>
-<div class="item">🦚 मोर</div>
-<div class="item">🐦 गौरैया</div>
-<div class="item">🕊️ कबूतर</div>
-<div class="item">🦉 उल्लू</div>
-<div class="item">🦅 चील</div>
-<div class="item">🦆 बतख</div>
-<div class="item">🐔 मुर्गी</div>
-<div class="item">🐓 मुर्गा</div>
+<div class="card"><span>🦜</span>तोता</div>
+<div class="card"><span>🦚</span>मोर</div>
+<div class="card"><span>🐦</span>गौरैया</div>
+<div class="card"><span>🕊️</span>कबूतर</div>
+<div class="card"><span>🦉</span>उल्लू</div>
+<div class="card"><span>🦅</span>चील</div>
+<div class="card"><span>🦆</span>बतख</div>
+<div class="card"><span>🐔</span>मुर्गी</div>
+<div class="card"><span>🦢</span>हंस</div>
+<div class="card"><span>🐧</span>पेंगुइन</div>
 
 </div>
-
 </div>
 
-
-<!-- Family Hindi -->
 
 <div id="hindiFamily" class="lesson">
 
 <h2>👨‍👩‍👧 परिवार</h2>
 
-<div class="card-grid">
+<div class="grid">
 
-<div class="item">👨 पिता</div>
-<div class="item">👩 माता</div>
-<div class="item">👦 भाई</div>
-<div class="item">👧 बहन</div>
-<div class="item">👴 दादा</div>
-<div class="item">👵 दादी</div>
-<div class="item">👴 नाना</div>
-<div class="item">👵 नानी</div>
-<div class="item">👨 चाचा</div>
-<div class="item">👩 चाची</div>
-
-</div>
+<div class="card"><span>👨</span>पिता</div>
+<div class="card"><span>👩</span>माता</div>
+<div class="card"><span>👦</span>भाई</div>
+<div class="card"><span>👧</span>बहन</div>
+<div class="card"><span>👴</span>दादा</div>
+<div class="card"><span>👵</span>दादी</div>
+<div class="card"><span>👴</span>नाना</div>
+<div class="card"><span>👵</span>नानी</div>
+<div class="card"><span>👨</span>चाचा</div>
+<div class="card"><span>👩</span>चाची</div>
 
 </div>
+</div>
 
-
-<!-- Hindi Days -->
 
 <div id="hindiDays" class="lesson">
 
 <h2>📅 सप्ताह के दिन</h2>
 
-<div class="card-grid">
+<div class="grid">
 
-<div class="item">1️⃣ सोमवार</div>
-<div class="item">2️⃣ मंगलवार</div>
-<div class="item">3️⃣ बुधवार</div>
-<div class="item">4️⃣ गुरुवार</div>
-<div class="item">5️⃣ शुक्रवार</div>
-<div class="item">6️⃣ शनिवार</div>
-<div class="item">7️⃣ रविवार</div>
-
-</div>
+<div class="card">सोमवार</div>
+<div class="card">मंगलवार</div>
+<div class="card">बुधवार</div>
+<div class="card">गुरुवार</div>
+<div class="card">शुक्रवार</div>
+<div class="card">शनिवार</div>
+<div class="card">रविवार</div>
 
 </div>
+</div>
 
-
-<!-- Hindi Months -->
 
 <div id="hindiMonths" class="lesson">
 
-<h2>🗓️ वर्ष के महीने</h2>
+<h2>🗓️ महीने</h2>
 
-<div class="card-grid">
+<div class="grid">
 
-<div class="item">जनवरी</div>
-<div class="item">फरवरी</div>
-<div class="item">मार्च</div>
-<div class="item">अप्रैल</div>
-<div class="item">मई</div>
-<div class="item">जून</div>
-<div class="item">जुलाई</div>
-<div class="item">अगस्त</div>
-<div class="item">सितंबर</div>
-<div class="item">अक्टूबर</div>
-<div class="item">नवंबर</div>
-<div class="item">दिसंबर</div>
-
-</div>
+<div class="card">जनवरी</div>
+<div class="card">फरवरी</div>
+<div class="card">मार्च</div>
+<div class="card">अप्रैल</div>
+<div class="card">मई</div>
+<div class="card">जून</div>
+<div class="card">जुलाई</div>
+<div class="card">अगस्त</div>
+<div class="card">सितंबर</div>
+<div class="card">अक्टूबर</div>
+<div class="card">नवंबर</div>
+<div class="card">दिसंबर</div>
 
 </div>
+</div>
 
 
-<!-- Hindi Questions -->
+<div id="hindiQuiz" class="lesson">
 
-<div id="hindiQuestions" class="lesson">
+<h2>❓ Hindi Quiz / हिंदी प्रश्न</h2>
 
-<h2>❓ Hindi Practice / हिंदी अभ्यास</h2>
-
-<div id="hindiQuestionArea"></div>
+<div id="hindiQuizBox" class="quizBox"></div>
 
 </div>
 
@@ -1609,254 +1304,323 @@ Class 1 में पहले 1 से 20 तक गिनती अच्छ�
 
 
 <footer>
-🌈 Class 1 Kids Learning Hub 🌈<br>
-सीखो • अभ्यास करो • आगे बढ़ो ⭐
+🌟 Class 1 Kids Learning 🌟<br>
+📚 पढ़ो • सीखो • खेलो • आगे बढ़ो 📚
 </footer>
 
 
 <script>
 
-/* ==========================================
-   SUBJECT OPEN SYSTEM
-========================================== */
+/* ======================================
+   SUBJECT OPEN
+====================================== */
 
-function openSubject(subjectId){
+function openSubject(id){
 
-    document.querySelectorAll(".subject").forEach(function(subject){
-        subject.classList.remove("active");
-    });
+ var subjects=document.querySelectorAll(".subject");
 
-    const selected=document.getElementById(subjectId);
+ subjects.forEach(function(subject){
+   subject.classList.remove("show");
+ });
 
-    if(selected){
-        selected.classList.add("active");
-        selected.scrollIntoView({
-            behavior:"smooth",
-            block:"start"
-        });
-    }
+ var selected=document.getElementById(id);
+
+ if(selected){
+   selected.classList.add("show");
+
+   window.scrollTo({
+     top:selected.offsetTop-10,
+     behavior:"smooth"
+   });
+ }
 }
 
 
-/* ==========================================
-   LESSON OPEN SYSTEM
-========================================== */
+/* ======================================
+   LESSON OPEN
+====================================== */
 
-function openLesson(lessonId){
+function openLesson(id){
 
-    document.querySelectorAll(".lesson").forEach(function(lesson){
-        lesson.classList.remove("active");
-    });
+ var lessons=document.querySelectorAll(".lesson");
 
-    const selected=document.getElementById(lessonId);
+ lessons.forEach(function(lesson){
+   lesson.classList.remove("show");
+ });
 
-    if(selected){
-        selected.classList.add("active");
+ var selected=document.getElementById(id);
 
-        setTimeout(function(){
-            selected.scrollIntoView({
-                behavior:"smooth",
-                block:"start"
-            });
-        },100);
-    }
+ if(selected){
+
+   selected.classList.add("show");
+
+   setTimeout(function(){
+
+     selected.scrollIntoView({
+       behavior:"smooth",
+       block:"start"
+     });
+
+   },100);
+ }
 }
 
 
-/* ==========================================
-   MATH TABLES 1-50
-   SIMPLE FORMAT
-========================================== */
+/* ======================================
+   ENGLISH NUMBERS 1-200
+====================================== */
 
-const tablesArea=document.getElementById("tablesArea");
-
-if(tablesArea){
-
-    for(let n=1;n<=50;n++){
-
-        let html=`
-        <div class="example">
-        <h3>Table ${n} / ${n} का पहाड़ा</h3>
-        `;
-
-        for(let i=1;i<=10;i++){
-
-            html+=`${n} × ${i} = ${n*i}<br>`;
-
-        }
-
-        html+=`</div>`;
-
-        tablesArea.innerHTML+=html;
-    }
-}
-
-
-/* ==========================================
-   ENGLISH QUESTIONS
-   50 QUESTIONS
-========================================== */
-
-const englishQuestions=[
-
-["What is A for?","Apple 🍎"],
-["What is B for?","Ball ⚽"],
-["What is C for?","Cat 🐱"],
-["What is D for?","Dog 🐶"],
-["What is E for?","Elephant 🐘"],
-["What is F for?","Fish 🐟"],
-["What is G for?","Grapes 🍇"],
-["What is H for?","House 🏠"],
-["What is I for?","Ice Cream 🍦"],
-["What is J for?","Juice 🧃"],
-["What is K for?","Kite 🪁"],
-["What is L for?","Lion 🦁"],
-["What is M for?","Monkey 🐒"],
-["What is N for?","Nest 🪺"],
-["What is O for?","Orange 🍊"],
-["What is P for?","Parrot 🦜"],
-["What is Q for?","Queen 👑"],
-["What is R for?","Rabbit 🐇"],
-["What is S for?","Sun ☀️"],
-["What is T for?","Tree 🌳"],
-["What is U for?","Umbrella ☂️"],
-["What is V for?","Van 🚐"],
-["What is W for?","Watch ⌚"],
-["What is Y for?","Yo-yo 🪀"],
-["What is Z for?","Zebra 🦓"],
-["How many vowels are there?","Five"],
-["Name the vowels.","A, E, I, O, U"],
-["What is 1 in English?","One"],
-["What is 2 in English?","Two"],
-["What is 3 in English?","Three"],
-["What is 4 in English?","Four"],
-["What is 5 in English?","Five"],
-["What is 10 in English?","Ten"],
-["What colour is grass?","Green"],
-["What colour is the sky?","Blue"],
-["What is Apple in Hindi?","सेब"],
-["What is Mango in Hindi?","आम"],
-["What is Dog in Hindi?","कुत्ता"],
-["What is Cat in Hindi?","बिल्ली"],
-["What is Father in Hindi?","पिता"],
-["What is Mother in Hindi?","माता"],
-["How many days are in a week?","Seven"],
-["What comes after Monday?","Tuesday"],
-["What comes after Tuesday?","Wednesday"],
-["What comes before Friday?","Thursday"],
-["How many months are in a year?","Twelve"],
-["What is the first month?","January"],
-["What is the last month?","December"],
-["Complete: I am a _____.","boy / girl"],
-["Complete: This is a _____.","book / pen"]
-
+var ones=[
+"Zero","One","Two","Three","Four",
+"Five","Six","Seven","Eight","Nine",
+"Ten","Eleven","Twelve","Thirteen","Fourteen",
+"Fifteen","Sixteen","Seventeen","Eighteen","Nineteen"
 ];
 
-function makeQuestions(areaId,questions){
+var tens=[
+"","","Twenty","Thirty","Forty",
+"Fifty","Sixty","Seventy","Eighty","Ninety"
+];
 
-    const area=document.getElementById(areaId);
+function numberName(n){
 
-    if(!area) return;
+ if(n<20) return ones[n];
 
-    area.innerHTML="";
+ if(n<100){
 
-    questions.forEach(function(q,index){
+   var t=Math.floor(n/10);
+   var r=n%10;
 
-        const div=document.createElement("div");
+   return tens[t]+(r ? "-"+ones[r] : "");
+ }
 
-        div.className="question";
+ if(n===100) return "One Hundred";
 
-        div.innerHTML=`
-        <b>Q${index+1}. ${q[0]}</b>
-        <br><br>
+ if(n<200){
 
-        <button class="answer-btn"
-        onclick="showAnswer(this)">
-        👀 Answer / उत्तर
-        </button>
+   var r=n-100;
 
-        <div class="answer">
-        <b>Answer / उत्तर:</b> ${q[1]}
-        </div>
-        `;
+   return "One Hundred"+(r ? " "+numberName(r) : "");
+ }
 
-        area.appendChild(div);
+ if(n===200) return "Two Hundred";
 
-    });
+ return n;
+}
 
+var engNumberList=document.getElementById("engNumberList");
+
+for(var i=1;i<=200;i++){
+
+ var e=document.createElement("div");
+
+ e.className="number";
+
+ e.innerHTML=i+"<br>"+numberName(i);
+
+ engNumberList.appendChild(e);
 }
 
 
-/* ==========================================
-   MATH QUESTIONS 50
-========================================== */
+/* ======================================
+   MATH COUNTING 1-200
+====================================== */
 
-const mathQuestions=[
+var mathNumberList=document.getElementById("mathNumberList");
 
+for(var n=1;n<=200;n++){
+
+ var m=document.createElement("div");
+
+ m.className="number";
+
+ m.innerHTML=n;
+
+ mathNumberList.appendChild(m);
+}
+
+
+/* ======================================
+   HINDI NUMBERS
+====================================== */
+
+var hindiNumbers=[
+"एक","दो","तीन","चार","पाँच",
+"छह","सात","आठ","नौ","दस",
+"ग्यारह","बारह","तेरह","चौदह","पंद्रह",
+"सोलह","सत्रह","अठारह","उन्नीस","बीस",
+"इक्कीस","बाईस","तेईस","चौबीस","पच्चीस",
+"छब्बीस","सत्ताईस","अट्ठाईस","उनतीस","तीस",
+"इकतीस","बत्तीस","तैंतीस","चौंतीस","पैंतीस",
+"छत्तीस","सैंतीस","अड़तीस","उनतालीस","चालीस",
+"इकतालीस","बयालीस","तैंतालीस","चवालीस","पैंतालीस",
+"छियालीस","सैंतालीस","अड़तालीस","उनचास","पचास",
+"इक्यावन","बावन","तिरेपन","चौवन","पचपन",
+"छप्पन","सत्तावन","अट्ठावन","उनसठ","साठ",
+"इकसठ","बासठ","तिरसठ","चौंसठ","पैंसठ",
+"छियासठ","सड़सठ","अड़सठ","उनहत्तर","सत्तर",
+"इकहत्तर","बहत्तर","तिहत्तर","चौहत्तर","पचहत्तर",
+"छिहत्तर","सतहत्तर","अठहत्तर","उनासी","अस्सी",
+"इक्यासी","बयासी","तिरासी","चौरासी","पचासी",
+"छियासी","सत्तासी","अट्ठासी","नवासी","नब्बे",
+"इक्यानवे","बानवे","तिरानवे","चौरानवे","पंचानवे",
+"छियानवे","सत्तानवे","अट्ठानवे","निन्यानवे","एक सौ"
+];
+
+var hindiNumberList=document.getElementById("hindiNumberList");
+
+for(var h=0;h<100;h++){
+
+ var hd=document.createElement("div");
+
+ hd.className="number";
+
+ hd.innerHTML=(h+1)+"<br>"+hindiNumbers[h];
+
+ hindiNumberList.appendChild(hd);
+}
+
+
+/* ======================================
+   TABLES 1-50
+====================================== */
+
+var tablesContainer=document.getElementById("tablesContainer");
+
+for(var t=1;t<=50;t++){
+
+ var box=document.createElement("div");
+
+ box.className="example";
+
+ var text="<b>Table "+t+" / "+t+" का पहाड़ा</b><br><br>";
+
+ for(var j=1;j<=10;j++){
+
+   text+=t+" × "+j+" = "+(t*j)+"<br>";
+
+ }
+
+ box.innerHTML=text;
+
+ tablesContainer.appendChild(box);
+}
+
+
+/* ======================================
+   QUIZ DATA
+====================================== */
+
+var englishQuiz=[
+["A is for?","Apple 🍎"],
+["B is for?","Ball ⚽"],
+["C is for?","Cat 🐱"],
+["D is for?","Dog 🐶"],
+["E is for?","Elephant 🐘"],
+["F is for?","Fish 🐟"],
+["G is for?","Grapes 🍇"],
+["H is for?","House 🏠"],
+["I is for?","Ice Cream 🍦"],
+["J is for?","Juice 🧃"],
+["K is for?","Kite 🪁"],
+["L is for?","Lion 🦁"],
+["M is for?","Monkey 🐒"],
+["N is for?","Nest 🪺"],
+["O is for?","Orange 🍊"],
+["P is for?","Parrot 🦜"],
+["Q is for?","Queen 👑"],
+["R is for?","Rabbit 🐇"],
+["S is for?","Sun ☀️"],
+["T is for?","Tree 🌳"],
+["How many vowels are there?","5"],
+["Which is a fruit?","Mango 🥭"],
+["Which is an animal?","Tiger 🐯"],
+["Which is a bird?","Parrot 🦜"],
+["What comes after 5?","6"],
+["What comes before 10?","9"],
+["How many days are in a week?","7"],
+["How many months are in a year?","12"],
+["Apple in Hindi?","सेब"],
+["Mango in Hindi?","आम"],
+["Dog in Hindi?","कुत्ता"],
+["Cat in Hindi?","बिल्ली"],
+["Sun in Hindi?","सूरज"],
+["Water in Hindi?","पानी"],
+["Red means?","लाल"],
+["Green means?","हरा"],
+["Blue means?","नीला"],
+["Mother means?","माता"],
+["Father means?","पिता"],
+["Brother means?","भाई"],
+["Sister means?","बहन"],
+["Eye means?","आँख"],
+["Hand means?","हाथ"],
+["Foot means?","पैर"],
+["Book means?","किताब"],
+["Pen means?","कलम"],
+["House means?","घर"],
+["School means?","स्कूल"],
+["What is the opposite of big?","Small"],
+["What is the opposite of hot?","Cold"]
+];
+
+
+var mathQuiz=[
 ["1 + 1 = ?","2"],
 ["2 + 2 = ?","4"],
 ["3 + 2 = ?","5"],
-["4 + 2 = ?","6"],
-["5 + 3 = ?","8"],
-["6 + 2 = ?","8"],
-["7 + 2 = ?","9"],
-["8 + 1 = ?","9"],
-["9 + 1 = ?","10"],
+["4 + 3 = ?","7"],
 ["5 + 5 = ?","10"],
-
+["6 + 2 = ?","8"],
+["7 + 3 = ?","10"],
+["8 + 4 = ?","12"],
+["9 + 5 = ?","14"],
+["10 + 10 = ?","20"],
+["12 + 3 = ?","15"],
+["15 + 5 = ?","20"],
+["20 + 10 = ?","30"],
+["25 + 5 = ?","30"],
+["30 + 20 = ?","50"],
 ["5 - 1 = ?","4"],
 ["6 - 2 = ?","4"],
 ["7 - 3 = ?","4"],
-["8 - 2 = ?","6"],
-["9 - 4 = ?","5"],
+["8 - 4 = ?","4"],
 ["10 - 5 = ?","5"],
 ["10 - 2 = ?","8"],
-["8 - 3 = ?","5"],
-["7 - 2 = ?","5"],
-["6 - 1 = ?","5"],
-
+["12 - 4 = ?","8"],
+["15 - 5 = ?","10"],
+["20 - 10 = ?","10"],
+["25 - 5 = ?","20"],
 ["What comes after 5?","6"],
-["What comes after 9?","10"],
-["What comes after 19?","20"],
 ["What comes before 5?","4"],
-["What comes before 10?","9"],
-["What comes before 20?","19"],
-["What comes between 4 and 6?","5"],
-["What comes between 9 and 11?","10"],
-["What comes between 14 and 16?","15"],
-["What comes between 19 and 21?","20"],
-
+["Between 4 and 6?","5"],
 ["Which is greater: 8 or 5?","8"],
 ["Which is smaller: 3 or 7?","3"],
-["Which is greater: 10 or 6?","10"],
-["Which is smaller: 2 or 9?","2"],
 ["5 = ?","5"],
-["10 = ?","10"],
 ["How many sides does a triangle have?","3"],
 ["How many sides does a square have?","4"],
-["How many days are in a week?","7"],
-["How many months are in a year?","12"],
-
-["10 + 10 = ?","20"],
-["20 + 10 = ?","30"],
-["30 + 10 = ?","40"],
-["40 + 10 = ?","50"],
-["50 - 10 = ?","40"],
-["40 - 10 = ?","30"],
-["30 - 10 = ?","20"],
-["20 - 10 = ?","10"],
-["How many hours are in a day?","24"],
-["How many minutes are in an hour?","60"]
-
+["How many sides does a rectangle have?","4"],
+["How many days in a week?","7"],
+["How many months in a year?","12"],
+["1 hour = ? minutes","60"],
+["1 day = ? hours","24"],
+["1 week = ? days","7"],
+["1 year = ? months","12"],
+["₹5 + ₹5 = ?","₹10"],
+["₹10 + ₹20 = ?","₹30"],
+["10 tens = ?","100"],
+["25 में tens कौन है?","2"],
+["25 में ones कौन है?","5"],
+["47 में tens कौन है?","4"],
+["47 में ones कौन है?","7"],
+["Which is greater: 20 or 10?","20"],
+["Which is smaller: 4 or 9?","4"],
+["10 + 5 = ?","15"],
+["20 - 5 = ?","15"]
 ];
 
 
-/* ==========================================
-   HINDI QUESTIONS 50
-========================================== */
-
-const hindiQuestions=[
-
+var hindiQuiz=[
 ["अ से क्या होता है?","अनार 🍎"],
 ["आ से क्या होता है?","आम 🥭"],
 ["इ से क्या होता है?","इमली"],
@@ -1867,177 +1631,314 @@ const hindiQuestions=[
 ["ऐ से क्या होता है?","ऐनक"],
 ["ओ से क्या होता है?","ओखली"],
 ["औ से क्या होता है?","औरत"],
-
 ["क से क्या होता है?","कबूतर"],
-["ख से क्या होता है?","खरगोश 🐇"],
+["ख से क्या होता है?","खरगोश"],
 ["ग से क्या होता है?","गमला"],
-["च से क्या होता है?","चिड़िया 🐦"],
-["छ से क्या होता है?","छाता ☂️"],
+["घ से क्या होता है?","घर"],
+["च से क्या होता है?","चिड़िया"],
+["छ से क्या होता है?","छाता"],
 ["ज से क्या होता है?","जहाज"],
 ["झ से क्या होता है?","झरना"],
-["ट से क्या होता है?","टमाटर 🍅"],
+["ट से क्या होता है?","टमाटर"],
+["ठ से क्या होता है?","ठेला"],
 ["ड से क्या होता है?","डमरू"],
 ["ढ से क्या होता है?","ढोल"],
-
+["त से क्या होता है?","तोता"],
+["थ से क्या होता है?","थाली"],
+["द से क्या होता है?","दाँत"],
+["ध से क्या होता है?","धन"],
+["न से क्या होता है?","नाक"],
+["प से क्या होता है?","पतंग"],
+["फ से क्या होता है?","फूल"],
+["ब से क्या होता है?","बतख"],
+["भ से क्या होता है?","भालू"],
+["म से क्या होता है?","मछली"],
+["य से क्या होता है?","योग"],
+["र से क्या होता है?","रंग"],
+["ल से क्या होता है?","लड्डू"],
+["व से क्या होता है?","वाहन"],
+["श से क्या होता है?","शेर"],
+["स से क्या होता है?","साँप"],
+["ह से क्या होता है?","हाथी"],
 ["1 को हिंदी में क्या कहते हैं?","एक"],
 ["2 को हिंदी में क्या कहते हैं?","दो"],
 ["3 को हिंदी में क्या कहते हैं?","तीन"],
-["4 को हिंदी में क्या कहते हैं?","चार"],
 ["5 को हिंदी में क्या कहते हैं?","पाँच"],
-["6 को हिंदी में क्या कहते हैं?","छह"],
-["7 को हिंदी में क्या कहते हैं?","सात"],
-["8 को हिंदी में क्या कहते हैं?","आठ"],
-["9 को हिंदी में क्या कहते हैं?","नौ"],
 ["10 को हिंदी में क्या कहते हैं?","दस"],
-
-["सेब किसका नाम है?","फल 🍎"],
-["आम किसका नाम है?","फल 🥭"],
+["सेब क्या है?","फल 🍎"],
 ["आलू क्या है?","सब्जी 🥔"],
-["गाजर क्या है?","सब्जी 🥕"],
-["गाय क्या है?","पशु 🐄"],
 ["मोर क्या है?","पक्षी 🦚"],
-["सोमवार के बाद कौन सा दिन आता है?","मंगलवार"],
-["रविवार के बाद कौन सा दिन आता है?","सोमवार"],
-["एक सप्ताह में कितने दिन होते हैं?","7"],
-["एक वर्ष में कितने महीने होते हैं?","12"],
-
-["लाल किसका नाम है?","रंग 🔴"],
-["नीला किसका नाम है?","रंग 🔵"],
-["हरा किसका नाम है?","रंग 🟢"],
-["पीला किसका नाम है?","रंग 🟡"],
-["माता कौन हैं?","परिवार का सदस्य"],
-["पिता कौन हैं?","परिवार का सदस्य"],
-["नाक किस अंग का नाम है?","शरीर का अंग 👃"],
-["आँख किस अंग का नाम है?","शरीर का अंग 👁️"],
-["घर क्या है?","रहने का स्थान 🏠"],
-["किताब किस काम आती है?","पढ़ने के लिए 📚"]
-
+["गाय क्या है?","पशु 🐄"],
+["एक सप्ताह में कितने दिन?","7"],
+["एक वर्ष में कितने महीने?","12"]
 ];
 
 
-/* ==========================================
-   ANSWER + CLAP SOUND
-========================================== */
+/* ======================================
+   QUIZ ENGINE
+====================================== */
 
-function showAnswer(button){
+var quizState={
+ english:{questions:englishQuiz,index:0,score:0},
+ math:{questions:mathQuiz,index:0,score:0},
+ hindi:{questions:hindiQuiz,index:0,score:0}
+};
 
-    const answer=button.nextElementSibling;
 
-    if(answer.style.display==="block"){
+function makeOptions(correct,index){
 
-        answer.style.display="none";
-        button.innerHTML="👀 Answer / उत्तर";
+ var options=[correct];
 
-    }else{
+ var extra=[
+ "Apple 🍎",
+ "5",
+ "7",
+ "10",
+ "आम 🥭",
+ "कुत्ता 🐶",
+ "3",
+ "12",
+ "लाल",
+ "20"
+ ];
 
-        answer.style.display="block";
-        button.innerHTML="👏 Correct! / सही उत्तर";
+ for(var i=0;i<extra.length;i++){
 
-        playClap();
+   if(options.indexOf(extra[i])===-1){
+      options.push(extra[i]);
+   }
 
-    }
+   if(options.length>=4) break;
+ }
+
+ var shift=index%options.length;
+
+ var shuffled=[];
+
+ for(var j=0;j<options.length;j++){
+   shuffled.push(options[(j+shift)%options.length]);
+ }
+
+ return shuffled;
+}
+
+
+function showQuiz(type,boxId){
+
+ var state=quizState[type];
+
+ var box=document.getElementById(boxId);
+
+ var total=state.questions.length;
+
+ if(state.index>=total){
+
+   box.innerHTML=
+   "<div class='picture'>🏆🎉👏</div>"+
+   "<div class='result correct'>"+
+   "Quiz Complete! / प्रश्न पूरे हो गए!<br><br>"+
+   "Score / अंक: "+state.score+" / "+total+
+   "</div>"+
+   "<button class='nextBtn' onclick=\"restartQuiz('"+type+"','"+boxId+"')\">"+
+   "🔄 Restart Quiz / फिर से शुरू करें"+
+   "</button>";
+
+   return;
+ }
+
+ var q=state.questions[state.index];
+
+ var html=
+ "<div class='progress'>"+
+ "Question / प्रश्न "+(state.index+1)+" / "+total+
+ "</div>";
+
+ html+=
+ "<div class='quizQuestion'>"+
+ q[0]+
+ "</div>";
+
+ var options=makeOptions(q[1],state.index);
+
+ for(var i=0;i<options.length;i++){
+
+   html+=
+   "<button class='option' onclick=\"checkAnswer('"+
+   type+"','"+boxId+"','"+escapeQuotes(options[i])+
+   "',this)\">"+
+   options[i]+
+   "</button>";
+ }
+
+ html+="<div id='"+type+"Result' class='result'></div>";
+
+ html+=
+ "<button class='nextBtn' id='"+type+"Next' "+
+ "style='display:none' "+
+ "onclick=\"nextQuestion('"+type+"','"+boxId+"')\">"+
+ "➡️ Next Question / अगला प्रश्न"+
+ "</button>";
+
+ box.innerHTML=html;
+}
+
+
+function escapeQuotes(text){
+
+ return text
+ .replace(/\\/g,"\\\\")
+ .replace(/'/g,"\\'")
+ .replace(/"/g,"&quot;");
 
 }
 
 
-/* ==========================================
-   CLAP SOUND USING WEB AUDIO
-   No external sound file required
-========================================== */
+function checkAnswer(type,boxId,answer,button){
 
-function playClap(){
+ var state=quizState[type];
 
-    try{
+ var correct=state.questions[state.index][1];
 
-        const AudioContext=
-        window.AudioContext ||
-        window.webkitAudioContext;
+ var buttons=button.parentElement.querySelectorAll(".option");
 
-        if(!AudioContext) return;
+ buttons.forEach(function(btn){
+   btn.disabled=true;
+ });
 
-        const ctx=new AudioContext();
+ var result=document.getElementById(type+"Result");
 
-        const now=ctx.currentTime;
+ if(answer===correct){
 
-        for(let i=0;i<5;i++){
+   state.score++;
 
-            const osc=ctx.createOscillator();
-            const gain=ctx.createGain();
+   result.className="result correct";
 
-            osc.type="square";
+   result.innerHTML=
+   "🎉👏 Correct! सही उत्तर!<br>"+
+   "बहुत बढ़िया! शाबाश! ⭐";
 
-            osc.frequency.setValueAtTime(
-                700 + Math.random()*600,
-                now+i*0.09
-            );
+   clapSound();
 
-            gain.gain.setValueAtTime(
-                0.0001,
-                now+i*0.09
-            );
+ }else{
 
-            gain.gain.exponentialRampToValueAtTime(
-                0.15,
-                now+i*0.09+0.01
-            );
+   result.className="result wrong";
 
-            gain.gain.exponentialRampToValueAtTime(
-                0.0001,
-                now+i*0.09+0.06
-            );
+   result.innerHTML=
+   "😊 Try Again!<br>"+
+   "सही उत्तर / Correct Answer: <b>"+
+   correct+
+   "</b>";
 
-            osc.connect(gain);
-            gain.connect(ctx.destination);
+ }
 
-            osc.start(now+i*0.09);
-            osc.stop(now+i*0.09+0.07);
+ document.getElementById(type+"Next").style.display="block";
+}
 
-        }
 
-    }catch(e){
+function nextQuestion(type,boxId){
 
-        console.log("Sound unavailable");
+ quizState[type].index++;
 
-    }
+ showQuiz(type,boxId);
+}
+
+
+function restartQuiz(type,boxId){
+
+ quizState[type].index=0;
+ quizState[type].score=0;
+
+ showQuiz(type,boxId);
+}
+
+
+/* ======================================
+   CLAP SOUND
+====================================== */
+
+function clapSound(){
+
+ try{
+
+   var AudioContext=
+   window.AudioContext ||
+   window.webkitAudioContext;
+
+   if(!AudioContext){
+     alert("आपके browser में sound support नहीं है।");
+     return;
+   }
+
+   var audio=new AudioContext();
+
+   if(audio.state==="suspended"){
+     audio.resume();
+   }
+
+   for(var i=0;i<8;i++){
+
+     (function(i){
+
+       setTimeout(function(){
+
+         var osc=audio.createOscillator();
+         var gain=audio.createGain();
+
+         osc.type="square";
+
+         osc.frequency.value=
+         500+Math.random()*800;
+
+         gain.gain.setValueAtTime(
+           0.12,
+           audio.currentTime
+         );
+
+         gain.gain.exponentialRampToValueAtTime(
+           0.001,
+           audio.currentTime+0.08
+         );
+
+         osc.connect(gain);
+         gain.connect(audio.destination);
+
+         osc.start();
+
+         osc.stop(audio.currentTime+0.08);
+
+       },i*90);
+
+     })(i);
+
+   }
+
+ }catch(e){
+
+   console.log(e);
+
+ }
 
 }
 
 
-/* ==========================================
-   LOAD QUESTIONS
-========================================== */
+/* ======================================
+   START QUIZZES
+====================================== */
 
-makeQuestions(
-    "englishQuestionArea",
-    englishQuestions
+showQuiz(
+ "english",
+ "engQuizBox"
 );
 
-makeQuestions(
-    "mathQuestionArea",
-    mathQuestions
+showQuiz(
+ "math",
+ "mathQuizBox"
 );
 
-makeQuestions(
-    "hindiQuestionArea",
-    hindiQuestions
+showQuiz(
+ "hindi",
+ "hindiQuizBox"
 );
-
-
-/* ==========================================
-   INITIAL STATE
-========================================== */
-
-document.addEventListener("DOMContentLoaded",function(){
-
-    document.querySelectorAll(".subject").forEach(function(s){
-        s.classList.remove("active");
-    });
-
-    document.querySelectorAll(".lesson").forEach(function(l){
-        l.classList.remove("active");
-    });
-
-});
 
 </script>
 
