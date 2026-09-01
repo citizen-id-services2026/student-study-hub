@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -22,39 +21,31 @@ body{
     line-height:1.6;
 }
 
-/* =========================
-HEADER
-========================= */
-
 header{
-    background:linear-gradient(135deg,#ff6b6b,#ff9f43,#feca57,#48dbfb,#5f27cd);
+    background:linear-gradient(
+        135deg,
+        #ff6b6b,
+        #ff9f43,
+        #feca57,
+        #48dbfb,
+        #5f27cd
+    );
     background-size:300% 300%;
-    animation:gradientMove 8s ease infinite;
+    animation:moveGradient 8s ease infinite;
     color:white;
     text-align:center;
-    padding:28px 12px;
-    border-bottom-left-radius:35px;
-    border-bottom-right-radius:35px;
+    padding:25px 10px 30px;
+    border-radius:0 0 35px 35px;
 }
 
-@keyframes gradientMove{
-
-    0%{
-        background-position:0% 50%;
-    }
-
-    50%{
-        background-position:100% 50%;
-    }
-
-    100%{
-        background-position:0% 50%;
-    }
-
+@keyframes moveGradient{
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
 }
 
-header .logo{
-    font-size:55px;
+.logo{
+    font-size:52px;
 }
 
 header h1{
@@ -63,23 +54,28 @@ header h1{
 }
 
 header p{
-    font-size:17px;
     font-weight:bold;
 }
 
-/* =========================
-CONTAINER
-========================= */
+.sound-control{
+    margin-top:12px;
+}
+
+.sound-control button{
+    border:0;
+    border-radius:30px;
+    padding:10px 18px;
+    background:white;
+    color:#5f27cd;
+    font-weight:bold;
+    cursor:pointer;
+}
 
 .container{
     width:94%;
-    max-width:1050px;
+    max-width:1100px;
     margin:20px auto;
 }
-
-/* =========================
-WELCOME
-========================= */
 
 .welcome{
     background:white;
@@ -91,16 +87,11 @@ WELCOME
 }
 
 .welcome .big{
-    font-size:60px;
+    font-size:58px;
 }
 
 .welcome h2{
     color:#ff6b6b;
-    font-size:27px;
-}
-
-.welcome p{
-    margin:7px 0;
 }
 
 .start-btn{
@@ -113,23 +104,14 @@ WELCOME
     font-size:18px;
     font-weight:bold;
     cursor:pointer;
-    box-shadow:0 6px 15px rgba(255,107,107,.35);
 }
-
-.start-btn:hover{
-    transform:scale(1.04);
-}
-
-/* =========================
-PROGRESS
-========================= */
 
 .progress-card{
     background:white;
     padding:18px;
     border-radius:20px;
-    margin-bottom:20px;
     box-shadow:0 5px 18px rgba(0,0,0,.08);
+    margin-bottom:20px;
 }
 
 .progress-top{
@@ -149,13 +131,15 @@ PROGRESS
 .progress-fill{
     height:100%;
     width:0%;
-    background:linear-gradient(90deg,#ff6b6b,#feca57,#48dbfb,#5f27cd);
+    background:linear-gradient(
+        90deg,
+        #ff6b6b,
+        #feca57,
+        #48dbfb,
+        #5f27cd
+    );
     transition:.5s;
 }
-
-/* =========================
-TOPICS
-========================= */
 
 #topicsSection{
     display:none;
@@ -164,7 +148,6 @@ TOPICS
 .section-title{
     text-align:center;
     color:#5f27cd;
-    font-size:25px;
     margin:15px 0;
 }
 
@@ -182,7 +165,6 @@ TOPICS
     cursor:pointer;
     transition:.25s;
     border-top:7px solid #48dbfb;
-    overflow:hidden;
 }
 
 .topic-card:nth-child(3n+2){
@@ -194,7 +176,7 @@ TOPICS
 }
 
 .topic-card:hover{
-    transform:translateY(-5px) rotate(.5deg);
+    transform:translateY(-5px);
 }
 
 .topic-image{
@@ -202,21 +184,19 @@ TOPICS
     border-radius:17px;
     background:linear-gradient(135deg,#eff6ff,#fff7ed);
     display:flex;
-    align-items:center;
     justify-content:center;
-    font-size:58px;
-    margin-bottom:12px;
+    align-items:center;
+    font-size:60px;
+    margin-bottom:10px;
 }
 
 .topic-card h3{
     color:#5f27cd;
-    font-size:17px;
 }
 
 .topic-card p{
-    font-size:13px;
     color:#64748b;
-    min-height:42px;
+    font-size:13px;
 }
 
 .learn-btn{
@@ -230,10 +210,6 @@ TOPICS
     font-weight:bold;
     cursor:pointer;
 }
-
-/* =========================
-LESSON
-========================= */
 
 #lessonSection{
     display:none;
@@ -260,22 +236,17 @@ LESSON
     justify-content:center;
     align-items:center;
     font-size:80px;
-    box-shadow:inset 0 0 20px rgba(0,0,0,.05);
 }
 
 .lesson-title{
     color:#5f27cd;
-    font-size:27px;
     margin-top:12px;
+    font-size:27px;
 }
-
-/* =========================
-LEARNING BOXES
-========================= */
 
 .box{
     margin-top:16px;
-    padding:17px;
+    padding:18px;
     border-radius:17px;
 }
 
@@ -294,91 +265,80 @@ LEARNING BOXES
     border-left:7px solid #22c55e;
 }
 
-.speak-box{
-    background:#f5f3ff;
-    border-left:7px solid #7c3aed;
-}
-
 .practice-box{
     background:#fefce8;
     border-left:7px solid #eab308;
 }
 
+.speak-box{
+    background:#f5f3ff;
+    border-left:7px solid #7c3aed;
+}
+
 .box h3{
-    margin-bottom:7px;
     color:#5f27cd;
+    margin-bottom:10px;
 }
 
-.example-line{
+.example{
+    background:white;
+    padding:10px;
     margin:7px 0;
-    font-size:16px;
+    border-radius:10px;
 }
-
-/* =========================
-SPEAK BUTTON
-========================= */
 
 .speak-btn{
     border:0;
     background:#7c3aed;
     color:white;
-    padding:10px 15px;
+    padding:10px 16px;
     border-radius:10px;
     cursor:pointer;
     font-weight:bold;
-    margin-top:8px;
+    margin-top:10px;
 }
-
-/* =========================
-COUNTING
-========================= */
 
 .counting-grid{
     display:grid;
     grid-template-columns:repeat(5,1fr);
     gap:8px;
-    margin-top:15px;
 }
 
 .number-card{
     background:linear-gradient(135deg,#eff6ff,#fdf4ff);
     border-radius:12px;
-    padding:9px 4px;
+    padding:8px 3px;
     text-align:center;
     border:2px solid #dbeafe;
 }
 
 .number-card b{
     display:block;
-    font-size:20px;
     color:#5f27cd;
+    font-size:20px;
 }
 
 .number-card span{
     display:block;
-    font-size:12px;
     font-weight:bold;
+    font-size:12px;
 }
 
 .number-card small{
     display:block;
-    font-size:11px;
     color:#64748b;
+    font-size:10px;
 }
 
 .number-card button{
     border:0;
     background:#48dbfb;
-    border-radius:50%;
     width:30px;
     height:30px;
+    border-radius:50%;
     cursor:pointer;
     margin-top:5px;
 }
-
-/* =========================
-QUIZ
-========================= */
 
 .quiz{
     margin-top:20px;
@@ -390,7 +350,6 @@ QUIZ
 
 .quiz h3{
     color:#5f27cd;
-    margin-bottom:10px;
 }
 
 .option{
@@ -405,10 +364,6 @@ QUIZ
     font-size:15px;
 }
 
-.option:hover{
-    background:#f0f9ff;
-}
-
 .option.correct{
     background:#bbf7d0;
     border-color:#16a34a;
@@ -420,14 +375,10 @@ QUIZ
 }
 
 .result{
-    font-size:18px;
+    font-size:19px;
     font-weight:bold;
     margin-top:10px;
 }
-
-/* =========================
-NAVIGATION
-========================= */
 
 .navigation{
     display:flex;
@@ -443,7 +394,6 @@ NAVIGATION
     color:white;
     font-weight:bold;
     cursor:pointer;
-    font-size:15px;
 }
 
 .prev{
@@ -465,26 +415,22 @@ NAVIGATION
     cursor:pointer;
 }
 
-/* =========================
-COMPLETE
-========================= */
-
 .complete{
     margin-top:20px;
     text-align:center;
     padding:25px;
     border-radius:20px;
-    background:linear-gradient(135deg,#dcfce7,#fef9c3,#fce7f3);
-    font-weight:bold;
+    background:linear-gradient(
+        135deg,
+        #dcfce7,
+        #fef9c3,
+        #fce7f3
+    );
 }
 
 .complete .emoji{
     font-size:55px;
 }
-
-/* =========================
-FOOTER
-========================= */
 
 footer{
     margin-top:35px;
@@ -493,10 +439,6 @@ footer{
     color:white;
     background:#111827;
 }
-
-/* =========================
-MOBILE
-========================= */
 
 @media(max-width:800px){
 
@@ -512,24 +454,12 @@ MOBILE
         font-size:24px;
     }
 
-    header .logo{
-        font-size:45px;
-    }
-
     .topic-grid{
         grid-template-columns:1fr;
     }
 
     .counting-grid{
         grid-template-columns:repeat(3,1fr);
-    }
-
-    .lesson{
-        padding:15px;
-    }
-
-    .lesson-title{
-        font-size:23px;
     }
 
     .navigation{
@@ -539,15 +469,9 @@ MOBILE
 }
 
 </style>
-
 </head>
 
 <body>
-
-
-<!-- =========================
-HEADER
-========================= -->
 
 <header>
 
@@ -559,15 +483,18 @@ HEADER
 
 <p>🇬🇧 English + 🇮🇳 हिंदी | Zero से सीखें</p>
 
+<div class="sound-control">
+
+<button onclick="toggleSound()" id="soundButton">
+🔊 Sound ON
+</button>
+
+</div>
+
 </header>
 
 
 <div class="container">
-
-
-<!-- =========================
-WELCOME
-========================= -->
 
 <div class="welcome">
 
@@ -576,11 +503,11 @@ WELCOME
 <h2>Welcome Little Learners! 🎉</h2>
 
 <p>
-बच्चों के लिए मजेदार और आसान English Course
+बच्चों के लिए आसान, colourful और मजेदार English Course
 </p>
 
 <p>
-<strong>Learn 📖 → Speak 🗣️ → Practice ✍️ → Quiz ⭐</strong>
+📖 Learn → 🗣️ Speak → ✍️ Practice → ⭐ Quiz
 </p>
 
 <button class="start-btn" onclick="showTopics()">
@@ -589,10 +516,6 @@ WELCOME
 
 </div>
 
-
-<!-- =========================
-PROGRESS
-========================= -->
 
 <div class="progress-card">
 
@@ -615,10 +538,6 @@ PROGRESS
 </div>
 
 
-<!-- =========================
-TOPICS
-========================= -->
-
 <section id="topicsSection">
 
 <h2 class="section-title">
@@ -629,10 +548,6 @@ TOPICS
 
 </section>
 
-
-<!-- =========================
-LESSON
-========================= -->
 
 <section id="lessonSection">
 
@@ -691,20 +606,28 @@ Next ➡️
 <script>
 
 /* =====================================================
-LESSON DATA
+SOUND SETTING
 ===================================================== */
 
-const lessons = [
+let soundEnabled=true;
+
+
+/* =====================================================
+LESSONS
+===================================================== */
+
+const lessons=[
 
 {
 title:"Noun — संज्ञा",
-image:"👦📚🏫🐶",
-description:"Person, Place, Animal या Thing का नाम",
+image:"👦👧🐶🏫📚",
+description:"Person, Place, Animal और Thing के नाम",
+
 content:`
 
 <div class="box hindi-box">
 
-<h3>🇮🇳 आसान हिंदी में</h3>
+<h3>🇮🇳 आसान हिंदी</h3>
 
 किसी व्यक्ति, स्थान, जानवर या वस्तु के नाम को
 <b>Noun (संज्ञा)</b> कहते हैं।
@@ -713,7 +636,7 @@ content:`
 
 <div class="box english-box">
 
-<h3>🇬🇧 English</h3>
+<h3>🇬🇧 English Definition</h3>
 
 A noun is the name of a person, place, animal or thing.
 
@@ -721,13 +644,44 @@ A noun is the name of a person, place, animal or thing.
 
 <div class="box example-box">
 
-<h3>🌟 Examples / उदाहरण</h3>
+<h3>🌟 20+ Examples</h3>
 
-<div class="example-line">👦 Boy = लड़का</div>
-<div class="example-line">👧 Girl = लड़की</div>
-<div class="example-line">🏫 School = विद्यालय</div>
-<div class="example-line">🐶 Dog = कुत्ता</div>
-<div class="example-line">📖 Book = किताब</div>
+<div class="example">👦 Boy = लड़का</div>
+<div class="example">👧 Girl = लड़की</div>
+<div class="example">👨 Man = आदमी</div>
+<div class="example">👩 Woman = महिला</div>
+<div class="example">👨‍🏫 Teacher = शिक्षक</div>
+<div class="example">👨‍⚕️ Doctor = डॉक्टर</div>
+<div class="example">🏫 School = विद्यालय</div>
+<div class="example">🏠 House = घर</div>
+<div class="example">🏥 Hospital = अस्पताल</div>
+<div class="example">🐶 Dog = कुत्ता</div>
+<div class="example">🐱 Cat = बिल्ली</div>
+<div class="example">🦁 Lion = शेर</div>
+<div class="example">🐘 Elephant = हाथी</div>
+<div class="example">🍎 Apple = सेब</div>
+<div class="example">🥭 Mango = आम</div>
+<div class="example">📖 Book = किताब</div>
+<div class="example">✏️ Pencil = पेंसिल</div>
+<div class="example">🎒 Bag = बैग</div>
+<div class="example">🪑 Chair = कुर्सी</div>
+<div class="example">🚗 Car = कार</div>
+
+</div>
+
+<div class="box practice-box">
+
+<h3>✍️ Practice</h3>
+
+इनमें Noun पहचानो:
+
+<br><br>
+
+1. Boy<br>
+2. Run<br>
+3. School<br>
+4. Dog<br>
+5. Eat
 
 </div>
 
@@ -738,9 +692,15 @@ A noun is the name of a person, place, animal or thing.
 This is a book.<br>
 यह एक किताब है।
 
+<br><br>
+
+This is a dog.<br>
+यह एक कुत्ता है।
+
 <br>
 
-<button class="speak-btn" onclick="speak('This is a book')">
+<button class="speak-btn"
+onclick="speak('This is a book. This is a dog.')">
 🔊 Listen / सुनो
 </button>
 
@@ -752,19 +712,21 @@ This is a book.<br>
 title:"Pronoun — सर्वनाम",
 image:"👦👧🧒",
 description:"Noun की जगह आने वाले शब्द",
+
 content:`
 
 <div class="box hindi-box">
 
 <h3>🇮🇳 हिंदी</h3>
 
-Noun की जगह प्रयोग होने वाले शब्द को Pronoun कहते हैं।
+Noun की जगह प्रयोग होने वाले शब्द को
+<b>Pronoun</b> कहते हैं।
 
 </div>
 
 <div class="box example-box">
 
-<h3>🌟 Examples</h3>
+<h3>🌟 Pronouns</h3>
 
 I = मैं<br>
 You = तुम / आप<br>
@@ -776,20 +738,52 @@ They = वे
 
 </div>
 
+<div class="box example-box">
+
+<h3>📝 Sentence Examples</h3>
+
+<div class="example">
+I am a boy.<br>
+मैं एक लड़का हूँ।
+</div>
+
+<div class="example">
+You are my friend.<br>
+तुम मेरे दोस्त हो।
+</div>
+
+<div class="example">
+He is a boy.<br>
+वह लड़का है।
+</div>
+
+<div class="example">
+She is a girl.<br>
+वह लड़की है।
+</div>
+
+<div class="example">
+It is a ball.<br>
+यह एक गेंद है।
+</div>
+
+<div class="example">
+We are students.<br>
+हम विद्यार्थी हैं।
+</div>
+
+<div class="example">
+They are friends.<br>
+वे दोस्त हैं।
+</div>
+
+</div>
+
 <div class="box speak-box">
 
-Ram is a boy.<br>
-He is a boy.
-
-<br><br>
-
-राम एक लड़का है।<br>
-वह एक लड़का है।
-
-<br>
-
-<button class="speak-btn" onclick="speak('He is a boy')">
-🔊 Listen
+<button class="speak-btn"
+onclick="speak('I am a boy. She is a girl. He is a boy. We are students.')">
+🔊 Listen / सुनो
 </button>
 
 </div>
@@ -800,32 +794,74 @@ He is a boy.
 title:"Verb — क्रिया",
 image:"🏃🍎📖✍️",
 description:"काम बताने वाले शब्द",
+
 content:`
 
 <div class="box hindi-box">
 
-<h3>🇮🇳 हिंदी</h3>
-
-किसी काम को बताने वाले शब्द को Verb कहते हैं।
+किसी काम को बताने वाले शब्द को
+<b>Verb</b> कहते हैं।
 
 </div>
 
 <div class="box example-box">
 
+<h3>🏃 25 Action Words</h3>
+
 Run = दौड़ना<br>
+Walk = चलना<br>
+Jump = कूदना<br>
 Eat = खाना<br>
+Drink = पीना<br>
 Read = पढ़ना<br>
 Write = लिखना<br>
 Play = खेलना<br>
-Sleep = सोना
+Sleep = सोना<br>
+Sit = बैठना<br>
+Stand = खड़ा होना<br>
+Sing = गाना<br>
+Dance = नाचना<br>
+Swim = तैरना<br>
+Open = खोलना<br>
+Close = बंद करना<br>
+Come = आना<br>
+Go = जाना<br>
+Look = देखना<br>
+Listen = सुनना<br>
+Speak = बोलना<br>
+Laugh = हँसना<br>
+Cry = रोना<br>
+Clap = ताली बजाना<br>
+Smile = मुस्कुराना
 
 </div>
 
-<div class="box speak-box">
+<div class="box example-box">
 
-I run. = मैं दौड़ता हूँ।<br>
-I read. = मैं पढ़ता हूँ।<br>
-I play. = मैं खेलता हूँ।
+<h3>📝 Sentences</h3>
+
+I run.<br>
+मैं दौड़ता हूँ।
+
+<br><br>
+
+I eat food.<br>
+मैं खाना खाता हूँ।
+
+<br><br>
+
+I read a book.<br>
+मैं किताब पढ़ता हूँ।
+
+<br><br>
+
+I play football.<br>
+मैं फुटबॉल खेलता हूँ।
+
+<br><br>
+
+I write with a pencil.<br>
+मैं पेंसिल से लिखता हूँ।
 
 </div>
 `
@@ -835,20 +871,62 @@ I play. = मैं खेलता हूँ।
 title:"Adjective — विशेषण",
 image:"🍎🏠🐱⭐",
 description:"Noun की विशेषता बताने वाले शब्द",
+
 content:`
 
 <div class="box hindi-box">
 
-Noun की विशेषता बताने वाले शब्द को Adjective कहते हैं।
+Noun की विशेषता बताने वाले शब्द को
+<b>Adjective</b> कहते हैं।
 
 </div>
 
 <div class="box example-box">
 
-Good boy = अच्छा लड़का<br>
-Big house = बड़ा घर<br>
-Red apple = लाल सेब<br>
-Small cat = छोटी बिल्ली
+<h3>🌟 Many Examples</h3>
+
+Big = बड़ा<br>
+Small = छोटा<br>
+Tall = लंबा<br>
+Short = छोटा<br>
+Good = अच्छा<br>
+Bad = बुरा<br>
+Happy = खुश<br>
+Sad = उदास<br>
+Hot = गरम<br>
+Cold = ठंडा<br>
+Red = लाल<br>
+Blue = नीला<br>
+Green = हरा<br>
+Beautiful = सुंदर<br>
+Clean = साफ<br>
+Dirty = गंदा<br>
+Fast = तेज<br>
+Slow = धीमा
+
+</div>
+
+<div class="box example-box">
+
+<h3>📝 Sentences</h3>
+
+This is a big house.<br>
+यह बड़ा घर है।
+
+<br><br>
+
+This is a red apple.<br>
+यह लाल सेब है।
+
+<br><br>
+
+He is a good boy.<br>
+वह अच्छा लड़का है।
+
+<br><br>
+
+She is a happy girl.<br>
+वह खुश लड़की है।
 
 </div>
 `
@@ -858,21 +936,64 @@ Small cat = छोटी बिल्ली
 title:"Articles — A, An, The",
 image:"🔤📖",
 description:"A, An और The का प्रयोग",
+
 content:`
 
 <div class="box hindi-box">
 
-A, An और The को Articles कहते हैं।
+A, An और The को <b>Articles</b> कहते हैं।
+
+<br><br>
+
+A सामान्यतः consonant sound से पहले आता है।
+<br>
+An vowel sound से पहले आता है।
+<br>
+The किसी खास व्यक्ति या वस्तु के लिए आता है।
 
 </div>
 
 <div class="box example-box">
 
-A boy = एक लड़का<br>
-A book = एक किताब<br>
-An apple = एक सेब<br>
-An orange = एक संतरा<br>
-The sun = सूर्य
+<h3>🌟 A Examples</h3>
+
+A boy<br>
+A girl<br>
+A book<br>
+A pen<br>
+A cat<br>
+A dog<br>
+A car<br>
+A ball<br>
+A bag<br>
+A school
+
+</div>
+
+<div class="box example-box">
+
+<h3>🌟 An Examples</h3>
+
+An apple<br>
+An orange<br>
+An egg<br>
+An elephant<br>
+An umbrella<br>
+An ant<br>
+An ice cream
+
+</div>
+
+<div class="box example-box">
+
+<h3>🌟 The Examples</h3>
+
+The sun<br>
+The moon<br>
+The sky<br>
+The Earth<br>
+The school<br>
+The teacher
 
 </div>
 `
@@ -882,6 +1003,7 @@ The sun = सूर्य
 title:"Singular / Plural — एकवचन / बहुवचन",
 image:"🍎🍎📚",
 description:"एक और एक से अधिक",
+
 content:`
 
 <div class="box hindi-box">
@@ -893,10 +1015,28 @@ content:`
 
 <div class="box example-box">
 
+<h3>🌟 20 Examples</h3>
+
 One book → Two books<br>
+One pen → Two pens<br>
 One boy → Two boys<br>
+One girl → Two girls<br>
 One cat → Two cats<br>
-One apple → Two apples
+One dog → Two dogs<br>
+One apple → Two apples<br>
+One ball → Two balls<br>
+One bag → Two bags<br>
+One chair → Two chairs<br>
+One car → Two cars<br>
+One tree → Two trees<br>
+One flower → Two flowers<br>
+One cup → Two cups<br>
+One toy → Two toys<br>
+One egg → Two eggs<br>
+One bird → Two birds<br>
+One school → Two schools<br>
+One teacher → Two teachers<br>
+One student → Two students
 
 </div>
 `
@@ -906,15 +1046,31 @@ One apple → Two apples
 title:"Gender — लिंग",
 image:"👦👧👨👩",
 description:"Male और Female words",
+
 content:`
+
+<div class="box hindi-box">
+
+कुछ शब्द Male (पुल्लिंग) और Female (स्त्रीलिंग) को बताते हैं।
+
+</div>
 
 <div class="box example-box">
 
+<h3>🌟 Examples</h3>
+
 Boy → Girl<br>
 Man → Woman<br>
-King → Queen<br>
 Father → Mother<br>
-Brother → Sister
+Brother → Sister<br>
+Son → Daughter<br>
+King → Queen<br>
+Uncle → Aunt<br>
+Husband → Wife<br>
+Grandfather → Grandmother<br>
+Nephew → Niece<br>
+He → She<br>
+Sir → Madam
 
 </div>
 `
@@ -924,22 +1080,45 @@ Brother → Sister
 title:"This / That — यह / वह",
 image:"👉📖🌳",
 description:"पास और दूर की वस्तु",
+
 content:`
 
+<div class="box hindi-box">
+
+<b>This</b> = पास की एक वस्तु<br>
+<b>That</b> = दूर की एक वस्तु
+
+</div>
+
 <div class="box example-box">
-
-This = यह<br>
-That = वह
-
-<br><br>
 
 This is a book.<br>
 यह एक किताब है।
 
 <br><br>
 
+This is a pen.<br>
+यह एक पेन है।
+
+<br><br>
+
+This is a ball.<br>
+यह एक गेंद है।
+
+<br><br>
+
 That is a tree.<br>
 वह एक पेड़ है।
+
+<br><br>
+
+That is a car.<br>
+वह एक कार है।
+
+<br><br>
+
+That is a house.<br>
+वह एक घर है।
 
 </div>
 `
@@ -949,22 +1128,45 @@ That is a tree.<br>
 title:"These / Those — ये / वे",
 image:"📚🌳🌳",
 description:"कई पास या दूर की वस्तुएँ",
+
 content:`
 
+<div class="box hindi-box">
+
+<b>These</b> = पास की कई वस्तुएँ<br>
+<b>Those</b> = दूर की कई वस्तुएँ
+
+</div>
+
 <div class="box example-box">
-
-These = ये<br>
-Those = वे
-
-<br><br>
 
 These are books.<br>
 ये किताबें हैं।
 
 <br><br>
 
+These are pens.<br>
+ये पेन हैं।
+
+<br><br>
+
+These are balls.<br>
+ये गेंदें हैं।
+
+<br><br>
+
 Those are trees.<br>
 वे पेड़ हैं।
+
+<br><br>
+
+Those are cars.<br>
+वे कारें हैं।
+
+<br><br>
+
+Those are houses.<br>
+वे घर हैं।
 
 </div>
 `
@@ -974,30 +1176,56 @@ Those are trees.<br>
 title:"Is / Am / Are",
 image:"🧒👦👧",
 description:"Basic helping verbs",
+
 content:`
 
 <div class="box hindi-box">
 
-I → am<br>
-He / She / It → is<br>
-You / We / They → are
+I → <b>am</b><br>
+He / She / It → <b>is</b><br>
+You / We / They → <b>are</b>
 
 </div>
 
 <div class="box example-box">
 
 I am a student.<br>
-मैं एक विद्यार्थी हूँ।
+मैं विद्यार्थी हूँ।
+
+<br><br>
+
+I am happy.<br>
+मैं खुश हूँ।
+
+<br><br>
+
+He is a boy.<br>
+वह लड़का है।
 
 <br><br>
 
 She is a girl.<br>
-वह एक लड़की है।
+वह लड़की है।
 
 <br><br>
 
-They are students.<br>
-वे विद्यार्थी हैं।
+It is a cat.<br>
+यह बिल्ली है।
+
+<br><br>
+
+You are my friend.<br>
+तुम मेरे दोस्त हो।
+
+<br><br>
+
+We are students.<br>
+हम विद्यार्थी हैं।
+
+<br><br>
+
+They are happy.<br>
+वे खुश हैं।
 
 </div>
 `
@@ -1007,9 +1235,12 @@ They are students.<br>
 title:"Opposite Words — विलोम शब्द",
 image:"⬆️⬇️☀️🌙",
 description:"उल्टे अर्थ वाले शब्द",
+
 content:`
 
 <div class="box example-box">
+
+<h3>🌟 25 Opposite Words</h3>
 
 Big ↔ Small<br>
 बड़ा ↔ छोटा
@@ -1034,6 +1265,46 @@ Day ↔ Night<br>
 Happy ↔ Sad<br>
 खुश ↔ उदास
 
+<br><br>
+
+Up ↔ Down<br>
+ऊपर ↔ नीचे
+
+<br><br>
+
+In ↔ Out<br>
+अंदर ↔ बाहर
+
+<br><br>
+
+Open ↔ Close<br>
+खोलना ↔ बंद करना
+
+<br><br>
+
+Fast ↔ Slow<br>
+तेज ↔ धीमा
+
+<br><br>
+
+Old ↔ New<br>
+पुराना ↔ नया
+
+<br><br>
+
+Near ↔ Far<br>
+पास ↔ दूर
+
+<br><br>
+
+Clean ↔ Dirty<br>
+साफ ↔ गंदा
+
+<br><br>
+
+Tall ↔ Short<br>
+लंबा ↔ छोटा
+
 </div>
 `
 },
@@ -1042,6 +1313,7 @@ Happy ↔ Sad<br>
 title:"One / Many — एक / अनेक",
 image:"🍎🍎🍎",
 description:"One और Many",
+
 content:`
 
 <div class="box example-box">
@@ -1054,6 +1326,26 @@ Many apples = बहुत से सेब
 One boy = एक लड़का<br>
 Many boys = बहुत से लड़के
 
+<br><br>
+
+One girl = एक लड़की<br>
+Many girls = बहुत सी लड़कियाँ
+
+<br><br>
+
+One book = एक किताब<br>
+Many books = बहुत सी किताबें
+
+<br><br>
+
+One dog = एक कुत्ता<br>
+Many dogs = बहुत से कुत्ते
+
+<br><br>
+
+One tree = एक पेड़<br>
+Many trees = बहुत से पेड़
+
 </div>
 `
 },
@@ -1062,19 +1354,40 @@ Many boys = बहुत से लड़के
 title:"Basic Vocabulary — सामान्य शब्द",
 image:"📖✏️🎒🏠",
 description:"रोजमर्रा के English words",
+
 content:`
 
 <div class="box example-box">
 
+<h3>🏠 Home Words</h3>
+
+House = घर<br>
+Door = दरवाजा<br>
+Window = खिड़की<br>
+Room = कमरा<br>
+Bed = बिस्तर<br>
+Chair = कुर्सी<br>
+Table = मेज<br>
+Fan = पंखा<br>
+Light = रोशनी / लाइट<br>
+Water = पानी
+
+</div>
+
+<div class="box example-box">
+
+<h3>🎒 School Words</h3>
+
 Book = किताब<br>
 Pen = पेन<br>
+Pencil = पेंसिल<br>
+Eraser = रबर<br>
 Bag = बैग<br>
-Table = मेज<br>
-Chair = कुर्सी<br>
-School = विद्यालय<br>
-Water = पानी<br>
-Food = भोजन<br>
-House = घर
+Teacher = शिक्षक<br>
+Student = विद्यार्थी<br>
+Class = कक्षा<br>
+Board = बोर्ड<br>
+School = विद्यालय
 
 </div>
 `
@@ -1084,6 +1397,7 @@ House = घर
 title:"Action Words — कार्य वाले शब्द",
 image:"🏃🧍🍎📖",
 description:"काम करने वाले शब्द",
+
 content:`
 
 <div class="box example-box">
@@ -1095,7 +1409,19 @@ Eat = खाना<br>
 Drink = पीना<br>
 Read = पढ़ना<br>
 Write = लिखना<br>
-Play = खेलना
+Play = खेलना<br>
+Sing = गाना<br>
+Dance = नाचना<br>
+Sleep = सोना<br>
+Wake = जागना<br>
+Sit = बैठना<br>
+Stand = खड़ा होना<br>
+Clap = ताली बजाना<br>
+Smile = मुस्कुराना<br>
+Laugh = हँसना<br>
+Cry = रोना<br>
+Open = खोलना<br>
+Close = बंद करना
 
 </div>
 `
@@ -1105,6 +1431,7 @@ Play = खेलना
 title:"Family Members — परिवार",
 image:"👨‍👩‍👧‍👦",
 description:"परिवार के सदस्यों के नाम",
+
 content:`
 
 <div class="box example-box">
@@ -1113,8 +1440,32 @@ Father = पिता<br>
 Mother = माता<br>
 Brother = भाई<br>
 Sister = बहन<br>
+Son = बेटा<br>
+Daughter = बेटी<br>
 Grandfather = दादा / नाना<br>
-Grandmother = दादी / नानी
+Grandmother = दादी / नानी<br>
+Uncle = चाचा / मामा<br>
+Aunt = चाची / मामी<br>
+Cousin = चचेरा / ममेरा भाई-बहन<br>
+Parents = माता-पिता<br>
+Family = परिवार
+
+</div>
+
+<div class="box example-box">
+
+This is my mother.<br>
+यह मेरी माँ हैं।
+
+<br><br>
+
+This is my father.<br>
+यह मेरे पिता हैं।
+
+<br><br>
+
+I love my family.<br>
+मैं अपने परिवार से प्यार करता हूँ।
 
 </div>
 `
@@ -1124,18 +1475,40 @@ Grandmother = दादी / नानी
 title:"Body Parts — शरीर के अंग",
 image:"🧒👁️👂👃",
 description:"शरीर के अंग",
+
 content:`
 
 <div class="box example-box">
 
 Head = सिर<br>
+Hair = बाल<br>
 Eye = आँख<br>
 Ear = कान<br>
 Nose = नाक<br>
 Mouth = मुँह<br>
+Teeth = दाँत<br>
+Tongue = जीभ<br>
+Neck = गर्दन<br>
+Shoulder = कंधा<br>
 Hand = हाथ<br>
+Finger = उंगली<br>
 Leg = पैर<br>
-Foot = पैर का पंजा
+Knee = घुटना<br>
+Foot = पैर का पंजा<br>
+Toe = पैर की उंगली<br>
+Stomach = पेट
+
+</div>
+
+<div class="box example-box">
+
+This is my hand.<br>
+यह मेरा हाथ है।
+
+<br><br>
+
+These are my eyes.<br>
+ये मेरी आँखें हैं।
 
 </div>
 `
@@ -1145,6 +1518,7 @@ Foot = पैर का पंजा
 title:"Colours — रंग",
 image:"🌈🔴🔵🟢",
 description:"English में colours",
+
 content:`
 
 <div class="box example-box">
@@ -1156,7 +1530,29 @@ Yellow = पीला 🟡<br>
 Black = काला ⚫<br>
 White = सफेद ⚪<br>
 Pink = गुलाबी 🩷<br>
-Orange = नारंगी 🟠
+Orange = नारंगी 🟠<br>
+Purple = बैंगनी 🟣<br>
+Brown = भूरा 🟤<br>
+Grey = धूसर<br>
+Golden = सुनहरा<br>
+Silver = चाँदी जैसा रंग
+
+</div>
+
+<div class="box example-box">
+
+The apple is red.<br>
+सेब लाल है।
+
+<br><br>
+
+The sky is blue.<br>
+आकाश नीला है।
+
+<br><br>
+
+The grass is green.<br>
+घास हरी है।
 
 </div>
 `
@@ -1166,6 +1562,7 @@ Orange = नारंगी 🟠
 title:"Shapes — आकृतियाँ",
 image:"⭕🔺⬛▭",
 description:"Basic shapes",
+
 content:`
 
 <div class="box example-box">
@@ -1173,7 +1570,23 @@ content:`
 Circle = वृत्त ⭕<br>
 Square = वर्ग ⬛<br>
 Triangle = त्रिभुज 🔺<br>
-Rectangle = आयत ▭
+Rectangle = आयत ▭<br>
+Oval = अंडाकार 🥚<br>
+Star = तारा ⭐<br>
+Heart = दिल ❤️<br>
+Diamond = हीरा ♦️
+
+</div>
+
+<div class="box example-box">
+
+The ball is round.<br>
+गेंद गोल है।
+
+<br><br>
+
+The box is square.<br>
+डिब्बा वर्गाकार है।
 
 </div>
 `
@@ -1184,14 +1597,15 @@ title:"Numbers 1–100 — Counting",
 image:"🔢💯",
 description:"1 से 100 तक पूरी Counting",
 counting:true,
+
 content:`
 
 <div class="box hindi-box">
 
-<h3>🔢 Counting / गिनती</h3>
+<h3>🔢 Counting 1–100</h3>
 
-1 से 100 तक Numbers सीखें।<br>
-हर number के साथ English, Hindi और 🔊 Listen button दिया गया है।
+हर Number के साथ English और Hindi meaning दिया गया है।
+🔊 button दबाकर number सुनें।
 
 </div>
 
@@ -1204,6 +1618,7 @@ content:`
 title:"Days of the Week — सप्ताह के दिन",
 image:"📅☀️",
 description:"Monday से Sunday",
+
 content:`
 
 <div class="box example-box">
@@ -1217,6 +1632,23 @@ Saturday = शनिवार<br>
 Sunday = रविवार
 
 </div>
+
+<div class="box example-box">
+
+Today is Monday.<br>
+आज सोमवार है।
+
+<br><br>
+
+Sunday is a holiday.<br>
+रविवार को छुट्टी होती है।
+
+<br><br>
+
+I go to school on Monday.<br>
+मैं सोमवार को स्कूल जाता हूँ।
+
+</div>
 `
 },
 
@@ -1224,6 +1656,7 @@ Sunday = रविवार
 title:"Months of the Year — वर्ष के महीने",
 image:"🗓️📆",
 description:"12 Months",
+
 content:`
 
 <div class="box example-box">
@@ -1242,6 +1675,18 @@ November = नवंबर<br>
 December = दिसंबर
 
 </div>
+
+<div class="box example-box">
+
+January is the first month.<br>
+जनवरी पहला महीना है।
+
+<br><br>
+
+December is the last month.<br>
+दिसंबर आखिरी महीना है।
+
+</div>
 `
 },
 
@@ -1249,6 +1694,7 @@ December = दिसंबर
 title:"Animals — जानवर",
 image:"🐶🐱🦁🐘",
 description:"Common animals",
+
 content:`
 
 <div class="box example-box">
@@ -1256,11 +1702,22 @@ content:`
 Dog = कुत्ता 🐶<br>
 Cat = बिल्ली 🐱<br>
 Cow = गाय 🐄<br>
+Buffalo = भैंस 🐃<br>
 Horse = घोड़ा 🐎<br>
 Lion = शेर 🦁<br>
 Tiger = बाघ 🐯<br>
 Elephant = हाथी 🐘<br>
-Monkey = बंदर 🐒
+Monkey = बंदर 🐒<br>
+Goat = बकरी 🐐<br>
+Sheep = भेड़ 🐑<br>
+Rabbit = खरगोश 🐇<br>
+Deer = हिरण 🦌<br>
+Bear = भालू 🐻<br>
+Fox = लोमड़ी 🦊<br>
+Camel = ऊँट 🐪<br>
+Donkey = गधा 🫏<br>
+Bird = पक्षी 🐦<br>
+Fish = मछली 🐟
 
 </div>
 `
@@ -1270,26 +1727,40 @@ Monkey = बंदर 🐒
 title:"Fruits & Vegetables — फल और सब्जियाँ",
 image:"🍎🍌🥕🍅",
 description:"Fruits और Vegetables",
+
 content:`
 
 <div class="box example-box">
 
-<b>🍎 Fruits / फल</b><br><br>
+<h3>🍎 Fruits / फल</h3>
 
 Apple = सेब<br>
 Mango = आम<br>
 Banana = केला<br>
 Orange = संतरा<br>
-Grapes = अंगूर
+Grapes = अंगूर<br>
+Guava = अमरूद<br>
+Papaya = पपीता<br>
+Watermelon = तरबूज<br>
+Pomegranate = अनार<br>
+Pineapple = अनानास
 
-<br><br>
+</div>
 
-<b>🥕 Vegetables / सब्जियाँ</b><br><br>
+<div class="box example-box">
+
+<h3>🥕 Vegetables / सब्जियाँ</h3>
 
 Potato = आलू<br>
 Tomato = टमाटर<br>
 Carrot = गाजर<br>
-Onion = प्याज
+Onion = प्याज<br>
+Brinjal = बैंगन<br>
+Peas = मटर<br>
+Spinach = पालक<br>
+Cabbage = पत्तागोभी<br>
+Cauliflower = फूलगोभी<br>
+Ladyfinger = भिंडी
 
 </div>
 `
@@ -1299,6 +1770,7 @@ Onion = प्याज
 title:"Classroom Objects — कक्षा की वस्तुएँ",
 image:"🏫📚✏️🎒",
 description:"Classroom objects",
+
 content:`
 
 <div class="box example-box">
@@ -1307,10 +1779,18 @@ Book = किताब<br>
 Pen = पेन<br>
 Pencil = पेंसिल<br>
 Eraser = रबर<br>
+Sharpener = शार्पनर<br>
 Bag = बैग<br>
 Chair = कुर्सी<br>
 Table = मेज<br>
-Board = बोर्ड
+Board = बोर्ड<br>
+Chalk = चॉक<br>
+Desk = डेस्क<br>
+Notebook = कॉपी<br>
+Ruler = पैमाना<br>
+Teacher = शिक्षक<br>
+Student = विद्यार्थी<br>
+Classroom = कक्षा
 
 </div>
 `
@@ -1320,9 +1800,12 @@ Board = बोर्ड
 title:"Simple Sentences — सरल वाक्य",
 image:"📝💬",
 description:"छोटे English sentences",
+
 content:`
 
 <div class="box example-box">
+
+<h3>🌟 30 Easy Sentences</h3>
 
 I am a boy.<br>
 मैं एक लड़का हूँ।
@@ -1334,18 +1817,93 @@ I am a girl.<br>
 
 <br><br>
 
+I am a student.<br>
+मैं विद्यार्थी हूँ।
+
+<br><br>
+
+My name is Rahul.<br>
+मेरा नाम राहुल है।
+
+<br><br>
+
 This is a book.<br>
 यह एक किताब है।
 
 <br><br>
 
-I have a pen.<br>
-मेरे पास एक पेन है।
+This is my pen.<br>
+यह मेरा पेन है।
+
+<br><br>
+
+I have a bag.<br>
+मेरे पास एक बैग है।
+
+<br><br>
+
+I have a ball.<br>
+मेरे पास एक गेंद है।
 
 <br><br>
 
 I like mangoes.<br>
 मुझे आम पसंद हैं।
+
+<br><br>
+
+I like milk.<br>
+मुझे दूध पसंद है।
+
+<br><br>
+
+I eat food.<br>
+मैं खाना खाता हूँ।
+
+<br><br>
+
+I drink water.<br>
+मैं पानी पीता हूँ।
+
+<br><br>
+
+I go to school.<br>
+मैं स्कूल जाता हूँ।
+
+<br><br>
+
+I read a book.<br>
+मैं किताब पढ़ता हूँ।
+
+<br><br>
+
+I write a sentence.<br>
+मैं एक वाक्य लिखता हूँ।
+
+<br><br>
+
+I play football.<br>
+मैं फुटबॉल खेलता हूँ।
+
+<br><br>
+
+I love my family.<br>
+मैं अपने परिवार से प्यार करता हूँ।
+
+<br><br>
+
+The sun is hot.<br>
+सूरज गरम है।
+
+<br><br>
+
+The sky is blue.<br>
+आकाश नीला है।
+
+<br><br>
+
+The grass is green.<br>
+घास हरी है।
 
 </div>
 `
@@ -1355,34 +1913,50 @@ I like mangoes.<br>
 title:"Question & Answer — प्रश्न और उत्तर",
 image:"❓💬🧒",
 description:"Basic questions",
+
 content:`
 
 <div class="box example-box">
 
-<b>Q: What is your name?</b><br>
-आपका नाम क्या है?
+<h3>❓ Questions & Answers</h3>
 
-<br>
-<b>A: My name is Rahul.</b><br>
-मेरा नाम राहुल है।
+<b>Q: What is your name?</b><br>
+A: My name is Rahul.
 
 <br><br>
 
 <b>Q: How are you?</b><br>
-आप कैसे हैं?
-
-<br>
-<b>A: I am fine.</b><br>
-मैं ठीक हूँ।
+A: I am fine.
 
 <br><br>
 
 <b>Q: Where do you live?</b><br>
-आप कहाँ रहते हैं?
+A: I live in India.
 
-<br>
-<b>A: I live in India.</b><br>
-मैं भारत में रहता हूँ।
+<br><br>
+
+<b>Q: What is this?</b><br>
+A: This is a book.
+
+<br><br>
+
+<b>Q: What is that?</b><br>
+A: That is a tree.
+
+<br><br>
+
+<b>Q: Are you a student?</b><br>
+A: Yes, I am.
+
+<br><br>
+
+<b>Q: Do you like mangoes?</b><br>
+A: Yes, I do.
+
+<br><br>
+
+<b>Q: What is your favourite colour?</b><br>
+A: My favourite colour is blue.
 
 </div>
 `
@@ -1392,6 +1966,7 @@ content:`
 title:"Picture Description — चित्र वर्णन",
 image:"🖼️👧🌳☀️",
 description:"Picture देखकर English बोलें",
+
 content:`
 
 <div class="box hindi-box">
@@ -1402,8 +1977,15 @@ content:`
 
 <div class="box example-box">
 
+<h3>🖼️ Picture: Girl in a Garden</h3>
+
 This is a girl.<br>
 यह एक लड़की है।
+
+<br><br>
+
+She is in a garden.<br>
+वह बगीचे में है।
 
 <br><br>
 
@@ -1414,6 +1996,16 @@ She is playing.<br>
 
 She has a ball.<br>
 उसके पास एक गेंद है।
+
+<br><br>
+
+The sun is shining.<br>
+सूरज चमक रहा है।
+
+<br><br>
+
+The garden is green.<br>
+बगीचा हरा है।
 
 <br><br>
 
@@ -1428,27 +2020,39 @@ She is happy.<br>
 title:"Reading Practice — पढ़ने का अभ्यास",
 image:"📖👦",
 description:"Reading practice",
+
 content:`
 
 <div class="box example-box">
 
 <h3>📖 My Cat</h3>
 
-This is a cat.<br>
-The cat is small.<br>
-The cat can run.<br>
-The cat is happy.
+This is my cat.<br>
+My cat is small.<br>
+It is white.<br>
+It can run.<br>
+It can jump.<br>
+It likes milk.<br>
+I love my cat.
+
+<br><br>
+
+<b>हिंदी अर्थ:</b><br>
+
+यह मेरी बिल्ली है।<br>
+मेरी बिल्ली छोटी है।<br>
+यह सफेद है।<br>
+यह दौड़ सकती है।<br>
+यह कूद सकती है।<br>
+इसे दूध पसंद है।<br>
+मैं अपनी बिल्ली से प्यार करता हूँ।
 
 </div>
 
 <div class="box speak-box">
 
-इस paragraph को धीरे-धीरे और साफ आवाज में पढ़ें।
-
-<br>
-
 <button class="speak-btn"
-onclick="speak('This is a cat. The cat is small. The cat can run. The cat is happy.')">
+onclick="speak('This is my cat. My cat is small. It is white. It can run. It can jump. It likes milk. I love my cat.')">
 
 🔊 Listen / सुनो
 
@@ -1462,31 +2066,56 @@ onclick="speak('This is a cat. The cat is small. The cat can run. The cat is hap
 title:"Writing Practice — लिखने का अभ्यास",
 image:"✍️📖",
 description:"English writing",
+
 content:`
 
 <div class="box practice-box">
 
-<h3>✍️ Practice</h3>
+<h3>✍️ Alphabet Practice</h3>
 
-A a, B b, C c, D d, E e लिखें।
-
-<br><br>
-
-10 English words लिखें।
-
-<br><br>
-
-अपने बारे में 5 छोटे English sentences लिखें।
+A a — Apple<br>
+B b — Ball<br>
+C c — Cat<br>
+D d — Dog<br>
+E e — Egg<br>
+F f — Fish<br>
+G g — Goat<br>
+H h — Hat<br>
+I i — Ice cream<br>
+J j — Jug
 
 </div>
 
-<div class="box example-box">
+<div class="box practice-box">
 
-My name is Rahul.<br>
-I am a boy.<br>
-I am a student.<br>
-I like mangoes.<br>
-I live in India.
+<h3>✍️ Word Practice</h3>
+
+Book<br>
+Pen<br>
+Bag<br>
+Cat<br>
+Dog<br>
+Sun<br>
+Moon<br>
+Tree<br>
+Ball<br>
+School
+
+</div>
+
+<div class="box practice-box">
+
+<h3>📝 Sentence Practice</h3>
+
+My name is ______.<br><br>
+
+I am a ______.<br><br>
+
+I live in ______.<br><br>
+
+I like ______.<br><br>
+
+My favourite colour is ______.
 
 </div>
 `
@@ -1495,35 +2124,66 @@ I live in India.
 {
 title:"Basic Conversation — बातचीत",
 image:"🧒🧒💬",
-description:"Basic English conversation",
+description:"Daily English conversation",
+
 content:`
 
 <div class="box example-box">
 
-<b>👦 A:</b> Hello!<br>
-<b>👧 B:</b> Hello!
+<h3>🗣️ Conversation 1</h3>
+
+<b>A:</b> Hello!<br>
+<b>B:</b> Hello!
 
 <br><br>
 
-<b>👦 A:</b> What is your name?<br>
-<b>👧 B:</b> My name is Rahul.
+<b>A:</b> What is your name?<br>
+<b>B:</b> My name is Rahul.
 
 <br><br>
 
-<b>👦 A:</b> How are you?<br>
-<b>👧 B:</b> I am fine.
+<b>A:</b> How are you?<br>
+<b>B:</b> I am fine.
 
 <br><br>
 
-<b>👦 A:</b> Thank you.<br>
-<b>👧 B:</b> Welcome.
+<b>A:</b> Thank you.<br>
+<b>B:</b> Welcome.
 
 </div>
 
-<div class="box speak-box">
+<div class="box example-box">
 
-🗣️ दोनों बच्चे A और B बनकर
-conversation बोलें।
+<h3>🗣️ Conversation 2</h3>
+
+<b>A:</b> Good morning!<br>
+<b>B:</b> Good morning!
+
+<br><br>
+
+<b>A:</b> Are you ready?<br>
+<b>B:</b> Yes, I am ready.
+
+<br><br>
+
+<b>A:</b> Let's learn English.<br>
+<b>B:</b> Yes! Let's learn.
+
+</div>
+
+<div class="box example-box">
+
+<h3>🗣️ Conversation 3</h3>
+
+<b>A:</b> What is this?<br>
+<b>B:</b> This is a pen.
+
+<br><br>
+
+<b>A:</b> What colour is it?<br>
+<b>B:</b> It is blue.
+
+</div>
 
 </div>
 `
@@ -1533,32 +2193,10 @@ conversation बोलें।
 
 
 /* =====================================================
-HINDI NUMBERS
+NUMBERS
 ===================================================== */
 
-const hindiNumbers = [
-
-"शून्य",
-"एक","दो","तीन","चार","पाँच","छह","सात","आठ","नौ","दस",
-"ग्यारह","बारह","तेरह","चौदह","पंद्रह","सोलह","सत्रह","अठारह","उन्नीस","बीस",
-"इक्कीस","बाईस","तेईस","चौबीस","पच्चीस","छब्बीस","सत्ताईस","अट्ठाईस","उनतीस","तीस",
-"इकतीस","बत्तीस","तैंतीस","चौंतीस","पैंतीस","छत्तीस","सैंतीस","अड़तीस","उनतालीस","चालीस",
-"इकतालीस","बयालीस","तैंतालीस","चवालीस","पैंतालीस","छियालीस","सैंतालीस","अड़तालीस","उनचास","पचास",
-"इक्यावन","बावन","तिरेपन","चौवन","पचपन","छप्पन","सत्तावन","अट्ठावन","उनसठ","साठ",
-"इकसठ","बासठ","तिरसठ","चौंसठ","पैंसठ","छियासठ","सड़सठ","अड़सठ","उनहत्तर","सत्तर",
-"इकहत्तर","बहत्तर","तिहत्तर","चौहत्तर","पचहत्तर","छिहत्तर","सतहत्तर","अठहत्तर","उन्नासी","अस्सी",
-"इक्यासी","बयासी","तिरासी","चौरासी","पचासी","छियासी","सतासी","अट्ठासी","नवासी","नब्बे",
-"इक्यानवे","बानवे","तिरानवे","चौरानवे","पंचानवे","छियानवे","सत्तानवे","अट्ठानवे","निन्यानवे","एक सौ"
-
-];
-
-
-/* =====================================================
-ENGLISH NUMBERS
-===================================================== */
-
-const englishNumbers = [
-
+const englishNumbers=[
 "Zero",
 "One","Two","Three","Four","Five","Six","Seven","Eight","Nine","Ten",
 "Eleven","Twelve","Thirteen","Fourteen","Fifteen","Sixteen","Seventeen","Eighteen","Nineteen","Twenty",
@@ -1570,7 +2208,20 @@ const englishNumbers = [
 "Seventy-one","Seventy-two","Seventy-three","Seventy-four","Seventy-five","Seventy-six","Seventy-seven","Seventy-eight","Seventy-nine","Eighty",
 "Eighty-one","Eighty-two","Eighty-three","Eighty-four","Eighty-five","Eighty-six","Eighty-seven","Eighty-eight","Eighty-nine","Ninety",
 "Ninety-one","Ninety-two","Ninety-three","Ninety-four","Ninety-five","Ninety-six","Ninety-seven","Ninety-eight","Ninety-nine","One hundred"
+];
 
+const hindiNumbers=[
+"शून्य",
+"एक","दो","तीन","चार","पाँच","छह","सात","आठ","नौ","दस",
+"ग्यारह","बारह","तेरह","चौदह","पंद्रह","सोलह","सत्रह","अठारह","उन्नीस","बीस",
+"इक्कीस","बाईस","तेईस","चौबीस","पच्चीस","छब्बीस","सत्ताईस","अट्ठाईस","उनतीस","तीस",
+"इकतीस","बत्तीस","तैंतीस","चौंतीस","पैंतीस","छत्तीस","सैंतीस","अड़तीस","उनतालीस","चालीस",
+"इकतालीस","बयालीस","तैंतालीस","चवालीस","पैंतालीस","छियालीस","सैंतालीस","अड़तालीस","उनचास","पचास",
+"इक्यावन","बावन","तिरेपन","चौवन","पचपन","छप्पन","सत्तावन","अट्ठावन","उनसठ","साठ",
+"इकसठ","बासठ","तिरसठ","चौंसठ","पैंसठ","छियासठ","सड़सठ","अड़सठ","उनहत्तर","सत्तर",
+"इकहत्तर","बहत्तर","तिहत्तर","चौहत्तर","पचहत्तर","छिहत्तर","सतहत्तर","अठहत्तर","उन्नासी","अस्सी",
+"इक्यासी","बयासी","तिरासी","चौरासी","पचासी","छियासी","सतासी","अट्ठासी","नवासी","नब्बे",
+"इक्यानवे","बानवे","तिरानवे","चौरानवे","पंचानवे","छियानवे","सत्तानवे","अट्ठानवे","निन्यानवे","एक सौ"
 ];
 
 
@@ -1579,8 +2230,7 @@ TOPIC IMAGES
 ===================================================== */
 
 const topicImages=[
-
-"👦📚🏫🐶",
+"👦👧🐶🏫📚",
 "👦👧🧒",
 "🏃🍎📖✍️",
 "🍎🏠🐱⭐",
@@ -1610,7 +2260,6 @@ const topicImages=[
 "📖👦",
 "✍️📖",
 "🧒🧒💬"
-
 ];
 
 
@@ -1838,13 +2487,15 @@ CREATE TOPICS
 
 function createTopics(){
 
-    const grid=document.getElementById("topicGrid");
+    const grid=
+    document.getElementById("topicGrid");
 
     grid.innerHTML="";
 
     lessons.forEach((lesson,index)=>{
 
-        const card=document.createElement("div");
+        const card=
+        document.createElement("div");
 
         card.className="topic-card";
 
@@ -1868,7 +2519,9 @@ function createTopics(){
 
         `;
 
-        card.onclick=()=>openLesson(index);
+        card.onclick=()=>{
+            openLesson(index);
+        };
 
         grid.appendChild(card);
 
@@ -1883,16 +2536,19 @@ SHOW TOPICS
 
 function showTopics(){
 
-    document.getElementById("topicsSection").style.display="block";
+    document.getElementById(
+        "topicsSection"
+    ).style.display="block";
 
-    document.getElementById("lessonSection").style.display="none";
+    document.getElementById(
+        "lessonSection"
+    ).style.display="none";
 
     window.scrollTo({
-
-        top:document.getElementById("topicsSection").offsetTop-10,
-
+        top:document.getElementById(
+            "topicsSection"
+        ).offsetTop-10,
         behavior:"smooth"
-
     });
 
 }
@@ -1908,22 +2564,34 @@ function openLesson(index){
 
     const lesson=lessons[index];
 
-    document.getElementById("topicsSection").style.display="none";
+    document.getElementById(
+        "topicsSection"
+    ).style.display="none";
 
-    document.getElementById("lessonSection").style.display="block";
+    document.getElementById(
+        "lessonSection"
+    ).style.display="block";
 
-    document.getElementById("lessonImage").innerHTML=
-    lesson.image;
+    document.getElementById(
+        "lessonImage"
+    ).innerHTML=lesson.image;
 
-    document.getElementById("lessonTitle").innerHTML=
+    document.getElementById(
+        "lessonTitle"
+    ).innerHTML=
     "Lesson "+(index+1)+" — "+lesson.title;
 
-    document.getElementById("lessonContent").innerHTML=
-    lesson.content;
+    document.getElementById(
+        "lessonContent"
+    ).innerHTML=lesson.content;
 
-    document.getElementById("quizArea").innerHTML="";
+    document.getElementById(
+        "quizArea"
+    ).innerHTML="";
 
-    document.getElementById("completeArea").innerHTML="";
+    document.getElementById(
+        "completeArea"
+    ).innerHTML="";
 
     if(lesson.counting){
 
@@ -1934,11 +2602,10 @@ function openLesson(index){
     createQuiz(index);
 
     window.scrollTo({
-
-        top:document.getElementById("lessonSection").offsetTop-10,
-
+        top:document.getElementById(
+            "lessonSection"
+        ).offsetTop-10,
         behavior:"smooth"
-
     });
 
 }
@@ -1950,19 +2617,24 @@ COUNTING
 
 function createCounting(){
 
-    const area=document.getElementById("countingArea");
+    const area=
+    document.getElementById(
+        "countingArea"
+    );
 
     if(!area) return;
 
     area.innerHTML="";
 
-    const grid=document.createElement("div");
+    const grid=
+    document.createElement("div");
 
     grid.className="counting-grid";
 
     for(let i=1;i<=100;i++){
 
-        const card=document.createElement("div");
+        const card=
+        document.createElement("div");
 
         card.className="number-card";
 
@@ -1970,11 +2642,16 @@ function createCounting(){
 
             <b>${i}</b>
 
-            <span>${englishNumbers[i]}</span>
+            <span>
+                ${englishNumbers[i]}
+            </span>
 
-            <small>${hindiNumbers[i]}</small>
+            <small>
+                ${hindiNumbers[i]}
+            </small>
 
-            <button onclick="speakNumber(${i})">
+            <button
+            onclick="speakNumber(${i})">
                 🔊
             </button>
 
@@ -1995,26 +2672,31 @@ VOICE
 
 function speak(text){
 
+    if(!soundEnabled) return;
+
     if(!("speechSynthesis" in window)){
 
-        alert("आपके browser में voice सुविधा उपलब्ध नहीं है।");
+        alert(
+            "आपके browser में voice सुविधा उपलब्ध नहीं है।"
+        );
 
         return;
-
     }
 
-    const speech=new SpeechSynthesisUtterance(text);
+    const speech=
+    new SpeechSynthesisUtterance(text);
 
     speech.lang="en-US";
 
     speech.rate=.75;
+
+    speech.pitch=1;
 
     speechSynthesis.cancel();
 
     speechSynthesis.speak(speech);
 
 }
-
 
 function speakNumber(number){
 
@@ -2024,62 +2706,44 @@ function speakNumber(number){
 
 
 /* =====================================================
-SOUND ENGINE
+TOGGLE SOUND
 ===================================================== */
 
-function soundTone(frequency,duration,type="sine"){
+function toggleSound(){
 
-    try{
+    soundEnabled=!soundEnabled;
 
-        const AudioContext=
-        window.AudioContext ||
-        window.webkitAudioContext;
+    const button=
+    document.getElementById(
+        "soundButton"
+    );
 
-        const ctx=new AudioContext();
+    if(soundEnabled){
 
-        const oscillator=ctx.createOscillator();
+        button.innerHTML="🔊 Sound ON";
 
-        const gain=ctx.createGain();
+    }else{
 
-        oscillator.type=type;
+        button.innerHTML="🔇 Sound OFF";
 
-        oscillator.frequency.value=frequency;
+        if("speechSynthesis" in window){
 
-        gain.gain.setValueAtTime(
-            .0001,
-            ctx.currentTime
-        );
+            speechSynthesis.cancel();
 
-        gain.gain.exponentialRampToValueAtTime(
-            .25,
-            ctx.currentTime+.02
-        );
+        }
 
-        gain.gain.exponentialRampToValueAtTime(
-            .0001,
-            ctx.currentTime+duration
-        );
-
-        oscillator.connect(gain);
-
-        gain.connect(ctx.destination);
-
-        oscillator.start();
-
-        oscillator.stop(
-            ctx.currentTime+duration
-        );
-
-    }catch(e){}
+    }
 
 }
 
 
 /* =====================================================
-CLAP SOUND 👏
+CLAP SOUND
 ===================================================== */
 
 function clapSound(){
+
+    if(!soundEnabled) return;
 
     try{
 
@@ -2087,48 +2751,88 @@ function clapSound(){
         window.AudioContext ||
         window.webkitAudioContext;
 
+        if(!AudioContext) return;
+
         const ctx=new AudioContext();
 
-        for(let i=0;i<5;i++){
+        if(ctx.state==="suspended"){
 
-            const osc=ctx.createOscillator();
-
-            const gain=ctx.createGain();
-
-            osc.type="triangle";
-
-            osc.frequency.value=
-            700+Math.random()*900;
-
-            const start=
-            ctx.currentTime+(i*.11);
-
-            gain.gain.setValueAtTime(
-                .0001,
-                start
-            );
-
-            gain.gain.exponentialRampToValueAtTime(
-                .35,
-                start+.015
-            );
-
-            gain.gain.exponentialRampToValueAtTime(
-                .0001,
-                start+.07
-            );
-
-            osc.connect(gain);
-
-            gain.connect(ctx.destination);
-
-            osc.start(start);
-
-            osc.stop(start+.08);
+            ctx.resume();
 
         }
 
-    }catch(e){}
+        /*
+        कई छोटे noise bursts बनाकर
+        clap जैसा sound बनाया जाता है।
+        */
+
+        for(let i=0;i<7;i++){
+
+            const bufferSize=
+            ctx.sampleRate*0.07;
+
+            const buffer=
+            ctx.createBuffer(
+                1,
+                bufferSize,
+                ctx.sampleRate
+            );
+
+            const data=
+            buffer.getChannelData(0);
+
+            for(
+                let j=0;
+                j<bufferSize;
+                j++
+            ){
+
+                data[j]=
+                (Math.random()*2-1)
+                *
+                Math.pow(
+                    1-j/bufferSize,
+                    3
+                );
+
+            }
+
+            const source=
+            ctx.createBufferSource();
+
+            const filter=
+            ctx.createBiquadFilter();
+
+            const gain=
+            ctx.createGain();
+
+            source.buffer=buffer;
+
+            filter.type="highpass";
+
+            filter.frequency.value=700;
+
+            gain.gain.value=.45;
+
+            source.connect(filter);
+
+            filter.connect(gain);
+
+            gain.connect(ctx.destination);
+
+            source.start(
+                ctx.currentTime+
+                i*.09+
+                Math.random()*.025
+            );
+
+        }
+
+    }catch(error){
+
+        console.log("Sound error:",error);
+
+    }
 
 }
 
@@ -2139,15 +2843,81 @@ SUCCESS SOUND
 
 function successSound(){
 
-    soundTone(523,.15,"sine");
+    if(!soundEnabled) return;
 
-    setTimeout(()=>{
-        soundTone(659,.15,"sine");
-    },120);
+    try{
 
-    setTimeout(()=>{
-        soundTone(784,.25,"sine");
-    },240);
+        const AudioContext=
+        window.AudioContext ||
+        window.webkitAudioContext;
+
+        if(!AudioContext) return;
+
+        const ctx=new AudioContext();
+
+        if(ctx.state==="suspended"){
+            ctx.resume();
+        }
+
+        const notes=[
+            523.25,
+            659.25,
+            783.99,
+            1046.50
+        ];
+
+        notes.forEach((frequency,index)=>{
+
+            const osc=
+            ctx.createOscillator();
+
+            const gain=
+            ctx.createGain();
+
+            osc.frequency.value=frequency;
+
+            gain.gain.setValueAtTime(
+                .0001,
+                ctx.currentTime+
+                index*.12
+            );
+
+            gain.gain.exponentialRampToValueAtTime(
+                .22,
+                ctx.currentTime+
+                index*.12+
+                .02
+            );
+
+            gain.gain.exponentialRampToValueAtTime(
+                .0001,
+                ctx.currentTime+
+                index*.12+
+                .25
+            );
+
+            osc.connect(gain);
+
+            gain.connect(ctx.destination);
+
+            osc.start(
+                ctx.currentTime+
+                index*.12
+            );
+
+            osc.stop(
+                ctx.currentTime+
+                index*.12+
+                .28
+            );
+
+        });
+
+    }catch(error){
+
+        console.log(error);
+
+    }
 
 }
 
@@ -2158,7 +2928,58 @@ WRONG SOUND
 
 function wrongSound(){
 
-    soundTone(180,.25,"sawtooth");
+    if(!soundEnabled) return;
+
+    try{
+
+        const AudioContext=
+        window.AudioContext ||
+        window.webkitAudioContext;
+
+        if(!AudioContext) return;
+
+        const ctx=new AudioContext();
+
+        const osc=
+        ctx.createOscillator();
+
+        const gain=
+        ctx.createGain();
+
+        osc.type="sawtooth";
+
+        osc.frequency.value=180;
+
+        gain.gain.setValueAtTime(
+            .0001,
+            ctx.currentTime
+        );
+
+        gain.gain.exponentialRampToValueAtTime(
+            .18,
+            ctx.currentTime+.02
+        );
+
+        gain.gain.exponentialRampToValueAtTime(
+            .0001,
+            ctx.currentTime+.35
+        );
+
+        osc.connect(gain);
+
+        gain.connect(ctx.destination);
+
+        osc.start();
+
+        osc.stop(
+            ctx.currentTime+.35
+        );
+
+    }catch(error){
+
+        console.log(error);
+
+    }
 
 }
 
@@ -2173,7 +2994,10 @@ function createQuiz(index){
 
     if(!quiz) return;
 
-    const area=document.getElementById("quizArea");
+    const area=
+    document.getElementById(
+        "quizArea"
+    );
 
     area.innerHTML=`
 
@@ -2189,32 +3013,46 @@ function createQuiz(index){
 
             <div id="optionsArea"></div>
 
-            <div class="result"
-            id="quizResult"></div>
+            <div
+            class="result"
+            id="quizResult">
+            </div>
 
         </div>
 
     `;
 
     const options=
-    document.getElementById("optionsArea");
+    document.getElementById(
+        "optionsArea"
+    );
 
-    quiz.options.forEach((option,i)=>{
+    quiz.options.forEach(
+        (option,i)=>{
 
         const button=
-        document.createElement("button");
+        document.createElement(
+            "button"
+        );
 
         button.className="option";
 
-        button.innerHTML=option;
+        button.innerHTML=
+        option;
 
         button.onclick=()=>{
 
-            checkAnswer(button,i,index);
+            checkAnswer(
+                button,
+                i,
+                index
+            );
 
         };
 
-        options.appendChild(button);
+        options.appendChild(
+            button
+        );
 
     });
 
@@ -2225,32 +3063,48 @@ function createQuiz(index){
 CHECK ANSWER
 ===================================================== */
 
-function checkAnswer(button,selected,index){
+function checkAnswer(
+    button,
+    selected,
+    index
+){
 
     const quiz=quizzes[index];
 
     const buttons=
-    document.querySelectorAll(".option");
+    document.querySelectorAll(
+        ".option"
+    );
 
     buttons.forEach(btn=>{
-
         btn.disabled=true;
-
     });
 
     const result=
-    document.getElementById("quizResult");
+    document.getElementById(
+        "quizResult"
+    );
 
-    if(selected===quiz.answer){
+    if(
+        selected===quiz.answer
+    ){
 
-        button.classList.add("correct");
+        button.classList.add(
+            "correct"
+        );
 
         result.innerHTML=
-        "👏🎉 Very Good! / बहुत बढ़िया! ⭐";
+        "👏👏 Very Good! / बहुत बढ़िया! 🎉⭐";
 
-        result.style.color="#15803d";
+        result.style.color=
+        "#15803d";
 
         completed[index]=true;
+
+        /*
+        पहले clap,
+        फिर success tune
+        */
 
         clapSound();
 
@@ -2263,15 +3117,21 @@ function checkAnswer(button,selected,index){
 
     }else{
 
-        button.classList.add("wrong");
+        button.classList.add(
+            "wrong"
+        );
 
-        buttons[quiz.answer]
-        .classList.add("correct");
+        buttons[
+            quiz.answer
+        ].classList.add(
+            "correct"
+        );
 
         result.innerHTML=
         "😊 Try Again! / फिर से कोशिश करो!";
 
-        result.style.color="#dc2626";
+        result.style.color=
+        "#dc2626";
 
         wrongSound();
 
@@ -2290,9 +3150,14 @@ function nextLesson(){
 
     updateProgress();
 
-    if(currentLesson<lessons.length-1){
+    if(
+        currentLesson<
+        lessons.length-1
+    ){
 
-        openLesson(currentLesson+1);
+        openLesson(
+            currentLesson+1
+        );
 
     }else{
 
@@ -2311,7 +3176,9 @@ function previousLesson(){
 
     if(currentLesson>0){
 
-        openLesson(currentLesson-1);
+        openLesson(
+            currentLesson-1
+        );
 
     }else{
 
@@ -2328,7 +3195,9 @@ COMPLETE
 
 function showComplete(){
 
-    document.getElementById("completeArea").innerHTML=`
+    document.getElementById(
+        "completeArea"
+    ).innerHTML=`
 
         <div class="complete">
 
@@ -2341,8 +3210,8 @@ function showComplete(){
             </h2>
 
             <p>
-                आपने Class 1 English के सभी
-                30 Lessons पूरे कर लिए हैं।
+                आपने Class 1 English के
+                सभी 30 Lessons पूरे कर लिए हैं।
             </p>
 
             <p>
@@ -2355,7 +3224,10 @@ function showComplete(){
 
     clapSound();
 
-    setTimeout(successSound,300);
+    setTimeout(
+        successSound,
+        300
+    );
 
 }
 
@@ -2369,17 +3241,21 @@ function updateProgress(){
     const count=
     completed.filter(Boolean).length;
 
-    document.getElementById("progressText").innerHTML=
+    document.getElementById(
+        "progressText"
+    ).innerHTML=
     count+" / 30";
 
-    document.getElementById("progressFill").style.width=
+    document.getElementById(
+        "progressFill"
+    ).style.width=
     ((count/30)*100)+"%";
 
 }
 
 
 /* =====================================================
-START
+START WEBSITE
 ===================================================== */
 
 createTopics();
