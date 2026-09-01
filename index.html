@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-<title>Student Study Hub | CBSE RBSE NCERT</title>
+<title>Computer Study Hub | Basic to Advanced</title>
 
 <style>
 
@@ -14,269 +14,368 @@ margin:0;
 padding:0;
 }
 
-html{
-scroll-behavior:smooth;
-}
-
 body{
 font-family:Arial,"Noto Sans Devanagari",sans-serif;
-background:#f1f5f9;
+background:#f3f6fa;
 color:#172033;
-line-height:1.7;
+line-height:1.6;
 }
 
 header{
-background:linear-gradient(135deg,#075eaa,#13a1e8);
-color:#fff;
+background:linear-gradient(135deg,#071b33,#0878d1,#00a8e8);
+color:white;
 text-align:center;
-padding:38px 15px;
+padding:50px 15px;
+}
+
+.logo{
+font-size:65px;
 }
 
 header h1{
-font-size:34px;
-margin-bottom:8px;
+font-size:38px;
+margin:5px 0;
 }
 
 header p{
-font-size:17px;
+font-size:18px;
 }
 
 nav{
 position:sticky;
 top:0;
 z-index:1000;
-background:#fff;
+background:white;
+box-shadow:0 3px 15px #0002;
 display:flex;
 justify-content:center;
 flex-wrap:wrap;
-gap:6px;
+gap:7px;
 padding:10px;
-box-shadow:0 2px 10px #0002;
 }
 
-nav a{
-text-decoration:none;
-color:#075eaa;
-font-weight:bold;
-padding:8px 13px;
+nav button{
+border:0;
+background:white;
+padding:10px 15px;
 border-radius:8px;
+font-weight:bold;
+color:#173b63;
+cursor:pointer;
 }
 
-nav a:hover{
-background:#eaf5ff;
+nav button:hover{
+background:#e7f4ff;
 }
 
 .container{
-max-width:1150px;
+width:94%;
+max-width:1200px;
 margin:auto;
-padding:20px;
 }
 
-.card{
-background:#fff;
-border-radius:16px;
-padding:22px;
-margin-bottom:20px;
-box-shadow:0 5px 20px #00000012;
-}
-
-.card h2{
-color:#075eaa;
-margin-bottom:15px;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:14px;
-}
-
-.grid3{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:14px;
-}
-
-.option{
-background:#f8fbff;
-border:1px solid #d6e7f4;
-border-radius:14px;
-padding:20px;
-text-align:center;
-transition:.2s;
-}
-
-.option:hover{
-transform:translateY(-3px);
-box-shadow:0 7px 20px #0001;
-}
-
-.option h3{
-color:#075eaa;
-margin-bottom:8px;
-}
-
-button,
-.btn{
-display:inline-block;
-border:0;
-border-radius:8px;
-background:#0878cf;
-color:#fff;
-padding:11px 17px;
-cursor:pointer;
-font-size:15px;
-font-weight:bold;
-text-decoration:none;
-margin:5px 3px 0 0;
-}
-
-button:hover,
-.btn:hover{
-opacity:.9;
-}
-
-.green{
-background:#159447;
-}
-
-.orange{
-background:#e67e22;
-}
-
-.dark{
-background:#34495e;
-}
-
-.red{
-background:#d93434;
-}
-
-.purple{
-background:#7139b7;
+.section{
+background:white;
+margin:25px 0;
+padding:28px;
+border-radius:18px;
+box-shadow:0 5px 25px #0001;
 }
 
 .hidden{
 display:none!important;
 }
 
-.selection{
-background:#edf7ff;
-border-left:5px solid #0878cf;
-padding:14px;
-border-radius:9px;
-margin-bottom:15px;
+.title{
+text-align:center;
+margin-bottom:25px;
 }
 
-.lesson{
-background:#f8fbff;
-border:1px solid #d6e7f4;
-border-radius:13px;
-padding:18px;
-margin-bottom:12px;
-}
-
-.lesson h3{
+.title h2{
+font-size:30px;
 color:#075eaa;
-margin-bottom:5px;
 }
 
-.search{
-width:100%;
-padding:13px;
-border:1px solid #ccd5df;
-border-radius:8px;
-font-size:16px;
-margin:12px 0 15px;
+.title p{
+color:#667085;
 }
 
-.notes{
-font-size:17px;
+.hero{
+display:grid;
+grid-template-columns:1.4fr .8fr;
+gap:25px;
+align-items:center;
 }
 
-.notes-box{
-background:#f8fbff;
-border:1px solid #d7e6f2;
-border-radius:12px;
-padding:20px;
-margin:15px 0;
-}
-
-.notes-box h3{
+.hero h2{
+font-size:35px;
 color:#075eaa;
 margin-bottom:10px;
 }
 
+.hero p{
+font-size:18px;
+color:#566474;
+}
+
+.hero-box{
+background:#edf8ff;
+border:1px solid #cde8fb;
+border-radius:18px;
+padding:30px;
+text-align:center;
+}
+
+.hero-icon{
+font-size:90px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:18px;
+}
+
+.grid3{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
+}
+
+.card{
+background:white;
+border:1px solid #dbe5ee;
+border-radius:16px;
+padding:24px;
+text-align:center;
+transition:.2s;
+}
+
+.card:hover{
+transform:translateY(-4px);
+box-shadow:0 12px 25px #0002;
+}
+
+.icon{
+font-size:48px;
+margin-bottom:8px;
+}
+
+.card h3{
+color:#075eaa;
+margin-bottom:8px;
+}
+
+.card p{
+color:#667085;
+margin-bottom:12px;
+}
+
+.btn{
+border:0;
+padding:11px 18px;
+border-radius:9px;
+color:white;
+font-weight:bold;
+cursor:pointer;
+margin:4px;
+}
+
+.btn:hover{
+opacity:.9;
+transform:translateY(-1px);
+}
+
+.blue{background:#0878cf}
+.green{background:#159447}
+.orange{background:#e67e22}
+.red{background:#d93636}
+.purple{background:#7040b8}
+.teal{background:#008c95}
+.dark{background:#26384d}
+.gray{background:#667085}
+
+.module{
+background:#f8fbfd;
+border:1px solid #dce6ef;
+border-radius:14px;
+padding:20px;
+margin-bottom:16px;
+}
+
+.module h3{
+color:#075eaa;
+margin-bottom:15px;
+}
+
+.lesson-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:10px;
+}
+
+.lesson{
+background:white;
+border:1px solid #ccd9e5;
+border-radius:9px;
+padding:12px;
+text-align:left;
+cursor:pointer;
+font-weight:bold;
+color:#173b63;
+}
+
+.lesson:hover{
+background:#eaf6ff;
+}
+
+.search{
+width:100%;
+padding:14px;
+border:1px solid #ccd8e2;
+border-radius:9px;
+font-size:16px;
+margin-bottom:20px;
+}
+
+.notes{
+padding:10px;
+}
+
+.notes h2{
+color:#075eaa;
+margin-bottom:15px;
+}
+
+.notes h3{
+color:#0878cf;
+margin-top:22px;
+margin-bottom:8px;
+}
+
 .point{
-background:#fff;
+background:#f4f9fd;
 border-left:4px solid #0878cf;
-padding:10px 14px;
+padding:12px;
 margin:8px 0;
 border-radius:6px;
 }
 
-.qa{
-background:#fff;
-border:1px solid #ddd;
-padding:15px;
-margin:10px 0;
-border-radius:10px;
+.example{
+background:#fff8df;
+border-left:4px solid #e3a800;
+padding:14px;
+margin:12px 0;
+border-radius:7px;
 }
 
-.mcq{
+.quiz-top{
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+gap:10px;
 background:#edf7ff;
 padding:15px;
 border-radius:10px;
-margin:10px 0;
+margin-bottom:20px;
 }
 
-.mcq ol{
-margin:8px 0 8px 25px;
+.question{
+background:#f8fafc;
+border:1px solid #dce5ed;
+border-radius:12px;
+padding:20px;
+margin-bottom:15px;
+}
+
+.question h3{
+margin-bottom:12px;
+}
+
+.option{
+display:block;
+padding:9px;
+margin:5px 0;
+border-radius:7px;
+cursor:pointer;
+}
+
+.option:hover{
+background:#eaf5fd;
+}
+
+.option input{
+margin-right:8px;
+}
+
+.result{
+background:#eaf8ef;
+border:1px solid #9bd6aa;
+padding:25px;
+border-radius:12px;
+text-align:center;
+margin-top:20px;
+}
+
+.result h2{
+color:#14823b;
+margin-bottom:10px;
+}
+
+.progress{
+height:20px;
+background:#dfe7ee;
+border-radius:20px;
+overflow:hidden;
+margin:12px 0;
+}
+
+.progress-fill{
+height:100%;
+width:0%;
+background:#0878cf;
+transition:.4s;
 }
 
 .notice{
 background:#fff8dc;
-border-left:5px solid #e2ad00;
+border-left:5px solid #dfaa00;
 padding:15px;
 border-radius:8px;
 margin-bottom:20px;
 }
 
-.back-buttons{
-display:flex;
-gap:8px;
-flex-wrap:wrap;
+.practical-box{
+background:#f8fbfd;
+border:1px solid #dce5ed;
+border-radius:12px;
+padding:20px;
 margin-top:20px;
 }
 
-details{
-background:#fff;
-padding:8px 12px;
-border-radius:7px;
-margin-top:10px;
-}
-
-summary{
-cursor:pointer;
-font-weight:bold;
-color:#075eaa;
-}
-
 footer{
-background:#172033;
-color:#fff;
+background:#101d2d;
+color:white;
 text-align:center;
-padding:25px;
+padding:30px 15px;
 margin-top:30px;
 }
 
-@media(max-width:900px){
+@media(max-width:950px){
 
 .grid{
 grid-template-columns:repeat(2,1fr);
 }
 
 .grid3{
+grid-template-columns:repeat(2,1fr);
+}
+
+.hero{
+grid-template-columns:1fr;
+}
+
+.lesson-grid{
 grid-template-columns:repeat(2,1fr);
 }
 
@@ -285,26 +384,35 @@ grid-template-columns:repeat(2,1fr);
 @media(max-width:600px){
 
 header h1{
-font-size:27px;
+font-size:28px;
 }
 
-.container{
-padding:10px;
-}
-
-.card{
-padding:16px;
+.logo{
+font-size:48px;
 }
 
 .grid,
-.grid3{
+.grid3,
+.lesson-grid{
 grid-template-columns:1fr;
 }
 
-.btn,
-button{
+.section{
+padding:18px;
+}
+
+.hero h2{
+font-size:27px;
+}
+
+.btn{
 width:100%;
-text-align:center;
+margin:5px 0;
+}
+
+nav button{
+font-size:13px;
+padding:8px;
 }
 
 }
@@ -314,16 +422,15 @@ text-align:center;
 header,
 nav,
 footer,
-.notice,
-.back-buttons{
+.btn{
 display:none!important;
 }
 
 body{
-background:#fff;
+background:white;
 }
 
-.card{
+.section{
 box-shadow:none;
 }
 
@@ -336,253 +443,487 @@ box-shadow:none;
 
 <header>
 
-<h1>📚 Student Study Hub</h1>
+<div class="logo">💻</div>
 
-<p>
-CBSE • RBSE • NCERT
-<br>
-Hindi Medium • English Medium
-<br>
-Class 1–12 • Subjects • Lessons • Notes
-</p>
+<h1>Computer Study Hub</h1>
+
+<p>Basic से Advanced Computer Course</p>
+
+<p>🇮🇳 Hindi Medium | 🇬🇧 English Medium</p>
 
 </header>
 
-
 <nav>
 
-<a href="#home">🏠 Home</a>
-<a href="#study">📚 Study</a>
-<a href="#about">ℹ️ About</a>
+<button onclick="home()">🏠 Home</button>
+<button onclick="language()">🌐 Language</button>
+<button onclick="courses()">📚 Courses</button>
+<button onclick="practical()">🖥️ Practical</button>
+<button onclick="quiz()">🧠 120 MCQ</button>
+<button onclick="progress()">📊 Progress</button>
 
 </nav>
 
-
 <div class="container">
 
-<section class="card" id="home">
 
-<div class="notice">
+<!-- HOME -->
 
-<b>🎓 Free Study Portal</b>
+<section id="home" class="section">
+
+<div class="hero">
+
+<div>
+
+<h2>🚀 Computer सीखें Zero से</h2>
+
+<p>
+यह website उन विद्यार्थियों के लिए है जो Computer को
+बिल्कुल शुरुआत से सीखना चाहते हैं।
+</p>
+
+<p>
+Basic Computer से लेकर Office, Internet, Hardware,
+Networking, Cyber Safety, Web Development,
+Programming और AI तक सीखें।
+</p>
 
 <br>
 
-गरीब या जरूरतमंद विद्यार्थी भी
-अपने मोबाइल से किताब और study notes
-तक पहुँच सकें—इसी उद्देश्य से यह structure बनाया गया है।
+<button class="btn blue" onclick="language()">
+📖 Start Learning
+</button>
 
-<br><br>
+<button class="btn green" onclick="courses()">
+📚 View Courses
+</button>
 
-<strong>
-Board → Medium → Class → Subject → Lesson → Notes
-</strong>
+</div>
 
-<br><br>
+<div class="hero-box">
 
-📚 मूल पुस्तक के लिए केवल
-<strong>Official NCERT</strong>
-source button दिया गया है।
+<div class="hero-icon">🖥️</div>
+
+<h3>Learn • Practice • Test</h3>
+
+<p>एक ही जगह Computer Education</p>
+
+</div>
 
 </div>
 
 </section>
 
 
-<section class="card" id="study">
+<!-- LANGUAGE -->
 
-<h2>📚 Study Material</h2>
+<section id="language" class="section hidden">
 
+<div class="title">
 
-<!-- BOARD -->
+<h2>🌐 Learning Language</h2>
 
-<div id="boardStep">
+<p>अपनी पसंद की भाषा चुनें</p>
 
-<h3>1️⃣ Board चुनें</h3>
+</div>
 
 <div class="grid3">
 
-<div class="option">
+<div class="card">
 
-<h3>📘 CBSE</h3>
+<div class="icon">🇮🇳</div>
 
-<p>Central Board</p>
+<h3>Hindi Medium</h3>
 
-<button onclick="chooseBoard('CBSE')">
-CBSE
+<p>आसान हिंदी में Computer सीखें।</p>
+
+<button class="btn blue"
+onclick="setLanguage('Hindi')">
+हिंदी चुनें
 </button>
 
 </div>
 
-<div class="option">
+<div class="card">
 
-<h3>📕 RBSE</h3>
+<div class="icon">🇬🇧</div>
 
-<p>Rajasthan Board</p>
+<h3>English Medium</h3>
 
-<button onclick="chooseBoard('RBSE')">
-RBSE
+<p>Learn Computer in simple English.</p>
+
+<button class="btn green"
+onclick="setLanguage('English')">
+Choose English
 </button>
 
 </div>
 
-<div class="option">
+<div class="card">
 
-<h3>📗 NCERT</h3>
+<div class="icon">🌐</div>
 
-<p>NCERT Textbooks</p>
+<h3>Hindi + English</h3>
 
-<button onclick="chooseBoard('NCERT')">
-NCERT
-</button>
+<p>दोनों भाषाओं में सीखें।</p>
 
-</div>
-
-</div>
-
-</div>
-
-
-<!-- MEDIUM -->
-
-<div id="mediumStep" class="hidden">
-
-<br>
-
-<h3>2️⃣ Medium चुनें</h3>
-
-<div class="grid3">
-
-<div class="option">
-
-<h3>🇮🇳 हिंदी माध्यम</h3>
-
-<button onclick="chooseMedium('Hindi')">
-Hindi Medium
-</button>
-
-</div>
-
-<div class="option">
-
-<h3>🇬🇧 English Medium</h3>
-
-<button onclick="chooseMedium('English')">
-English Medium
+<button class="btn purple"
+onclick="setLanguage('Both')">
+Both
 </button>
 
 </div>
 
 </div>
 
+</section>
+
+
+<!-- COURSES -->
+
+<section id="courses" class="section hidden">
+
+<div class="title">
+
+<h2>📚 Computer Courses</h2>
+
+<p id="languageInfo">Basic से Professional तक</p>
+
 </div>
-
-
-<!-- CLASS -->
-
-<div id="classStep" class="hidden">
-
-<br>
-
-<h3>3️⃣ Class चुनें</h3>
 
 <div class="grid">
 
-<script>
+<div class="card">
 
-for(let i=1;i<=12;i++){
+<div class="icon">🟢</div>
 
-document.write(`
+<h3>Basic Computer</h3>
 
-<div class="option">
+<p>Zero से Computer सीखें।</p>
 
-<h3>Class ${i}</h3>
-
-<button onclick="chooseClass(${i})">
-📚 Open Class
+<button class="btn green"
+onclick="openCourse('basic')">
+Start
 </button>
 
 </div>
 
-`);
+<div class="card">
 
-}
+<div class="icon">🔵</div>
 
-</script>
+<h3>Intermediate</h3>
+
+<p>Office और Internet skills।</p>
+
+<button class="btn blue"
+onclick="openCourse('intermediate')">
+Start
+</button>
+
+</div>
+
+<div class="card">
+
+<div class="icon">🟠</div>
+
+<h3>Advanced</h3>
+
+<p>Technical Computer skills।</p>
+
+<button class="btn orange"
+onclick="openCourse('advanced')">
+Start
+</button>
+
+</div>
+
+<div class="card">
+
+<div class="icon">🔴</div>
+
+<h3>Professional</h3>
+
+<p>Programming और Web skills।</p>
+
+<button class="btn red"
+onclick="openCourse('professional')">
+Start
+</button>
 
 </div>
 
 </div>
 
+</section>
 
-<!-- SUBJECT -->
 
-<div id="subjectStep" class="hidden">
+<!-- COURSE CONTENT -->
 
-<br>
+<section id="courseContent" class="section hidden">
 
-<h3>4️⃣ Subject चुनें</h3>
+<div class="title">
 
-<div id="selection"></div>
+<h2 id="courseTitle"></h2>
 
-<div id="subjectList"></div>
+<p id="courseDescription"></p>
 
 </div>
+
+<input
+id="search"
+class="search"
+placeholder="🔎 Lesson खोजें..."
+oninput="searchLessons()">
+
+<div id="modules"></div>
+
+</section>
 
 
 <!-- LESSON -->
 
-<div id="lessonStep" class="hidden">
+<section id="lesson" class="section hidden">
 
-<br>
+<div class="notes">
 
-<h3>5️⃣ Lesson / Chapter चुनें</h3>
+<h2 id="lessonTitle"></h2>
 
-<div id="lessonSelection"></div>
+<div id="lessonContent"></div>
 
-<input
-id="lessonSearch"
-class="search"
-placeholder="🔎 Lesson / Chapter खोजें..."
-oninput="searchLessons()">
+<button class="btn green"
+onclick="completeLesson()">
+✅ Lesson Complete
+</button>
 
-<div id="lessonList"></div>
+<button class="btn blue"
+onclick="practical()">
+🖥️ Practical
+</button>
 
-</div>
+<button class="btn purple"
+onclick="quiz()">
+🧠 Quiz
+</button>
 
+<button class="btn orange"
+onclick="window.print()">
+🖨️ Print
+</button>
 
-<!-- NOTES -->
-
-<div id="notesStep" class="hidden">
-
-<br>
-
-<h2 id="notesTitle"></h2>
-
-<div id="notesHeader"></div>
-
-<div id="notesContent" class="notes"></div>
+<button class="btn dark"
+onclick="backCourse()">
+⬅️ Back
+</button>
 
 </div>
 
 </section>
 
 
-<section class="card" id="about">
+<!-- PRACTICAL -->
 
-<h2>ℹ️ About</h2>
+<section id="practical" class="section hidden">
 
-<p>
-यह website विद्यार्थियों को
-Board, Medium, Class और Subject के अनुसार
-study material व्यवस्थित रूप से उपलब्ध कराने के लिए बनाई गई है।
-</p>
+<div class="title">
 
-<br>
+<h2>🖥️ Computer Practical</h2>
 
-<p>
-Official textbooks के लिए NCERT का official source इस्तेमाल किया गया है।
-</p>
+<p>Computer को करके सीखें</p>
+
+</div>
+
+<div class="grid3">
+
+<div class="card">
+
+<div class="icon">⌨️</div>
+
+<h3>Keyboard</h3>
+
+<p>Typing और shortcut keys</p>
+
+<button class="btn blue"
+onclick="showPractical('Keyboard')">
+Open
+</button>
+
+</div>
+
+<div class="card">
+
+<div class="icon">🪟</div>
+
+<h3>Windows</h3>
+
+<p>Files, folders और settings</p>
+
+<button class="btn green"
+onclick="showPractical('Windows')">
+Open
+</button>
+
+</div>
+
+<div class="card">
+
+<div class="icon">📄</div>
+
+<h3>MS Word</h3>
+
+<p>Documents और formatting</p>
+
+<button class="btn orange"
+onclick="showPractical('Word')">
+Open
+</button>
+
+</div>
+
+<div class="card">
+
+<div class="icon">📊</div>
+
+<h3>MS Excel</h3>
+
+<p>Formula और data</p>
+
+<button class="btn purple"
+onclick="showPractical('Excel')">
+Open
+</button>
+
+</div>
+
+<div class="card">
+
+<div class="icon">🎞️</div>
+
+<h3>PowerPoint</h3>
+
+<p>Presentation बनाना</p>
+
+<button class="btn red"
+onclick="showPractical('PowerPoint')">
+Open
+</button>
+
+</div>
+
+<div class="card">
+
+<div class="icon">🌐</div>
+
+<h3>Internet</h3>
+
+<p>Search, Email और Upload</p>
+
+<button class="btn teal"
+onclick="showPractical('Internet')">
+Open
+</button>
+
+</div>
+
+</div>
+
+<div id="practicalOutput"></div>
+
+</section>
+
+
+<!-- QUIZ -->
+
+<section id="quiz" class="section hidden">
+
+<div class="title">
+
+<h2>🧠 Computer Mega Quiz</h2>
+
+<p>Question Bank: <b>120 Questions</b></p>
+
+</div>
+
+<div class="notice">
+
+<strong>Quiz Rules:</strong>
+
+120 questions का पूरा question bank उपलब्ध है।
+हर attempt में 20 questions random रूप से आएँगे।
+आप Next/Previous से प्रश्न बदल सकते हैं।
+
+</div>
+
+<div class="quiz-top">
+
+<b>
+Question:
+<span id="questionNumber">1</span>/20
+</b>
+
+<b>
+Score:
+<span id="liveScore">0</span>
+</b>
+
+</div>
+
+<div id="quizArea"></div>
+
+<div>
+
+<button class="btn gray"
+onclick="previousQuestion()">
+⬅️ Previous
+</button>
+
+<button class="btn blue"
+onclick="nextQuestion()">
+Next ➡️
+</button>
+
+<button class="btn green"
+onclick="finishQuiz()">
+✅ Submit Quiz
+</button>
+
+</div>
+
+<div id="quizResult"></div>
+
+</section>
+
+
+<!-- PROGRESS -->
+
+<section id="progress" class="section hidden">
+
+<div class="title">
+
+<h2>📊 My Progress</h2>
+
+<p>अपनी learning progress देखें</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+Completed Lessons:
+<span id="completed">0</span>
+</h3>
+
+<div class="progress">
+
+<div id="progressFill"
+class="progress-fill">
+</div>
+
+</div>
+
+<p id="progressText"></p>
+
+</div>
 
 </section>
 
@@ -591,919 +932,531 @@ Official textbooks के लिए NCERT का official source इस्ते
 
 <footer>
 
-© 2026 Student Study Hub
+<h2>💻 Computer Study Hub</h2>
 
-<br><br>
+<p>Basic → Intermediate → Advanced → Professional</p>
 
-CBSE • RBSE • NCERT
+<p>Hindi Medium 🇮🇳 | English Medium 🇬🇧</p>
+
+<p>© 2026 Computer Study Hub</p>
 
 </footer>
 
 
 <script>
 
-/* =====================================================
-BASIC VARIABLES
-===================================================== */
+/* ==============================
+GLOBAL
+============================== */
 
-let selectedBoard="";
-let selectedMedium="";
-let selectedClass=0;
-let selectedSubject="";
+let currentCourse="";
+let currentLesson=null;
+let selectedLanguage="Hindi";
 
-
-const NCERT_PDF="https://ncert.nic.in/textbook/pdf/";
-const NCERT_BOOKS="https://ncert.nic.in/textbook.php";
+let completed=
+Number(localStorage.getItem("completedLessons")||0);
 
 
-/* =====================================================
-SUBJECTS
-===================================================== */
+/* ==============================
+COURSE DATA
+============================== */
 
-const subjects={
+const courseData={
 
-1:["हिंदी","English","गणित","पर्यावरण अध्ययन"],
+basic:{
+title:"🟢 Basic Computer Course",
+description:"Computer बिल्कुल शुरुआत से सीखें।",
 
-2:["हिंदी","English","गणित","पर्यावरण अध्ययन"],
+modules:[
 
-3:["हिंदी","English","गणित","पर्यावरण अध्ययन"],
-
-4:["हिंदी","English","गणित","पर्यावरण अध्ययन"],
-
-5:["हिंदी","English","गणित","पर्यावरण अध्ययन"],
-
-6:[
-"हिंदी",
-"English",
-"गणित",
-"विज्ञान",
-"सामाजिक विज्ञान",
-"संस्कृत"
-],
-
-7:[
-"हिंदी",
-"English",
-"गणित",
-"विज्ञान",
-"सामाजिक विज्ञान",
-"संस्कृत"
-],
-
-8:[
-"हिंदी",
-"English",
-"गणित",
-"विज्ञान",
-"सामाजिक विज्ञान",
-"संस्कृत"
-],
-
-9:[
-"हिंदी",
-"English",
-"गणित",
-"विज्ञान",
-"सामाजिक विज्ञान",
-"संस्कृत"
-],
-
-10:[
-"हिंदी",
-"English",
-"गणित",
-"विज्ञान",
-"सामाजिक विज्ञान",
-"संस्कृत"
-],
-
-11:[
-"हिंदी",
-"English",
-"भौतिक विज्ञान",
-"रसायन विज्ञान",
-"जीव विज्ञान",
-"गणित",
-"इतिहास",
-"राजनीति विज्ञान",
-"भूगोल",
-"अर्थशास्त्र"
-],
-
-12:[
-"हिंदी",
-"English",
-"भौतिक विज्ञान",
-"रसायन विज्ञान",
-"जीव विज्ञान",
-"गणित",
-"इतिहास",
-"राजनीति विज्ञान",
-"भूगोल",
-"अर्थशास्त्र"
+{
+title:"Module 1 — Computer Fundamentals",
+lessons:[
+"Computer क्या है?",
+"Computer की विशेषताएँ",
+"Computer के प्रकार",
+"Hardware क्या है?",
+"Software क्या है?",
+"Input Devices",
+"Output Devices",
+"CPU क्या है?",
+"RAM और ROM",
+"Storage Devices"
 ]
+},
+
+{
+title:"Module 2 — Keyboard & Mouse",
+lessons:[
+"Keyboard Introduction",
+"Keyboard के Parts",
+"Function Keys",
+"Shortcut Keys",
+"Mouse क्या है?",
+"Mouse Buttons",
+"Mouse Practice"
+]
+},
+
+{
+title:"Module 3 — Windows Basics",
+lessons:[
+"Windows क्या है?",
+"Desktop",
+"Start Menu",
+"Taskbar",
+"Icons",
+"File क्या है?",
+"Folder क्या है?",
+"Folder बनाना",
+"Copy और Paste",
+"Delete और Restore"
+]
+},
+
+{
+title:"Module 4 — Typing",
+lessons:[
+"Typing क्या है?",
+"Home Row",
+"English Typing",
+"Capital Letters",
+"Number Typing",
+"Typing Speed",
+"Hindi Typing"
+]
+}
+
+]
+},
+
+
+intermediate:{
+title:"🔵 Intermediate Computer Course",
+description:"Office और Internet skills सीखें।",
+
+modules:[
+
+{
+title:"Module 1 — MS Word",
+lessons:[
+"MS Word क्या है?",
+"Word Open करना",
+"New Document",
+"Text Formatting",
+"Font और Size",
+"Bold Italic Underline",
+"Paragraph",
+"Bullets",
+"Tables",
+"Images",
+"Page Setup",
+"Header Footer",
+"Print"
+]
+},
+
+{
+title:"Module 2 — MS Excel",
+lessons:[
+"Excel क्या है?",
+"Workbook",
+"Worksheet",
+"Rows और Columns",
+"Cells",
+"Data Entry",
+"Formula",
+"SUM",
+"AVERAGE",
+"COUNT",
+"IF Function",
+"Sorting",
+"Filtering",
+"Charts"
+]
+},
+
+{
+title:"Module 3 — PowerPoint",
+lessons:[
+"PowerPoint क्या है?",
+"New Presentation",
+"Slides",
+"Design",
+"Images",
+"Transitions",
+"Animations",
+"Slide Show",
+"Presentation Tips"
+]
+},
+
+{
+title:"Module 4 — Internet & Email",
+lessons:[
+"Internet क्या है?",
+"Web Browser",
+"Google Search",
+"Website",
+"Email",
+"Gmail",
+"Attachment",
+"Download",
+"Upload",
+"Google Drive",
+"Online Forms"
+]
+}
+
+]
+},
+
+
+advanced:{
+title:"🟠 Advanced Computer Course",
+description:"Technical Computer skills सीखें।",
+
+modules:[
+
+{
+title:"Module 1 — Hardware",
+lessons:[
+"Motherboard",
+"Processor",
+"RAM",
+"Hard Disk",
+"SSD",
+"Power Supply",
+"Graphics Card",
+"Monitor",
+"Printer",
+"Hardware Troubleshooting"
+]
+},
+
+{
+title:"Module 2 — Networking",
+lessons:[
+"Network क्या है?",
+"LAN",
+"WAN",
+"MAN",
+"Router",
+"Switch",
+"IP Address",
+"MAC Address",
+"DNS",
+"Wi-Fi",
+"Internet Security"
+]
+},
+
+{
+title:"Module 3 — Cyber Safety",
+lessons:[
+"Cyber Security",
+"Strong Password",
+"Two Factor Authentication",
+"Phishing",
+"Malware",
+"Virus",
+"Ransomware Awareness",
+"Safe Browsing",
+"Online Scam",
+"Privacy"
+]
+},
+
+{
+title:"Module 4 — Windows Advanced",
+lessons:[
+"Windows Settings",
+"User Accounts",
+"Task Manager",
+"Device Manager",
+"Disk Management",
+"System Restore",
+"Windows Update",
+"Troubleshooting"
+]
+}
+
+]
+},
+
+
+professional:{
+title:"🔴 Professional Computer Course",
+description:"Programming, Web और AI skills सीखें।",
+
+modules:[
+
+{
+title:"Module 1 — HTML",
+lessons:[
+"HTML क्या है?",
+"HTML Document",
+"Headings",
+"Paragraph",
+"Links",
+"Images",
+"Lists",
+"Tables",
+"Forms",
+"HTML Project"
+]
+},
+
+{
+title:"Module 2 — CSS",
+lessons:[
+"CSS क्या है?",
+"Colors",
+"Fonts",
+"Background",
+"Borders",
+"Margin",
+"Padding",
+"Flexbox",
+"Grid",
+"Responsive Design"
+]
+},
+
+{
+title:"Module 3 — JavaScript",
+lessons:[
+"JavaScript क्या है?",
+"Variables",
+"Data Types",
+"Operators",
+"If Else",
+"Loops",
+"Functions",
+"Arrays",
+"Objects",
+"DOM"
+]
+},
+
+{
+title:"Module 4 — Python",
+lessons:[
+"Python क्या है?",
+"Installation",
+"Variables",
+"Data Types",
+"Operators",
+"If Else",
+"Loops",
+"Functions",
+"Lists",
+"Dictionaries",
+"Python Project"
+]
+},
+
+{
+title:"Module 5 — AI",
+lessons:[
+"Artificial Intelligence",
+"AI और Computer",
+"Generative AI",
+"Prompt",
+"AI से Study",
+"AI Productivity",
+"AI Safety",
+"Future Skills"
+]
+},
+
+{
+title:"Module 6 — Career",
+lessons:[
+"Computer Operator",
+"Data Entry",
+"Resume",
+"Professional Email",
+"Online Work",
+"Office Skills",
+"Freelancing",
+"Interview Questions"
+]
+}
+
+]
+}
 
 };
 
 
-/* =====================================================
-CLASS 10 HINDI KSHITIJ
-===================================================== */
-
-const hindi10=[
-
-["पाठ 1 – सूरदास","jhks101.pdf"],
-
-["पाठ 2 – राम-लक्ष्मण-परशुराम संवाद","jhks102.pdf"],
-
-["पाठ 3 – आत्मकथ्य","jhks103.pdf"],
-
-["पाठ 4 – उत्साह और अट नहीं रही है","jhks104.pdf"],
-
-["पाठ 5 – यह दंतुरित मुस्कान और फसल","jhks105.pdf"],
-
-["पाठ 6 – संगतकार","jhks106.pdf"],
-
-["पाठ 7 – नेताजी का चश्मा","jhks107.pdf"],
-
-["पाठ 8 – बालगोबिन भगत","jhks108.pdf"],
-
-["पाठ 9 – लखनवी अंदाज़","jhks109.pdf"],
-
-["पाठ 10 – एक कहानी यह भी","jhks110.pdf"],
-
-["पाठ 11 – नौबतखाने में इबादत","jhks111.pdf"],
-
-["पाठ 12 – संस्कृति","jhks112.pdf"],
-
-["पाठ 13","jhks113.pdf"]
-
-];
-
-
-/* =====================================================
-CLASS 10 SCIENCE
-===================================================== */
-
-const science10=[
-
-"रासायनिक अभिक्रियाएँ एवं समीकरण",
-
-"अम्ल, क्षारक एवं लवण",
-
-"धातु एवं अधातु",
-
-"कार्बन एवं उसके यौगिक",
-
-"तत्वों का आवर्त वर्गीकरण",
-
-"जैव प्रक्रम",
-
-"नियंत्रण एवं समन्वय",
-
-"जीव जनन कैसे करते हैं?",
-
-"आनुवंशिकता",
-
-"प्रकाश – परावर्तन तथा अपवर्तन"
-
-];
-
-
-/* =====================================================
-CLASS 10 MATHS
-===================================================== */
-
-const maths10=[
-
-"वास्तविक संख्याएँ",
-
-"बहुपद",
-
-"दो चरों वाले रैखिक समीकरण युग्म",
-
-"द्विघात समीकरण",
-
-"समांतर श्रेढ़ियाँ",
-
-"त्रिभुज",
-
-"निर्देशांक ज्यामिति",
-
-"त्रिकोणमिति का परिचय",
-
-"त्रिकोणमिति के कुछ अनुप्रयोग",
-
-"वृत्त",
-
-"रचनाएँ",
-
-"वृत्तों से संबंधित क्षेत्रफल",
-
-"पृष्ठीय क्षेत्रफल और आयतन",
-
-"सांख्यिकी",
-
-"प्रायिकता"
-
-];
-
-
-/* =====================================================
-CLASS 10 SOCIAL SCIENCE
-===================================================== */
-
-const social10={
-
-"इतिहास":[
-
-"यूरोप में राष्ट्रवाद का उदय",
-
-"भारत में राष्ट्रवाद",
-
-"भूमंडलीकृत विश्व का बनना",
-
-"औद्योगीकरण का युग",
-
-"मुद्रण संस्कृति और आधुनिक दुनिया"
-
-],
-
-"भूगोल":[
-
-"संसाधन और विकास",
-
-"वन एवं वन्यजीव संसाधन",
-
-"जल संसाधन",
-
-"कृषि",
-
-"खनिज और ऊर्जा संसाधन",
-
-"विनिर्माण उद्योग",
-
-"राष्ट्रीय अर्थव्यवस्था की जीवन रेखाएँ"
-
-],
-
-"राजनीति विज्ञान":[
-
-"सत्ता की साझेदारी",
-
-"संघवाद",
-
-"लैंगिकता, धर्म और जाति",
-
-"राजनीतिक दल",
-
-"लोकतंत्र के परिणाम"
-],
-
-"अर्थशास्त्र":[
-
-"विकास",
-
-"भारतीय अर्थव्यवस्था के क्षेत्रक",
-
-"मुद्रा और साख",
-
-"वैश्वीकरण और भारतीय अर्थव्यवस्था",
-
-"उपभोक्ता अधिकार"
-]
-
-};
-
-
-/* =====================================================
-OFFICIAL PDF MAP
-===================================================== */
-
-const officialPDF={
-
-"हिंदी":{
-
-page:"https://ncert.nic.in/textbook.php?ihks1=2-13",
-
-files:hindi10.map(x=>x[1])
-
-},
-
-"गणित":{
-
-page:"https://ncert.nic.in/textbook.php?hemh1=1-11",
-
-files:Array.from(
-{length:14},
-(_,i)=>`jemh${String(i+1).padStart(2,"0")}.pdf`
-)
-
-},
-
-"विज्ञान":{
-
-page:"https://ncert.nic.in/textbook.php?gesc1=1-10",
-
-files:Array.from(
-{length:10},
-(_,i)=>`jesc1${String(i+1).padStart(2,"0")}.pdf`
-)
-
-},
-
-"सामाजिक विज्ञान":{
-
-page:"https://ncert.nic.in/textbook.php",
-
-files:[]
-
-},
-
-"English":{
-
-page:"https://ncert.nic.in/textbook.php",
-
-files:[]
-
-},
-
-"संस्कृत":{
-
-page:"https://ncert.nic.in/textbook.php",
-
-files:[]
-
-}
-
-};
-
-
-/* =====================================================
-GENERIC NOTES
-===================================================== */
-
-function makeNotes(name,subject,index){
-
-return {
-
-name:name,
-
-summary:
-`यह ${subject} के "${name}" अध्याय के लिए Original Study Notes हैं। सबसे पहले अध्याय की मुख्य अवधारणा समझें और फिर प्रश्नों का अभ्यास करें।`,
-
-points:[
-
-"अध्याय को ध्यान से पढ़ें।",
-
-"मुख्य परिभाषाएँ और अवधारणाएँ लिखें।",
-
-"महत्वपूर्ण उदाहरण समझें।",
-
-"अभ्यास प्रश्न स्वयं हल करें।",
-
-"परीक्षा से पहले revision करें।"
-
-],
-
-questions:[
-
-[
-"इस अध्याय की तैयारी कैसे करें?",
-
-"पहले पाठ को समझें, फिर मुख्य बिंदु लिखें और अंत में अभ्यास प्रश्न हल करें।"
-],
-
-[
-"Revision कैसे करें?",
-
-"मुख्य शब्द, परिभाषाएँ, उदाहरण और महत्वपूर्ण प्रश्न दोहराएँ।"
-]
-
-],
-
-mcq:[
-
-[
-"अच्छी तैयारी के लिए क्या जरूरी है?",
-
-[
-"नियमित अभ्यास",
-"केवल अनुमान",
-"पढ़ाई छोड़ना",
-"बिना समझे लिखना"
-],
-
-0
-
-]
-
-]
-
-};
-
-}
-
-
-/* =====================================================
-BUILD LESSON LIST
-===================================================== */
-
-function getLessons(){
-
-if(selectedClass!==10){
-
-return Array.from(
-{length:10},
-(_,i)=>({
-id:i+1,
-name:"Lesson "+(i+1),
-pdf:"",
-notes:makeNotes(
-"Lesson "+(i+1),
-selectedSubject,
-i
-)
-})
-);
-
-}
-
-
-if(selectedSubject==="हिंदी"){
-
-return hindi10.map((x,i)=>({
-
-id:i+1,
-name:x[0],
-pdf:x[1],
-notes:makeHindiNotes(x[0],i)
-
-}));
-
-}
-
-
-if(selectedSubject==="विज्ञान"){
-
-return science10.map((name,i)=>({
-
-id:i+1,
-name:name,
-pdf:`jesc1${String(i+1).padStart(2,"0")}.pdf`,
-notes:makeNotes(name,"विज्ञान",i)
-
-}));
-
-}
-
-
-if(selectedSubject==="गणित"){
-
-return maths10.map((name,i)=>({
-
-id:i+1,
-name:name,
-pdf:`jemh${String(i+1).padStart(2,"0")}.pdf`,
-notes:makeNotes(name,"गणित",i)
-
-}));
-
-}
-
-
-if(selectedSubject==="सामाजिक विज्ञान"){
-
-let result=[];
-let id=1;
-
-Object.keys(social10).forEach(book=>{
-
-social10[book].forEach((name,i)=>{
-
-let code="";
-
-if(book==="इतिहास"){
-code=`jess3${String(i+1).padStart(2,"0")}.pdf`;
-}
-
-if(book==="भूगोल"){
-code=`jess1${String(i+1).padStart(2,"0")}.pdf`;
-}
-
-if(book==="राजनीति विज्ञान"){
-code=`jess4${String(i+1).padStart(2,"0")}.pdf`;
-}
-
-if(book==="अर्थशास्त्र"){
-code=`jess2${String(i+1).padStart(2,"0")}.pdf`;
-}
-
-result.push({
-
-id:id++,
-
-name:`${book} – ${name}`,
-
-pdf:code,
-
-notes:makeNotes(name,book,i)
-
-});
-
-});
-
-});
-
-return result;
-
-}
-
-
-return Array.from(
-{length:10},
-(_,i)=>({
-
-id:i+1,
-
-name:`Chapter ${i+1}`,
-
-pdf:"",
-
-notes:makeNotes(
-`Chapter ${i+1}`,
-selectedSubject,
-i
-)
-
-})
-);
-
-}
-
-
-/* =====================================================
-HINDI NOTES
-===================================================== */
-
-function makeHindiNotes(name,index){
-
-const summaries=[
-
-"इस पाठ में सूरदास की कृष्णभक्ति, गोपियों का प्रेम और विरह तथा उद्धव के साथ उनका संवाद प्रस्तुत किया गया है।",
-
-"इस पाठ में राम, लक्ष्मण और परशुराम के संवाद के माध्यम से वीरता, क्रोध, विनम्रता और वाणी-कौशल दिखाई देता है।",
-
-"इस कविता में कवि अपने निजी जीवन और अनुभवों को आत्मकथात्मक दृष्टि से देखने की भावना प्रस्तुत करता है।",
-
-"इन कविताओं में प्रकृति, ऊर्जा, उत्साह और जीवन के प्रति सकारात्मक दृष्टिकोण दिखाई देता है।",
-
-"इन कविताओं में बालक की मासूम मुस्कान तथा किसान के श्रम से तैयार होने वाली फसल का सुंदर चित्रण है।",
-
-"कविता में संगतकार के सहयोग और सामूहिक सफलता में उसके महत्वपूर्ण योगदान को सामने रखा गया है।",
-
-"कहानी में देशभक्ति, सामाजिक संवेदना और सामान्य व्यक्ति की श्रद्धा को व्यंग्यात्मक ढंग से प्रस्तुत किया गया है।",
-
-"बालगोबिन भगत के सरल, संत, मेहनती और आध्यात्मिक व्यक्तित्व का चित्रण किया गया है।",
-
-"रचना में लखनऊ की तहज़ीब, नफासत और सामाजिक व्यवहार को हास्य-व्यंग्य के माध्यम से दिखाया गया है।",
-
-"यह आत्मकथात्मक रचना लेखिका के जीवन, परिवार, शिक्षा और साहित्यिक विकास से जुड़े अनुभव प्रस्तुत करती है।",
-
-"रचना में महान शहनाई कलाकार बिस्मिल्ला खाँ के जीवन और संगीत-साधना को प्रस्तुत किया गया है।",
-
-"इस पाठ में संस्कृति, सभ्यता, मानवीय मूल्य और रचनात्मक चेतना के संबंध को समझाया गया है।",
-
-"इस पाठ की तैयारी के लिए मूल NCERT पुस्तक को ध्यान से पढ़ना और मुख्य विचारों का revision करना उपयोगी है।"
-
-];
-
-return {
-
-summary:summaries[index]||summaries[12],
-
-points:[
-
-"पाठ को पहले पूरा पढ़ें।",
-
-"मुख्य विचार पहचानें।",
-
-"महत्वपूर्ण शब्दों का अर्थ समझें।",
-
-"पाठ के पात्र/कवि/लेखक की विशेषताएँ लिखें।",
-
-"प्रश्न-उत्तर का अभ्यास करें।"
-
-],
-
-questions:[
-
-[
-"इस पाठ का मुख्य भाव क्या है?",
-
-"इस पाठ का मुख्य भाव उसके विषय, पात्रों और घटनाओं के माध्यम से मानवीय संवेदना, विचार और जीवन-मूल्यों को समझना है।"
-],
-
-[
-"परीक्षा के लिए इस पाठ की तैयारी कैसे करें?",
-
-"पहले मूल पाठ पढ़ें, फिर मुख्य विचार, शब्दार्थ और महत्वपूर्ण प्रश्नों को दोहराएँ।"
-],
-
-[
-"Revision के लिए क्या करें?",
-
-"पाठ का सार अपने शब्दों में लिखें और महत्वपूर्ण बिंदुओं को दोहराएँ।"
-]
-
-],
-
-mcq:[
-
-[
-"अच्छी तैयारी के लिए सबसे जरूरी क्या है?",
-
-[
-"समझकर पढ़ना",
-"बिना पढ़े उत्तर देना",
-"केवल अनुमान लगाना",
-"Revision न करना"
-],
-
-0
-
-],
-
-[
-"पाठ याद रखने का अच्छा तरीका क्या है?",
-
-[
-"मुख्य बिंदु लिखना",
-"पढ़ाई छोड़ना",
-"केवल प्रश्न देखना",
-"उत्तर न पढ़ना"
-],
-
-0
-
-]
-
-]
-
-};
-
-}
-
-
-/* =====================================================
-BOARD
-===================================================== */
-
-function chooseBoard(board){
-
-selectedBoard=board;
+/* ==============================
+NAVIGATION
+============================== */
+
+function hideAll(){
 
 document
-.getElementById("mediumStep")
+.querySelectorAll(".section")
+.forEach(x=>x.classList.add("hidden"));
+
+}
+
+function home(){
+
+hideAll();
+
+document
+.getElementById("home")
 .classList.remove("hidden");
 
-scrollTo("mediumStep");
+window.scrollTo(0,0);
+
+}
+
+function language(){
+
+hideAll();
+
+document
+.getElementById("language")
+.classList.remove("hidden");
+
+window.scrollTo(0,0);
+
+}
+
+function courses(){
+
+hideAll();
+
+document
+.getElementById("courses")
+.classList.remove("hidden");
+
+window.scrollTo(0,0);
+
+}
+
+function practical(){
+
+hideAll();
+
+document
+.getElementById("practical")
+.classList.remove("hidden");
+
+window.scrollTo(0,0);
+
+}
+
+function quiz(){
+
+hideAll();
+
+document
+.getElementById("quiz")
+.classList.remove("hidden");
+
+startQuiz();
+
+window.scrollTo(0,0);
+
+}
+
+function progress(){
+
+hideAll();
+
+document
+.getElementById("progress")
+.classList.remove("hidden");
+
+updateProgress();
+
+window.scrollTo(0,0);
 
 }
 
 
-/* =====================================================
-MEDIUM
-===================================================== */
+/* ==============================
+LANGUAGE
+============================== */
 
-function chooseMedium(medium){
+function setLanguage(lang){
 
-selectedMedium=medium;
+selectedLanguage=lang;
 
 document
-.getElementById("classStep")
-.classList.remove("hidden");
+.getElementById("languageInfo")
+.innerText=
+lang==="Hindi"
+?
+"🇮🇳 Hindi Medium"
+:
+lang==="English"
+?
+"🇬🇧 English Medium"
+:
+"🇮🇳 Hindi + 🇬🇧 English";
 
-scrollTo("classStep");
+courses();
 
 }
 
 
-/* =====================================================
-CLASS
-===================================================== */
+/* ==============================
+COURSE
+============================== */
 
-function chooseClass(num){
+function openCourse(course){
 
-selectedClass=num;
+currentCourse=course;
 
-document
-.getElementById("subjectStep")
-.classList.remove("hidden");
+let data=courseData[course];
 
 document
-.getElementById("selection")
-.innerHTML=`
+.getElementById("courseTitle")
+.innerText=data.title;
 
-<div class="selection">
-
-<b>Board:</b> ${selectedBoard}
-<br>
-
-<b>Medium:</b> ${selectedMedium}
-<br>
-
-<b>Class:</b> ${selectedClass}
-
-</div>
-
-`;
+document
+.getElementById("courseDescription")
+.innerText=data.description;
 
 let html="";
 
-subjects[num].forEach(subject=>{
+data.modules.forEach((module,mi)=>{
 
 html+=`
 
-<div class="lesson">
+<div class="module searchable">
 
-<h3>📚 ${subject}</h3>
+<h3>${module.title}</h3>
 
-<p>
-${selectedMedium} • Class ${num}
-</p>
-
-<button onclick="chooseSubject('${subject}')">
-
-📖 Subject खोलें
-
-</button>
-
-</div>
+<div class="lesson-grid">
 
 `;
 
-});
-
-document
-.getElementById("subjectList")
-.innerHTML=html;
-
-scrollTo("subjectStep");
-
-}
-
-
-/* =====================================================
-SUBJECT
-===================================================== */
-
-function chooseSubject(subject){
-
-selectedSubject=subject;
-
-document
-.getElementById("lessonStep")
-.classList.remove("hidden");
-
-document
-.getElementById("lessonSelection")
-.innerHTML=`
-
-<div class="selection">
-
-<b>Board:</b> ${selectedBoard}
-<br>
-
-<b>Medium:</b> ${selectedMedium}
-<br>
-
-<b>Class:</b> ${selectedClass}
-<br>
-
-<b>Subject:</b> ${selectedSubject}
-
-</div>
-
-`;
-
-document
-.getElementById("lessonSearch")
-.value="";
-
-renderLessons();
-
-scrollTo("lessonStep");
-
-}
-
-
-/* =====================================================
-RENDER LESSONS
-===================================================== */
-
-function renderLessons(){
-
-const lessons=getLessons();
-
-let html="";
-
-lessons.forEach(item=>{
-
-let direct="";
-
-let page="";
-
-
-if(selectedClass===10){
-
-if(selectedSubject==="हिंदी"){
-
-direct=NCERT_PDF+item.pdf;
-
-page="https://ncert.nic.in/textbook.php?ihks1=2-13";
-
-}
-
-else if(selectedSubject==="विज्ञान"){
-
-direct=NCERT_PDF+item.pdf;
-
-page="https://ncert.nic.in/textbook.php?gesc1=1-10";
-
-}
-
-else if(selectedSubject==="गणित"){
-
-direct=NCERT_PDF+item.pdf;
-
-page="https://ncert.nic.in/textbook.php?hemh1=1-11";
-
-}
-
-else if(selectedSubject==="सामाजिक विज्ञान"){
-
-direct=NCERT_PDF+item.pdf;
-
-page=NCERT_BOOKS;
-
-}
-
-else{
-
-page=NCERT_BOOKS;
-
-}
-
-}
-
+module.lessons.forEach((lesson,li)=>{
 
 html+=`
-
-<div class="lesson">
-
-<h3>
-📘 ${item.name}
-</h3>
-
-<p>
-📝 Original Notes उपलब्ध
-</p>
 
 <button
-onclick="openLesson(${item.id})">
+class="lesson searchable"
+onclick="openLesson('${course}',${mi},${li})">
 
-📖 Lesson खोलें
+📖 Lesson ${li+1}<br>
+${lesson}
 
 </button>
 
-${direct?`
+`;
 
-<a
-class="btn green"
-href="${direct}"
-target="_blank"
-rel="noopener noreferrer">
+});
 
-📚 Official PDF
+html+=`
 
-</a>
-
-`:``}
-
-${page?`
-
-<a
-class="btn purple"
-href="${page}"
-target="_blank"
-rel="noopener noreferrer">
-
-🌐 NCERT Official Page
-
-</a>
-
-`:``}
+</div>
 
 </div>
 
@@ -1512,145 +1465,298 @@ rel="noopener noreferrer">
 });
 
 document
-.getElementById("lessonList")
+.getElementById("modules")
 .innerHTML=html;
+
+hideAll();
+
+document
+.getElementById("courseContent")
+.classList.remove("hidden");
+
+window.scrollTo(0,0);
 
 }
 
 
-/* =====================================================
+/* ==============================
 SEARCH
-===================================================== */
+============================== */
 
 function searchLessons(){
 
 let value=
 document
-.getElementById("lessonSearch")
+.getElementById("search")
 .value
 .toLowerCase();
 
 document
-.querySelectorAll("#lessonList .lesson")
+.querySelectorAll("#modules .searchable")
 .forEach(item=>{
 
 item.style.display=
 item.innerText
 .toLowerCase()
 .includes(value)
-?""
-:"none";
+?
+""
+:
+"none";
 
 });
 
 }
 
 
-/* =====================================================
-OPEN LESSON
-===================================================== */
+/* ==============================
+LESSON
+============================== */
 
-function openLesson(id){
+function openLesson(course,mi,li){
 
-const lessons=getLessons();
+let lesson=
+courseData[course]
+.modules[mi]
+.lessons[li];
 
-const item=lessons.find(x=>x.id===id);
-
-if(!item)return;
-
-document
-.getElementById("notesStep")
-.classList.remove("hidden");
-
-document
-.getElementById("notesTitle")
-.innerText=
-"📝 "+item.name+" – Notes";
+currentLesson={
+course,
+mi,
+li,
+name:lesson
+};
 
 document
-.getElementById("notesHeader")
-.innerHTML=`
+.getElementById("lessonTitle")
+.innerText="📖 "+lesson;
 
-<div class="selection">
+let content=`
 
-<b>Board:</b> ${selectedBoard}
-<br>
+<h3>📌 Lesson Introduction</h3>
 
-<b>Medium:</b> ${selectedMedium}
-<br>
+<p>
+<b>${lesson}</b> Computer learning का महत्वपूर्ण topic है।
+इस lesson में आपको इसकी basic concept और practical use
+समझाया जाएगा।
+</p>
 
-<b>Class:</b> ${selectedClass}
-<br>
+<h3>⭐ Important Points</h3>
 
-<b>Subject:</b> ${selectedSubject}
-<br>
+<div class="point">
+✅ ${lesson} की definition और basic concept समझें।
+</div>
 
-<b>Lesson:</b> ${item.name}
+<div class="point">
+✅ Computer पर स्वयं practice करें।
+</div>
 
+<div class="point">
+✅ Important terms को notebook में लिखें।
+</div>
+
+<div class="point">
+✅ Practical steps को बार-बार दोहराएँ।
+</div>
+
+<h3>💡 Example</h3>
+
+<div class="example">
+इस topic को Computer पर स्वयं करके देखने से
+आपका concept ज्यादा मजबूत होगा।
+</div>
+
+<h3>🖥️ Practice Task</h3>
+
+<div class="point">
+आज ${lesson} से संबंधित कम से कम एक practical task
+Computer पर स्वयं करके देखें।
+</div>
+
+<h3>📝 Revision</h3>
+
+<div class="point">
+Lesson पढ़ने के बाद Quiz देकर अपना knowledge check करें।
 </div>
 
 `;
 
-let data=item.notes;
+document
+.getElementById("lessonContent")
+.innerHTML=content;
+
+hideAll();
+
+document
+.getElementById("lesson")
+.classList.remove("hidden");
+
+window.scrollTo(0,0);
+
+}
+
+
+function backCourse(){
+
+openCourse(currentLesson.course);
+
+}
+
+
+/* ==============================
+COMPLETE LESSON
+============================== */
+
+function completeLesson(){
+
+completed++;
+
+localStorage.setItem(
+"completedLessons",
+completed
+);
+
+alert("✅ Lesson Complete!");
+
+updateProgress();
+
+}
+
+
+/* ==============================
+PROGRESS
+============================== */
+
+function updateProgress(){
+
+let total=0;
+
+Object.values(courseData)
+.forEach(course=>{
+
+course.modules.forEach(module=>{
+
+total+=module.lessons.length;
+
+});
+
+});
+
+let percent=
+Math.min(
+100,
+Math.round((completed/total)*100)
+);
+
+document
+.getElementById("completed")
+.innerText=completed;
+
+document
+.getElementById("progressFill")
+.style.width=percent+"%";
+
+document
+.getElementById("progressText")
+.innerText=
+`आपने ${percent}% course progress पूरा किया है।`;
+
+}
+
+
+/* ==============================
+PRACTICAL DATA
+============================== */
+
+const practicalData={
+
+Keyboard:[
+"Notepad खोलें।",
+"A से Z तक letters type करें।",
+"1 से 0 तक numbers type करें।",
+"Enter और Spacebar की practice करें।",
+"Shift और Caps Lock practice करें।",
+"Ctrl+C और Ctrl+V practice करें।"
+],
+
+Windows:[
+"Desktop खोलें।",
+"Right Click करें।",
+"New Folder बनाएं।",
+"Folder का नाम बदलें।",
+"File Copy करें।",
+"दूसरे folder में Paste करें।",
+"Delete और Recycle Bin की practice करें।"
+],
+
+Word:[
+"MS Word खोलें।",
+"Blank Document चुनें।",
+"एक paragraph लिखें।",
+"Heading को Bold करें।",
+"Font Size बदलें।",
+"Table insert करें।",
+"Document Save करें।",
+"Print Preview देखें।"
+],
+
+Excel:[
+"MS Excel खोलें।",
+"कुछ numbers cells में लिखें।",
+"SUM formula लगाएँ।",
+"AVERAGE formula लगाएँ।",
+"Table बनाएं।",
+"Data Sort करें।",
+"Chart बनाएं।"
+],
+
+PowerPoint:[
+"PowerPoint खोलें।",
+"New Presentation बनाएं।",
+"Title Slide बनाएं।",
+"नई Slide जोड़ें।",
+"Image लगाएँ।",
+"Design चुनें।",
+"Transition लगाएँ।",
+"Slide Show चलाएँ।"
+],
+
+Internet:[
+"Browser खोलें।",
+"Search Engine खोलें।",
+"किसी topic को search करें।",
+"Website खोलें।",
+"Email खोलें।",
+"Attachment भेजने की practice करें।",
+"File Download करें।",
+"File Upload करें।"
+]
+
+};
+
+
+function showPractical(type){
+
+let steps=practicalData[type];
 
 let html=`
 
-<div class="notes-box">
+<div class="practical-box">
 
-<h3>📖 Chapter का परिचय</h3>
+<h2>🖥️ ${type} Practical</h2>
 
-<p>
-${data.summary}
-</p>
-
-</div>
-
-
-<div class="notes-box">
-
-<h3>⭐ मुख्य बिंदु</h3>
+<br>
 
 `;
 
-data.points.forEach(point=>{
+steps.forEach((step,i)=>{
 
 html+=`
 
 <div class="point">
-✅ ${point}
-</div>
 
-`;
-
-});
-
-html+=`
-
-</div>
-
-
-<div class="notes-box">
-
-<h3>❓ महत्वपूर्ण प्रश्न–उत्तर</h3>
-
-`;
-
-data.questions.forEach((q,i)=>{
-
-html+=`
-
-<div class="qa">
-
-<b>
-प्रश्न ${i+1}:
-${q[0]}
-</b>
-
-<br><br>
-
-<strong>उत्तर:</strong>
-
-${q[1]}
+<b>Step ${i+1}:</b>
+${step}
 
 </div>
 
@@ -1659,190 +1765,443 @@ ${q[1]}
 });
 
 html+=`
-
-</div>
-
-
-<div class="notes-box">
-
-<h3>🧠 MCQ Practice</h3>
-
-`;
-
-data.mcq.forEach((q,i)=>{
-
-html+=`
-
-<div class="mcq">
-
-<b>
-${i+1}. ${q[0]}
-</b>
-
-<ol type="A">
-
-`;
-
-q[1].forEach(option=>{
-
-html+=`
-
-<li>${option}</li>
-
-`;
-
-});
-
-html+=`
-
-</ol>
-
-<details>
-
-<summary>
-✅ सही उत्तर देखें
-</summary>
-
-<p>
-${q[1][q[2]]}
-</p>
-
-</details>
-
-</div>
-
-`;
-
-});
-
-
-html+=`
-
-</div>
-
-
-<div class="notes-box">
-
-<h3>📌 Exam Revision</h3>
-
-<div class="point">
-पाठ के मुख्य विचार दोहराएँ।
-</div>
-
-<div class="point">
-महत्वपूर्ण शब्द और परिभाषाएँ याद करें।
-</div>
-
-<div class="point">
-प्रश्न-उत्तर लिखकर अभ्यास करें।
-</div>
-
-<div class="point">
-MCQ दोहराएँ।
-</div>
-
-</div>
-
-`;
-
-
-/* OFFICIAL BUTTON */
-
-if(item.pdf){
-
-html+=`
-
-<div class="notes-box">
-
-<h3>📚 Official NCERT Book</h3>
-
-<p>
-मूल किताब NCERT की official website से खोलें।
-</p>
-
-<a
-class="btn green"
-href="${NCERT_PDF+item.pdf}"
-target="_blank"
-rel="noopener noreferrer">
-
-📖 Official NCERT PDF खोलें
-
-</a>
-
-</div>
-
-`;
-
-}
-
-
-html+=`
-
-<div class="back-buttons">
-
-<button
-class="dark"
-onclick="backLessons()">
-
-⬅️ Lessons पर वापस जाएँ
-
-</button>
-
-<button
-class="orange"
-onclick="window.print()">
-
-🖨️ Print Notes
-
-</button>
 
 </div>
 
 `;
 
 document
-.getElementById("notesContent")
+.getElementById("practicalOutput")
 .innerHTML=html;
 
-scrollTo("notesStep");
+}
+
+
+/* ==========================================================
+120 COMPUTER QUESTIONS
+========================================================== */
+
+const questionBank=[
+
+["Computer का brain किसे कहा जाता है?",["Monitor","CPU","Keyboard","Mouse"],1],
+["RAM किस प्रकार की memory है?",["Temporary","Permanent","Optical","External"],0],
+["ROM का पूरा नाम क्या है?",["Read Only Memory","Random Only Memory","Read Open Memory","Run Only Memory"],0],
+["CPU का पूरा नाम क्या है?",["Central Processing Unit","Computer Personal Unit","Central Program Unit","Control Processing User"],0],
+["Keyboard क्या है?",["Input Device","Output Device","Storage","Software"],0],
+["Monitor क्या है?",["Input Device","Output Device","Software","Memory"],1],
+["Printer किस प्रकार का device है?",["Input","Output","Processing","Memory"],1],
+["Mouse का मुख्य उपयोग क्या है?",["Point और Select","Print","Scan","Store"],0],
+["Computer में data किस रूप में process होता है?",["Digital","Only paper","Only sound","Only image"],0],
+["1 Byte में कितने bits होते हैं?",["4","8","16","32"],1],
+
+["Hardware क्या है?",["Physical parts","Programs","Internet","Data only"],0],
+["Software क्या है?",["Programs","Keyboard","Monitor","CPU"],0],
+["Windows क्या है?",["Operating System","Browser","Printer","Hardware"],0],
+["Android क्या है?",["Operating System","Keyboard","CPU","Browser"],0],
+["Linux क्या है?",["Operating System","Printer","Mouse","RAM"],0],
+["File क्या होती है?",["Stored data","Keyboard","Monitor","CPU"],0],
+["Folder का उपयोग किसलिए होता है?",["Files organize करने","Typing करने","Printing करने","Internet बंद करने"],0],
+["Copy की shortcut key क्या है?",["Ctrl+C","Ctrl+V","Ctrl+X","Ctrl+P"],0],
+["Paste की shortcut key क्या है?",["Ctrl+C","Ctrl+V","Ctrl+X","Ctrl+S"],1],
+["Save की shortcut key क्या है?",["Ctrl+S","Ctrl+A","Ctrl+D","Ctrl+F"],0],
+
+["Select All की shortcut key क्या है?",["Ctrl+A","Ctrl+B","Ctrl+Z","Ctrl+N"],0],
+["Undo की shortcut key क्या है?",["Ctrl+Z","Ctrl+Y","Ctrl+U","Ctrl+I"],0],
+["Redo की shortcut key क्या है?",["Ctrl+Y","Ctrl+Z","Ctrl+R","Ctrl+P"],0],
+["Print की shortcut key क्या है?",["Ctrl+P","Ctrl+T","Ctrl+M","Ctrl+L"],0],
+["Find की shortcut key क्या है?",["Ctrl+F","Ctrl+H","Ctrl+G","Ctrl+K"],0],
+["Cut की shortcut key क्या है?",["Ctrl+X","Ctrl+C","Ctrl+V","Ctrl+Q"],0],
+["Bold की shortcut key क्या है?",["Ctrl+B","Ctrl+I","Ctrl+U","Ctrl+E"],0],
+["Italic की shortcut key क्या है?",["Ctrl+I","Ctrl+B","Ctrl+L","Ctrl+T"],0],
+["Underline की shortcut key क्या है?",["Ctrl+U","Ctrl+B","Ctrl+I","Ctrl+R"],0],
+["New document की shortcut key सामान्यतः क्या है?",["Ctrl+N","Ctrl+O","Ctrl+S","Ctrl+D"],0],
+
+["MS Word का उपयोग किसलिए होता है?",["Documents","Calculations only","Networking","Hardware"],0],
+["Excel में cell क्या है?",["Row और Column का intersection","Picture","File","Printer"],0],
+["Excel formula किस symbol से शुरू होता है?",["=","#","@","&"],0],
+["SUM function का उपयोग किसलिए होता है?",["जोड़","घटाना","Print","Save"],0],
+["AVERAGE का उपयोग किसलिए होता है?",["औसत","जोड़","Delete","Copy"],0],
+["Excel में columns किससे पहचाने जाते हैं?",["Letters","Numbers only","Symbols","Colors"],0],
+["Excel में rows किससे पहचानी जाती हैं?",["Numbers","Letters only","Colors","Pictures"],0],
+["PowerPoint किसलिए उपयोग होता है?",["Presentation","Database only","Typing only","Antivirus"],0],
+["PowerPoint में page को क्या कहते हैं?",["Slide","Cell","Row","Record"],0],
+["Slide Show किसलिए होता है?",["Presentation दिखाने","File delete करने","Internet बंद करने","Print करने"],0],
+
+["Internet क्या है?",["Global network","Only software","Printer","Keyboard"],0],
+["Website खोलने के लिए क्या चाहिए?",["Web Browser","Calculator","Paint","Notepad"],0],
+["Google Chrome क्या है?",["Web Browser","Operating System","Printer","Antivirus"],0],
+["Firefox क्या है?",["Web Browser","CPU","RAM","Printer"],0],
+["URL का पूरा नाम क्या है?",["Uniform Resource Locator","Universal Record Link","User Resource Line","Uniform Router Link"],0],
+["HTTP का पूरा नाम क्या है?",["HyperText Transfer Protocol","High Text Transfer Program","Hyper Tool Transfer Protocol","Hyperlink Text Program"],0],
+["HTTPS में S क्या दर्शाता है?",["Secure","System","Search","Server"],0],
+["Email का उपयोग किसलिए होता है?",["Electronic messages","Only printing","Only gaming","Hardware repair"],0],
+["Email में attachment क्या होता है?",["File भेजना","Password","Browser","Keyboard"],0],
+["Download का अर्थ क्या है?",["Internet से device में file लेना","File delete करना","File print करना","Computer बंद करना"],0],
+
+["Upload का अर्थ क्या है?",["Device से server/internet पर file भेजना","File delete करना","File print करना","Computer restart करना"],0],
+["Search Engine का उदाहरण कौन सा है?",["Google","Windows","Word","Excel"],0],
+["Gmail क्या है?",["Email service","Operating System","CPU","Printer"],0],
+["Cloud Storage का उदाहरण क्या है?",["Google Drive","Keyboard","Monitor","CPU"],0],
+["Wi-Fi क्या है?",["Wireless networking technology","Printer","RAM","Software only"],0],
+["Bluetooth किसलिए उपयोग होता है?",["Short-range wireless communication","Printing only","Typing only","CPU processing"],0],
+["LAN का पूरा नाम क्या है?",["Local Area Network","Large Area Network","Long Access Network","Local Access Node"],0],
+["WAN का पूरा नाम क्या है?",["Wide Area Network","Wireless Access Network","World Area Node","Web Access Network"],0],
+["Router का मुख्य काम क्या है?",["Networks के बीच data route करना","Document type करना","Image edit करना","Virus बनाना"],0],
+["IP Address किससे संबंधित है?",["Network addressing","Printing only","Keyboard","Word formatting"],0],
+
+["MAC Address किससे संबंधित है?",["Network interface/device identifier","MS Word","Excel","Monitor"],0],
+["DNS का मुख्य काम क्या है?",["Domain names को IP addresses से resolve करना","Files print करना","RAM बढ़ाना","Keyboard control"],0],
+["Cyber Security क्या है?",["Digital systems और data की सुरक्षा","Typing","Drawing","Printing"],0],
+["Strong password कैसा होना चाहिए?",["Letters numbers symbols का मिश्रण","केवल 12345","केवल नाम","केवल जन्मदिन"],0],
+["2FA का उद्देश्य क्या है?",["Extra authentication layer","File compression","Printing","Typing"],0],
+["Phishing क्या है?",["धोखे से information चुराने का प्रयास","Computer cleaning","Typing","Printing"],0],
+["Malware क्या है?",["Malicious software","Monitor","Keyboard","Printer"],0],
+["Virus क्या है?",["Malicious program/code","Hardware","Monitor","Browser"],0],
+["Antivirus का उपयोग किसलिए होता है?",["Malware detection/protection","Typing","Presentation","Internet speed"],0],
+["Backup क्यों जरूरी है?",["Data loss से बचने के लिए","Monitor साफ करने","Keyboard repair","Internet बंद करने"],0],
+
+["HTML का पूरा नाम क्या है?",["HyperText Markup Language","HighText Machine Language","Hyper Tool Markup Language","Home Text Markup Language"],0],
+["HTML किसलिए उपयोग होता है?",["Web page structure","Spreadsheet calculation","Antivirus","Operating System"],0],
+["HTML heading के लिए कौन सा tag है?",["h1","p","img","table"],0],
+["Paragraph के लिए कौन सा tag है?",["p","h1","br","img"],0],
+["Link बनाने के लिए कौन सा tag है?",["a","p","h1","div"],0],
+["Image के लिए कौन सा tag है?",["img","image","pic","photo"],0],
+["HTML में list किसलिए उपयोग होती है?",["Items की सूची","Database server","Antivirus","CPU"],0],
+["CSS का पूरा नाम क्या है?",["Cascading Style Sheets","Computer Style System","Creative Sheet Syntax","Colorful Style Software"],0],
+["CSS का उपयोग किसलिए होता है?",["Web page styling","Database backup","CPU processing","Email"],0],
+["JavaScript क्या है?",["Programming/Scripting language","Printer","Monitor","Operating System"],0],
+
+["JavaScript में variable declare करने के लिए क्या उपयोग हो सकता है?",["let","print","style","html"],0],
+["Python क्या है?",["Programming language","Browser","Printer","Monitor"],0],
+["Python file का सामान्य extension क्या है?",[".py",".html",".css",".jpg"],0],
+["Programming में loop का उपयोग किसलिए होता है?",["Repeated execution","Printing only","Deleting files","Opening monitor"],0],
+["Function क्या है?",["Reusable block of code","Monitor","Keyboard","Folder"],0],
+["Variable क्या रख सकता है?",["Data/value","Only image","Only printer","Only keyboard"],0],
+["AI का पूरा नाम क्या है?",["Artificial Intelligence","Automatic Internet","Advanced Input","Artificial Internet"],0],
+["Generative AI क्या कर सकती है?",["नया content generate करना","केवल print करना","केवल keyboard चलाना","केवल monitor बंद करना"],0],
+["Prompt क्या है?",["AI को दिया गया instruction/input","Printer","RAM","Folder"],0],
+["AI का सुरक्षित उपयोग क्यों जरूरी है?",["Privacy और accuracy के लिए","Computer रंग बदलने","Keyboard हटाने","Monitor बंद करने"],0],
+
+["SSD का पूरा नाम क्या है?",["Solid State Drive","System Storage Disk","Simple State Data","Solid Storage Device"],0],
+["HDD का पूरा नाम क्या है?",["Hard Disk Drive","High Data Device","Hard Digital Data","Home Disk Drive"],0],
+["Motherboard क्या है?",["Main circuit board","Software","Browser","Folder"],0],
+["GPU किससे संबंधित है?",["Graphics processing","Email","Typing","Folder"],0],
+["PSU का काम क्या है?",["Computer को power देना","Internet search","Typing","Printing"],0],
+["USB का पूरा नाम क्या है?",["Universal Serial Bus","United System Bus","Universal Storage Board","User Serial Board"],0],
+["Printer का उपयोग किसलिए होता है?",["Hard copy निकालने","Internet चलाने","RAM बढ़ाने","Virus हटाने"],0],
+["Scanner क्या करता है?",["Physical document/image को digital form में convert करता है","Internet बंद करता है","RAM बढ़ाता है","CPU बदलता है"],0],
+["Operating System का काम क्या है?",["Hardware और software resources manage करना","केवल typing","केवल printing","केवल gaming"],0],
+["Task Manager का उपयोग किसलिए हो सकता है?",["Running processes/apps देखना","Document print करना","Photo scan करना","Keyboard बदलना"],0],
+
+["Recycle Bin में सामान्यतः क्या जाता है?",["Deleted files","New files","RAM","CPU"],0],
+["File extension किसलिए होती है?",["File type पहचानने में मदद","Computer speed बढ़ाने","Internet बंद करने","RAM साफ करने"],0],
+["PDF का पूरा नाम क्या है?",["Portable Document Format","Personal Data File","Print Document Folder","Public Digital Format"],0],
+["Screenshot क्या है?",["Screen की image/capture","Audio recording","Keyboard","Printer"],0],
+["Clipboard किससे संबंधित है?",["Copied/Cut data को temporarily रखना","Internet speed","CPU cooling","Monitor"],0],
+["Caps Lock का उपयोग किसलिए होता है?",["Capital letters typing","Delete","Print","Save"],0],
+["Enter key का सामान्य उपयोग क्या है?",["Command/line confirm या new line","Copy","Paste","Bold"],0],
+["Backspace क्या करता है?",["Cursor के बाईं ओर character हटाता है","Print","Save","Copy"],0],
+["Spacebar क्या करता है?",["Space insert करता है","File delete","Print","Copy"],0],
+["Esc key का सामान्य उपयोग क्या है?",["Cancel/exit current operation in many contexts","Save","Print","Paste"],0],
+
+["F1 key सामान्यतः किससे जुड़ी होती है?",["Help","Save","Print","Delete"],0],
+["Alt+Tab का उपयोग किसलिए होता है?",["Open windows/apps के बीच switch","Copy","Paste","Print"],0],
+["Ctrl+Shift+Esc किसे खोल सकता है?",["Task Manager","Browser","Word","Paint"],0],
+["Ctrl+Alt+Delete क्या खोल सकता है?",["Security/options screen","Excel","Printer","Notepad"],0],
+["Booting क्या है?",["Computer start होने की प्रक्रिया","File printing","Typing","Scanning"],0],
+["BIOS/UEFI किससे संबंधित है?",["Firmware/startup configuration","Word document","Email","Browser"],0],
+["Cache memory का उद्देश्य क्या है?",["Frequently used data तक तेज access","Permanent backup","Printing","Typing"],0],
+["Cloud computing क्या है?",["Internet-based computing resources/services","Only local typing","Keyboard repair","Monitor cleaning"],0],
+["Database क्या है?",["Organized collection of data","Keyboard","Monitor","Printer"],0],
+["SQL किससे संबंधित है?",["Database querying/language","Graphics card","Keyboard","Power supply"],0],
+
+["Data Entry में क्या किया जाता है?",["Data को system में enter करना","CPU बनाना","Monitor repair","Internet cable बनाना"],0],
+["Resume किसलिए बनाया जाता है?",["Education/skills/work profile बताने","Password बनाने","Virus हटाने","Printer चलाने"],0],
+["Professional email कैसी होनी चाहिए?",["Clear और respectful","केवल emojis","बहुत अस्पष्ट","बिना subject"],0],
+["Online form submit करने से पहले क्या check करना चाहिए?",["Information सही है या नहीं","Monitor का color","Keyboard brand","CPU temperature"],0],
+["Digital privacy का मतलब क्या है?",["Personal information की सुरक्षा","Printer cleaning","Typing speed","Screen brightness"],0],
+["Two-factor authentication में क्या होता है?",["दो verification factors","दो monitors","दो keyboards","दो printers"],0],
+["Encryption किसलिए उपयोग होती है?",["Data को सुरक्षित coded form में बदलने","Typing speed बढ़ाने","Monitor साफ करने","Folder बनाने"],0],
+["Firewall का काम क्या है?",["Network traffic को filter/control करना","Document type करना","Photo scan करना","RAM बदलना"],0],
+["Software update क्यों जरूरी हो सकता है?",["Security fixes और improvements","Keyboard का रंग","Monitor size","Printer paper"],0],
+["Computer सीखने का सबसे अच्छा तरीका क्या है?",["Theory + Practical + Practice","केवल देखना","केवल याद करना","केवल game खेलना"],0]
+
+];
+
+
+/* ==========================================================
+QUIZ ENGINE
+========================================================== */
+
+let quizQuestions=[];
+let quizIndex=0;
+let answers={};
+let quizFinished=false;
+
+
+/* Shuffle */
+
+function shuffle(array){
+
+return array
+.map(value=>({value,sort:Math.random()}))
+.sort((a,b)=>a.sort-b.sort)
+.map(({value})=>value);
 
 }
 
 
-/* =====================================================
-BACK
-===================================================== */
+/* Start */
 
-function backLessons(){
+function startQuiz(){
+
+quizQuestions=
+shuffle([...questionBank])
+.slice(0,20);
+
+quizIndex=0;
+
+answers={};
+
+quizFinished=false;
 
 document
-.getElementById("notesStep")
-.classList.add("hidden");
+.getElementById("quizResult")
+.innerHTML="";
 
-scrollTo("lessonStep");
+renderQuestion();
 
 }
 
 
-/* =====================================================
-SCROLL
-===================================================== */
+/* Render */
 
-function scrollTo(id){
+function renderQuestion(){
 
-setTimeout(()=>{
+let q=quizQuestions[quizIndex];
 
 document
-.getElementById(id)
-.scrollIntoView({
-behavior:"smooth",
-block:"start"
+.getElementById("questionNumber")
+.innerText=quizIndex+1;
+
+let html=`
+
+<div class="question">
+
+<h3>
+${quizIndex+1}. ${q[0]}
+</h3>
+
+`;
+
+q[1].forEach((option,i)=>{
+
+let checked=
+answers[quizIndex]===i
+?
+"checked"
+:
+"";
+
+html+=`
+
+<label class="option">
+
+<input
+type="radio"
+name="answer"
+value="${i}"
+${checked}
+onchange="saveAnswer(${i})">
+
+${String.fromCharCode(65+i)}.
+${option}
+
+</label>
+
+`;
+
 });
 
-},100);
+html+=`
+
+</div>
+
+`;
+
+document
+.getElementById("quizArea")
+.innerHTML=html;
+
+updateLiveScore();
 
 }
+
+
+/* Save */
+
+function saveAnswer(value){
+
+answers[quizIndex]=value;
+
+updateLiveScore();
+
+}
+
+
+/* Next */
+
+function nextQuestion(){
+
+if(quizIndex<19){
+
+quizIndex++;
+
+renderQuestion();
+
+}
+
+else{
+
+alert("यह आखिरी प्रश्न है। Submit Quiz दबाएँ।");
+
+}
+
+}
+
+
+/* Previous */
+
+function previousQuestion(){
+
+if(quizIndex>0){
+
+quizIndex--;
+
+renderQuestion();
+
+}
+
+}
+
+
+/* Score */
+
+function calculateScore(){
+
+let score=0;
+
+quizQuestions.forEach((q,i)=>{
+
+if(answers[i]===q[2]){
+
+score++;
+
+}
+
+});
+
+return score;
+
+}
+
+
+/* Live score */
+
+function updateLiveScore(){
+
+document
+.getElementById("liveScore")
+.innerText=calculateScore();
+
+}
+
+
+/* Finish */
+
+function finishQuiz(){
+
+let unanswered=
+quizQuestions.filter((q,i)=>
+answers[i]===undefined
+).length;
+
+if(unanswered>0){
+
+if(!confirm(
+`आपके ${unanswered} questions unanswered हैं। फिर भी Submit करें?`
+)){
+
+return;
+
+}
+
+}
+
+let score=calculateScore();
+
+let percent=
+Math.round((score/20)*100);
+
+let message=
+percent>=80
+?
+"🏆 Excellent! बहुत बढ़िया!"
+:
+percent>=60
+?
+"👍 Good! आपका प्रदर्शन अच्छा है।"
+:
+percent>=40
+?
+"📚 ठीक है, कुछ topics फिर से पढ़ें।"
+:
+"💪 Basic lessons की दोबारा practice करें।";
+
+document
+.getElementById("quizResult")
+.innerHTML=`
+
+<div class="result">
+
+<h2>🎉 Quiz Result</h2>
+
+<p>
+<strong>Score:</strong>
+${score}/20
+</p>
+
+<p>
+<strong>Percentage:</strong>
+${percent}%
+</p>
+
+<br>
+
+<p>${message}</p>
+
+<br>
+
+<button
+class="btn blue"
+onclick="startQuiz()">
+🔄 Retake Quiz
+</button>
+
+</div>
+
+`;
+
+quizFinished=true;
+
+}
+
+
+/* ==============================
+START WEBSITE
+============================== */
+
+home();
 
 </script>
 
