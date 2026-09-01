@@ -2,383 +2,363 @@
 <html lang="hi">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Computer Study Hub | Basic to Advanced | RS-CIT</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>English Master | Learn English</title>
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
 
 body{
-font-family:Arial,"Noto Sans Devanagari",sans-serif;
-background:#f3f7fb;
-color:#172033;
-line-height:1.6
+    font-family:Arial, "Noto Sans Devanagari", sans-serif;
+    background:#f4f7fb;
+    color:#172033;
 }
-
-button{font-family:inherit;cursor:pointer}
 
 header{
-background:linear-gradient(135deg,#061b35,#0769b7,#00a8df);
-color:#fff;
-text-align:center;
-padding:42px 15px
+    background:linear-gradient(135deg,#2563eb,#7c3aed);
+    color:white;
+    padding:30px 5%;
+    text-align:center;
 }
 
-.logo{font-size:65px}
-header h1{font-size:38px}
-header p{font-size:18px}
-
-nav{
-position:sticky;
-top:0;
-z-index:100;
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
-gap:7px;
-padding:10px;
-background:#fff;
-box-shadow:0 3px 15px #0002
+header h1{
+    font-size:38px;
+    margin-bottom:10px;
 }
 
-nav button{
-border:0;
-background:#fff;
-padding:10px 15px;
-border-radius:8px;
-font-weight:bold;
-color:#17436c
+header p{
+    font-size:18px;
 }
-
-nav button:hover{background:#eaf6ff}
 
 .container{
-width:94%;
-max-width:1250px;
-margin:auto
+    width:92%;
+    max-width:1200px;
+    margin:auto;
 }
 
-.section{
-background:#fff;
-margin:25px 0;
-padding:28px;
-border-radius:18px;
-box-shadow:0 5px 25px #0001
+.nav{
+    background:white;
+    padding:12px;
+    position:sticky;
+    top:0;
+    z-index:100;
+    box-shadow:0 2px 10px #0002;
 }
 
-.hidden{display:none!important}
+.nav-inner{
+    width:92%;
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    gap:8px;
+    overflow-x:auto;
+}
+
+.nav button{
+    border:0;
+    padding:11px 15px;
+    border-radius:20px;
+    background:#eef2ff;
+    color:#1e3a8a;
+    cursor:pointer;
+    white-space:nowrap;
+    font-weight:bold;
+}
+
+.nav button:hover{
+    background:#2563eb;
+    color:white;
+}
 
 .hero{
-display:grid;
-grid-template-columns:1.4fr .8fr;
-gap:25px;
-align-items:center
+    margin:25px 0;
+    padding:35px;
+    background:white;
+    border-radius:20px;
+    box-shadow:0 4px 15px #0001;
 }
 
 .hero h2{
-font-size:35px;
-color:#0764a9
+    font-size:30px;
+    margin-bottom:12px;
 }
 
 .hero p{
-font-size:18px;
-color:#596879
+    line-height:1.7;
 }
 
-.hero-box{
-text-align:center;
-background:#eef9ff;
-padding:30px;
-border-radius:18px
+.section{
+    margin:30px 0;
+    scroll-margin-top:80px;
 }
 
-.hero-icon{font-size:90px}
-
-.title{
-text-align:center;
-margin-bottom:25px
+.section-title{
+    margin-bottom:18px;
 }
 
-.title h2{
-font-size:30px;
-color:#0764a9
+.section-title h2{
+    font-size:27px;
 }
 
-.title p{color:#687585}
+.section-title p{
+    color:#64748b;
+    margin-top:6px;
+}
 
 .grid{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:18px
-}
-
-.grid3{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:18px
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+    gap:18px;
 }
 
 .card{
-border:1px solid #d9e3ec;
-border-radius:17px;
-padding:22px 17px;
-text-align:center;
-background:#fff;
-transition:.2s
+    background:white;
+    padding:22px;
+    border-radius:17px;
+    box-shadow:0 3px 12px #0001;
+    transition:.2s;
 }
 
 .card:hover{
-transform:translateY(-4px);
-box-shadow:0 12px 28px #0002
+    transform:translateY(-3px);
+    box-shadow:0 7px 20px #0002;
 }
 
-.icon{font-size:52px}
-
 .card h3{
-color:#0764a9;
-margin:6px 0
+    margin:10px 0;
 }
 
 .card p{
-color:#687585;
-min-height:50px
+    color:#64748b;
+    line-height:1.6;
+}
+
+.card button{
+    margin-top:15px;
+}
+
+.icon{
+    font-size:35px;
 }
 
 .btn{
-border:0;
-padding:11px 18px;
-border-radius:9px;
-color:white;
-font-weight:bold;
-margin:4px
+    border:0;
+    background:#2563eb;
+    color:white;
+    padding:11px 18px;
+    border-radius:9px;
+    cursor:pointer;
+    font-weight:bold;
 }
 
-.blue{background:#0878cf}
-.green{background:#159447}
-.orange{background:#e27b18}
-.red{background:#d63838}
-.purple{background:#7040b8}
-.teal{background:#008d96}
-.dark{background:#26384d}
-.gray{background:#667085}
-
-.rscit{
-border:2px solid #159447;
-background:linear-gradient(135deg,#f0fff5,#fff)
+.btn:hover{
+    opacity:.9;
 }
 
-.rscit h3{color:#14823b}
-
-.course-head{
-background:#eef8ff;
-border:1px solid #d3e8f7;
-padding:23px;
-border-radius:14px;
-margin-bottom:22px
+.btn.green{
+    background:#16a34a;
 }
 
-.course-head h2{color:#0764a9}
-
-.search{
-width:100%;
-padding:14px;
-border:1px solid #ccd8e2;
-border-radius:9px;
-font-size:16px;
-margin-bottom:20px
+.btn.orange{
+    background:#ea580c;
 }
 
-.module{
-border:1px solid #dbe4ec;
-border-radius:14px;
-padding:20px;
-margin-bottom:18px;
-background:#fbfdff
+.btn.purple{
+    background:#7c3aed;
 }
 
-.module h3{
-color:#0764a9;
-margin-bottom:14px
+.practice-box{
+    background:white;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 3px 12px #0001;
+    margin-top:15px;
 }
 
-.rscit-module{
-border-left:5px solid #159447
+.word{
+    font-size:30px;
+    font-weight:bold;
+    color:#2563eb;
 }
 
-.rscit-module h3{color:#14823b}
-
-.lesson-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:10px
-}
-
-.lesson{
-background:#fff;
-border:1px solid #d2dde6;
-padding:13px;
-border-radius:9px;
-text-align:left;
-font-weight:bold;
-color:#193e62
-}
-
-.lesson:hover{
-background:#eaf6ff;
-border-color:#0878cf
-}
-
-.notes h2,.notes h3{color:#0764a9}
-
-.notes h3{margin:22px 0 8px}
-
-.box{
-padding:15px;
-border-left:5px solid #0878cf;
-background:#f2f8fc;
-border-radius:7px;
-margin:10px 0
-}
-
-.en{
-background:#f8f4ff;
-border-left:5px solid #7040b8;
-padding:15px;
-border-radius:7px;
-margin:10px 0
+.meaning{
+    margin:10px 0;
+    font-size:18px;
 }
 
 .example{
-padding:15px;
-border-left:5px solid #dfaa00;
-background:#fff8dc;
-border-radius:7px;
-margin:10px 0
+    background:#f8fafc;
+    padding:15px;
+    border-left:4px solid #2563eb;
+    margin:15px 0;
+    line-height:1.7;
 }
 
-.step{
-padding:12px;
-background:#f7fafc;
-border:1px solid #e0e7ed;
-border-radius:7px;
-margin:7px 0
-}
-
-.quiz-top{
-display:flex;
-justify-content:space-between;
-flex-wrap:wrap;
-background:#edf7ff;
-padding:15px;
-border-radius:10px;
-margin-bottom:20px
-}
-
-.question{
-background:#f8fafc;
-border:1px solid #dce5ed;
-padding:20px;
-border-radius:12px;
-margin-bottom:15px
+.options{
+    display:grid;
+    gap:10px;
+    margin-top:15px;
 }
 
 .option{
-display:block;
-padding:10px;
-margin:5px 0;
-border-radius:7px
+    padding:13px;
+    border:1px solid #cbd5e1;
+    border-radius:10px;
+    background:white;
+    cursor:pointer;
+    text-align:left;
 }
 
-.option:hover{background:#eaf5fd}
-
-.result{
-background:#eaf8ef;
-border:1px solid #9bd6aa;
-padding:25px;
-border-radius:12px;
-text-align:center
+.option:hover{
+    background:#eff6ff;
 }
 
-.result h2{color:#14823b}
+.option.correct{
+    background:#dcfce7;
+    border-color:#16a34a;
+}
 
-.progress{
-height:20px;
-background:#dfe7ee;
-border-radius:20px;
-overflow:hidden;
-margin:15px 0
+.option.wrong{
+    background:#fee2e2;
+    border-color:#dc2626;
+}
+
+.answer-box{
+    margin-top:15px;
+    padding:14px;
+    border-radius:10px;
+    display:none;
+}
+
+.progress-box{
+    background:white;
+    padding:22px;
+    border-radius:18px;
+    box-shadow:0 3px 12px #0001;
+}
+
+.progress-item{
+    margin:16px 0;
+}
+
+.progress-label{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:6px;
+}
+
+.progress-bar{
+    height:13px;
+    background:#e2e8f0;
+    border-radius:20px;
+    overflow:hidden;
 }
 
 .progress-fill{
-height:100%;
-width:0;
-background:#0878cf;
-transition:.4s
+    height:100%;
+    background:#2563eb;
+    border-radius:20px;
 }
 
-.stat{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:15px;
-margin:20px 0
+textarea,
+input{
+    width:100%;
+    padding:13px;
+    border:1px solid #cbd5e1;
+    border-radius:10px;
+    margin:8px 0;
+    font-size:16px;
 }
 
-.stat div{
-background:#f5f9fc;
-padding:18px;
-text-align:center;
-border-radius:12px;
-border:1px solid #dce5ed
+textarea{
+    min-height:130px;
+    resize:vertical;
 }
 
-.stat b{
-font-size:25px;
-color:#0764a9
+.day{
+    background:white;
+    padding:18px;
+    border-radius:14px;
+    box-shadow:0 2px 8px #0001;
 }
 
-.test-card{
-max-width:850px;
-margin:auto
-}
-
-.correct{
-background:#e7f8ec!important;
-border-color:#42a85f!important
-}
-
-.wrong{
-background:#ffeaea!important;
-border-color:#dc5555!important
+.day strong{
+    color:#2563eb;
 }
 
 footer{
-background:#101d2d;
-color:#fff;
-text-align:center;
-padding:32px 15px;
-margin-top:30px
+    margin-top:40px;
+    padding:30px;
+    background:#172033;
+    color:white;
+    text-align:center;
 }
 
-@media(max-width:950px){
-.grid{grid-template-columns:repeat(2,1fr)}
-.grid3{grid-template-columns:repeat(2,1fr)}
-.hero{grid-template-columns:1fr}
-.lesson-grid{grid-template-columns:repeat(2,1fr)}
-.stat{grid-template-columns:repeat(2,1fr)}
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:#0008;
+    z-index:1000;
+    padding:20px;
+    overflow:auto;
+}
+
+.modal-content{
+    background:white;
+    max-width:800px;
+    margin:40px auto;
+    padding:25px;
+    border-radius:18px;
+}
+
+.close{
+    float:right;
+    border:0;
+    background:#fee2e2;
+    color:#991b1b;
+    padding:8px 12px;
+    border-radius:7px;
+    cursor:pointer;
+}
+
+.speak{
+    font-size:20px;
+    margin-left:8px;
+    cursor:pointer;
 }
 
 @media(max-width:600px){
-header h1{font-size:28px}
-.grid,.grid3,.lesson-grid{grid-template-columns:1fr}
-.section{padding:18px}
-.hero h2{font-size:27px}
-.stat{grid-template-columns:1fr}
-}
 
-@media print{
-header,nav,footer,.btn{display:none!important}
-body{background:#fff}
-.section{box-shadow:none}
+    header h1{
+        font-size:29px;
+    }
+
+    .hero{
+        padding:22px;
+    }
+
+    .hero h2{
+        font-size:24px;
+    }
+
+    .section-title h2{
+        font-size:23px;
+    }
+
+    .card{
+        padding:18px;
+    }
 }
 </style>
 </head>
@@ -386,2968 +366,1457 @@ body{background:#fff}
 <body>
 
 <header>
-<div class="logo">💻</div>
-<h1>Computer Study Hub</h1>
-<p>Basic से Advanced Computer Course</p>
-<p>🇮🇳 Hindi Medium | 🇬🇧 English Medium</p>
+    <h1>🚀 English Master</h1>
+    <p>Read • Listen • Speak • Write • Think in English</p>
 </header>
 
-<nav>
-<button onclick="home()">🏠 Home</button>
-<button onclick="coursesPage()">📚 Courses</button>
-<button onclick="practicalPage()">🖥️ Practical</button>
-<button onclick="quizPage()">🧠 Mega Quiz</button>
-<button onclick="progressPage()">📊 Progress</button>
+<nav class="nav">
+<div class="nav-inner">
+
+<button onclick="go('home')">🏠 Home</button>
+<button onclick="go('foundation')">🔤 Foundation</button>
+<button onclick="go('vocabulary')">📚 Vocabulary</button>
+<button onclick="go('speaking')">🗣️ Speaking</button>
+<button onclick="go('grammar')">🧠 Grammar</button>
+<button onclick="go('translation')">🔄 Translation</button>
+<button onclick="go('reading')">📖 Reading</button>
+<button onclick="go('writing')">✍️ Writing</button>
+<button onclick="go('quiz')">🎯 Quiz</button>
+<button onclick="go('challenge')">📅 30 Days</button>
+<button onclick="go('progress')">🏆 Progress</button>
+
+</div>
 </nav>
 
-<div class="container">
+<main class="container">
 
-<!-- HOME -->
+<section id="home" class="hero">
 
-<section id="home" class="section">
-
-<div class="hero">
-
-<div>
-<h2>🚀 Computer सीखें Zero से Professional तक</h2>
-
-<br>
+<h2>🌟 English Master Course</h2>
 
 <p>
-Basic Computer, RS-CIT, MS Word, Excel,
-PowerPoint, Internet, Cyber Security,
-HTML, CSS, JavaScript, Python और AI।
+यह वेबसाइट बच्चों को English सीखने के लिए
+Reading, Writing, Listening, Speaking,
+Vocabulary और Grammar का रोज़ाना अभ्यास कराएगी।
 </p>
 
 <br>
 
-<p>
-📖 Hindi Notes • 🇬🇧 English Explanation •
-🖥️ Practical • 🧠 Tests • 📊 Progress
-</p>
-
-<br>
-
-<button class="btn blue" onclick="coursesPage()">
-📚 Courses देखें
+<button class="btn" onclick="go('challenge')">
+🚀 आज का English Challenge शुरू करें
 </button>
-
-<button class="btn green" onclick="openRSCIT()">
-🎓 RS-CIT शुरू करें
-</button>
-
-</div>
-
-<div class="hero-box">
-<div class="hero-icon">💻</div>
-<h3>LEARN • PRACTICE • TEST</h3>
-<p>एक ही वेबसाइट पर Computer Education</p>
-</div>
-
-</div>
 
 </section>
 
 
-<!-- COURSES -->
+<!-- FOUNDATION -->
 
-<section id="courses" class="section hidden">
+<section id="foundation" class="section">
 
-<div class="title">
-<h2>💻 Computer Courses</h2>
-<p>सभी courses के अलग-अलग buttons</p>
+<div class="section-title">
+<h2>🔤 English Foundation</h2>
+<p>English की मजबूत नींव तैयार करें।</p>
 </div>
 
 <div class="grid">
 
 <div class="card">
-<div class="icon">🟢</div>
-<h3>Basic Computer</h3>
-<p>Computer fundamentals</p>
-<button class="btn blue" onclick="openCourse('basic')">Open</button>
-</div>
-
-<div class="card">
-<div class="icon">🪟</div>
-<h3>Windows</h3>
-<p>Windows Basic to Advanced</p>
-<button class="btn green" onclick="openCourse('windows')">Open</button>
-</div>
-
-<div class="card">
-<div class="icon">⌨️</div>
-<h3>Keyboard & Typing</h3>
-<p>Typing और shortcut keys</p>
-<button class="btn orange" onclick="openCourse('keyboard')">Open</button>
-</div>
-
-<div class="card">
-<div class="icon">📄</div>
-<h3>MS Word</h3>
-<p>Professional documents</p>
-<button class="btn blue" onclick="openCourse('word')">Open</button>
-</div>
-
-<div class="card">
-<div class="icon">📊</div>
-<h3>MS Excel</h3>
-<p>Formula, data और charts</p>
-<button class="btn green" onclick="openCourse('excel')">Open</button>
-</div>
-
-<div class="card">
-<div class="icon">📽️</div>
-<h3>MS PowerPoint</h3>
-<p>Professional presentations</p>
-<button class="btn orange" onclick="openCourse('powerpoint')">Open</button>
-</div>
-
-<div class="card">
-<div class="icon">🌐</div>
-<h3>Internet</h3>
-<p>Internet और browser</p>
-<button class="btn teal" onclick="openCourse('internet')">Open</button>
-</div>
-
-<div class="card">
-<div class="icon">📧</div>
-<h3>Email</h3>
-<p>Email और attachments</p>
-<button class="btn blue" onclick="openCourse('email')">Open</button>
-</div>
-
-<div class="card">
-<div class="icon">🔗</div>
-<h3>Networking</h3>
-<p>LAN, WAN, IP, DNS</p>
-<button class="btn purple" onclick="openCourse('network')">Open</button>
-</div>
-
-<div class="card">
-<div class="icon">🛡️</div>
-<h3>Cyber Security</h3>
-<p>Digital safety</p>
-<button class="btn red" onclick="openCourse('cyber')">Open</button>
-</div>
-
-<div class="card">
-<div class="icon">🌐</div>
-<h3>HTML</h3>
-<p>Web structure</p>
-<button class="btn blue" onclick="openCourse('html')">Open</button>
-</div>
-
-<div class="card">
-<div class="icon">🎨</div>
-<h3>CSS</h3>
-<p>Website design</p>
-<button class="btn purple" onclick="openCourse('css')">Open</button>
-</div>
-
-<div class="card">
-<div class="icon">⚡</div>
-<h3>JavaScript</h3>
-<p>Web functionality</p>
-<button class="btn orange" onclick="openCourse('javascript')">Open</button>
-</div>
-
-<div class="card">
-<div class="icon">🐍</div>
-<h3>Python</h3>
-<p>Programming</p>
-<button class="btn green" onclick="openCourse('python')">Open</button>
-</div>
-
-<div class="card">
-<div class="icon">🤖</div>
-<h3>Artificial Intelligence</h3>
-<p>AI fundamentals</p>
-<button class="btn purple" onclick="openCourse('ai')">Open</button>
-</div>
-
-<div class="card rscit">
-<div class="icon">🎓</div>
-<h3>RS-CIT</h3>
-<p>Computer literacy + digital skills</p>
-<button class="btn green" onclick="openRSCIT()">
-🎓 Start RS-CIT
+<div class="icon">🔤</div>
+<h3>Alphabet</h3>
+<p>A–Z, vowels और consonants का अभ्यास।</p>
+<button class="btn" onclick="showLesson('Alphabet','A, E, I, O, U को Vowels कहते हैं। बाकी letters Consonants हैं।')">
+Learn
 </button>
 </div>
 
-</div>
-</section>
-
-
-<!-- COURSE -->
-
-<section id="subject" class="section hidden">
-
-<div class="course-head">
-<h2 id="courseTitle"></h2>
-<p id="courseDesc"></p>
-
-<br>
-
-<button class="btn gray" onclick="coursesPage()">
-⬅️ Courses
-</button>
-
-</div>
-
-<input
-id="search"
-class="search"
-placeholder="🔎 Lesson खोजें..."
-oninput="searchLessons()">
-
-<div id="modules"></div>
-
-</section>
-
-
-<!-- LESSON -->
-
-<section id="lessonPage" class="section hidden">
-
-<div class="notes">
-
-<h2 id="lessonTitle"></h2>
-
-<div id="lessonContent"></div>
-
-<br>
-
-<button class="btn green" onclick="completeLesson()">
-✅ Lesson Complete
-</button>
-
-<button class="btn orange" onclick="window.print()">
-🖨️ Print
-</button>
-
-<button class="btn gray" onclick="backSubject()">
-⬅️ Back
-</button>
-
-</div>
-
-</section>
-
-
-<!-- RS-CIT TEST MENU -->
-
-<section id="rscitTests" class="section hidden">
-
-<div class="title">
-
-<h2>🎓 RS-CIT Test Center</h2>
-
-<p>Module Test और Final Mock Test</p>
-
-</div>
-
-<div class="grid3">
-
-<div class="card rscit">
+<div class="card">
 <div class="icon">📝</div>
-<h3>Module Tests</h3>
-<p>हर module का अलग test</p>
-<button class="btn green" onclick="moduleTestMenu()">
-Open
+<h3>Spelling</h3>
+<p>Common English words की spelling practice.</p>
+<button class="btn" onclick="showLesson('Spelling','Beautiful, School, Friend, Morning, Teacher, Computer, Family')">
+Learn
 </button>
 </div>
 
 <div class="card">
-<div class="icon">🏆</div>
-<h3>Final Mock Test</h3>
-<p>RS-CIT Final Practice Test</p>
-<button class="btn red" onclick="startFinalTest()">
-Start
+<div class="icon">🔁</div>
+<h3>Singular & Plural</h3>
+<p>एक और अनेक शब्दों को समझें।</p>
+<button class="btn" onclick="showLesson('Singular & Plural','Book → Books<br>Boy → Boys<br>Child → Children<br>Man → Men')">
+Learn
 </button>
 </div>
 
 <div class="card">
-<div class="icon">📊</div>
-<h3>Test Progress</h3>
-<p>आपके scores</p>
-<button class="btn blue" onclick="progressPage()">
-View
+<div class="icon">↔️</div>
+<h3>Opposite Words</h3>
+<p>Hot–Cold, Big–Small जैसे शब्द सीखें।</p>
+<button class="btn" onclick="showLesson('Opposite Words','Big → Small<br>Hot → Cold<br>Day → Night<br>Good → Bad<br>Up → Down')">
+Learn
 </button>
 </div>
 
 </div>
+</section>
+
+
+<!-- VOCABULARY -->
+
+<section id="vocabulary" class="section">
+
+<div class="section-title">
+<h2>📚 Vocabulary Builder</h2>
+<p>रोज़ नए English Words सीखें।</p>
+</div>
+
+<div class="practice-box">
+
+<div id="wordBox"></div>
 
 <br>
 
-<button class="btn gray" onclick="openRSCIT()">
-⬅️ RS-CIT Course
+<button class="btn" onclick="nextWord()">
+➡️ Next Word
 </button>
+
+<button class="btn green" onclick="speakCurrentWord()">
+🔊 Pronunciation
+</button>
+
+</div>
 
 </section>
 
 
-<!-- MODULE TEST MENU -->
+<!-- SPEAKING -->
 
-<section id="moduleTestMenu" class="section hidden">
+<section id="speaking" class="section">
 
-<div class="title">
-<h2>📝 RS-CIT Module Tests</h2>
-<p>Module चुनकर test शुरू करें</p>
+<div class="section-title">
+<h2>🗣️ Daily Speaking Practice</h2>
+<p>रोज़मर्रा के वाक्यों को बोलने का अभ्यास करें।</p>
 </div>
 
-<div id="moduleTestButtons" class="grid3"></div>
+<div class="grid">
 
-<button class="btn gray" onclick="showRSCITTests()">
-⬅️ Back
+<div class="card">
+<h3>👋 Greeting</h3>
+<p><b>Hello!</b> — नमस्ते!</p>
+<p><b>How are you?</b> — आप कैसे हैं?</p>
+<p><b>I am fine.</b> — मैं ठीक हूँ।</p>
+<button class="btn" onclick="speak('How are you? I am fine.')">
+🔊 Listen
 </button>
+</div>
+
+<div class="card">
+<h3>🏫 School</h3>
+<p><b>May I come in?</b></p>
+<p><b>Please open your book.</b></p>
+<p><b>I have completed my homework.</b></p>
+<button class="btn" onclick="speak('May I come in? Please open your book.')">
+🔊 Listen
+</button>
+</div>
+
+<div class="card">
+<h3>🏠 Home</h3>
+<p><b>I am hungry.</b></p>
+<p><b>Give me some water.</b></p>
+<p><b>I am going to school.</b></p>
+<button class="btn" onclick="speak('I am hungry. Give me some water.')">
+🔊 Listen
+</button>
+</div>
+
+</div>
 
 </section>
 
 
-<!-- TEST -->
+<!-- GRAMMAR -->
 
-<section id="testPage" class="section hidden">
+<section id="grammar" class="section">
 
-<div class="test-card">
+<div class="section-title">
+<h2>🧠 Grammar Master</h2>
+<p>Grammar को आसान तरीके से सीखें।</p>
+</div>
 
-<div class="quiz-top">
+<div class="grid">
 
-<b>
-Question <span id="testQNo">1</span>/<span id="testTotal">10</span>
-</b>
+<div class="card">
+<h3>📌 Noun</h3>
+<p>किसी व्यक्ति, स्थान, वस्तु या जानवर के नाम को Noun कहते हैं।</p>
+<button class="btn" onclick="showLesson('Noun','Ram, Jaipur, Book, Cow — ये Noun के उदाहरण हैं।')">
+Learn
+</button>
+</div>
 
-<b>
-Score: <span id="testScore">0</span>
-</b>
+<div class="card">
+<h3>👤 Pronoun</h3>
+<p>Noun की जगह इस्तेमाल होने वाला शब्द।</p>
+<button class="btn" onclick="showLesson('Pronoun','I, You, He, She, It, We, They आदि Pronouns हैं।')">
+Learn
+</button>
+</div>
+
+<div class="card">
+<h3>🎨 Adjective</h3>
+<p>Noun की विशेषता बताने वाला शब्द।</p>
+<button class="btn" onclick="showLesson('Adjective','A beautiful flower.<br>He is a tall boy.<br>She has a red dress.')">
+Learn
+</button>
+</div>
+
+<div class="card">
+<h3>⚡ Verb</h3>
+<p>काम या action बताने वाला शब्द।</p>
+<button class="btn" onclick="showLesson('Verb','Go, Come, Eat, Read, Write, Play, Run, Speak आदि Verbs हैं।')">
+Learn
+</button>
+</div>
+
+<div class="card">
+<h3>⏰ Tenses</h3>
+<p>Present, Past और Future का अभ्यास।</p>
+<button class="btn" onclick="showLesson('Tenses','Present: I play.<br>Past: I played.<br>Future: I will play.')">
+Learn
+</button>
+</div>
+
+<div class="card">
+<h3>📍 Preposition</h3>
+<p>स्थान या संबंध बताने वाले शब्द।</p>
+<button class="btn" onclick="showLesson('Preposition','in, on, at, under, over, behind, near आदि Prepositions हैं।')">
+Learn
+</button>
+</div>
+
+</div>
+</section>
+
+
+<!-- TRANSLATION -->
+
+<section id="translation" class="section">
+
+<div class="section-title">
+<h2>🔄 Hindi → English Translation</h2>
+<p>Translation करके English sentence बनाना सीखें।</p>
+</div>
+
+<div class="practice-box">
+
+<h3 id="translationQuestion">
+मैं स्कूल जाता हूँ।
+</h3>
+
+<div class="options">
+
+<button class="option" onclick="checkTranslation(this,'I go to school.')">
+I go to school.
+</button>
+
+<button class="option" onclick="checkTranslation(this,'I am school.')">
+I am school.
+</button>
+
+<button class="option" onclick="checkTranslation(this,'I going school.')">
+I going school.
+</button>
+
+<button class="option" onclick="checkTranslation(this,'I school go.')">
+I school go.
+</button>
 
 </div>
 
-<div id="testArea"></div>
+<div id="translationResult" class="answer-box"></div>
 
-<button class="btn gray" onclick="testPrev()">
-⬅️ Previous
+<br>
+
+<button class="btn" onclick="nextTranslation()">
+Next Translation ➡️
 </button>
 
-<button class="btn blue" onclick="testNext()">
+</div>
+
+</section>
+
+
+<!-- SENTENCE BUILDING -->
+
+<section class="section">
+
+<div class="section-title">
+<h2>🧩 Sentence Building</h2>
+<p>Words को सही क्रम में लगाकर sentence बनाइए।</p>
+</div>
+
+<div class="practice-box">
+
+<h3>Words:</h3>
+
+<p class="word">
+going / I / school / am
+</p>
+
+<br>
+
+<button class="btn" onclick="showLesson('Correct Sentence','I am going to school.')">
+✅ Check Sentence
+</button>
+
+</div>
+
+</section>
+
+
+<!-- CONVERSATION -->
+
+<section class="section">
+
+<div class="section-title">
+<h2>🗨️ Conversation Practice</h2>
+<p>Real-life situations में English बोलना सीखें।</p>
+</div>
+
+<div class="grid">
+
+<div class="card">
+<h3>🛒 At the Shop</h3>
+<p><b>Customer:</b> How much is this?</p>
+<p><b>Shopkeeper:</b> It is one hundred rupees.</p>
+<p><b>Customer:</b> Please give me one.</p>
+<button class="btn" onclick="speak('How much is this? It is one hundred rupees. Please give me one.')">
+🔊 Listen
+</button>
+</div>
+
+<div class="card">
+<h3>🏫 Student & Teacher</h3>
+<p><b>Student:</b> May I ask a question?</p>
+<p><b>Teacher:</b> Yes, of course.</p>
+<p><b>Student:</b> I don't understand this question.</p>
+<button class="btn" onclick="speak('May I ask a question? Yes, of course. I do not understand this question.')">
+🔊 Listen
+</button>
+</div>
+
+<div class="card">
+<h3>👬 Friends</h3>
+<p><b>A:</b> Where are you going?</p>
+<p><b>B:</b> I am going to the market.</p>
+<button class="btn" onclick="speak('Where are you going? I am going to the market.')">
+🔊 Listen
+</button>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- READING -->
+
+<section id="reading" class="section">
+
+<div class="section-title">
+<h2>📖 Reading Practice</h2>
+<p>छोटे paragraphs पढ़कर comprehension मजबूत करें।</p>
+</div>
+
+<div class="practice-box">
+
+<h3>My School</h3>
+
+<p style="line-height:1.8;margin-top:12px;">
+My school is a beautiful place. It has many classrooms,
+a library and a playground. I go to school every day.
+I learn new things and play with my friends.
+I respect my teachers and love my school.
+</p>
+
+<br>
+
+<button class="btn green"
+onclick="speak('My school is a beautiful place. It has many classrooms, a library and a playground. I go to school every day.')">
+🔊 Listen
+</button>
+
+<hr style="margin:25px 0">
+
+<h3>Question</h3>
+
+<p>Where does the student go every day?</p>
+
+<div class="options">
+
+<button class="option"
+onclick="answerReading(this,true)">
+School
+</button>
+
+<button class="option"
+onclick="answerReading(this,false)">
+Market
+</button>
+
+<button class="option"
+onclick="answerReading(this,false)">
+Hospital
+</button>
+
+</div>
+
+<div id="readingResult" class="answer-box"></div>
+
+</div>
+
+</section>
+
+
+<!-- WRITING -->
+
+<section id="writing" class="section">
+
+<div class="section-title">
+<h2>✍️ Writing Practice</h2>
+<p>अपना English paragraph लिखें।</p>
+</div>
+
+<div class="practice-box">
+
+<h3>Topic: My Daily Routine</h3>
+
+<textarea
+id="writingArea"
+placeholder="Write your paragraph in English..."></textarea>
+
+<button class="btn" onclick="countWords()">
+📊 Check Words
+</button>
+
+<p id="wordCount" style="margin-top:15px;"></p>
+
+</div>
+
+</section>
+
+
+<!-- PRONUNCIATION -->
+
+<section class="section">
+
+<div class="section-title">
+<h2>🔊 Pronunciation Practice</h2>
+<p>Word सुनें और बोलकर दोहराएँ।</p>
+</div>
+
+<div class="grid">
+
+<div class="card">
+<h3>Beautiful</h3>
+<p>सुंदर</p>
+<p>ब्यूटिफुल</p>
+<button class="btn green"
+onclick="speak('Beautiful')">
+🔊 Listen
+</button>
+</div>
+
+<div class="card">
+<h3>Computer</h3>
+<p>कंप्यूटर</p>
+<p>कम्प्यूटर</p>
+<button class="btn green"
+onclick="speak('Computer')">
+🔊 Listen
+</button>
+</div>
+
+<div class="card">
+<h3>Important</h3>
+<p>महत्वपूर्ण</p>
+<p>इम्पॉर्टेन्ट</p>
+<button class="btn green"
+onclick="speak('Important')">
+🔊 Listen
+</button>
+</div>
+
+<div class="card">
+<h3>Education</h3>
+<p>शिक्षा</p>
+<p>एजुकेशन</p>
+<button class="btn green"
+onclick="speak('Education')">
+🔊 Listen
+</button>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- MISTAKE CORRECTION -->
+
+<section class="section">
+
+<div class="section-title">
+<h2>❌ Mistake Correction</h2>
+<p>गलत sentence को सही करना सीखें।</p>
+</div>
+
+<div class="practice-box">
+
+<h3>❌ He go to school.</h3>
+
+<br>
+
+<button class="btn"
+onclick="showLesson('Correct Answer','✅ He goes to school.<br><br>क्योंकि He/She/It के साथ Simple Present में सामान्यतः verb में s/es लगाया जाता है।')">
+Check Mistake
+</button>
+
+</div>
+
+</section>
+
+
+<!-- QUIZ -->
+
+<section id="quiz" class="section">
+
+<div class="section-title">
+
+<h2>🎯 English Quiz</h2>
+
+<p>
+अपने English knowledge को test करें।
+</p>
+
+</div>
+
+<div class="practice-box">
+
+<div id="quizBox"></div>
+
+<div style="margin-top:20px;display:flex;gap:10px;flex-wrap:wrap;">
+
+<button class="btn" onclick="quizNext()">
 Next ➡️
 </button>
 
-<button class="btn green" onclick="submitTest()">
-✅ Submit Test
+<button class="btn orange" onclick="restartQuiz()">
+Restart 🔄
 </button>
 
-<div id="testResult"></div>
+</div>
 
 </div>
 
 </section>
 
 
-<!-- PRACTICAL -->
+<!-- 30 DAY -->
 
-<section id="practical" class="section hidden">
+<section id="challenge" class="section">
 
-<div class="title">
-<h2>🖥️ Practical Lab</h2>
-<p>करके सीखें</p>
-</div>
+<div class="section-title">
 
-<div class="grid3">
+<h2>📅 30-Day English Challenge</h2>
 
-<div class="card">
-<div class="icon">🪟</div>
-<h3>Windows</h3>
-<button class="btn blue" onclick="showPractical('windows')">Open</button>
-</div>
-
-<div class="card">
-<div class="icon">⌨️</div>
-<h3>Keyboard</h3>
-<button class="btn purple" onclick="showPractical('keyboard')">Open</button>
-</div>
-
-<div class="card">
-<div class="icon">📄</div>
-<h3>MS Word</h3>
-<button class="btn blue" onclick="showPractical('word')">Open</button>
-</div>
-
-<div class="card">
-<div class="icon">📊</div>
-<h3>MS Excel</h3>
-<button class="btn green" onclick="showPractical('excel')">Open</button>
-</div>
-
-<div class="card">
-<div class="icon">📽️</div>
-<h3>PowerPoint</h3>
-<button class="btn orange" onclick="showPractical('powerpoint')">Open</button>
-</div>
-
-<div class="card">
-<div class="icon">🌐</div>
-<h3>Internet</h3>
-<button class="btn teal" onclick="showPractical('internet')">Open</button>
-</div>
-
-<div class="card rscit">
-<div class="icon">🎓</div>
-<h3>RS-CIT Practical</h3>
-<button class="btn green" onclick="showPractical('rscit')">Open</button>
-</div>
+<p>
+रोज़ थोड़ा अभ्यास — English में बड़ा improvement.
+</p>
 
 </div>
 
-<div id="practicalOutput"></div>
-
-</section>
-
-
-<!-- MEGA QUIZ -->
-
-<section id="megaQuiz" class="section hidden">
-
-<div class="title">
-<h2>🧠 Computer Mega Quiz</h2>
-<p>100+ Original Practice Questions</p>
-</div>
-
-<div class="quiz-top">
-
-<b>Question <span id="qNo">1</span>/20</b>
-
-<b>Score <span id="score">0</span></b>
-
-</div>
-
-<div id="quizArea"></div>
-
-<button class="btn gray" onclick="prevQ()">⬅️ Previous</button>
-<button class="btn blue" onclick="nextQ()">Next ➡️</button>
-<button class="btn green" onclick="submitQuiz()">✅ Submit</button>
-
-<div id="quizResult"></div>
+<div class="grid" id="days"></div>
 
 </section>
 
 
 <!-- PROGRESS -->
 
-<section id="progressPage" class="section hidden">
+<section id="progress" class="section">
 
-<div class="title">
-<h2>📊 Learning Progress</h2>
-<p>आपकी पूरी learning progress</p>
+<div class="section-title">
+
+<h2>🏆 My English Progress</h2>
+
+<p>
+अपनी learning progress देखें।
+</p>
+
 </div>
 
-<div class="stat">
+<div class="progress-box">
 
-<div>
-<b id="completed">0</b>
-<p>Lessons</p>
+<div class="progress-item">
+
+<div class="progress-label">
+<span>📚 Vocabulary</span>
+<b>70%</b>
 </div>
 
-<div>
-<b id="testsDone">0</b>
-<p>Tests</p>
-</div>
-
-<div>
-<b id="bestScore">0%</b>
-<p>Best Score</p>
-</div>
-
-<div>
-<b id="progressPercent">0%</b>
-<p>Learning</p>
+<div class="progress-bar">
+<div class="progress-fill" style="width:70%"></div>
 </div>
 
 </div>
 
-<div class="progress">
-<div id="fill" class="progress-fill"></div>
+<div class="progress-item">
+
+<div class="progress-label">
+<span>🧠 Grammar</span>
+<b>60%</b>
 </div>
 
-<div id="testHistory"></div>
+<div class="progress-bar">
+<div class="progress-fill" style="width:60%"></div>
+</div>
+
+</div>
+
+<div class="progress-item">
+
+<div class="progress-label">
+<span>🗣️ Speaking</span>
+<b>50%</b>
+</div>
+
+<div class="progress-bar">
+<div class="progress-fill" style="width:50%"></div>
+</div>
+
+</div>
+
+<div class="progress-item">
+
+<div class="progress-label">
+<span>📖 Reading</span>
+<b>80%</b>
+</div>
+
+<div class="progress-bar">
+<div class="progress-fill" style="width:80%"></div>
+</div>
+
+</div>
+
+<div class="progress-item">
+
+<div class="progress-label">
+<span>✍️ Writing</span>
+<b>60%</b>
+</div>
+
+<div class="progress-bar">
+<div class="progress-fill" style="width:60%"></div>
+</div>
+
+</div>
+
+<h2 style="margin-top:25px;">
+🏆 English Level: Beginner → Intermediate
+</h2>
+
+</div>
 
 </section>
 
-</div>
+</main>
 
 
 <footer>
 
-<h2>💻 Computer Study Hub</h2>
-<p>Learn • Practice • Test</p>
-<p>Hindi Medium 🇮🇳 | English Medium 🇬🇧</p>
-<p>© 2026 Computer Study Hub</p>
+<h2>🚀 English Master</h2>
+
+<p>
+Learn English Every Day • Speak with Confidence
+</p>
+
+<p style="margin-top:10px;">
+© 2026 English Master
+</p>
 
 </footer>
 
 
+<!-- MODAL -->
+
+<div class="modal" id="modal">
+
+<div class="modal-content">
+
+<button class="close"
+onclick="closeModal()">
+✕ Close
+</button>
+
+<h2 id="modalTitle"></h2>
+
+<div id="modalBody"
+style="margin-top:20px;line-height:1.8;">
+</div>
+
+</div>
+
+</div>
+
+
 <script>
 
-/* =====================================================
-COURSES
-===================================================== */
-
-const courses={
-
-basic:{
-title:"🟢 Basic Computer",
-desc:"Computer Fundamentals",
-modules:[
-["Computer Fundamentals",[
-"Computer क्या है?",
-"Computer की विशेषताएँ",
-"Computer के प्रकार",
-"Hardware क्या है?",
-"Software क्या है?",
-"Input Devices",
-"Output Devices",
-"CPU क्या है?",
-"RAM और ROM",
-"Storage Devices"
-]],
-["Computer Operation",[
-"Computer ON करना",
-"Computer Shutdown",
-"Desktop",
-"Start Menu",
-"Taskbar",
-"Icons",
-"Files",
-"Folders",
-"Copy Paste",
-"Delete और Restore"
-]]
-]
-},
-
-windows:{
-title:"🪟 Windows Course",
-desc:"Windows Basic से Advanced",
-modules:[
-["Windows Basics",[
-"Windows क्या है?",
-"Desktop",
-"Start Menu",
-"Taskbar",
-"File Explorer",
-"Files",
-"Folders",
-"New Folder",
-"Rename",
-"Copy",
-"Cut",
-"Paste",
-"Delete"
-]],
-["Windows Advanced",[
-"Windows Settings",
-"User Accounts",
-"Task Manager",
-"Device Manager",
-"Disk Management",
-"Windows Update",
-"System Restore",
-"Troubleshooting"
-]]
-]
-},
-
-keyboard:{
-title:"⌨️ Keyboard & Typing",
-desc:"Keyboard और Typing Skills",
-modules:[
-["Keyboard Basics",[
-"Keyboard Introduction",
-"Alphabet Keys",
-"Number Keys",
-"Function Keys",
-"Control Keys",
-"Arrow Keys",
-"Enter Key",
-"Spacebar",
-"Backspace",
-"Delete Key",
-"Shift Key",
-"Caps Lock"
-]],
-["Shortcut Keys",[
-"Ctrl+C",
-"Ctrl+V",
-"Ctrl+X",
-"Ctrl+Z",
-"Ctrl+Y",
-"Ctrl+A",
-"Ctrl+S",
-"Ctrl+P",
-"Ctrl+F",
-"Alt+Tab"
-]]
-]
-},
-
-word:{
-title:"📄 MS Word",
-desc:"Professional Documents",
-modules:[
-["MS Word Basics",[
-"MS Word क्या है?",
-"MS Word Open करना",
-"New Document",
-"Word Interface",
-"Typing",
-"Font",
-"Font Size",
-"Bold",
-"Italic",
-"Underline",
-"Text Color",
-"Text Alignment"
-]],
-["MS Word Advanced",[
-"Paragraph Formatting",
-"Bullets",
-"Numbering",
-"Tables",
-"Images",
-"Shapes",
-"Page Border",
-"Header",
-"Footer",
-"Page Number",
-"Page Setup",
-"Print Preview",
-"Mail Merge"
-]]
-]
-},
-
-excel:{
-title:"📊 MS Excel",
-desc:"Data, Formula और Charts",
-modules:[
-["Excel Basics",[
-"MS Excel क्या है?",
-"Workbook",
-"Worksheet",
-"Rows",
-"Columns",
-"Cells",
-"Cell Address",
-"Data Entry",
-"Formatting",
-"Save Workbook"
-]],
-["Excel Formulas",[
-"Formula क्या है?",
-"SUM",
-"AVERAGE",
-"COUNT",
-"MAX",
-"MIN",
-"IF Function",
-"Percentage",
-"Basic Calculations",
-"Cell References"
-]],
-["Excel Advanced",[
-"Sorting",
-"Filtering",
-"Tables",
-"Charts",
-"Conditional Formatting",
-"Freeze Panes",
-"Print Settings",
-"Excel Practical Project"
-]]
-]
-},
-
-powerpoint:{
-title:"📽️ MS PowerPoint",
-desc:"Professional Presentations",
-modules:[
-["PowerPoint Basics",[
-"PowerPoint क्या है?",
-"New Presentation",
-"Slides",
-"Title Slide",
-"Text Box",
-"Design",
-"Themes",
-"Images",
-"Shapes",
-"Tables"
-]],
-["PowerPoint Advanced",[
-"Transitions",
-"Animations",
-"Audio",
-"Video",
-"Slide Master",
-"Presentation Mode",
-"Slide Show",
-"Speaker Notes",
-"Print Slides"
-]]
-]
-},
-
-internet:{
-title:"🌐 Internet",
-desc:"Internet Skills",
-modules:[
-["Internet Basics",[
-"Internet क्या है?",
-"Web Browser",
-"Website",
-"Search Engine",
-"Google Search",
-"URL",
-"HTTP",
-"HTTPS",
-"Download",
-"Upload"
-]],
-["Online Skills",[
-"Online Forms",
-"Cloud Storage",
-"Online Documents",
-"Online Maps",
-"Video Meeting",
-"Online Learning",
-"Digital Services"
-]]
-]
-},
-
-email:{
-title:"📧 Email",
-desc:"Email Skills",
-modules:[
-["Email Basics",[
-"Email क्या है?",
-"Email Address",
-"Gmail",
-"Compose",
-"To",
-"Subject",
-"CC",
-"BCC",
-"Attachment",
-"Send Email"
-]],
-["Professional Email",[
-"Professional Email",
-"Email Formatting",
-"Reply",
-"Forward",
-"Email Signature",
-"Email Safety",
-"Spam",
-"Phishing Email"
-]]
-]
-},
-
-network:{
-title:"🔗 Networking",
-desc:"Computer Networking",
-modules:[
-["Networking Basics",[
-"Network क्या है?",
-"LAN",
-"WAN",
-"MAN",
-"PAN",
-"Router",
-"Switch",
-"Modem",
-"Wi-Fi",
-"Ethernet"
-]],
-["Network Concepts",[
-"IP Address",
-"MAC Address",
-"DNS",
-"DHCP",
-"Server",
-"Client",
-"Port",
-"Protocol",
-"TCP",
-"UDP"
-]]
-]
-},
-
-cyber:{
-title:"🛡️ Cyber Security",
-desc:"Digital Safety",
-modules:[
-["Cyber Safety",[
-"Cyber Security क्या है?",
-"Strong Password",
-"2FA",
-"Phishing",
-"Malware",
-"Virus",
-"Ransomware Awareness",
-"Online Scam",
-"Safe Browsing"
-]],
-["Privacy",[
-"Digital Privacy",
-"Personal Data",
-"Social Media Safety",
-"Public Wi-Fi Safety",
-"Backup",
-"Encryption",
-"Firewall",
-"Software Updates"
-]]
-]
-},
-
-html:{
-title:"🌐 HTML",
-desc:"Web Page Structure",
-modules:[
-["HTML Basics",[
-"HTML क्या है?",
-"HTML Document",
-"HTML Structure",
-"Headings",
-"Paragraph",
-"Links",
-"Images",
-"Lists",
-"Tables",
-"Forms"
-]],
-["HTML Project",[
-"Navigation Menu",
-"Cards",
-"Buttons",
-"Contact Form",
-"Page Layout",
-"Mini Website"
-]]
-]
-},
-
-css:{
-title:"🎨 CSS",
-desc:"Website Design",
-modules:[
-["CSS Basics",[
-"CSS क्या है?",
-"CSS Syntax",
-"Colors",
-"Fonts",
-"Background",
-"Border",
-"Margin",
-"Padding",
-"Width",
-"Height"
-]],
-["CSS Advanced",[
-"Flexbox",
-"Grid",
-"Responsive Design",
-"Media Query",
-"Card Design",
-"Button Design",
-"Navbar Design",
-"Professional Website"
-]]
-]
-},
-
-javascript:{
-title:"⚡ JavaScript",
-desc:"Web Functionality",
-modules:[
-["JavaScript Basics",[
-"JavaScript क्या है?",
-"Variables",
-"let",
-"const",
-"Data Types",
-"Operators",
-"If Else",
-"Functions",
-"Arrays",
-"Objects"
-]],
-["JavaScript Web",[
-"DOM",
-"Events",
-"Button Click",
-"Input",
-"Form",
-"Validation",
-"LocalStorage",
-"Mini Project"
-]]
-]
-},
-
-python:{
-title:"🐍 Python",
-desc:"Programming Zero से",
-modules:[
-["Python Basics",[
-"Python क्या है?",
-"Python Installation",
-"Variables",
-"Data Types",
-"Numbers",
-"Strings",
-"Operators",
-"If Else",
-"For Loop",
-"While Loop"
-]],
-["Python Advanced",[
-"Functions",
-"Lists",
-"Tuples",
-"Dictionary",
-"Sets",
-"Files",
-"Modules",
-"Error Handling",
-"Python Project"
-]]
-]
-},
-
-ai:{
-title:"🤖 Artificial Intelligence",
-desc:"AI और Generative AI",
-modules:[
-["AI Basics",[
-"Artificial Intelligence क्या है?",
-"Machine Learning",
-"Generative AI",
-"AI Tools",
-"Prompt क्या है?",
-"Good Prompt",
-"AI से Study",
-"AI से Writing",
-"AI Productivity",
-"AI Safety"
-]],
-["Future Skills",[
-"AI और Education",
-"AI और Jobs",
-"AI Ethics",
-"Privacy",
-"Fact Checking",
-"Responsible AI",
-"Future Computer Skills"
-]]
-]
-},
-
-rscit:{
-title:"🎓 RS-CIT",
-desc:"Computer Literacy और Digital Skills",
-modules:[
-["Module 1 — Computer Fundamentals",[
-"RS-CIT परिचय",
-"Computer क्या है?",
-"Computer की विशेषताएँ",
-"Computer के प्रकार",
-"Hardware",
-"Software",
-"Input Devices",
-"Output Devices",
-"CPU",
-"Memory",
-"Storage Devices"
-]],
-
-["Module 2 — Operating System",[
-"Operating System क्या है?",
-"Windows Desktop",
-"Start Menu",
-"Taskbar",
-"File और Folder",
-"File Management",
-"Copy Cut Paste",
-"Recycle Bin",
-"Windows Settings",
-"Basic Troubleshooting"
-]],
-
-["Module 3 — Word Processing",[
-"Word Processing क्या है?",
-"Document बनाना",
-"Text Formatting",
-"Paragraph Formatting",
-"Bullets और Numbering",
-"Tables",
-"Images",
-"Page Setup",
-"Header और Footer",
-"Printing"
-]],
-
-["Module 4 — Spreadsheet",[
-"Spreadsheet क्या है?",
-"Workbook",
-"Worksheet",
-"Rows और Columns",
-"Cells",
-"Data Entry",
-"Formatting",
-"Basic Formula",
-"SUM Function",
-"AVERAGE Function",
-"Charts"
-]],
-
-["Module 5 — Presentation",[
-"Presentation क्या है?",
-"New Presentation",
-"Slides",
-"Text और Images",
-"Design और Theme",
-"Transitions",
-"Animations",
-"Slide Show",
-"Presentation Practice"
-]],
-
-["Module 6 — Internet",[
-"Internet क्या है?",
-"Web Browser",
-"Website",
-"Search Engine",
-"URL",
-"HTTP और HTTPS",
-"Download",
-"Upload",
-"Online Services",
-"Cloud Services"
-]],
-
-["Module 7 — Email & Communication",[
-"Email क्या है?",
-"Email Address",
-"Compose Email",
-"To CC BCC",
-"Subject",
-"Attachment",
-"Reply",
-"Forward",
-"Professional Email",
-"Email Safety"
-]],
-
-["Module 8 — Digital Services",[
-"Digital Services क्या हैं?",
-"Online Forms",
-"Digital Documents",
-"Online Learning",
-"Online Banking Awareness",
-"Digital Payments Awareness",
-"Online Government Services",
-"Digital Communication"
-]],
-
-["Module 9 — Cyber Security",[
-"Cyber Security",
-"Strong Password",
-"Two Factor Authentication",
-"Phishing",
-"Malware",
-"Safe Browsing",
-"Privacy",
-"Data Protection",
-"Backup",
-"Software Updates"
-]],
-
-["Module 10 — Digital Citizenship",[
-"Digital Citizenship",
-"Responsible Internet Use",
-"Online Behaviour",
-"Digital Footprint",
-"Privacy Awareness",
-"Information Verification",
-"Fake Information पहचानना",
-"Safe Social Media",
-"Responsible Technology Use"
-]]
-]
-}
-
-};
-
-
-/* =====================================================
-DETAILED NOTES
-===================================================== */
-
-const notes={
-
-"RS-CIT परिचय":{
-hi:"RS-CIT को computer literacy और digital skills सीखने के लिए बनाया गया course framework समझा जा सकता है। इसमें computer fundamentals, office productivity, internet, digital services और cyber safety जैसे practical areas पर ध्यान दिया जाता है।",
-en:"RS-CIT is a computer literacy and digital-skills oriented course framework. It covers practical areas such as computer fundamentals, office productivity, internet, digital services and cyber safety.",
-points:[
-"Computer fundamentals समझें।",
-"Office applications का practical करें।",
-"Internet और digital services समझें।",
-"Cyber safety को गंभीरता से लें।"
-],
-practice:[
-"Computer के hardware parts की सूची बनाएँ।",
-"एक folder बनाकर उसमें एक document save करें।",
-"Browser में किसी educational topic को search करें।"
-]
-},
-
-"Computer क्या है?":{
-hi:"Computer एक electronic device है जो input data को process करके useful output देता है। यह information को store और retrieve भी कर सकता है।",
-en:"A computer is an electronic device that accepts input, processes data and produces useful output. It can also store and retrieve information.",
-points:[
-"Input → Processing → Output",
-"Computer data को process करता है।",
-"Computer information store कर सकता है।"
-],
-practice:[
-"Keyboard से अपना नाम type करें।",
-"Mouse से किसी icon को select करें।",
-"एक छोटा document save करें।"
-]
-},
-
-"Hardware":{
-hi:"Hardware computer के वे physical parts हैं जिन्हें हम देख और छू सकते हैं, जैसे keyboard, mouse, monitor, CPU cabinet और storage devices।",
-en:"Hardware refers to the physical components of a computer that can be seen and touched.",
-points:[
-"Keyboard hardware है।",
-"Mouse hardware है।",
-"Monitor hardware है।",
-"Storage devices hardware हैं।"
-],
-practice:[
-"अपने computer के hardware parts पहचानें।",
-"Keyboard और mouse का उपयोग करें।"
-]
-},
-
-"Software":{
-hi:"Software instructions और programs का समूह है जो computer को specific काम करने के लिए निर्देश देता है।",
-en:"Software is a collection of programs and instructions that tells a computer what to do.",
-points:[
-"Operating System software है।",
-"Applications software हैं।",
-"Software को physical रूप से touch नहीं किया जाता।"
-],
-practice:[
-"अपने computer में installed applications देखें।",
-"एक application open और close करें।"
-]
-},
-
-"Operating System क्या है?":{
-hi:"Operating System वह मुख्य software है जो computer hardware और applications के बीच coordination करता है तथा user को computer इस्तेमाल करने का interface देता है।",
-en:"An operating system manages computer hardware and software resources and provides an interface for users.",
-points:[
-"Windows एक operating system है।",
-"OS files और applications manage करने में मदद करता है।",
-"OS hardware resources manage करता है।"
-],
-practice:[
-"Windows Start Menu खोलें।",
-"Settings खोलें।",
-"File Explorer खोलें।"
-]
-},
-
-"MS Word क्या है?":{
-hi:"MS Word एक word-processing application है। इसका उपयोग letters, applications, reports, resumes और अन्य documents बनाने, edit करने और print करने के लिए किया जाता है।",
-en:"MS Word is a word-processing application used to create, edit, format and print documents.",
-points:[
-"Documents बनाए जा सकते हैं।",
-"Text formatting की जा सकती है।",
-"Tables और images जोड़े जा सकते हैं।",
-"Documents print किए जा सकते हैं।"
-],
-practice:[
-"MS Word खोलें।",
-"एक heading लिखें।",
-"एक paragraph लिखें।",
-"Heading को Bold करें।",
-"Document save करें।"
-]
-},
-
-"MS Excel क्या है?":{
-hi:"MS Excel spreadsheet application है। इसका उपयोग data entry, calculations, formulas, tables और charts के लिए किया जाता है।",
-en:"MS Excel is a spreadsheet application used for data entry, calculations, formulas, tables and charts.",
-points:[
-"Workbook और Worksheet",
-"Rows, Columns और Cells",
-"Formulas और Functions",
-"Charts"
-],
-practice:[
-"Excel खोलें।",
-"A1:A5 में numbers लिखें।",
-"SUM formula का अभ्यास करें।"
-]
-},
-
-"PowerPoint क्या है?":{
-hi:"Microsoft PowerPoint presentation बनाने का software है। इसमें slides के माध्यम से text, images, charts और अन्य content प्रस्तुत किया जा सकता है।",
-en:"Microsoft PowerPoint is presentation software used to present information through slides.",
-points:[
-"Slides",
-"Themes",
-"Transitions",
-"Animations",
-"Slide Show"
-],
-practice:[
-"PowerPoint खोलें।",
-"Title Slide बनाएँ।",
-"New Slide जोड़ें।",
-"Slide Show चलाएँ।"
-]
-},
-
-"Internet क्या है?":{
-hi:"Internet interconnected computer networks का global system है। इसका उपयोग information, communication, learning और online services के लिए किया जाता है।",
-en:"The Internet is a global system of interconnected computer networks used for information, communication, learning and online services.",
-points:[
-"Websites",
-"Email",
-"Online learning",
-"Cloud services"
-],
-practice:[
-"Browser खोलें।",
-"Educational topic search करें।",
-"Reliable source पढ़ें।"
-]
-},
-
-"Cyber Security":{
-hi:"Cyber Security computers, networks, accounts और digital information को unauthorized access और attacks से बचाने से संबंधित है।",
-en:"Cyber security is concerned with protecting computers, networks, accounts and digital information from unauthorized access and attacks.",
-points:[
-"Strong passwords रखें।",
-"2FA उपलब्ध हो तो इस्तेमाल करें।",
-"Unknown links से सावधान रहें।",
-"Important data का backup रखें।"
-],
-practice:[
-"एक strong password की characteristics लिखें।",
-"Suspicious link पर click न करें।",
-"Important data का backup रखें।"
-]
-},
-
-"HTML क्या है?":{
-hi:"HTML का पूरा नाम HyperText Markup Language है। इसका उपयोग web page की structure बनाने के लिए किया जाता है।",
-en:"HTML stands for HyperText Markup Language and is used to structure web pages.",
-points:[
-"Headings",
-"Paragraphs",
-"Links",
-"Images",
-"Lists",
-"Forms"
-],
-practice:[
-"एक HTML file बनाएँ।",
-"h1 heading जोड़ें।",
-"paragraph जोड़ें।",
-"एक link जोड़ें।"
-]
-},
-
-"CSS क्या है?":{
-hi:"CSS का पूरा नाम Cascading Style Sheets है। इसका उपयोग web page की appearance और layout को नियंत्रित करने के लिए किया जाता है।",
-en:"CSS stands for Cascading Style Sheets and controls the appearance and layout of web pages.",
-points:[
-"Colors",
-"Fonts",
-"Spacing",
-"Borders",
-"Flexbox",
-"Grid"
-],
-practice:[
-"HTML page बनाएँ।",
-"CSS जोड़ें।",
-"Heading का रंग बदलें।",
-"Padding और margin का अभ्यास करें।"
-]
-},
-
-"JavaScript क्या है?":{
-hi:"JavaScript web pages में interactive behaviour और functionality जोड़ने के लिए उपयोग होने वाली programming/scripting language है।",
-en:"JavaScript is a programming/scripting language commonly used to add interactive behavior and functionality to web pages.",
-points:[
-"Variables",
-"Functions",
-"Events",
-"DOM",
-"Forms"
-],
-practice:[
-"एक button बनाएँ।",
-"Button click event का अभ्यास करें।"
-]
-},
-
-"Python क्या है?":{
-hi:"Python एक high-level programming language है। इसका उपयोग automation, web development, data analysis और AI सहित कई क्षेत्रों में किया जाता है।",
-en:"Python is a high-level programming language used in areas including automation, web development, data analysis and AI.",
-points:[
-"Variables",
-"Conditions",
-"Loops",
-"Functions",
-"Data structures"
-],
-practice:[
-"Python editor खोलें।",
-"एक variable बनाएँ।",
-"print() से उसका value दिखाएँ।"
-]
-}
-
-};
-
-
-/* =====================================================
-NAVIGATION
-===================================================== */
-
-function hideAll(){
-document.querySelectorAll(".section")
-.forEach(x=>x.classList.add("hidden"));
-}
-
-function home(){
-hideAll();
-document.getElementById("home").classList.remove("hidden");
-scrollTo(0,0);
-}
-
-function coursesPage(){
-hideAll();
-document.getElementById("courses").classList.remove("hidden");
-scrollTo(0,0);
-}
-
-function practicalPage(){
-hideAll();
-document.getElementById("practical").classList.remove("hidden");
-scrollTo(0,0);
-}
-
-function quizPage(){
-hideAll();
-document.getElementById("megaQuiz").classList.remove("hidden");
-startQuiz();
-scrollTo(0,0);
-}
-
-
-/* =====================================================
-COURSE
-===================================================== */
-
-let currentCourse="";
-
-function openCourse(key){
-
-currentCourse=key;
-
-const c=courses[key];
-
-document.getElementById("courseTitle").innerText=c.title;
-document.getElementById("courseDesc").innerText=c.desc;
-
-let html="";
-
-c.modules.forEach((m,mi)=>{
-
-html+=`
-<div class="module ${key==="rscit"?"rscit-module":""}">
-<h3>📚 ${m[0]}</h3>
-<div class="lesson-grid">
-`;
-
-m[1].forEach((lesson,li)=>{
-
-html+=`
-<button class="lesson"
-onclick="openLesson('${key}',${mi},${li})">
-
-📖 Lesson ${li+1}<br>
-${lesson}
-
-</button>
-`;
-
-});
-
-html+=`
-</div>
-</div>
-`;
-
-});
-
-if(key==="rscit"){
-
-html+=`
-<div class="module rscit-module">
-
-<h3>🧠 RS-CIT Test Center</h3>
-
-<p>
-Lessons पढ़ने के बाद Module Test और Final Mock Test दें।
-</p>
-
-<br>
-
-<button class="btn green" onclick="showRSCITTests()">
-📝 Test Center खोलें
-</button>
-
-</div>
-`;
-
-}
-
-document.getElementById("modules").innerHTML=html;
-document.getElementById("search").value="";
-
-hideAll();
-document.getElementById("subject").classList.remove("hidden");
-
-scrollTo(0,0);
-}
-
-function openRSCIT(){
-openCourse("rscit");
-}
-
-
-/* =====================================================
-SEARCH
-===================================================== */
-
-function searchLessons(){
-
-let value=
-document.getElementById("search").value.toLowerCase();
-
-document.querySelectorAll(".module")
-.forEach(m=>{
-m.style.display=
-m.innerText.toLowerCase().includes(value)
-?""
-:"none";
-});
+/* =========================
+   NAVIGATION
+========================= */
+
+function go(id){
+
+    document.getElementById(id)
+    .scrollIntoView({
+        behavior:"smooth"
+    });
 
 }
 
 
-/* =====================================================
-LESSON
-===================================================== */
+/* =========================
+   MODAL
+========================= */
 
-let currentLesson="";
+function showLesson(title,body){
 
-function openLesson(key,mi,li){
+    document.getElementById("modalTitle")
+    .innerHTML = title;
 
-currentCourse=key;
-currentLesson=courses[key].modules[mi][1][li];
+    document.getElementById("modalBody")
+    .innerHTML = body;
 
-document.getElementById("lessonTitle").innerText=
-courses[key].title+" — "+currentLesson;
-
-let n=notes[currentLesson];
-
-if(!n){
-
-n={
-hi:
-`"${currentLesson}" इस lesson में आपको computer topic की basic understanding दी जा रही है। Concept को पढ़ने के बाद computer पर स्वयं practice करें।`,
-
-en:
-`This lesson introduces "${currentLesson}". Read the concept carefully and practice it on a computer.`,
-
-points:[
-"Concept को ध्यान से समझें।",
-"Important terms नोट करें।",
-"Practical करके सीखें।"
-],
-
-practice:[
-`"${currentLesson}" से संबंधित practical activity करें।`
-]
-};
+    document.getElementById("modal")
+    .style.display = "block";
 
 }
 
-let html=`
+function closeModal(){
 
-<h3>🇮🇳 Hindi Notes</h3>
-
-<div class="box">${n.hi}</div>
-
-<h3>🇬🇧 English Explanation</h3>
-
-<div class="en">${n.en}</div>
-
-<h3>⭐ Important Points</h3>
-`;
-
-n.points.forEach(x=>{
-html+=`<div class="step">✅ ${x}</div>`;
-});
-
-html+=`<h3>🖥️ Practical Exercise</h3>`;
-
-n.practice.forEach((x,i)=>{
-html+=`
-<div class="step">
-<b>Step ${i+1}:</b> ${x}
-</div>
-`;
-});
-
-html+=`
-
-<h3>📝 Quick Revision</h3>
-
-<div class="example">
-Lesson पढ़ने के बाद अपने शब्दों में topic समझाने की कोशिश करें।
-फिर संबंधित Module Test दें।
-</div>
-`;
-
-document.getElementById("lessonContent").innerHTML=html;
-
-hideAll();
-document.getElementById("lessonPage").classList.remove("hidden");
-
-scrollTo(0,0);
-}
-
-function backSubject(){
-openCourse(currentCourse);
-}
-
-function completeLesson(){
-
-let done=
-Number(localStorage.getItem("completedLessons")||0);
-
-localStorage.setItem(
-"completedLessons",
-done+1
-);
-
-alert("✅ Lesson Complete!");
+    document.getElementById("modal")
+    .style.display = "none";
 
 }
 
 
-/* =====================================================
-RS-CIT TEST CENTER
-===================================================== */
+/* =========================
+   SPEECH
+========================= */
 
-function showRSCITTests(){
+function speak(text){
 
-hideAll();
+    if(!("speechSynthesis" in window)){
 
-document
-.getElementById("rscitTests")
-.classList.remove("hidden");
+        alert("आपके browser में voice feature उपलब्ध नहीं है।");
+        return;
 
-scrollTo(0,0);
+    }
 
-}
+    window.speechSynthesis.cancel();
 
-function moduleTestMenu(){
+    const speech =
+    new SpeechSynthesisUtterance(text);
 
-hideAll();
+    speech.lang = "en-US";
+    speech.rate = 0.85;
 
-document
-.getElementById("moduleTestMenu")
-.classList.remove("hidden");
-
-let html="";
-
-courses.rscit.modules.forEach((m,i)=>{
-
-html+=`
-
-<div class="card rscit">
-
-<div class="icon">📝</div>
-
-<h3>${m[0]}</h3>
-
-<p>${m[1].length} lessons</p>
-
-<button
-class="btn green"
-onclick="startModuleTest(${i})">
-
-Start Test
-
-</button>
-
-</div>
-
-`;
-
-});
-
-document.getElementById("moduleTestButtons").innerHTML=html;
+    window.speechSynthesis.speak(speech);
 
 }
 
 
-/* =====================================================
-RS-CIT QUESTION BANK
-===================================================== */
-
-const rscitQuestions=[
-
-/* Module 1 */
-
-[
-["Computer क्या है?",
-["Electronic device","Only software","Only internet","Only printer"],0],
-
-["Computer का मुख्य काम क्या है?",
-["Data process करना","केवल music","केवल printing","केवल drawing"],0],
-
-["Keyboard किस प्रकार का device है?",
-["Input","Output","Storage","Network"],0],
-
-["Monitor किस प्रकार का device है?",
-["Input","Output","Storage","Software"],1],
-
-["CPU का पूरा नाम?",
-["Central Processing Unit","Computer Power Unit","Central Program User","Control Processing Unit"],0],
-
-["RAM कैसी memory है?",
-["Temporary","Permanent","Paper","Optical"],0],
-
-["ROM का पूरा नाम?",
-["Read Only Memory","Random Only Memory","Read Open Memory","Run Only Memory"],0],
-
-["Hardware क्या है?",
-["Physical components","Programs","Internet","Data"],0],
-
-["Software क्या है?",
-["Programs/instructions","Keyboard","Monitor","CPU"],0],
-
-["Storage device कौन सा है?",
-["SSD","Keyboard","Mouse","Monitor"],0]
-],
-
-/* Module 2 */
-
-[
-["Operating System का काम?",
-["Resources manage करना","केवल typing","केवल printing","केवल gaming"],0],
-
-["Windows क्या है?",
-["Operating System","Browser","Printer","CPU"],0],
-
-["File Explorer किसलिए?",
-["Files/folders manage करना","Presentation","Calculation","Email"],0],
-
-["Recycle Bin में क्या होता है?",
-["Deleted files","New files","RAM","CPU"],0],
-
-["Copy shortcut?",
-["Ctrl+C","Ctrl+V","Ctrl+X","Ctrl+P"],0],
-
-["Paste shortcut?",
-["Ctrl+V","Ctrl+C","Ctrl+X","Ctrl+S"],0],
-
-["Save shortcut?",
-["Ctrl+S","Ctrl+A","Ctrl+P","Ctrl+Z"],0],
-
-["Undo shortcut?",
-["Ctrl+Z","Ctrl+Y","Ctrl+C","Ctrl+U"],0],
-
-["Task Manager किसलिए?",
-["Running apps/processes देखना","Printing","Typing","Scanning"],0],
-
-["New Folder क्यों?",
-["Files organize करने के लिए","Internet बंद करने","CPU बदलने","Screen साफ करने"],0]
-],
-
-/* Module 3 */
-
-[
-["Word Processor किसलिए?",
-["Documents","Networking","Hardware","Virus"],0],
-
-["MS Word किस प्रकार का software?",
-["Word processing","Antivirus","Operating system","Browser"],0],
-
-["Bold shortcut?",
-["Ctrl+B","Ctrl+I","Ctrl+U","Ctrl+P"],0],
-
-["Italic shortcut?",
-["Ctrl+I","Ctrl+B","Ctrl+U","Ctrl+S"],0],
-
-["Underline shortcut?",
-["Ctrl+U","Ctrl+B","Ctrl+I","Ctrl+P"],0],
-
-["Table का उपयोग?",
-["Data को rows/columns में रखना","Computer बंद करना","Internet speed","Virus scan"],0],
-
-["Header कहाँ होता है?",
-["Page के ऊपर","केवल middle","केवल bottom","Desktop"],0],
-
-["Footer कहाँ होता है?",
-["Page के नीचे","Page के ऊपर","Desktop","Taskbar"],0],
-
-["Print Preview?",
-["Print से पहले document देखना","Delete करना","Copy करना","Rename करना"],0],
-
-["Document save करने के लिए?",
-["Ctrl+S","Ctrl+X","Ctrl+V","Ctrl+F"],0]
-],
-
-/* Module 4 */
-
-[
-["Spreadsheet में intersection of row और column?",
-["Cell","Slide","Page","Folder"],0],
-
-["Excel में formula किससे शुरू?",
-["=","#","@","&"],0],
-
-["SUM का उपयोग?",
-["Addition","Average","Maximum","Text"],0],
-
-["AVERAGE का उपयोग?",
-["Average","Delete","Print","Copy"],0],
-
-["Excel workbook में?",
-["Worksheets हो सकती हैं","केवल images","केवल videos","केवल emails"],0],
-
-["Excel में chart?",
-["Data visualization","Typing","Password","OS"],0],
-
-["Sort का उपयोग?",
-["Data arrange करना","Computer shutdown","Email भेजना","Folder delete"],0],
-
-["Filter?",
-["Selected data दिखाना","Computer restart","Print","Scan"],0],
-
-["Row किस दिशा में होती है?",
-["Horizontal","Vertical only","Circular","None"],0],
-
-["Column सामान्यतः?",
-["Vertical","Horizontal only","Circular","None"],0]
-],
-
-/* Module 5 */
-
-[
-["PowerPoint किसलिए?",
-["Presentation","Database only","Antivirus","Operating System"],0],
-
-["PowerPoint में page को क्या कहते हैं?",
-["Slide","Cell","Row","Record"],0],
-
-["Theme क्या बदलती है?",
-["Presentation appearance","CPU","RAM","Internet"],0],
-
-["Transition किससे संबंधित?",
-["Slide change effect","Text spelling","File storage","Email"],0],
-
-["Animation?",
-["Object movement/effect","Hard disk","Printer","Keyboard"],0],
-
-["Slide Show?",
-["Presentation display","File delete","Excel formula","Email"],0],
-
-["New Slide?",
-["नई slide जोड़ता है","File delete","Computer shutdown","Password"],0],
-
-["PowerPoint में image जोड़ सकते हैं?",
-["हाँ","नहीं","केवल Excel","केवल Windows"],0],
-
-["Speaker Notes?",
-["Presenter के notes","Password","File extension","CPU"],0],
-
-["Presentation print की जा सकती है?",
-["हाँ","नहीं","केवल browser","केवल email"],0]
-],
-
-/* Module 6 */
-
-[
-["Internet क्या है?",
-["Global network","Printer","Keyboard","CPU"],0],
-
-["Browser का काम?",
-["Websites access करना","RAM बढ़ाना","CPU repair","Print"],0],
-
-["URL?",
-["Web resource address","CPU","Keyboard","Folder"],0],
-
-["HTTPS में S?",
-["Secure","System","Search","Server"],0],
-
-["Download?",
-["Internet से device में data लेना","Delete","Print","Rename"],0],
-
-["Upload?",
-["Device से online service पर data भेजना","Delete","Print","Shutdown"],0],
-
-["Search Engine?",
-["Google","Windows","Word","Excel"],0],
-
-["Cloud Storage?",
-["Online storage","Keyboard","Monitor","CPU"],0],
-
-["Wi-Fi?",
-["Wireless network technology","Printer","RAM","Software"],0],
-
-["Website?",
-["Web पर उपलब्ध page/site","CPU","Keyboard","Folder"],0]
-],
-
-/* Module 7 */
-
-[
-["Email का अर्थ?",
-["Electronic mail","Easy mail","External machine","Electronic machine"],0],
-
-["Email में Subject?",
-["Message topic","Password","Attachment","Address only"],0],
-
-["CC?",
-["Carbon Copy","Computer Copy","Central Copy","Cloud Copy"],0],
-
-["BCC?",
-["Blind Carbon Copy","Basic Computer Copy","Backup Copy","Browser Copy"],0],
-
-["Attachment?",
-["Email के साथ file","Password","Browser","CPU"],0],
-
-["Reply?",
-["Received email का जवाब","Delete","Print","Save"],0],
-
-["Forward?",
-["Email दूसरे recipient को भेजना","Delete","Copy file","Shutdown"],0],
-
-["Spam?",
-["Unwanted messages","RAM","Keyboard","CPU"],0],
-
-["Phishing email?",
-["Fraudulent information-stealing attempt","Normal typing","Printer error","Windows update"],0],
-
-["Professional email?",
-["Clear and respectful","Only emojis","No subject","Unknown links"],0]
-],
-
-/* Module 8 */
-
-[
-["Digital Service?",
-["Online service","Keyboard","Monitor","CPU"],0],
-
-["Online form submit करने से पहले?",
-["Information check करें","Password public करें","Unknown link खोलें","OTP share करें"],0],
-
-["Digital document?",
-["Electronic document","Paper only","Keyboard","Mouse"],0],
-
-["Online learning?",
-["Internet-based learning","Printer repair","CPU upgrade","Typing only"],0],
-
-["Digital payment में OTP?",
-["Private रखना चाहिए","Public करना चाहिए","Social media पर डालना चाहिए","Unknown person को देना चाहिए"],0],
-
-["Online government service?",
-["Digital public service","Keyboard","CPU","Monitor"],0],
-
-["Cloud service?",
-["Internet-based service","Only printer","Only keyboard","Only RAM"],0],
-
-["Video meeting?",
-["Online communication","Storage device","CPU","Printer"],0],
-
-["Digital communication?",
-["Electronic communication","Paper cutting","CPU repair","Typing speed"],0],
-
-["Online service use करते समय?",
-["Official/reliable source verify करें","हर link पर click करें","Password share करें","OTP post करें"],0]
-],
-
-/* Module 9 */
-
-[
-["Cyber Security?",
-["Digital systems protection","Typing","Printing","Drawing"],0],
-
-["Strong password?",
-["Long and difficult to guess","12345","Name only","Birthday only"],0],
-
-["2FA?",
-["Extra verification layer","File delete","Printer","Browser"],0],
-
-["Phishing?",
-["Fraudulent attempt to steal information","Antivirus","Backup","Printing"],0],
-
-["Malware?",
-["Malicious software","Keyboard","Monitor","CPU"],0],
-
-["Firewall?",
-["Network traffic control/filtering","Typing","Printing","Scanning"],0],
-
-["Backup?",
-["Data की copy सुरक्षित रखना","Delete","Rename","Format"],0],
-
-["Encryption?",
-["Data को coded form में बदलना","Printing","Typing","Delete"],0],
-
-["Software updates क्यों?",
-["Security fixes और improvements","Keyboard color","Monitor size","Paper"],0],
-
-["Unknown link?",
-["Verify before opening","Always open","Share password","Enter OTP"],0]
-],
-
-/* Module 10 */
-
-[
-["Digital Citizenship?",
-["Responsible digital behaviour","Computer repair","Printing","Typing"],0],
-
-["Digital footprint?",
-["Online activity का trace","Keyboard","CPU","Monitor"],0],
-
-["Privacy?",
-["Personal information protection","Printing","Typing","Gaming"],0],
-
-["Fake information?",
-["Verify before sharing","Always share","Ignore verification","Post immediately"],0],
-
-["Responsible Internet use?",
-["Safe and respectful use","Unknown links","Password sharing","Scams"],0],
-
-["Social media safety?",
-["Privacy controls and careful sharing","Public passwords","OTP sharing","Unknown downloads"],0],
-
-["Information verification?",
-["Source check करना","Forward immediately","Guessing","Ignoring"],0],
-
-["Digital behaviour?",
-["Responsible online conduct","Password sharing","Scam","Spam"],0],
-
-["Personal data?",
-["Information about a person","CPU","Printer","Keyboard"],0],
-
-["Technology का responsible use?",
-["Safe, ethical and useful use","Illegal access","Password theft","Fraud"],0]
-]
+/* =========================
+   VOCABULARY
+========================= */
+
+const words = [
+
+{
+word:"Beautiful",
+meaning:"सुंदर",
+pronunciation:"ब्यूटिफुल",
+example:"She is a beautiful girl."
+},
+
+{
+word:"Important",
+meaning:"महत्वपूर्ण",
+pronunciation:"इम्पॉर्टेन्ट",
+example:"Education is important."
+},
+
+{
+word:"Brave",
+meaning:"बहादुर",
+pronunciation:"ब्रेव",
+example:"He is a brave boy."
+},
+
+{
+word:"Honest",
+meaning:"ईमानदार",
+pronunciation:"ऑनिस्ट",
+example:"He is an honest person."
+},
+
+{
+word:"Improve",
+meaning:"सुधारना",
+pronunciation:"इम्प्रूव",
+example:"I want to improve my English."
+},
+
+{
+word:"Learn",
+meaning:"सीखना",
+pronunciation:"लर्न",
+example:"I learn English every day."
+},
+
+{
+word:"Confidence",
+meaning:"आत्मविश्वास",
+pronunciation:"कॉन्फिडेन्स",
+example:"Speak English with confidence."
+},
+
+{
+word:"Knowledge",
+meaning:"ज्ञान",
+pronunciation:"नॉलेज",
+example:"Knowledge is power."
+},
+
+{
+word:"Success",
+meaning:"सफलता",
+pronunciation:"सक्सेस",
+example:"Hard work leads to success."
+},
+
+{
+word:"Practice",
+meaning:"अभ्यास",
+pronunciation:"प्रैक्टिस",
+example:"Practice makes us better."
+}
 
 ];
 
+let wordIndex = 0;
 
-/* =====================================================
-FINAL TEST QUESTIONS
-===================================================== */
+function displayWord(){
 
-const finalQuestions=[
+    const w = words[wordIndex];
 
-...rscitQuestions[0],
-...rscitQuestions[1],
-...rscitQuestions[2],
-...rscitQuestions[3],
-...rscitQuestions[4],
-...rscitQuestions[5],
-...rscitQuestions[6],
-...rscitQuestions[7],
-...rscitQuestions[8],
-...rscitQuestions[9]
+    document.getElementById("wordBox")
+    .innerHTML = `
+
+        <div class="word">
+        ${w.word}
+        </div>
+
+        <div class="meaning">
+        Meaning: ${w.meaning}
+        </div>
+
+        <p>
+        Pronunciation:
+        ${w.pronunciation}
+        </p>
+
+        <div class="example">
+        Example:
+        <br>
+        <b>${w.example}</b>
+        </div>
+    `;
+
+}
+
+function nextWord(){
+
+    wordIndex++;
+
+    if(wordIndex >= words.length){
+        wordIndex = 0;
+    }
+
+    displayWord();
+
+}
+
+function speakCurrentWord(){
+
+    speak(words[wordIndex].word);
+
+}
+
+displayWord();
+
+
+/* =========================
+   TRANSLATION
+========================= */
+
+const translations = [
+
+{
+hindi:"मैं स्कूल जाता हूँ।",
+answer:"I go to school."
+},
+
+{
+hindi:"वह खाना खाता है।",
+answer:"He eats food."
+},
+
+{
+hindi:"मैं English सीख रहा हूँ।",
+answer:"I am learning English."
+},
+
+{
+hindi:"वह बाजार जा रही है।",
+answer:"She is going to the market."
+},
+
+{
+hindi:"मुझे पानी चाहिए।",
+answer:"I need water."
+}
 
 ];
 
+let translationIndex = 0;
 
-/* =====================================================
-TEST ENGINE
-===================================================== */
+function checkTranslation(button,answer){
 
-let activeTest=[];
-let activeAnswers={};
-let activeIndex=0;
-let activeTestName="";
+    const correct =
+    translations[translationIndex].answer;
 
-function startModuleTest(index){
+    document.querySelectorAll(
+        "#translation .option"
+    ).forEach(x=>{
+        x.classList.remove("correct","wrong");
+    });
 
-activeTest=
-shuffle([...rscitQuestions[index]])
-.slice(0,10);
+    if(answer === correct){
 
-activeTestName=
-courses.rscit.modules[index][0];
+        button.classList.add("correct");
 
-startTest();
+        document.getElementById(
+            "translationResult"
+        ).style.display = "block";
 
-}
+        document.getElementById(
+            "translationResult"
+        ).innerHTML =
+        "✅ सही उत्तर!";
 
-function startFinalTest(){
+    }else{
 
-activeTest=
-shuffle([...finalQuestions])
-.slice(0,30);
+        button.classList.add("wrong");
 
-activeTestName="RS-CIT Final Mock Test";
+        document.getElementById(
+            "translationResult"
+        ).style.display = "block";
 
-startTest();
+        document.getElementById(
+            "translationResult"
+        ).innerHTML =
+        "❌ गलत। सही उत्तर: <b>" +
+        correct +
+        "</b>";
 
-}
-
-function startTest(){
-
-activeAnswers={};
-activeIndex=0;
-
-document.getElementById("testResult").innerHTML="";
-
-hideAll();
-
-document.getElementById("testPage")
-.classList.remove("hidden");
-
-document.getElementById("testTotal")
-.innerText=activeTest.length;
-
-renderTest();
-
-scrollTo(0,0);
+    }
 
 }
 
-function renderTest(){
+function nextTranslation(){
 
-const q=activeTest[activeIndex];
+    translationIndex++;
 
-document.getElementById("testQNo")
-.innerText=activeIndex+1;
+    if(translationIndex >= translations.length){
+        translationIndex = 0;
+    }
 
-let html=`
+    document.getElementById(
+        "translationQuestion"
+    ).innerHTML =
+    translations[translationIndex].hindi;
 
-<div class="question">
-
-<h3>
-${activeIndex+1}. ${q[0]}
-</h3>
-`;
-
-q[1].forEach((op,i)=>{
-
-html+=`
-
-<label class="option">
-
-<input
-type="radio"
-name="testAnswer"
-value="${i}"
-${activeAnswers[activeIndex]===i?"checked":""}
-onchange="activeAnswers[${activeIndex}]=${i}">
-
-${String.fromCharCode(65+i)}. ${op}
-
-</label>
-`;
-
-});
-
-html+=`</div>`;
-
-document.getElementById("testArea").innerHTML=html;
-
-updateTestScore();
-
-}
-
-function updateTestScore(){
-
-let score=0;
-
-activeTest.forEach((q,i)=>{
-
-if(activeAnswers[i]===q[2])
-score++;
-
-});
-
-document.getElementById("testScore")
-.innerText=score;
-
-}
-
-function testNext(){
-
-if(activeIndex<activeTest.length-1){
-
-activeIndex++;
-
-renderTest();
-
-}else{
-
-alert("यह आखिरी question है। Submit Test दबाएँ।");
-
-}
-
-}
-
-function testPrev(){
-
-if(activeIndex>0){
-
-activeIndex--;
-
-renderTest();
-
-}
-
-}
-
-function submitTest(){
-
-let score=0;
-
-activeTest.forEach((q,i)=>{
-
-if(activeAnswers[i]===q[2])
-score++;
-
-});
-
-let percent=
-Math.round(score/activeTest.length*100);
-
-saveTest(activeTestName,score,activeTest.length);
-
-let message="";
-
-if(percent>=80)
-message="🏆 Excellent Performance!";
-
-else if(percent>=60)
-message="👍 Good Performance!";
-
-else if(percent>=40)
-message="📚 और practice करें।";
-
-else
-message="💪 Lessons दोबारा पढ़ें और फिर test दें।";
-
-document.getElementById("testResult").innerHTML=`
-
-<div class="result">
-
-<h2>🎉 Test Complete</h2>
-
-<br>
-
-<p>
-<b>Test:</b> ${activeTestName}
-</p>
-
-<p>
-<b>Score:</b>
-${score}/${activeTest.length}
-</p>
-
-<p>
-<b>Percentage:</b>
-${percent}%
-</p>
-
-<br>
-
-<h3>${message}</h3>
-
-<br>
-
-<button class="btn green"
-onclick="startTest()">
-🔄 Retake
-</button>
-
-<button class="btn blue"
-onclick="showRSCITTests()">
-🎓 RS-CIT Test Center
-</button>
-
-</div>
-
-`;
-
-updateTestScore();
+    document.getElementById(
+        "translationResult"
+    ).style.display = "none";
 
 }
 
 
-/* =====================================================
-SAVE TEST HISTORY
-===================================================== */
+/* =========================
+   READING
+========================= */
 
-function saveTest(name,score,total){
+function answerReading(button,correct){
 
-let history=
-JSON.parse(
-localStorage.getItem("testHistory")||"[]"
-);
+    const result =
+    document.getElementById("readingResult");
 
-history.push({
+    document.querySelectorAll(
+        "#reading .option"
+    ).forEach(x=>{
+        x.classList.remove("correct","wrong");
+    });
 
-name:name,
-score:score,
-total:total,
-percent:Math.round(score/total*100),
-date:new Date().toLocaleString("hi-IN")
+    if(correct){
 
-});
+        button.classList.add("correct");
 
-localStorage.setItem(
-"testHistory",
-JSON.stringify(history)
-);
+        result.style.display="block";
+        result.innerHTML="✅ Correct Answer!";
 
-}
+    }else{
 
+        button.classList.add("wrong");
 
-/* =====================================================
-PROGRESS
-===================================================== */
+        result.style.display="block";
+        result.innerHTML="❌ Try Again.";
 
-function progressPage(){
-
-hideAll();
-
-document
-.getElementById("progressPage")
-.classList.remove("hidden");
-
-updateProgress();
-
-scrollTo(0,0);
-
-}
-
-function updateProgress(){
-
-let completed=
-Number(
-localStorage.getItem("completedLessons")||0
-);
-
-let total=0;
-
-Object.values(courses).forEach(c=>{
-
-c.modules.forEach(m=>{
-total+=m[1].length;
-});
-
-});
-
-let percent=
-total?
-Math.min(100,Math.round(completed/total*100))
-:0;
-
-document.getElementById("completed")
-.innerText=completed;
-
-document.getElementById("progressPercent")
-.innerText=percent+"%";
-
-document.getElementById("fill")
-.style.width=percent+"%";
-
-let history=
-JSON.parse(
-localStorage.getItem("testHistory")||"[]"
-);
-
-document.getElementById("testsDone")
-.innerText=history.length;
-
-let best=0;
-
-history.forEach(x=>{
-if(x.percent>best)
-best=x.percent;
-});
-
-document.getElementById("bestScore")
-.innerText=best+"%";
-
-let html="";
-
-if(history.length){
-
-html=`
-
-<div class="module">
-
-<h3>📋 Test History</h3>
-
-`;
-
-history.slice().reverse().forEach(x=>{
-
-html+=`
-
-<div class="step">
-
-<b>${x.name}</b>
-
-<br>
-
-Score:
-${x.score}/${x.total}
-
-&nbsp; | &nbsp;
-
-${x.percent}%
-
-<br>
-
-<small>${x.date}</small>
-
-</div>
-
-`;
-
-});
-
-html+=`</div>`;
-
-}else{
-
-html=`
-
-<div class="example">
-
-अभी कोई test attempt नहीं किया गया है।
-
-</div>
-
-`;
-
-}
-
-document.getElementById("testHistory").innerHTML=html;
+    }
 
 }
 
 
-/* =====================================================
-PRACTICAL
-===================================================== */
+/* =========================
+   WRITING
+========================= */
 
-const practicals={
+function countWords(){
 
-windows:[
-"Computer ON करें।",
-"Desktop और Taskbar पहचानें।",
-"Start Menu खोलें।",
-"File Explorer खोलें।",
-"New Folder बनाएँ।",
-"Folder Rename करें।",
-"एक file Copy करें।",
-"दूसरे folder में Paste करें।",
-"File Delete करें।"
+    const text =
+    document.getElementById("writingArea")
+    .value.trim();
+
+    if(!text){
+
+        document.getElementById("wordCount")
+        .innerHTML =
+        "कृपया पहले कुछ लिखें।";
+
+        return;
+
+    }
+
+    const count =
+    text.split(/\s+/).length;
+
+    document.getElementById("wordCount")
+    .innerHTML =
+    "📝 आपने <b>" +
+    count +
+    "</b> words लिखे हैं।";
+
+}
+
+
+/* =========================
+   QUIZ
+========================= */
+
+const quizQuestions = [
+
+{
+q:"What is the opposite of Big?",
+options:[
+"Small",
+"Long",
+"Fast",
+"Good"
 ],
+answer:0
+},
 
-keyboard:[
-"Notepad खोलें।",
-"A से Z type करें।",
-"1 से 0 type करें।",
-"Enter key practice करें।",
-"Spacebar practice करें।",
-"Backspace practice करें।",
-"Shift और Caps Lock practice करें।",
-"Ctrl+C और Ctrl+V practice करें।"
+{
+q:"Choose the correct sentence.",
+options:[
+"He go to school.",
+"He goes to school.",
+"He going school.",
+"He school goes."
 ],
+answer:1
+},
 
-word:[
-"MS Word खोलें।",
-"Blank Document चुनें।",
-"Heading type करें।",
-"Paragraph type करें।",
-"Text Bold करें।",
-"Font और Font Size बदलें।",
-"Table insert करें।",
-"Image insert करें।",
-"Document Save करें।"
+{
+q:"What is the plural of Child?",
+options:[
+"Childs",
+"Childes",
+"Children",
+"Childrens"
 ],
+answer:2
+},
 
-excel:[
-"Excel खोलें।",
-"Cells में data डालें।",
-"Numbers enter करें।",
-"SUM formula लगाएँ।",
-"AVERAGE formula लगाएँ।",
-"Data को table में रखें।",
-"Sort करें।",
-"Filter लगाएँ।",
-"Chart बनाएँ।"
+{
+q:"Choose the correct article: ___ apple.",
+options:[
+"A",
+"An",
+"The",
+"No article"
 ],
+answer:1
+},
 
-powerpoint:[
-"PowerPoint खोलें।",
-"Blank Presentation चुनें।",
-"Title Slide बनाएँ।",
-"New Slide जोड़ें।",
-"Text और image जोड़ें।",
-"Theme चुनें।",
-"Transition लगाएँ।",
-"Animation लगाएँ।",
-"Slide Show चलाएँ।"
+{
+q:"What is the past form of Go?",
+options:[
+"Goed",
+"Goes",
+"Went",
+"Going"
 ],
+answer:2
+},
 
-internet:[
-"Browser खोलें।",
-"Search Engine खोलें।",
-"Educational topic search करें।",
-"Website खोलें।",
-"Download और Upload का concept समझें।",
-"Online form का practice करें।"
+{
+q:"Which one is a Verb?",
+options:[
+"Beautiful",
+"Run",
+"School",
+"Red"
 ],
+answer:1
+},
 
-rscit:[
-"Computer को सही तरीके से ON करें।",
-"Desktop और Taskbar पहचानें।",
-"एक नया folder बनाएँ।",
-"Folder का नाम बदलें।",
-"एक document बनाकर save करें।",
-"Browser में educational topic search करें।",
-"Sample email compose करें।",
-"Strong password की characteristics लिखें।",
-"Important files का backup रखने का अभ्यास करें।",
-"Unknown links से बचने का अभ्यास करें।"
-]
+{
+q:"What is the meaning of Honest?",
+options:[
+"ईमानदार",
+"बहादुर",
+"कमजोर",
+"तेज"
+],
+answer:0
+},
 
-};
+{
+q:"Choose the correct sentence.",
+options:[
+"I am a student.",
+"I is a student.",
+"I are a student.",
+"I student am."
+],
+answer:0
+},
 
-function showPractical(type){
+{
+q:"Which word is a Pronoun?",
+options:[
+"Ram",
+"He",
+"Book",
+"School"
+],
+answer:1
+},
 
-let names={
-
-windows:"Windows",
-keyboard:"Keyboard & Typing",
-word:"MS Word",
-excel:"MS Excel",
-powerpoint:"MS PowerPoint",
-internet:"Internet",
-rscit:"RS-CIT"
-
-};
-
-let html=`
-
-<div class="module">
-
-<h2>
-🖥️ ${names[type]} Practical
-</h2>
-
-<br>
-`;
-
-practicals[type].forEach((x,i)=>{
-
-html+=`
-
-<div class="step">
-
-<b>Step ${i+1}:</b> ${x}
-
-</div>
-
-`;
-
-});
-
-html+=`</div>`;
-
-document.getElementById("practicalOutput")
-.innerHTML=html;
-
+{
+q:"What is the opposite of Hot?",
+options:[
+"Warm",
+"Cold",
+"High",
+"Fast"
+],
+answer:1
 }
-
-
-/* =====================================================
-MEGA QUIZ
-===================================================== */
-
-const megaBank=[
-
-["Computer का brain किसे कहा जाता है?",
-["Monitor","CPU","Keyboard","Mouse"],1],
-
-["RAM किस प्रकार की memory है?",
-["Temporary","Permanent","Optical","External"],0],
-
-["ROM का पूरा नाम?",
-["Read Only Memory","Random Only Memory","Read Open Memory","Run Only Memory"],0],
-
-["Keyboard क्या है?",
-["Input Device","Output Device","Storage","Software"],0],
-
-["Monitor क्या है?",
-["Input","Output","Software","Memory"],1],
-
-["Printer क्या है?",
-["Input","Output","Processing","Memory"],1],
-
-["Hardware क्या है?",
-["Physical parts","Programs","Internet","Data"],0],
-
-["Software क्या है?",
-["Programs","Keyboard","Monitor","CPU"],0],
-
-["Windows क्या है?",
-["Operating System","Browser","Printer","Hardware"],0],
-
-["Copy shortcut?",
-["Ctrl+C","Ctrl+V","Ctrl+X","Ctrl+P"],0],
-
-["Paste shortcut?",
-["Ctrl+C","Ctrl+V","Ctrl+X","Ctrl+S"],1],
-
-["Save shortcut?",
-["Ctrl+S","Ctrl+A","Ctrl+D","Ctrl+F"],0],
-
-["Undo shortcut?",
-["Ctrl+Z","Ctrl+Y","Ctrl+U","Ctrl+I"],0],
-
-["Redo shortcut?",
-["Ctrl+Y","Ctrl+Z","Ctrl+R","Ctrl+P"],0],
-
-["Print shortcut?",
-["Ctrl+P","Ctrl+T","Ctrl+M","Ctrl+L"],0],
-
-["Find shortcut?",
-["Ctrl+F","Ctrl+H","Ctrl+G","Ctrl+K"],0],
-
-["Cut shortcut?",
-["Ctrl+X","Ctrl+C","Ctrl+V","Ctrl+Q"],0],
-
-["Bold shortcut?",
-["Ctrl+B","Ctrl+I","Ctrl+U","Ctrl+E"],0],
-
-["Italic shortcut?",
-["Ctrl+I","Ctrl+B","Ctrl+L","Ctrl+T"],0],
-
-["Underline shortcut?",
-["Ctrl+U","Ctrl+B","Ctrl+I","Ctrl+R"],0],
-
-["MS Word का उपयोग?",
-["Documents","Calculations only","Networking","Hardware"],0],
-
-["Excel formula किस symbol से शुरू?",
-["=","#","@","&"],0],
-
-["SUM function?",
-["जोड़","घटाना","Print","Save"],0],
-
-["AVERAGE?",
-["औसत","जोड़","Delete","Copy"],0],
-
-["PowerPoint किसलिए?",
-["Presentation","Database","Typing","Hardware"],0],
-
-["PowerPoint में page?",
-["Slide","Cell","Row","Record"],0],
-
-["Internet क्या है?",
-["Global network","Only software","Printer","Keyboard"],0],
-
-["Browser?",
-["Website access करने वाला software","RAM","CPU","Printer"],0],
-
-["URL?",
-["Uniform Resource Locator","Universal Record Link","User Resource Line","Uniform Router Link"],0],
-
-["HTTPS में S?",
-["Secure","System","Search","Server"],0],
-
-["Download?",
-["Internet से device में file लेना","Delete","Print","Shutdown"],0],
-
-["Upload?",
-["Device से online service पर data भेजना","Delete","Print","Restart"],0],
-
-["Search Engine example?",
-["Google","Windows","Word","Excel"],0],
-
-["Email का उपयोग?",
-["Electronic messages","Printing","Gaming","Hardware"],0],
-
-["Gmail?",
-["Email service","Operating System","CPU","Printer"],0],
-
-["Cloud Storage example?",
-["Google Drive","Keyboard","Monitor","CPU"],0],
-
-["Wi-Fi?",
-["Wireless networking","Printer","RAM","Software"],0],
-
-["LAN full form?",
-["Local Area Network","Large Area Network","Long Access Network","Local Access Node"],0],
-
-["WAN full form?",
-["Wide Area Network","Wireless Access Network","World Area Node","Web Access Network"],0],
-
-["Router का काम?",
-["Network routing","Typing","Printing","Drawing"],0],
-
-["IP Address?",
-["Network addressing","Printing","Keyboard","Formatting"],0],
-
-["DNS का काम?",
-["Domain name को IP से resolve करना","Print","RAM","Keyboard"],0],
-
-["Cyber Security?",
-["Digital systems की सुरक्षा","Typing","Drawing","Printing"],0],
-
-["Strong password?",
-["Letters numbers symbols","12345","नाम","Birthday"],0],
-
-["2FA?",
-["Extra authentication layer","Compression","Printing","Typing"],0],
-
-["Phishing?",
-["Fraudulent information-stealing attempt","Cleaning","Typing","Printing"],0],
-
-["Malware?",
-["Malicious software","Monitor","Keyboard","Printer"],0],
-
-["Backup क्यों?",
-["Data loss से बचने के लिए","Monitor","Keyboard","Internet"],0],
-
-["Firewall?",
-["Network traffic filtering/control","Typing","Scanning","RAM"],0],
-
-["HTML full form?",
-["HyperText Markup Language","HighText Machine Language","Hyper Tool Markup Language","Home Text Markup Language"],0],
-
-["CSS का उपयोग?",
-["Web styling","Database","CPU","Email"],0],
-
-["JavaScript?",
-["Programming/Scripting language","Printer","Monitor","OS"],0],
-
-["Python?",
-["Programming language","Browser","Printer","Monitor"],0],
-
-["Function?",
-["Reusable block of code","Monitor","Keyboard","Folder"],0],
-
-["Variable?",
-["Data/value रखने वाला नाम","Only image","Only printer","Only keyboard"],0],
-
-["AI full form?",
-["Artificial Intelligence","Automatic Internet","Advanced Input","Artificial Internet"],0],
-
-["Generative AI?",
-["New content generate करना","Print","Keyboard","Monitor"],0],
-
-["Prompt?",
-["AI को दिया instruction","Printer","RAM","Folder"],0],
-
-["SSD?",
-["Solid State Drive","System Storage Disk","Simple State Data","Solid Storage Device"],0],
-
-["HDD?",
-["Hard Disk Drive","High Data Device","Hard Digital Data","Home Disk Drive"],0],
-
-["Motherboard?",
-["Main circuit board","Software","Browser","Folder"],0],
-
-["GPU?",
-["Graphics processing","Email","Typing","Folder"],0],
-
-["USB?",
-["Universal Serial Bus","United System Bus","Universal Storage Board","User Serial Board"],0],
-
-["Scanner?",
-["Document को digital form में बदलता","Internet बंद","RAM बढ़ाता","CPU बदलता"],0],
-
-["Operating System का काम?",
-["Hardware/software resources manage करना","Typing","Printing","Gaming"],0],
-
-["Task Manager?",
-["Running processes/apps देखना","Print","Scan","Keyboard"],0],
-
-["Recycle Bin?",
-["Deleted files","New files","RAM","CPU"],0],
-
-["Screenshot?",
-["Screen image/capture","Audio","Keyboard","Printer"],0],
-
-["Caps Lock?",
-["Capital letters typing","Delete","Print","Save"],0],
-
-["Enter key?",
-["Command/line confirm या new line","Copy","Paste","Bold"],0],
-
-["Backspace?",
-["Cursor के बाईं ओर character हटाता","Print","Save","Copy"],0],
-
-["Spacebar?",
-["Space insert करता","Delete","Print","Copy"],0],
-
-["Alt+Tab?",
-["Apps/windows switch","Copy","Paste","Print"],0],
-
-["Ctrl+Shift+Esc?",
-["Task Manager","Browser","Word","Paint"],0],
-
-["Cloud computing?",
-["Internet-based computing resources","Typing","Keyboard","Monitor"],0],
-
-["Database?",
-["Organized collection of data","Keyboard","Monitor","Printer"],0],
-
-["SQL?",
-["Database querying","Graphics","Keyboard","Power"],0],
-
-["Data Entry?",
-["Data system में enter करना","CPU बनाना","Monitor repair","Cable"],0],
-
-["Professional email?",
-["Clear और respectful","Only emojis","Unclear","No subject"],0],
-
-["Digital privacy?",
-["Personal information protection","Printer cleaning","Typing speed","Brightness"],0],
-
-["Encryption?",
-["Data को coded form में बदलना","Typing speed","Monitor","Folder"],0],
-
-["Software update?",
-["Security fixes/improvements","Keyboard color","Monitor size","Paper"],0],
-
-["RS-CIT का मुख्य उद्देश्य?",
-["Computer और digital skills","Sports training","Driving","Music"],0],
-
-["RS-CIT में practical skills क्यों?",
-["Computer को करके सीखने के लिए","केवल marks","केवल typing","केवल gaming"],0],
-
-["Digital safety के लिए?",
-["Strong password और safe behaviour","Password share करना","OTP post करना","Unknown links"],0]
 
 ];
 
+let quizIndex = 0;
+let quizScore = 0;
+let quizAnswered = false;
 
-/* =====================================================
-MEGA QUIZ ENGINE
-===================================================== */
+function displayQuiz(){
 
-let quiz=[];
-let qi=0;
-let answers={};
+    const q =
+    quizQuestions[quizIndex];
 
-function shuffle(a){
+    let html = `
 
-return a
-.map(x=>({x,r:Math.random()}))
-.sort((a,b)=>a.r-b.r)
-.map(x=>x.x);
+    <p>
+    Question ${quizIndex+1}
+    / ${quizQuestions.length}
+    </p>
+
+    <h3 style="margin-top:15px;">
+    ${q.q}
+    </h3>
+
+    <div class="options">
+    `;
+
+    q.options.forEach((option,index)=>{
+
+        html += `
+
+        <button
+        class="option"
+        onclick="answerQuiz(this,${index})">
+
+        ${String.fromCharCode(65+index)}.
+        ${option}
+
+        </button>
+
+        `;
+
+    });
+
+    html += `
+    </div>
+
+    <div id="quizMessage"
+    class="answer-box">
+    </div>
+    `;
+
+    document.getElementById("quizBox")
+    .innerHTML = html;
+
+    quizAnswered = false;
 
 }
 
-function startQuiz(){
+function answerQuiz(button,index){
 
-quiz=
-shuffle([...megaBank])
-.slice(0,20);
+    if(quizAnswered) return;
 
-qi=0;
-answers={};
+    quizAnswered = true;
 
-document.getElementById("quizResult").innerHTML="";
+    const q =
+    quizQuestions[quizIndex];
 
-renderQ();
+    const buttons =
+    document.querySelectorAll(
+        "#quizBox .option"
+    );
+
+    if(index === q.answer){
+
+        button.classList.add("correct");
+
+        quizScore++;
+
+        document.getElementById(
+            "quizMessage"
+        ).style.display="block";
+
+        document.getElementById(
+            "quizMessage"
+        ).innerHTML =
+        "🎉 Correct Answer!";
+
+    }else{
+
+        button.classList.add("wrong");
+
+        buttons[q.answer]
+        .classList.add("correct");
+
+        document.getElementById(
+            "quizMessage"
+        ).style.display="block";
+
+        document.getElementById(
+            "quizMessage"
+        ).innerHTML =
+        "❌ Wrong Answer! सही उत्तर: <b>" +
+        q.options[q.answer] +
+        "</b>";
+
+    }
 
 }
 
-function renderQ(){
+function quizNext(){
 
-let q=quiz[qi];
+    if(!quizAnswered){
 
-document.getElementById("qNo").innerText=qi+1;
+        alert("पहले answer चुनें।");
+        return;
 
-let html=`
+    }
 
-<div class="question">
+    if(quizIndex < quizQuestions.length-1){
 
-<h3>
-${qi+1}. ${q[0]}
-</h3>
-`;
+        quizIndex++;
 
-q[1].forEach((op,i)=>{
+        displayQuiz();
 
-html+=`
+    }else{
 
-<label class="option">
+        document.getElementById(
+            "quizBox"
+        ).innerHTML = `
 
-<input
-type="radio"
-name="answer"
-${answers[qi]===i?"checked":""}
-onchange="answers[${qi}]=${i};updateScore()">
+        <div style="text-align:center">
 
-${String.fromCharCode(65+i)}. ${op}
+        <h2>🎉 Quiz Complete!</h2>
 
-</label>
-`;
+        <br>
+
+        <h1>
+        ${quizScore} / ${quizQuestions.length}
+        </h1>
+
+        <br>
+
+        <p>
+        ${
+            quizScore >= 8
+            ? "🏆 Excellent!"
+            : quizScore >= 5
+            ? "👍 Good! Keep Practicing."
+            : "📚 Practice More."
+        }
+        </p>
+
+        </div>
+
+        `;
+
+    }
+
+}
+
+function restartQuiz(){
+
+    quizIndex = 0;
+    quizScore = 0;
+
+    displayQuiz();
+
+}
+
+displayQuiz();
+
+
+/* =========================
+   30 DAY CHALLENGE
+========================= */
+
+const challengeTasks = [
+
+"Learn 10 new words.",
+"Speak 10 English sentences.",
+"Read one short paragraph.",
+"Write 5 English sentences.",
+"Practice Present Tense.",
+"Practice Past Tense.",
+"Practice Future Tense.",
+"Learn 10 opposite words.",
+"Translate 10 Hindi sentences.",
+"Speak about yourself for 1 minute.",
+"Learn 10 verbs.",
+"Read English for 10 minutes.",
+"Practice articles.",
+"Practice prepositions.",
+"Write about your school.",
+"Learn 10 adjectives.",
+"Speak with a friend in English.",
+"Practice question sentences.",
+"Correct 10 wrong sentences.",
+"Learn 10 synonyms.",
+"Read a short English story.",
+"Write your daily routine.",
+"Speak about your family.",
+"Practice pronunciation.",
+"Learn 20 common words.",
+"Do a grammar quiz.",
+"Translate a paragraph.",
+"Speak without stopping for 2 minutes.",
+"Review everything learned.",
+"Take the Final English Test."
+
+];
+
+const daysContainer =
+document.getElementById("days");
+
+challengeTasks.forEach((task,index)=>{
+
+    const day =
+    document.createElement("div");
+
+    day.className="day";
+
+    day.innerHTML = `
+
+        <strong>Day ${index+1}</strong>
+
+        <p style="margin-top:8px;">
+        ${task}
+        </p>
+
+        <button
+        class="btn green"
+        style="margin-top:10px"
+        onclick="completeDay(this)">
+
+        ✅ Complete
+
+        </button>
+
+    `;
+
+    daysContainer.appendChild(day);
 
 });
 
-html+=`</div>`;
 
-document.getElementById("quizArea").innerHTML=html;
+function completeDay(button){
 
-updateScore();
+    button.innerHTML="✔ Completed";
 
-}
+    button.disabled=true;
 
-function updateScore(){
-
-let s=0;
-
-quiz.forEach((q,i)=>{
-
-if(answers[i]===q[2])
-s++;
-
-});
-
-document.getElementById("score").innerText=s;
-
-}
-
-function nextQ(){
-
-if(qi<quiz.length-1){
-
-qi++;
-renderQ();
-
-}else{
-
-alert("यह आखिरी question है। Submit दबाएँ।");
-
-}
-
-}
-
-function prevQ(){
-
-if(qi>0){
-
-qi--;
-renderQ();
-
-}
-
-}
-
-function submitQuiz(){
-
-let s=0;
-
-quiz.forEach((q,i)=>{
-
-if(answers[i]===q[2])
-s++;
-
-});
-
-let p=
-Math.round(s/quiz.length*100);
-
-document.getElementById("quizResult").innerHTML=`
-
-<div class="result">
-
-<h2>🎉 Quiz Result</h2>
-
-<br>
-
-<p><b>Score:</b> ${s}/${quiz.length}</p>
-
-<p><b>Percentage:</b> ${p}%</p>
-
-<br>
-
-<h3>
-${
-p>=80
-?"🏆 Excellent!"
-:
-p>=60
-?"👍 Good!"
-:
-p>=40
-?"📚 और practice करें।"
-:
-"💪 Basic lessons दोबारा पढ़ें।"
-}
-</h3>
-
-<br>
-
-<button class="btn blue" onclick="startQuiz()">
-🔄 Retake Quiz
-</button>
-
-</div>
-
-`;
+    button.style.opacity=".7";
 
 }
 
 
-/* =====================================================
-START
-===================================================== */
+/* =========================
+   INITIALIZATION
+========================= */
 
-home();
+window.addEventListener(
+    "click",
+    function(e){
+
+        if(e.target.id === "modal"){
+
+            closeModal();
+
+        }
+
+    }
+);
 
 </script>
 
