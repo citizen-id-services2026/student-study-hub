@@ -2,353 +2,350 @@
 <html lang="hi">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Student Study Hub | CBSE RBSE NCERT</title>
+<title>Student Study Hub | NCERT Class 10 Hindi</title>
 
 <style>
-*{box-sizing:border-box}
 
-html{scroll-behavior:smooth}
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
 
 body{
- margin:0;
- font-family:Arial,"Noto Sans Devanagari",sans-serif;
- background:#f1f5f9;
- color:#172033;
+    font-family:
+    Arial,
+    "Noto Sans Devanagari",
+    sans-serif;
+
+    background:#f1f5f9;
+    color:#172033;
+    line-height:1.7;
 }
 
 header{
- background:linear-gradient(135deg,#075eaa,#1684d8);
- color:white;
- text-align:center;
- padding:38px 15px;
+    background:linear-gradient(135deg,#075eaa,#1597e5);
+    color:white;
+    text-align:center;
+    padding:38px 15px;
 }
 
 header h1{
- margin:0;
- font-size:35px;
+    font-size:35px;
+    margin-bottom:8px;
 }
 
 header p{
- font-size:17px;
- line-height:1.7;
+    font-size:17px;
 }
 
 nav{
- background:white;
- display:flex;
- justify-content:center;
- flex-wrap:wrap;
- gap:5px;
- padding:10px;
- position:sticky;
- top:0;
- z-index:1000;
- box-shadow:0 2px 10px #0002;
+    background:white;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:6px;
+    padding:10px;
+    position:sticky;
+    top:0;
+    z-index:999;
+
+    box-shadow:0 2px 10px #0002;
 }
 
 nav a{
- text-decoration:none;
- color:#14598e;
- font-weight:bold;
- padding:9px 12px;
- border-radius:8px;
+    text-decoration:none;
+    color:#075eaa;
+    font-weight:bold;
+    padding:8px 13px;
+    border-radius:8px;
 }
 
-nav a:hover{background:#e8f3fb}
+nav a:hover{
+    background:#eaf5ff;
+}
 
 .container{
- max-width:1150px;
- margin:auto;
- padding:18px;
+    max-width:1150px;
+    margin:auto;
+    padding:20px;
 }
 
 .card{
- background:white;
- padding:22px;
- margin-bottom:20px;
- border-radius:16px;
- box-shadow:0 5px 18px #00000012;
+    background:white;
+    border-radius:16px;
+    padding:22px;
+    margin-bottom:20px;
+
+    box-shadow:0 5px 20px #00000012;
 }
 
 .card h2{
- margin-top:0;
- color:#145b91;
+    color:#075eaa;
+    margin-bottom:15px;
 }
 
 .grid{
- display:grid;
- grid-template-columns:repeat(4,1fr);
- gap:12px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:14px;
 }
 
-.two-grid{
- display:grid;
- grid-template-columns:repeat(2,1fr);
- gap:18px;
+.grid3{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:14px;
 }
 
-.three-grid{
- display:grid;
- grid-template-columns:repeat(3,1fr);
- gap:12px;
+.option{
+    background:#f8fbff;
+    border:1px solid #d6e7f4;
+    border-radius:14px;
+    padding:20px;
+    text-align:center;
+
+    transition:.2s;
 }
 
-.option-card,
-.class-card,
-.subject,
-.lesson-card{
- background:#f8fbff;
- border:1px solid #d8e7f3;
- padding:20px;
- border-radius:14px;
- text-align:center;
- transition:.2s;
+.option:hover{
+    transform:translateY(-3px);
+    box-shadow:0 7px 20px #0001;
 }
 
-.option-card:hover,
-.class-card:hover,
-.subject:hover,
-.lesson-card:hover{
- transform:translateY(-2px);
- box-shadow:0 5px 15px #0001;
+.option h3{
+    color:#075eaa;
+    margin-bottom:8px;
 }
 
-.option-card h3,
-.class-card h3,
-.subject h3,
-.lesson-card h3{
- color:#145b91;
+button,
+.btn{
+    display:inline-block;
+
+    border:0;
+    border-radius:8px;
+
+    background:#0878cf;
+    color:white;
+
+    padding:11px 17px;
+
+    cursor:pointer;
+
+    font-size:15px;
+    font-weight:bold;
+
+    text-decoration:none;
+
+    margin-top:8px;
 }
 
-.lesson-card{
- text-align:left;
- margin-bottom:10px;
+button:hover,
+.btn:hover{
+    opacity:.9;
+}
+
+.green{
+    background:#159447;
+}
+
+.orange{
+    background:#e67e22;
+}
+
+.dark{
+    background:#34495e;
+}
+
+.red{
+    background:#d93434;
+}
+
+.purple{
+    background:#7139b7;
+}
+
+.hidden{
+    display:none;
 }
 
 .selection{
- background:#eef7ff;
- padding:15px;
- border-radius:10px;
- line-height:1.9;
+    background:#edf7ff;
+    border-left:5px solid #0878cf;
+
+    padding:14px;
+
+    border-radius:9px;
+
+    margin-bottom:15px;
 }
 
-.search,input,select{
- width:100%;
- padding:13px;
- margin:6px 0 12px;
- border:1px solid #ccd5df;
- border-radius:8px;
- font-size:16px;
+.lesson{
+    background:#f8fbff;
+
+    border:1px solid #d6e7f4;
+
+    border-radius:13px;
+
+    padding:18px;
+
+    margin-bottom:12px;
 }
 
-button,.btn{
- display:inline-block;
- border:0;
- background:#0878cf;
- color:white;
- padding:11px 16px;
- border-radius:8px;
- cursor:pointer;
- font-weight:bold;
- text-decoration:none;
- margin:4px;
+.lesson h3{
+    color:#075eaa;
 }
 
-button:hover,.btn:hover{opacity:.9}
+.search{
+    width:100%;
 
-.green{background:#159447}
-.orange{background:#e67e22}
-.red{background:#dc3545}
-.dark{background:#34495e}
-.purple{background:#7b3fc6}
+    padding:13px;
 
-.hidden{display:none}
+    border:1px solid #ccd5df;
 
-.notice{
- background:#fff7d6;
- border-left:5px solid #e5b300;
- padding:15px;
- border-radius:8px;
- margin-bottom:20px;
+    border-radius:8px;
+
+    font-size:16px;
+
+    margin-bottom:15px;
 }
 
-.message{
- background:#fff7d6;
- padding:15px;
- border-radius:8px;
- margin-top:12px;
-}
-
-.notes-content{
- font-size:17px;
- line-height:1.9;
+.notes{
+    font-size:17px;
 }
 
 .notes-box{
- background:#f8fbff;
- border:1px solid #d8e7f3;
- padding:20px;
- border-radius:12px;
- margin:15px 0;
+    background:#f8fbff;
+
+    border:1px solid #d7e6f2;
+
+    border-radius:12px;
+
+    padding:20px;
+
+    margin:15px 0;
 }
 
 .notes-box h3{
- color:#145b91;
+    color:#075eaa;
+
+    margin-bottom:10px;
 }
 
 .point{
- background:white;
- border-left:4px solid #0878cf;
- padding:10px 14px;
- margin:8px 0;
- border-radius:6px;
+    background:white;
+
+    border-left:4px solid #0878cf;
+
+    padding:10px 14px;
+
+    margin:8px 0;
+
+    border-radius:6px;
 }
 
 .qa{
- background:#fff;
- border:1px solid #ddd;
- padding:15px;
- margin:10px 0;
- border-radius:10px;
+    background:white;
+
+    border:1px solid #ddd;
+
+    padding:15px;
+
+    margin:10px 0;
+
+    border-radius:10px;
 }
 
 .mcq{
- background:#eef7ff;
- padding:15px;
- border-radius:10px;
- margin:10px 0;
+    background:#edf7ff;
+
+    padding:15px;
+
+    border-radius:10px;
+
+    margin:10px 0;
 }
 
-.learning-grid{
- display:grid;
- grid-template-columns:repeat(5,1fr);
- gap:15px;
+.notice{
+    background:#fff8dc;
+
+    border-left:5px solid #e2ad00;
+
+    padding:15px;
+
+    border-radius:8px;
+
+    margin-bottom:20px;
 }
 
-.learning-card{
- color:white;
- padding:25px 15px;
- border-radius:16px;
- text-align:center;
- cursor:pointer;
-}
+.back-buttons{
+    display:flex;
 
-.learning-card .icon{font-size:40px}
+    gap:8px;
 
-.english{background:#0878cf}
-.gk{background:#159447}
-.reasoning{background:#7b3fc6}
-.computer{background:#e67e22}
-.cyber{background:#dc3545}
+    flex-wrap:wrap;
 
-.topic-grid{
- display:grid;
- grid-template-columns:repeat(3,1fr);
- gap:12px;
-}
-
-.topic-card{
- background:#eef7ff;
- border:1px solid #cfe4f5;
- padding:18px;
- border-radius:12px;
- text-align:center;
-}
-
-.data-card{
- background:#f8fbff;
- border:1px solid #d8e7f3;
- padding:16px;
- margin-bottom:12px;
- border-radius:12px;
-}
-
-.hindi{
- font-size:18px;
- font-weight:bold;
-}
-
-.english-text{
- color:#0878cf;
- font-size:18px;
- margin-top:5px;
-}
-
-.test-box{
- background:#f8fbff;
- border:2px solid #d8e7f3;
- padding:22px;
- border-radius:15px;
-}
-
-.test-question{
- font-size:20px;
- font-weight:bold;
- margin-bottom:18px;
-}
-
-.test-option{
- display:block;
- background:white;
- border:1px solid #ddd;
- padding:14px;
- margin:9px 0;
- border-radius:8px;
- cursor:pointer;
-}
-
-.test-option input{
- width:auto;
- margin-right:8px;
-}
-
-.test-buttons{
- display:flex;
- justify-content:space-between;
- flex-wrap:wrap;
- margin-top:20px;
-}
-
-.test-result{
- background:#e9f8ef;
- padding:20px;
- border-radius:10px;
- margin-top:15px;
- font-size:20px;
- font-weight:bold;
- text-align:center;
+    margin-top:20px;
 }
 
 footer{
- background:#172033;
- color:white;
- text-align:center;
- padding:25px;
+    background:#172033;
+
+    color:white;
+
+    text-align:center;
+
+    padding:25px;
+
+    margin-top:30px;
 }
 
 @media(max-width:900px){
- .learning-grid{grid-template-columns:repeat(3,1fr)}
+
+    .grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .grid3{
+        grid-template-columns:repeat(2,1fr);
+    }
 }
 
-@media(max-width:700px){
- header h1{font-size:27px}
- .container{padding:10px}
- .card{padding:16px}
- .two-grid,
- .three-grid,
- .topic-grid{grid-template-columns:1fr}
- .grid{grid-template-columns:repeat(2,1fr)}
- .learning-grid{grid-template-columns:repeat(2,1fr)}
- nav a{font-size:13px;padding:8px}
- .test-buttons{flex-direction:column}
- .test-buttons button{width:100%}
+@media(max-width:600px){
+
+    header h1{
+        font-size:27px;
+    }
+
+    .container{
+        padding:10px;
+    }
+
+    .card{
+        padding:16px;
+    }
+
+    .grid,
+    .grid3{
+        grid-template-columns:1fr;
+    }
+
+    nav a{
+        font-size:13px;
+    }
 }
+
 </style>
 </head>
 
+
 <body>
+
+
+<!-- =========================
+HEADER
+========================= -->
 
 <header id="home">
 
@@ -357,41 +354,55 @@ footer{
 <p>
 CBSE • RBSE • NCERT
 <br>
-Hindi Medium + English Medium
+Hindi Medium • English Medium
 <br>
-Class 1–12 • Subjects • Lessons • Original Notes
+Class 1–12 • Subjects • Lessons • Notes
 </p>
 
 </header>
 
+
+<!-- =========================
+NAVIGATION
+========================= -->
+
 <nav>
+
 <a href="#home">🏠 Home</a>
+
 <a href="#study">📚 Study</a>
-<a href="#learning">📖 Learning</a>
-<a href="#tools">🧮 Tools</a>
-<a href="#contact">✉️ Contact</a>
+
+<a href="#notesSection">📝 Notes</a>
+
+<a href="#about">ℹ️ About</a>
+
 </nav>
+
 
 <div class="container">
 
+
+<!-- =========================
+NOTICE
+========================= -->
+
 <div class="notice">
 
-<b>📢 महत्वपूर्ण सूचना</b>
-
-<br><br>
-
-यह एक निजी Education Website है।
+<b>📢 विद्यार्थी सूचना</b>
 
 <br>
 
-यहाँ दिए गए Notes अपने शब्दों में तैयार किए गए
-Original Study Notes हैं। Official textbook के पूरे
-मूल पाठ को कॉपी नहीं किया गया है।
+इस वेबसाइट पर विद्यार्थियों के लिए अपने शब्दों में
+तैयार किए गए Original Study Notes दिए जा रहे हैं।
 
 <br><br>
 
-Official books/syllabus को संबंधित official source से
-verify करें।
+Official textbook का पूरा मूल पाठ यहाँ कॉपी नहीं किया गया है।
+
+<br>
+
+Official NCERT पुस्तक देखने के लिए
+<strong>Official NCERT Book</strong> बटन का प्रयोग करें।
 
 </div>
 
@@ -402,45 +413,52 @@ STUDY SYSTEM
 
 <section class="card" id="study">
 
-<h2>📚 Complete Study System</h2>
+<h2>📚 Study Material</h2>
 
-<div id="stepBoard">
+
+<!-- BOARD -->
+
+<div id="boardStep">
 
 <h3>1️⃣ Board चुनें</h3>
 
-<div class="three-grid">
+<br>
 
-<div class="option-card">
+<div class="grid3">
+
+<div class="option">
 
 <h3>📘 CBSE</h3>
 
 <p>Central Board</p>
 
-<button onclick="selectBoard('CBSE')">
+<button onclick="chooseBoard('CBSE')">
 CBSE
 </button>
 
 </div>
 
-<div class="option-card">
+
+<div class="option">
 
 <h3>📕 RBSE</h3>
 
 <p>Rajasthan Board</p>
 
-<button onclick="selectBoard('RBSE')">
+<button onclick="chooseBoard('RBSE')">
 RBSE
 </button>
 
 </div>
 
-<div class="option-card">
+
+<div class="option">
 
 <h3>📗 NCERT</h3>
 
 <p>NCERT Books</p>
 
-<button onclick="selectBoard('NCERT')">
+<button onclick="chooseBoard('NCERT')">
 NCERT
 </button>
 
@@ -451,27 +469,38 @@ NCERT
 </div>
 
 
-<div id="stepMedium" class="hidden">
+<!-- MEDIUM -->
+
+<div id="mediumStep" class="hidden">
+
+<br>
 
 <h3>2️⃣ Medium चुनें</h3>
 
-<div class="two-grid">
+<br>
 
-<div class="option-card">
+<div class="grid3">
 
-<h3>🇮🇳 Hindi Medium</h3>
+<div class="option">
 
-<button onclick="selectMedium('Hindi Medium')">
+<h3>🇮🇳 हिंदी माध्यम</h3>
+
+<p>Hindi Medium</p>
+
+<button onclick="chooseMedium('Hindi Medium')">
 Hindi Medium
 </button>
 
 </div>
 
-<div class="option-card">
+
+<div class="option">
 
 <h3>🇬🇧 English Medium</h3>
 
-<button onclick="selectMedium('English Medium')">
+<p>English Medium</p>
+
+<button onclick="chooseMedium('English Medium')">
 English Medium
 </button>
 
@@ -482,247 +511,209 @@ English Medium
 </div>
 
 
-<div id="stepClass" class="hidden">
+<!-- CLASS -->
+
+<div id="classStep" class="hidden">
+
+<br>
 
 <h3>3️⃣ Class चुनें</h3>
 
-<div class="grid" id="classList"></div>
+<br>
+
+<div class="grid">
+
+<div class="option">
+<h3>Class 1</h3>
+<button onclick="chooseClass(1)">Open</button>
+</div>
+
+<div class="option">
+<h3>Class 2</h3>
+<button onclick="chooseClass(2)">Open</button>
+</div>
+
+<div class="option">
+<h3>Class 3</h3>
+<button onclick="chooseClass(3)">Open</button>
+</div>
+
+<div class="option">
+<h3>Class 4</h3>
+<button onclick="chooseClass(4)">Open</button>
+</div>
+
+<div class="option">
+<h3>Class 5</h3>
+<button onclick="chooseClass(5)">Open</button>
+</div>
+
+<div class="option">
+<h3>Class 6</h3>
+<button onclick="chooseClass(6)">Open</button>
+</div>
+
+<div class="option">
+<h3>Class 7</h3>
+<button onclick="chooseClass(7)">Open</button>
+</div>
+
+<div class="option">
+<h3>Class 8</h3>
+<button onclick="chooseClass(8)">Open</button>
+</div>
+
+<div class="option">
+<h3>Class 9</h3>
+<button onclick="chooseClass(9)">Open</button>
+</div>
+
+<div class="option">
+
+<h3>Class 10</h3>
+
+<button onclick="chooseClass(10)">
+Open
+</button>
+
+</div>
+
+<div class="option">
+
+<h3>Class 11</h3>
+
+<button onclick="chooseClass(11)">
+Open
+</button>
+
+</div>
+
+<div class="option">
+
+<h3>Class 12</h3>
+
+<button onclick="chooseClass(12)">
+Open
+</button>
+
+</div>
+
+</div>
 
 </div>
 
 
-<div id="stepSubject" class="hidden">
+<!-- SUBJECT -->
+
+<div id="subjectStep" class="hidden">
+
+<br>
 
 <h3>4️⃣ Subject चुनें</h3>
 
-<div class="selection" id="selectionInfo"></div>
+<br>
 
-<input
-id="subjectSearch"
-class="search"
-placeholder="🔎 Subject खोजें..."
-oninput="filterSubjects()">
+<div id="selection"></div>
 
-<div class="three-grid" id="subjectList"></div>
+<div id="subjectList"></div>
 
 </div>
 
 
-<div id="stepLesson" class="hidden">
+<!-- LESSON -->
+
+<div id="lessonStep" class="hidden">
+
+<br>
 
 <h3>5️⃣ Lesson / Chapter चुनें</h3>
 
-<div class="selection" id="lessonInfo"></div>
+<br>
+
+<div id="lessonSelection"></div>
 
 <input
-id="lessonSearch"
 class="search"
+id="lessonSearch"
 placeholder="🔎 Lesson खोजें..."
-oninput="filterLessons()">
+oninput="searchLessons()">
 
 <div id="lessonList"></div>
 
-<button class="dark" onclick="backToSubjects()">
-⬅️ Subjects
-</button>
-
 </div>
 
 
-<div id="stepNotes" class="hidden">
+<!-- NOTES -->
 
-<h2>📝 Lesson Notes</h2>
+<div id="notesStep" class="hidden">
 
-<div class="selection" id="notesHeader"></div>
+<br>
 
-<div id="notesContent" class="notes-content"></div>
+<h2 id="notesTitle"></h2>
 
-<button class="dark" onclick="backToLessons()">
-⬅️ सभी Lessons
-</button>
+<div id="notesHeader"></div>
 
-<button class="green" onclick="window.print()">
-🖨️ Print Notes
-</button>
+<div id="notesContent" class="notes"></div>
 
 </div>
+
 
 </section>
+
 
 
 <!-- =========================
-LEARNING
+ABOUT
 ========================= -->
 
-<section class="card" id="learning">
+<section class="card" id="about">
 
-<h2>📖 Extra Learning</h2>
-
-<div class="learning-grid">
-
-<div class="learning-card english"
-onclick="openLearning('english')">
-
-<div class="icon">🗣️</div>
-<h3>Daily Use English</h3>
-<p>Practice</p>
-
-</div>
-
-<div class="learning-card gk"
-onclick="openLearning('gk')">
-
-<div class="icon">🌍</div>
-<h3>GK</h3>
-<p>Questions</p>
-
-</div>
-
-<div class="learning-card reasoning"
-onclick="openLearning('reasoning')">
-
-<div class="icon">🧠</div>
-<h3>Reasoning</h3>
-<p>Practice</p>
-
-</div>
-
-<div class="learning-card computer"
-onclick="openLearning('computer')">
-
-<div class="icon">💻</div>
-<h3>Computer</h3>
-<p>Basics</p>
-
-</div>
-
-<div class="learning-card cyber"
-onclick="openLearning('cyber')">
-
-<div class="icon">🔐</div>
-<h3>Cyber Security</h3>
-<p>Basics</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-<section class="card hidden" id="learningView">
-
-<h2 id="learningTitle"></h2>
-
-<div class="selection" id="learningDescription"></div>
-
-<div id="topicArea"></div>
-
-<div id="dataArea"></div>
-
-<div id="testArea"></div>
-
-<button class="dark" onclick="closeLearning()">
-⬅️ Learning Menu
-</button>
-
-</section>
-
-
-<!-- =========================
-TOOLS
-========================= -->
-
-<section class="card" id="tools">
-
-<h2>🧮 Student Tools</h2>
-
-<div class="three-grid">
-
-<div class="option-card">
-
-<h3>📊 Percentage</h3>
-
-<input id="obtained"
-type="number"
-placeholder="Obtained Marks">
-
-<input id="total"
-type="number"
-placeholder="Total Marks">
-
-<button onclick="percentage()">
-Calculate
-</button>
-
-<p id="percentageResult"></p>
-
-</div>
-
-
-<div class="option-card">
-
-<h3>🎂 Age Calculator</h3>
-
-<input id="birth" type="date">
-
-<button onclick="ageCalculator()">
-Calculate
-</button>
-
-<p id="ageResult"></p>
-
-</div>
-
-
-<div class="option-card">
-
-<h3>➕ Calculator</h3>
-
-<input id="number1"
-type="number"
-placeholder="First Number">
-
-<input id="number2"
-type="number"
-placeholder="Second Number">
-
-<button onclick="addNumbers()">
-Add
-</button>
-
-<p id="calculatorResult"></p>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- =========================
-CONTACT
-========================= -->
-
-<section class="card" id="contact">
-
-<h2>✉️ Contact</h2>
+<h2>ℹ️ About Student Study Hub</h2>
 
 <p>
-Study material और website के लिए संपर्क करें।
+
+इस वेबसाइट का उद्देश्य विद्यार्थियों को
+एक जगह पर अध्ययन सामग्री उपलब्ध कराना है।
+
 </p>
 
-<a
-class="btn green"
-href="https://wa.me/918890922880"
-target="_blank"
-rel="noopener">
+<br>
 
-💬 WhatsApp
+<p>
 
-</a>
+Board → Medium → Class → Subject → Lesson
+के क्रम से विद्यार्थी अपने पाठ तक पहुँच सकता है।
+
+</p>
+
+<br>
+
+<p>
+
+Lesson में Original Notes, मुख्य बिंदु,
+प्रश्न–उत्तर और अभ्यास प्रश्न दिए जा सकते हैं।
+
+</p>
 
 </section>
+
+
+<!-- =========================
+NOTES SECTION
+========================= -->
+
+<section class="card" id="notesSection">
+
+<h2>📝 Notes System</h2>
+
+<p>
+
+Lesson खोलने पर Notes इसी स्थान पर दिखाई देंगे।
+
+</p>
+
+</section>
+
 
 </div>
 
@@ -735,185 +726,367 @@ rel="noopener">
 
 CBSE • RBSE • NCERT
 
-<br>
-
-Hindi Medium + English Medium
-
 </footer>
+
 
 
 <script>
 
+
 /* =====================================================
-GLOBAL
+GLOBAL VARIABLES
 ===================================================== */
 
-let board="";
-let medium="";
-let classNo="";
-let subject="";
-let lesson="";
+let selectedBoard = "";
+let selectedMedium = "";
+let selectedClass = "";
+let selectedSubject = "";
+
 
 
 /* =====================================================
 SUBJECT DATABASE
 ===================================================== */
 
-const SUBJECTS={
+const subjects = {
 
 1:[
-"Hindi",
+"हिंदी",
 "English",
-"Mathematics",
-"Environmental Studies"
+"गणित",
+"पर्यावरण अध्ययन"
 ],
 
 2:[
-"Hindi",
+"हिंदी",
 "English",
-"Mathematics",
-"Environmental Studies"
+"गणित",
+"पर्यावरण अध्ययन"
 ],
 
 3:[
-"Hindi",
+"हिंदी",
 "English",
-"Mathematics",
-"Environmental Studies"
+"गणित",
+"पर्यावरण अध्ययन"
 ],
 
 4:[
-"Hindi",
+"हिंदी",
 "English",
-"Mathematics",
-"Environmental Studies"
+"गणित",
+"पर्यावरण अध्ययन"
 ],
 
 5:[
-"Hindi",
+"हिंदी",
 "English",
-"Mathematics",
-"Environmental Studies"
+"गणित",
+"पर्यावरण अध्ययन"
 ],
 
 6:[
-"Hindi",
+"हिंदी",
 "English",
-"Mathematics",
-"Science",
-"Social Science",
-"Sanskrit"
+"गणित",
+"विज्ञान",
+"सामाजिक विज्ञान",
+"संस्कृत"
 ],
 
 7:[
-"Hindi",
+"हिंदी",
 "English",
-"Mathematics",
-"Science",
-"Social Science",
-"Sanskrit"
+"गणित",
+"विज्ञान",
+"सामाजिक विज्ञान",
+"संस्कृत"
 ],
 
 8:[
-"Hindi",
+"हिंदी",
 "English",
-"Mathematics",
-"Science",
-"Social Science",
-"Sanskrit"
+"गणित",
+"विज्ञान",
+"सामाजिक विज्ञान",
+"संस्कृत"
 ],
 
 9:[
-"Hindi",
+"हिंदी",
 "English",
-"Mathematics",
-"Science",
-"Social Science",
-"Sanskrit",
-"Information Technology"
+"गणित",
+"विज्ञान",
+"सामाजिक विज्ञान",
+"संस्कृत"
 ],
 
 10:[
-"Hindi",
+"हिंदी",
 "English",
-"Mathematics",
-"Science",
-"Social Science",
-"Sanskrit",
-"Information Technology"
+"गणित",
+"विज्ञान",
+"सामाजिक विज्ञान",
+"संस्कृत"
 ],
 
 11:[
-"Hindi",
+"हिंदी",
 "English",
-"Physics",
-"Chemistry",
-"Biology",
-"Mathematics",
-"History",
-"Political Science",
-"Geography",
-"Economics",
-"Sociology",
-"Psychology",
-"Accountancy",
-"Business Studies",
-"Computer Science"
+"भौतिक विज्ञान",
+"रसायन विज्ञान",
+"जीव विज्ञान",
+"गणित",
+"इतिहास",
+"राजनीति विज्ञान",
+"भूगोल",
+"अर्थशास्त्र"
 ],
 
 12:[
-"Hindi",
+"हिंदी",
 "English",
-"Physics",
-"Chemistry",
-"Biology",
-"Mathematics",
-"History",
-"Political Science",
-"Geography",
-"Economics",
-"Sociology",
-"Psychology",
-"Accountancy",
-"Business Studies",
-"Computer Science"
+"भौतिक विज्ञान",
+"रसायन विज्ञान",
+"जीव विज्ञान",
+"गणित",
+"इतिहास",
+"राजनीति विज्ञान",
+"भूगोल",
+"अर्थशास्त्र"
 ]
 
 };
 
 
+
 /* =====================================================
-LESSON DATABASE
-=====================================================
-
-यहाँ chapter names और notes data रखे जाते हैं।
-
-जहाँ verified book-specific chapter names उपलब्ध
-नहीं हैं वहाँ generic placeholder नहीं बल्कि
-"Lesson 1..." को editable structure के रूप में रखा गया है।
-
-बाद में official syllabus के अनुसार नाम बदले जा सकते हैं।
+REAL NCERT LINK PROVIDED BY USER
 ===================================================== */
 
-const BOOK_DATA={};
+const OFFICIAL_NCERT_LINK =
+"https://ncert.nic.in/textbook/pdf/jhks101.pdf";
+
 
 
 /* =====================================================
-DEFAULT LESSON BUILDER
+CLASS 10 HINDI DATA
 ===================================================== */
 
-function makeLessons(classNo,subject){
+const class10Hindi = [
 
-let count=10;
+{
 
-if(classNo<=5) count=10;
-if(classNo>=6 && classNo<=8) count=12;
-if(classNo>=9 && classNo<=10) count=15;
-if(classNo>=11) count=16;
+id:1,
+
+name:"पाठ 1 – सूरदास",
+
+book:"क्षितिज भाग-2",
+
+summary:
+"इस पाठ में सूरदास के भ्रमरगीत से चुने गए पदों का अध्ययन किया जाता है। पदों में गोपियों की कृष्ण के प्रति गहरी प्रेम-भावना, उनके वियोग की पीड़ा और उद्धव के योग-संदेश के प्रति उनकी प्रतिक्रिया दिखाई देती है। गोपियाँ तर्क, व्यंग्य और प्रेम के माध्यम से अपनी भावनाएँ व्यक्त करती हैं।",
+
+points:[
+
+"सूरदास भक्तिकाल के प्रमुख कवियों में माने जाते हैं।",
+
+"उनकी काव्य-भाषा में ब्रजभाषा का सुंदर प्रयोग मिलता है।",
+
+"भ्रमरगीत में गोपियों और उद्धव के संवाद का प्रमुख स्थान है।",
+
+"गोपियाँ कृष्ण के प्रति अपने अनन्य प्रेम को ज्ञान और योग से अधिक महत्वपूर्ण मानती हैं।",
+
+"गोपियों की वाणी में प्रेम, विरह, व्यंग्य और तर्क का सुंदर मेल है।",
+
+"पदों में कृष्ण के मथुरा चले जाने के बाद उत्पन्न विरह की अनुभूति दिखाई देती है।",
+
+"गोपियाँ उद्धव के निर्गुण योग के संदेश को अपनी प्रेम-भावना के संदर्भ में स्वीकार नहीं करतीं।",
+
+"अंतिम पदों में राजा के धर्म और प्रजा के हित की ओर भी संकेत मिलता है।"
+
+],
+
+characters:[
+
+"सूरदास – भक्तिकाल के प्रसिद्ध कृष्णभक्त कवि।",
+
+"गोपियाँ – कृष्ण के प्रति गहरा और अनन्य प्रेम रखने वाली पात्र।",
+
+"उद्धव – कृष्ण के संदेश के साथ गोपियों के पास आने वाले पात्र।",
+
+"कृष्ण – गोपियों की प्रेम-भावना के केंद्र।"
+
+],
+
+questions:[
+
+{
+
+q:
+"भ्रमरगीत में गोपियों की मुख्य भावना क्या है?",
+
+a:
+"गोपियों की मुख्य भावना कृष्ण के प्रति अनन्य प्रेम और उनके वियोग की पीड़ा है। वे कृष्ण से दूर होने के कारण अत्यंत व्याकुल हैं।"
+
+},
+
+{
+
+q:
+"गोपियाँ उद्धव के योग-संदेश को सहज रूप से क्यों स्वीकार नहीं करतीं?",
+
+a:
+"गोपियों का मन कृष्ण के प्रेम में पूरी तरह लगा हुआ है। इसलिए उन्हें निर्गुण योग का संदेश उनकी प्रेम-भावना से अलग और व्यावहारिक रूप से अनुपयुक्त लगता है।"
+
+},
+
+{
+
+q:
+"गोपियों की वाणी की प्रमुख विशेषता क्या है?",
+
+a:
+"उनकी वाणी में प्रेम और विरह के साथ तीखा व्यंग्य, तर्क, चतुराई तथा भावनात्मक प्रभाव दिखाई देता है।"
+
+},
+
+{
+
+q:
+"सूरदास की काव्य-भाषा कौन-सी है?",
+
+a:
+"सूरदास की कृष्णभक्ति संबंधी रचनाओं में ब्रजभाषा का सुंदर और प्रभावशाली प्रयोग मिलता है।"
+
+},
+
+{
+
+q:
+"भ्रमरगीत में कृष्ण के प्रति गोपियों का प्रेम कैसा है?",
+
+a:
+"गोपियों का प्रेम गहरा, एकनिष्ठ और समर्पित है। वे कृष्ण को अपने जीवन का केंद्र मानती हैं।"
+
+},
+
+{
+
+q:
+"पाठ में गोपियों के माध्यम से कौन-सा मानवीय पक्ष सामने आता है?",
+
+a:
+"पाठ में प्रेम, लगाव, वियोग, स्मृति और अपने प्रिय के प्रति निष्ठा जैसे मानवीय भाव सामने आते हैं।"
+
+},
+
+{
+
+q:
+"गोपियाँ उद्धव पर व्यंग्य क्यों करती हैं?",
+
+a:
+"उद्धव उनके सामने योग और ज्ञान का संदेश रखते हैं, जबकि गोपियाँ अपने अनुभव और प्रेम को अधिक वास्तविक मानती हैं। इसी अंतर के कारण उनकी बातों में व्यंग्य दिखाई देता है।"
+
+},
+
+{
+
+q:
+"राजधर्म के संबंध में पाठ में क्या संकेत मिलता है?",
+
+a:
+"पाठ में यह विचार सामने आता है कि शासक का प्रमुख कर्तव्य अपनी प्रजा के हित और कल्याण की चिंता करना है।"
+
+}
+
+],
+
+mcq:[
+
+{
+
+q:
+"सूरदास किस भक्ति धारा के प्रमुख कवि हैं?",
+
+options:[
+"कृष्णभक्ति",
+"रामभक्ति",
+"सूफी",
+"वीरगाथा"
+],
+
+answer:0
+
+},
+
+{
+
+q:
+"भ्रमरगीत में मुख्य रूप से किन पात्रों के संवाद का चित्रण है?",
+
+options:[
+"राम और लक्ष्मण",
+"गोपियाँ और उद्धव",
+"अर्जुन और कृष्ण",
+"भरत और शत्रुघ्न"
+],
+
+answer:1
+
+},
+
+{
+
+q:
+"सूरदास की काव्य-भाषा का प्रमुख रूप कौन-सा है?",
+
+options:[
+"अवधी",
+"ब्रजभाषा",
+"खड़ी बोली",
+"राजस्थानी"
+],
+
+answer:1
+
+},
+
+{
+
+q:
+"गोपियों की सबसे प्रमुख भावना क्या है?",
+
+options:[
+"क्रोध",
+"कृष्ण-प्रेम",
+"भय",
+"ईर्ष्या"
+],
+
+answer:1
+
+}
+
+],
+
+officialLink:OFFICIAL_NCERT_LINK
+
+}
+
+];
+
+
+
+/* =====================================================
+OTHER SUBJECT STRUCTURE
+===================================================== */
+
+function createGeneralLessons(subject){
 
 let arr=[];
 
-for(let i=1;i<=count;i++){
+for(let i=1;i<=10;i++){
 
 arr.push({
 
@@ -921,53 +1094,40 @@ id:i,
 
 name:"Lesson "+i,
 
-title:
-
-subject+" – Lesson "+i,
+book:subject,
 
 summary:
-
-"यह "+subject+
-" के Lesson "+i+
-" के लिए Original Study Notes का भाग है। " +
-"इस भाग में विद्यार्थी विषय की मूल अवधारणाओं को " +
-"सरल भाषा में समझ सकते हैं।",
+"यह Original Study Notes section है। इस lesson के लिए chapter-specific notes यहाँ जोड़े जा सकते हैं।",
 
 points:[
-"अध्याय के मुख्य विचारों को ध्यान से समझें।",
-"महत्वपूर्ण शब्दों और परिभाषाओं को नोट करें।",
-"उदाहरणों को स्वयं हल करके अभ्यास करें।",
-"अध्याय के अंत में दिए गए प्रश्नों का अभ्यास करें।",
-"परीक्षा से पहले मुख्य बिंदुओं का दोहराव करें।"
+"Lesson को ध्यान से पढ़ें।",
+"मुख्य अवधारणाएँ लिखें।",
+"महत्वपूर्ण शब्दों का अभ्यास करें।",
+"प्रश्न–उत्तर स्वयं लिखकर अभ्यास करें।",
+"परीक्षा से पहले दोहराव करें।"
 ],
 
 questions:[
 {
-q:"इस Lesson का मुख्य उद्देश्य क्या है?",
-a:"इस Lesson का उद्देश्य विषय की मुख्य अवधारणाओं को समझना और उनका अभ्यास करना है।"
-},
-{
 q:"इस Lesson की तैयारी कैसे करें?",
-a:"पहले विषय को समझें, फिर मुख्य बिंदु लिखें और अंत में प्रश्नों का अभ्यास करें।"
-},
-{
-q:"परीक्षा में इस Lesson से कैसे प्रश्न पूछे जा सकते हैं?",
-a:"परिभाषा, कारण, अंतर, उदाहरण, लघु उत्तर और वस्तुनिष्ठ प्रश्न पूछे जा सकते हैं।"
+a:"पहले विषय की मूल अवधारणा समझें, फिर मुख्य बिंदुओं को लिखें और प्रश्नों का अभ्यास करें।"
 }
 ],
 
 mcq:[
 {
-q:"अच्छी पढ़ाई के लिए सबसे जरूरी क्या है?",
-o:["नियमित अभ्यास","केवल याद करना","पढ़ाई छोड़ना","बिना समझे लिखना"],
-a:0
-},
-{
-q:"Notes बनाने का अच्छा तरीका कौन सा है?",
-o:["मुख्य बिंदु लिखना","पूरा पाठ बिना समझे लिखना","कुछ भी न लिखना","केवल चित्र बनाना"],
-a:0
+q:"अच्छी पढ़ाई के लिए क्या जरूरी है?",
+options:[
+"नियमित अभ्यास",
+"पढ़ाई छोड़ देना",
+"केवल अनुमान लगाना",
+"बिना समझे लिखना"
+],
+answer:0
 }
-]
+],
+
+officialLink:""
 
 });
 
@@ -978,201 +1138,199 @@ return arr;
 }
 
 
-/* =====================================================
-INITIALIZE ALL CLASSES/SUBJECTS
-===================================================== */
-
-for(let c=1;c<=12;c++){
-
-BOOK_DATA[c]={};
-
-SUBJECTS[c].forEach(sub=>{
-
-BOOK_DATA[c][sub]=makeLessons(c,sub);
-
-});
-
-}
-
 
 /* =====================================================
-CLASS BUTTONS
+LESSON DATABASE
 ===================================================== */
 
-const classList=document.getElementById("classList");
+const lessons = {
 
-for(let i=1;i<=12;i++){
+10:{
 
-let div=document.createElement("div");
+"हिंदी":class10Hindi,
 
-div.className="class-card";
+"English":createGeneralLessons("English"),
 
-div.innerHTML=`
+"गणित":createGeneralLessons("गणित"),
 
-<h3>🎓 Class ${i}</h3>
+"विज्ञान":createGeneralLessons("विज्ञान"),
 
-<p>
-${
-i<=5
-?"Primary"
-:i<=8
-?"Middle School"
-:i<=10
-?"Secondary"
-:"Senior Secondary"
-}
-</p>
+"सामाजिक विज्ञान":createGeneralLessons("सामाजिक विज्ञान"),
 
-<button onclick="selectClass(${i})">
-Open Class ${i}
-</button>
-
-`;
-
-classList.appendChild(div);
+"संस्कृत":createGeneralLessons("संस्कृत")
 
 }
+
+};
+
 
 
 /* =====================================================
 BOARD
 ===================================================== */
 
-function selectBoard(value){
+function chooseBoard(board){
 
-board=value;
+selectedBoard = board;
 
-document.getElementById("stepMedium")
+document
+.getElementById("mediumStep")
 .classList.remove("hidden");
 
-document.getElementById("stepMedium")
-.scrollIntoView({behavior:"smooth"});
+document
+.getElementById("mediumStep")
+.scrollIntoView({
+behavior:"smooth"
+});
 
 }
+
 
 
 /* =====================================================
 MEDIUM
 ===================================================== */
 
-function selectMedium(value){
+function chooseMedium(medium){
 
-medium=value;
+selectedMedium = medium;
 
-document.getElementById("stepClass")
+document
+.getElementById("classStep")
 .classList.remove("hidden");
 
-document.getElementById("stepClass")
-.scrollIntoView({behavior:"smooth"});
+document
+.getElementById("classStep")
+.scrollIntoView({
+behavior:"smooth"
+});
 
 }
+
 
 
 /* =====================================================
 CLASS
 ===================================================== */
 
-function selectClass(value){
+function chooseClass(classNumber){
 
-classNo=value;
+selectedClass = classNumber;
 
-document.getElementById("stepSubject")
+document
+.getElementById("subjectStep")
 .classList.remove("hidden");
 
-document.getElementById("selectionInfo").innerHTML=
+let list =
+subjects[classNumber] || [];
 
-"<b>Board:</b> "+board+
-"<br><b>Medium:</b> "+medium+
-"<br><b>Class:</b> "+classNo;
+let html = "";
 
-renderSubjects();
+list.forEach(function(subject){
 
-document.getElementById("stepSubject")
-.scrollIntoView({behavior:"smooth"});
+html += `
 
-}
+<div class="lesson">
 
-
-/* =====================================================
-SUBJECTS
-===================================================== */
-
-function renderSubjects(){
-
-let box=document.getElementById("subjectList");
-
-box.innerHTML="";
-
-SUBJECTS[classNo].forEach(sub=>{
-
-let div=document.createElement("div");
-
-div.className="subject";
-
-div.innerHTML=`
-
-<h3>📚 ${sub}</h3>
+<h3>📚 ${subject}</h3>
 
 <p>
-Class ${classNo}
+Class ${classNumber}
 </p>
 
-<button onclick="selectSubject('${safe(sub)}')">
+<button
+onclick="chooseSubject('${escapeQuotes(subject)}')">
+
 📖 Open Subject
+
 </button>
+
+</div>
 
 `;
 
-box.appendChild(div);
+});
 
+document
+.getElementById("subjectList")
+.innerHTML = html;
+
+document
+.getElementById("selection")
+.innerHTML = `
+
+<div class="selection">
+
+<b>Board:</b> ${selectedBoard}
+
+<br>
+
+<b>Medium:</b> ${selectedMedium}
+
+<br>
+
+<b>Class:</b> ${selectedClass}
+
+</div>
+
+`;
+
+document
+.getElementById("subjectStep")
+.scrollIntoView({
+behavior:"smooth"
 });
 
 }
 
-
-function filterSubjects(){
-
-let value=
-document.getElementById("subjectSearch")
-.value.toLowerCase();
-
-document.querySelectorAll("#subjectList .subject")
-.forEach(x=>{
-
-x.style.display=
-x.innerText.toLowerCase().includes(value)
-?""
-:"none";
-
-});
-
-}
 
 
 /* =====================================================
 SUBJECT
 ===================================================== */
 
-function selectSubject(value){
+function chooseSubject(subject){
 
-subject=value;
+selectedSubject = subject;
 
-document.getElementById("stepLesson")
+document
+.getElementById("lessonStep")
 .classList.remove("hidden");
 
-document.getElementById("lessonInfo").innerHTML=
+document
+.getElementById("lessonSelection")
+.innerHTML = `
 
-"<b>Board:</b> "+board+
-"<br><b>Medium:</b> "+medium+
-"<br><b>Class:</b> "+classNo+
-"<br><b>Subject:</b> "+subject;
+<div class="selection">
+
+<b>Board:</b> ${selectedBoard}
+
+<br>
+
+<b>Medium:</b> ${selectedMedium}
+
+<br>
+
+<b>Class:</b> ${selectedClass}
+
+<br>
+
+<b>Subject:</b> ${selectedSubject}
+
+</div>
+
+`;
 
 renderLessons();
 
-document.getElementById("stepLesson")
-.scrollIntoView({behavior:"smooth"});
+document
+.getElementById("lessonStep")
+.scrollIntoView({
+behavior:"smooth"
+});
 
 }
+
 
 
 /* =====================================================
@@ -1181,63 +1339,85 @@ LESSONS
 
 function renderLessons(){
 
-let box=document.getElementById("lessonList");
+let list =
+lessons[selectedClass] &&
+lessons[selectedClass][selectedSubject];
 
-box.innerHTML="";
+if(!list){
 
-let lessons=
-BOOK_DATA[classNo][subject] || [];
+list = createGeneralLessons(selectedSubject);
 
-lessons.forEach(item=>{
+}
 
-let div=document.createElement("div");
+let html = "";
 
-div.className="lesson-card";
+list.forEach(function(item){
 
-div.innerHTML=`
+html += `
+
+<div class="lesson">
 
 <h3>
 📘 ${item.name}
 </h3>
 
 <p>
-${item.title}
+${item.book}
 </p>
 
 <p>
-📝 Original Study Notes
+📝 Original Study Notes available
 </p>
 
-<button onclick="openLesson(${item.id})">
-📖 Open Lesson
+<button
+onclick="openLesson(${item.id})">
+
+📖 Lesson खोलें
+
 </button>
+
+</div>
 
 `;
 
-box.appendChild(div);
+});
+
+document
+.getElementById("lessonList")
+.innerHTML = html;
+
+}
+
+
+
+/* =====================================================
+SEARCH LESSON
+===================================================== */
+
+function searchLessons(){
+
+let value =
+document
+.getElementById("lessonSearch")
+.value
+.toLowerCase();
+
+document
+.querySelectorAll("#lessonList .lesson")
+.forEach(function(item){
+
+let text =
+item.innerText.toLowerCase();
+
+item.style.display =
+text.includes(value)
+? ""
+: "none";
 
 });
 
 }
 
-
-function filterLessons(){
-
-let value=
-document.getElementById("lessonSearch")
-.value.toLowerCase();
-
-document.querySelectorAll("#lessonList .lesson-card")
-.forEach(x=>{
-
-x.style.display=
-x.innerText.toLowerCase().includes(value)
-?""
-:"none";
-
-});
-
-}
 
 
 /* =====================================================
@@ -1246,36 +1426,84 @@ OPEN LESSON
 
 function openLesson(id){
 
-let data=
-BOOK_DATA[classNo][subject]
-.find(x=>x.id===id);
+let list =
+lessons[selectedClass] &&
+lessons[selectedClass][selectedSubject];
 
-if(!data)return;
+if(!list){
 
-lesson=data.name;
+list = createGeneralLessons(selectedSubject);
 
-document.getElementById("stepNotes")
+}
+
+let data =
+list.find(function(item){
+
+return item.id === id;
+
+});
+
+if(!data){
+
+return;
+
+}
+
+document
+.getElementById("notesStep")
 .classList.remove("hidden");
 
-document.getElementById("notesHeader").innerHTML=
-
-"<b>Board:</b> "+board+
-"<br><b>Medium:</b> "+medium+
-"<br><b>Class:</b> "+classNo+
-"<br><b>Subject:</b> "+subject+
-"<br><b>Lesson:</b> "+data.name;
+document
+.getElementById("notesTitle")
+.innerText =
+"📝 "+data.name+" – Original Notes";
 
 
-let html=`
+
+/* HEADER */
+
+document
+.getElementById("notesHeader")
+.innerHTML = `
+
+<div class="selection">
+
+<b>Board:</b> ${selectedBoard}
+
+<br>
+
+<b>Medium:</b> ${selectedMedium}
+
+<br>
+
+<b>Class:</b> ${selectedClass}
+
+<br>
+
+<b>Subject:</b> ${selectedSubject}
+
+<br>
+
+<b>Lesson:</b> ${data.name}
+
+</div>
+
+`;
+
+
+
+/* CONTENT */
+
+let html = `
 
 <div class="notes-box">
 
-<h2>📖 ${data.title}</h2>
-
-<h3>📝 Original Summary</h3>
+<h3>📖 पाठ का परिचय</h3>
 
 <p>
+
 ${data.summary}
+
 </p>
 
 </div>
@@ -1284,21 +1512,68 @@ ${data.summary}
 <div class="notes-box">
 
 <h3>⭐ मुख्य बिंदु</h3>
+
 `;
 
-data.points.forEach(point=>{
+data.points.forEach(function(point){
 
-html+=`
+html += `
 
 <div class="point">
+
 ✅ ${point}
+
 </div>
 
 `;
 
 });
 
-html+=`
+
+html += `
+
+</div>
+
+
+<div class="notes-box">
+
+<h3>👥 प्रमुख पात्र / विषय</h3>
+
+`;
+
+if(data.characters){
+
+data.characters.forEach(function(character){
+
+html += `
+
+<div class="point">
+
+📌 ${character}
+
+</div>
+
+`;
+
+});
+
+}else{
+
+html += `
+
+<p>
+
+इस Lesson में विषय से संबंधित प्रमुख
+अवधारणाओं और उदाहरणों को समझना महत्वपूर्ण है।
+
+</p>
+
+`;
+
+}
+
+
+html += `
 
 </div>
 
@@ -1306,20 +1581,27 @@ html+=`
 <div class="notes-box">
 
 <h3>❓ महत्वपूर्ण प्रश्न–उत्तर</h3>
+
 `;
 
-data.questions.forEach((q,index)=>{
+data.questions.forEach(function(item,index){
 
-html+=`
+html += `
 
 <div class="qa">
 
-<b>Q${index+1}. ${q.q}</b>
+<b>
+प्रश्न ${index+1}:
+${item.q}
+</b>
 
 <br><br>
 
-<strong>उत्तर:</strong>
-${q.a}
+<strong>
+उत्तर:
+</strong>
+
+${item.a}
 
 </div>
 
@@ -1327,7 +1609,8 @@ ${q.a}
 
 });
 
-html+=`
+
+html += `
 
 </div>
 
@@ -1335,21 +1618,37 @@ html+=`
 <div class="notes-box">
 
 <h3>🧠 MCQ Practice</h3>
+
 `;
 
-data.mcq.forEach((q,index)=>{
+data.mcq.forEach(function(item,index){
 
-html+=`
+html += `
 
 <div class="mcq">
 
-<b>Q${index+1}. ${q.q}</b>
+<b>
+${index+1}. ${item.q}
+</b>
 
 <ol type="A">
 
-${q.o.map(x=>`
-<li>${x}</li>
-`).join("")}
+`;
+
+item.options.forEach(function(option){
+
+html += `
+
+<li>
+${option}
+</li>
+
+`;
+
+});
+
+
+html += `
 
 </ol>
 
@@ -1359,274 +1658,152 @@ ${q.o.map(x=>`
 
 });
 
-html+=`
+
+html += `
 
 </div>
 
-<div class="message">
 
-<b>📌 Study Tip:</b>
+<div class="notes-box">
 
-इस Lesson को पहले समझकर पढ़ें।
-फिर अपने शब्दों में छोटे Notes बनाएं और
-अंत में MCQ तथा प्रश्न–उत्तर का अभ्यास करें।
+<h3>📌 परीक्षा के लिए Revision</h3>
+
+<div class="point">
+पाठ का सार अपने शब्दों में दोहराएँ।
+</div>
+
+<div class="point">
+मुख्य शब्दों और विचारों को याद करें।
+</div>
+
+<div class="point">
+महत्वपूर्ण प्रश्नों के उत्तर लिखकर अभ्यास करें।
+</div>
+
+<div class="point">
+MCQ का अभ्यास करें।
+</div>
 
 </div>
 
 `;
 
-document.getElementById("notesContent").innerHTML=html;
 
-document.getElementById("stepNotes")
-.scrollIntoView({behavior:"smooth"});
+
+/* OFFICIAL BUTTON */
+
+if(data.officialLink){
+
+html += `
+
+<div class="notes-box">
+
+<h3>
+📚 Official NCERT Book
+</h3>
+
+<p>
+
+यहाँ से official NCERT PDF खोली जा सकती है।
+
+</p>
+
+<a
+class="btn green"
+href="${data.officialLink}"
+target="_blank"
+rel="noopener">
+
+📖 Official NCERT Book खोलें
+
+</a>
+
+</div>
+
+`;
 
 }
+
+
+
+/* BACK */
+
+html += `
+
+<div class="back-buttons">
+
+<button
+class="dark"
+onclick="backToLessons()">
+
+⬅️ सभी Lessons
+
+</button>
+
+<button
+class="orange"
+onclick="window.print()">
+
+🖨️ Print Notes
+
+</button>
+
+</div>
+
+`;
+
+
+
+document
+.getElementById("notesContent")
+.innerHTML = html;
+
+
+
+document
+.getElementById("notesStep")
+.scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
 
 
 /* =====================================================
-BACK
+BACK TO LESSON
 ===================================================== */
-
-function backToSubjects(){
-
-document.getElementById("stepLesson")
-.classList.add("hidden");
-
-document.getElementById("stepNotes")
-.classList.add("hidden");
-
-document.getElementById("stepSubject")
-.scrollIntoView({behavior:"smooth"});
-
-}
-
 
 function backToLessons(){
 
-document.getElementById("stepNotes")
+document
+.getElementById("notesStep")
 .classList.add("hidden");
 
-document.getElementById("stepLesson")
-.scrollIntoView({behavior:"smooth"});
-
-}
-
-
-/* =====================================================
-TOOLS
-===================================================== */
-
-function percentage(){
-
-let a=parseFloat(
-document.getElementById("obtained").value
-);
-
-let b=parseFloat(
-document.getElementById("total").value
-);
-
-if(isNaN(a)||isNaN(b)||b<=0){
-
-document.getElementById("percentageResult")
-.innerText="कृपया सही अंक डालें।";
-
-return;
-
-}
-
-document.getElementById("percentageResult")
-.innerText=
-"📊 Percentage: "+
-((a/b)*100).toFixed(2)+"%";
-
-}
-
-
-function ageCalculator(){
-
-let value=
-document.getElementById("birth").value;
-
-if(!value){
-
-document.getElementById("ageResult")
-.innerText="जन्म तारीख चुनें।";
-
-return;
-
-}
-
-let birth=new Date(value);
-let today=new Date();
-
-let age=
-today.getFullYear()-
-birth.getFullYear();
-
-let m=
-today.getMonth()-
-birth.getMonth();
-
-if(m<0 ||
-(m===0 && today.getDate()<birth.getDate()))
-age--;
-
-document.getElementById("ageResult")
-.innerText=
-"🎂 उम्र: "+age+" वर्ष";
-
-}
-
-
-function addNumbers(){
-
-let a=parseFloat(
-document.getElementById("number1").value
-);
-
-let b=parseFloat(
-document.getElementById("number2").value
-);
-
-if(isNaN(a)||isNaN(b)){
-
-document.getElementById("calculatorResult")
-.innerText="दोनों संख्या डालें।";
-
-return;
-
-}
-
-document.getElementById("calculatorResult")
-.innerText=
-"उत्तर: "+(a+b);
-
-}
-
-
-/* =====================================================
-EXTRA LEARNING
-===================================================== */
-
-const LEARNING_DATA={
-
-english:[
-["तुम कैसे हो?","How are you?"],
-["मैं ठीक हूँ।","I am fine."],
-["तुम कहाँ जा रहे हो?","Where are you going?"],
-["मुझे समझ नहीं आया।","I did not understand."],
-["कृपया फिर से समझाइए।","Please explain again."]
-],
-
-gk:[
-["भारत की राजधानी क्या है?","नई दिल्ली"],
-["भारत का राष्ट्रीय पशु कौन सा है?","बाघ"],
-["पानी का रासायनिक सूत्र क्या है?","H₂O"],
-["सूर्य किस दिशा से उगता है?","पूर्व"]
-],
-
-reasoning:[
-["2, 4, 6, 8, ?","10"],
-["5, 10, 15, 20, ?","25"],
-["Book : Read :: Food : ?","Eat"]
-],
-
-computer:[
-["CPU का पूरा नाम क्या है?","Central Processing Unit"],
-["WWW का पूरा नाम क्या है?","World Wide Web"],
-["Windows क्या है?","Operating System"]
-],
-
-cyber:[
-["Strong Password में क्या होना चाहिए?","Letters, Numbers और Symbols"],
-["Phishing क्या है?","Fake message/link द्वारा जानकारी चुराने का प्रयास"],
-["OTP किसके साथ share करना चाहिए?","किसी के साथ नहीं"]
-]
-
-};
-
-
-function openLearning(type){
-
-let title={
-english:"🗣️ Daily Use English",
-gk:"🌍 General Knowledge",
-reasoning:"🧠 Reasoning",
-computer:"💻 Computer",
-cyber:"🔐 Cyber Security"
-}[type];
-
-document.getElementById("learningView")
-.classList.remove("hidden");
-
-document.getElementById("learningTitle")
-.innerText=title;
-
-document.getElementById("learningDescription")
-.innerHTML=
-"<b>Practice Material</b><br>सरल भाषा में अभ्यास सामग्री";
-
-let html="";
-
-LEARNING_DATA[type].forEach((x,i)=>{
-
-html+=`
-
-<div class="data-card">
-
-<h3>Q${i+1}. ${x[0]}</h3>
-
-<p class="english-text">
-${x[1]}
-</p>
-
-</div>
-
-`;
-
+document
+.getElementById("lessonStep")
+.scrollIntoView({
+behavior:"smooth"
 });
 
-document.getElementById("topicArea")
-.innerHTML=html;
-
-document.getElementById("dataArea")
-.innerHTML="";
-
-document.getElementById("testArea")
-.innerHTML="";
-
-document.getElementById("learningView")
-.scrollIntoView({behavior:"smooth"});
-
 }
 
-
-function closeLearning(){
-
-document.getElementById("learningView")
-.classList.add("hidden");
-
-document.getElementById("learning")
-.scrollIntoView({behavior:"smooth"});
-
-}
 
 
 /* =====================================================
-SAFE
+ESCAPE
 ===================================================== */
 
-function safe(text){
+function escapeQuotes(text){
 
-return String(text)
+return text
 .replace(/\\/g,"\\\\")
-.replace(/'/g,"\\'")
-.replace(/"/g,'\\"');
+.replace(/'/g,"\\'");
 
 }
 
 </script>
+
 
 </body>
 </html>
