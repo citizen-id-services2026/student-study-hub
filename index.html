@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>English Master Pro | English Learning Website</title>
+<title>English Master Pro | Student Learning Portal</title>
 
 <style>
 *{
@@ -19,96 +19,77 @@ html{
 
 body{
     font-family:Arial,"Noto Sans Devanagari",sans-serif;
-    background:#f4f7fb;
+    background:#f3f6fb;
     color:#172033;
-    line-height:1.6;
 }
 
-header{
-    background:linear-gradient(135deg,#2563eb,#7c3aed);
-    color:#fff;
-    text-align:center;
-    padding:35px 15px;
+body.dark{
+    background:#0f172a;
+    color:#e5e7eb;
 }
 
-header h1{
-    font-size:38px;
-    margin-bottom:8px;
+button,input,textarea,select{
+    font-family:inherit;
 }
 
-header p{
-    font-size:18px;
-}
-
-nav{
-    position:sticky;
-    top:0;
-    z-index:1000;
-    background:#fff;
-    box-shadow:0 2px 12px #0002;
-}
-
-.nav-box{
-    max-width:1250px;
-    margin:auto;
-    padding:10px;
-    display:flex;
-    gap:8px;
-    overflow-x:auto;
-}
-
-nav button{
-    border:0;
-    background:#eef2ff;
-    color:#1e3a8a;
-    padding:10px 15px;
-    border-radius:25px;
-    white-space:nowrap;
+button{
     cursor:pointer;
-    font-weight:bold;
 }
 
-nav button:hover{
-    background:#2563eb;
-    color:#fff;
+.hidden{
+    display:none!important;
 }
 
-.container{
-    width:92%;
-    max-width:1250px;
-    margin:auto;
-}
+/* LOGIN */
 
-.hero{
-    margin:25px 0;
-    padding:35px;
-    border-radius:22px;
-    background:#fff;
-    box-shadow:0 5px 20px #0001;
-}
-
-.hero h2{
-    font-size:30px;
-    margin-bottom:10px;
-}
-
-.hero p{
-    color:#64748b;
-}
-
-.search-box{
-    margin-top:20px;
+#loginPage{
+    min-height:100vh;
     display:flex;
-    gap:10px;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+    background:
+    linear-gradient(135deg,#2563eb,#7c3aed,#db2777);
 }
 
-.search-box input{
-    flex:1;
+.login-box{
+    width:100%;
+    max-width:430px;
+    background:white;
+    border-radius:25px;
+    padding:30px;
+    box-shadow:0 20px 60px #0005;
 }
 
-input,
-textarea,
-select{
+.login-logo{
+    text-align:center;
+    font-size:55px;
+}
+
+.login-box h1{
+    text-align:center;
+    color:#2563eb;
+    margin:8px 0;
+}
+
+.login-box p{
+    text-align:center;
+    color:#64748b;
+    margin-bottom:20px;
+}
+
+.form-group{
+    margin-bottom:15px;
+}
+
+.form-group label{
+    display:block;
+    font-weight:bold;
+    margin-bottom:6px;
+}
+
+.form-group input,
+.form-group select{
     width:100%;
     padding:13px;
     border:1px solid #cbd5e1;
@@ -116,27 +97,280 @@ select{
     font-size:16px;
 }
 
-textarea{
-    min-height:140px;
-    resize:vertical;
+.main-btn{
+    width:100%;
+    padding:14px;
+    border:0;
+    border-radius:11px;
+    color:white;
+    background:#2563eb;
+    font-weight:bold;
+    font-size:16px;
+    margin-top:5px;
 }
+
+.secondary-btn{
+    width:100%;
+    padding:12px;
+    border:0;
+    border-radius:11px;
+    background:#eef2ff;
+    color:#3730a3;
+    font-weight:bold;
+    margin-top:10px;
+}
+
+.login-message{
+    margin-top:15px;
+    text-align:center;
+    font-weight:bold;
+}
+
+/* HEADER */
+
+header{
+    background:linear-gradient(135deg,#2563eb,#7c3aed,#db2777);
+    color:white;
+    padding:18px 4%;
+}
+
+.header-row{
+    max-width:1400px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:15px;
+}
+
+.logo h1{
+    font-size:27px;
+}
+
+.logo p{
+    font-size:13px;
+}
+
+.header-actions{
+    display:flex;
+    gap:7px;
+    flex-wrap:wrap;
+}
+
+.header-actions button{
+    border:0;
+    border-radius:20px;
+    padding:9px 13px;
+    font-weight:bold;
+}
+
+/* NAV */
+
+nav{
+    background:white;
+    box-shadow:0 3px 15px #0002;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.dark nav{
+    background:#1e293b;
+}
+
+.nav-scroll{
+    display:flex;
+    gap:7px;
+    overflow-x:auto;
+    padding:9px;
+    max-width:1400px;
+    margin:auto;
+}
+
+.nav-scroll button{
+    border:0;
+    white-space:nowrap;
+    padding:10px 13px;
+    border-radius:20px;
+    background:#eef2ff;
+    color:#3730a3;
+    font-weight:bold;
+}
+
+.dark .nav-scroll button{
+    background:#334155;
+    color:white;
+}
+
+/* MAIN */
+
+.container{
+    width:94%;
+    max-width:1400px;
+    margin:auto;
+}
+
+.hero{
+    margin:22px 0;
+    background:white;
+    padding:28px;
+    border-radius:22px;
+    box-shadow:0 4px 20px #0001;
+}
+
+.dark .hero,
+.dark .card,
+.dark .practice,
+.dark .stat,
+.dark .lesson{
+    background:#1e293b;
+    color:#e5e7eb;
+}
+
+.hero h2{
+    font-size:30px;
+}
+
+.hero p{
+    margin-top:8px;
+    color:#64748b;
+}
+
+.welcome{
+    color:#2563eb;
+    font-weight:bold;
+}
+
+/* GRID */
+
+.grid{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+    gap:16px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:17px;
+    box-shadow:0 4px 15px #0001;
+}
+
+.card:hover{
+    transform:translateY(-2px);
+}
+
+.card h3{
+    margin:8px 0;
+}
+
+.icon{
+    font-size:38px;
+}
+
+.card button{
+    margin-top:12px;
+    border:0;
+    padding:10px 15px;
+    border-radius:9px;
+    background:#2563eb;
+    color:white;
+    font-weight:bold;
+}
+
+/* SECTIONS */
+
+.section{
+    margin:38px 0;
+    scroll-margin-top:75px;
+}
+
+.section-title{
+    margin-bottom:18px;
+}
+
+.section-title h2{
+    font-size:27px;
+}
+
+.section-title p{
+    color:#64748b;
+}
+
+/* STATS */
+
+.stats{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(150px,1fr));
+    gap:14px;
+    margin:22px 0;
+}
+
+.stat{
+    background:white;
+    padding:18px;
+    border-radius:16px;
+    text-align:center;
+    box-shadow:0 3px 13px #0001;
+}
+
+.stat h2{
+    color:#2563eb;
+    font-size:30px;
+}
+
+/* PRACTICE */
+
+.practice{
+    background:white;
+    padding:24px;
+    border-radius:18px;
+    box-shadow:0 4px 15px #0001;
+}
+
+.word{
+    font-size:35px;
+    color:#2563eb;
+    font-weight:bold;
+}
+
+.meaning{
+    font-size:20px;
+    margin:5px 0;
+}
+
+.example{
+    background:#f1f5f9;
+    border-left:5px solid #2563eb;
+    padding:14px;
+    border-radius:8px;
+    margin:15px 0;
+}
+
+.dark .example{
+    background:#0f172a;
+}
+
+/* BUTTONS */
 
 .btn{
     border:0;
-    padding:11px 18px;
-    border-radius:9px;
+    padding:11px 17px;
+    border-radius:10px;
+    color:white;
     background:#2563eb;
-    color:#fff;
     font-weight:bold;
-    cursor:pointer;
-}
-
-.btn:hover{
-    opacity:.9;
+    margin:4px;
 }
 
 .green{
     background:#16a34a;
+}
+
+.red{
+    background:#dc2626;
 }
 
 .orange{
@@ -147,85 +381,11 @@ textarea{
     background:#7c3aed;
 }
 
-.red{
-    background:#dc2626;
+.gray{
+    background:#475569;
 }
 
-.section{
-    margin:35px 0;
-    scroll-margin-top:80px;
-}
-
-.section-title{
-    margin-bottom:18px;
-}
-
-.section-title h2{
-    font-size:28px;
-}
-
-.section-title p{
-    color:#64748b;
-}
-
-.grid{
-    display:grid;
-    grid-template-columns:
-    repeat(auto-fit,minmax(220px,1fr));
-    gap:18px;
-}
-
-.card{
-    background:#fff;
-    padding:22px;
-    border-radius:17px;
-    box-shadow:0 3px 12px #0001;
-}
-
-.card:hover{
-    box-shadow:0 7px 20px #0002;
-}
-
-.icon{
-    font-size:36px;
-}
-
-.card h3{
-    margin:8px 0;
-}
-
-.card p{
-    color:#64748b;
-}
-
-.card button{
-    margin-top:14px;
-}
-
-.practice{
-    background:#fff;
-    padding:25px;
-    border-radius:18px;
-    box-shadow:0 3px 15px #0001;
-}
-
-.word{
-    font-size:32px;
-    font-weight:bold;
-    color:#2563eb;
-}
-
-.meaning{
-    font-size:19px;
-    margin:7px 0;
-}
-
-.example{
-    margin:15px 0;
-    padding:15px;
-    background:#f8fafc;
-    border-left:4px solid #2563eb;
-}
+/* OPTIONS */
 
 .options{
     display:grid;
@@ -234,16 +394,19 @@ textarea{
 }
 
 .option{
-    padding:14px;
+    width:100%;
+    padding:13px;
     border:1px solid #cbd5e1;
     border-radius:10px;
-    background:#fff;
+    background:white;
     text-align:left;
-    cursor:pointer;
+    font-size:16px;
 }
 
-.option:hover{
-    background:#eff6ff;
+.dark .option{
+    background:#0f172a;
+    color:white;
+    border-color:#475569;
 }
 
 .correct{
@@ -256,27 +419,24 @@ textarea{
     border-color:#dc2626!important;
 }
 
-.message{
-    margin-top:15px;
-    padding:13px;
-    border-radius:10px;
-    display:none;
-}
+/* PROGRESS */
 
 .progress{
-    height:14px;
+    height:17px;
+    width:100%;
     background:#e2e8f0;
     border-radius:20px;
     overflow:hidden;
-    margin-top:7px;
 }
 
-.progress-fill{
+.progress-bar{
     height:100%;
+    width:0%;
     background:#2563eb;
+    transition:.5s;
 }
 
-.progress-item{
+.progress-row{
     margin:18px 0;
 }
 
@@ -285,75 +445,46 @@ textarea{
     justify-content:space-between;
 }
 
-.challenge-grid{
-    display:grid;
-    grid-template-columns:
-    repeat(auto-fit,minmax(240px,1fr));
-    gap:15px;
+/* TABLE */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
 }
 
-.day{
-    background:#fff;
-    padding:18px;
-    border-radius:14px;
-    box-shadow:0 2px 9px #0001;
+th,td{
+    border:1px solid #cbd5e1;
+    padding:9px;
 }
 
-.day strong{
-    color:#2563eb;
+.dark th,
+.dark td{
+    border-color:#475569;
 }
 
-.level{
-    background:#fff;
-    padding:20px;
-    border-radius:16px;
-    box-shadow:0 3px 12px #0001;
-}
-
-.stat-grid{
-    display:grid;
-    grid-template-columns:
-    repeat(auto-fit,minmax(150px,1fr));
-    gap:15px;
-}
-
-.stat{
-    background:#fff;
-    text-align:center;
-    padding:20px;
-    border-radius:15px;
-    box-shadow:0 3px 10px #0001;
-}
-
-.stat h3{
-    font-size:30px;
-    color:#2563eb;
-}
-
-footer{
-    background:#172033;
-    color:#fff;
-    text-align:center;
-    padding:35px 15px;
-    margin-top:50px;
-}
+/* MODAL */
 
 .modal{
-    display:none;
     position:fixed;
     inset:0;
-    background:#0008;
-    z-index:2000;
-    padding:20px;
+    background:#0009;
+    z-index:3000;
+    padding:18px;
     overflow:auto;
 }
 
-.modal-content{
-    max-width:800px;
-    margin:40px auto;
-    background:#fff;
+.modal-box{
+    max-width:750px;
+    background:white;
+    margin:25px auto;
     padding:25px;
-    border-radius:18px;
+    border-radius:20px;
+}
+
+.dark .modal-box{
+    background:#1e293b;
+    color:white;
 }
 
 .close{
@@ -361,40 +492,79 @@ footer{
     border:0;
     background:#fee2e2;
     color:#991b1b;
-    padding:8px 12px;
-    border-radius:7px;
-    cursor:pointer;
+    padding:8px 11px;
+    border-radius:8px;
 }
 
-.badge{
-    display:inline-block;
-    padding:5px 10px;
-    border-radius:20px;
-    background:#eef2ff;
-    color:#3730a3;
-    margin:3px;
+/* ADMIN */
+
+.admin-box{
+    border:2px dashed #2563eb;
+    padding:20px;
+    border-radius:16px;
 }
 
-@media(max-width:600px){
+.admin-box input,
+.admin-box textarea,
+.admin-box select{
+    width:100%;
+    padding:12px;
+    margin:7px 0;
+    border:1px solid #cbd5e1;
+    border-radius:9px;
+}
 
-    header h1{
-        font-size:29px;
+footer{
+    background:#172033;
+    color:white;
+    text-align:center;
+    padding:35px 15px;
+    margin-top:45px;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+    .header-row{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .logo h1{
+        font-size:23px;
     }
 
     .hero{
-        padding:22px;
+        padding:21px;
     }
 
     .hero h2{
         font-size:24px;
     }
 
-    .search-box{
-        flex-direction:column;
-    }
-
     .section-title h2{
         font-size:23px;
+    }
+
+    .word{
+        font-size:29px;
+    }
+
+    .grid{
+        grid-template-columns:1fr;
+    }
+
+    .stats{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .header-actions{
+        width:100%;
+    }
+
+    .header-actions button{
+        flex:1;
     }
 }
 </style>
@@ -402,46 +572,226 @@ footer{
 
 <body>
 
+
+<!-- ================================
+LOGIN / REGISTRATION
+================================ -->
+
+<div id="loginPage">
+
+<div class="login-box">
+
+<div class="login-logo">🚀</div>
+
+<h1>English Master Pro</h1>
+
+<p>
+Student Learning Portal
+</p>
+
+<div id="loginForm">
+
+<div class="form-group">
+<label>👤 Student Name</label>
+<input
+id="loginName"
+placeholder="अपना नाम लिखें"
+>
+</div>
+
+<div class="form-group">
+<label>🔐 Password</label>
+<input
+id="loginPassword"
+type="password"
+placeholder="Password"
+>
+</div>
+
+<button
+class="main-btn"
+onclick="loginStudent()">
+🔓 Login
+</button>
+
+<button
+class="secondary-btn"
+onclick="showRegister()">
+➕ New Student Registration
+</button>
+
+</div>
+
+
+<div id="registerForm" class="hidden">
+
+<div class="form-group">
+<label>👤 Student Name</label>
+<input
+id="regName"
+placeholder="पूरा नाम"
+>
+</div>
+
+<div class="form-group">
+<label>🏫 Class</label>
+
+<select id="regClass">
+
+<option value="">Class चुनें</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+<option>6</option>
+<option>7</option>
+<option>8</option>
+<option>9</option>
+<option>10</option>
+<option>11</option>
+<option>12</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+<label>🔐 Password</label>
+
+<input
+id="regPassword"
+type="password"
+placeholder="कम से कम 4 अक्षर"
+>
+
+</div>
+
+<button
+class="main-btn"
+onclick="registerStudent()">
+✅ Register
+</button>
+
+<button
+class="secondary-btn"
+onclick="showLogin()">
+⬅️ Back to Login
+</button>
+
+</div>
+
+<div
+id="loginMessage"
+class="login-message">
+</div>
+
+</div>
+
+</div>
+
+
+<!-- ================================
+MAIN APP
+================================ -->
+
+<div id="app" class="hidden">
+
+
 <header>
+
+<div class="header-row">
+
+<div class="logo">
 
 <h1>🚀 English Master Pro</h1>
 
 <p>
-Learn • Listen • Speak • Read • Write • Think in English
+Learn • Practice • Speak • Improve
 </p>
+
+</div>
+
+<div class="header-actions">
+
+<button onclick="toggleDark()">
+🌙
+</button>
+
+<button onclick="showProfile()">
+👤 Profile
+</button>
+
+<button onclick="logout()">
+🚪 Logout
+</button>
+
+</div>
+
+</div>
 
 </header>
 
 
 <nav>
 
-<div class="nav-box">
+<div class="nav-scroll">
 
-<button onclick="go('home')">🏠 Home</button>
+<button onclick="go('dashboard')">
+🏠 Home
+</button>
 
-<button onclick="go('foundation')">🔤 Foundation</button>
+<button onclick="go('classes')">
+🎓 Classes
+</button>
 
-<button onclick="go('vocabulary')">📚 Vocabulary</button>
+<button onclick="go('vocabulary')">
+📚 Vocabulary
+</button>
 
-<button onclick="go('sentences')">🗣️ Sentences</button>
+<button onclick="go('sentences')">
+🗣️ Sentences
+</button>
 
-<button onclick="go('speaking')">🎤 Speaking</button>
+<button onclick="go('grammar')">
+🧠 Grammar
+</button>
 
-<button onclick="go('grammar')">🧠 Grammar</button>
+<button onclick="go('tenses')">
+⏰ Tenses
+</button>
 
-<button onclick="go('translation')">🔄 Translation</button>
+<button onclick="go('translation')">
+🔄 Translation
+</button>
 
-<button onclick="go('conversation')">💬 Conversation</button>
+<button onclick="go('speaking')">
+🎤 Speaking
+</button>
 
-<button onclick="go('reading')">📖 Reading</button>
+<button onclick="go('reading')">
+📖 Reading
+</button>
 
-<button onclick="go('writing')">✍️ Writing</button>
+<button onclick="go('writing')">
+✍️ Writing
+</button>
 
-<button onclick="go('quiz')">🎯 Quiz</button>
+<button onclick="go('quiz')">
+🎯 Quiz
+</button>
 
-<button onclick="go('challenge')">📅 Challenge</button>
+<button onclick="go('challenge')">
+📅 Challenge
+</button>
 
-<button onclick="go('progress')">🏆 Progress</button>
+<button onclick="go('progress')">
+🏆 Progress
+</button>
+
+<button onclick="go('admin')">
+⚙️ Admin
+</button>
 
 </div>
 
@@ -451,164 +801,151 @@ Learn • Listen • Speak • Read • Write • Think in English
 <main class="container">
 
 
-<!-- HOME -->
+<!-- DASHBOARD -->
 
-<section id="home" class="hero">
+<section id="dashboard" class="hero">
 
-<h2>🌟 English सीखें — Step by Step</h2>
+<p class="welcome" id="welcomeText"></p>
+
+<h2>
+🌟 Welcome to English Master Pro
+</h2>
 
 <p>
-यह English Master Pro बच्चों के लिए Foundation से लेकर
-Speaking और Advanced Practice तक English सीखने का
-पूरा अभ्यास platform है।
+यह आपका personal English learning dashboard है।
+हर दिन थोड़ा अभ्यास करें और अपनी English को मजबूत बनाएं।
 </p>
 
-<div class="search-box">
-
-<input
-id="searchInput"
-placeholder="🔍 Search English word, sentence, grammar..."
->
+<div style="margin-top:18px">
 
 <button
 class="btn"
-onclick="searchContent()">
-Search
+onclick="go('quiz')">
+🎯 Start Quiz
+</button>
+
+<button
+class="btn green"
+onclick="go('speaking')">
+🎤 Speaking Practice
+</button>
+
+<button
+class="btn purple"
+onclick="go('vocabulary')">
+📚 Learn Words
 </button>
 
 </div>
-
-<br>
-
-<span class="badge">Vocabulary</span>
-<span class="badge">Speaking</span>
-<span class="badge">Grammar</span>
-<span class="badge">Reading</span>
-<span class="badge">Writing</span>
-<span class="badge">MCQ</span>
 
 </section>
 
 
 <!-- STATS -->
 
-<section class="section">
-
-<div class="stat-grid">
+<section class="stats">
 
 <div class="stat">
-<h3 id="learnedWords">0</h3>
+
+<h2 id="statWords">
+0
+</h2>
+
 <p>Words Learned</p>
+
 </div>
 
 <div class="stat">
-<h3 id="completedDays">0</h3>
-<p>Days Completed</p>
-</div>
 
-<div class="stat">
-<h3 id="quizPoints">0</h3>
+<h2 id="statScore">
+0
+</h2>
+
 <p>Quiz Points</p>
+
 </div>
 
 <div class="stat">
-<h3 id="streak">1</h3>
-<p>🔥 Day Streak</p>
+
+<h2 id="statPractice">
+0
+</h2>
+
+<p>Practice</p>
+
 </div>
+
+<div class="stat">
+
+<h2 id="statDays">
+0
+</h2>
+
+<p>Challenge Days</p>
 
 </div>
 
 </section>
 
 
-<!-- FOUNDATION -->
+<!-- CLASSES -->
 
-<section id="foundation" class="section">
+<section id="classes" class="section">
 
 <div class="section-title">
 
-<h2>🔤 English Foundation</h2>
+<h2>🎓 Class 1–12 English</h2>
 
-<p>English की मजबूत नींव बनाइए।</p>
+<p>
+अपनी class के अनुसार learning topics.
+</p>
 
 </div>
 
 <div class="grid">
 
+<script>
+
+const classTopics={
+1:"Alphabet, Colours, Numbers, Basic Words",
+2:"Nouns, Verbs, Simple Sentences",
+3:"Vocabulary, Paragraph, Grammar",
+4:"Parts of Speech, Articles, Tenses",
+5:"Grammar, Translation, Writing",
+6:"Tenses, Vocabulary, Grammar",
+7:"Comprehension, Translation, Grammar",
+8:"Advanced Grammar, Writing, Speaking",
+9:"Literature, Grammar, Writing",
+10:"Board Grammar, Reading, Writing",
+11:"Advanced English, Comprehension",
+12:"Board English, Advanced Writing"
+};
+
+for(let i=1;i<=12;i++){
+
+document.write(`
+
 <div class="card">
 
-<div class="icon">🔤</div>
+<div class="icon">🎓</div>
 
-<h3>Alphabet</h3>
+<h3>Class ${i}</h3>
 
-<p>A–Z और Vowels/Consonants.</p>
+<p>
+${classTopics[i]}
+</p>
 
-<button class="btn"
-onclick="lesson(
-'Alphabet',
-'A, E, I, O, U Vowels हैं। बाकी letters Consonants हैं।'
-)">
-Learn
+<button onclick="openClass(${i})">
+Open Class
 </button>
 
 </div>
 
+`);
 
-<div class="card">
+}
 
-<div class="icon">🔢</div>
-
-<h3>Singular & Plural</h3>
-
-<p>One और many का अभ्यास।</p>
-
-<button class="btn"
-onclick="lesson(
-'Singular & Plural',
-'Book → Books<br>Boy → Boys<br>Child → Children<br>Man → Men<br>Woman → Women'
-)">
-Learn
-</button>
-
-</div>
-
-
-<div class="card">
-
-<div class="icon">↔️</div>
-
-<h3>Opposite Words</h3>
-
-<p>Common opposite words सीखें।</p>
-
-<button class="btn"
-onclick="lesson(
-'Opposite Words',
-'Big → Small<br>Hot → Cold<br>Day → Night<br>Good → Bad<br>Fast → Slow'
-)">
-Learn
-</button>
-
-</div>
-
-
-<div class="card">
-
-<div class="icon">🔠</div>
-
-<h3>Parts of Speech</h3>
-
-<p>Noun, Pronoun, Verb आदि।</p>
-
-<button class="btn"
-onclick="lesson(
-'Parts of Speech',
-'Noun, Pronoun, Verb, Adjective, Adverb, Preposition, Conjunction और Interjection.'
-)">
-Learn
-</button>
-
-</div>
+</script>
 
 </div>
 
@@ -623,7 +960,9 @@ Learn
 
 <h2>📚 Vocabulary Builder</h2>
 
-<p>Word + Meaning + Example + Pronunciation</p>
+<p>
+Word + Meaning + Example + Pronunciation
+</p>
 
 </div>
 
@@ -639,12 +978,12 @@ onclick="nextWord()">
 </button>
 
 <button class="btn green"
-onclick="speakCurrentWord()">
-🔊 Listen
+onclick="speakWord()">
+🔊 Pronunciation
 </button>
 
 <button class="btn purple"
-onclick="markWordLearned()">
+onclick="markWord()">
 ⭐ Learned
 </button>
 
@@ -653,15 +992,17 @@ onclick="markWordLearned()">
 </section>
 
 
-<!-- DAILY SENTENCES -->
+<!-- SENTENCES -->
 
 <section id="sentences" class="section">
 
 <div class="section-title">
 
-<h2>🗣️ Daily Use English Sentences</h2>
+<h2>🗣️ Daily Use English</h2>
 
-<p>रोज़मर्रा के वाक्य बोलना सीखें।</p>
+<p>
+रोज़मर्रा की English बोलने के लिए sentences.
+</p>
 
 </div>
 
@@ -673,17 +1014,137 @@ onclick="markWordLearned()">
 
 <button class="btn"
 onclick="nextSentence()">
-Next Sentence ➡️
+➡️ Next
 </button>
 
 <button class="btn green"
-onclick="speakCurrentSentence()">
+onclick="speakSentence()">
 🔊 Listen
 </button>
 
-<button class="btn purple"
-onclick="repeatSentence()">
-🔁 Repeat
+</div>
+
+</section>
+
+
+<!-- GRAMMAR -->
+
+<section id="grammar" class="section">
+
+<div class="section-title">
+
+<h2>🧠 Complete Grammar</h2>
+
+<p>
+Grammar topics को step-by-step सीखें।
+</p>
+
+</div>
+
+<div class="grid" id="grammarBox"></div>
+
+</section>
+
+
+<!-- TENSE -->
+
+<section id="tenses" class="section">
+
+<div class="section-title">
+
+<h2>⏰ Tenses</h2>
+
+</div>
+
+<div class="grid">
+
+<div class="lesson">
+<h3>Present Simple</h3>
+<p>I play cricket.</p>
+<p>मैं क्रिकेट खेलता हूँ।</p>
+</div>
+
+<div class="lesson">
+<h3>Present Continuous</h3>
+<p>I am playing cricket.</p>
+<p>मैं क्रिकेट खेल रहा हूँ।</p>
+</div>
+
+<div class="lesson">
+<h3>Present Perfect</h3>
+<p>I have played cricket.</p>
+<p>मैं क्रिकेट खेल चुका हूँ।</p>
+</div>
+
+<div class="lesson">
+<h3>Past Simple</h3>
+<p>I played cricket.</p>
+<p>मैंने क्रिकेट खेला।</p>
+</div>
+
+<div class="lesson">
+<h3>Past Continuous</h3>
+<p>I was playing cricket.</p>
+<p>मैं क्रिकेट खेल रहा था।</p>
+</div>
+
+<div class="lesson">
+<h3>Past Perfect</h3>
+<p>I had played cricket.</p>
+<p>मैं क्रिकेट खेल चुका था।</p>
+</div>
+
+<div class="lesson">
+<h3>Future Simple</h3>
+<p>I will play cricket.</p>
+<p>मैं क्रिकेट खेलूँगा।</p>
+</div>
+
+<div class="lesson">
+<h3>Future Continuous</h3>
+<p>I will be playing cricket.</p>
+<p>मैं क्रिकेट खेल रहा होऊँगा।</p>
+</div>
+
+<div class="lesson">
+<h3>Future Perfect</h3>
+<p>I will have played cricket.</p>
+<p>मैं क्रिकेट खेल चुका होऊँगा।</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- TRANSLATION -->
+
+<section id="translation" class="section">
+
+<div class="section-title">
+
+<h2>🔄 Translation Practice</h2>
+
+</div>
+
+<div class="practice">
+
+<h3 id="translationQuestion"></h3>
+
+<div
+id="translationOptions"
+class="options">
+</div>
+
+<div
+id="translationMessage">
+</div>
+
+<br>
+
+<button class="btn"
+onclick="nextTranslation()">
+Next ➡️
 </button>
 
 </div>
@@ -699,7 +1160,9 @@ onclick="repeatSentence()">
 
 <h2>🎤 Speaking Practice</h2>
 
-<p>English में बोलने की आदत बनाइए।</p>
+<p>
+सुनें और फिर खुद बोलने की कोशिश करें।
+</p>
 
 </div>
 
@@ -707,18 +1170,18 @@ onclick="repeatSentence()">
 
 <div class="card">
 
-<h3>👤 About Yourself</h3>
+<h3>👤 Self Introduction</h3>
 
 <p>
-My name is ______.<br>
+My name is Rahul.<br>
 I am a student.<br>
-I live in ______.<br>
-I like reading books.
+I live in India.<br>
+I like learning English.
 </p>
 
-<button class="btn"
-onclick="speak(
-'My name is. I am a student. I live in. I like reading books.'
+<button
+onclick="speakText(
+'My name is Rahul. I am a student. I live in India. I like learning English.'
 )">
 🔊 Listen
 </button>
@@ -736,8 +1199,8 @@ Please explain this question.<br>
 I have completed my homework.
 </p>
 
-<button class="btn"
-onclick="speak(
+<button
+onclick="speakText(
 'May I come in? Please explain this question. I have completed my homework.'
 )">
 🔊 Listen
@@ -756,8 +1219,8 @@ Please give me some water.<br>
 I am going to school.
 </p>
 
-<button class="btn"
-onclick="speak(
+<button
+onclick="speakText(
 'I am hungry. Please give me some water. I am going to school.'
 )">
 🔊 Listen
@@ -765,246 +1228,20 @@ onclick="speak(
 
 </div>
 
-</div>
-
-</section>
-
-
-<!-- GRAMMAR -->
-
-<section id="grammar" class="section">
-
-<div class="section-title">
-
-<h2>🧠 Grammar Master</h2>
-
-<p>Grammar को आसान तरीके से सीखें।</p>
-
-</div>
-
-<div class="grid">
 
 <div class="card">
 
-<h3>📌 Noun</h3>
+<h3>💪 Fluency Rules</h3>
 
 <p>
-Person, place, animal या thing का नाम।
+Think in English.<br>
+Speak every day.<br>
+Do not fear mistakes.
 </p>
 
-<button class="btn"
-onclick="lesson(
-'Noun',
-'Ram, Jaipur, School, Book, Cow आदि Noun हैं।'
-)">
-Learn
-</button>
-
-</div>
-
-
-<div class="card">
-
-<h3>👤 Pronoun</h3>
-
-<p>
-Noun की जगह इस्तेमाल होने वाले words.
-</p>
-
-<button class="btn"
-onclick="lesson(
-'Pronoun',
-'I, You, He, She, It, We, They आदि Pronouns हैं।'
-)">
-Learn
-</button>
-
-</div>
-
-
-<div class="card">
-
-<h3>⚡ Verb</h3>
-
-<p>
-Action या काम बताने वाला word.
-</p>
-
-<button class="btn"
-onclick="lesson(
-'Verb',
-'Go, Come, Eat, Read, Write, Run, Play, Speak आदि Verbs हैं।'
-)">
-Learn
-</button>
-
-</div>
-
-
-<div class="card">
-
-<h3>🎨 Adjective</h3>
-
-<p>
-Noun की quality बताने वाला word.
-</p>
-
-<button class="btn"
-onclick="lesson(
-'Adjective',
-'Beautiful flower.<br>Good boy.<br>Red dress.<br>Tall man.'
-)">
-Learn
-</button>
-
-</div>
-
-
-<div class="card">
-
-<h3>⏰ Tenses</h3>
-
-<p>
-Present, Past और Future.
-</p>
-
-<button class="btn"
-onclick="lesson(
-'Tenses',
-'Present: I play.<br>Past: I played.<br>Future: I will play.'
-)">
-Learn
-</button>
-
-</div>
-
-
-<div class="card">
-
-<h3>📍 Preposition</h3>
-
-<p>
-in, on, at, under, behind आदि।
-</p>
-
-<button class="btn"
-onclick="lesson(
-'Preposition',
-'The book is on the table.<br>The cat is under the chair.<br>He is in the room.'
-)">
-Learn
-</button>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- TRANSLATION -->
-
-<section id="translation" class="section">
-
-<div class="section-title">
-
-<h2>🔄 Translation Practice</h2>
-
-<p>Hindi से English sentence बनाइए।</p>
-
-</div>
-
-<div class="practice">
-
-<h3 id="translationQuestion"></h3>
-
-<div id="translationOptions"
-class="options">
-</div>
-
-<div id="translationMessage"
-class="message">
-</div>
-
-<br>
-
-<button class="btn"
-onclick="nextTranslation()">
-Next ➡️
-</button>
-
-</div>
-
-</section>
-
-
-<!-- CONVERSATION -->
-
-<section id="conversation" class="section">
-
-<div class="section-title">
-
-<h2>💬 Real-Life Conversation</h2>
-
-<p>Real situations में English बोलने का अभ्यास।</p>
-
-</div>
-
-<div class="grid">
-
-<div class="card">
-
-<h3>🛒 At the Shop</h3>
-
-<p>
-Customer: How much is this?<br>
-Shopkeeper: It is one hundred rupees.<br>
-Customer: Please give me one.
-</p>
-
-<button class="btn"
-onclick="speak(
-'How much is this? It is one hundred rupees. Please give me one.'
-)">
-🔊 Listen
-</button>
-
-</div>
-
-
-<div class="card">
-
-<h3>🏫 Teacher & Student</h3>
-
-<p>
-Student: May I ask a question?<br>
-Teacher: Yes, of course.<br>
-Student: I do not understand.
-</p>
-
-<button class="btn"
-onclick="speak(
-'May I ask a question? Yes, of course. I do not understand.'
-)">
-🔊 Listen
-</button>
-
-</div>
-
-
-<div class="card">
-
-<h3>🚉 At the Station</h3>
-
-<p>
-Where is the railway station?<br>
-How much is the ticket?<br>
-When does the train arrive?
-</p>
-
-<button class="btn"
-onclick="speak(
-'Where is the railway station? How much is the ticket? When does the train arrive?'
+<button
+onclick="speakText(
+'Think in English. Speak every day. Do not fear mistakes.'
 )">
 🔊 Listen
 </button>
@@ -1024,60 +1261,29 @@ onclick="speak(
 
 <h2>📖 Reading Practice</h2>
 
-<p>Paragraph पढ़ें और Question का Answer दें।</p>
-
 </div>
 
 <div class="practice">
 
-<h3>My Daily Routine</h3>
+<h3>Importance of Education</h3>
 
-<p style="margin-top:12px;line-height:1.9;">
+<p style="margin-top:10px">
 
-I wake up early in the morning.
-I brush my teeth and take a bath.
-Then I have breakfast and go to school.
-I study different subjects at school.
-In the evening, I play with my friends.
-At night, I complete my homework and go to bed.
+Education is very important in our life.
+It gives us knowledge and confidence.
+It teaches us how to think and solve problems.
+Education helps us become responsible citizens.
 
 </p>
 
+<br>
+
 <button class="btn green"
-onclick="speak(
-'I wake up early in the morning. I brush my teeth and take a bath. Then I have breakfast and go to school.'
+onclick="speakText(
+'Education is very important in our life. It gives us knowledge and confidence. It teaches us how to think and solve problems.'
 )">
 🔊 Listen
 </button>
-
-<hr style="margin:25px 0">
-
-<h3>Question:</h3>
-
-<p>When does the student go to school?</p>
-
-<div class="options">
-
-<button class="option"
-onclick="readingAnswer(this,false)">
-At night
-</button>
-
-<button class="option"
-onclick="readingAnswer(this,true)">
-In the morning
-</button>
-
-<button class="option"
-onclick="readingAnswer(this,false)">
-At midnight
-</button>
-
-</div>
-
-<div id="readingMessage"
-class="message">
-</div>
 
 </div>
 
@@ -1092,27 +1298,41 @@ class="message">
 
 <h2>✍️ Writing Practice</h2>
 
-<p>English में लिखने का अभ्यास करें।</p>
-
 </div>
 
 <div class="practice">
 
-<h3>Topic: My School</h3>
+<select
+id="writingTopic"
+style="width:100%;padding:12px;border-radius:10px">
+
+<option>My School</option>
+<option>My Village</option>
+<option>My Best Friend</option>
+<option>My Daily Routine</option>
+<option>My Hobby</option>
+<option>Importance of Education</option>
+
+</select>
+
+<br><br>
 
 <textarea
 id="writingArea"
-placeholder="Write your paragraph in English...">
+rows="9"
+placeholder="यहाँ English paragraph लिखें..."
+style="width:100%;padding:13px;border-radius:10px;border:1px solid #cbd5e1">
 </textarea>
 
-<button class="btn"
+<br>
+
+<button
+class="btn"
 onclick="checkWriting()">
-📊 Check Writing
+📊 Check
 </button>
 
-<div id="writingResult"
-style="margin-top:15px;">
-</div>
+<div id="writingResult"></div>
 
 </div>
 
@@ -1125,9 +1345,11 @@ style="margin-top:15px;">
 
 <div class="section-title">
 
-<h2>🎯 English Master Quiz</h2>
+<h2>🎯 English MCQ Quiz</h2>
 
-<p>Grammar + Vocabulary + General English</p>
+<p>
+Question का सही answer चुनें।
+</p>
 
 </div>
 
@@ -1138,13 +1360,13 @@ style="margin-top:15px;">
 <br>
 
 <button class="btn"
-onclick="quizNext()">
+onclick="nextQuiz()">
 Next ➡️
 </button>
 
 <button class="btn orange"
 onclick="restartQuiz()">
-Restart 🔄
+Restart
 </button>
 
 </div>
@@ -1152,119 +1374,19 @@ Restart 🔄
 </section>
 
 
-<!-- 30 DAY CHALLENGE -->
+<!-- CHALLENGE -->
 
 <section id="challenge" class="section">
 
 <div class="section-title">
 
-<h2>📅 30-Day English Challenge</h2>
-
-<p>रोज़ अभ्यास करें और अपनी fluency बढ़ाएँ।</p>
+<h2>📅 30 Day English Challenge</h2>
 
 </div>
 
-<div class="challenge-grid"
-id="challengeGrid">
-</div>
-
-</section>
-
-
-<!-- LEVELS -->
-
-<section class="section">
-
-<div class="section-title">
-
-<h2>🏆 English Levels</h2>
-
-<p>अपनी learning journey को level by level पूरा करें।</p>
-
-</div>
-
-<div class="grid">
-
-<div class="level">
-
-<h3>Level 1 — Foundation</h3>
-
-<p>Alphabet, Words, Basic Sentences</p>
-
-</div>
-
-<div class="level">
-
-<h3>Level 2 — Beginner</h3>
-
-<p>Vocabulary + Basic Grammar</p>
-
-</div>
-
-<div class="level">
-
-<h3>Level 3 — Basic Speaking</h3>
-
-<p>Daily Use Sentences</p>
-
-</div>
-
-<div class="level">
-
-<h3>Level 4 — Grammar</h3>
-
-<p>Tenses + Parts of Speech</p>
-
-</div>
-
-<div class="level">
-
-<h3>Level 5 — Conversation</h3>
-
-<p>Real-Life English</p>
-
-</div>
-
-<div class="level">
-
-<h3>Level 6 — Reading</h3>
-
-<p>Paragraph + Comprehension</p>
-
-</div>
-
-<div class="level">
-
-<h3>Level 7 — Writing</h3>
-
-<p>Paragraph + Story + Letter</p>
-
-</div>
-
-<div class="level">
-
-<h3>Level 8 — Fluency</h3>
-
-<p>Speak Without Fear</p>
-
-</div>
-
-<div class="level">
-
-<h3>Level 9 — Advanced</h3>
-
-<p>Advanced Grammar + Vocabulary</p>
-
-</div>
-
-<div class="level">
-
-<h3>Level 10 — English Master</h3>
-
-<p>Full Test + Speaking Challenge</p>
-
-</div>
-
+<div
+class="grid"
+id="challengeBox">
 </div>
 
 </section>
@@ -1276,79 +1398,75 @@ id="challengeGrid">
 
 <div class="section-title">
 
-<h2>📊 My English Progress</h2>
-
-<p>अपनी performance देखें।</p>
+<h2>🏆 My Progress</h2>
 
 </div>
 
 <div class="practice">
 
-<div class="progress-item">
+<div class="progress-row">
 
 <div class="progress-head">
-<span>📚 Vocabulary</span>
-<b>70%</b>
+<span>Vocabulary</span>
+<b id="vocabPercent">0%</b>
 </div>
 
 <div class="progress">
-<div class="progress-fill" style="width:70%"></div>
+<div
+id="vocabBar"
+class="progress-bar">
+</div>
 </div>
 
 </div>
 
 
-<div class="progress-item">
+<div class="progress-row">
 
 <div class="progress-head">
-<span>🧠 Grammar</span>
-<b>65%</b>
+<span>Quiz</span>
+<b id="quizPercent">0%</b>
 </div>
 
 <div class="progress">
-<div class="progress-fill" style="width:65%"></div>
+<div
+id="quizBar"
+class="progress-bar">
+</div>
 </div>
 
 </div>
 
 
-<div class="progress-item">
+<div class="progress-row">
 
 <div class="progress-head">
-<span>🗣️ Speaking</span>
-<b>55%</b>
+<span>Practice</span>
+<b id="practicePercent">0%</b>
 </div>
 
 <div class="progress">
-<div class="progress-fill" style="width:55%"></div>
+<div
+id="practiceBar"
+class="progress-bar">
+</div>
 </div>
 
 </div>
 
 
-<div class="progress-item">
+<div class="progress-row">
 
 <div class="progress-head">
-<span>📖 Reading</span>
-<b>80%</b>
+<span>Challenge</span>
+<b id="dayPercent">0%</b>
 </div>
 
 <div class="progress">
-<div class="progress-fill" style="width:80%"></div>
+<div
+id="dayBar"
+class="progress-bar">
 </div>
-
-</div>
-
-
-<div class="progress-item">
-
-<div class="progress-head">
-<span>✍️ Writing</span>
-<b>60%</b>
-</div>
-
-<div class="progress">
-<div class="progress-fill" style="width:60%"></div>
 </div>
 
 </div>
@@ -1356,6 +1474,62 @@ id="challengeGrid">
 </div>
 
 </section>
+
+
+<!-- ADMIN -->
+
+<section id="admin" class="section">
+
+<div class="section-title">
+
+<h2>⚙️ Admin / Data Center</h2>
+
+<p>
+Demo local database management.
+</p>
+
+</div>
+
+<div class="admin-box">
+
+<h3>➕ Add Custom Vocabulary</h3>
+
+<input
+id="newWord"
+placeholder="English Word">
+
+<input
+id="newMeaning"
+placeholder="Hindi Meaning">
+
+<input
+id="newExample"
+placeholder="Example Sentence">
+
+<button
+class="btn green"
+onclick="addCustomWord()">
+➕ Add Word
+</button>
+
+<hr style="margin:25px 0">
+
+<h3>📊 Student Data</h3>
+
+<div id="studentData"></div>
+
+<br>
+
+<button
+class="btn red"
+onclick="clearAllData()">
+🗑️ Clear Local Database
+</button>
+
+</div>
+
+</section>
+
 
 </main>
 
@@ -1365,31 +1539,37 @@ id="challengeGrid">
 <h2>🚀 English Master Pro</h2>
 
 <p>
-Learn Every Day • Practice Every Day • Speak with Confidence
+Learn Every Day • Practice Every Day • Speak English
 </p>
 
-<p style="margin-top:10px;">
-© 2026 English Master Pro
+<p style="margin-top:8px">
+Mobile Friendly Learning Website
 </p>
 
 </footer>
 
+</div>
+
 
 <!-- MODAL -->
 
-<div class="modal" id="modal">
+<div
+id="modal"
+class="modal hidden">
 
-<div class="modal-content">
+<div class="modal-box">
 
-<button class="close"
+<button
+class="close"
 onclick="closeModal()">
 ✕ Close
 </button>
 
 <h2 id="modalTitle"></h2>
 
-<div id="modalBody"
-style="margin-top:20px;">
+<div
+id="modalBody"
+style="margin-top:20px">
 </div>
 
 </div>
@@ -1399,13 +1579,292 @@ style="margin-top:20px;">
 
 <script>
 
-/* =========================
+/* =================================
+STUDENT DATABASE
+================================= */
+
+let students=
+JSON.parse(
+localStorage.getItem("students")||"[]"
+);
+
+let currentStudent=
+localStorage.getItem("currentStudent");
+
+
+/* =================================
+LOGIN
+================================= */
+
+function showRegister(){
+
+    document
+    .getElementById("loginForm")
+    .classList.add("hidden");
+
+    document
+    .getElementById("registerForm")
+    .classList.remove("hidden");
+
+    message("");
+
+}
+
+function showLogin(){
+
+    document
+    .getElementById("registerForm")
+    .classList.add("hidden");
+
+    document
+    .getElementById("loginForm")
+    .classList.remove("hidden");
+
+    message("");
+
+}
+
+function message(text){
+
+    document
+    .getElementById("loginMessage")
+    .innerHTML=text;
+
+}
+
+
+/* =================================
+REGISTER
+================================= */
+
+function registerStudent(){
+
+    const name=
+    document
+    .getElementById("regName")
+    .value.trim();
+
+    const cls=
+    document
+    .getElementById("regClass")
+    .value;
+
+    const password=
+    document
+    .getElementById("regPassword")
+    .value;
+
+    if(!name || !cls || !password){
+
+        message("❌ सभी जानकारी भरें।");
+
+        return;
+
+    }
+
+    if(password.length<4){
+
+        message(
+        "❌ Password कम से कम 4 अक्षर का रखें।"
+        );
+
+        return;
+
+    }
+
+    const exists=
+    students.find(
+        s=>s.name.toLowerCase()===
+        name.toLowerCase()
+    );
+
+    if(exists){
+
+        message(
+        "❌ इस नाम का student पहले से मौजूद है।"
+        );
+
+        return;
+
+    }
+
+    const student={
+
+        name:name,
+        class:cls,
+        password:password,
+
+        words:0,
+        score:0,
+        practice:0,
+        days:[],
+
+        created:
+        new Date().toLocaleString()
+
+    };
+
+    students.push(student);
+
+    localStorage.setItem(
+        "students",
+        JSON.stringify(students)
+    );
+
+    message(
+    "✅ Registration सफल! अब Login करें।"
+    );
+
+    setTimeout(
+        showLogin,
+        1000
+    );
+
+}
+
+
+/* =================================
+LOGIN
+================================= */
+
+function loginStudent(){
+
+    const name=
+    document
+    .getElementById("loginName")
+    .value.trim();
+
+    const password=
+    document
+    .getElementById("loginPassword")
+    .value;
+
+    const student=
+    students.find(
+        s=>
+        s.name.toLowerCase()===
+        name.toLowerCase() &&
+        s.password===password
+    );
+
+    if(!student){
+
+        message(
+        "❌ Name या Password गलत है।"
+        );
+
+        return;
+
+    }
+
+    currentStudent=student.name;
+
+    localStorage.setItem(
+        "currentStudent",
+        currentStudent
+    );
+
+    openApp();
+
+}
+
+
+/* =================================
+OPEN APP
+================================= */
+
+function openApp(){
+
+    document
+    .getElementById("loginPage")
+    .classList.add("hidden");
+
+    document
+    .getElementById("app")
+    .classList.remove("hidden");
+
+    updateDashboard();
+    updateStats();
+    showWord();
+    showSentence();
+    showTranslation();
+    showQuiz();
+    loadChallenge();
+    loadStudentData();
+
+}
+
+
+/* =================================
+LOGOUT
+================================= */
+
+function logout(){
+
+    localStorage.removeItem(
+        "currentStudent"
+    );
+
+    location.reload();
+
+}
+
+
+/* =================================
+CURRENT STUDENT
+================================= */
+
+function getStudent(){
+
+    return students.find(
+        s=>s.name===currentStudent
+    );
+
+}
+
+
+/* =================================
+SAVE
+================================= */
+
+function saveStudents(){
+
+    localStorage.setItem(
+        "students",
+        JSON.stringify(students)
+    );
+
+}
+
+
+/* =================================
+DASHBOARD
+================================= */
+
+function updateDashboard(){
+
+    const s=getStudent();
+
+    if(!s)return;
+
+    document
+    .getElementById("welcomeText")
+    .innerText=
+    "👋 Welcome, "+
+    s.name+
+    " | Class "+s.class;
+
+}
+
+
+/* =================================
 NAVIGATION
-========================= */
+================================= */
 
 function go(id){
 
-    document.getElementById(id)
+    document
+    .getElementById(id)
     .scrollIntoView({
         behavior:"smooth"
     });
@@ -1413,195 +1872,164 @@ function go(id){
 }
 
 
-/* =========================
-MODAL
-========================= */
+/* =================================
+DARK
+================================= */
 
-function lesson(title,body){
+function toggleDark(){
 
-    document.getElementById("modalTitle")
-    .innerHTML = title;
-
-    document.getElementById("modalBody")
-    .innerHTML = body;
-
-    document.getElementById("modal")
-    .style.display = "block";
-
-}
-
-function closeModal(){
-
-    document.getElementById("modal")
-    .style.display = "none";
+    document
+    .body
+    .classList
+    .toggle("dark");
 
 }
 
 
-/* =========================
-TEXT TO SPEECH
-========================= */
+/* =================================
+VOICE
+================================= */
 
-function speak(text){
+function speakText(text){
 
     if(!("speechSynthesis" in window)){
 
         alert(
-            "आपके browser में voice सुविधा उपलब्ध नहीं है।"
+        "इस browser में voice सुविधा उपलब्ध नहीं है।"
         );
 
         return;
+
     }
 
     speechSynthesis.cancel();
 
-    const u =
+    const speech=
     new SpeechSynthesisUtterance(text);
 
-    u.lang = "en-US";
-    u.rate = 0.85;
+    speech.lang="en-US";
+    speech.rate=.85;
 
-    speechSynthesis.speak(u);
+    speechSynthesis.speak(speech);
 
 }
 
 
-/* =========================
-VOCABULARY DATABASE
-========================= */
+/* =================================
+VOCABULARY
+================================= */
 
-const vocabulary = [
+let vocabulary=[
 
-{
-word:"Beautiful",
-meaning:"सुंदर",
-pronunciation:"ब्यूटिफुल",
-example:"She has a beautiful dress."
-},
+["Beautiful","सुंदर",
+"She has a beautiful dress.",
+"ब्यूटिफुल"],
 
-{
-word:"Important",
-meaning:"महत्वपूर्ण",
-pronunciation:"इम्पॉर्टेन्ट",
-example:"Education is important."
-},
+["Important","महत्वपूर्ण",
+"Education is important.",
+"इम्पॉर्टेन्ट"],
 
-{
-word:"Brave",
-meaning:"बहादुर",
-pronunciation:"ब्रेव",
-example:"He is a brave boy."
-},
+["Brave","बहादुर",
+"He is a brave boy.",
+"ब्रेव"],
 
-{
-word:"Honest",
-meaning:"ईमानदार",
-pronunciation:"ऑनिस्ट",
-example:"He is an honest person."
-},
+["Honest","ईमानदार",
+"He is an honest man.",
+"ऑनिस्ट"],
 
-{
-word:"Improve",
-meaning:"सुधारना",
-pronunciation:"इम्प्रूव",
-example:"I want to improve my English."
-},
+["Improve","सुधारना",
+"I want to improve my English.",
+"इम्प्रूव"],
 
-{
-word:"Knowledge",
-meaning:"ज्ञान",
-pronunciation:"नॉलेज",
-example:"Knowledge is power."
-},
+["Knowledge","ज्ञान",
+"Knowledge is power.",
+"नॉलेज"],
 
-{
-word:"Confidence",
-meaning:"आत्मविश्वास",
-pronunciation:"कॉन्फिडेन्स",
-example:"Speak with confidence."
-},
+["Confidence","आत्मविश्वास",
+"Speak with confidence.",
+"कॉन्फिडेन्स"],
 
-{
-word:"Success",
-meaning:"सफलता",
-pronunciation:"सक्सेस",
-example:"Hard work leads to success."
-},
+["Success","सफलता",
+"Hard work brings success.",
+"सक्सेस"],
 
-{
-word:"Practice",
-meaning:"अभ्यास",
-pronunciation:"प्रैक्टिस",
-example:"Practice makes us better."
-},
+["Practice","अभ्यास",
+"Practice makes us better.",
+"प्रैक्टिस"],
 
-{
-word:"Opportunity",
-meaning:"अवसर",
-pronunciation:"ऑपरच्यूनिटी",
-example:"This is a good opportunity."
-},
+["Opportunity","अवसर",
+"This is a good opportunity.",
+"ऑपरच्यूनिटी"],
 
-{
-word:"Respect",
-meaning:"सम्मान",
-pronunciation:"रिस्पेक्ट",
-example:"Respect your teachers."
-},
+["Respect","सम्मान",
+"Respect your teachers.",
+"रिस्पेक्ट"],
 
-{
-word:"Helpful",
-meaning:"मददगार",
-pronunciation:"हेल्पफुल",
-example:"He is very helpful."
-},
+["Helpful","मददगार",
+"He is very helpful.",
+"हेल्पफुल"],
 
-{
-word:"Careful",
-meaning:"सावधान",
-pronunciation:"केयरफुल",
-example:"Be careful on the road."
-},
+["Careful","सावधान",
+"Be careful.",
+"केयरफुल"],
 
-{
-word:"Healthy",
-meaning:"स्वस्थ",
-pronunciation:"हेल्दी",
-example:"A healthy body is important."
-},
+["Healthy","स्वस्थ",
+"Stay healthy.",
+"हेल्दी"],
 
-{
-word:"Possible",
-meaning:"संभव",
-pronunciation:"पॉसिबल",
-example:"Everything is possible with practice."
-}
+["Possible","संभव",
+"Everything is possible.",
+"पॉसिबल"],
+
+["Difficult","कठिन",
+"This question is difficult.",
+"डिफिकल्ट"],
+
+["Easy","आसान",
+"This lesson is easy.",
+"ईज़ी"],
+
+["Future","भविष्य",
+"Prepare for your future.",
+"फ्यूचर"],
+
+["Journey","यात्रा",
+"Life is a journey.",
+"जर्नी"],
+
+["Kind","दयालु",
+"She is very kind.",
+"काइंड"]
 
 ];
 
-let wordIndex = 0;
+let wordIndex=0;
 
-function displayWord(){
 
-    const w = vocabulary[wordIndex];
+function showWord(){
 
-    document.getElementById("wordBox")
-    .innerHTML = `
+    const w=
+    vocabulary[wordIndex];
 
-    <div class="word">${w.word}</div>
+    document
+    .getElementById("wordBox")
+    .innerHTML=`
+
+    <div class="word">
+    ${w[0]}
+    </div>
 
     <div class="meaning">
-    Meaning: ${w.meaning}
+    🇮🇳 ${w[1]}
     </div>
 
     <p>
-    Pronunciation:
-    ${w.pronunciation}
+    🔊 ${w[3]}
     </p>
 
     <div class="example">
-    Example:<br>
-    <b>${w.example}</b>
+    <b>Example:</b><br>
+    ${w[2]}
     </div>
 
     `;
@@ -1612,31 +2040,33 @@ function nextWord(){
 
     wordIndex++;
 
-    if(wordIndex >= vocabulary.length){
-        wordIndex = 0;
+    if(
+        wordIndex>=vocabulary.length
+    ){
+        wordIndex=0;
     }
 
-    displayWord();
+    showWord();
 
 }
 
-function speakCurrentWord(){
+function speakWord(){
 
-    speak(vocabulary[wordIndex].word);
-
-}
-
-function markWordLearned(){
-
-    let count =
-    Number(localStorage.getItem("learnedWords") || 0);
-
-    count++;
-
-    localStorage.setItem(
-        "learnedWords",
-        count
+    speakText(
+        vocabulary[wordIndex][0]
     );
+
+}
+
+function markWord(){
+
+    const s=getStudent();
+
+    if(!s)return;
+
+    s.words++;
+
+    saveStudents();
 
     updateStats();
 
@@ -1644,132 +2074,88 @@ function markWordLearned(){
 
 }
 
-displayWord();
 
+/* =================================
+SENTENCES
+================================= */
 
-/* =========================
-DAILY SENTENCES
-========================= */
+const sentences=[
 
-const sentences = [
+["How are you?","आप कैसे हैं?"],
 
-{
-en:"How are you?",
-hi:"आप कैसे हैं?"
-},
+["I am fine.","मैं ठीक हूँ।"],
 
-{
-en:"I am fine.",
-hi:"मैं ठीक हूँ।"
-},
+["What are you doing?","तुम क्या कर रहे हो?"],
 
-{
-en:"What are you doing?",
-hi:"तुम क्या कर रहे हो?"
-},
+["Where are you going?","तुम कहाँ जा रहे हो?"],
 
-{
-en:"Where are you going?",
-hi:"तुम कहाँ जा रहे हो?"
-},
+["I am going to school.","मैं स्कूल जा रहा हूँ।"],
 
-{
-en:"I am going to school.",
-hi:"मैं स्कूल जा रहा हूँ।"
-},
+["Please give me some water.",
+"कृपया मुझे थोड़ा पानी दीजिए।"],
 
-{
-en:"Please give me some water.",
-hi:"कृपया मुझे थोड़ा पानी दीजिए।"
-},
+["I don't understand.",
+"मुझे समझ नहीं आया।"],
 
-{
-en:"I don't understand.",
-hi:"मुझे समझ नहीं आया।"
-},
+["Please speak slowly.",
+"कृपया धीरे बोलिए।"],
 
-{
-en:"Please speak slowly.",
-hi:"कृपया धीरे बोलिए।"
-},
+["Can you help me?",
+"क्या आप मेरी मदद कर सकते हैं?"],
 
-{
-en:"Can you help me?",
-hi:"क्या आप मेरी मदद कर सकते हैं?"
-},
+["I am learning English.",
+"मैं English सीख रहा हूँ।"],
 
-{
-en:"I am learning English.",
-hi:"मैं English सीख रहा हूँ।"
-},
+["What is your name?",
+"आपका नाम क्या है?"],
 
-{
-en:"What is your name?",
-hi:"आपका नाम क्या है?"
-},
+["My name is Rahul.",
+"मेरा नाम राहुल है।"],
 
-{
-en:"My name is Rahul.",
-hi:"मेरा नाम राहुल है।"
-},
+["Please wait for me.",
+"कृपया मेरा इंतजार कीजिए।"],
 
-{
-en:"Please wait for me.",
-hi:"कृपया मेरा इंतजार कीजिए।"
-},
+["I will call you later.",
+"मैं आपको बाद में फोन करूँगा।"],
 
-{
-en:"I will call you later.",
-hi:"मैं आपको बाद में फोन करूँगा।"
-},
+["See you tomorrow.",
+"कल मिलते हैं।"],
 
-{
-en:"See you tomorrow.",
-hi:"कल मिलते हैं।"
-},
+["Don't worry.",
+"चिंता मत करो।"],
 
-{
-en:"Have a nice day.",
-hi:"आपका दिन शुभ हो।"
-},
+["Keep trying.",
+"कोशिश करते रहो।"],
 
-{
-en:"Don't worry.",
-hi:"चिंता मत करो।"
-},
+["Never give up.",
+"कभी हार मत मानो।"],
 
-{
-en:"Keep trying.",
-hi:"कोशिश करते रहो।"
-},
+["I can do it.",
+"मैं यह कर सकता हूँ।"],
 
-{
-en:"Never give up.",
-hi:"कभी हार मत मानो।"
-},
-
-{
-en:"I can do it.",
-hi:"मैं यह कर सकता हूँ।"
-}
+["I will try my best.",
+"मैं अपनी पूरी कोशिश करूँगा।"]
 
 ];
 
-let sentenceIndex = 0;
+let sentenceIndex=0;
 
-function displaySentence(){
 
-    const s = sentences[sentenceIndex];
+function showSentence(){
 
-    document.getElementById("sentenceBox")
-    .innerHTML = `
+    const s=
+    sentences[sentenceIndex];
+
+    document
+    .getElementById("sentenceBox")
+    .innerHTML=`
 
     <div class="word">
-    ${s.en}
+    ${s[0]}
     </div>
 
     <div class="meaning">
-    🇮🇳 ${s.hi}
+    🇮🇳 ${s[1]}
     </div>
 
     `;
@@ -1780,180 +2166,240 @@ function nextSentence(){
 
     sentenceIndex++;
 
-    if(sentenceIndex >= sentences.length){
+    if(
+        sentenceIndex>=sentences.length
+    ){
         sentenceIndex=0;
     }
 
-    displaySentence();
+    showSentence();
 
 }
 
-function speakCurrentSentence(){
+function speakSentence(){
 
-    speak(sentences[sentenceIndex].en);
-
-}
-
-function repeatSentence(){
-
-    speak(
-        sentences[sentenceIndex].en +
-        ". " +
-        sentences[sentenceIndex].en +
-        ". " +
-        sentences[sentenceIndex].en
+    speakText(
+        sentences[sentenceIndex][0]
     );
 
 }
 
-displaySentence();
+
+/* =================================
+GRAMMAR
+================================= */
+
+const grammar=[
+
+["Noun",
+"Person, place, animal या thing का नाम।",
+"Ram, School, Book"],
+
+["Pronoun",
+"Noun की जगह इस्तेमाल होता है।",
+"I, You, He, She, We"],
+
+["Verb",
+"काम या action बताता है।",
+"Go, Come, Eat, Read"],
+
+["Adjective",
+"Noun की quality बताता है।",
+"Good, Beautiful, Tall"],
+
+["Adverb",
+"Verb की विशेषता बताता है।",
+"Slowly, Quickly"],
+
+["Preposition",
+"Position या relation बताता है।",
+"In, On, At, Under"],
+
+["Conjunction",
+"Words या sentences जोड़ता है।",
+"And, But, Or"],
+
+["Articles",
+"A, An और The.",
+"A boy, An apple"],
+
+["Active Voice",
+"Subject action करता है।",
+"Ram writes a letter."],
+
+["Passive Voice",
+"Action पर focus होता है।",
+"A letter is written by Ram."],
+
+["Modals",
+"Ability, permission आदि।",
+"Can, May, Should, Must"]
+
+];
 
 
-/* =========================
+function loadGrammar(){
+
+    const box=
+    document.getElementById(
+        "grammarBox"
+    );
+
+    box.innerHTML="";
+
+    grammar.forEach(g=>{
+
+        box.innerHTML+=`
+
+        <div class="card">
+
+        <div class="icon">📘</div>
+
+        <h3>${g[0]}</h3>
+
+        <p>${g[1]}</p>
+
+        <div class="example">
+        <b>Example:</b><br>
+        ${g[2]}
+        </div>
+
+        <button
+        onclick="openLesson(
+        '${g[0]}',
+        '${g[1]}<br><br>${g[2]}'
+        )">
+
+        Learn
+
+        </button>
+
+        </div>
+
+        `;
+
+    });
+
+}
+
+loadGrammar();
+
+
+/* =================================
 TRANSLATION
-========================= */
+================================= */
 
-const translations = [
+const translations=[
 
 {
-hindi:"मैं स्कूल जाता हूँ।",
-options:[
+hi:"मैं स्कूल जाता हूँ।",
+o:[
 "I go to school.",
 "I school go.",
-"I going school.",
-"I am school."
+"I going school."
 ],
-answer:"I go to school."
+a:0
 },
 
 {
-hindi:"मुझे पानी चाहिए।",
-options:[
+hi:"मुझे पानी चाहिए।",
+o:[
 "I water need.",
 "I need water.",
-"I am water.",
-"I needing water."
+"I am water."
 ],
-answer:"I need water."
+a:1
 },
 
 {
-hindi:"वह खाना खाता है।",
-options:[
+hi:"वह खाना खाता है।",
+o:[
 "He eat food.",
 "He eats food.",
-"He eating food.",
-"He food eats."
+"He eating food."
 ],
-answer:"He eats food."
+a:1
 },
 
 {
-hindi:"मैं English सीख रहा हूँ।",
-options:[
+hi:"मैं English सीख रहा हूँ।",
+o:[
 "I learn English.",
-"I learning English.",
 "I am learning English.",
 "I English learning."
 ],
-answer:"I am learning English."
+a:1
 },
 
 {
-hindi:"वह बाजार जा रही है।",
-options:[
-"She is going to the market.",
-"She going market.",
-"She go market.",
-"She is market."
+hi:"वे क्रिकेट खेलते हैं।",
+o:[
+"They plays cricket.",
+"They play cricket.",
+"They playing cricket."
 ],
-answer:"She is going to the market."
+a:1
 }
 
 ];
 
-let translationIndex = 0;
+let translationIndex=0;
 
-function displayTranslation(){
 
-    const t =
+function showTranslation(){
+
+    const t=
     translations[translationIndex];
 
-    document.getElementById(
+    document
+    .getElementById(
         "translationQuestion"
-    ).innerHTML = t.hindi;
+    )
+    .innerText=t.hi;
 
-    const box =
-    document.getElementById(
+    const box=
+    document
+    .getElementById(
         "translationOptions"
     );
 
-    box.innerHTML = "";
+    box.innerHTML="";
 
-    t.options.forEach(option=>{
+    t.o.forEach(
+        (x,i)=>{
 
-        const btn =
-        document.createElement("button");
+        const b=
+        document.createElement(
+            "button"
+        );
 
-        btn.className="option";
+        b.className="option";
 
-        btn.innerText=option;
+        b.innerText=x;
 
-        btn.onclick=function(){
+        b.onclick=()=>{
 
-            checkTranslation(
-                btn,
-                option
-            );
+            if(i===t.a){
+
+                b.classList.add(
+                    "correct"
+                );
+
+                addPractice();
+
+            }else{
+
+                b.classList.add(
+                    "wrong"
+                );
+
+            }
 
         };
 
-        box.appendChild(btn);
+        box.appendChild(b);
 
     });
-
-    document.getElementById(
-        "translationMessage"
-    ).style.display="none";
-
-}
-
-function checkTranslation(button,answer){
-
-    const correct =
-    translations[translationIndex].answer;
-
-    if(answer === correct){
-
-        button.classList.add("correct");
-
-        const msg =
-        document.getElementById(
-            "translationMessage"
-        );
-
-        msg.style.display="block";
-
-        msg.innerHTML=
-        "✅ Correct Answer!";
-
-    }else{
-
-        button.classList.add("wrong");
-
-        const msg =
-        document.getElementById(
-            "translationMessage"
-        );
-
-        msg.style.display="block";
-
-        msg.innerHTML=
-        "❌ Wrong. Correct answer: <b>" +
-        correct +
-        "</b>";
-
-    }
 
 }
 
@@ -1962,278 +2408,199 @@ function nextTranslation(){
     translationIndex++;
 
     if(
-        translationIndex >= translations.length
+        translationIndex>=
+        translations.length
     ){
         translationIndex=0;
     }
 
-    displayTranslation();
-
-}
-
-displayTranslation();
-
-
-/* =========================
-READING
-========================= */
-
-function readingAnswer(button,correct){
-
-    const buttons =
-    document.querySelectorAll(
-        "#reading .option"
-    );
-
-    buttons.forEach(b=>{
-        b.classList.remove(
-            "correct",
-            "wrong"
-        );
-    });
-
-    const msg =
-    document.getElementById(
-        "readingMessage"
-    );
-
-    msg.style.display="block";
-
-    if(correct){
-
-        button.classList.add("correct");
-
-        msg.innerHTML=
-        "✅ Correct Answer!";
-
-    }else{
-
-        button.classList.add("wrong");
-
-        msg.innerHTML=
-        "❌ Wrong Answer. Try Again.";
-
-    }
+    showTranslation();
 
 }
 
 
-/* =========================
+/* =================================
 WRITING
-========================= */
+================================= */
 
 function checkWriting(){
 
-    const text =
-    document.getElementById(
+    const text=
+    document
+    .getElementById(
         "writingArea"
-    ).value.trim();
+    )
+    .value.trim();
 
     if(!text){
 
-        document.getElementById(
-            "writingResult"
-        ).innerHTML=
-        "✍️ पहले अपना paragraph लिखें।";
+        alert(
+        "पहले paragraph लिखें।"
+        );
 
         return;
 
     }
 
-    const words =
-    text.split(/\s+/).filter(Boolean);
+    const words=
+    text
+    .split(/\s+/)
+    .filter(Boolean);
 
-    let sentencesCount =
-    text.split(/[.!?]+/)
-    .filter(Boolean).length;
+    const sentencesCount=
+    text
+    .split(/[.!?]+/)
+    .filter(Boolean)
+    .length;
 
-    document.getElementById(
+    let level;
+
+    if(words.length>=100)
+        level="🏆 Excellent";
+    else if(words.length>=50)
+        level="👏 Very Good";
+    else if(words.length>=25)
+        level="👍 Good";
+    else
+        level="📚 Keep Practicing";
+
+    document
+    .getElementById(
         "writingResult"
-    ).innerHTML = `
+    )
+    .innerHTML=`
 
+    <br>
     📝 Words: <b>${words.length}</b><br>
-    📌 Sentences: <b>${sentencesCount}</b><br><br>
-
-    ${
-        words.length >= 50
-        ? "🏆 Excellent! अच्छा paragraph है।"
-        : "👍 अच्छा प्रयास। 50+ words लिखने की कोशिश करें।"
-    }
+    📌 Sentences: <b>${sentencesCount}</b><br>
+    🎯 Level: <b>${level}</b>
 
     `;
+
+    addPractice();
 
 }
 
 
-/* =========================
-QUIZ
-========================= */
+/* =================================
+PRACTICE
+================================= */
 
-const quizQuestions = [
+function addPractice(){
+
+    const s=getStudent();
+
+    if(!s)return;
+
+    s.practice++;
+
+    saveStudents();
+
+    updateStats();
+
+}
+
+
+/* =================================
+QUIZ
+================================= */
+
+const quiz=[
 
 {
-q:"What is the opposite of Big?",
-options:[
-"Small",
-"Fast",
-"Good",
-"Long"
-],
-answer:0
+q:"Opposite of Big?",
+o:["Small","Fast","Good","Long"],
+a:0
 },
 
 {
-q:"Choose the correct sentence.",
-options:[
+q:"Correct sentence?",
+o:[
 "He go to school.",
 "He goes to school.",
-"He going school.",
-"He school go."
+"He going school."
 ],
-answer:1
+a:1
 },
 
 {
-q:"What is the plural of Child?",
-options:[
+q:"Plural of Child?",
+o:[
 "Childs",
-"Childes",
 "Children",
-"Childrens"
+"Childes"
 ],
-answer:2
+a:1
 },
 
 {
-q:"Choose the correct article: ___ apple.",
-options:[
+q:"Correct article: ___ apple.",
+o:[
 "A",
 "An",
-"The",
-"No article"
+"The"
 ],
-answer:1
+a:1
 },
 
 {
-q:"What is the past form of Go?",
-options:[
+q:"Past form of Go?",
+o:[
 "Goed",
-"Goes",
 "Went",
-"Going"
+"Goes"
 ],
-answer:2
+a:1
 },
 
 {
-q:"Which one is a Verb?",
-options:[
+q:"Which is a Verb?",
+o:[
 "Beautiful",
 "Run",
-"School",
 "Red"
 ],
-answer:1
+a:1
 },
 
 {
-q:"What is the meaning of Honest?",
-options:[
+q:"Meaning of Honest?",
+o:[
 "ईमानदार",
 "बहादुर",
-"तेज",
-"कमजोर"
+"तेज"
 ],
-answer:0
+a:0
 },
 
 {
-q:"Choose the correct sentence.",
-options:[
-"I am a student.",
-"I is a student.",
-"I are a student.",
-"I student am."
-],
-answer:0
-},
-
-{
-q:"Which word is a Pronoun?",
-options:[
+q:"Which is a Pronoun?",
+o:[
 "Ram",
 "He",
-"Book",
-"School"
-],
-answer:1
-},
-
-{
-q:"What is the opposite of Hot?",
-options:[
-"Warm",
-"Cold",
-"High",
-"Fast"
-],
-answer:1
-},
-
-{
-q:"Choose the correct sentence.",
-options:[
-"She are happy.",
-"She is happy.",
-"She am happy.",
-"She happy is."
-],
-answer:1
-},
-
-{
-q:"Which is a Preposition?",
-options:[
-"Run",
-"Beautiful",
-"Under",
-"Quickly"
-],
-answer:2
-},
-
-{
-q:"What is the plural of Book?",
-options:[
-"Bookes",
-"Books",
-"Bookies",
 "Book"
 ],
-answer:1
+a:1
 },
 
 {
-q:"Choose the correct article: ___ umbrella.",
-options:[
-"A",
-"An",
-"No",
-"Some"
+q:"Opposite of Hot?",
+o:[
+"Warm",
+"Cold",
+"High"
 ],
-answer:1
+a:1
 },
 
 {
-q:"Which word is an Adjective?",
-options:[
-"Beautiful",
-"Run",
-"Quickly",
-"School"
+q:"Correct sentence?",
+o:[
+"She are happy.",
+"She is happy.",
+"She am happy."
 ],
-answer:0
+a:1
 }
 
 ];
@@ -2242,39 +2609,36 @@ let quizIndex=0;
 let quizScore=0;
 let quizAnswered=false;
 
-function displayQuiz(){
 
-    const q =
-    quizQuestions[quizIndex];
+function showQuiz(){
 
-    let html = `
+    const q=quiz[quizIndex];
+
+    let html=`
 
     <p>
     Question ${quizIndex+1}
-    / ${quizQuestions.length}
+    / ${quiz.length}
     </p>
 
-    <h3 style="margin-top:12px;">
+    <h3 style="margin:12px 0">
     ${q.q}
     </h3>
 
     <div class="options">
-
     `;
 
-    q.options.forEach((option,index)=>{
+    q.o.forEach(
+        (x,i)=>{
 
-        html += `
+        html+=`
 
         <button
         class="option"
-        onclick="answerQuiz(
-            this,
-            ${index}
-        )">
+        onclick="answerQuiz(this,${i})">
 
-        ${String.fromCharCode(65+index)}.
-        ${option}
+        ${String.fromCharCode(65+i)}.
+        ${x}
 
         </button>
 
@@ -2282,128 +2646,111 @@ function displayQuiz(){
 
     });
 
-    html += `
+    html+=`
 
     </div>
 
-    <div id="quizMessage"
-    class="message">
+    <div
+    id="quizMessage">
     </div>
 
     `;
 
-    document.getElementById(
-        "quizBox"
-    ).innerHTML=html;
+    document
+    .getElementById("quizBox")
+    .innerHTML=html;
 
     quizAnswered=false;
 
 }
 
+
 function answerQuiz(button,index){
 
-    if(quizAnswered) return;
+    if(quizAnswered)
+        return;
 
     quizAnswered=true;
 
-    const q =
-    quizQuestions[quizIndex];
+    const q=quiz[quizIndex];
 
-    const buttons =
-    document.querySelectorAll(
+    const buttons=
+    document
+    .querySelectorAll(
         "#quizBox .option"
     );
 
-    const msg =
-    document.getElementById(
-        "quizMessage"
-    );
+    if(index===q.a){
 
-    msg.style.display="block";
-
-    if(index === q.answer){
-
-        button.classList.add("correct");
+        button.classList.add(
+            "correct"
+        );
 
         quizScore++;
 
-        msg.innerHTML=
-        "🎉 Correct Answer!";
+        addPractice();
 
     }else{
 
-        button.classList.add("wrong");
+        button.classList.add(
+            "wrong"
+        );
 
-        buttons[q.answer]
-        .classList.add("correct");
-
-        msg.innerHTML=
-        "❌ Wrong! Correct answer: <b>" +
-        q.options[q.answer] +
-        "</b>";
+        buttons[q.a]
+        .classList.add(
+            "correct"
+        );
 
     }
 
 }
 
-function quizNext(){
+
+function nextQuiz(){
 
     if(!quizAnswered){
 
-        alert("पहले Answer चुनें।");
+        alert(
+        "पहले answer चुनें।"
+        );
 
         return;
+
     }
 
     if(
-        quizIndex <
-        quizQuestions.length-1
+        quizIndex<
+        quiz.length-1
     ){
 
         quizIndex++;
 
-        displayQuiz();
+        showQuiz();
 
     }else{
 
-        document.getElementById(
-            "quizBox"
-        ).innerHTML = `
+        const s=getStudent();
 
-        <div style="text-align:center">
+        if(s){
 
-        <h2>🎉 Test Complete!</h2>
+            s.score+=quizScore;
 
-        <h1 style="margin:15px 0;color:#2563eb;">
-        ${quizScore} / ${quizQuestions.length}
-        </h1>
+            saveStudents();
 
-        <p>
-
-        ${
-            quizScore >= 13
-            ? "🏆 Excellent! English Master!"
-            : quizScore >= 9
-            ? "👏 Very Good!"
-            : quizScore >= 6
-            ? "👍 Good! Keep Practicing."
-            : "📚 More Practice Required."
         }
 
-        </p>
-
-        </div>
-
-        `;
-
-        localStorage.setItem(
-            "quizPoints",
-            Number(
-                localStorage.getItem(
-                    "quizPoints"
-                ) || 0
-            ) + quizScore
+        alert(
+        "🎉 Quiz Complete!\n\n"+
+        "Score: "+
+        quizScore+
+        " / "+
+        quiz.length
         );
+
+        quizIndex=0;
+        quizScore=0;
+
+        showQuiz();
 
         updateStats();
 
@@ -2411,291 +2758,492 @@ function quizNext(){
 
 }
 
+
 function restartQuiz(){
 
     quizIndex=0;
     quizScore=0;
 
-    displayQuiz();
+    showQuiz();
 
 }
 
-displayQuiz();
 
-
-/* =========================
+/* =================================
 30 DAY CHALLENGE
-========================= */
+================================= */
 
-const challengeTasks = [
+const challenges=[
 
-"10 नए English words सीखें।",
-"10 Daily Use sentences बोलें।",
-"एक English paragraph पढ़ें।",
-"5 English sentences लिखें।",
-"Present Tense का अभ्यास करें।",
-"Past Tense का अभ्यास करें।",
-"Future Tense का अभ्यास करें।",
+"10 नए words सीखें।",
+"10 sentences बोलें।",
+"English paragraph पढ़ें।",
+"5 sentences लिखें।",
+"Present Tense revise करें।",
+"Past Tense revise करें।",
+"Future Tense revise करें।",
 "10 Opposite Words सीखें।",
-"10 Hindi sentences को English में बदलें।",
-"अपने बारे में 1 minute बोलें।",
-"10 Common Verbs सीखें।",
+"5 sentences translate करें।",
+"1 minute English बोलें।",
+"10 Verbs सीखें।",
 "10 मिनट English पढ़ें।",
-"Articles का अभ्यास करें।",
-"Prepositions का अभ्यास करें।",
-"अपने School पर paragraph लिखें।",
+"Articles practice करें।",
+"Prepositions practice करें।",
+"School पर paragraph लिखें।",
 "10 Adjectives सीखें।",
-"किसी friend से English में बात करें।",
-"10 Questions बनाइए।",
-"10 गलत sentences सुधारें।",
+"Friend से English में बात करें।",
+"10 English questions बनाएं।",
+"5 गलत sentences सुधारें।",
 "10 Synonyms सीखें।",
-"एक छोटी English story पढ़ें।",
-"अपनी Daily Routine लिखें।",
-"अपने Family के बारे में बोलें।",
-"10 words का pronunciation करें।",
-"20 Common English words revise करें।",
-"Grammar Quiz दें।",
-"एक छोटा paragraph translate करें।",
-"2 minutes बिना रुके English बोलें।",
-"पूरे महीने की revision करें।",
+"एक छोटी story पढ़ें।",
+"Daily Routine लिखें।",
+"Family के बारे में English में बोलें।",
+"Pronunciation practice करें।",
+"20 words revise करें।",
+"Grammar quiz दें।",
+"Translation practice करें।",
+"2 minutes English बोलें।",
+"पूरी revision करें।",
 "Final English Test दें।"
 
 ];
 
-function loadChallenges(){
 
-    const box =
+function loadChallenge(){
+
+    const box=
     document.getElementById(
-        "challengeGrid"
+        "challengeBox"
     );
+
+    const s=getStudent();
+
+    if(!s)return;
 
     box.innerHTML="";
 
-    const completed =
-    JSON.parse(
-        localStorage.getItem(
-            "completedDays"
-        ) || "[]"
-    );
+    challenges.forEach(
+        (task,i)=>{
 
-    challengeTasks.forEach(
-        (task,index)=>{
+        const done=
+        s.days.includes(i);
 
-        const div =
-        document.createElement("div");
+        box.innerHTML+=`
 
-        div.className="day";
+        <div class="card">
 
-        const isDone =
-        completed.includes(index);
+        <h3>Day ${i+1}</h3>
 
-        div.innerHTML = `
-
-        <strong>
-        Day ${index+1}
-        </strong>
-
-        <p style="margin-top:8px;">
-        ${task}
-        </p>
+        <p>${task}</p>
 
         <button
-        class="btn green"
-        style="margin-top:10px"
-        ${isDone ? "disabled" : ""}
-        onclick="completeDay(
-            this,
-            ${index}
-        )">
+        class="${done?'green':''}"
+        ${done?'disabled':''}
+        onclick="completeDay(${i})">
 
-        ${isDone
-            ? "✔ Completed"
-            : "✅ Complete"}
+        ${done?
+        "✔ Completed":
+        "✅ Complete"}
 
         </button>
 
-        `;
+        </div>
 
-        box.appendChild(div);
+        `;
 
     });
 
 }
 
-function completeDay(button,index){
 
-    let completed =
-    JSON.parse(
-        localStorage.getItem(
-            "completedDays"
-        ) || "[]"
-    );
+function completeDay(i){
 
-    if(!completed.includes(index)){
+    const s=getStudent();
 
-        completed.push(index);
+    if(!s)return;
 
-        localStorage.setItem(
-            "completedDays",
-            JSON.stringify(completed)
-        );
+    if(!s.days.includes(i)){
+
+        s.days.push(i);
+
+        saveStudents();
 
     }
 
-    button.innerHTML="✔ Completed";
-
-    button.disabled=true;
+    loadChallenge();
 
     updateStats();
 
 }
 
-loadChallenges();
 
-
-/* =========================
-STATS
-========================= */
+/* =================================
+PROGRESS
+================================= */
 
 function updateStats(){
 
-    const words =
-    Number(
-        localStorage.getItem(
-            "learnedWords"
-        ) || 0
+    const s=getStudent();
+
+    if(!s)return;
+
+    document
+    .getElementById("statWords")
+    .innerText=s.words;
+
+    document
+    .getElementById("statScore")
+    .innerText=s.score;
+
+    document
+    .getElementById("statPractice")
+    .innerText=s.practice;
+
+    document
+    .getElementById("statDays")
+    .innerText=s.days.length;
+
+
+    const vocab=
+    Math.min(
+        100,
+        s.words
     );
 
-    const days =
-    JSON.parse(
-        localStorage.getItem(
-            "completedDays"
-        ) || "[]"
+    const quizProgress=
+    Math.min(
+        100,
+        s.score
     );
 
-    const points =
-    Number(
-        localStorage.getItem(
-            "quizPoints"
-        ) || 0
+    const practice=
+    Math.min(
+        100,
+        s.practice*5
     );
 
-    document.getElementById(
-        "learnedWords"
-    ).innerText=words;
+    const days=
+    Math.round(
+        s.days.length/30*100
+    );
 
-    document.getElementById(
-        "completedDays"
-    ).innerText=days.length;
 
-    document.getElementById(
-        "quizPoints"
-    ).innerText=points;
+    setProgress(
+        "vocabPercent",
+        "vocabBar",
+        vocab
+    );
+
+    setProgress(
+        "quizPercent",
+        "quizBar",
+        quizProgress
+    );
+
+    setProgress(
+        "practicePercent",
+        "practiceBar",
+        practice
+    );
+
+    setProgress(
+        "dayPercent",
+        "dayBar",
+        days
+    );
 
 }
 
-updateStats();
+
+function setProgress(
+    textId,
+    barId,
+    value
+){
+
+    document
+    .getElementById(textId)
+    .innerText=value+"%";
+
+    document
+    .getElementById(barId)
+    .style.width=value+"%";
+
+}
 
 
-/* =========================
-SEARCH
-========================= */
+/* =================================
+PROFILE
+================================= */
 
-function searchContent(){
+function showProfile(){
 
-    const query =
-    document.getElementById(
-        "searchInput"
-    ).value
-    .trim()
-    .toLowerCase();
+    const s=getStudent();
 
-    if(!query){
+    openLesson(
+        "👤 Student Profile",
+        `
 
-        alert("कृपया Search में कुछ लिखें।");
+        <b>Name:</b> ${s.name}<br><br>
+
+        <b>Class:</b> ${s.class}<br><br>
+
+        <b>Words:</b> ${s.words}<br><br>
+
+        <b>Quiz Points:</b> ${s.score}<br><br>
+
+        <b>Practice:</b> ${s.practice}<br><br>
+
+        <b>Challenge:</b>
+        ${s.days.length}/30
+
+        `
+    );
+
+}
+
+
+/* =================================
+CLASS
+================================= */
+
+function openClass(n){
+
+    openLesson(
+        "🎓 Class "+n,
+        `
+        <h3>Class ${n} English Topics</h3>
+        <br>
+        ${classTopics[n]}
+        <br><br>
+
+        <button
+        class="btn"
+        onclick="closeModal();go('quiz')">
+
+        🎯 Start Quiz
+
+        </button>
+        `
+    );
+
+}
+
+
+/* =================================
+MODAL
+================================= */
+
+function openLesson(title,body){
+
+    document
+    .getElementById("modalTitle")
+    .innerHTML=title;
+
+    document
+    .getElementById("modalBody")
+    .innerHTML=body;
+
+    document
+    .getElementById("modal")
+    .classList.remove("hidden");
+
+}
+
+function closeModal(){
+
+    document
+    .getElementById("modal")
+    .classList.add("hidden");
+
+}
+
+
+/* =================================
+ADMIN CUSTOM WORD
+================================= */
+
+function addCustomWord(){
+
+    const word=
+    document
+    .getElementById("newWord")
+    .value.trim();
+
+    const meaning=
+    document
+    .getElementById("newMeaning")
+    .value.trim();
+
+    const example=
+    document
+    .getElementById("newExample")
+    .value.trim();
+
+    if(
+        !word ||
+        !meaning ||
+        !example
+    ){
+
+        alert(
+        "सभी fields भरें।"
+        );
 
         return;
 
     }
 
-    let found=[];
+    vocabulary.push(
+        [
+            word,
+            meaning,
+            example,
+            word
+        ]
+    );
 
-    vocabulary.forEach(w=>{
+    document
+    .getElementById("newWord")
+    .value="";
 
-        if(
-            w.word.toLowerCase()
-            .includes(query) ||
-            w.meaning.toLowerCase()
-            .includes(query)
-        ){
+    document
+    .getElementById("newMeaning")
+    .value="";
 
-            found.push(
-                w.word +
-                " — " +
-                w.meaning
-            );
+    document
+    .getElementById("newExample")
+    .value="";
 
-        }
+    alert(
+    "✅ New vocabulary added!"
+    );
+
+}
+
+
+/* =================================
+ADMIN STUDENT DATA
+================================= */
+
+function loadStudentData(){
+
+    const box=
+    document
+    .getElementById(
+        "studentData"
+    );
+
+    if(!students.length){
+
+        box.innerHTML=
+        "कोई student नहीं है।";
+
+        return;
+
+    }
+
+    let html=`
+
+    <table>
+
+    <tr>
+    <th>Name</th>
+    <th>Class</th>
+    <th>Words</th>
+    <th>Score</th>
+    <th>Days</th>
+    </tr>
+
+    `;
+
+    students.forEach(s=>{
+
+        html+=`
+
+        <tr>
+
+        <td>${s.name}</td>
+
+        <td>${s.class}</td>
+
+        <td>${s.words}</td>
+
+        <td>${s.score}</td>
+
+        <td>${s.days.length}</td>
+
+        </tr>
+
+        `;
 
     });
 
-    sentences.forEach(s=>{
+    html+=`</table>`;
 
-        if(
-            s.en.toLowerCase()
-            .includes(query) ||
-            s.hi.toLowerCase()
-            .includes(query)
-        ){
+    box.innerHTML=html;
 
-            found.push(
-                s.en +
-                " — " +
-                s.hi
-            );
+}
 
-        }
 
-    });
+/* =================================
+CLEAR DATABASE
+================================= */
 
-    if(found.length){
+function clearAllData(){
 
-        lesson(
-            "🔍 Search Results",
-            found.join("<br><br>")
-        );
+    const yes=
+    confirm(
+    "क्या आप सभी local student data delete करना चाहते हैं?"
+    );
 
-    }else{
+    if(!yes)return;
 
-        lesson(
-            "🔍 Search",
-            "कोई result नहीं मिला।"
-        );
+    localStorage.removeItem(
+        "students"
+    );
+
+    localStorage.removeItem(
+        "currentStudent"
+    );
+
+    alert(
+    "✅ Local database साफ हो गया।"
+    );
+
+    location.reload();
+
+}
+
+
+/* =================================
+AUTO LOGIN
+================================= */
+
+if(currentStudent){
+
+    const exists=
+    students.some(
+        s=>s.name===currentStudent
+    );
+
+    if(exists){
+
+        openApp();
 
     }
 
 }
 
 
-/* =========================
-MODAL OUTSIDE CLICK
-========================= */
+/* =================================
+INIT
+================================= */
 
-window.addEventListener(
-    "click",
-    function(e){
-
-        if(
-            e.target ===
-            document.getElementById("modal")
-        ){
-
-            closeModal();
-
-        }
-
-    }
-);
+showWord();
+showSentence();
+showTranslation();
+showQuiz();
 
 </script>
 
