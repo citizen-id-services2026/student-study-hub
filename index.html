@@ -1941,6 +1941,1987 @@ showQuiz(
 );
 
 </script>
+<!-- =========================================================
+     🎬 3D STORY MAKER PRO
+     Add-on Section
+     ========================================================= -->
 
+<section id="story-maker-pro" style="
+  margin:30px 12px;
+  padding:20px;
+  border-radius:20px;
+  background:linear-gradient(135deg,#10182d,#17264a);
+  color:#fff;
+  border:1px solid #304875;
+  box-shadow:0 15px 40px rgba(0,0,0,.25);
+">
+
+  <div style="text-align:center;margin-bottom:20px;">
+    <div style="font-size:34px;">🎬</div>
+
+    <h2 style="
+      margin:5px 0;
+      font-size:28px;
+    ">
+      3D Story Maker PRO
+    </h2>
+
+    <p style="
+      margin:0;
+      color:#b8c6e5;
+    ">
+      Create your own 3D story scenes with characters
+    </p>
+  </div>
+
+
+  <!-- CHARACTER BUTTONS -->
+
+  <div style="
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    justify-content:center;
+    margin-bottom:15px;
+  ">
+
+    <button class="sm-character-btn" data-sm-character="king">
+      👑 King
+    </button>
+
+    <button class="sm-character-btn" data-sm-character="minister">
+      🧑‍💼 Minister
+    </button>
+
+    <button class="sm-character-btn" data-sm-character="sage">
+      🧙 Sage
+    </button>
+
+    <button class="sm-character-btn" data-sm-character="woodcutter">
+      🪓 Woodcutter
+    </button>
+
+    <button class="sm-character-btn" data-sm-character="boy">
+      👦 Boy
+    </button>
+
+    <button class="sm-character-btn" data-sm-character="girl">
+      👧 Girl
+    </button>
+
+    <button class="sm-character-btn" data-sm-character="merchant">
+      🧑 Merchant
+    </button>
+
+    <button class="sm-character-btn" data-sm-character="warrior">
+      ⚔️ Warrior
+    </button>
+
+  </div>
+
+
+  <!-- MAIN EDITOR -->
+
+  <div style="
+    display:grid;
+    grid-template-columns:minmax(0,1fr) 280px;
+    gap:15px;
+  ">
+
+
+    <!-- 3D VIEW -->
+
+    <div style="
+      position:relative;
+      min-width:0;
+      background:#050914;
+      border:1px solid #304875;
+      border-radius:15px;
+      overflow:hidden;
+      min-height:500px;
+    ">
+
+      <canvas id="sm3dCanvas" style="
+        display:block;
+        width:100%;
+        height:500px;
+      "></canvas>
+
+      <div id="smLoading" style="
+        position:absolute;
+        top:15px;
+        left:50%;
+        transform:translateX(-50%);
+        display:none;
+        background:#16274b;
+        border:1px solid #5573ae;
+        padding:9px 15px;
+        border-radius:20px;
+        font-size:13px;
+        z-index:5;
+      ">
+        ⏳ Loading...
+      </div>
+
+      <div id="smError" style="
+        position:absolute;
+        left:12px;
+        right:12px;
+        bottom:12px;
+        display:none;
+        background:#461c28;
+        border:1px solid #a64e62;
+        color:#ffdce3;
+        padding:12px;
+        border-radius:10px;
+        font-size:12px;
+        z-index:5;
+        white-space:pre-wrap;
+      "></div>
+
+      <div style="
+        position:absolute;
+        bottom:12px;
+        right:12px;
+        background:rgba(0,0,0,.65);
+        padding:7px 10px;
+        border-radius:8px;
+        color:#b9c7df;
+        font-size:11px;
+      ">
+        🖱️ Drag = Rotate | Wheel = Zoom
+      </div>
+
+    </div>
+
+
+    <!-- CONTROLS -->
+
+    <div style="
+      background:#0d162b;
+      border:1px solid #304875;
+      border-radius:15px;
+      padding:15px;
+    ">
+
+      <h3 style="margin-top:0;">
+        🎛️ Controls
+      </h3>
+
+
+      <div style="
+        padding:10px;
+        background:#131f3a;
+        border-radius:9px;
+        margin-bottom:10px;
+      ">
+
+        <div style="
+          color:#8fa5cd;
+          font-size:11px;
+        ">
+          SELECTED CHARACTER
+        </div>
+
+        <strong id="smSelectedName">
+          King
+        </strong>
+
+        <div id="smFileName" style="
+          color:#8295bb;
+          font-size:11px;
+          margin-top:4px;
+          word-break:break-all;
+        ">
+          Character/King.GLB
+        </div>
+
+      </div>
+
+
+      <!-- STATUS -->
+
+      <div id="smStatus" style="
+        padding:9px;
+        border-radius:8px;
+        background:#18284a;
+        color:#b8c8e8;
+        font-size:12px;
+        margin-bottom:12px;
+      ">
+        Ready
+      </div>
+
+
+      <!-- ANIMATION -->
+
+      <label style="
+        display:block;
+        color:#9dafcf;
+        font-size:12px;
+        margin-bottom:5px;
+      ">
+        🎞️ Animation
+      </label>
+
+      <select id="smAnimation" style="
+        width:100%;
+        padding:9px;
+        border-radius:8px;
+        background:#091225;
+        color:white;
+        border:1px solid #334a75;
+        margin-bottom:10px;
+      ">
+
+        <option value="">
+          No animation
+        </option>
+
+      </select>
+
+
+      <div style="
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:7px;
+        margin-bottom:12px;
+      ">
+
+        <button id="smPlay">▶ Play</button>
+        <button id="smPause">⏸ Pause</button>
+        <button id="smStop">⏹ Stop</button>
+        <button id="smReset">🔄 Reset</button>
+
+      </div>
+
+
+      <!-- TRANSFORM -->
+
+      <h4 style="margin:8px 0;">
+        📐 Character Position
+      </h4>
+
+      <label style="font-size:11px;color:#91a5c8;">
+        X
+      </label>
+
+      <input id="smX" type="number" value="0" step="0.1"
+        style="
+          width:100%;
+          padding:7px;
+          margin:3px 0 7px;
+          background:#091225;
+          color:white;
+          border:1px solid #334a75;
+          border-radius:7px;
+        ">
+
+
+      <label style="font-size:11px;color:#91a5c8;">
+        Y
+      </label>
+
+      <input id="smY" type="number" value="0" step="0.1"
+        style="
+          width:100%;
+          padding:7px;
+          margin:3px 0 7px;
+          background:#091225;
+          color:white;
+          border:1px solid #334a75;
+          border-radius:7px;
+        ">
+
+
+      <label style="font-size:11px;color:#91a5c8;">
+        Z
+      </label>
+
+      <input id="smZ" type="number" value="0" step="0.1"
+        style="
+          width:100%;
+          padding:7px;
+          margin:3px 0 7px;
+          background:#091225;
+          color:white;
+          border:1px solid #334a75;
+          border-radius:7px;
+        ">
+
+
+      <label style="font-size:11px;color:#91a5c8;">
+        Rotation Y
+      </label>
+
+      <input id="smRot" type="number" value="0" step="5"
+        style="
+          width:100%;
+          padding:7px;
+          margin:3px 0 7px;
+          background:#091225;
+          color:white;
+          border:1px solid #334a75;
+          border-radius:7px;
+        ">
+
+
+      <label style="font-size:11px;color:#91a5c8;">
+        Scale
+      </label>
+
+      <input id="smScale" type="number" value="1" step="0.1" min="0.1"
+        style="
+          width:100%;
+          padding:7px;
+          margin:3px 0 10px;
+          background:#091225;
+          color:white;
+          border:1px solid #334a75;
+          border-radius:7px;
+        ">
+
+
+      <!-- CAMERA -->
+
+      <h4 style="margin:8px 0;">
+        📷 Camera
+      </h4>
+
+      <div style="
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:7px;
+      ">
+
+        <button id="smFront">Front</button>
+        <button id="smSide">Side</button>
+        <button id="smTop">Top</button>
+        <button id="smCameraReset">Reset</button>
+
+      </div>
+
+
+      <!-- BACKGROUND -->
+
+      <h4 style="margin:14px 0 6px;">
+        🌄 Background
+      </h4>
+
+      <select id="smBackground" style="
+        width:100%;
+        padding:9px;
+        border-radius:8px;
+        background:#091225;
+        color:white;
+        border:1px solid #334a75;
+      ">
+
+        <option value="dark">
+          Dark
+        </option>
+
+        <option value="blue">
+          Blue
+        </option>
+
+        <option value="forest">
+          Forest
+        </option>
+
+        <option value="sunset">
+          Sunset
+        </option>
+
+        <option value="white">
+          Studio White
+        </option>
+
+      </select>
+
+    </div>
+
+  </div>
+
+
+  <!-- INFO -->
+
+  <div style="
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:8px;
+    margin-top:15px;
+  ">
+
+    <div class="sm-stat">
+      <small>Bones</small>
+      <strong id="smBones">0</strong>
+    </div>
+
+    <div class="sm-stat">
+      <small>Meshes</small>
+      <strong id="smMeshes">0</strong>
+    </div>
+
+    <div class="sm-stat">
+      <small>Skinned</small>
+      <strong id="smSkinned">0</strong>
+    </div>
+
+    <div class="sm-stat">
+      <small>Animations</small>
+      <strong id="smAnimations">0</strong>
+    </div>
+
+  </div>
+
+</section>
+
+
+<style>
+
+/* 3D STORY MAKER BUTTONS */
+
+.sm-character-btn,
+#smPlay,
+#smPause,
+#smStop,
+#smReset,
+#smFront,
+#smSide,
+#smTop,
+#smCameraReset{
+
+  border:1px solid #3a5280;
+  background:#172746;
+  color:#fff;
+
+  padding:9px 11px;
+
+  border-radius:8px;
+
+  cursor:pointer;
+
+  transition:.2s;
+
+}
+
+.sm-character-btn:hover,
+#smPlay:hover,
+#smPause:hover,
+#smStop:hover,
+#smReset:hover,
+#smFront:hover,
+#smSide:hover,
+#smTop:hover,
+#smCameraReset:hover{
+
+  background:#263d68;
+
+  transform:translateY(-1px);
+
+}
+
+
+.sm-stat{
+
+  background:#101c34;
+
+  border:1px solid #304875;
+
+  border-radius:9px;
+
+  padding:10px;
+
+  text-align:center;
+
+}
+
+.sm-stat small{
+
+  display:block;
+
+  color:#879bc1;
+
+  font-size:10px;
+
+}
+
+.sm-stat strong{
+
+  display:block;
+
+  font-size:18px;
+
+  margin-top:3px;
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+  #story-maker-pro > div:nth-of-type(2){
+
+    grid-template-columns:1fr !important;
+
+  }
+
+  #sm3dCanvas{
+
+    height:430px !important;
+
+  }
+
+  .sm-stat{
+
+    padding:8px 4px;
+
+  }
+
+}
+
+@media(max-width:500px){
+
+  #story-maker-pro{
+
+    margin:20px 5px !important;
+
+    padding:12px !important;
+
+  }
+
+  #sm3dCanvas{
+
+    height:380px !important;
+
+  }
+
+  #story-maker-pro > div:last-child{
+
+    grid-template-columns:1fr 1fr !important;
+
+  }
+
+}
+
+</style>
+
+
+<script type="module">
+
+/* =========================================================
+   3D STORY MAKER PRO ENGINE
+   Uses Three.js directly from jsDelivr.
+   ========================================================= */
+
+import * as THREE from
+  "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js";
+
+import { GLTFLoader } from
+  "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/loaders/GLTFLoader.js";
+
+import { OrbitControls } from
+  "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/controls/OrbitControls.js";
+
+
+/* ---------------------------------------------------------
+   CHARACTER FILES
+   --------------------------------------------------------- */
+
+const SM_CHARACTERS = {
+
+  king:{
+    name:"King",
+    file:"Character/King.GLB"
+  },
+
+  minister:{
+    name:"Minister",
+    file:"Character/Minister.GLB"
+  },
+
+  sage:{
+    name:"Sage",
+    file:"Character/Sage.GLB"
+  },
+
+  woodcutter:{
+    name:"Woodcutter",
+    file:"Character/Woodcutter.GLB"
+  },
+
+  boy:{
+    name:"Boy",
+    file:"Character/Boy.GLB"
+  },
+
+  girl:{
+    name:"Girl",
+    file:"Character/Girl.GLB"
+  },
+
+  merchant:{
+    name:"Merchant",
+    file:"Character/Merchant.GLB"
+  },
+
+  warrior:{
+    name:"Warrior",
+    file:"Character/Warrior.GLB"
+  }
+
+};
+
+
+/* ---------------------------------------------------------
+   ELEMENTS
+   --------------------------------------------------------- */
+
+const canvas =
+  document.getElementById("sm3dCanvas");
+
+const loading =
+  document.getElementById("smLoading");
+
+const errorBox =
+  document.getElementById("smError");
+
+const statusBox =
+  document.getElementById("smStatus");
+
+const selectedName =
+  document.getElementById("smSelectedName");
+
+const fileName =
+  document.getElementById("smFileName");
+
+const animationSelect =
+  document.getElementById("smAnimation");
+
+const bones =
+  document.getElementById("smBones");
+
+const meshes =
+  document.getElementById("smMeshes");
+
+const skinned =
+  document.getElementById("smSkinned");
+
+const animations =
+  document.getElementById("smAnimations");
+
+
+/* ---------------------------------------------------------
+   THREE.JS
+   --------------------------------------------------------- */
+
+const renderer =
+  new THREE.WebGLRenderer({
+
+    canvas:canvas,
+
+    antialias:true
+
+  });
+
+
+renderer.setPixelRatio(
+  Math.min(window.devicePixelRatio,2)
+);
+
+renderer.setSize(
+  canvas.clientWidth,
+  canvas.clientHeight,
+  false
+);
+
+renderer.outputColorSpace =
+  THREE.SRGBColorSpace;
+
+renderer.shadowMap.enabled = true;
+
+
+const scene =
+  new THREE.Scene();
+
+scene.background =
+  new THREE.Color(0x050914);
+
+
+const camera =
+  new THREE.PerspectiveCamera(
+
+    45,
+
+    canvas.clientWidth /
+    canvas.clientHeight,
+
+    0.01,
+
+    1000
+
+  );
+
+
+camera.position.set(
+  3,
+  2,
+  5
+);
+
+
+const controls =
+  new OrbitControls(
+    camera,
+    renderer.domElement
+  );
+
+
+controls.enableDamping = true;
+
+controls.target.set(
+  0,
+  1,
+  0
+);
+
+
+/* ---------------------------------------------------------
+   LIGHTS
+   --------------------------------------------------------- */
+
+scene.add(
+
+  new THREE.HemisphereLight(
+    0xffffff,
+    0x334466,
+    2
+  )
+
+);
+
+
+const light =
+  new THREE.DirectionalLight(
+    0xffffff,
+    3
+  );
+
+light.position.set(
+  5,
+  8,
+  5
+);
+
+light.castShadow = true;
+
+scene.add(light);
+
+
+const fill =
+  new THREE.DirectionalLight(
+    0x88aaff,
+    1
+  );
+
+fill.position.set(
+  -4,
+  4,
+  -3
+);
+
+scene.add(fill);
+
+
+/* ---------------------------------------------------------
+   GROUND
+   --------------------------------------------------------- */
+
+const ground =
+  new THREE.Mesh(
+
+    new THREE.PlaneGeometry(
+      30,
+      30
+    ),
+
+    new THREE.MeshStandardMaterial({
+
+      color:0x111827,
+
+      roughness:1
+
+    })
+
+  );
+
+ground.rotation.x =
+  -Math.PI / 2;
+
+ground.receiveShadow = true;
+
+scene.add(ground);
+
+
+/* ---------------------------------------------------------
+   VARIABLES
+   --------------------------------------------------------- */
+
+const loader =
+  new GLTFLoader();
+
+let currentModel = null;
+
+let mixer = null;
+
+let actions = {};
+
+let currentAction = null;
+
+let currentKey = "king";
+
+const clock =
+  new THREE.Clock();
+
+
+/* ---------------------------------------------------------
+   ERROR
+   --------------------------------------------------------- */
+
+function showError(message){
+
+  errorBox.style.display =
+    "block";
+
+  errorBox.textContent =
+    "⚠️ " + message;
+
+}
+
+
+function clearError(){
+
+  errorBox.style.display =
+    "none";
+
+}
+
+
+/* ---------------------------------------------------------
+   ANALYZE MODEL
+   --------------------------------------------------------- */
+
+function analyzeModel(
+  model,
+  clips
+){
+
+  let boneCount = 0;
+
+  let meshCount = 0;
+
+  let skinnedCount = 0;
+
+
+  model.traverse(obj=>{
+
+    if(obj.isBone){
+
+      boneCount++;
+
+    }
+
+
+    if(obj.isMesh){
+
+      meshCount++;
+
+      obj.castShadow = true;
+
+      obj.receiveShadow = true;
+
+    }
+
+
+    if(obj.isSkinnedMesh){
+
+      skinnedCount++;
+
+    }
+
+  });
+
+
+  bones.textContent =
+    boneCount;
+
+  meshes.textContent =
+    meshCount;
+
+  skinned.textContent =
+    skinnedCount;
+
+  animations.textContent =
+    clips.length;
+
+}
+
+
+/* ---------------------------------------------------------
+   ANIMATIONS
+   --------------------------------------------------------- */
+
+function setupAnimations(
+  model,
+  clips
+){
+
+  animationSelect.innerHTML =
+    '<option value="">No animation</option>';
+
+
+  actions = {};
+
+  currentAction = null;
+
+
+  if(mixer){
+
+    mixer.stopAllAction();
+
+  }
+
+
+  mixer = null;
+
+
+  if(!clips.length){
+
+    return;
+
+  }
+
+
+  mixer =
+    new THREE.AnimationMixer(
+      model
+    );
+
+
+  clips.forEach((clip,index)=>{
+
+    const name =
+      clip.name ||
+      "Animation " +
+      (index + 1);
+
+
+    const action =
+      mixer.clipAction(
+        clip
+      );
+
+
+    actions[name] =
+      action;
+
+
+    const option =
+      document.createElement(
+        "option"
+      );
+
+
+    option.value =
+      name;
+
+    option.textContent =
+      name;
+
+
+    animationSelect.appendChild(
+      option
+    );
+
+  });
+
+
+  const first =
+    animationSelect.value;
+
+
+  if(first){
+
+    currentAction =
+      actions[first];
+
+  }
+
+}
+
+
+/* ---------------------------------------------------------
+   LOAD CHARACTER
+   --------------------------------------------------------- */
+
+function loadCharacter(key){
+
+  const data =
+    SM_CHARACTERS[key];
+
+  if(!data){
+
+    return;
+
+  }
+
+
+  currentKey =
+    key;
+
+
+  selectedName.textContent =
+    data.name;
+
+  fileName.textContent =
+    data.file;
+
+
+  clearError();
+
+
+  statusBox.textContent =
+    "⏳ Loading " +
+    data.name +
+    "...";
+
+
+  loading.style.display =
+    "block";
+
+
+  if(currentModel){
+
+    scene.remove(
+      currentModel
+    );
+
+    currentModel =
+      null;
+
+  }
+
+
+  if(mixer){
+
+    mixer.stopAllAction();
+
+    mixer = null;
+
+  }
+
+
+  loader.load(
+
+    data.file,
+
+    gltf=>{
+
+      loading.style.display =
+        "none";
+
+
+      currentModel =
+        gltf.scene;
+
+
+      currentModel.position.set(
+        0,
+        0,
+        0
+      );
+
+
+      currentModel.rotation.set(
+        0,
+        0,
+        0
+      );
+
+
+      currentModel.scale.set(
+        1,
+        1,
+        1
+      );
+
+
+      scene.add(
+        currentModel
+      );
+
+
+      analyzeModel(
+        currentModel,
+        gltf.animations
+      );
+
+
+      setupAnimations(
+        currentModel,
+        gltf.animations
+      );
+
+
+      statusBox.textContent =
+        "✅ " +
+        data.name +
+        " loaded successfully";
+
+
+      statusBox.style.color =
+        "#9de0b5";
+
+
+      fitModel(
+        currentModel
+      );
+
+
+      updateInputs();
+
+    },
+
+    xhr=>{
+
+      if(xhr.total){
+
+        const percent =
+          Math.round(
+
+            xhr.loaded /
+            xhr.total *
+            100
+
+          );
+
+
+        loading.textContent =
+          "⏳ Loading " +
+          percent +
+          "%";
+
+      }
+
+    },
+
+    error=>{
+
+      loading.style.display =
+        "none";
+
+
+      statusBox.textContent =
+        "❌ Model not found";
+
+
+      statusBox.style.color =
+        "#ffadb9";
+
+
+      showError(
+
+        "GLB file नहीं मिली.\n\n" +
+
+        "Expected:\n" +
+        data.file +
+        "\n\n" +
+
+        "GitHub में folder/file name " +
+        "का Capital और Small letter " +
+        "बिल्कुल match होना चाहिए."
+
+      );
+
+    }
+
+  );
+
+}
+
+
+/* ---------------------------------------------------------
+   FIT CAMERA
+   --------------------------------------------------------- */
+
+function fitModel(model){
+
+  const box =
+    new THREE.Box3()
+      .setFromObject(model);
+
+
+  if(box.isEmpty()){
+
+    return;
+
+  }
+
+
+  const size =
+    box.getSize(
+      new THREE.Vector3()
+    );
+
+
+  const center =
+    box.getCenter(
+      new THREE.Vector3()
+    );
+
+
+  const maxSize =
+    Math.max(
+      size.x,
+      size.y,
+      size.z
+    );
+
+
+  const distance =
+    maxSize * 2.5;
+
+
+  camera.position.set(
+
+    center.x + distance,
+
+    center.y +
+    maxSize * .4,
+
+    center.z + distance
+
+  );
+
+
+  controls.target.copy(
+    center
+  );
+
+
+  controls.update();
+
+}
+
+
+/* ---------------------------------------------------------
+   INPUTS
+   --------------------------------------------------------- */
+
+function updateInputs(){
+
+  if(!currentModel){
+
+    return;
+
+  }
+
+
+  document.getElementById(
+    "smX"
+  ).value =
+    currentModel.position.x;
+
+
+  document.getElementById(
+    "smY"
+  ).value =
+    currentModel.position.y;
+
+
+  document.getElementById(
+    "smZ"
+  ).value =
+    currentModel.position.z;
+
+
+  document.getElementById(
+    "smRot"
+  ).value =
+    THREE.MathUtils.radToDeg(
+      currentModel.rotation.y
+    );
+
+
+  document.getElementById(
+    "smScale"
+  ).value =
+    currentModel.scale.x;
+
+}
+
+
+/* ---------------------------------------------------------
+   TRANSFORM
+   --------------------------------------------------------- */
+
+function updateTransform(){
+
+  if(!currentModel){
+
+    return;
+
+  }
+
+
+  currentModel.position.x =
+    Number(
+      document.getElementById("smX").value
+    ) || 0;
+
+
+  currentModel.position.y =
+    Number(
+      document.getElementById("smY").value
+    ) || 0;
+
+
+  currentModel.position.z =
+    Number(
+      document.getElementById("smZ").value
+    ) || 0;
+
+
+  currentModel.rotation.y =
+    THREE.MathUtils.degToRad(
+
+      Number(
+        document.getElementById("smRot").value
+      ) || 0
+
+    );
+
+
+  const scale =
+    Number(
+      document.getElementById("smScale").value
+    ) || 1;
+
+
+  currentModel.scale.set(
+    scale,
+    scale,
+    scale
+  );
+
+}
+
+
+/* ---------------------------------------------------------
+   TRANSFORM EVENTS
+   --------------------------------------------------------- */
+
+[
+  "smX",
+  "smY",
+  "smZ",
+  "smRot",
+  "smScale"
+
+].forEach(id=>{
+
+  document.getElementById(
+    id
+  ).addEventListener(
+    "input",
+    updateTransform
+  );
+
+});
+
+
+/* ---------------------------------------------------------
+   CHARACTER BUTTONS
+   --------------------------------------------------------- */
+
+document.querySelectorAll(
+  ".sm-character-btn"
+).forEach(button=>{
+
+  button.addEventListener(
+    "click",
+    ()=>{
+
+      loadCharacter(
+        button.dataset.smCharacter
+      );
+
+    }
+  );
+
+});
+
+
+/* ---------------------------------------------------------
+   ANIMATION SELECT
+   --------------------------------------------------------- */
+
+animationSelect.addEventListener(
+  "change",
+  ()=>{
+
+    if(!mixer){
+
+      return;
+
+    }
+
+
+    Object.values(
+      actions
+    ).forEach(
+      action=>action.stop()
+    );
+
+
+    const name =
+      animationSelect.value;
+
+
+    if(!name){
+
+      currentAction =
+        null;
+
+      return;
+
+    }
+
+
+    currentAction =
+      actions[name];
+
+
+    if(currentAction){
+
+      currentAction.reset();
+
+      currentAction.play();
+
+    }
+
+  }
+);
+
+
+/* ---------------------------------------------------------
+   PLAY
+   --------------------------------------------------------- */
+
+document.getElementById(
+  "smPlay"
+).addEventListener(
+  "click",
+  ()=>{
+
+    if(currentAction){
+
+      currentAction.paused =
+        false;
+
+      currentAction.play();
+
+    }
+
+  }
+);
+
+
+/* ---------------------------------------------------------
+   PAUSE
+   --------------------------------------------------------- */
+
+document.getElementById(
+  "smPause"
+).addEventListener(
+  "click",
+  ()=>{
+
+    if(currentAction){
+
+      currentAction.paused =
+        true;
+
+    }
+
+  }
+);
+
+
+/* ---------------------------------------------------------
+   STOP
+   --------------------------------------------------------- */
+
+document.getElementById(
+  "smStop"
+).addEventListener(
+  "click",
+  ()=>{
+
+    if(currentAction){
+
+      currentAction.stop();
+
+    }
+
+  }
+);
+
+
+/* ---------------------------------------------------------
+   RESET
+   --------------------------------------------------------- */
+
+document.getElementById(
+  "smReset"
+).addEventListener(
+  "click",
+  ()=>{
+
+    if(!currentModel){
+
+      return;
+
+    }
+
+
+    currentModel.position.set(
+      0,
+      0,
+      0
+    );
+
+
+    currentModel.rotation.set(
+      0,
+      0,
+      0
+    );
+
+
+    currentModel.scale.set(
+      1,
+      1,
+      1
+    );
+
+
+    updateInputs();
+
+  }
+);
+
+
+/* ---------------------------------------------------------
+   CAMERA
+   --------------------------------------------------------- */
+
+function cameraFront(){
+
+  if(!currentModel){
+
+    return;
+
+  }
+
+
+  const box =
+    new THREE.Box3()
+      .setFromObject(
+        currentModel
+      );
+
+
+  const center =
+    box.getCenter(
+      new THREE.Vector3()
+    );
+
+
+  const size =
+    box.getSize(
+      new THREE.Vector3()
+    );
+
+
+  const distance =
+    Math.max(
+      size.x,
+      size.y,
+      size.z
+    ) * 2.5;
+
+
+  camera.position.set(
+    center.x,
+    center.y +
+    size.y * .25,
+    center.z +
+    distance
+  );
+
+
+  controls.target.copy(
+    center
+  );
+
+
+  controls.update();
+
+}
+
+
+function cameraSide(){
+
+  if(!currentModel){
+
+    return;
+
+  }
+
+
+  const box =
+    new THREE.Box3()
+      .setFromObject(
+        currentModel
+      );
+
+
+  const center =
+    box.getCenter(
+      new THREE.Vector3()
+    );
+
+
+  const size =
+    box.getSize(
+      new THREE.Vector3()
+    );
+
+
+  const distance =
+    Math.max(
+      size.x,
+      size.y,
+      size.z
+    ) * 2.5;
+
+
+  camera.position.set(
+    center.x +
+    distance,
+    center.y +
+    size.y * .25,
+    center.z
+  );
+
+
+  controls.target.copy(
+    center
+  );
+
+
+  controls.update();
+
+}
+
+
+function cameraTop(){
+
+  if(!currentModel){
+
+    return;
+
+  }
+
+
+  const box =
+    new THREE.Box3()
+      .setFromObject(
+        currentModel
+      );
+
+
+  const center =
+    box.getCenter(
+      new THREE.Vector3()
+    );
+
+
+  const size =
+    box.getSize(
+      new THREE.Vector3()
+    );
+
+
+  const distance =
+    Math.max(
+      size.x,
+      size.y,
+      size.z
+    ) * 3;
+
+
+  camera.position.set(
+    center.x,
+    center.y +
+    distance,
+    center.z +
+    .01
+  );
+
+
+  controls.target.copy(
+    center
+  );
+
+
+  controls.update();
+
+}
+
+
+function cameraReset(){
+
+  camera.position.set(
+    3,
+    2,
+    5
+  );
+
+
+  controls.target.set(
+    0,
+    1,
+    0
+  );
+
+
+  controls.update();
+
+}
+
+
+document.getElementById(
+  "smFront"
+).addEventListener(
+  "click",
+  cameraFront
+);
+
+
+document.getElementById(
+  "smSide"
+).addEventListener(
+  "click",
+  cameraSide
+);
+
+
+document.getElementById(
+  "smTop"
+).addEventListener(
+  "click",
+  cameraTop
+);
+
+
+document.getElementById(
+  "smCameraReset"
+).addEventListener(
+  "click",
+  cameraReset
+);
+
+
+/* ---------------------------------------------------------
+   BACKGROUND
+   --------------------------------------------------------- */
+
+document.getElementById(
+  "smBackground"
+).addEventListener(
+  "change",
+  event=>{
+
+    const value =
+      event.target.value;
+
+
+    if(value === "dark"){
+
+      scene.background =
+        new THREE.Color(
+          0x050914
+        );
+
+    }
+
+
+    if(value === "blue"){
+
+      scene.background =
+        new THREE.Color(
+          0x12345b
+        );
+
+    }
+
+
+    if(value === "forest"){
+
+      scene.background =
+        new THREE.Color(
+          0x123c2c
+        );
+
+    }
+
+
+    if(value === "sunset"){
+
+      scene.background =
+        new THREE.Color(
+          0x58351f
+        );
+
+    }
+
+
+    if(value === "white"){
+
+      scene.background =
+        new THREE.Color(
+          0xe8e8e8
+        );
+
+    }
+
+  }
+);
+
+
+/* ---------------------------------------------------------
+   RESIZE
+   --------------------------------------------------------- */
+
+function resize(){
+
+  const width =
+    canvas.clientWidth;
+
+  const height =
+    canvas.clientHeight;
+
+
+  if(!width || !height){
+
+    return;
+
+  }
+
+
+  camera.aspect =
+    width / height;
+
+  camera.updateProjectionMatrix();
+
+
+  renderer.setSize(
+    width,
+    height,
+    false
+  );
+
+}
+
+
+window.addEventListener(
+  "resize",
+  resize
+);
+
+
+/* ---------------------------------------------------------
+   RENDER LOOP
+   --------------------------------------------------------- */
+
+function animate(){
+
+  requestAnimationFrame(
+    animate
+  );
+
+
+  const delta =
+    clock.getDelta();
+
+
+  if(mixer){
+
+    mixer.update(
+      delta
+    );
+
+  }
+
+
+  controls.update();
+
+
+  renderer.render(
+    scene,
+    camera
+  );
+
+}
+
+
+/* ---------------------------------------------------------
+   START
+   --------------------------------------------------------- */
+
+resize();
+
+animate();
+
+loadCharacter(
+  "king"
+);
+
+
+/* PUBLIC API */
+
+window.STORY_MAKER_PRO = {
+
+  loadCharacter,
+
+  getCurrentModel(){
+
+    return currentModel;
+
+  },
+
+  getCharacters(){
+
+    return SM_CHARACTERS;
+
+  }
+
+};
+
+</script>
 </body>
 </html>
